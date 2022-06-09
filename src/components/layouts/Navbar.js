@@ -1,98 +1,102 @@
-import React from 'react'
+import { Image, Stack, Flex, Link, Box } from "@chakra-ui/react";
+import React from "react";
+import { Fragment } from "react";
+import Linked from "../../assets/linked.png";
+import Whatapps from "../../assets/whatsapp.png";
+import Facebook from "../../assets/facebook.png";
+import Twitter from "../../assets/Twitter.png";
+import Instagram from "../../assets/Instagram.png";
 
 const Navbar = () => {
   return (
-    <header>
-      <div className="header-logo">
-        <a href="#!" rel="noreferrer"><img src="/assets/Images/WC-LOGO-july.png" alt="logo"></img></a>
-        <div className="header-links">
-          <a href="#!" rel="noreferrer"><img src="/assets/Images/magnifying glass.png" alt="magnifying glass" ></img></a>
-          <a href="https://www.linkedin.com/company/wavecrest-college-of-hospitality/" target='_blank' rel="noreferrer"><img src="/assets/Images/linkedin.png" alt="linkedin"></img></a>
-          <a href="https://web.facebook.com/WavecrestCollegeLagos/" target='_blank' rel="noreferrer"><img src="/assets/Images/facebook.png" alt="facebook"></img></a>
-          <a href="https://twitter.com/WaveColl" target='_blank' rel="noreferrer"><img src="/assets/Images/twitter.png" alt="twitter"></img></a>
-          <a href="https://api.whatsapp.com/send/?phone=09155003700&text&app_absent=0" target='_blank' rel="noreferrer"><img src="/assets/Images/whatsapp.jpg" alt="whatsapp"></img></a>
-          <a href="http://instagram.com/wavecrestcollege" target='_blank' rel="noreferrer"><img src="/assets/Images/instagram.jpg" alt="instagram" ></img></a>
-        </div>
-      </div>
+    <Fragment>
+      <Flex alignItems="center" justifyContent="space-between" p="29px 91px">
+        <Image w="238px" h="52px" src="/assets/Images/WC-LOGO-july.png" />
+        <Stack direction="row">
+          <Image src={Linked} w="34px" h="34px" />
+          <Image src={Facebook} w="34px" h="34px" />
+          <Image src={Twitter} w="34px" h="34px" />
+          <Image src={Whatapps} w="34px" h="34px" />
+          <Image src={Instagram} w="34px" h="34px" />
+        </Stack>
+      </Flex>
+      <Flex h="92px" bg="#021D37">
+        <Box>
+          <Link
+            href="#"
+            color="#fff"
+            fontSize="18px"
+            textAlign="center"
+            paddingRight="59px"
+            textDecoration="none"
+          >
+            HOME
+          </Link>
+          <Link
+            href="#"
+            color="#fff"
+            fontSize="18px"
+            textAlign="center"
+            paddingRight="59px"
+            textDecoration="none"
+          >
+            ABOUT
+          </Link>
+          <Link
+            href="#"
+            color="#fff"
+            fontSize="18px"
+            textAlign="center"
+            paddingRight="59px"
+            textDecoration="none"
+          >
+            ADMISSION
+          </Link>
+          <Link
+            href="#"
+            color="#fff"
+            fontSize="18px"
+            textAlign="center"
+            paddingRight="59px"
+            textDecoration="none"
+          >
+            ACADEMICS
+          </Link>
+          <Link
+            href="#"
+            color="#fff"
+            fontSize="18px"
+            textAlign="center"
+            paddingRight="59px"
+            textDecoration="none"
+          >
+            ALUMNI
+          </Link>
+          <Link
+            href="#"
+            color="#fff"
+            fontSize="18px"
+            textAlign="center"
+            paddingRight="59px"
+            textDecoration="none"
+          >
+            BLOG
+          </Link>
+          <Link
+            href="#"
+            color="#fff"
+            fontSize="18px"
+            textAlign="center"
+            paddingRight="59px"
+            textDecoration="none"
+          >
+            CONTACT
+          </Link>
+        </Box>
+        <Box></Box>
+      </Flex>
+    </Fragment>
+  );
+};
 
-      <nav className="header-nav">
-        <ul>
-          <li className="nav-links">
-            <a href="#!">Home</a>
-            <div></div>
-            <div className="bar-list">
-            </div>
-          </li>
-
-          <li className="nav-links">
-            <a href="#!">About Us</a>
-            <div></div>
-            <div className="bar-list">
-              <ul className="nested-lists">
-                <li><a href="#!">Profile</a></li>
-                <li><a href="#!">Milestone</a></li>
-                <li><a href="#!">Our Team</a></li>
-              </ul>
-            </div>
-          </li>
-
-          <li className="nav-links">
-            <a href="#!!">Admission</a>
-            <div></div>
-            <div className="bar-list">
-              <ul className="nested-lists">
-                <li><a href="#!">Apply Online</a></li>
-                <li><a href="#!">Admission Requirements</a></li>
-                <li><a href="#!">Tuition and Scholarships</a></li>
-                <li><a href="#!">Hostel</a></li>
-                <li><a href="#!">FAQs</a></li>
-              </ul>
-            </div>
-          </li>
-
-          <li className="nav-links">
-            <a href="#!">Academics</a>
-            <div></div>
-            <div className="bar-list">
-              <ul className="nested-lists">
-                <li><a href="#!">Programmes</a></li>
-                <li><a href="#!">Training</a></li>
-                <li><a href="#!">Job Placement</a></li>
-                <li><a href="#!">Internship</a></li>
-                <li><a href="#!">NYSC</a></li>
-              </ul>
-            </div>
-          </li>
-
-          <li className="nav-links">
-            <a href="#!">Blog</a>
-            <div></div>
-            <div className="bar-list">
-            </div>
-          </li>
-
-          <li className="nav-links">
-            <a href="#!">Alumni</a>
-            <div></div>
-            <div className="bar-list">
-            </div>
-          </li>
-
-          <li className="nav-links">
-            <a href="#!">Contact Us</a>
-            <div></div>
-            <div className="bar-list">
-            </div>
-          </li>
-        </ul>
-
-        <div className="nav-button">
-          <a href="#!">SUPPORT US</a>
-          <a href="#!">APPLY NOW</a>
-        </div>
-      </nav>
-    </header>
-  )
-}
-
-export default Navbar
+export default Navbar;

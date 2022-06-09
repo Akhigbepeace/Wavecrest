@@ -10,7 +10,7 @@
 }
 
 #container header {
-  position: static;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 1;
@@ -20,8 +20,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 4rem;
-  background-color: #fff;
+  padding: 29px 91px;
+  background-color: red;
 }
 
 .header-logo img {
@@ -29,7 +29,7 @@
   height: 52px;
 }
 
-.header-logo .header-links img{
+.header-logo .header-links img {
   width: 50px;
   height: 34px;
   padding: 0 10px;
@@ -40,6 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 29px 91px;
 }
 
 .header-nav ul {
@@ -62,7 +63,6 @@
   line-height: 22px;
   font-weight: 700;
   transition: all ease-out 0.2s;
-  padding: 2rem;
 }
 
 .header-nav ul .nav-links a:hover {
@@ -72,7 +72,8 @@
 .header-nav .nav-links div {
   background-color: #fff;
   width: 90px;
-  height: 6px;
+  height: 9px;
+  margin-top: -1rem;
 }
 
 .header-nav ul li .nested-lists, .header-nav .nav-links div {
@@ -92,6 +93,10 @@
 
 .header-nav ul li:hover .nested-lists li {
   border-bottom: 2px solid #EBEDEF;
+}
+
+.header-nav ul li:hover .nested-lists li:last-child {
+  border-bottom: none;
 }
 
 .header-nav ul li:hover .nested-lists li a {
@@ -182,20 +187,6 @@
 .showcase-gallery img {
   width: 100%;
   height: 100%;
-}
-
-.showcase-gallery div p {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px 0; 
-  margin-top: -38px;
-  position: relative;
-  z-index: 0;
-  text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  color: #fff;
-  width: 100%;
 }
 
 #container #discover-hospitality {
@@ -409,7 +400,7 @@
   text-decoration: none;
 }
 
-.study-programmes .programmes a:nth-child(3) {
+.study-programmes .programmes .current-program {
   background-color: #021d37;
   color: #EBEDEF;
 }
