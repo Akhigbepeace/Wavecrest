@@ -1,27 +1,35 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/layouts/Navbar";
-import Home from "./components/Pages/Home";
-import About from "./components/Pages/About";
-import "./main.scss";
-// import "./App.css";
-import Showcase from "./components/Showcase";
 import { ChakraProvider } from "@chakra-ui/react";
+import Navbar from "./components/layouts/Navbar";
+import About from "./components/Pages/About";
+import Showcase from "./components/Showcase";
+import DiscoverHospitality from "./components/DiscoverHospitality";
+import Blog from "./components/Blog";
+import StudyProgrammes from "./components/StudyProgrammes";
+import OurStories from "./components/OurStories";
+import Partners from "./components/Partners";
+import Footer from "./components/Footer";
+import FooterCopywright from "./components/FooterCopywright";
 
 function App() {
   return (
     <ChakraProvider>
       <Router>
         <Fragment>
-          {/* <div id="container"> */}
-          <Navbar />
           <Routes>
-            <Route exact path="/home" component={<Home />} />
             <Route exact path="/about" component={<About />} />
           </Routes>
-          {/* <Home /> */}
-          {/* </div> */}
+
+          <Navbar />
           <Showcase />
+          <DiscoverHospitality />
+          <Blog />
+          <StudyProgrammes />
+          <OurStories />
+          <Partners />
+          <Footer />
+          <FooterCopywright />
         </Fragment>
       </Router>
     </ChakraProvider>
