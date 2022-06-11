@@ -144,7 +144,7 @@ const Navbar = () => {
             <div className="bar"></div>
             <div className="bar-list"></div>
           </li>
-        </ul>
+        </ul>S
 
         <div className="nav-button">
           <a href="#!">SUPPORT US</a>

@@ -1,23 +1,16 @@
 import { Box, Grid, Image } from "@chakra-ui/react";
 import React from "react";
+import ReactPlayer from "react-player";
 import wave1 from "../assets/waveimg.png";
+// import wave2 from "../assets/Wavecrest Images 1.jpeg";
+// import wave3 from "../assets/Wavecrest Images 2.jpeg";
+// import wave4 from "../assets/Wavecrest Images 4.jpg";
+import waveVid from "../assets/wavecrestvideo.mp4";
 const Showcase = () => {
   return (
-    <Grid templateColumns="1fr 1fr" h="388px" gap="10px">
+    <Grid templateColumns="1fr 1fr" gap="10px">
       <Box bg="blue.400" h="100%">
-        {/* <video
-          src="assets/Images/Study at Wavecrest College of Hospitality, Lagos.mp4"
-          autoPlay
-          loop
-          muted
-        ></video> */}
-        {/* <AspectRatio maxW="660px" ratio={1}>
-          <iframe
-            title="naruto"
-            src="assets/Images/Study at Wavecrest College of Hospitality, Lagos.mp4"
-            allowFullScreen
-          />
-        </AspectRatio> */}
+        <ReactPlayer src={waveVid} autoPlay loop muted></ReactPlayer>
       </Box>
       <Grid templateColumns="1fr 1fr" gap="4">
         <Box bg="gray.400" h="100%">

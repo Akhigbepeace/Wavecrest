@@ -1,87 +1,185 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {
+  Box,
+  IconButton,
+  useBreakpointValue,
+  Flex,
+  Heading,
+  Text,
+  Image,
+  Link,
+} from "@chakra-ui/react";
+import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import Slider from "react-slick";
+import Founders from "../assets/founder.png";
 
-const Blog = () => {
-  return (
-    <div id="blog">
-      <div id="myCarousel" className="carousel slide" data-ride="carousel">
-        <ol className="carousel-indicators">
-          <li
-            data-target="#myCarousel"
-            data-slide-to="0"
-            className="active"
-          ></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <div className="carousel-inner">
-          <div className="item active">
-            <img src="assets/Images/coffee.jpg" alt="coffee" />
-            <div>
-              <h1>Founder's Day</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                odit aperiam officiis repudiandae quo ipsa, accusamus omnis
-                quaerat? Nulla laborum ab est a expedita hic doloribus modi
-                magni fuga asperiores.
-              </p>
-              <p className="date">July 24th, 2022</p>
-              <Link to="#!">Apply Now</Link>
-            </div>
-          </div>
-
-          <div className="item">
-            <img src="./Images/img_ny.jpg" alt="img_ny"></img>
-            <div>
-              <h1>Founder's Day</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                odit aperiam officiis repudiandae quo ipsa, accusamus omnis
-                quaerat? Nulla laborum ab est a expedita hic doloribus modi
-                magni fuga asperiores.
-              </p>
-              <p className="date">July 24th, 2022</p>
-              <a href="#">Apply Now</a>
-            </div>
-          </div>
-
-          <div className="item">
-            <img src="./Images/workbench.jpg" alt="workbench"></img>
-            <div>
-              <h1>Founder's Day</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                odit aperiam officiis repudiandae quo ipsa, accusamus omnis
-                quaerat? Nulla laborum ab est a expedita hic doloribus modi
-                magni fuga asperiores.
-              </p>
-              <p className="date">July 24th, 2022</p>
-              <a href="#">Apply Now</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Left and right controls */}
-        <a
-          className="left carousel-control"
-          href="#myCarousel"
-          data-slide="prev"
-        >
-          <span className="glyphicon glyphicon-chevron-left"></span>
-          <span className="sr-only">Previous</span>
-        </a>
-        <a
-          className="right carousel-control"
-          href="#myCarousel"
-          data-slide="next"
-        >
-          <span className="glyphicon glyphicon-chevron-right"></span>
-          <span className="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-  );
+const settings = {
+  dots: true,
+  arrows: false,
+  fade: true,
+  infinite: true,
+  autoplay: true,
+  speed: 500,
+  autoplaySpeed: 5000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
 };
 
-export default Blog;
+export default function CaptionCarousel() {
+  const [slider, setSlider] = React.useState(null);
+
+  const top = useBreakpointValue({ base: "90%", md: "50%" });
+  const side = useBreakpointValue({ base: "30%", md: "40px" });
+
+  // This list contains all the data for carousels
+  // This can be static or loaded from a server
+
+  const cards = [
+    {
+      title: "Founder's Day",
+      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit aperiam officiis repudiandae quo ipsa, accusamus omnis quaerat? Nulla laborum ab est a expedita hic doloribus modi magni fuga asperiores.",
+      date: "July 24th, 2022",
+      link: "Apply Now",
+    },
+    {
+      title: "Founder's Day",
+      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit aperiam officiis repudiandae quo ipsa, accusamus omnis quaerat? Nulla laborum ab est a expedita hic doloribus modi magni fuga asperiores.",
+      date: "July 24th, 2022",
+      link: "Apply Now",
+    },
+    {
+      title: "Founder's Day",
+      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit aperiam officiis repudiandae quo ipsa, accusamus omnis quaerat? Nulla laborum ab est a expedita hic doloribus modi magni fuga asperiores.",
+      date: "July 24th, 2022",
+      link: "Apply Now",
+    },
+  ];
+
+  return (
+    <Box position={"relative"} width={"full"} overflow={"hidden"}>
+      {/* CSS files for react-slick */}
+      <Link
+        rel="stylesheet"
+        type="text/css"
+        charSet="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <Link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
+
+      {/* Left Icon */}
+      <IconButton
+        aria-label="left-arrow"
+        variant="ghost"
+        position="absolute"
+        left={side}
+        top={top}
+        transform={"translate(0%, -50%)"}
+        zIndex={2}
+        onClick={() => slider?.slickPrev()}
+      >
+        <BiChevronLeft size="40px" />
+      </IconButton>
+
+      {/* Right Icon */}
+      <IconButton
+        aria-label="right-arrow"
+        variant="ghost"
+        position="absolute"
+        right={side}
+        top={top}
+        transform={"translate(0%, -50%)"}
+        zIndex={2}
+        onClick={() => slider?.slickNext()}
+      >
+        <BiChevronRight size="40px" />
+      </IconButton>
+
+      {/* Slider */}
+      <Slider {...settings} ref={(slider) => setSlider(slider)}>
+        {cards.map((card, index) => (
+          <Box key={index} h={"446px"} position="relative" bg="#DDD">
+            {/* This is the block you need to change, to customize the caption */}
+
+            <Flex
+              flexDirection="row"
+              height="100%"
+              position="relative"
+              alignItems="center"
+              justifyContent="center"
+              w="80%"
+              m="0 auto"
+            >
+              <Image src={Founders} alt="founder's day" w="303px" h="295px" />
+
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                ml="122px"
+                bg={card.bg}
+              >
+                <Heading
+                  fontWeight="700"
+                  fontSize="40px"
+                  lineHeight="53px"
+                  textAlign="center"
+                  color="#021D37"
+                >
+                  {card.title}
+                </Heading>
+
+                <Text
+                  fontWeight="400"
+                  fontSize="16px"
+                  lineHeight="22px"
+                  fontFamily="'Manrope', sans-serif"
+                  mt="22px"
+                  w="638px"
+                >
+                  {card.text}
+                </Text>
+
+                <Text
+                  fontFamily="'Dancing Script', serif"
+                  fontWeight="400"
+                  fontSize="28px"
+                  lineHeight="37px"
+                  textAlign="center"
+                  mt="5px"
+                >
+                  {card.date}
+                </Text>
+
+                <Link
+                  href="#"
+                  bg="#021d37"
+                  p="10px 25px"
+                  mt="30px"
+                  color="#fff"
+                  fontFamily="'Manrope, sans-serif'"
+                  fontSize="20px"
+                  fontWeight="700"
+                  textDecoration="none"
+                  borderRadius="3px"
+                  w="208px"
+                  textAlign="center"
+                  _hover={{
+                    textDecoration: "none",
+                    color: "white",
+                    bg: "#021d37",
+                  }}
+                >
+                  {card.link}
+                </Link>
+              </Box>
+            </Flex>
+          </Box>
+        ))}
+      </Slider>
+    </Box>
+  );
+}

@@ -1,108 +1,307 @@
+import {
+  Box,
+  Grid,
+  Link,
+  Image,
+  Text,
+  Button,
+  Flex,
+  ListItem,
+  Input,
+  List,
+  Stack,
+} from "@chakra-ui/react";
 import React from "react";
-import { Link } from "react-router-dom";
+import linked from "../assets/linked.png";
+import twitter from "../assets/Twitter.png";
+import facebook from "../assets/facebook.png";
+import whatsapp from "../assets/whatsapp.png";
+import Instagram from "../assets/Instagram.png";
 
 const Footer = () => {
   return (
-    <div id="footer">
-      <div className="footer-contact">
-        <img src="/assets/Images/WC-LOGO-july.png" alt="logo"></img>
+    <Grid
+      background="#EBEDEF"
+      gridTemplateColumns="repeat(3, 1fr)"
+      gridGap="4rem"
+      p="4rem"
+    >
+      <Flex flexDirection="column" alignItems="flex-end" marginLeft="118px">
+        <Image
+          src="/assets/Images/WC-LOGO-july.png"
+          alt="logo"
+          w="270px"
+          height="54px"
+        />
 
-        <div className="contact">
-          <p>+234 909 685 6606</p>
-          <p>info@wavecrest.edu.ng</p>
-        </div>
+        <Flex
+          flexDirection="column"
+          textAlign="right"
+          fontWeight="500"
+          fontSize="16px"
+          lineHeight="20px"
+          m="1rem 0"
+          color="#021D37"
+        >
+          <Text>+234 909 685 6606</Text>
+          <Text>info@wavecrest.edu.ng</Text>
+        </Flex>
 
-        <div className="footer-links">
+        <Flex>
           <Link
-            to="https://www.linkedin.com/company/wavecrest-college-of-hospitality/"
+            href="https://www.linkedin.com/company/wavecrest-college-of-hospitality/"
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/assets/Images/linked in logo.png" alt="linkedin"></img>
+            <Image src={linked} alt="linkedin" w="40px" h="34px" mr="10px" />
           </Link>
-          <Link
-            to="https://web.facebook.com/WavecrestCollegeLagos/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="/assets/Images/facebook logo.png" alt="facebook"></img>
-          </Link>
-          <Link
-            to="https://twitter.com/WaveColl"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="/assets/Images/twitter.png" alt="twitter"></img>
-          </Link>
-          <Link
-            to="https://api.whatsapp.com/send/?phone=09155003700&text&app_absent=0"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="/assets/Images/whatsapp logo.png" alt="whatsapp"></img>
-          </Link>
-          <Link
-            to="http://instagram.com/wavecrestcollege"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="/assets/Images/Instagram.png" alt="instagram"></img>
-          </Link>
-        </div>
-      </div>
 
-      <div className="quick-links">
-        <ul>
-          <li>
-            <Link to="#!">ABOUT US</Link>
-          </li>
-          <li>
-            <Link to="#!">ADMISSION</Link>
-          </li>
-          <li>
-            <Link to="#!">OPUS DEI</Link>
-          </li>
-          <li>
-            <Link to="#!">CONTACT</Link>
-          </li>
-          <li>
-            <Link to="#!">ACADEMICS</Link>
-          </li>
-          <li>
-            <Link to="#!">WOMEN'S BOARD</Link>
-          </li>
-          <li>
-            <Link to="#!">FAQs</Link>
-          </li>
-          <li>
-            <Link to="#!">ALUMNI</Link>
-          </li>
-          <li>
-            <Link to="#!">CARRER</Link>
-          </li>
-          <li>
-            <Link to="#!">BLOG</Link>
-          </li>
-          <li>
-            <Link to="#!">DOWNLOADS</Link>
-          </li>
-          <li>
-            <Link to="#!">SUPPORT US</Link>
-          </li>
-        </ul>
-      </div>
+          <Link
+            href="https://web.facebook.com/WavecrestCollegeLagos/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image src={facebook} alt="facebook" w="40px" h="34px" mr="10px" />
+          </Link>
 
-      <div className="newsletter">
-        <h1>Suscribe to our Newsletter</h1>
-        <p>
+          <Link
+            href="https://twitter.com/WaveColl"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image src={twitter} alt="twitter" w="40px" h="34px" mr="10px" />
+          </Link>
+
+          <Link
+            href="https://api.whatsapp.com/send/?phone=09155003700&text&app_absent=0"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image src={whatsapp} alt="whatsapp" w="40px" h="34px" mr="10px" />
+          </Link>
+
+          <Link
+            href="http://instagram.com/wavecrestcollege"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              src={Instagram}
+              alt="instagram"
+              w="40px"
+              h="34px"
+              mr="10px"
+            />
+          </Link>
+        </Flex>
+      </Flex>
+
+      <Box>
+        <List
+          display="grid"
+          gridTemplateColumns="repeat(3, auto)"
+          gridGap="2.7rem"
+        >
+          <ListItem>
+            <Link
+              href="#!"
+              fontWeight="600"
+              fontSize="16px"
+              color="#021D37"
+              _hover={{ textDecoration: "none", color: "#020E1B" }}
+            >
+              ABOUT US
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              href="#!"
+              fontWeight="600"
+              fontSize="16px"
+              color="#021D37"
+              _hover={{ textDecoration: "none", color: "#020E1B" }}
+            >
+              ADMISSION
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              href="#!"
+              fontWeight="600"
+              fontSize="16px"
+              color="#021D37"
+              _hover={{ textDecoration: "none", color: "#020E1B" }}
+            >
+              OPUS DEI
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              href="#!"
+              fontWeight="600"
+              fontSize="16px"
+              color="#021D37"
+              _hover={{ textDecoration: "none", color: "#020E1B" }}
+            >
+              CONTACT
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              href="#!"
+              fontWeight="600"
+              fontSize="16px"
+              color="#021D37"
+              _hover={{ textDecoration: "none", color: "#020E1B" }}
+            >
+              ACADEMICS
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              href="#!"
+              fontWeight="600"
+              fontSize="16px"
+              color="#021D37"
+              _hover={{ textDecoration: "none", color: "#020E1B" }}
+            >
+              WOMEN'S BOARD
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              href="#!"
+              fontWeight="600"
+              fontSize="16px"
+              color="#021D37"
+              _hover={{ textDecoration: "none", color: "#020E1B" }}
+            >
+              FAQs
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              href="#!"
+              fontWeight="600"
+              fontSize="16px"
+              color="#021D37"
+              _hover={{ textDecoration: "none", color: "#020E1B" }}
+            >
+              ALUMNI
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              href="#!"
+              fontWeight="600"
+              fontSize="16px"
+              color="#021D37"
+              _hover={{ textDecoration: "none", color: "#020E1B" }}
+            >
+              CARRER
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              href="#!"
+              fontWeight="600"
+              fontSize="16px"
+              color="#021D37"
+              _hover={{ textDecoration: "none", color: "#020E1B" }}
+            >
+              BLOG
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              href="#!"
+              fontWeight="600"
+              fontSize="16px"
+              color="#021D37"
+              _hover={{ textDecoration: "none", color: "#020E1B" }}
+            >
+              DOWNLOADS
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              href="#!"
+              fontWeight="600"
+              fontSize="16px"
+              color="#021D37"
+              _hover={{ textDecoration: "none", color: "#020E1B" }}
+            >
+              SUPPORT US
+            </Link>
+          </ListItem>
+        </List>
+      </Box>
+
+      <Flex flexDirection="column">
+        <Text
+          color="#021D37"
+          fontFamily="'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+          fontWeight="700"
+          fontSize="25px"
+          lineHeight="29px"
+        >
+          Suscribe to our Newsletter
+        </Text>
+        <Text fontWeight="400" fontSize="16px" color="#021d37" p="1rem 0">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos tenetur
           voluptate, similique earum obcaecati placeat.
-        </p>
-        <input type="text" name="name" id="name" placeholder="Name" />
-        <input type="email" name="email" id="email" placeholder="Email" />
-        <button>SUBSCRIBE</button>
-      </div>
-    </div>
+        </Text>
+        <Stack>
+          <Input
+            placeholder="Name"
+            bg="#fff"
+            h="51px"
+            borderRadius="3px"
+            border="none"
+            p="15px 20px"
+            _placeholder={{
+              color: "#021D37",
+              fontSize: "16px",
+              fontWeight: "400",
+            }}
+          />
+
+          <Input
+            placeholder="Email"
+            bg="#fff"
+            h="51px"
+            borderRadius="3px"
+            border="none"
+            p="15px 20px"
+            _placeholder={{
+              color: "#021D37",
+              fontSize: "16px",
+              fontWeight: "400",
+            }}
+          />
+        </Stack>
+
+        <Button
+          w="142px"
+          height="46.89px"
+          bg="#021D37"
+          border="none"
+          color="#fff"
+          fontWeight="700"
+          fontSize="16px"
+          lineHeight="22px"
+          textAlign="center"
+          borderRadius="3px"
+          marginTop="8px"
+          _hover={{
+            bg: "#020E1B",
+            transition: "all ease 0.4s",
+          }}
+        >
+          SUBSCRIBE
+        </Button>
+      </Flex>
+    </Grid>
   );
 };
 
