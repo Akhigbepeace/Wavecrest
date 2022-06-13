@@ -95,14 +95,14 @@ const StudyProgrammes = () => {
             bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(1, 15, 29, 0.52) 46.35%, rgba(2, 29, 55, 0.87) 100%)"
             position="relative"
             textAlign="center"
-            top="10rem"
+            // top=""
           >
             <Heading
               color="#fff"
-              pt="9rem"
+              pt="101px"
               fontWeight="700"
               fontSize="40px"
-              fontFamily="'Playfair Display', serif"
+              fontFamily="Playfair Display, serif"
             >
               {currentprogram.captionHeading}
             </Heading>
@@ -110,7 +110,7 @@ const StudyProgrammes = () => {
               fontSize="20px"
               lineHeight="27px"
               color="#EBEDEF"
-              fontFamily="'Manrope', sans-serif"
+              fontFamily="Manrope, sans-serif"
               m="1rem 0"
             >
               {currentprogram.captionTime}
@@ -124,7 +124,7 @@ const StudyProgrammes = () => {
               p="10px 25px"
               border="none"
               borderRadius="3px"
-              fontFamily="'Manrope', sans-serif"
+              fontFamily="Manrope, sans-serif"
               fontSize="24px"
               fontWeight="700"
             >
