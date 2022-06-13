@@ -1,14 +1,27 @@
 import { Box, Flex, Grid, Link, Text, Image } from "@chakra-ui/react";
 import React from "react";
+import discoverpic1 from "../assets/Images/discoverpic 1.png";
+import discoverpic2 from "../assets/Images/discoverpic 2.png";
+import discoverpic3 from "../assets/Images/discoverpic 3.png";
 
 const DiscoverHospitality = () => {
   return (
     <Flex alignItems="center" justifyContent="space-between">
       <Box ml="63px">
-        <Text fontSize="32px" fontWeight="700" w="559px">
+        <Text
+          fontSize="32px"
+          fontWeight="700"
+          w="559px"
+          fontFamily="'Playfair Display', serif"
+        >
           NIGERIAN'S PREMIERE HOSPITALITY MONOTECHNIC
         </Text>
-        <Text margin="22px 0" fontSize="18px" line-height="25px" >
+        <Text
+          margin="22px 0"
+          fontSize="18px"
+          line-height="25px"
+          fontFamily="'Manrope', sans-serif"
+        >
           Wavecrest College of Hospitality is consectetur adipiscing elit, sed
           do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
           ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -24,7 +37,7 @@ const DiscoverHospitality = () => {
           fontSize="20px"
           textDecoration="none"
           borderRadius="3px"
-          fontFamily="'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"
+          fontFamily="'Manrope', sans-serif"
           w="208px"
           height="52px"
           _hover={{
@@ -39,7 +52,7 @@ const DiscoverHospitality = () => {
       <Grid gridTemplateColumns="1fr 1fr" margin="50px 63px">
         <Box w="320px" height="214px">
           <Image
-            src="assets/Images/workbench.jpg"
+            src={discoverpic1}
             w="100%"
             height="100%"
             p="33px"
@@ -54,6 +67,7 @@ const DiscoverHospitality = () => {
             w="100%"
             height="100%"
             textAlign="center"
+            fontFamily="'Playfair Display', serif"
             p="40px"
           >
             Discover Hospitality
@@ -61,17 +75,12 @@ const DiscoverHospitality = () => {
         </Box>
 
         <Box w="320px" height="214px">
-          <Image
-            src="assets/Images/img_ny.jpg"
-            w="100%"
-            height="100%"
-            alt="img_ny"
-          />
+          <Image src={discoverpic2} w="100%" height="100%" alt="img_ny" />
         </Box>
 
         <Box className="last-pic" w="320px" height="214px">
           <Image
-            src="assets/Images/coffee.jpg"
+            src={discoverpic3}
             w="100%"
             height="100%"
             p="33px"

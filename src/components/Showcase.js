@@ -1,11 +1,11 @@
 import { Box, Grid, Image } from "@chakra-ui/react";
 import React from "react";
 import ReactPlayer from "react-player";
-import wave1 from "../assets/waveimg.png";
-// import wave2 from "../assets/Wavecrest Images 1.jpeg";
-// import wave3 from "../assets/Wavecrest Images 2.jpeg";
-// import wave4 from "../assets/Wavecrest Images 4.jpg";
-import waveVid from "../assets/wavecrestvideo.mp4";
+import showcase1 from "../assets/Images/Showcase1.png";
+import showcase2 from "../assets/Images/Showcase2.png";
+import showcase3 from "../assets/Images/Showcase3.png";
+import showcase4 from "../assets/Images/Showcase4.png";
+import waveVid from "../assets/Images/wavecrestvideo.mp4";
 const Showcase = () => {
   return (
     <Grid templateColumns="1fr 1fr" gap="10px">
@@ -15,7 +15,7 @@ const Showcase = () => {
       <Grid templateColumns="1fr 1fr" gap="4">
         <Box bg="gray.400" h="100%">
           <Image
-            src={wave1}
+            src={showcase1}
             alt="Wavecrest Images 1"
             w="100%"
             h="100%"
@@ -24,7 +24,7 @@ const Showcase = () => {
         </Box>
         <Box bg="gray.400" h="100%">
           <Image
-            src={wave1}
+            src={showcase2}
             alt="Wavecrest Images 1"
             w="100%"
             h="100%"
@@ -33,7 +33,7 @@ const Showcase = () => {
         </Box>
         <Box bg="gray.400" h="100%">
           <Image
-            src={wave1}
+            src={showcase3}
             alt="Wavecrest Images 1"
             w="100%"
             h="100%"
@@ -42,7 +42,7 @@ const Showcase = () => {
         </Box>
         <Box bg="gray.400" h="100%">
           <Image
-            src={wave1}
+            src={showcase4}
             alt="Wavecrest Images 1"
             w="100%"
             h="100%"
