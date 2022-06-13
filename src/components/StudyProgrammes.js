@@ -1,11 +1,15 @@
-import { Box, Image, Text, Button, Flex } from "@chakra-ui/react";
+import { Box, Image, Text, Button, Flex, Heading } from "@chakra-ui/react";
 import React, { useState } from "react";
+import studyProgrammes1 from "../assets/Images/studyprogrammes 1.png";
+import studyProgrammes2 from "../assets/Images/studyprogrammes 2.png";
+import studyProgrammes3 from "../assets/Images/studyprogrammes 3.png";
+import studyProgrammes4 from "../assets/Images/studyprogrammes 4.png";
 
 const StudyProgrammes = () => {
   const objArr = [
     {
       linkContent: "HND IN HOSPITALITY MANAGEMENT",
-      imageSrc: "/assets/Images/Wavecrest Images 1.jpeg",
+      imageSrc: { studyProgrammes1 },
       current: false,
       captionHeading: "ACQUIRE AN HND IN HOSPITALITY MANAGEMENT",
       captionTime: "2 Years | Full Time",
@@ -14,7 +18,7 @@ const StudyProgrammes = () => {
 
     {
       linkContent: "ND IN HOTEL AND CATERING MANAGEMENT",
-      imageSrc: "/assets/Images/Wavecrest Images 2.jpeg",
+      imageSrc: { studyProgrammes2 },
       current: false,
       captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
       captionTime: "2 Years | Full Time",
@@ -22,15 +26,15 @@ const StudyProgrammes = () => {
     },
     {
       linkContent: "CERTIFICATE COURSE IN HOSPITALITY OPERATIONS",
-      imageSrc: "/assets/Images/Wavecrest Images 3.jpg",
+      imageSrc: { studyProgrammes3 },
       current: true,
       captionHeading: "SPEND A GAP YEAR IN HOSPITALITY TRAINING",
-      captionTime: "2 Years | Full Time",
+      captionTime: "1 Year | Full Time",
       captionButton: "Apply Now",
     },
     {
       linkContent: "SHORT COURSES",
-      imageSrc: "/assets/Images/Wavecrest Images 4.jpg",
+      imageSrc: { studyProgrammes4 },
       current: false,
       captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
       captionTime: "2 Years | Part Time",
@@ -43,11 +47,11 @@ const StudyProgrammes = () => {
     <Box>
       <Box>
         <Text
-          textAlign="center"
-          m="50px 0"
           color="#021D37"
+          m="50px 0"
+          fontFamily="'Playfair Display', serif"
           fontSize="40px"
-          fontFamily="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+          textAlign="center"
         >
           Study Programmes
         </Text>
@@ -63,6 +67,7 @@ const StudyProgrammes = () => {
                 w="315px"
                 h="100%"
                 border="3px solid #021D37"
+                fontFamily="'Manrope', sans-serif;"
                 fontSize="20px"
                 textAlign="center"
                 textDecoration="none"
@@ -81,11 +86,8 @@ const StudyProgrammes = () => {
           <Image
             src={currentprogram.imageSrc}
             alt="coffee"
-            w="92.45%"
-            // w="100%"
             h="394px"
             m="0 auto"
-            // objectFit="fill"
             borderTop="5px solid #021D37"
             position="absolute"
           />
@@ -93,16 +95,22 @@ const StudyProgrammes = () => {
             bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(1, 15, 29, 0.52) 46.35%, rgba(2, 29, 55, 0.87) 100%)"
             position="relative"
             textAlign="center"
-            top="14rem"
+            // top=""
           >
-            <Text color="#fff" pt="9rem" fontWeight="700" fontSize="40px">
+            <Heading
+              color="#fff"
+              pt="101px"
+              fontWeight="700"
+              fontSize="40px"
+              fontFamily="Playfair Display, serif"
+            >
               {currentprogram.captionHeading}
-            </Text>
+            </Heading>
             <Text
               fontSize="20px"
               lineHeight="27px"
               color="#EBEDEF"
-              fontFamily="Georgia, 'Times New Roman', Times, serif"
+              fontFamily="Manrope, sans-serif"
               m="1rem 0"
             >
               {currentprogram.captionTime}
@@ -110,13 +118,15 @@ const StudyProgrammes = () => {
             <Button
               bg="#fff"
               color="#021d37"
-              w="122px"
-              h="38px"
-              margin="1rem 0"
+              h="52px"
+              w="208px"
+              m="1rem 0"
+              p="10px 25px"
               border="none"
-              fontFamily="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
-              fontSize="20px"
-              fontWeight="600"
+              borderRadius="3px"
+              fontFamily="Manrope, sans-serif"
+              fontSize="24px"
+              fontWeight="700"
             >
               {currentprogram.captionButton}
             </Button>

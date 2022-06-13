@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Slider from "react-slick";
-import ourstories from "../assets/ourstories.png";
+import ourstories from "../assets/Images/ourstories.png";
 
 const settings = {
   dots: true,
@@ -58,6 +58,7 @@ export default function CaptionCarousel() {
         type="text/css"
         charSet="UTF-8"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        
       />
       <link
         rel="stylesheet"
@@ -66,7 +67,6 @@ export default function CaptionCarousel() {
       />
       {/* Left Icon */}
       <IconButton
-        // aria-label="left-arrow"
         bg="none"
         position="absolute"
         left={side}
@@ -80,12 +80,10 @@ export default function CaptionCarousel() {
 
       {/* Right Icon */}
       <IconButton
-        // aria-label="right-arrow"
         bg="none"
         position="absolute"
         right={side}
         top={top}
-        // transform={"translate(0%, -50%)"}
         zIndex={2}
         color="white"
         onClick={() => slider?.slickNext()}
@@ -96,13 +94,7 @@ export default function CaptionCarousel() {
       {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((card, index) => (
-          <Box
-            key={index}
-            h={"600px"}
-            position="relative"
-            bg="#021D37"
-            // mt="75px"
-          >
+          <Box key={index} h={"600px"} position="relative" bg="#021D37">
             {/* This is the block you need to change, to customize the caption */}
 
             <Flex
@@ -116,7 +108,7 @@ export default function CaptionCarousel() {
             >
               <Text
                 position="absolute"
-                fontFamily="'Dancing Script', cursive"
+                fontFamily="'Dancing Script'"
                 opacity="0.1"
                 fontSize="150px"
                 color="white"
@@ -127,8 +119,9 @@ export default function CaptionCarousel() {
                 position="relative"
                 top="1.5rem"
                 color="white"
-                fontSize="4rem"
-                fontWeight="600"
+                fontFamily="'Playfair Display', serif"
+                fontSize="40px"
+                fontWeight="700"
               >
                 Our Stories
               </Text>
@@ -136,11 +129,11 @@ export default function CaptionCarousel() {
 
             <Flex
               flexDirection="row"
-              height="100%"
+              // height="100%"
               position="relative"
               alignItems="center"
               justifyContent="center"
-              w="80%"
+              // w="80%"
               m="0 auto"
             >
               <Box
@@ -151,18 +144,20 @@ export default function CaptionCarousel() {
               >
                 <Heading
                   color="#fff"
-                  fontSize="4rem"
+                  fontFamily="'Playfair Display', serif"
+                  fontSize="32px"
                   fontWeight="700"
-                  fontFamily="'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
                 >
                   {card.name}
                 </Heading>
 
                 <Text
-                  margin="3rem 0"
-                  fontSize="18px"
-                  lineHeight="25px"
                   color="#EBEDEF"
+                  margin="3rem 0"
+                  fontFamily="'Manrope', sans-serif"
+                  fontSize="18px"
+                  fontWeight="400"
+                  lineHeight="25px"
                   width="457px"
                 >
                   {card.text}
@@ -174,7 +169,7 @@ export default function CaptionCarousel() {
                 alt="ourstories"
                 w="576px"
                 h="345px"
-                // border="10px solid red"
+                ml="88px"
               />
             </Flex>
           </Box>

@@ -12,11 +12,11 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import React from "react";
-import linked from "../assets/linked.png";
-import twitter from "../assets/Twitter.png";
-import facebook from "../assets/facebook.png";
-import whatsapp from "../assets/whatsapp.png";
-import Instagram from "../assets/Instagram.png";
+import linked from "../assets/Images/linked.png";
+import twitter from "../assets/Images/Twitter.png";
+import facebook from "../assets/Images/facebook.png";
+import whatsapp from "../assets/Images/whatsapp.png";
+import Instagram from "../assets/Images/Instagram.png";
 
 const Footer = () => {
   return (
@@ -24,9 +24,11 @@ const Footer = () => {
       background="#EBEDEF"
       gridTemplateColumns="repeat(3, 1fr)"
       gridGap="4rem"
-      p="4rem"
+      h="394px"
+      mt="63px"
+      pt="54px"
     >
-      <Flex flexDirection="column" alignItems="flex-end" marginLeft="118px">
+      <Flex flexDirection="column" alignItems="flex-end" marginLeft="96px">
         <Image
           src="/assets/Images/WC-LOGO-july.png"
           alt="logo"
@@ -100,7 +102,8 @@ const Footer = () => {
         <List
           display="grid"
           gridTemplateColumns="repeat(3, auto)"
-          gridGap="2.7rem"
+          gridGap="23px"
+          lineHeight="25px"
         >
           <ListItem>
             <Link
@@ -237,7 +240,7 @@ const Footer = () => {
         </List>
       </Box>
 
-      <Flex flexDirection="column">
+      <Flex flexDirection="column" pr="116px">
         <Text
           color="#021D37"
           fontFamily="'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
@@ -247,7 +250,7 @@ const Footer = () => {
         >
           Suscribe to our Newsletter
         </Text>
-        <Text fontWeight="400" fontSize="16px" color="#021d37" p="1rem 0">
+        <Text fontWeight="400" fontSize="16px" color="#021d37" p="5px 0">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos tenetur
           voluptate, similique earum obcaecati placeat.
         </Text>

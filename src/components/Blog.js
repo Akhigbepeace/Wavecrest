@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Slider from "react-slick";
-import Founders from "../assets/founder.png";
+import Founders from "../assets/Images/founder.png";
 
 const settings = {
   dots: true,
@@ -30,9 +30,6 @@ export default function CaptionCarousel() {
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "40px" });
-
-  // This list contains all the data for carousels
-  // This can be static or loaded from a server
 
   const cards = [
     {
@@ -123,20 +120,21 @@ export default function CaptionCarousel() {
                 bg={card.bg}
               >
                 <Heading
+                  color="#021D37"
+                  fontFamily="'Playfair Display', serif"
                   fontWeight="700"
                   fontSize="40px"
                   lineHeight="53px"
                   textAlign="center"
-                  color="#021D37"
                 >
                   {card.title}
                 </Heading>
 
                 <Text
-                  fontWeight="400"
-                  fontSize="16px"
-                  lineHeight="22px"
                   fontFamily="'Manrope', sans-serif"
+                  fontSize="16px"
+                  fontWeight="400"
+                  lineHeight="22px"
                   mt="22px"
                   w="638px"
                 >
@@ -144,7 +142,7 @@ export default function CaptionCarousel() {
                 </Text>
 
                 <Text
-                  fontFamily="'Dancing Script', serif"
+                  fontFamily="'Playfair Display', serif"
                   fontWeight="400"
                   fontSize="28px"
                   lineHeight="37px"

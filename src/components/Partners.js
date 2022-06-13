@@ -7,7 +7,7 @@ const Partners = () => {
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      m="8rem 0"
+      marginTop="40px"
     >
       <Flex
         m="40px 0"
@@ -20,6 +20,7 @@ const Partners = () => {
         <Text
           position="absolute"
           fontFamily="'Dancing Script', cursive"
+          fontWeight="400"
           fontSize="150px"
           color="rgba(3, 29, 56, 0.06)"
         >
@@ -29,6 +30,7 @@ const Partners = () => {
           position="relative"
           top="1rem"
           color="#021D37"
+          fontFamily="'Playfair Display', serif"
           fontSize="40px"
           fontWeight="700"
         >

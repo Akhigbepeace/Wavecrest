@@ -1,20 +1,12 @@
-import {
-  Image,
-  Stack,
-  Flex,
-  Link,
-  // Box,
-  // List,
-  // ListItem,
-} from "@chakra-ui/react";
+import { Image, Stack, Flex, Link } from "@chakra-ui/react";
 import React from "react";
 import { Fragment } from "react";
-import Linked from "../../assets/linked.png";
-import Whatapps from "../../assets/whatsapp.png";
-import Facebook from "../../assets/facebook.png";
-import Twitter from "../../assets/Twitter.png";
-import Instagram from "../../assets/Instagram.png";
-import Search from "../../assets/Search.png";
+import Linked from "../../assets/Images/linked.png";
+import Whatapps from "../../assets/Images/whatsapp.png";
+import Facebook from "../../assets/Images/facebook.png";
+import Twitter from "../../assets/Images/Twitter.png";
+import Instagram from "../../assets/Images/Instagram.png";
+import Search from "../../assets/Images/Search.png";
 
 const Navbar = () => {
   return (
@@ -22,9 +14,9 @@ const Navbar = () => {
       <Flex alignItems="center" justifyContent="space-between" p="29px 91px">
         <Image w="238px" h="52px" src="/assets/Images/WC-LOGO-july.png" />
 
-        <Stack direction="row">
+        <Stack direction="row" alignItems="center">
           <Link href="#!" target="_blank" rel="noreferrer">
-            <Image src={Search} w="34px" h="34px" mr="18px" />
+            <Image src={Search} w="20px" h="20px" mr="18px" />
           </Link>
 
           <Link
@@ -80,7 +72,8 @@ const Navbar = () => {
           <Link
             href="#"
             color="#fff"
-            fontSize="18px"
+            fontFamily="'Open Sans', sans-serif"
+            fontSize="16px"
             textAlign="center"
             pr="40px"
             _hover={{
@@ -95,7 +88,8 @@ const Navbar = () => {
           <Link
             href="#"
             color="#fff"
-            fontSize="18px"
+            fontFamily="'Open Sans', sans-serif"
+            fontSize="16px"
             textAlign="center"
             pr="40px"
             _hover={{
@@ -140,7 +134,8 @@ const Navbar = () => {
           <Link
             href="#"
             color="#fff"
-            fontSize="18px"
+            fontFamily="'Open Sans', sans-serif"
+            fontSize="16px"
             textAlign="center"
             pr="40px"
             _hover={{
@@ -182,7 +177,8 @@ const Navbar = () => {
           <Link
             href="#"
             color="#fff"
-            fontSize="18px"
+            fontFamily="'Open Sans', sans-serif"
+            fontSize="16px"
             textAlign="center"
             pr="40px"
             _hover={{
@@ -224,7 +220,8 @@ const Navbar = () => {
           <Link
             href="#"
             color="#fff"
-            fontSize="18px"
+            fontFamily="'Open Sans', sans-serif"
+            fontSize="16px"
             textAlign="center"
             pr="40px"
             _hover={{
@@ -238,7 +235,8 @@ const Navbar = () => {
           <Link
             href="#"
             color="#fff"
-            fontSize="18px"
+            fontFamily="'Open Sans', sans-serif"
+            fontSize="16px"
             textAlign="center"
             pr="40px"
             _hover={{
@@ -252,9 +250,10 @@ const Navbar = () => {
           <Link
             href="#"
             color="#fff"
-            fontSize="18px"
-            textAlign="center"
             pr="40px"
+            fontFamily="'Open Sans', sans-serif"
+            fontSize="16px"
+            textAlign="center"
             _hover={{
               color: "brown",
               textDecoration: "none",
@@ -271,13 +270,12 @@ const Navbar = () => {
             color="white"
             p="7px"
             w="133px"
-            h="38px"
             border="2px solid #fff"
             borderRadius="3px"
-            fontFamily="Arial Helvetica, sans-serif"
+            fontFamily="'Open Sans', sans-serif"
             fontWeight="700"
             fontSize="17px"
-            textDecoration="none"
+            textAlign="center"
             _hover={{
               background: "white",
               color: "#021d37",
@@ -292,11 +290,10 @@ const Navbar = () => {
             color="#021d37"
             p="7px"
             w="133px"
-            h="38px"
             ml="27px"
             border="2px solid #fff"
             borderRadius="3px"
-            fontFamily="Arial Helvetica, sans-serif"
+            fontFamily="'Open Sans', sans-serif"
             fontWeight="700"
             fontSize="17px"
             textAlign="center"
