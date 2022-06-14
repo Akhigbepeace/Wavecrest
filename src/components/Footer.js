@@ -12,6 +12,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import React from "react";
+import logo from "../assets/Images/WC-LOGO-july.png";
 import linked from "../assets/Images/linked.png";
 import twitter from "../assets/Images/Twitter.png";
 import facebook from "../assets/Images/facebook.png";
@@ -27,12 +28,7 @@ const Footer = () => {
       pt="54px"
     >
       <Flex flexDirection="column" alignItems="flex-end" mr="82px">
-        <Image
-          src="/assets/Images/WC-LOGO-july.png"
-          alt="logo"
-          w="270px"
-          height="54px"
-        />
+        <Image src={logo} alt="logo" w="270px" height="54px" />
 
         <Flex
           flexDirection="column"
@@ -41,7 +37,7 @@ const Footer = () => {
           fontSize="18px"
           fontWeight="700"
           lineHeight="25px"
-          m="25px"
+          mt="20px"
           color="#021D37"
         >
           <Text fontFamily="Manrope', sans-serif">+234 909 685 6606</Text>
@@ -278,7 +274,7 @@ const Footer = () => {
           p="5px 0"
           fontFamily="Manrope, sans-serif"
           fontWeight="400"
-          fontSize="16px"
+          fontSize="18px"
         >
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos tenetur
           voluptate, similique earum obcaecati placeat.

@@ -93,7 +93,7 @@ export default function CaptionCarousel() {
       {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((card, index) => (
-          <Box key={index} h={"600px"} position="relative" bg="#021D37">
+          <Box key={index} h={"559px"} position="relative" bg="#021D37">
             {/* This is the block you need to change, to customize the caption */}
 
             <Flex
@@ -128,12 +128,10 @@ export default function CaptionCarousel() {
 
             <Flex
               flexDirection="row"
-              // height="100%"
               position="relative"
               alignItems="center"
               justifyContent="center"
-              // w="80%"
-              m="0 auto"
+              m="74px auto"
             >
               <Box
                 display="flex"

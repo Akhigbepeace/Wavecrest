@@ -1,6 +1,6 @@
 import { Image, Stack, Flex, Link } from "@chakra-ui/react";
-import React from "react";
-import { Fragment } from "react";
+import React, { Fragment } from "react";
+import Logo from "../../assets/Images/WC-LOGO-july.png";
 import Linked from "../../assets/Images/linked.png";
 import Whatapps from "../../assets/Images/whatsapp.png";
 import Facebook from "../../assets/Images/facebook.png";
@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <Fragment>
       <Flex alignItems="center" justifyContent="space-between" p="29px 91px">
-        <Image w="238px" h="52px" src="/assets/Images/WC-LOGO-july.png" />
+        <Image w="238px" h="52px" src={Logo} />
 
         <Stack direction="row" alignItems="center">
           <Link href="#!" target="_blank" rel="noreferrer">
