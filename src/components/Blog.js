@@ -33,19 +33,19 @@ export default function CaptionCarousel() {
 
   const cards = [
     {
-      title: "Founder's Day",
+      title: "Founders Day",
       text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit aperiam officiis repudiandae quo ipsa, accusamus omnis quaerat? Nulla laborum ab est a expedita hic doloribus modi magni fuga asperiores.",
       date: "July 24th, 2022",
       link: "Apply Now",
     },
     {
-      title: "Founder's Day",
+      title: "Founders Day",
       text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit aperiam officiis repudiandae quo ipsa, accusamus omnis quaerat? Nulla laborum ab est a expedita hic doloribus modi magni fuga asperiores.",
       date: "July 24th, 2022",
       link: "Apply Now",
     },
     {
-      title: "Founder's Day",
+      title: "Founders Day",
       text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit aperiam officiis repudiandae quo ipsa, accusamus omnis quaerat? Nulla laborum ab est a expedita hic doloribus modi magni fuga asperiores.",
       date: "July 24th, 2022",
       link: "Apply Now",
@@ -110,7 +110,7 @@ export default function CaptionCarousel() {
               w="80%"
               m="0 auto"
             >
-              <Image src={Founders} alt="founder's day" w="303px" h="295px" />
+              <Image src={Founders} alt="founders day" w="303px" h="295px" />
 
               <Box
                 display="flex"
@@ -121,7 +121,7 @@ export default function CaptionCarousel() {
               >
                 <Heading
                   color="#021D37"
-                  fontFamily="'Playfair Display', serif"
+                  fontFamily="Playfair Display, serif"
                   fontWeight="700"
                   fontSize="40px"
                   lineHeight="53px"
@@ -131,7 +131,7 @@ export default function CaptionCarousel() {
                 </Heading>
 
                 <Text
-                  fontFamily="'Manrope', sans-serif"
+                  fontFamily="Manrope, sans-serif"
                   fontSize="16px"
                   fontWeight="400"
                   lineHeight="22px"
@@ -142,7 +142,7 @@ export default function CaptionCarousel() {
                 </Text>
 
                 <Text
-                  fontFamily="'Playfair Display', serif"
+                  fontFamily="Playfair Display, serif"
                   fontWeight="400"
                   fontSize="28px"
                   lineHeight="37px"
@@ -158,7 +158,7 @@ export default function CaptionCarousel() {
                   p="10px 25px"
                   mt="30px"
                   color="#fff"
-                  fontFamily="'Manrope, sans-serif'"
+                  fontFamily="Manrope, sans-serif"
                   fontSize="20px"
                   fontWeight="700"
                   textDecoration="none"

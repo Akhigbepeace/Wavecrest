@@ -1,6 +1,7 @@
 import { Box, Image, Text, Button, Flex, Heading } from "@chakra-ui/react";
 import React, { useState } from "react";
-import studyProgrammes1 from "../assets/Images/studyprogrammes 1.png";
+// import studyProgrammes1 from "../assets/Images/studyprogrammes 1.png";
+import studyProgrammes1 from "../assets/Images/Search.png";
 import studyProgrammes2 from "../assets/Images/studyprogrammes 2.png";
 import studyProgrammes3 from "../assets/Images/studyprogrammes 3.png";
 import studyProgrammes4 from "../assets/Images/studyprogrammes 4.png";
@@ -15,7 +16,6 @@ const StudyProgrammes = () => {
       captionTime: "2 Years | Full Time",
       captionButton: "Apply Now",
     },
-
     {
       linkContent: "ND IN HOTEL AND CATERING MANAGEMENT",
       imageSrc: { studyProgrammes2 },
@@ -49,7 +49,7 @@ const StudyProgrammes = () => {
         <Text
           color="#021D37"
           m="50px 0"
-          fontFamily="'Playfair Display', serif"
+          fontFamily="Playfair Display, serif"
           fontSize="40px"
           textAlign="center"
         >
@@ -67,7 +67,7 @@ const StudyProgrammes = () => {
                 w="315px"
                 h="100%"
                 border="3px solid #021D37"
-                fontFamily="'Manrope', sans-serif;"
+                fontFamily="Manrope, sans-serif;"
                 fontSize="20px"
                 textAlign="center"
                 textDecoration="none"
