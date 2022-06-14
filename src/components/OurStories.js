@@ -58,7 +58,6 @@ export default function CaptionCarousel() {
         type="text/css"
         charSet="UTF-8"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        
       />
       <link
         rel="stylesheet"
@@ -102,13 +101,13 @@ export default function CaptionCarousel() {
               justifyContent="center"
               alignItems="center"
               textAlign="center"
-              marginBottom="3rem"
+              marginBottom="58px"
               position="relative"
               zIndex="1"
             >
               <Text
                 position="absolute"
-                fontFamily="'Dancing Script'"
+                fontFamily="Dancing Script"
                 opacity="0.1"
                 fontSize="150px"
                 color="white"
@@ -117,9 +116,9 @@ export default function CaptionCarousel() {
               </Text>
               <Text
                 position="relative"
-                top="1.5rem"
+                top="25px"
                 color="white"
-                fontFamily="'Playfair Display', serif"
+                fontFamily="Playfair Display, serif"
                 fontSize="40px"
                 fontWeight="700"
               >
@@ -144,7 +143,7 @@ export default function CaptionCarousel() {
               >
                 <Heading
                   color="#fff"
-                  fontFamily="'Playfair Display', serif"
+                  fontFamily="Playfair Display, serif"
                   fontSize="32px"
                   fontWeight="700"
                 >
@@ -154,7 +153,7 @@ export default function CaptionCarousel() {
                 <Text
                   color="#EBEDEF"
                   margin="3rem 0"
-                  fontFamily="'Manrope', sans-serif"
+                  fontFamily="Manrope, sans-serif"
                   fontSize="18px"
                   fontWeight="400"
                   lineHeight="25px"

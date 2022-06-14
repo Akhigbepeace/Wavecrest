@@ -12,7 +12,7 @@ const DiscoverHospitality = () => {
           fontSize="32px"
           fontWeight="700"
           w="559px"
-          fontFamily="'Playfair Display', serif"
+          fontFamily="Playfair Display, serif"
         >
           NIGERIAN'S PREMIERE HOSPITALITY MONOTECHNIC
         </Text>
@@ -20,7 +20,7 @@ const DiscoverHospitality = () => {
           margin="22px 0"
           fontSize="18px"
           line-height="25px"
-          fontFamily="'Manrope', sans-serif"
+          fontFamily="Manrope, sans-serif"
         >
           Wavecrest College of Hospitality is consectetur adipiscing elit, sed
           do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -32,14 +32,14 @@ const DiscoverHospitality = () => {
         <Link
           to="#!"
           background="#021d37"
-          padding="1rem 3rem"
+          w="208px"
+          p="10px 26px"
           color="#fff"
           fontSize="20px"
           textDecoration="none"
           borderRadius="3px"
-          fontFamily="'Manrope', sans-serif"
-          w="208px"
-          height="52px"
+          fontFamily="Manrope, sans-serif"
+          h="52px"
           _hover={{
             textDecoration: "none",
             color: "white",
@@ -67,7 +67,7 @@ const DiscoverHospitality = () => {
             w="100%"
             height="100%"
             textAlign="center"
-            fontFamily="'Playfair Display', serif"
+            fontFamily="Playfair Display, serif"
             p="40px"
           >
             Discover Hospitality

@@ -23,12 +23,10 @@ const Footer = () => {
     <Grid
       background="#EBEDEF"
       gridTemplateColumns="repeat(3, 1fr)"
-      gridGap="4rem"
-      h="394px"
       mt="63px"
       pt="54px"
     >
-      <Flex flexDirection="column" alignItems="flex-end" marginLeft="96px">
+      <Flex flexDirection="column" alignItems="flex-end" mr="82px">
         <Image
           src="/assets/Images/WC-LOGO-july.png"
           alt="logo"
@@ -39,14 +37,15 @@ const Footer = () => {
         <Flex
           flexDirection="column"
           textAlign="right"
-          fontWeight="500"
-          fontSize="16px"
-          lineHeight="20px"
-          m="1rem 0"
+          fontFamily="Manrope', sans-serif"
+          fontSize="18px"
+          fontWeight="700"
+          lineHeight="25px"
+          m="25px"
           color="#021D37"
         >
-          <Text>+234 909 685 6606</Text>
-          <Text>info@wavecrest.edu.ng</Text>
+          <Text fontFamily="Manrope', sans-serif">+234 909 685 6606</Text>
+          <Text fontFamily="Manrope', sans-serif">info@wavecrest.edu.ng</Text>
         </Flex>
 
         <Flex>
@@ -102,13 +101,14 @@ const Footer = () => {
         <List
           display="grid"
           gridTemplateColumns="repeat(3, auto)"
-          gridGap="23px"
-          lineHeight="25px"
+          gridGap="20px"
+          lineHeight="35px"
         >
           <ListItem>
             <Link
               href="#!"
-              fontWeight="600"
+              fontFamily="Manrope, sans-serif"
+              fontWeight="700"
               fontSize="16px"
               color="#021D37"
               _hover={{ textDecoration: "none", color: "#020E1B" }}
@@ -119,8 +119,10 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontWeight="600"
-              fontSize="16px"
+              fontFamily="Manrope, sans-serif"
+              fontWeight="700"
+              fontSize="18px"
+              lineHeight="25px"
               color="#021D37"
               _hover={{ textDecoration: "none", color: "#020E1B" }}
             >
@@ -130,8 +132,10 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontWeight="600"
-              fontSize="16px"
+              fontFamily="Manrope, sans-serif"
+              fontWeight="700"
+              fontSize="18px"
+              lineHeight="25px"
               color="#021D37"
               _hover={{ textDecoration: "none", color: "#020E1B" }}
             >
@@ -141,8 +145,10 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontWeight="600"
-              fontSize="16px"
+              fontFamily="Manrope, sans-serif"
+              fontWeight="700"
+              fontSize="18px"
+              lineHeight="25px"
               color="#021D37"
               _hover={{ textDecoration: "none", color: "#020E1B" }}
             >
@@ -152,8 +158,10 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontWeight="600"
-              fontSize="16px"
+              fontFamily="Manrope, sans-serif"
+              fontWeight="700"
+              fontSize="18px"
+              lineHeight="25px"
               color="#021D37"
               _hover={{ textDecoration: "none", color: "#020E1B" }}
             >
@@ -163,8 +171,10 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontWeight="600"
-              fontSize="16px"
+              fontFamily="Manrope, sans-serif"
+              fontWeight="700"
+              fontSize="18px"
+              lineHeight="25px"
               color="#021D37"
               _hover={{ textDecoration: "none", color: "#020E1B" }}
             >
@@ -174,8 +184,10 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontWeight="600"
-              fontSize="16px"
+              fontFamily="Manrope, sans-serif"
+              fontWeight="700"
+              fontSize="18px"
+              lineHeight="25px"
               color="#021D37"
               _hover={{ textDecoration: "none", color: "#020E1B" }}
             >
@@ -185,8 +197,10 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontWeight="600"
-              fontSize="16px"
+              fontFamily="Manrope, sans-serif"
+              fontWeight="700"
+              fontSize="18px"
+              lineHeight="25px"
               color="#021D37"
               _hover={{ textDecoration: "none", color: "#020E1B" }}
             >
@@ -196,8 +210,10 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontWeight="600"
-              fontSize="16px"
+              fontFamily="Manrope, sans-serif"
+              fontWeight="700"
+              fontSize="18px"
+              lineHeight="25px"
               color="#021D37"
               _hover={{ textDecoration: "none", color: "#020E1B" }}
             >
@@ -207,8 +223,10 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontWeight="600"
-              fontSize="16px"
+              fontFamily="Manrope, sans-serif"
+              fontWeight="700"
+              fontSize="18px"
+              lineHeight="25px"
               color="#021D37"
               _hover={{ textDecoration: "none", color: "#020E1B" }}
             >
@@ -218,8 +236,10 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontWeight="600"
-              fontSize="16px"
+              fontFamily="Manrope, sans-serif"
+              fontWeight="700"
+              fontSize="18px"
+              lineHeight="25px"
               color="#021D37"
               _hover={{ textDecoration: "none", color: "#020E1B" }}
             >
@@ -229,8 +249,10 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontWeight="600"
-              fontSize="16px"
+              fontFamily="Manrope, sans-serif"
+              fontWeight="700"
+              fontSize="18px"
+              lineHeight="25px"
               color="#021D37"
               _hover={{ textDecoration: "none", color: "#020E1B" }}
             >
@@ -240,17 +262,24 @@ const Footer = () => {
         </List>
       </Box>
 
-      <Flex flexDirection="column" pr="116px">
+      <Flex flexDirection="column" pr="24px">
         <Text
           color="#021D37"
-          fontFamily="'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+          fontFamily="Playfair Display, serif"
           fontWeight="700"
-          fontSize="25px"
+          fontSize="22px"
           lineHeight="29px"
         >
           Suscribe to our Newsletter
         </Text>
-        <Text fontWeight="400" fontSize="16px" color="#021d37" p="5px 0">
+        <Text
+          w="436px"
+          color="#021d37"
+          p="5px 0"
+          fontFamily="Manrope, sans-serif"
+          fontWeight="400"
+          fontSize="16px"
+        >
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos tenetur
           voluptate, similique earum obcaecati placeat.
         </Text>
@@ -258,12 +287,15 @@ const Footer = () => {
           <Input
             placeholder="Name"
             bg="#fff"
+            w="435px"
             h="51px"
+            mt="15px"
+            p="15px 20px"
             borderRadius="3px"
             border="none"
-            p="15px 20px"
             _placeholder={{
               color: "#021D37",
+              fontFamily: "Manrope, sans-serif",
               fontSize: "16px",
               fontWeight: "400",
             }}
@@ -272,12 +304,15 @@ const Footer = () => {
           <Input
             placeholder="Email"
             bg="#fff"
+            w="435px"
             h="51px"
+            mt="10px"
             borderRadius="3px"
             border="none"
             p="15px 20px"
             _placeholder={{
               color: "#021D37",
+              fontFamily: "Manrope, sans-serif",
               fontSize: "16px",
               fontWeight: "400",
             }}
@@ -295,7 +330,8 @@ const Footer = () => {
           lineHeight="22px"
           textAlign="center"
           borderRadius="3px"
-          marginTop="8px"
+          mt="8px"
+          mb="70px"
           _hover={{
             bg: "#020E1B",
             transition: "all ease 0.4s",

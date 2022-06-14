@@ -72,7 +72,7 @@ const Navbar = () => {
           <Link
             href="#"
             color="#fff"
-            fontFamily="'Open Sans', sans-serif"
+            fontFamily="Open Sans, sans-serif"
             fontSize="16px"
             textAlign="center"
             pr="40px"
@@ -88,7 +88,7 @@ const Navbar = () => {
           <Link
             href="#"
             color="#fff"
-            fontFamily="'Open Sans', sans-serif"
+            fontFamily="Open Sans, sans-serif"
             fontSize="16px"
             textAlign="center"
             pr="40px"
@@ -134,7 +134,7 @@ const Navbar = () => {
           <Link
             href="#"
             color="#fff"
-            fontFamily="'Open Sans', sans-serif"
+            fontFamily="Open Sans, sans-serif"
             fontSize="16px"
             textAlign="center"
             pr="40px"
@@ -177,7 +177,7 @@ const Navbar = () => {
           <Link
             href="#"
             color="#fff"
-            fontFamily="'Open Sans', sans-serif"
+            fontFamily="Open Sans, sans-serif"
             fontSize="16px"
             textAlign="center"
             pr="40px"
@@ -220,7 +220,7 @@ const Navbar = () => {
           <Link
             href="#"
             color="#fff"
-            fontFamily="'Open Sans', sans-serif"
+            fontFamily="Open Sans, sans-serif"
             fontSize="16px"
             textAlign="center"
             pr="40px"
@@ -235,7 +235,7 @@ const Navbar = () => {
           <Link
             href="#"
             color="#fff"
-            fontFamily="'Open Sans', sans-serif"
+            fontFamily="Open Sans, sans-serif"
             fontSize="16px"
             textAlign="center"
             pr="40px"
@@ -251,7 +251,7 @@ const Navbar = () => {
             href="#"
             color="#fff"
             pr="40px"
-            fontFamily="'Open Sans', sans-serif"
+            fontFamily="Open Sans, sans-serif"
             fontSize="16px"
             textAlign="center"
             _hover={{
@@ -272,7 +272,7 @@ const Navbar = () => {
             w="133px"
             border="2px solid #fff"
             borderRadius="3px"
-            fontFamily="'Open Sans', sans-serif"
+            fontFamily="Open Sans, sans-serif"
             fontWeight="700"
             fontSize="17px"
             textAlign="center"
@@ -293,7 +293,7 @@ const Navbar = () => {
             ml="27px"
             border="2px solid #fff"
             borderRadius="3px"
-            fontFamily="'Open Sans', sans-serif"
+            fontFamily="Open Sans, sans-serif"
             fontWeight="700"
             fontSize="17px"
             textAlign="center"
