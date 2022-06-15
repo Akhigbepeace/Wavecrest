@@ -1,16 +1,16 @@
-import { Box, Image, Text, Button, Flex, Heading } from "@chakra-ui/react";
+import { Box, Text, Button, Image, Flex, Heading } from "@chakra-ui/react";
 import React, { useState } from "react";
-// import studyProgrammes1 from "../assets/Images/studyprogrammes 1.png";
-import studyProgrammes1 from "../assets/Images/Search.png";
-import studyProgrammes2 from "../assets/Images/studyprogrammes 2.png";
-import studyProgrammes3 from "../assets/Images/studyprogrammes 3.png";
-import studyProgrammes4 from "../assets/Images/studyprogrammes 4.png";
+import studyProgrammes1 from "../assets/Images/studyprogrammes1.png";
+import studyProgrammes2 from "../assets/Images/studyprogrammes2.png";
+import studyProgrammes3 from "../assets/Images/studyprogrammes3.png";
+import studyProgrammes4 from "../assets/Images/studyprogrammes4.png";
+console.log(studyProgrammes1);
 
 const StudyProgrammes = () => {
   const objArr = [
     {
       linkContent: "HND IN HOSPITALITY MANAGEMENT",
-      imageSrc: { studyProgrammes1 },
+      imageSrc: studyProgrammes1,
       current: false,
       captionHeading: "ACQUIRE AN HND IN HOSPITALITY MANAGEMENT",
       captionTime: "2 Years | Full Time",
@@ -18,7 +18,7 @@ const StudyProgrammes = () => {
     },
     {
       linkContent: "ND IN HOTEL AND CATERING MANAGEMENT",
-      imageSrc: { studyProgrammes2 },
+      imageSrc: studyProgrammes2,
       current: false,
       captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
       captionTime: "2 Years | Full Time",
@@ -26,7 +26,7 @@ const StudyProgrammes = () => {
     },
     {
       linkContent: "CERTIFICATE COURSE IN HOSPITALITY OPERATIONS",
-      imageSrc: { studyProgrammes3 },
+      imageSrc: studyProgrammes3,
       current: true,
       captionHeading: "SPEND A GAP YEAR IN HOSPITALITY TRAINING",
       captionTime: "1 Year | Full Time",
@@ -34,7 +34,7 @@ const StudyProgrammes = () => {
     },
     {
       linkContent: "SHORT COURSES",
-      imageSrc: { studyProgrammes4 },
+      imageSrc: studyProgrammes4,
       current: false,
       captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
       captionTime: "2 Years | Part Time",
@@ -87,15 +87,16 @@ const StudyProgrammes = () => {
             src={currentprogram.imageSrc}
             alt="coffee"
             h="394px"
+            w="1247px"
             m="0 auto"
             borderTop="5px solid #021D37"
             position="absolute"
           />
           <Box
             bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(1, 15, 29, 0.52) 46.35%, rgba(2, 29, 55, 0.87) 100%)"
-            position="relative"
             textAlign="center"
-            // top=""
+            position="relative"
+            top="6.45rem"
           >
             <Heading
               color="#fff"
