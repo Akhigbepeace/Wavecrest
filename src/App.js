@@ -9,8 +9,12 @@ import Blog from "./components/Blog";
 import StudyProgrammes from "./components/StudyProgrammes";
 import OurStories from "./components/OurStories";
 import Partners from "./components/Partners";
+import Carousel from "./components/TestCar";
 import Footer from "./components/Footer";
 import FooterCopywright from "./components/FooterCopywright";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
@@ -28,6 +32,8 @@ function App() {
           <StudyProgrammes />
           <OurStories />
           <Partners />
+          <Carousel />
+
           <Footer />
           <FooterCopywright />
         </Fragment>

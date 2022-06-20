@@ -52,18 +52,6 @@ export default function CaptionCarousel() {
       width={"full"}
       overflow={"hidden"}
     >
-      {/* CSS files for react-slick */}
-      <link
-        rel="stylesheet"
-        type="text/css"
-        charSet="UTF-8"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-      />
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-      />
       {/* Left Icon */}
       <IconButton
         bg="none"
@@ -85,6 +73,9 @@ export default function CaptionCarousel() {
         top={top}
         zIndex={2}
         color="white"
+        _hover={{
+          bg: "transparent",
+        }}
         onClick={() => slider?.slickNext()}
       >
         <BiChevronRight size="40px" />

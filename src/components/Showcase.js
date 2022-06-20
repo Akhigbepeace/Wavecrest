@@ -5,12 +5,25 @@ import showcase1 from "../assets/Images/Showcase1.png";
 import showcase2 from "../assets/Images/Showcase2.png";
 import showcase3 from "../assets/Images/Showcase3.png";
 import showcase4 from "../assets/Images/Showcase4.png";
-import waveVid from "../assets/Images/wavecrestvideo.mp4";
+import waveVid from "../assets/Images/wavevid.mp4";
 const Showcase = () => {
   return (
     <Grid templateColumns="1fr 1fr" gap="8px">
       <Box bg="blue.400" h="100%">
-        <ReactPlayer src={waveVid} autoPlay loop muted></ReactPlayer>
+        {/* <ReactPlayer
+          src="https://www.youtube.com/watch?v=u7JMhVI7taQ"
+          autoPlay
+          loop
+          muted
+        ></ReactPlayer> */}
+        <ReactPlayer
+          url={waveVid}
+          playing
+          loop
+          muted
+          width="100%"
+          height="100%"
+        />
       </Box>
       <Grid templateColumns="1fr 1fr" gap="8px">
         <Box bg="gray.400" h="100%">
