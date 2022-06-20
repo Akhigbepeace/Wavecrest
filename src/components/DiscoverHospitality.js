@@ -6,20 +6,20 @@ import discoverpic3 from "../assets/Images/discoverpic 3.png";
 
 const DiscoverHospitality = () => {
   return (
-    <Flex alignItems="center" justifyContent="space-between">
-      <Box ml="63px">
+    <Flex alignItems="center" justifyContent="space-between" w="1258px" h="421px" m="50px auto">
+      <Box>
         <Text
           fontSize="32px"
           fontWeight="700"
-          w="559px"
           fontFamily="Playfair Display, serif"
         >
           NIGERIAN'S PREMIERE HOSPITALITY MONOTECHNIC
         </Text>
         <Text
-          margin="22px 0"
+          m="22px 0"
+          w="568px"
           fontSize="18px"
-          line-height="25px"
+          lineHeight="25px"
           fontFamily="Manrope, sans-serif"
         >
           Wavecrest College of Hospitality is consectetur adipiscing elit, sed
@@ -49,23 +49,23 @@ const DiscoverHospitality = () => {
         </Link>
       </Box>
 
-      <Grid gridTemplateColumns="1fr 1fr" margin="50px 63px">
+      <Grid gridTemplateColumns="1fr 1fr" m="50px 0">
         <Box w="320px" height="214px">
           <Image
             src={discoverpic1}
             w="100%"
-            height="100%"
+            h="100%"
             p="33px"
             alt="workbench"
           />
         </Box>
 
-        <Box background="#021d37" w="320px" height="214px">
+        <Box background="#021d37" w="320px" h="214px">
           <Text
             color="#fff"
             fontSize="40px"
             w="100%"
-            height="100%"
+            h="100%"
             textAlign="center"
             fontFamily="Playfair Display, serif"
             p="40px"
@@ -74,15 +74,15 @@ const DiscoverHospitality = () => {
           </Text>
         </Box>
 
-        <Box w="320px" height="214px">
-          <Image src={discoverpic2} w="100%" height="100%" alt="img_ny" />
+        <Box w="320px" h="214px">
+          <Image src={discoverpic2} w="100%" h="100%" alt="img_ny" />
         </Box>
 
-        <Box className="last-pic" w="320px" height="214px">
+        <Box className="last-pic" w="320px" h="214px">
           <Image
             src={discoverpic3}
             w="100%"
-            height="100%"
+            h="100%"
             p="33px"
             alt="coffee"
           />

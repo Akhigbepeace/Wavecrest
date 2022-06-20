@@ -1,4 +1,12 @@
-import { Box, Text, Button, Image, Flex, Heading } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Button,
+  Image,
+  Flex,
+  Heading,
+  Link,
+} from "@chakra-ui/react";
 import React, { useState } from "react";
 import studyProgrammes1 from "../assets/Images/studyprogrammes1.png";
 import studyProgrammes2 from "../assets/Images/studyprogrammes2.png";
@@ -60,7 +68,7 @@ const StudyProgrammes = () => {
             const isCurrent =
               currentprogram.linkContent === programm.linkContent;
             return (
-              <Text
+              <Link
                 href="#!"
                 fontWeight="600"
                 p="10px"
@@ -75,9 +83,10 @@ const StudyProgrammes = () => {
                 color={isCurrent ? "#EBEDEF" : "#021d37"}
                 key={i}
                 onClick={() => setCurrentProgram(programm)}
+                _hover={{ textDecoration: "none" }}
               >
                 {programm.linkContent}
-              </Text>
+              </Link>
             );
           })}
         </Flex>

@@ -8,46 +8,22 @@ import showcase4 from "../assets/Images/Showcase4.png";
 import waveVid from "../assets/Images/wavecrestvideo.mp4";
 const Showcase = () => {
   return (
-    <Grid templateColumns="1fr 1fr" gap="10px">
+    <Grid templateColumns="1fr 1fr" gap="8px">
       <Box bg="blue.400" h="100%">
         <ReactPlayer src={waveVid} autoPlay loop muted></ReactPlayer>
       </Box>
-      <Grid templateColumns="1fr 1fr" gap="4">
+      <Grid templateColumns="1fr 1fr" gap="8px">
         <Box bg="gray.400" h="100%">
-          <Image
-            src={showcase1}
-            alt="Wavecrest Images 1"
-            w="100%"
-            h="100%"
-            objectFit="contain"
-          />
+          <Image src={showcase1} alt="Wavecrest Images 1" w="100%" h="100%" />
         </Box>
         <Box bg="gray.400" h="100%">
-          <Image
-            src={showcase2}
-            alt="Wavecrest Images 1"
-            w="100%"
-            h="100%"
-            objectFit="contain"
-          />
+          <Image src={showcase2} alt="Wavecrest Images 1" w="100%" h="100%" />
         </Box>
         <Box bg="gray.400" h="100%">
-          <Image
-            src={showcase3}
-            alt="Wavecrest Images 1"
-            w="100%"
-            h="100%"
-            objectFit="contain"
-          />
+          <Image src={showcase3} alt="Wavecrest Images 1" w="100%" h="100%" />
         </Box>
         <Box bg="gray.400" h="100%">
-          <Image
-            src={showcase4}
-            alt="Wavecrest Images 1"
-            w="100%"
-            h="100%"
-            objectFit="contain"
-          />
+          <Image src={showcase4} alt="Wavecrest Images 1" w="100%" h="100%" />
         </Box>
       </Grid>
     </Grid>

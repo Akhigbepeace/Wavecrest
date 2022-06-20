@@ -1,4 +1,12 @@
-import { Image, Stack, Flex, Link } from "@chakra-ui/react";
+import {
+  Image,
+  Stack,
+  Flex,
+  Link,
+  // ListItem,
+  // List,
+  // Box,
+} from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import Logo from "../../assets/Images/WC-LOGO-july.png";
 import Linked from "../../assets/Images/linked.png";
@@ -15,7 +23,7 @@ const Navbar = () => {
         <Image w="238px" h="52px" src={Logo} />
 
         <Stack direction="row" alignItems="center">
-          <Link href="#!" target="_blank" rel="noreferrer">
+          <Link href="" target="_blank" rel="noreferrer">
             <Image src={Search} w="20px" h="20px" mr="18px" />
           </Link>
 
@@ -44,7 +52,7 @@ const Navbar = () => {
           </Link>
 
           <Link
-            href="https://api.whatsapp.com/send/?phone=09155003700&text&app_absent=0"
+            href="https://api.whatsapp.com/send/?phone=09096856606 &text&app_absent=0"
             target="_blank"
             rel="noreferrer"
           >
@@ -95,38 +103,52 @@ const Navbar = () => {
             _hover={{
               color: "brown",
               textDecoration: "none",
-              // Box ={{
-              //   display: "block",
-              // }},
             }}
           >
             ABOUT
-            {/* <Box className="box" bg="#fff" w="152px" h="8px" /> */}
-            {/* <List
-              // display="flex"
-              textAlign="left"
-              flexDirection="column"
-              w="150px"
+            {/* <Box className="box" bg="#fff" w="127px" h="6px" />
+            <List
+              w="127px"
               bg="#021d37"
-              transition="all ease-in-out 05s"
               m="2.5rem auto"
+              textAlign="left"
               position="absolute"
-              z-index="1"
+              zIndex="1"
             >
-              <ListItem borderBottom="2px solid #EBEDEF" p="6px 14px">
-                <Link href="#!">Programmes</Link>
+              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
+                <Link
+                  href="#!"
+                  fontSize="14px"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  PROFILE
+                </Link>
               </ListItem>
-              <ListItem borderBottom="2px solid #EBEDEF">
-                <Link href="#!">Training</Link>
+
+              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
+                <Link
+                  href="#!"
+                  fontSize="14px"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  MILESTONE
+                </Link>
               </ListItem>
-              <ListItem borderBottom="2px solid #EBEDEF">
-                <Link href="#!">Job Placement</Link>
-              </ListItem>
-              <ListItem borderBottom="2px solid #EBEDEF">
-                <Link href="#!">Internship</Link>
-              </ListItem>
-              <ListItem>
-                <Link href="#!">NYSC</Link>
+
+              <ListItem p="3px 20px">
+                <Link
+                  href="#!"
+                  fontSize="14px"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  OUR TEAM
+                </Link>
               </ListItem>
             </List> */}
           </Link>
@@ -144,32 +166,70 @@ const Navbar = () => {
             }}
           >
             ADMISSION
-            {/* <Box bg="#fff" h="6px"></Box> */}
-            {/* <List
-              // display="flex"
-              textAlign="left"
-              flexDirection="column"
-              w="150px"
+            {/* <Box bg="#fff" h="6px" w="129px"></Box>
+            <List
               bg="#021d37"
-              transition="all ease-in-out 05s"
               m="2.5rem auto"
+              w="240px"
+              textAlign="left"
               position="absolute"
               z-index="1"
+              transition="all ease-in-out 0.5s"
             >
-              <ListItem borderBottom="2px solid #EBEDEF" p="6px 14px">
-                <Link href="#!">Programmes</Link>
+              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
+                <Link
+                  href="#!"
+                  fontSize="14px"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  APPLY ONLINE
+                </Link>
               </ListItem>
-              <ListItem borderBottom="2px solid #EBEDEF">
-                <Link href="#!">Training</Link>
+              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
+                <Link
+                  href="#!"
+                  fontSize="14px"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  ADMISSION REQUIREMENTS
+                </Link>
               </ListItem>
-              <ListItem borderBottom="2px solid #EBEDEF">
-                <Link href="#!">Job Placement</Link>
+              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
+                <Link
+                  href="#!"
+                  fontSize="14px"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  TUITION AND SCHOLARSHIP
+                </Link>
               </ListItem>
-              <ListItem borderBottom="2px solid #EBEDEF">
-                <Link href="#!">Internship</Link>
+              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
+                <Link
+                  href="#!"
+                  fontSize="14px"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  HOSTEL
+                </Link>
               </ListItem>
-              <ListItem>
-                <Link href="#!">NYSC</Link>
+              <ListItem p="3px 20px">
+                <Link
+                  href="#!"
+                  fontSize="14px"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  FAQs
+                </Link>
               </ListItem>
             </List> */}
           </Link>
@@ -187,32 +247,70 @@ const Navbar = () => {
             }}
           >
             ACADEMICS
-            {/* <Box bg="#fff" h="6px"></Box> */}
-            {/* <List
-              // display="flex"
-              textAlign="left"
-              flexDirection="column"
-              w="150px"
+            {/* <Box bg="#fff" h="6px" w="152px"></Box>
+            <List
+              w="152px"
               bg="#021d37"
-              transition="all ease-in-out 05s"
               m="2.5rem auto"
+              textAlign="left"
               position="absolute"
               z-index="1"
+              transition="all ease-in-out 0.5s"
             >
-              <ListItem borderBottom="2px solid #EBEDEF" p="6px 14px">
-                <Link href="#!">Programmes</Link>
+              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
+                <Link
+                  href="#!"
+                  fontSize="14px"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  PROGRAMMES
+                </Link>
               </ListItem>
-              <ListItem borderBottom="2px solid #EBEDEF">
-                <Link href="#!">Training</Link>
+              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
+                <Link
+                  href="#!"
+                  fontSize="14px"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  TRAINING
+                </Link>
               </ListItem>
-              <ListItem borderBottom="2px solid #EBEDEF">
-                <Link href="#!">Job Placement</Link>
+              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
+                <Link
+                  href="#!"
+                  fontSize="14px"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  JOB PLACEMENT
+                </Link>
               </ListItem>
-              <ListItem borderBottom="2px solid #EBEDEF">
-                <Link href="#!">Internship</Link>
+              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
+                <Link
+                  href="#!"
+                  fontSize="14px"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  INTERNSHIP
+                </Link>
               </ListItem>
-              <ListItem>
-                <Link href="#!">NYSC</Link>
+              <ListItem p="3px 20px">
+                <Link
+                  href="#!"
+                  fontSize="14px"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  NYSC
+                </Link>
               </ListItem>
             </List> */}
           </Link>
@@ -232,6 +330,7 @@ const Navbar = () => {
             ALUMNI
             {/* <Box bg="#fff" h="6px"></Box> */}
           </Link>
+
           <Link
             href="#"
             color="#fff"
@@ -247,6 +346,7 @@ const Navbar = () => {
             BLOG
             {/* <Box bg="#fff" h="6px"></Box> */}
           </Link>
+
           <Link
             href="#"
             color="#fff"
@@ -284,6 +384,7 @@ const Navbar = () => {
           >
             SUPPORT US
           </Link>
+
           <Link
             href="#!"
             bg="#fff"

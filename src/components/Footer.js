@@ -24,7 +24,7 @@ const Footer = () => {
     <Grid
       background="#EBEDEF"
       gridTemplateColumns="repeat(3, 1fr)"
-      mt="63px"
+      // mt="63px"
       pt="54px"
     >
       <Flex flexDirection="column" alignItems="flex-end" mr="82px">
@@ -33,11 +33,11 @@ const Footer = () => {
         <Flex
           flexDirection="column"
           textAlign="right"
-          fontFamily="Manrope', sans-serif"
+          fontFamily="Manrope, sans-serif"
           fontSize="18px"
           fontWeight="700"
           lineHeight="25px"
-          mt="20px"
+          m="15px"
           color="#021D37"
         >
           <Text fontFamily="Manrope', sans-serif">+234 909 685 6606</Text>
@@ -50,7 +50,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <Image src={linked} alt="linkedin" w="40px" h="34px" mr="10px" />
+            <Image src={linked} alt="linkedin" w="40px" h="40px" mr="10px" />
           </Link>
 
           <Link
@@ -58,7 +58,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <Image src={facebook} alt="facebook" w="40px" h="34px" mr="10px" />
+            <Image src={facebook} alt="facebook" w="40px" h="40px" mr="10px" />
           </Link>
 
           <Link
@@ -66,7 +66,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <Image src={twitter} alt="twitter" w="40px" h="34px" mr="10px" />
+            <Image src={twitter} alt="twitter" w="40px" h="40px" mr="10px" />
           </Link>
 
           <Link
@@ -74,7 +74,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <Image src={whatsapp} alt="whatsapp" w="40px" h="34px" mr="10px" />
+            <Image src={whatsapp} alt="whatsapp" w="40px" h="40px" mr="10px" />
           </Link>
 
           <Link
@@ -86,7 +86,7 @@ const Footer = () => {
               src={Instagram}
               alt="instagram"
               w="40px"
-              h="34px"
+              h="40px"
               mr="10px"
             />
           </Link>
@@ -99,6 +99,7 @@ const Footer = () => {
           gridTemplateColumns="repeat(3, auto)"
           gridGap="20px"
           lineHeight="35px"
+          m="0 auto"
         >
           <ListItem>
             <Link
