@@ -3,9 +3,9 @@ import {
   Stack,
   Flex,
   Link,
-  ListItem,
-  List,
-  Box,
+  // ListItem,
+  // List,
+  // Box,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import Logo from "../../assets/Images/WC-LOGO-july.png";
@@ -15,6 +15,8 @@ import Facebook from "../../assets/Images/facebook.png";
 import Twitter from "../../assets/Images/Twitter.png";
 import Instagram from "../../assets/Images/Instagram.png";
 import Search from "../../assets/Images/Search.png";
+import Home from "../Home/Home";
+import Contact from "../Pages/Contact";
 
 const Navbar = () => {
   return (
@@ -78,7 +80,7 @@ const Navbar = () => {
       >
         <Flex alignItems="center" justifyContent="space-between">
           <Link
-            href="#"
+            href= {Home}
             color="#fff"
             fontFamily="Open Sans, sans-serif"
             fontSize="16px"
@@ -351,7 +353,7 @@ const Navbar = () => {
           </Link>
 
           <Link
-            href="#"
+            href={Contact}
             color="#fff"
             pr="40px"
             fontFamily="Open Sans, sans-serif"
