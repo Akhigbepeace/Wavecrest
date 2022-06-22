@@ -80,7 +80,7 @@ const Navbar = () => {
       >
         <Flex alignItems="center" justifyContent="space-between">
           <Link
-            href= {Home}
+            // href= {Home}
             color="#fff"
             fontFamily="Open Sans, sans-serif"
             fontSize="16px"
@@ -353,7 +353,7 @@ const Navbar = () => {
           </Link>
 
           <Link
-            href={Contact}
+            // href={Contact}
             color="#fff"
             pr="40px"
             fontFamily="Open Sans, sans-serif"
