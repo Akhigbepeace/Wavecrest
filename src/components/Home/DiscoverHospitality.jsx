@@ -1,12 +1,18 @@
 import { Box, Flex, Grid, Link, Text, Image } from "@chakra-ui/react";
 import React from "react";
-import discoverpic1 from "../assets/Images/discoverpic 1.png";
-import discoverpic2 from "../assets/Images/discoverpic 2.png";
-import discoverpic3 from "../assets/Images/discoverpic 3.png";
+import discoverpic1 from "../../assets/Images/discoverpic 1.png";
+import discoverpic2 from "../../assets/Images/discoverpic 2.png";
+import discoverpic3 from "../../assets/Images/discoverpic 3.png";
 
 const DiscoverHospitality = () => {
   return (
-    <Flex alignItems="center" justifyContent="space-between" w="1258px" h="421px" m="50px auto">
+    <Flex
+      alignItems="center"
+      justifyContent="space-between"
+      w="1258px"
+      h="421px"
+      m="50px auto"
+    >
       <Box>
         <Text
           fontSize="32px"
@@ -79,13 +85,7 @@ const DiscoverHospitality = () => {
         </Box>
 
         <Box className="last-pic" w="320px" h="214px">
-          <Image
-            src={discoverpic3}
-            w="100%"
-            h="100%"
-            p="33px"
-            alt="coffee"
-          />
+          <Image src={discoverpic3} w="100%" h="100%" p="33px" alt="coffee" />
         </Box>
       </Grid>
     </Flex>

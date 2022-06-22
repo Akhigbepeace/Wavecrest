@@ -12,38 +12,49 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import React from "react";
-import logo from "../assets/Images/WC-LOGO-july.png";
-import linked from "../assets/Images/linked.png";
-import twitter from "../assets/Images/Twitter.png";
-import facebook from "../assets/Images/facebook.png";
-import whatsapp from "../assets/Images/whatsapp.png";
-import Instagram from "../assets/Images/Instagram.png";
+import logo from "../../assets/Images/WC-LOGO-july.png";
+import linked from "../../assets/Images/linked.png";
+import twitter from "../../assets/Images/Twitter.png";
+import facebook from "../../assets/Images/facebook.png";
+import whatsapp from "../../assets/Images/whatsapp.png";
+import Instagram from "../../assets/Images/Instagram.png";
 
 const Footer = () => {
   return (
-    <Grid
-      background="#EBEDEF"
-      gridTemplateColumns="repeat(3, 1fr)"
-      // mt="63px"
-      pt="54px"
-    >
-      <Flex flexDirection="column" alignItems="flex-end" mr="82px">
-        <Image src={logo} alt="logo" w="270px" height="54px" />
+    <Grid background="#EBEDEF" gridTemplateColumns="repeat(3, 1fr)" pt="54px">
+      <Flex
+        flexDirection="column"
+        alignItems="flex-end"
+        textAlign="right"
+        mr="82px"
+      >
+        <Image src={logo} alt="logo" w="270px" height="54px" mb="10px" />
+
+        <Text
+          w="274px"
+          color="#021D37"
+          fontFamily="Manrope, sans-serif"
+          fontWeight="400"
+          fontSize="18px"
+          lineHeight="25px"
+          mr="7px"
+        >
+          75 Adisa Bashua Street Off Adelabu Street, Surulere, Lagos State,
+          Nigeria.
+        </Text>
 
         <Flex
           flexDirection="column"
-          textAlign="right"
           fontFamily="Manrope, sans-serif"
           fontSize="18px"
           fontWeight="700"
           lineHeight="25px"
-          m="15px"
+          m="15px 7px"
           color="#021D37"
         >
           <Text fontFamily="Manrope', sans-serif">+234 909 685 6606</Text>
           <Text fontFamily="Manrope', sans-serif">info@wavecrest.edu.ng</Text>
         </Flex>
-
         <Flex>
           <Link
             href="https://www.linkedin.com/company/wavecrest-college-of-hospitality/"

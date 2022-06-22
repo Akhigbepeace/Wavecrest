@@ -11,16 +11,16 @@ import {
 } from "@chakra-ui/react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Slider from "react-slick";
-import Founders from "../assets/Images/founder.png";
+import Founders from "../../assets/Images/founder.png";
 
 const settings = {
   dots: true,
   arrows: false,
-  fade: true,
+  fade: false,
   infinite: true,
   autoplay: true,
-  speed: 500,
-  autoplaySpeed: 5000,
+  speed: 1500,
+  autoplaySpeed: 2000,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
@@ -76,6 +76,9 @@ export default function CaptionCarousel() {
         top={top}
         transform={"translate(0%, -50%)"}
         zIndex={2}
+        _hover={{
+          bg: "transparent",
+        }}
         onClick={() => slider?.slickPrev()}
       >
         <BiChevronLeft size="40px" />
@@ -90,6 +93,9 @@ export default function CaptionCarousel() {
         top={top}
         transform={"translate(0%, -50%)"}
         zIndex={2}
+        _hover={{
+          bg: "transparent",
+        }}
         onClick={() => slider?.slickNext()}
       >
         <BiChevronRight size="40px" />

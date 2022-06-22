@@ -10,16 +10,16 @@ import {
 } from "@chakra-ui/react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Slider from "react-slick";
-import ourstories from "../assets/Images/ourstories.png";
+import ourstories from "../../assets/Images/ourstories.png";
 
 const settings = {
-  dots: true,
+  dots: false,
   arrows: false,
-  fade: true,
+  fade: false,
   infinite: true,
   autoplay: true,
-  speed: 500,
-  autoplaySpeed: 5000,
+  speed: 1500,
+  autoplaySpeed: 2500,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
@@ -46,12 +46,7 @@ export default function CaptionCarousel() {
   ];
 
   return (
-    <Box
-      position={"relative"}
-      height={"600px"}
-      width={"full"}
-      overflow={"hidden"}
-    >
+    <Box position={"relative"} width={"full"} overflow={"hidden"}>
       {/* Left Icon */}
       <IconButton
         bg="none"
@@ -60,6 +55,9 @@ export default function CaptionCarousel() {
         top={top}
         color="white"
         zIndex={2}
+        _hover={{
+          bg: "transparent",
+        }}
         onClick={() => slider?.slickPrev()}
       >
         <BiChevronLeft size="40px" />
@@ -86,7 +84,6 @@ export default function CaptionCarousel() {
         {cards.map((card, index) => (
           <Box key={index} h={"559px"} position="relative" bg="#021D37">
             {/* This is the block you need to change, to customize the caption */}
-
             <Flex
               flexDirection="column"
               justifyContent="center"

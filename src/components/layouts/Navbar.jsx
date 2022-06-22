@@ -3,9 +3,9 @@ import {
   Stack,
   Flex,
   Link,
-  // ListItem,
-  // List,
-  // Box,
+  ListItem,
+  List,
+  Box,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import Logo from "../../assets/Images/WC-LOGO-july.png";
@@ -23,7 +23,7 @@ const Navbar = () => {
         <Image w="238px" h="52px" src={Logo} />
 
         <Stack direction="row" alignItems="center">
-          <Link href="" target="_blank" rel="noreferrer">
+          <Link href="#!" target="_blank" rel="noreferrer">
             <Image src={Search} w="20px" h="20px" mr="18px" />
           </Link>
 
@@ -106,15 +106,16 @@ const Navbar = () => {
             }}
           >
             ABOUT
-            {/* <Box className="box" bg="#fff" w="127px" h="6px" />
-            <List
-              w="127px"
+            {/* <List
               bg="#021d37"
-              m="2.5rem auto"
               textAlign="left"
+              w="127px"
               position="absolute"
+              // m="27px auto"
+              mt="27px"
               zIndex="1"
             >
+              <Box bg="#fff" w="100%" h="6px" />
               <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
                 <Link
                   href="#!"
@@ -124,7 +125,7 @@ const Navbar = () => {
                   }}
                 >
                   PROFILE
-                </Link>
+                </Text>
               </ListItem>
 
               <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
@@ -136,7 +137,7 @@ const Navbar = () => {
                   }}
                 >
                   MILESTONE
-                </Link>
+                </Text>
               </ListItem>
 
               <ListItem p="3px 20px">
@@ -148,9 +149,10 @@ const Navbar = () => {
                   }}
                 >
                   OUR TEAM
-                </Link>
+                </Text>
               </ListItem>
             </List> */}
+            {/* </Box> */}
           </Link>
 
           <Link
@@ -166,72 +168,74 @@ const Navbar = () => {
             }}
           >
             ADMISSION
-            {/* <Box bg="#fff" h="6px" w="129px"></Box>
-            <List
-              bg="#021d37"
-              m="2.5rem auto"
-              w="240px"
-              textAlign="left"
-              position="absolute"
-              z-index="1"
-              transition="all ease-in-out 0.5s"
-            >
-              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
-                <Link
-                  href="#!"
-                  fontSize="14px"
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  APPLY ONLINE
-                </Link>
-              </ListItem>
-              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
-                <Link
-                  href="#!"
-                  fontSize="14px"
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  ADMISSION REQUIREMENTS
-                </Link>
-              </ListItem>
-              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
-                <Link
-                  href="#!"
-                  fontSize="14px"
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  TUITION AND SCHOLARSHIP
-                </Link>
-              </ListItem>
-              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
-                <Link
-                  href="#!"
-                  fontSize="14px"
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  HOSTEL
-                </Link>
-              </ListItem>
-              <ListItem p="3px 20px">
-                <Link
-                  href="#!"
-                  fontSize="14px"
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  FAQs
-                </Link>
-              </ListItem>
-            </List> */}
+            {/* <Box m="0 auto">
+              <List
+                bg="#021d37"
+                m="1.7rem auto"
+                w="240px"
+                textAlign="left"
+                position="absolute"
+                zIndex="1"
+                transition="all ease-in-out 0.5s"
+              >
+                <Box bg="#fff" h="6px" w="129px"></Box>
+                <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
+                  <Link
+                    href="#!"
+                    fontSize="14px"
+                    _hover={{
+                      textDecoration: "none",
+                    }}
+                  >
+                    APPLY ONLINE
+                  </Link>
+                </ListItem>
+                <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
+                  <Link
+                    href="#!"
+                    fontSize="14px"
+                    _hover={{
+                      textDecoration: "none",
+                    }}
+                  >
+                    ADMISSION REQUIREMENTS
+                  </Link>
+                </ListItem>
+                <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
+                  <Link
+                    href="#!"
+                    fontSize="14px"
+                    _hover={{
+                      textDecoration: "none",
+                    }}
+                  >
+                    TUITION AND SCHOLARSHIP
+                  </Link>
+                </ListItem>
+                <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
+                  <Link
+                    href="#!"
+                    fontSize="14px"
+                    _hover={{
+                      textDecoration: "none",
+                    }}
+                  >
+                    HOSTEL
+                  </Link>
+                </ListItem>
+                <ListItem p="3px 20px">
+                  <Link
+                    href="#!"
+                    fontSize="14px"
+                    _hover={{
+                      textDecoration: "none",
+                    }}
+                  >
+                    FAQs
+                  </Link>
+                </ListItem>
+              </List>
+            </Box> */}
           </Link>
 
           <Link
@@ -247,16 +251,15 @@ const Navbar = () => {
             }}
           >
             ACADEMICS
-            {/* <Box bg="#fff" h="6px" w="152px"></Box>
-            <List
-              w="152px"
+            {/* <List
               bg="#021d37"
-              m="2.5rem auto"
+              m="1.7rem auto"
               textAlign="left"
               position="absolute"
-              z-index="1"
+              zIndex="1"
               transition="all ease-in-out 0.5s"
             >
+              <Box bg="#fff" h="6px" w="100%"></Box>
               <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
                 <Link
                   href="#!"

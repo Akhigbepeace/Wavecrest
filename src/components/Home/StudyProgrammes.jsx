@@ -8,11 +8,10 @@ import {
   Link,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import studyProgrammes1 from "../assets/Images/studyprogrammes1.png";
-import studyProgrammes2 from "../assets/Images/studyprogrammes2.png";
-import studyProgrammes3 from "../assets/Images/studyprogrammes3.png";
-import studyProgrammes4 from "../assets/Images/studyprogrammes4.png";
-console.log(studyProgrammes1);
+import studyProgrammes1 from "../../assets/Images/studyprogrammes1.png";
+import studyProgrammes2 from "../../assets/Images/studyprogrammes2.png";
+import studyProgrammes3 from "../../assets/Images/studyprogrammes3.png";
+import studyProgrammes4 from "../../assets/Images/studyprogrammes4.png";
 
 const StudyProgrammes = () => {
   const objArr = [
