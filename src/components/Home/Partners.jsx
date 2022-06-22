@@ -3,7 +3,7 @@ import { Box, useBreakpointValue, Image } from "@chakra-ui/react";
 import { Flex, Text, Link } from "@chakra-ui/react";
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 import Slider from "react-slick";
-import Nestle from "../../assets/Images/Nestle.png";
+import Nestle from "assets/Images/Nestle.png";
 import Pau from "../../assets/Images/pau.png";
 import bihc from "../../assets/Images/bihc.png";
 import raddison from "../../assets/Images/raddison.png";

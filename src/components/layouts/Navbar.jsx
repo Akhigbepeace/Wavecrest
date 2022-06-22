@@ -3,20 +3,92 @@ import {
   Stack,
   Flex,
   Link,
-  ListItem,
-  List,
   Box,
+  useOutsideClick,
+  useBoolean,
 } from "@chakra-ui/react";
-import React, { Fragment } from "react";
-import Logo from "../../assets/Images/WC-LOGO-july.png";
-import Linked from "../../assets/Images/linked.png";
-import Whatapps from "../../assets/Images/whatsapp.png";
-import Facebook from "../../assets/Images/facebook.png";
-import Twitter from "../../assets/Images/Twitter.png";
-import Instagram from "../../assets/Images/Instagram.png";
-import Search from "../../assets/Images/Search.png";
+import React, { Fragment, useState } from "react";
+import Logo from "assets/Images/WC-LOGO-july.png";
+import Linked from "assets/Images/linked.png";
+import Whatapps from "assets/Images/whatsapp.png";
+import Facebook from "assets/Images/facebook.png";
+import Twitter from "assets/Images/Twitter.png";
+import Instagram from "assets/Images/Instagram.png";
+import Search from "assets/Images/Search.png";
 
 const Navbar = () => {
+  const navItems = [
+    {
+      name: "home",
+      href: "#",
+      subMenu: [
+        {
+          name: "profile",
+          href: "#",
+        },
+        {
+          name: "milestone",
+          href: "#",
+        },
+        {
+          name: "our team",
+          href: "#",
+        },
+      ],
+    },
+    {
+      name: "about",
+      href: "#",
+      subMenu: [
+        {
+          name: "apply",
+          href: "#",
+        },
+        {
+          name: "admission requiremtes",
+          href: "#",
+        },
+        {
+          name: "tuition and scholarship",
+          href: "#",
+        },
+      ],
+    },
+    {
+      name: "admission",
+      href: "#",
+      subMenu: [],
+    },
+    {
+      name: "academics",
+      subMenu: [],
+      href: "#",
+    },
+    {
+      name: "about",
+      subMenu: [],
+      href: "#",
+    },
+    {
+      name: "admission",
+      subMenu: [],
+      href: "#",
+    },
+    {
+      name: "academics",
+      subMenu: [],
+      href: "#",
+    },
+  ];
+  const ref = React.useRef();
+  const [showSubMenu, setShowMenu] = useBoolean();
+  const [currentLink, setCurrentLink] = useState(0);
+
+  useOutsideClick({
+    ref: ref,
+    handler: () => setShowMenu.off(),
+  });
+
   return (
     <Fragment>
       <Flex alignItems="center" justifyContent="space-between" p="29px 91px">
@@ -70,304 +142,73 @@ const Navbar = () => {
       </Flex>
 
       <Flex
-        h="92px"
-        p="29px 91px"
+        p="0 91px"
+        pt="29px"
         bg="#021D37"
         alignItems="center"
         justifyContent="space-between"
       >
-        <Flex alignItems="center" justifyContent="space-between">
-          <Link
-            href="#"
-            color="#fff"
-            fontFamily="Open Sans, sans-serif"
-            fontSize="16px"
-            textAlign="center"
-            pr="40px"
-            _hover={{
-              color: "brown",
-              textDecoration: "none",
-            }}
-          >
-            HOME
-            {/* <Box bg="#fff" h="6px"></Box> */}
-          </Link>
-
-          <Link
-            href="#"
-            color="#fff"
-            fontFamily="Open Sans, sans-serif"
-            fontSize="16px"
-            textAlign="center"
-            pr="40px"
-            _hover={{
-              color: "brown",
-              textDecoration: "none",
-            }}
-          >
-            ABOUT
-            {/* <List
-              bg="#021d37"
-              textAlign="left"
-              w="127px"
-              position="absolute"
-              // m="27px auto"
-              mt="27px"
-              zIndex="1"
+        <Flex
+          alignItems="center"
+          justifyContent="space-between"
+          w="100%"
+          mr="8"
+        >
+          {navItems.map((navItem, index) => (
+            <Box
+              ref={ref}
+              pb="29px"
+              borderBottom="6px solid transparent"
+              borderColor={
+                currentLink === index && showSubMenu ? "#fff" : "transparent"
+              }
+              position="relative"
             >
-              <Box bg="#fff" w="100%" h="6px" />
-              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
-                <Link
-                  href="#!"
-                  fontSize="14px"
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  PROFILE
-                </Text>
-              </ListItem>
-
-              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
-                <Link
-                  href="#!"
-                  fontSize="14px"
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  MILESTONE
-                </Text>
-              </ListItem>
-
-              <ListItem p="3px 20px">
-                <Link
-                  href="#!"
-                  fontSize="14px"
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  OUR TEAM
-                </Text>
-              </ListItem>
-            </List> */}
-            {/* </Box> */}
-          </Link>
-
-          <Link
-            href="#"
-            color="#fff"
-            fontFamily="Open Sans, sans-serif"
-            fontSize="16px"
-            textAlign="center"
-            pr="40px"
-            _hover={{
-              color: "brown",
-              textDecoration: "none",
-            }}
-          >
-            ADMISSION
-            {/* <Box m="0 auto">
-              <List
-                bg="#021d37"
-                m="1.7rem auto"
-                w="240px"
-                textAlign="left"
-                position="absolute"
-                zIndex="1"
-                transition="all ease-in-out 0.5s"
+              <Link
+                onMouseEnter={() => {
+                  setCurrentLink(index);
+                  setShowMenu.on();
+                }}
+                // onMouseLeave={setShowMenu.off}
+                href="#"
+                color="#fff"
+                fontSize="16px"
+                textAlign="center"
+                textTransform="uppercase"
+                _hover={{
+                  color: "brown",
+                  textDecoration: "none",
+                }}
               >
-                <Box bg="#fff" h="6px" w="129px"></Box>
-                <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
+                {navItem.name}
+              </Link>
+              <Box
+                color="#fff"
+                position="absolute"
+                bg="#021d37"
+                w="max-content"
+                zIndex="3"
+                top="59px"
+                display={
+                  currentLink === index && showSubMenu ? "block" : "none"
+                }
+              >
+                {navItem.subMenu.map((subItem) => (
                   <Link
-                    href="#!"
-                    fontSize="14px"
-                    _hover={{
-                      textDecoration: "none",
-                    }}
+                    href={subItem.href}
+                    display="block"
+                    p="1"
+                    borderBottom="1px solid red"
                   >
-                    APPLY ONLINE
+                    {subItem.name}
                   </Link>
-                </ListItem>
-                <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
-                  <Link
-                    href="#!"
-                    fontSize="14px"
-                    _hover={{
-                      textDecoration: "none",
-                    }}
-                  >
-                    ADMISSION REQUIREMENTS
-                  </Link>
-                </ListItem>
-                <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
-                  <Link
-                    href="#!"
-                    fontSize="14px"
-                    _hover={{
-                      textDecoration: "none",
-                    }}
-                  >
-                    TUITION AND SCHOLARSHIP
-                  </Link>
-                </ListItem>
-                <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
-                  <Link
-                    href="#!"
-                    fontSize="14px"
-                    _hover={{
-                      textDecoration: "none",
-                    }}
-                  >
-                    HOSTEL
-                  </Link>
-                </ListItem>
-                <ListItem p="3px 20px">
-                  <Link
-                    href="#!"
-                    fontSize="14px"
-                    _hover={{
-                      textDecoration: "none",
-                    }}
-                  >
-                    FAQs
-                  </Link>
-                </ListItem>
-              </List>
-            </Box> */}
-          </Link>
-
-          <Link
-            href="#"
-            color="#fff"
-            fontFamily="Open Sans, sans-serif"
-            fontSize="16px"
-            textAlign="center"
-            pr="40px"
-            _hover={{
-              color: "brown",
-              textDecoration: "none",
-            }}
-          >
-            ACADEMICS
-            {/* <List
-              bg="#021d37"
-              m="1.7rem auto"
-              textAlign="left"
-              position="absolute"
-              zIndex="1"
-              transition="all ease-in-out 0.5s"
-            >
-              <Box bg="#fff" h="6px" w="100%"></Box>
-              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
-                <Link
-                  href="#!"
-                  fontSize="14px"
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  PROGRAMMES
-                </Link>
-              </ListItem>
-              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
-                <Link
-                  href="#!"
-                  fontSize="14px"
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  TRAINING
-                </Link>
-              </ListItem>
-              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
-                <Link
-                  href="#!"
-                  fontSize="14px"
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  JOB PLACEMENT
-                </Link>
-              </ListItem>
-              <ListItem borderBottom="2px solid #EBEDEF" p="3px 20px">
-                <Link
-                  href="#!"
-                  fontSize="14px"
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  INTERNSHIP
-                </Link>
-              </ListItem>
-              <ListItem p="3px 20px">
-                <Link
-                  href="#!"
-                  fontSize="14px"
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  NYSC
-                </Link>
-              </ListItem>
-            </List> */}
-          </Link>
-
-          <Link
-            href="#"
-            color="#fff"
-            fontFamily="Open Sans, sans-serif"
-            fontSize="16px"
-            textAlign="center"
-            pr="40px"
-            _hover={{
-              color: "brown",
-              textDecoration: "none",
-            }}
-          >
-            ALUMNI
-            {/* <Box bg="#fff" h="6px"></Box> */}
-          </Link>
-
-          <Link
-            href="#"
-            color="#fff"
-            fontFamily="Open Sans, sans-serif"
-            fontSize="16px"
-            textAlign="center"
-            pr="40px"
-            _hover={{
-              color: "brown",
-              textDecoration: "none",
-            }}
-          >
-            BLOG
-            {/* <Box bg="#fff" h="6px"></Box> */}
-          </Link>
-
-          <Link
-            href="#"
-            color="#fff"
-            pr="40px"
-            fontFamily="Open Sans, sans-serif"
-            fontSize="16px"
-            textAlign="center"
-            _hover={{
-              color: "brown",
-              textDecoration: "none",
-            }}
-          >
-            CONTACT US
-            {/* <Box bg="#fff" h="6px"></Box> */}
-          </Link>
+                ))}
+              </Box>
+            </Box>
+          ))}
         </Flex>
 
-        <Flex>
+        {/* <Flex>
           <Link
             href="#!"
             color="white"
@@ -409,7 +250,10 @@ const Navbar = () => {
           >
             APPLY NOW
           </Link>
-        </Flex>
+        </Flex> */}
+        <Box color="#fff" h="50px">
+          buttons
+        </Box>
       </Flex>
     </Fragment>
   );
