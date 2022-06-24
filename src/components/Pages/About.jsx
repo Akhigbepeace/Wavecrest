@@ -343,7 +343,6 @@ const About = () => {
                 <Flex
                   alignItems="center"
                   justifyContent="center"
-                  key={index}
                   px="91px"
                 >
                   <Box
