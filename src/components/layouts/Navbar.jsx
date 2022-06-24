@@ -17,76 +17,105 @@ import Instagram from "assets/Images/Instagram.png";
 import Search from "assets/Images/Search.png";
 
 const Navbar = () => {
-  const navItems = [
+  const navLinks = [
     {
-      name: "home",
-      href: "#",
-      subMenu: [
-        {
-          name: "profile",
-          href: "#",
-        },
-        {
-          name: "milestone",
-          href: "#",
-        },
-        {
-          name: "our team",
-          href: "#",
-        },
-      ],
+      name: "HOME",
+      to: "/",
+      NestedLinks: [],
     },
     {
-      name: "about",
-      href: "#",
-      subMenu: [
+      name: "ABOUT",
+      to: "/about",
+      NestedLinks: [
         {
-          name: "apply",
-          href: "#",
+          name: "PROFILE",
+          to: "#",
         },
         {
-          name: "admission requiremtes",
-          href: "#",
+          name: "MILESTONE",
+          to: "#",
         },
         {
-          name: "tuition and scholarship",
-          href: "#",
+          name: "OUR TEAM",
+          to: "#",
         },
       ],
     },
     {
-      name: "admission",
-      href: "#",
-      subMenu: [],
+      name: "ADMISSION",
+      to: "#",
+      NestedLinks: [
+        {
+          name: "APPLY ONLINE",
+          to: "#",
+        },
+        {
+          name: "ADMISSION REQUIREMENTS",
+          to: "#",
+        },
+        {
+          name: "TUITION AND SCHOLARSHIPS",
+          to: "#",
+        },
+        {
+          name: "HOSTEL",
+          to: "#",
+        },
+        {
+          name: "FAQs",
+          to: "#",
+        },
+      ],
     },
     {
-      name: "academics",
-      subMenu: [],
-      href: "#",
+      name: "ACADEMICS",
+      to: "#",
+      NestedLinks: [
+        {
+          name: "PROGRAMMES",
+          to: "#",
+        },
+        {
+          name: "TRAINING",
+          to: "#",
+        },
+        {
+          name: "JOB PLACEMENT",
+          to: "#",
+        },
+        {
+          name: "INTERNSHIP",
+          to: "#",
+        },
+        {
+          name: "NYSC",
+          to: "#",
+        },
+      ],
     },
     {
-      name: "about",
-      subMenu: [],
-      href: "#",
+      name: "BLOG",
+      NestedLinks: [],
+      to: "#",
     },
     {
-      name: "admission",
-      subMenu: [],
-      href: "#",
+      name: "ALUMNI",
+      NestedLinks: [],
+      to: "#",
     },
     {
-      name: "academics",
-      subMenu: [],
-      href: "#",
+      name: "CONTACT US",
+      to: "/contact",
+      NestedLinks: [],
     },
   ];
   const ref = React.useRef();
-  const [showSubMenu, setShowMenu] = useBoolean();
+  const [showNestedLinks, setShowNestedLinks] = useBoolean();
   const [currentLink, setCurrentLink] = useState(0);
 
   useOutsideClick({
     ref: ref,
-    handler: () => setShowMenu.off(),
+    handler: () => setShowNestedLinks.off(),
   });
 
   return (
@@ -95,12 +124,12 @@ const Navbar = () => {
         <Image w="238px" h="52px" src={Logo} />
 
         <Stack direction="row" alignItems="center">
-          <Link href="#!" target="_blank" rel="noreferrer">
+          <Link to="#!" target="_blank" rel="noreferrer">
             <Image src={Search} w="20px" h="20px" mr="18px" />
           </Link>
 
           <Link
-            href="https://www.linkedin.com/company/wavecrest-college-of-hospitality/"
+            to="https://www.linkedin.com/company/wavecrest-college-of-hospitality/"
             target="_blank"
             rel="noreferrer"
           >
@@ -108,7 +137,7 @@ const Navbar = () => {
           </Link>
 
           <Link
-            href="https://web.facebook.com/WavecrestCollegeLagos/"
+            to="https://web.facebook.com/WavecrestCollegeLagos/"
             target="_blank"
             rel="noreferrer"
           >
@@ -116,7 +145,7 @@ const Navbar = () => {
           </Link>
 
           <Link
-            href="https://twitter.com/WaveColl"
+            to="https://twitter.com/WaveColl"
             target="_blank"
             rel="noreferrer"
           >
@@ -124,7 +153,7 @@ const Navbar = () => {
           </Link>
 
           <Link
-            href="https://api.whatsapp.com/send/?phone=09096856606 &text&app_absent=0"
+            to="https://api.whatsapp.com/send/?phone=09096856606 &text&app_absent=0"
             target="_blank"
             rel="noreferrer"
           >
@@ -132,7 +161,7 @@ const Navbar = () => {
           </Link>
 
           <Link
-            href="http://instagram.com/wavecrestcollege"
+            to="http://instagram.com/wavecrestcollege"
             target="_blank"
             rel="noreferrer"
           >
@@ -141,82 +170,92 @@ const Navbar = () => {
         </Stack>
       </Flex>
 
-      <Flex
-        p="0 91px"
-        pt="29px"
-        bg="#021D37"
-        alignItems="center"
-        justifyContent="space-between"
-      >
-        <Flex
-          alignItems="center"
-          justifyContent="space-between"
-          w="100%"
-          mr="8"
-        >
-          {navItems.map((navItem, index) => (
-            <Box
-              ref={ref}
-              pb="29px"
-              borderBottom="6px solid transparent"
-              borderColor={
-                currentLink === index && showSubMenu ? "#fff" : "transparent"
-              }
-              position="relative"
-            >
-              <Link
-                onMouseEnter={() => {
-                  setCurrentLink(index);
-                  setShowMenu.on();
-                }}
-                // onMouseLeave={setShowMenu.off}
-                href="#"
-                color="#fff"
-                fontSize="16px"
-                textAlign="center"
-                textTransform="uppercase"
-                _hover={{
-                  color: "brown",
-                  textDecoration: "none",
-                }}
-              >
-                {navItem.name}
-              </Link>
-              <Box
-                color="#fff"
-                position="absolute"
-                bg="#021d37"
-                w="max-content"
-                zIndex="3"
-                top="59px"
-                display={
-                  currentLink === index && showSubMenu ? "block" : "none"
+      <Flex px="91px" pt="34px" h="91px" bg="#021D37" alignItems="center">
+        <Flex alignItems="center" justifyContent="space-between" w="100%">
+          {navLinks.map((navLink, index) => {
+            return (
+              <Flex
+                alignItems="center"
+                ref={ref}
+                pb="25px"
+                key={index}
+                borderBottom="6px solid transparent"
+                position="relative"
+                borderColor={
+                  currentLink === index && showNestedLinks
+                    ? "#fff"
+                    : "transparent"
                 }
               >
-                {navItem.subMenu.map((subItem) => (
-                  <Link
-                    href={subItem.href}
-                    display="block"
-                    p="1"
-                    borderBottom="1px solid red"
-                  >
-                    {subItem.name}
-                  </Link>
-                ))}
-              </Box>
-            </Box>
-          ))}
+                <Link
+                  onMouseEnter={() => {
+                    setCurrentLink(index);
+                    setShowNestedLinks.on();
+                  }}
+                  to={"/"}
+                  color="#fff"
+                  fontSize="16px"
+                  textAlign="center"
+                  transition="all ease 0.5s"
+                  _hover={{
+                    color: "brown",
+                    textDecoration: "none",
+                  }}
+                >
+                  {navLink.name}
+                </Link>
+                <Box
+                  color="#fff"
+                  w="max-content"
+                  position="absolute"
+                  bg="#021d37"
+                  zIndex="3"
+                  top="55px"
+                  display={
+                    currentLink === index && showNestedLinks ? "block" : "none"
+                  }
+                >
+                  {navLink.NestedLinks.map((nestedLink, index) => {
+                    console.log(index);
+                    console.log(navLink.NestedLinks);
+                    return (
+                      <Link
+                        to={nestedLink.to}
+                        display="block"
+                        fontWeight="100"
+                        key={index}
+                        p="5px 20px"
+                        borderBottom={
+                          navLink.NestedLinks.length - 1 === index
+                            ? "none"
+                            : "1px solid white"
+                        }
+                        transition="all ease 0.5s"
+                        _hover={{
+                          textDecoration: "none",
+                          color: "brown",
+                        }}
+                      >
+                        {nestedLink.name}
+                      </Link>
+                    );
+                  })}
+                </Box>
+              </Flex>
+            );
+          })}
         </Flex>
 
-        {/* <Flex>
+        <Flex pb="29px">
           <Link
-            href="#!"
+            to="#!"
             color="white"
             p="7px"
             w="133px"
+            ml="103px"
             border="2px solid #fff"
             borderRadius="3px"
-            fontFamily="Open Sans, sans-serif"
+            fontFamily="Open Sans"
             fontWeight="700"
             fontSize="17px"
             textAlign="center"
@@ -230,7 +269,7 @@ const Navbar = () => {
           </Link>
 
           <Link
-            href="#!"
+            to="#!"
             bg="#fff"
             color="#021d37"
             p="7px"
@@ -238,7 +277,7 @@ const Navbar = () => {
             ml="27px"
             border="2px solid #fff"
             borderRadius="3px"
-            fontFamily="Open Sans, sans-serif"
+            fontFamily="Open Sans"
             fontWeight="700"
             fontSize="17px"
             textAlign="center"
@@ -250,10 +289,7 @@ const Navbar = () => {
           >
             APPLY NOW
           </Link>
-        </Flex> */}
-        <Box color="#fff" h="50px">
-          buttons
-        </Box>
+        </Flex>
       </Flex>
     </Fragment>
   );

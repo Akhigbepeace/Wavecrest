@@ -1,8 +1,8 @@
 import { Box, Flex, Grid, Link, Text, Image } from "@chakra-ui/react";
 import React from "react";
-import discoverpic1 from "../../assets/Images/discoverpic 1.png";
-import discoverpic2 from "../../assets/Images/discoverpic 2.png";
-import discoverpic3 from "../../assets/Images/discoverpic 3.png";
+import discoverpic1 from "assets/Images/discoverpic 1.png";
+import discoverpic2 from "assets/Images/discoverpic 2.png";
+import discoverpic3 from "assets/Images/discoverpic 3.png";
 
 const DiscoverHospitality = () => {
   return (
@@ -17,7 +17,7 @@ const DiscoverHospitality = () => {
         <Text
           fontSize="32px"
           fontWeight="700"
-          fontFamily="Playfair Display, serif"
+          fontFamily="Playfair Display,"
         >
           NIGERIAN'S PREMIERE HOSPITALITY MONOTECHNIC
         </Text>
@@ -26,7 +26,7 @@ const DiscoverHospitality = () => {
           w="568px"
           fontSize="18px"
           lineHeight="25px"
-          fontFamily="Manrope, sans-serif"
+          fontFamily="Manrope"
         >
           Wavecrest College of Hospitality is consectetur adipiscing elit, sed
           do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -44,7 +44,7 @@ const DiscoverHospitality = () => {
           fontSize="20px"
           textDecoration="none"
           borderRadius="3px"
-          fontFamily="Manrope, sans-serif"
+          fontFamily="Manrope"
           h="52px"
           _hover={{
             textDecoration: "none",
@@ -73,7 +73,7 @@ const DiscoverHospitality = () => {
             w="100%"
             h="100%"
             textAlign="center"
-            fontFamily="Playfair Display, serif"
+            fontFamily="Playfair Display,"
             p="40px"
           >
             Discover Hospitality

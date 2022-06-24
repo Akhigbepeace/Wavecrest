@@ -1,11 +1,11 @@
 import { Box, Grid, Image, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import ReactPlayer from "react-player";
-import showcase1 from "../../assets/Images/Showcase1.png";
-import showcase2 from "../../assets/Images/Showcase2.png";
-import showcase3 from "../../assets/Images/Showcase3.png";
-import showcase4 from "../../assets/Images/Showcase4.png";
-import waveVid from "../../assets/Images/wavevid.mp4";
+import showcase1 from "assets/Images/Showcase1.png";
+import showcase2 from "assets/Images/Showcase2.png";
+import showcase3 from "assets/Images/Showcase3.png";
+import showcase4 from "assets/Images/Showcase4.png";
+import waveVid from "assets/Images/wavevid.mp4";
 
 const Showcase = () => {
   return (
@@ -31,7 +31,7 @@ const Showcase = () => {
           position="absolute"
           w="100%"
           h="100%"
-          fontFamily="Playfair Display, serif"
+          fontFamily="Playfair Display"
           fontSize="16px"
           fontWeight="700"
         >
@@ -43,7 +43,7 @@ const Showcase = () => {
             Study In
           </Text>
           <Text
-            fontFamily="Playfair Display, serif"
+            fontFamily="Playfair Display"
             fontSize="30px"
             fontWeight="700"
             lineHeight="53px"

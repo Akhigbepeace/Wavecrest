@@ -4,18 +4,17 @@ import { Flex, Text, Link } from "@chakra-ui/react";
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 import Slider from "react-slick";
 import Nestle from "assets/Images/Nestle.png";
-import Pau from "../../assets/Images/pau.png";
-import bihc from "../../assets/Images/bihc.png";
-import raddison from "../../assets/Images/raddison.png";
-import maggi from "../../assets/Images/Maggi.png";
-import womenBoard from "../../assets/Images/women's board.jpg";
-import sheraton from "../../assets/Images/sheraton.png";
-import intercontinental from "../../assets/Images/intercontinental.png";
-import crowneplaza from "../../assets/Images/crowneplaza.png";
-import starwood from "../../assets/Images/starwood.png";
-import bomahotel from "../../assets/Images/bomahotel.png";
+import Pau from "assets/Images/pau.png";
+import bihc from "assets/Images/bihc.png";
+import raddison from "assets/Images/raddison.png";
+import maggi from "assets/Images/Maggi.png";
+import womenBoard from "assets/Images/women's board.jpg";
+import sheraton from "assets/Images/sheraton.png";
+import intercontinental from "assets/Images/intercontinental.png";
+import crowneplaza from "assets/Images/crowneplaza.png";
+import starwood from "assets/Images/starwood.png";
+import bomahotel from "assets/Images/bomahotel.png";
 
-// Settings for the slider
 const settings = {
   dots: false,
   arrows: false,
@@ -33,7 +32,6 @@ export default function Carousel() {
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "10px" });
 
-  // These are the images used in the slide
   const cards = [
     Nestle,
     Pau,
@@ -101,7 +99,7 @@ export default function Carousel() {
           position="relative"
           top="15px"
           color="#021D37"
-          fontFamily="Playfair Display, serif"
+          fontFamily="Playfair Display"
           fontSize="40px"
           fontWeight="700"
         >

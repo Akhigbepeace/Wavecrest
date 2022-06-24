@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Slider from "react-slick";
-import Founders from "../../assets/Images/founder.png";
+import Founders from "assets/Images/founder.png";
 
 const settings = {
   dots: true,
@@ -127,7 +127,7 @@ export default function CaptionCarousel() {
               >
                 <Heading
                   color="#021D37"
-                  fontFamily="Playfair Display, serif"
+                  fontFamily="Playfair Display"
                   fontWeight="700"
                   fontSize="40px"
                   lineHeight="53px"
@@ -137,7 +137,7 @@ export default function CaptionCarousel() {
                 </Heading>
 
                 <Text
-                  fontFamily="Manrope, sans-serif"
+                  fontFamily="Manrope"
                   fontSize="16px"
                   fontWeight="400"
                   lineHeight="22px"
@@ -148,7 +148,7 @@ export default function CaptionCarousel() {
                 </Text>
 
                 <Text
-                  fontFamily="Playfair Display, serif"
+                  fontFamily="Playfair Display"
                   fontWeight="400"
                   fontSize="28px"
                   lineHeight="37px"
@@ -164,7 +164,7 @@ export default function CaptionCarousel() {
                   p="10px 25px"
                   mt="30px"
                   color="#fff"
-                  fontFamily="Manrope, sans-serif"
+                  fontFamily="Manrope"
                   fontSize="20px"
                   fontWeight="700"
                   textDecoration="none"

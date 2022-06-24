@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Slider from "react-slick";
-import ourstories from "../../assets/Images/ourstories.png";
+import ourstories from "assets/Images/ourstories.png";
 
 const settings = {
   dots: false,
@@ -106,7 +106,7 @@ export default function CaptionCarousel() {
                 position="relative"
                 top="25px"
                 color="white"
-                fontFamily="Playfair Display, serif"
+                fontFamily="Playfair Display"
                 fontSize="40px"
                 fontWeight="700"
               >
@@ -129,7 +129,7 @@ export default function CaptionCarousel() {
               >
                 <Heading
                   color="#fff"
-                  fontFamily="Playfair Display, serif"
+                  fontFamily="Playfair Display"
                   fontSize="32px"
                   fontWeight="700"
                 >
@@ -139,7 +139,7 @@ export default function CaptionCarousel() {
                 <Text
                   color="#EBEDEF"
                   margin="3rem 0"
-                  fontFamily="Manrope, sans-serif"
+                  fontFamily="Manrope"
                   fontSize="18px"
                   fontWeight="400"
                   lineHeight="25px"

@@ -8,10 +8,10 @@ import {
   Link,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import studyProgrammes1 from "../../assets/Images/studyprogrammes1.png";
-import studyProgrammes2 from "../../assets/Images/studyprogrammes2.png";
-import studyProgrammes3 from "../../assets/Images/studyprogrammes3.png";
-import studyProgrammes4 from "../../assets/Images/studyprogrammes4.png";
+import studyProgrammes1 from "assets/Images/studyprogrammes1.png";
+import studyProgrammes2 from "assets/Images/studyprogrammes2.png";
+import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
+import studyProgrammes4 from "assets/Images/studyprogrammes4.png";
 
 const StudyProgrammes = () => {
   const objArr = [
@@ -56,12 +56,13 @@ const StudyProgrammes = () => {
         <Text
           color="#021D37"
           m="50px 0"
-          fontFamily="Playfair Display, serif"
+          fontFamily="Playfair Display"
           fontSize="40px"
           textAlign="center"
         >
           Study Programmes
         </Text>
+
         <Flex h="91px" w="1247px" m="0 auto">
           {objArr.map((programm, i) => {
             const isCurrent =
@@ -74,7 +75,7 @@ const StudyProgrammes = () => {
                 w="315px"
                 h="100%"
                 border="3px solid #021D37"
-                fontFamily="Manrope, sans-serif;"
+                fontFamily="Manrope"
                 fontSize="20px"
                 textAlign="center"
                 textDecoration="none"
@@ -111,7 +112,7 @@ const StudyProgrammes = () => {
               pt="101px"
               fontWeight="700"
               fontSize="40px"
-              fontFamily="Playfair Display, serif"
+              fontFamily="Playfair Display"
             >
               {currentprogram.captionHeading}
             </Heading>
@@ -119,7 +120,7 @@ const StudyProgrammes = () => {
               fontSize="20px"
               lineHeight="27px"
               color="#EBEDEF"
-              fontFamily="Manrope, sans-serif"
+              fontFamily="Manrope, san"
               m="1rem 0"
             >
               {currentprogram.captionTime}
@@ -133,7 +134,7 @@ const StudyProgrammes = () => {
               p="10px 25px"
               border="none"
               borderRadius="3px"
-              fontFamily="Manrope, sans-serif"
+              fontFamily="Manrope, san"
               fontSize="24px"
               fontWeight="700"
             >
