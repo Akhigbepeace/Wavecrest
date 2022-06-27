@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import Home from "./components/Home/Home";
 import About from "./components/Pages/About";
+import Alumni from "components/Pages/Alumni";
+import Blog from "components/Pages/Blog";
 import Contact from "./components/Pages/Contact";
 
 import "slick-carousel/slick/slick.css";
@@ -28,6 +30,8 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/about" element={<About />} />
+            <Route exact path="/blog" element={<Blog />} />
+            <Route exact path="/alumni" element={<Alumni />} />
             <Route exact path="/contact" element={<Contact />} />
           </Routes>
         </Fragment>

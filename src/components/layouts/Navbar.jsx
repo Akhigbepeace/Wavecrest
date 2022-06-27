@@ -216,8 +216,6 @@ const Navbar = () => {
                   }
                 >
                   {navLink.NestedLinks.map((nestedLink, index) => {
-                    console.log(index);
-                    console.log(navLink.NestedLinks);
                     return (
                       <Link
                         to={nestedLink.to}
