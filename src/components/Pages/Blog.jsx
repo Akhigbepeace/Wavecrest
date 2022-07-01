@@ -8,6 +8,7 @@ import {
   InputRightElement,
   Heading,
   InputGroup,
+  Link,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import blog from "assets/Images/Blog.png";
@@ -20,8 +21,8 @@ import gallery4 from "assets/Images/blog4.png";
 import gallery5 from "assets/Images/blog5.png";
 import searchImg from "assets/Images/Search.png";
 import Navbar from "components/layouts/Navbar";
-import Footer from "components/Home/Footer";
-import FooterCopywright from "components/Home/FooterCopywright";
+import Footer from "components/Pages/Home/Footer";
+import FooterCopywright from "components/Pages/Home/FooterCopywright";
 
 const Blog = () => {
   const posts = [
@@ -77,19 +78,19 @@ const Blog = () => {
 
   const categories = [
     {
-      newsCategory: "News & Events",
+      categoryName: "News & Events",
     },
     {
-      tipCategory: "Tips & Categories",
+      categoryName: "Tips & Categories",
     },
     {
-      recepyCategory: "Recepies",
+      categoryName: "Recepies",
     },
     {
-      personalCategory: "Personal Categories",
+      categoryName: "Personal Categories",
     },
     {
-      admissionCategory: "Admission & Scholarship",
+      categoryName: "Admission & Scholarship",
     },
   ];
 
@@ -186,8 +187,10 @@ const Blog = () => {
             <Box mt="25px">
               {categories.map((category, index) => {
                 return (
-                  <Flex
+                  <Link
                     key={index}
+                    display="flex"
+                    flexDirection="column"
                     fontFamily="Manrope"
                     fontWeight="400"
                     fontSize="18px"
@@ -201,13 +204,13 @@ const Blog = () => {
                         ? "none"
                         : "2px solid rgba(2, 29, 55, 0.25)"
                     }
+                    _hover={{
+                      textDecoration: "none",
+                      bg:"rgba(2, 29, 55, 0.25)"
+                    }}
                   >
-                    <Box>{category.newsCategory}</Box>
-                    <Box>{category.tipCategory}</Box>
-                    <Box>{category.recepyCategory}</Box>
-                    <Box>{category.personalCategory}</Box>
-                    <Box>{category.admissionCategory}</Box>
-                  </Flex>
+                    <Text>{category.categoryName}</Text>
+                  </Link>
                 );
               })}
             </Box>

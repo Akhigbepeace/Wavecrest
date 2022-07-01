@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import Home from "./components/Home/Home";
+import Home from "./components/Pages/Home/Home";
 import About from "./components/Pages/About";
 import Alumni from "components/Pages/Alumni";
 import Blog from "components/Pages/Blog";

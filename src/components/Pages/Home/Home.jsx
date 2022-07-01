@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Navbar from "../layouts/Navbar";
+import Navbar from "../../layouts/Navbar";
 import Showcase from "./Showcase";
 import DiscoverHospitality from "./DiscoverHospitality";
 import Blog from "./Blog";

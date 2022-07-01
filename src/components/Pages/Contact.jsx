@@ -13,8 +13,31 @@ import {
 import React, { Fragment } from "react";
 import Navbar from "components/layouts/Navbar";
 import contactpic from "assets/Images/contact.png";
-import Footer from "components/Home/Footer";
-import FooterCopywright from "components/Home/FooterCopywright";
+import Footer from "components/Pages/Home/Footer";
+import FooterCopywright from "components/Pages/Home/FooterCopywright";
+
+const contactFields = [
+  {
+    fieldType: "name",
+    placeHolder: "Name",
+    variant: "filled",
+  },
+  {
+    fieldType: "email",
+    placeHolder: "Email",
+    variant: "filled",
+  },
+  {
+    fieldType: "number",
+    placeHolder: "Phone Number",
+    variant: "filled",
+  },
+  {
+    fieldType: "text",
+    placeHolder: "Reason",
+    variant: "filled",
+  },
+];
 
 const Contact = () => {
   return (
@@ -70,65 +93,26 @@ const Contact = () => {
               possible
             </Text>
             <Stack>
-              <Input
-                type="name"
-                variant="filled"
-                placeholder="Name"
-                w="526px"
-                h="67px"
-                _placeholder={{
-                  fontFamily: "Manrope, sans-serif",
-                  color: "#021D37",
-                  fontSize: "18px",
-                  lineHeight: "25px",
-                  fontWeight: "400",
-                }}
-              />
-              <Input
-                type="email"
-                variant="filled"
-                placeholder="Email"
-                w="526px"
-                h="67px"
-                mb="10px"
-                _placeholder={{
-                  fontFamily: "Manrope, sans-serif",
-                  color: "#021D37",
-                  fontSize: "18px",
-                  lineHeight: "25px",
-                  fontWeight: "400",
-                }}
-              />
-              <Input
-                type="number"
-                variant="filled"
-                placeholder="Phone Number"
-                w="526px"
-                h="67px"
-                mb="10px"
-                _placeholder={{
-                  fontFamily: "Manrope, sans-serif",
-                  color: "#021D37",
-                  fontSize: "18px",
-                  lineHeight: "25px",
-                  fontWeight: "400",
-                }}
-              />
-              <Input
-                type="text"
-                variant="filled"
-                placeholder="Purpose"
-                w="526px"
-                h="67px"
-                mb="10px"
-                _placeholder={{
-                  fontFamily: "Manrope, sans-serif",
-                  color: "#021D37",
-                  fontSize: "18px",
-                  lineHeight: "25px",
-                  fontWeight: "400",
-                }}
-              />
+              {contactFields.map((field) => {
+                return (
+                  <Input
+                    type={field.fieldType}
+                    variant={field.variant}
+                    placeholder={field.placeHolder}
+                    w="526px"
+                    h="67px"
+                    mb="10px"
+                    _placeholder={{
+                      fontFamily: "Manrope, sans-serif",
+                      color: "#021D37",
+                      fontSize: "18px",
+                      lineHeight: "25px",
+                      fontWeight: "400",
+                    }}
+                  />
+                );
+              })}
+
               <Textarea
                 type="text"
                 variant="filled"

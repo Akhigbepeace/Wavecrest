@@ -50,34 +50,24 @@ export default function Carousel() {
     <Box position={"relative"} overflow={"hidden"}>
       {/* Left Icon */}
       <Link
-        background="linear-gradient(90deg, rgba(197,197,197,1) 30%, rgba(209,209,209,0.2) 70%, rgba(248,248,248,0.4) 88%, rgba(255,255,255,0.7) 100%)"
-        p="45px 20px"
-        mt="-45px"
-        ml="-10px"
-        h="150px"
         position="absolute"
         left={side}
         top={top}
         zIndex={2}
         onClick={() => slider?.slickPrev()}
       >
-        <FaChevronCircleLeft size="40px" mb="-45px" />
+        <FaChevronCircleLeft size="50px" mb="-45px" />
       </Link>
 
       {/* Right Icon */}
       <Link
-        background="linear-gradient(270deg, rgba(197,197,197,0.8) 30%, rgba(209,209,209,0.6) 70%, rgba(248,248,248,0.4) 88%, rgba(255,255,255,1) 100%)"
-        p="45px 20px"
-        mt="-45px"
-        mr="-10px"
-        h="150px"
         position="absolute"
         right={side}
         top={top}
         zIndex={2}
         onClick={() => slider?.slickNext()}
       >
-        <FaChevronCircleRight size="40px" mt="45px" />
+        <FaChevronCircleRight size="50px" mt="45px" />
       </Link>
 
       <Flex

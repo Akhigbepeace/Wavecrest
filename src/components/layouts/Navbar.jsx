@@ -121,7 +121,9 @@ const Navbar = () => {
   return (
     <Fragment>
       <Flex alignItems="center" justifyContent="space-between" p="29px 91px">
-        <Image w="238px" h="52px" src={Logo} />
+        <Link to="/">
+          <Image w="238px" h="52px" src={Logo} />
+        </Link>
 
         <Stack direction="row" alignItems="center">
           <Link to="#!" target="_blank" rel="noreferrer">

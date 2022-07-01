@@ -3,8 +3,8 @@ import React, { Fragment } from "react";
 import alumni from "assets/Images/Alumni.png";
 import alumni2 from "assets/Images/alumni2.png";
 import Navbar from "components/layouts/Navbar";
-import Footer from "components/Home/Footer";
-import FooterCopywright from "components/Home/FooterCopywright";
+import Footer from "components/Pages/Home/Footer";
+import FooterCopywright from "components/Pages/Home/FooterCopywright";
 
 const Alumni = () => {
   const alumnis = [

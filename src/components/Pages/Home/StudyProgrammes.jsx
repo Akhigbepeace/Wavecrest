@@ -83,7 +83,10 @@ const StudyProgrammes = () => {
                 color={isCurrent ? "#EBEDEF" : "#021d37"}
                 key={i}
                 onClick={() => setCurrentProgram(programm)}
-                _hover={{ textDecoration: "none" }}
+                _hover={{
+                  textDecoration: "none",
+                  bg: isCurrent ? "#021d37" : "#F5F5F5",
+                }}
               >
                 {programm.linkContent}
               </Link>
