@@ -225,11 +225,7 @@ const Profile = () => {
           </Heading>
         </Box>
 
-        <Flex
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-        >
+        <Box>
           <Flex flexDirection="row" alignItems="center">
             <Text
               fontFamily="Manrope"
@@ -241,10 +237,14 @@ const Profile = () => {
               AWARDS
             </Text>
 
-            <Box mb="42px" borderBottom="2px solid rgba(2, 29, 55, 0.17)" >
+            <Flex
+              flexDirection="column"
+              borderBottom="2px solid rgba(2, 29, 55, 0.17)"
+              py="43px"
+            >
               {awards.map((award, index) => {
                 return (
-                  <Flex key={index} alignItems="center" justifyContent="center">
+                  <Flex key={index} alignItems="center">
                     <Image src={award.awardImg} objectFit="cover" />
 
                     <Text
@@ -253,39 +253,42 @@ const Profile = () => {
                       fontSize="28px"
                       lineHeight="38px"
                       alignItems="center"
-                      ml="54px"
+                      ml="43px"
                     >
                       {award.awardDesc}
                     </Text>
                   </Flex>
                 );
               })}
-            </Box>
+            </Flex>
           </Flex>
 
-          <Flex
-            flexDirection="row"
-            alignItems="center"
-            // my="60px"
-          >
-            <Text
-              fontFamily="Manrope"
-              fontSize="40px"
-              fontWeight="400"
-              color="rgba(2, 29, 55, 0.3)"
-              transform="rotate(-90deg)"
-            >
-              RECOGNITIONS
-            </Text>
+          <Flex flexDirection="row" alignItems="center" h="248px" my="50px">
+            <Box w="300px" ml="-70px">
+              <Text
+                fontFamily="Manrope"
+                fontSize="40px"
+                fontWeight="400"
+                color="rgba(2, 29, 55, 0.3)"
+                transform="rotate(-90deg)"
+              >
+                RECOGNITIONS
+              </Text>
+            </Box>
 
-            <Box >
+            <Flex
+              flexDirection="column"
+              alignItems="center"
+              ml="-80px"
+              justifyContent="center"
+            >
               {recognitions.map((recognition, index) => {
                 return (
                   <Flex
-                    alignItems="center"
                     key={index}
+                    alignItems="center"
                     justifyContent="center"
-                    // mt="17px"
+                    pt="20px"
                   >
                     <Image src={recognition.recogImg} objectFit="cover" />
 
@@ -295,26 +298,25 @@ const Profile = () => {
                       fontSize="28px"
                       lineHeight="38px"
                       alignItems="center"
-                      ml="54px"
+                      ml="43px"
                     >
                       {recognition.recogDesc}
                     </Text>
                   </Flex>
                 );
               })}
-            </Box>
+            </Flex>
           </Flex>
-        </Flex>
+        </Box>
       </Box>
 
-      <Box bg="#EBEDEF">
-        <Box ml="30px" px="90px">
+      <Box bg="#EBEDEF" p="50px 90px">
+        <Box>
           <Text
             fontFamily="Manrope"
             fontWeight="400"
             fontSize="24px"
             color="rgba(2, 29, 55, 0.63)"
-            pt="50px"
           >
             Our Swags
           </Text>
@@ -329,10 +331,9 @@ const Profile = () => {
             Gallery
           </Heading>
         </Box>
-
-        {aboutGalleries.map((gallery) => {
-          return (
-            <Flex>
+        <Grid gridTemplateColumns="repeat(5, 1fr)" gridGap="10px">
+          {aboutGalleries.map((gallery) => {
+            return (
               <Image
                 src={gallery.image}
                 w="272px"
@@ -340,9 +341,9 @@ const Profile = () => {
                 borderRadius="3px"
                 mr="10px"
               />
-            </Flex>
-          );
-        })}
+            );
+          })}
+        </Grid>
       </Box>
 
       <Box textAlign="center" my="55px">

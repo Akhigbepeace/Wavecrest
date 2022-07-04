@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import Home from "./components/Pages/Home/Home";
 import About from "./components/Pages/About";
+import Admission from "components/Pages/Admission";
+import Academics from "components/Pages/Academics"
 import Alumni from "components/Pages/Alumni";
 import Blog from "components/Pages/Blog";
 import Contact from "./components/Pages/Contact";
@@ -30,6 +32,8 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/about" element={<About />} />
+            <Route exact path="/admission" element={<Admission />} />
+            <Route exact path="/academics" element={<Academics />} />
             <Route exact path="/blog" element={<Blog />} />
             <Route exact path="/alumni" element={<Alumni />} />
             <Route exact path="/contact" element={<Contact />} />

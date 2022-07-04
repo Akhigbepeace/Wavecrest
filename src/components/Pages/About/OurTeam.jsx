@@ -89,15 +89,16 @@ const OurTeam = () => {
   return (
     <Fragment>
       <Box>
-        <Box p="0 91px"  bg="#EBEDEF" >
+        <Box px="91px" bg="#EBEDEF">
           <Heading
             fontFamily="Playfair Display"
             fontWeight="900"
             fontSize="50px"
-            opacity="0.5"
-            mt="58px"
+            color="#021D37"
+            opacity="0.1"
+            pt="58px"
           >
-            Management
+            #Management
           </Heading>
 
           <Flex alignItems="center" mt="40px">
@@ -109,7 +110,7 @@ const OurTeam = () => {
               h="381px"
             />
 
-            <Box>
+            <Box mb="100px">
               <Heading
                 fontFamily="Playfair Display"
                 fontWeight="700"
@@ -158,20 +159,14 @@ const OurTeam = () => {
           </Flex>
 
           <Box>
-            {managements.map((management) => {
-              return (
-                <Grid
-                  gridTemplateColumns="repeat(3, 1fr)"
-                  // flexDirection="column"
-                  // justifyContent="center"
-                  // textAlign="center"
-                  // alignItems="center"
-                  mt="115px"
-                >
+            <Grid gridTemplateColumns="repeat(3, 1fr)">
+              {managements.map((management) => {
+                return (
                   <Flex
                     flexDirection="column"
                     textAlign="center"
                     alignItems="center"
+                    my="50px"
                   >
                     <Image
                       src={management.image}
@@ -198,9 +193,9 @@ const OurTeam = () => {
                       {management.post}
                     </Text>
                   </Flex>
-                </Grid>
-              );
-            })}
+                );
+              })}
+            </Grid>
           </Box>
         </Box>
 
@@ -209,56 +204,52 @@ const OurTeam = () => {
             fontFamily="Playfair Display"
             fontWeight="900"
             fontSize="50px"
-            opacity="0.5"
+            color="#021D37"
+            opacity="0.1"
             mt="50px"
           >
             #Staff
           </Heading>
 
           <Box>
-            {staffs.map((staff) => {
-              return (
-                <Flex
-                  flexDirection="column"
-                  // gridTemplateColumns="repeat(4, 1fr)"
-                  // gridGap="50px"
-                  m="30px 60px"
-                >
+            <Grid
+              gridTemplateColumns="repeat(4, auto)"
+              gridGap="50px"
+              m="30px 60px"
+            >
+              {staffs.map((staff) => {
+                return (
                   <Flex
-                    // m="30px 0"
                     flexDirection="column"
-                    textAlign="center"
                     alignItems="center"
+                    justifyContent="center"
                   >
-                    <Image
-                      src={staff.image}
-                      borderRadius="100%"
-                      w="247px"
-                      h="247px"
-                    />
+                    <Image src={staff.image} borderRadius="50%" />
+                    <Box>
+                      <Heading
+                        mt="16px"
+                        color="#021D37"
+                        fontFamily="Playfair Display"
+                        fontSize="32px"
+                        fontWeight="700"
+                      >
+                        {staff.name}
+                      </Heading>
 
-                    <Heading
-                      mt="16px"
-                      color="#021D37"
-                      fontFamily="Playfair Display"
-                      fontSize="32px"
-                      fontWeight="700"
-                    >
-                      {staff.name}
-                    </Heading>
-
-                    <Text
-                      color="rgba(2, 29, 55, 0.63)"
-                      fontFamily="Manrope"
-                      fontSize="24px"
-                      fontWeight="400"
-                    >
-                      {staff.post}
-                    </Text>
+                      <Text
+                        color="rgba(2, 29, 55, 0.63)"
+                        fontFamily="Manrope"
+                        fontSize="24px"
+                        fontWeight="400"
+                        textAlign="center"
+                      >
+                        {staff.post}
+                      </Text>
+                    </Box>
                   </Flex>
-                </Flex>
-              );
-            })}
+                );
+              })}
+            </Grid>
           </Box>
         </Box>
       </Box>

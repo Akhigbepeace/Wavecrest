@@ -43,7 +43,7 @@ const Navbar = () => {
     },
     {
       name: "ADMISSION",
-      to: "#",
+      to: "/admission",
       NestedLinks: [
         {
           name: "APPLY ONLINE",
@@ -69,7 +69,7 @@ const Navbar = () => {
     },
     {
       name: "ACADEMICS",
-      to: "#",
+      to: "/academics",
       NestedLinks: [
         {
           name: "PROGRAMMES",
@@ -95,13 +95,13 @@ const Navbar = () => {
     },
     {
       name: "BLOG",
+      to: "/blog",
       NestedLinks: [],
-      to: "#",
     },
     {
       name: "ALUMNI",
       NestedLinks: [],
-      to: "#",
+      to: "/alumni",
     },
     {
       name: "CONTACT US",
