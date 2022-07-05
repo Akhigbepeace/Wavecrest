@@ -14,11 +14,7 @@ const DiscoverHospitality = () => {
       m="50px auto"
     >
       <Box>
-        <Text
-          fontSize="32px"
-          fontWeight="700"
-          fontFamily="Playfair Display,"
-        >
+        <Text fontSize="32px" fontWeight="700" fontFamily="Playfair Display,">
           NIGERIAN'S PREMIERE HOSPITALITY MONOTECHNIC
         </Text>
         <Text
@@ -63,6 +59,7 @@ const DiscoverHospitality = () => {
             h="100%"
             p="33px"
             alt="workbench"
+            objectFit="cover"
           />
         </Box>
 
@@ -81,11 +78,24 @@ const DiscoverHospitality = () => {
         </Box>
 
         <Box w="320px" h="214px">
-          <Image src={discoverpic2} w="100%" h="100%" alt="img_ny" />
+          <Image
+            src={discoverpic2}
+            w="100%"
+            h="100%"
+            alt="img_ny"
+            objectFit="cover"
+          />
         </Box>
 
         <Box className="last-pic" w="320px" h="214px">
-          <Image src={discoverpic3} w="100%" h="100%" p="33px" alt="coffee" />
+          <Image
+            src={discoverpic3}
+            w="100%"
+            h="100%"
+            p="33px"
+            alt="coffee"
+            objectFit="cover"
+          />
         </Box>
       </Grid>
     </Flex>

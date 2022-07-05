@@ -16,30 +16,30 @@ import contactpic from "assets/Images/contact.png";
 import Footer from "components/Pages/Home/Footer";
 import FooterCopywright from "components/Pages/Home/FooterCopywright";
 
-const contactFields = [
-  {
-    fieldType: "name",
-    placeHolder: "Name",
-    variant: "filled",
-  },
-  {
-    fieldType: "email",
-    placeHolder: "Email",
-    variant: "filled",
-  },
-  {
-    fieldType: "number",
-    placeHolder: "Phone Number",
-    variant: "filled",
-  },
-  {
-    fieldType: "text",
-    placeHolder: "Reason",
-    variant: "filled",
-  },
-];
-
 const Contact = () => {
+  const contactFields = [
+    {
+      fieldType: "name",
+      variant: "filled",
+      placeHolder: "Name",
+    },
+    {
+      fieldType: "email",
+      variant: "filled",
+      placeHolder: "Email",
+    },
+    {
+      fieldType: "number",
+      variant: "filled",
+      placeHolder: "Phone Number",
+    },
+    {
+      fieldType: "text",
+      variant: "filled",
+      placeHolder: "Reason",
+    },
+  ];
+
   return (
     <Fragment>
       <Navbar />
@@ -92,6 +92,7 @@ const Contact = () => {
               Kindly leave us a message and we'll get back to you as soon as
               possible
             </Text>
+
             <Stack>
               {contactFields.map((field) => {
                 return (
