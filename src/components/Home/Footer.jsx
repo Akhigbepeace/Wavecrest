@@ -12,12 +12,12 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import React from "react";
-import logo from "../../assets/Images/WC-LOGO-july.png";
-import linked from "../../assets/Images/linked.png";
-import twitter from "../../assets/Images/Twitter.png";
-import facebook from "../../assets/Images/facebook.png";
-import whatsapp from "../../assets/Images/whatsapp.png";
-import Instagram from "../../assets/Images/Instagram.png";
+import logo from "assets/Images/WC-LOGO-july.png";
+import linked from "assets/Images/linked.png";
+import twitter from "assets/Images/Twitter.png";
+import facebook from "assets/Images/facebook.png";
+import whatsapp from "assets/Images/whatsapp.png";
+import Instagram from "assets/Images/Instagram.png";
 
 const Footer = () => {
   return (
@@ -33,7 +33,7 @@ const Footer = () => {
         <Text
           w="274px"
           color="#021D37"
-          fontFamily="Manrope, sans-serif"
+          fontFamily="Manrope"
           fontWeight="400"
           fontSize="18px"
           lineHeight="25px"
@@ -45,15 +45,15 @@ const Footer = () => {
 
         <Flex
           flexDirection="column"
-          fontFamily="Manrope, sans-serif"
+          fontFamily="Manrope"
           fontSize="18px"
           fontWeight="700"
           lineHeight="25px"
           m="15px 7px"
           color="#021D37"
         >
-          <Text fontFamily="Manrope', sans-serif">+234 909 685 6606</Text>
-          <Text fontFamily="Manrope', sans-serif">info@wavecrest.edu.ng</Text>
+          <Text fontFamily="Manrope'">+234 909 685 6606</Text>
+          <Text fontFamily="Manrope'">info@wavecrest.edu.ng</Text>
         </Flex>
         <Flex>
           <Link
@@ -115,7 +115,7 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontFamily="Manrope, sans-serif"
+              fontFamily="Manrope"
               fontWeight="700"
               fontSize="16px"
               color="#021D37"
@@ -127,7 +127,7 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontFamily="Manrope, sans-serif"
+              fontFamily="Manrope"
               fontWeight="700"
               fontSize="18px"
               lineHeight="25px"
@@ -140,7 +140,7 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontFamily="Manrope, sans-serif"
+              fontFamily="Manrope"
               fontWeight="700"
               fontSize="18px"
               lineHeight="25px"
@@ -153,7 +153,7 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontFamily="Manrope, sans-serif"
+              fontFamily="Manrope"
               fontWeight="700"
               fontSize="18px"
               lineHeight="25px"
@@ -166,7 +166,7 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontFamily="Manrope, sans-serif"
+              fontFamily="Manrope"
               fontWeight="700"
               fontSize="18px"
               lineHeight="25px"
@@ -179,7 +179,7 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontFamily="Manrope, sans-serif"
+              fontFamily="Manrope"
               fontWeight="700"
               fontSize="18px"
               lineHeight="25px"
@@ -192,7 +192,7 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontFamily="Manrope, sans-serif"
+              fontFamily="Manrope"
               fontWeight="700"
               fontSize="18px"
               lineHeight="25px"
@@ -205,7 +205,7 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontFamily="Manrope, sans-serif"
+              fontFamily="Manrope"
               fontWeight="700"
               fontSize="18px"
               lineHeight="25px"
@@ -218,7 +218,7 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontFamily="Manrope, sans-serif"
+              fontFamily="Manrope"
               fontWeight="700"
               fontSize="18px"
               lineHeight="25px"
@@ -231,7 +231,7 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontFamily="Manrope, sans-serif"
+              fontFamily="Manrope"
               fontWeight="700"
               fontSize="18px"
               lineHeight="25px"
@@ -244,7 +244,7 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontFamily="Manrope, sans-serif"
+              fontFamily="Manrope"
               fontWeight="700"
               fontSize="18px"
               lineHeight="25px"
@@ -257,7 +257,7 @@ const Footer = () => {
           <ListItem>
             <Link
               href="#!"
-              fontFamily="Manrope, sans-serif"
+              fontFamily="Manrope"
               fontWeight="700"
               fontSize="18px"
               lineHeight="25px"
@@ -273,7 +273,7 @@ const Footer = () => {
       <Flex flexDirection="column" pr="24px">
         <Text
           color="#021D37"
-          fontFamily="Playfair Display, serif"
+          fontFamily="Playfair Display"
           fontWeight="700"
           fontSize="22px"
           lineHeight="29px"
@@ -284,7 +284,7 @@ const Footer = () => {
           w="436px"
           color="#021d37"
           p="5px 0"
-          fontFamily="Manrope, sans-serif"
+          fontFamily="Manrope"
           fontWeight="400"
           fontSize="18px"
         >
@@ -303,7 +303,7 @@ const Footer = () => {
             border="none"
             _placeholder={{
               color: "#021D37",
-              fontFamily: "Manrope, sans-serif",
+              fontFamily: "Manrope",
               fontSize: "16px",
               fontWeight: "400",
             }}
@@ -320,7 +320,7 @@ const Footer = () => {
             p="15px 20px"
             _placeholder={{
               color: "#021D37",
-              fontFamily: "Manrope, sans-serif",
+              fontFamily: "Manrope",
               fontSize: "16px",
               fontWeight: "400",
             }}

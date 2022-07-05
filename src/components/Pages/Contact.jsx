@@ -11,10 +11,10 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import Navbar from "../layouts/Navbar";
-import contactpic from "../../assets/Images/contact.png";
-import Footer from "../Home/Footer";
-import FooterCopywright from "../Home/FooterCopywright";
+import Navbar from "components/layouts/Navbar";
+import contactpic from "assets/Images/contact.png";
+import Footer from "components/Home/Footer";
+import FooterCopywright from "components/Home/FooterCopywright";
 
 const Contact = () => {
   return (
