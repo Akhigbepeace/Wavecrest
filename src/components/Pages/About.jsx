@@ -53,11 +53,11 @@ const About = () => {
   const ourOffers = [
     {
       programmeType: "FULL TIME",
-      hndImg: { aboutUs },
+      hndImg:  aboutUs ,
       hndImgCaption: "HND IN HOSPITALITY MANAGEMENT",
-      ndImg: { aboutUs },
+      ndImg:  aboutUs,
       ndImgCaption: "ND IN HOSPITALITY MANAGEMENT",
-      certificateOperation: { aboutUs },
+      certificateOperation:  aboutUs,
       certificateOperationCaption: "CERTIFICATE IN HOSPITALITY OPERATIONS",
     },
   ];
@@ -271,7 +271,7 @@ const About = () => {
                       p="7px"
                     >
                       <Image
-                        src="https://res.cloudinary.com/wavecrest1/image/upload/v1656001784/wavecrest/About_yixq3y.png"
+                        src={ourOffer.hndImg}
                         w="100%"
                         h="245px"
                         borderRadius="3px"
@@ -296,7 +296,7 @@ const About = () => {
                       p="7px"
                     >
                       <Image
-                        src="https://res.cloudinary.com/wavecrest1/image/upload/v1656001784/wavecrest/About_yixq3y.png"
+                        src={ourOffer.ndImg}
                         w="100%"
                         h="245px"
                         borderRadius="3px"
@@ -321,7 +321,7 @@ const About = () => {
                       p="7px"
                     >
                       <Image
-                        src="https://res.cloudinary.com/wavecrest1/image/upload/v1656001784/wavecrest/About_yixq3y.png"
+                        src={ourOffer.certificateOperation}
                         w="100%"
                         h="245px"
                         borderRadius="3px"
@@ -340,11 +340,7 @@ const About = () => {
                   </Grid>
                 </Flex>
 
-                <Flex
-                  alignItems="center"
-                  justifyContent="center"
-                  px="91px"
-                >
+                <Flex alignItems="center" justifyContent="center" px="91px">
                   <Box
                     fontFamily="Manrope"
                     fontSize="40px"
