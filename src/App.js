@@ -4,7 +4,6 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import Home from "./components/Home/Home";
 import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
