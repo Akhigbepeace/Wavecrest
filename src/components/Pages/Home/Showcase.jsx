@@ -7,6 +7,21 @@ import showcase3 from "assets/Images/Showcase3.png";
 import showcase4 from "assets/Images/Showcase4.png";
 import waveVid from "assets/Images/wavevid.mp4";
 
+const showcaseGallery = [
+  {
+    image: showcase1,
+  },
+  {
+    image: showcase2,
+  },
+  {
+    image: showcase3,
+  },
+  {
+    image: showcase4,
+  },
+];
+
 const Showcase = () => {
   return (
     <Grid templateColumns="1fr 1fr" gap="8px">
@@ -54,18 +69,18 @@ const Showcase = () => {
       </Box>
 
       <Grid templateColumns="1fr 1fr" gap="8px">
-        <Box h="100%">
-          <Image src={showcase1} alt="Wavecrest Images 1" w="100%" h="100%" />
-        </Box>
-        <Box h="100%">
-          <Image src={showcase2} alt="Wavecrest Images 1" w="100%" h="100%" />
-        </Box>
-        <Box h="100%">
-          <Image src={showcase3} alt="Wavecrest Images 1" w="100%" h="100%" />
-        </Box>
-        <Box h="100%">
-          <Image src={showcase4} alt="Wavecrest Images 1" w="100%" h="100%" />
-        </Box>
+        {showcaseGallery.map((gallery) => {
+          return (
+            <Box h="100%">
+              <Image
+                src={gallery.image}
+                alt="Wavecrest Images"
+                w="100%"
+                h="100%"
+              />
+            </Box>
+          );
+        })}
       </Grid>
     </Grid>
   );
