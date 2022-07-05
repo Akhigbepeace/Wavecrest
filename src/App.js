@@ -6,7 +6,6 @@ import About from "./components/Pages/About";
 import Alumni from "components/Pages/Alumni";
 import Blog from "components/Pages/Blog";
 import Contact from "./components/Pages/Contact";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
