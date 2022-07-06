@@ -17,6 +17,39 @@ import Instagram from "assets/Images/Instagram.png";
 import Search from "assets/Images/Search.png";
 
 const Navbar = () => {
+  const socials = [
+    {
+      icon: Linked,
+      to: "https://www.linkedin.com/company/wavecrest-college-of-hospitality/",
+      target: "_blank",
+      rel: "noreferrer",
+    },
+    {
+      icon: Facebook,
+      to: "https://web.facebook.com/WavecrestCollegeLagos/",
+      target: "_blank",
+      rel: "noreferrer",
+    },
+    {
+      icon: Twitter,
+      to: "https://twitter.com/WaveColl",
+      target: "_blank",
+      rel: "noreferrer",
+    },
+    {
+      icon: Whatapps,
+      to: "https://api.whatsapp.com/send/?phone=09096856606 &text&app_absent=0",
+      target: "_blank",
+      rel: "noreferrer",
+    },
+    {
+      icon: Instagram,
+      to: "http://instagram.com/wavecrestcollege",
+      target: "_blank",
+      rel: "noreferrer",
+    },
+  ];
+
   const navLinks = [
     {
       name: "HOME",
@@ -130,45 +163,13 @@ const Navbar = () => {
             <Image src={Search} w="20px" h="20px" mr="18px" />
           </Link>
 
-          <Link
-            to="https://www.linkedin.com/company/wavecrest-college-of-hospitality/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image src={Linked} w="34px" h="34px" ml="15px" />
-          </Link>
-
-          <Link
-            to="https://web.facebook.com/WavecrestCollegeLagos/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image src={Facebook} w="34px" h="34px" ml="15px" />
-          </Link>
-
-          <Link
-            to="https://twitter.com/WaveColl"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image src={Twitter} w="34px" h="34px" ml="15px" />
-          </Link>
-
-          <Link
-            to="https://api.whatsapp.com/send/?phone=09096856606 &text&app_absent=0"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image src={Whatapps} w="34px" h="34px" ml="15px" />
-          </Link>
-
-          <Link
-            to="http://instagram.com/wavecrestcollege"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image src={Instagram} w="34px" h="34px" ml="15px" />
-          </Link>
+          {socials.map((social) => {
+            return (
+              <Link to={social.to} target={social.target} rel={social.rel}>
+                <Image src={social.icon} w="34px" h="34px" ml="15px" />
+              </Link>
+            );
+          })}
         </Stack>
       </Flex>
 

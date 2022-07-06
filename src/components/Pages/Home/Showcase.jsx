@@ -69,10 +69,11 @@ const Showcase = () => {
       </Box>
 
       <Grid templateColumns="1fr 1fr" gap="8px">
-        {showcaseGallery.map((gallery) => {
+        {showcaseGallery.map((gallery, index) => {
           return (
             <Box h="100%">
               <Image
+                key={index}
                 src={gallery.image}
                 alt="Wavecrest Images"
                 w="100%"
