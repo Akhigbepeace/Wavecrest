@@ -2,11 +2,11 @@ import { Box, Image, Text, Flex, Link } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
 import Navbar from "components/layouts/Navbar";
 import academics from "assets/Images/academics.png";
-import Programmes from "components/Pages/Academics/Programmes";
-import Training from "components/Pages/Academics/Training";
-import JobPlacement from "components/Pages/Academics/JobPlacement";
-import Intership from "components/Pages/Academics/Internship";
-import NYSC from "components/Pages/Academics/NYSC";
+import Programmes from "Pages/Academics/Programmes";
+import Training from "Pages/Academics/Training";
+import JobPlacement from "Pages/Academics/JobPlacement";
+import Intership from "Pages/Academics/Internship";
+import NYSC from "Pages/Academics/NYSC";
 import Footer from "./Home/Footer";
 import FooterCopywright from "./Home/FooterCopywright";
 
