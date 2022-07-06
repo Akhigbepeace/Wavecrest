@@ -1,12 +1,12 @@
 import { Box, Image, Link, Text, Flex } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
 import about from "assets/Images/About.png";
-import Profile from "components/Pages/About/Profile";
-import Milestone from "components/Pages/About/Milestone";
-import OurTeam from "components/Pages/About/OurTeam";
+import Profile from "Pages/About/Profile";
+import Milestone from "Pages/About/Milestone";
+import OurTeam from "Pages/About/OurTeam";
 import Navbar from "components/layouts/Navbar";
-import Footer from "components/Pages/Home/Footer";
-import FooterCopywright from "components/Pages/Home/FooterCopywright";
+import Footer from "Pages/Home/Footer";
+import FooterCopywright from "Pages/Home/FooterCopywright";
 
 const About = () => {
   const menuLinks = [

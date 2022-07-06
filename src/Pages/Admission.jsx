@@ -2,11 +2,11 @@ import { Box, Image, Text, Flex, Link } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
 import Navbar from "components/layouts/Navbar";
 import admission from "assets/Images/Admission.png";
-import AdmissionRequirements from "components/Pages/Admission/AdmissionRequirements";
-import TuitionAndScholarship from "components/Pages/Admission/TuitionAndScholarship";
-import ApplyOnline from "components/Pages/Admission/ApplyOnline";
-import Hostel from "components/Pages/Admission/Hostel";
-import FAQs from "components/Pages/Admission/FAQs";
+import AdmissionRequirements from "Pages/Admission/AdmissionRequirements";
+import TuitionAndScholarship from "Pages/Admission/TuitionAndScholarship";
+import ApplyOnline from "Pages/Admission/ApplyOnline";
+import Hostel from "Pages/Admission/Hostel";
+import FAQs from "Pages/Admission/FAQs";
 import Footer from "./Home/Footer";
 import FooterCopywright from "./Home/FooterCopywright";
 

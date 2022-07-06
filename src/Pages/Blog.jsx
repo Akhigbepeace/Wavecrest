@@ -16,8 +16,8 @@ import blogPost from "assets/Images/blogpost.png";
 import blogPost2 from "assets/Images/aboutus.png";
 import searchImg from "assets/Images/Search.png";
 import Navbar from "components/layouts/Navbar";
-import Footer from "components/Pages/Home/Footer";
-import FooterCopywright from "components/Pages/Home/FooterCopywright";
+import Footer from "Pages/Home/Footer";
+import FooterCopywright from "Pages/Home/FooterCopywright";
 
 const Blog = () => {
   const posts = [
