@@ -48,7 +48,6 @@ export default function Carousel() {
 
   return (
     <Box position={"relative"} overflow={"hidden"}>
-      {/* Left Icon */}
       <Link
         position="absolute"
         left={side}
@@ -59,7 +58,6 @@ export default function Carousel() {
         <FaChevronCircleLeft size="50px" mb="-45px" />
       </Link>
 
-      {/* Right Icon */}
       <Link
         position="absolute"
         right={side}

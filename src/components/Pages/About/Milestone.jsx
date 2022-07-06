@@ -99,7 +99,7 @@ const milestones = [
 
 const Milestone = () => {
   return (
-    <Flex p="91px">
+    <Flex p="91px" flexDirection="column">
       <Box>
         {milestones.map((milestone) => {
           const textToShow = Array.isArray(milestone.achievement)
@@ -109,14 +109,13 @@ const Milestone = () => {
             : milestone.achievement;
           return (
             <Fragment>
-              <Box bg="#EBEDEF" w="3px" h="100px" mr="34px"></Box>
-
               <Flex flexDirection="column" alignItems="baseline">
-                <Flex alignItems="baseline">
+                <Flex alignItems="baseline" mb="-8px">
                   <Box
                     bg="#EBEDEF"
                     w="20px"
                     h="20px"
+                    ml="-9px"
                     borderRadius="100%"
                   ></Box>
 
@@ -126,21 +125,23 @@ const Milestone = () => {
                     fontWeight="700"
                     lineHeight="43px"
                     color="#021D37"
-                    mb="10px"
-                    mr="34px"
-
+                    pt="15px"
+                    ml="34px"
                   >
                     {milestone.year}
                   </Heading>
                 </Flex>
 
-                <Box>
+                <Box borderLeft="2px solid #EBEDEF" mb="-30px">
                   <Text
                     fontFamily="Manrope"
                     fontSize="24px"
                     fontWeight="400"
                     lineHeight="33px"
                     mb="10px"
+                    ml="45px"
+                    pt="15px"
+              pb="25px"
                   >
                     {textToShow}
                   </Text>

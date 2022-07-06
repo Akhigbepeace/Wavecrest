@@ -47,7 +47,6 @@ export default function CaptionCarousel() {
 
   return (
     <Box position={"relative"} width={"full"} overflow={"hidden"}>
-      {/* Left Icon */}
       <IconButton
         bg="none"
         position="absolute"
@@ -63,7 +62,6 @@ export default function CaptionCarousel() {
         <BiChevronLeft size="40px" />
       </IconButton>
 
-      {/* Right Icon */}
       <IconButton
         bg="none"
         position="absolute"
@@ -79,11 +77,9 @@ export default function CaptionCarousel() {
         <BiChevronRight size="40px" />
       </IconButton>
 
-      {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((card, index) => (
           <Box key={index} h={"559px"} position="relative" bg="#021D37">
-            {/* This is the block you need to change, to customize the caption */}
             <Flex
               flexDirection="column"
               justifyContent="center"

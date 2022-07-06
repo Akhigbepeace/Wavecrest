@@ -14,11 +14,6 @@ import React, { Fragment } from "react";
 import blog from "assets/Images/Blog.png";
 import blogPost from "assets/Images/blogpost.png";
 import blogPost2 from "assets/Images/aboutus.png";
-import gallery1 from "assets/Images/Blog.png";
-import gallery2 from "assets/Images/blog2.png";
-import gallery3 from "assets/Images/blog3.png";
-import gallery4 from "assets/Images/blog4.png";
-import gallery5 from "assets/Images/blog5.png";
 import searchImg from "assets/Images/Search.png";
 import Navbar from "components/layouts/Navbar";
 import Footer from "components/Pages/Home/Footer";
@@ -206,7 +201,7 @@ const Blog = () => {
                     }
                     _hover={{
                       textDecoration: "none",
-                      bg:"rgba(2, 29, 55, 0.25)"
+                      bg: "rgba(2, 29, 55, 0.25)",
                     }}
                   >
                     <Text>{category.categoryName}</Text>
@@ -272,47 +267,6 @@ const Blog = () => {
                   </Box>
                 );
               })}
-            </Box>
-          </Box>
-
-          <Box>
-            <Heading
-              fontFamily="Playfair Display"
-              fontWeight="700"
-              fontSize="32px"
-              mt="60px"
-            >
-              Gallery
-            </Heading>
-
-            <Box mt="25px">
-              <Image
-                src={gallery1}
-                w="100%"
-                h="151px"
-                mb="10px"
-                borderRadius="5px"
-              />
-              <Flex mb="10px">
-                <Image
-                  src={gallery2}
-                  w="61%"
-                  h="151px"
-                  mr="10px"
-                  borderRadius="3px"
-                />
-                <Image src={gallery3} w="35%" h="151px" borderRadius="3px" />
-              </Flex>
-              <Flex mt="10px">
-                <Image
-                  src={gallery4}
-                  w="50%"
-                  h="151px"
-                  mr="10px"
-                  borderRadius="3px"
-                />
-                <Image src={gallery5} w="45%" h="151px" borderRadius="3px" />
-              </Flex>
             </Box>
           </Box>
         </Box>

@@ -54,7 +54,6 @@ export default function CaptionCarousel() {
 
   return (
     <Box position={"relative"} width={"full"} overflow={"hidden"}>
-      {/* CSS files for react-slick */}
       <Link
         rel="stylesheet"
         type="text/css"
@@ -67,7 +66,6 @@ export default function CaptionCarousel() {
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
       />
 
-      {/* Left Icon */}
       <IconButton
         aria-label="left-arrow"
         variant="ghost"
@@ -84,7 +82,6 @@ export default function CaptionCarousel() {
         <BiChevronLeft size="40px" />
       </IconButton>
 
-      {/* Right Icon */}
       <IconButton
         aria-label="right-arrow"
         variant="ghost"
@@ -101,11 +98,9 @@ export default function CaptionCarousel() {
         <BiChevronRight size="40px" />
       </IconButton>
 
-      {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((card, index) => (
           <Box key={index} h={"446px"} position="relative" bg="#DDD">
-            {/* This is the block you need to change, to customize the caption */}
 
             <Flex
               flexDirection="row"
