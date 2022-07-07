@@ -13,8 +13,8 @@ import {
 import React, { Fragment } from "react";
 import Navbar from "components/layouts/Navbar";
 import contactpic from "assets/Images/contact.png";
-import Footer from "components/Pages/Home/Footer";
-import FooterCopywright from "components/Pages/Home/FooterCopywright";
+import Footer from "Pages/Home/Footer";
+import FooterCopywright from "Pages/Home/FooterCopywright";
 
 const Contact = () => {
   const contactFields = [

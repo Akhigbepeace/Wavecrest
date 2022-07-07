@@ -15,7 +15,7 @@ import Facebook from "assets/Images/facebook.png";
 import Twitter from "assets/Images/Twitter.png";
 import Instagram from "assets/Images/Instagram.png";
 import Search from "assets/Images/Search.png";
-
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const socials = [
     {
@@ -181,6 +181,7 @@ const Navbar = () => {
                 alignItems="center"
                 ref={ref}
                 pb="25px"
+                onMouseLeave={() => setShowNestedLinks.off()}
                 key={index}
                 borderBottom="6px solid transparent"
                 position="relative"
@@ -195,7 +196,8 @@ const Navbar = () => {
                     setCurrentLink(index);
                     setShowNestedLinks.on();
                   }}
-                  to={"/"}
+                  as={NavLink}
+                  to={navLink.to}
                   color="#fff"
                   fontSize="16px"
                   textAlign="center"
@@ -211,6 +213,7 @@ const Navbar = () => {
                   color="#fff"
                   w="max-content"
                   position="absolute"
+                  onMouseLeave={() => setShowNestedLinks.off()}
                   bg="#021d37"
                   zIndex="3"
                   top="55px"
@@ -222,6 +225,7 @@ const Navbar = () => {
                     return (
                       <Link
                         to={nestedLink.to}
+                        as={NavLink}
                         display="block"
                         fontWeight="100"
                         key={index}

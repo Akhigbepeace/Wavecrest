@@ -1,13 +1,14 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import Home from "./components/Pages/Home/Home";
-import About from "./components/Pages/About";
-import Admission from "components/Pages/Admission";
-import Academics from "components/Pages/Academics";
-import Alumni from "components/Pages/Alumni";
-import Blog from "components/Pages/Blog";
-import Contact from "./components/Pages/Contact";
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About";
+import Admission from "Pages/Admission";
+import Academics from "Pages/Academics";
+import Alumni from "Pages/Alumni";
+import Blog from "Pages/Blog";
+import Contact from "./Pages/Contact";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
