@@ -1,5 +1,4 @@
 import React from "react";
-// import fileDownload from "assets/Images/fileDownload.png";
 import { FaFileDownload } from "react-icons/fa";
 import cth from "assets/Images/cth.png";
 import training2 from "assets/Images/train.png";
