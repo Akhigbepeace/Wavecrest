@@ -1,9 +1,137 @@
-import React from 'react'
+import React from "react";
+// import fileDownload from "assets/Images/fileDownload.png";
+import { FaFileDownload } from "react-icons/fa";
+import cth from "assets/Images/cth.png";
+import training2 from "assets/Images/train.png";
+import {
+  Box,
+  Button,
+  Link,
+  Flex,
+  Heading,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 
 const Training = () => {
-  return (
-    <div>Training</div>
-  )
-}
+  const trainings = [
+    {
+      background: "#FFF",
+      trainingsTitle: "Confederation of Tourism and Hospitality",
+      trainingsImage: cth,
+      trainingsText:
+        "Wavecrest College is an approved International Centre for the delivery and assessment of the Professional Management Qualifications of the Institute of Hospitality, UK. ",
+      reapprovalCert: "See Wavecrest College Reapproval Certificate 2020",
+      downloadBrochure: "Download CTH Brochure",
+      button: "APPLY NOW",
+    },
+    {
+      background: "#EBEDEF",
+      trainingsTitle: "Hospitality Training Programs",
+      trainingsImage: training2,
+      trainingsText:
+        "Hospitality Training Programmes (HTP) is the training and consulting division geared towards industry managers, supervisors and operatives. This was formed to provide specialist human resource training, knowledge and advice to assist industry partners. The training is geared towards members of staff involved with providing service. In the training emphasis is placed on details that matter, customer care and improving standards to exceed expectations.",
+      downloadBrochure: "Download HTP Brochure",
+      button: "REGISTER",
+    },
+    {
+      background: "#FFF",
+      trainingsTitle: "Culinary Courses",
+      trainingsImage: cth,
+      trainingsText:
+        "Are you new to the world of Professional cookery or are you on a quest to develop you existing skills? Our culinary programs are designed to provide a step by step introduction to the fundamentals of cookery in the following areas – National and International dishes, yeast products, cakes & icing, pastries, finger foods, mixed drinks and lots more. Through a combined delivery process of demonstrations and hands-on sessions, you will be exposed to a world of eclectic fusions designed to delight your family and friends. ",
+      downloadBrochure: "Download Culinary Course Brochure",
+      button: "APPLY NOW",
+    },
+    {
+      background: "#EBEDEF",
+      trainingsTitle: "National Skill Acquisition",
+      trainingsImage: training2,
+      trainingsText:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      downloadBrochure: "Download NSQ Brochure",
+      button: "REGISTER",
+    },
+  ];
 
-export default Training
+  return (
+    <Flex flexDirection="column" alignItems="center" mb="70px">
+      {trainings.map((training, index) => {
+        return (
+          <Box key={index} bg={training.background} p="50px 91px">
+            <Heading
+              fontFamily="Playfair Display"
+              fontWeight="700"
+              fontSize="32px"
+              color="#021D37"
+            >
+              {training.trainingsTitle}
+            </Heading>
+
+            <Flex mt="24px" alignItems="center">
+              <Box borderRadius="3px" w="474px" h="410px" mr="45px">
+                <Image
+                  src={training.trainingsImage}
+                  w="100%"
+                  h="100%"
+                  alignItems="center"
+                />
+              </Box>
+
+              <Box>
+                <Text
+                  fontFamily="Manrope"
+                  fontWeight="400"
+                  fontSize="24px"
+                  lineHeight="33px"
+                >
+                  {training.trainingsText}
+                </Text>
+
+                <Link
+                  fontFamily="Manrope"
+                  fontWeight="700"
+                  fontSize="24px"
+                  textDecoration="underline"
+                  _hover={{ textDecoration: "none" }}
+                >
+                  {training.reapprovalCert}
+                </Link>
+
+                <Flex alignItems="center" mt="19px">
+                  <FaFileDownload size="30px" color="#021D37" />
+                  <Link
+                    lineHeight="33px"
+                    fontFamily="Manrope"
+                    fontWeight="800"
+                    fontSize="24px"
+                    ml="10px"
+                    color="#201D37"
+                  >
+                    {training.downloadBrochure}
+                  </Link>
+                </Flex>
+
+                <Button
+                  bg="#021D37"
+                  color="#FFF"
+                  borderRadius="3px"
+                  mt="30px"
+                  w="208px"
+                  h="52px"
+                  _hover={{
+                    bg: "#",
+                  }}
+                >
+                  {training.button}
+                </Button>
+              </Box>
+            </Flex>
+          </Box>
+        );
+      })}
+    </Flex>
+  );
+};
+
+export default Training;

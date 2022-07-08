@@ -8,7 +8,10 @@ import {
   Image,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import aboutUs from "assets/Images/aboutus.png";
+import ReactPlayer from "react-player";
+import waveVid from "assets/Images/wavevid.mp4";
+
+// import aboutUs from "assets/Images/aboutus.png";
 import aboutGallery1 from "assets/Images/aboutgallery1.png";
 import aboutGallery2 from "assets/Images/aboutgallery2.png";
 import aboutGallery3 from "assets/Images/aboutgallery3.png";
@@ -149,7 +152,14 @@ const Profile = () => {
         </Box>
 
         <Box w="35%">
-          <Image src={aboutUs} w="436px" h="323px" />
+          <ReactPlayer
+            url={waveVid}
+            playing
+            loop
+            muted
+            width="100%"
+            height="100%"
+          />
         </Box>
       </Flex>
 
@@ -332,12 +342,13 @@ const Profile = () => {
           </Heading>
         </Box>
         <Grid gridTemplateColumns="repeat(5, 1fr)" gridGap="10px">
-          {aboutGalleries.map((gallery) => {
+          {aboutGalleries.map((gallery, index) => {
             return (
               <Image
+                key={index}
                 src={gallery.image}
                 w="272px"
-                h="291px"
+                h="272px"
                 borderRadius="3px"
                 mr="10px"
               />

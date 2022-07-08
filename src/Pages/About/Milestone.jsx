@@ -101,7 +101,7 @@ const Milestone = () => {
   return (
     <Flex p="91px" flexDirection="column">
       <Box>
-        {milestones.map((milestone) => {
+        {milestones.map((milestone, index) => {
           const textToShow = Array.isArray(milestone.achievement)
             ? milestone.achievement.map((values, i) => (
                 <Box key={i}>{values}</Box>
@@ -109,7 +109,7 @@ const Milestone = () => {
             : milestone.achievement;
           return (
             <Fragment>
-              <Flex flexDirection="column" alignItems="baseline">
+              <Flex key={index} flexDirection="column" alignItems="baseline">
                 <Flex alignItems="baseline" mb="-8px">
                   <Box
                     bg="#EBEDEF"
@@ -141,7 +141,7 @@ const Milestone = () => {
                     mb="10px"
                     ml="45px"
                     pt="15px"
-              pb="25px"
+                    pb="25px"
                   >
                     {textToShow}
                   </Text>

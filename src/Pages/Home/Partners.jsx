@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, useBreakpointValue, Image } from "@chakra-ui/react";
 import { Flex, Text, Link } from "@chakra-ui/react";
-import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Slider from "react-slick";
 import Nestle from "assets/Images/Nestle.png";
 import Pau from "assets/Images/pau.png";
@@ -55,7 +55,7 @@ export default function Carousel() {
         zIndex={2}
         onClick={() => slider?.slickPrev()}
       >
-        <FaChevronCircleLeft size="50px" mb="-45px" />
+        <FaChevronLeft size="30px"  />
       </Link>
 
       <Link
@@ -65,7 +65,7 @@ export default function Carousel() {
         zIndex={2}
         onClick={() => slider?.slickNext()}
       >
-        <FaChevronCircleRight size="50px" mt="45px" />
+        <FaChevronRight size="30px"  />
       </Link>
 
       <Flex

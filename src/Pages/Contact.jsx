@@ -36,7 +36,7 @@ const Contact = () => {
     {
       fieldType: "text",
       variant: "filled",
-      placeHolder: "Reason",
+      placeHolder: "Subject",
     },
   ];
 

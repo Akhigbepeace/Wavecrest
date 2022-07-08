@@ -17,39 +17,70 @@ const StudyProgrammes = () => {
   const objArr = [
     {
       linkContent: "HND IN HOSPITALITY MANAGEMENT",
-      imageSrc: studyProgrammes1,
-      current: false,
-      captionHeading: "ACQUIRE AN HND IN HOSPITALITY MANAGEMENT",
-      captionTime: "2 Years | Full Time",
-      captionButton: "Apply Now",
+      values: [
+        {
+          imageSrc: studyProgrammes1,
+          current: false,
+          captionHeading: "ACQUIRE AN HND IN HOSPITALITY MANAGEMENT",
+          captionTime: "2 Years | Full Time",
+          captionButton: "Apply Now",
+        },
+      ],
     },
     {
       linkContent: "ND IN HOTEL AND CATERING MANAGEMENT",
-      imageSrc: studyProgrammes2,
-      current: false,
-      captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
-      captionTime: "2 Years | Full Time",
-      captionButton: "Apply Now",
+      values: [
+        {
+          imageSrc: studyProgrammes2,
+          current: false,
+          captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
+          captionTime: "2 Years | Full Time",
+          captionButton: "Apply Now",
+        },
+      ],
     },
     {
       linkContent: "CERTIFICATE COURSE IN HOSPITALITY OPERATIONS",
-      imageSrc: studyProgrammes3,
-      current: true,
-      captionHeading: "SPEND A GAP YEAR IN HOSPITALITY TRAINING",
-      captionTime: "1 Year | Full Time",
-      captionButton: "Apply Now",
+      values: [
+        {
+          imageSrc: studyProgrammes3,
+          current: true,
+          captionHeading: "SPEND A GAP YEAR IN HOSPITALITY TRAINING",
+          captionTime: "1 Year | Full Time",
+          captionButton: "Apply Now",
+        },
+      ],
     },
     {
       linkContent: "SHORT COURSES",
-      imageSrc: studyProgrammes4,
-      current: false,
-      captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
-      captionTime: "2 Years | Part Time",
-      captionButton: "Apply Now",
+      values: [
+        {
+          imageSrc: studyProgrammes4,
+          current: false,
+          captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
+          captionTime: "2 Years | Part Time",
+          captionButton: "Apply Now",
+        },
+        {
+          imageSrc: studyProgrammes1,
+          current: false,
+          captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
+          captionTime: "2 Years | Part Time",
+          captionButton: "Apply Now",
+        },
+        {
+          imageSrc: studyProgrammes2,
+          current: false,
+          captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
+          captionTime: "2 Years | Part Time",
+          captionButton: "Apply Now",
+        },
+      ],
     },
   ];
 
   const [currentprogram, setCurrentProgram] = useState(objArr[2]);
+
   return (
     <Box>
       <Box>
@@ -67,6 +98,7 @@ const StudyProgrammes = () => {
           {objArr.map((programm, i) => {
             const isCurrent =
               currentprogram.linkContent === programm.linkContent;
+
             return (
               <Link
                 href="#!"
@@ -75,6 +107,7 @@ const StudyProgrammes = () => {
                 w="315px"
                 h="100%"
                 border="3px solid #021D37"
+                borderBottom="7px solid #021D37"
                 fontFamily="Manrope"
                 fontSize="20px"
                 textAlign="center"
@@ -94,56 +127,59 @@ const StudyProgrammes = () => {
           })}
         </Flex>
 
-        <Box w="1247px" h="504px" m="0 auto">
-          <Image
-            src={currentprogram.imageSrc}
-            alt="coffee"
-            h="394px"
-            w="1247px"
-            m="0 auto"
-            borderTop="5px solid #021D37"
-            position="absolute"
-          />
-          <Box
-            bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(1, 15, 29, 0.52) 46.35%, rgba(2, 29, 55, 0.87) 100%)"
-            textAlign="center"
-            position="relative"
-            top="6.45rem"
-          >
-            <Heading
-              color="#fff"
-              pt="101px"
-              fontWeight="700"
-              fontSize="40px"
-              fontFamily="Playfair Display"
-            >
-              {currentprogram.captionHeading}
-            </Heading>
-            <Text
-              fontSize="20px"
-              lineHeight="27px"
-              color="#EBEDEF"
-              fontFamily="Manrope, san"
-              m="1rem 0"
-            >
-              {currentprogram.captionTime}
-            </Text>
-            <Button
-              bg="#fff"
-              color="#021d37"
-              h="52px"
-              w="208px"
-              m="1rem 0"
-              p="10px 25px"
-              border="none"
-              borderRadius="3px"
-              fontFamily="Manrope, san"
-              fontSize="24px"
-              fontWeight="700"
-            >
-              {currentprogram.captionButton}
-            </Button>
-          </Box>
+        <Box mb="50px">
+          {currentprogram.values.map((value, index) => (
+            <Box key={index} w="1247px" h="400px" mb="70px" m="0 auto">
+              <Image
+                src={value.imageSrc}
+                alt="coffee"
+                h="394px"
+                w="1247px"
+                m="0 auto"
+                position="absolute"
+              />
+              <Box
+                bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(1, 15, 29, 0.52) 46.35%, rgba(2, 29, 55, 0.87) 100%)"
+                textAlign="center"
+                position="relative"
+                top="6.45rem"
+              >
+                <Heading
+                  color="#fff"
+                  pt="101px"
+                  fontWeight="700"
+                  fontSize="40px"
+                  fontFamily="Playfair Display"
+                >
+                  {value.captionHeading}
+                </Heading>
+                <Text
+                  fontSize="20px"
+                  lineHeight="27px"
+                  color="#EBEDEF"
+                  fontFamily="Manrope, san"
+                  m="1rem 0"
+                >
+                  {value.captionTime}
+                </Text>
+                <Button
+                  bg="#fff"
+                  color="#021d37"
+                  h="52px"
+                  w="208px"
+                  m="1rem 0"
+                  p="10px 25px"
+                  border="none"
+                  borderRadius="3px"
+                  fontFamily="Manrope, san"
+                  fontSize="24px"
+                  fontWeight="700"
+                >
+                  {value.captionButton}
+                </Button>
+              </Box>
+            </Box>
+          ))}
         </Box>
       </Box>
     </Box>
