@@ -160,9 +160,10 @@ const OurTeam = () => {
 
           <Box>
             <Grid gridTemplateColumns="repeat(3, 1fr)">
-              {managements.map((management) => {
+              {managements.map((management, index) => {
                 return (
                   <Flex
+                    key={index}
                     flexDirection="column"
                     textAlign="center"
                     alignItems="center"
@@ -217,9 +218,10 @@ const OurTeam = () => {
               gridGap="50px"
               m="30px 60px"
             >
-              {staffs.map((staff) => {
+              {staffs.map((staff, index) => {
                 return (
                   <Flex
+                    key={index}
                     flexDirection="column"
                     alignItems="center"
                     justifyContent="center"

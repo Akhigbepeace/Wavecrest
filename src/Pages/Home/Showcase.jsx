@@ -24,7 +24,7 @@ const showcaseGallery = [
 
 const Showcase = () => {
   return (
-    <Grid templateColumns="1fr 1fr" gap="8px">
+    <Grid templateColumns="1fr 1fr" gap="8px" >
       <Box h="100%" position="relative" zIndex="0">
         <ReactPlayer
           url={waveVid}
@@ -69,12 +69,13 @@ const Showcase = () => {
       </Box>
 
       <Grid templateColumns="1fr 1fr" gap="8px">
-        {showcaseGallery.map((gallery) => {
+        {showcaseGallery.map((gallery, index) => {
           return (
-            <Box h="100%">
+            <Box h="100%" key={index}>
               <Image
                 src={gallery.image}
                 alt="Wavecrest Images"
+                objectFit="cover"
                 w="100%"
                 h="100%"
               />

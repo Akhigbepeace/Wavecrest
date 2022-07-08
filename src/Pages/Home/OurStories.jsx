@@ -46,7 +46,7 @@ export default function CaptionCarousel() {
   ];
 
   return (
-    <Box position={"relative"} width={"full"} overflow={"hidden"}>
+    <Box position={"relative"} width={"full"}  overflow={"hidden"}>
       <IconButton
         bg="none"
         position="absolute"

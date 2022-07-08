@@ -1,47 +1,61 @@
 import { Box, Image, Text, Flex, Link } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
+import { useParams } from "react-router-dom";
 import Navbar from "components/layouts/Navbar";
-import academics from "assets/Images/academics.png";
-import Programmes from "Pages/Academics/Programmes";
-import Training from "Pages/Academics/Training";
-import JobPlacement from "Pages/Academics/JobPlacement";
-import Intership from "Pages/Academics/Internship";
-import NYSC from "Pages/Academics/NYSC";
-import Footer from "./Home/Footer";
-import FooterCopywright from "./Home/FooterCopywright";
+import admission from "assets/Images/Admission.png";
+import AdmissionRequirements from "Pages/Admission/AdmissionRequirements";
+import TuitionAndScholarship from "Pages/Admission/TuitionAndScholarship";
+import ApplyOnline from "Pages/Admission/ApplyOnline";
+import Hostel from "Pages/Admission/Hostel";
+import FAQs from "Pages/Admission/FAQs";
+import Footer from "../Home/Footer";
+import FooterCopywright from "../Home/FooterCopywright";
 
 const Admission = () => {
+  const { id } = useParams();
+  console.log("params", id);
+
+
   const menuLinks = [
     {
-      linkTitle: "PROGRAMMES",
-      content: <Programmes />,
+      id: "admissionRequirements",
+      linkTitle: "ADMISSION REQUIREMENTS",
+      content: <AdmissionRequirements />,
     },
     {
-      linkTitle: "TRAINING",
-      content: <Training />,
+      id: "tuitionAndScholarship",
+      linkTitle: "TUITION AND SCHOLARSHIP",
+      content: <TuitionAndScholarship />,
     },
     {
-      linkTitle: "JOB PLACEMENT",
-      content: <JobPlacement />,
+      id: "applyOnline",
+      linkTitle: "APPLY ONLINE",
+      content: <ApplyOnline />,
     },
     {
-      linkTitle: "INTERNSHIP",
-      content: <Intership />,
+      id: "hostel",
+      linkTitle: "HOSTEL",
+      content: <Hostel />,
     },
     {
-      linkTitle: "NYSC",
-      content: <NYSC />,
+      id: "faqs",
+      linkTitle: "FAQs",
+      content: <FAQs />,
     },
   ];
 
-  const [activeLink, setActiveLink] = useState(menuLinks[0]);
+  const profile = menuLinks.find(
+    (menu) => menu.id.toLowerCase() === id.toLowerCase()
+  );
+
+  const [activeLink, setActiveLink] = useState(profile || menuLinks[0]);
 
   return (
     <Fragment>
       <Navbar />
 
       <Box h="441px" w="100%" gridGap="68px" position="relative">
-        <Image src={academics} h="100%" w="100%" />
+        <Image src={admission} h="100%" w="100%" />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -58,7 +72,7 @@ const Admission = () => {
             textAlign="center"
             mt="140px"
           >
-            ACADEMICS
+            ADMISSION
           </Text>
         </Box>
       </Box>
@@ -78,9 +92,7 @@ const Admission = () => {
                   fontSize="20px"
                   textAlign="center"
                   alignItems="center"
-                  justifySelf="center"
                   border="3px solid #021d37"
-                  p="auto 0"
                   w="242px"
                   h="74px"
                   onClick={() => setActiveLink(menuLink)}
