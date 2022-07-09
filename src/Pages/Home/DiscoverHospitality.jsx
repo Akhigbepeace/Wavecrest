@@ -8,25 +8,27 @@ const DiscoverHospitality = () => {
   return (
     <Flex
       alignItems="center"
-      justifyContent="space-between"
-      w="1258px"
+      justifyContent="center"
+      // w="1258px"
       h="421px"
-      m="50px auto"
+      my="50px"
+      px="91px"
     >
-      <Box>
-        <Text fontSize="32px" fontWeight="700" fontFamily="Playfair Display,">
-          NIGERIAN'S PREMIERE HOSPITALITY MONOTECHNIC
+      <Box mr="28px" >
+        <Text fontSize="32px" fontWeight="700" fontFamily="Playfair Display">
+          NIGERIA'S PREMIERE HOSPITALITY MONOTECHNIC
         </Text>
         <Text
           m="22px 0"
-          w="568px"
+          // w="568px"
           fontSize="18px"
           lineHeight="25px"
           fontFamily="Manrope"
+          textAlign="left"
         >
           Wavecrest College of Hospitality is consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          do eiusmod tempor incididunt ut labore et dolore r magna a h j aliqua. Ut enim
+          ad minim veniam, quis nostrud e exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur.
@@ -51,7 +53,7 @@ const DiscoverHospitality = () => {
         </Link>
       </Box>
 
-      <Grid gridTemplateColumns="1fr 1fr" m="50px 0">
+      <Grid gridTemplateColumns="1fr 1fr"  m="50px 0">
         <Box w="320px" height="214px">
           <Image
             src={discoverpic1}
@@ -70,7 +72,7 @@ const DiscoverHospitality = () => {
             w="100%"
             h="100%"
             textAlign="center"
-            fontFamily="Playfair Display,"
+            fontFamily="Playfair Display"
             p="40px"
           >
             Discover Hospitality

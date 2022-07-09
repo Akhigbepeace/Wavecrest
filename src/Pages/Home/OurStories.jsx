@@ -6,6 +6,7 @@ import {
   Flex,
   Heading,
   Text,
+  Link,
   Image,
 } from "@chakra-ui/react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
@@ -34,19 +35,22 @@ export default function CaptionCarousel() {
     {
       name: "Sara Smart",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit aperiam officiis repudiandae quo ipsa, accusamus omnis quaerat? Nulla laborum ab est a expedita hic doloribus modi magni fuga asperiores.",
+      link: "READ MORE",
     },
     {
       name: "Joy Samuel",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit aperiam officiis repudiandae quo ipsa, accusamus omnis quaerat? Nulla laborum ab est a expedita hic doloribus modi magni fuga asperiores.",
+      link: "READ MORE",
     },
     {
       name: "Mia Rich",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit aperiam officiis repudiandae quo ipsa, accusamus omnis quaerat? Nulla laborum ab est a expedita hic doloribus modi magni fuga asperiores.",
+      link: "READ MORE",
     },
   ];
 
   return (
-    <Box position={"relative"} width={"full"}  overflow={"hidden"}>
+    <Box position={"relative"} width={"full"} overflow={"hidden"}>
       <IconButton
         bg="none"
         position="absolute"
@@ -134,7 +138,7 @@ export default function CaptionCarousel() {
 
                 <Text
                   color="#EBEDEF"
-                  margin="3rem 0"
+                  margin="20px 0"
                   fontFamily="Manrope"
                   fontSize="18px"
                   fontWeight="400"
@@ -143,6 +147,28 @@ export default function CaptionCarousel() {
                 >
                   {card.text}
                 </Text>
+                <Link
+                  href="#"
+                  background="#FFF"
+                  w="168px"
+                  p="10px 26px"
+                  color="#021D37"
+                  fontSize="20px"
+                  textDecoration="none"
+                  textAlign="center"
+                  mt="20px"
+                  textTransform="uppercase"
+                  borderRadius="3px"
+                  fontFamily="Manrope"
+                  h="52px"
+                  _hover={{
+                    textDecoration: "none",
+                    color: "#021D37",
+                    bg: "#EBEDEF",
+                  }}
+                >
+                  {card.link}
+                </Link>
               </Box>
 
               <Image

@@ -40,15 +40,14 @@ const Showcase = () => {
           textAlign="left"
           bg="rgba(0,24,71, 0.6)"
           color="white"
-          p="49px 60px"
+          pb="25px"
+          pl="91px"
           bottom="0"
           right="0"
           position="absolute"
           w="100%"
           h="100%"
-          fontFamily="Playfair Display"
-          fontSize="16px"
-          fontWeight="700"
+    
         >
           <Text
             fontSize="60px"
@@ -59,11 +58,11 @@ const Showcase = () => {
           </Text>
           <Text
             fontFamily="Playfair Display"
-            fontSize="30px"
+            fontSize="35px"
             fontWeight="700"
-            lineHeight="53px"
+            lineHeight="43px"
           >
-            NIGERIAN'S PREMIERE HOSPITALITY MONOTECHNIC
+            NIGERIA'S PREMIERE HOSPITALITY MONOTECHNIC
           </Text>
         </Flex>
       </Box>

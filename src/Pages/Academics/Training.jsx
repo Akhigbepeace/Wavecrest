@@ -15,7 +15,8 @@ import {
 const Training = () => {
   const trainings = [
     {
-      background: "#FFF",
+      background: "#EBEDEF",
+
       trainingsTitle: "Confederation of Tourism and Hospitality",
       trainingsImage: cth,
       trainingsText:
@@ -25,7 +26,8 @@ const Training = () => {
       button: "APPLY NOW",
     },
     {
-      background: "#EBEDEF",
+    background: "#FFF",
+
       trainingsTitle: "Hospitality Training Programs",
       trainingsImage: training2,
       trainingsText:
@@ -34,7 +36,7 @@ const Training = () => {
       button: "REGISTER",
     },
     {
-      background: "#FFF",
+    background: "#EBEDEF",
       trainingsTitle: "Culinary Courses",
       trainingsImage: cth,
       trainingsText:
@@ -43,7 +45,7 @@ const Training = () => {
       button: "APPLY NOW",
     },
     {
-      background: "#EBEDEF",
+      background: "#FFF",
       trainingsTitle: "National Skill Acquisition",
       trainingsImage: training2,
       trainingsText:
@@ -54,7 +56,7 @@ const Training = () => {
   ];
 
   return (
-    <Flex flexDirection="column" alignItems="center" mb="70px">
+    <Flex flexDirection="column" mb="70px">
       {trainings.map((training, index) => {
         return (
           <Box key={index} bg={training.background} p="50px 91px">
@@ -68,13 +70,8 @@ const Training = () => {
             </Heading>
 
             <Flex mt="24px" alignItems="center">
-              <Box borderRadius="3px" w="474px" h="410px" mr="45px">
-                <Image
-                  src={training.trainingsImage}
-                  w="100%"
-                  h="100%"
-                  alignItems="center"
-                />
+              <Box bg="#FFF" borderRadius="3px" w="100%" h="100%" mr="50px" p="170px">
+                <Image src={training.trainingsImage} align="center"/>
               </Box>
 
               <Box>
