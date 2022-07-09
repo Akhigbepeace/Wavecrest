@@ -9,7 +9,6 @@ const DiscoverHospitality = () => {
     <Flex
       alignItems="center"
       justifyContent="center"
-      // w="1258px"
       h="421px"
       my="50px"
       px="91px"
@@ -20,7 +19,6 @@ const DiscoverHospitality = () => {
         </Text>
         <Text
           m="22px 0"
-          // w="568px"
           fontSize="18px"
           lineHeight="25px"
           fontFamily="Manrope"

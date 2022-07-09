@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, useBreakpointValue, Image } from "@chakra-ui/react";
 import { Flex, Text, Link } from "@chakra-ui/react";
-// import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Slider from "react-slick";
 import Nestle from "assets/Images/Nestle.png";
 import Pau from "assets/Images/pau.png";

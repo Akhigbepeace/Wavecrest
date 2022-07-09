@@ -10,8 +10,6 @@ import {
 import React, { Fragment } from "react";
 import ReactPlayer from "react-player";
 import waveVid from "assets/Images/wavevid.mp4";
-
-// import aboutUs from "assets/Images/aboutus.png";
 import aboutGallery1 from "assets/Images/aboutgallery1.png";
 import aboutGallery2 from "assets/Images/aboutgallery2.png";
 import aboutGallery3 from "assets/Images/aboutgallery3.png";
