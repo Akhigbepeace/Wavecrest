@@ -11,6 +11,7 @@ import Contact from "Pages/Contact";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Career from "Pages/Career";
 
 function App() {
   const colors = {
@@ -37,6 +38,7 @@ function App() {
             <Route exact path="/academics/:id" element={<Academics />} />
             <Route exact path="/blog" element={<Blog />} />
             <Route exact path="/alumni" element={<Alumni />} />
+            <Route exact path="/career" element={<Career />} />
             <Route exact path="/contact" element={<Contact />} />
           </Routes>
         </Fragment>

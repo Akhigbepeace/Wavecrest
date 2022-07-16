@@ -5,7 +5,6 @@ import Navbar from "components/layouts/Navbar";
 import academics from "assets/Images/academics.png";
 import Programmes from "Pages/Academics/Programmes";
 import Training from "Pages/Academics/Training";
-import JobPlacement from "Pages/Academics/JobPlacement";
 import Intership from "Pages/Academics/Internship";
 import NYSC from "Pages/Academics/NYSC";
 import Footer from "../Home/Footer";
@@ -25,11 +24,7 @@ const Admission = () => {
       linkTitle: "TRAINING",
       content: <Training />,
     },
-    {
-      id: "jobPlacement",
-      linkTitle: "JOB PLACEMENT",
-      content: <JobPlacement />,
-    },
+
     {
       id: "internship",
       linkTitle: "INTERNSHIP",
@@ -45,7 +40,6 @@ const Admission = () => {
   const profile = menuLinks.find(
     (menu) => menu.id.toLowerCase() === id.toLowerCase()
   );
-
 
   const [activeLink, setActiveLink] = useState(profile || menuLinks[0]);
 

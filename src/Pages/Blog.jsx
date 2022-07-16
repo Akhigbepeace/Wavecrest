@@ -93,7 +93,7 @@ const Blog = () => {
       <Navbar />
 
       <Box mb="150px">
-        <Box h="600px" w="100%" gridGap="68px" position="relative">
+        <Box w="100%" gridGap="68px" position="relative">
           <Image src={blog} h="100%" w="100%" />
 
           <Box
@@ -116,7 +116,7 @@ const Blog = () => {
           </Box>
         </Box>
 
-        <Flex flexDirection="column"  alignItems="center">
+        <Flex flexDirection="column" alignItems="center">
           <Flex p="50px 0px" justifyContent="space-between">
             <Box pr="46px" w="382px">
               <InputGroup>
@@ -344,7 +344,13 @@ const Blog = () => {
           </Flex>
 
           <Flex mr="-390px">
-            <Link bg="#021D37" p="15px" borderRadius="3px" color="#FFF" mr="50px">
+            <Link
+              bg="#021D37"
+              p="15px"
+              borderRadius="3px"
+              color="#FFF"
+              mr="50px"
+            >
               <FaChevronLeft size="35px" />
             </Link>
             <Link bg="#021D37" p="15px" borderRadius="3px" color="#FFF">

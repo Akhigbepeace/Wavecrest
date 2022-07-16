@@ -40,6 +40,39 @@ const Contact = () => {
     },
   ];
 
+  const enquires = [
+    {
+      name: "Admission:",
+      phoneNumber: "Phone: +234 909 685 6606",
+      email: "Email: info@wavecrest.edu.ng",
+    },
+    {
+      name: "Training:",
+      phoneNumber: "Phone: +234 909 685 6606",
+      email: "Email: info@wavecrest.edu.ng",
+    },
+    {
+      name: "General:",
+      phoneNumber: "Phone: +234 909 685 6606",
+      email: "Email: info@wavecrest.edu.ng",
+    },
+    {
+      name: "Partnership:",
+      phoneNumber: "Phone: +234 909 685 6606",
+      email: "Email: info@wavecrest.edu.ng",
+    },
+    {
+      name: "Front Desk:",
+      phoneNumber: "Phone: +234 909 685 6606",
+      email: "Email: info@wavecrest.edu.ng",
+    },
+    {
+      name: "Job Placement:",
+      phoneNumber: "Phone: +234 909 685 6606",
+      email: "Email: info@wavecrest.edu.ng",
+    },
+  ];
+
   return (
     <Fragment>
       <Navbar />
@@ -130,6 +163,7 @@ const Contact = () => {
                 }}
               />
             </Stack>
+            
             <Button
               w="103px"
               h="47px"
@@ -150,118 +184,61 @@ const Contact = () => {
           </Flex>
 
           <Flex flexDirection="column">
-            <Heading mb="10px">Visit Us</Heading>
             <Box>
-              <iframe
-                title="Wavecrest College of Hospitality"
-                width="665"
-                height="364"
-                frameBorder="0"
-                scrolling="no"
-                marginHeight="0"
-                marginWidth="0"
-                id="gmap_canvas"
-                src="https://maps.google.com/maps?width=665&amp;height=364&amp;hl=en&amp;q=75%20Adisa%20Bashua%20Street,%20Off%20Adelabu%20Street,%20Surulere,%20Lagos%20State,%20Nigeria.%20%20+(Wavecrest)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              ></iframe>
-              <script
-                type="text/javascript"
-                src="https://embedmaps.com/google-maps-authorization/script.js?id=1e38e70d8c3f5fe4769bac191f721c59a7bdb19c"
-              ></script>
-              <Text
-                mt="10px"
-                fontFamily="Manrope, sans-serif"
-                fontSize="16px"
-                fontWeight="400"
-              >
-                75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos
-                State, Nigeria.
-              </Text>
+              <Heading mb="10px">Visit Us</Heading>
+              <Box>
+                <iframe
+                  title="Wavecrest College of Hospitality"
+                  width="665"
+                  height="364"
+                  frameBorder="0"
+                  scrolling="no"
+                  marginHeight="0"
+                  marginWidth="0"
+                  id="gmap_canvas"
+                  src="https://maps.google.com/maps?width=665&amp;height=364&amp;hl=en&amp;q=75%20Adisa%20Bashua%20Street,%20Off%20Adelabu%20Street,%20Surulere,%20Lagos%20State,%20Nigeria.%20%20+(Wavecrest)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                ></iframe>
+                <script
+                  type="text/javascript"
+                  src="https://embedmaps.com/google-maps-authorization/script.js?id=1e38e70d8c3f5fe4769bac191f721c59a7bdb19c"
+                ></script>
+                <Text
+                  mt="10px"
+                  fontFamily="Manrope, sans-serif"
+                  fontSize="16px"
+                  fontWeight="400"
+                >
+                  75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos
+                  State, Nigeria.
+                </Text>
+              </Box>
             </Box>
 
             <Grid gridTemplateColumns="1fr 1fr" mt="30px">
-              <Flex flexDirection="column" mb="30px">
-                <Heading
-                  mb="6px"
-                  fontFamily="Playfair Display, serif"
-                  fontWeight="700"
-                  fontSize="22px"
-                  color="#021D37"
-                >
-                  Admission:
-                </Heading>
-                <Box
-                  fontFamily="Manrope, sans-serif"
-                  fontWeight="400"
-                  fontSize="18px"
-                  color="#021D37"
-                >
-                  <Text>Phone: +234 909 685 6606</Text>
-                  <Text>Email: info@wavecrest.edu.ng</Text>
-                </Box>
-              </Flex>
-
-              <Flex flexDirection="column" mb="30px">
-                <Heading
-                  fontFamily="Playfair Display, serif"
-                  fontWeight="700"
-                  fontSize="22px"
-                  color="#021D37"
-                  mb="6px"
-                >
-                  Training:
-                </Heading>
-                <Box
-                  fontFamily="Manrope, sans-serif"
-                  fontWeight="400"
-                  fontSize="18px"
-                  color="#021D37"
-                >
-                  <Text>Phone: +234 909 685 6606</Text>
-                  <Text>Email: info@wavecrest.edu.ng</Text>
-                </Box>
-              </Flex>
-
-              <Flex flexDirection="column" mb="30px">
-                <Heading
-                  mb="6px"
-                  fontFamily="Playfair Display, serif"
-                  fontWeight="700"
-                  fontSize="22px"
-                  color="#021D37"
-                >
-                  General:
-                </Heading>
-                <Box
-                  fontFamily="Manrope, sans-serif"
-                  fontWeight="400"
-                  fontSize="18px"
-                  color="#021D37"
-                >
-                  <Text>Phone: +234 909 685 6606</Text>
-                  <Text>Email: info@wavecrest.edu.ng</Text>
-                </Box>
-              </Flex>
-
-              <Flex flexDirection="column" mb="30px">
-                <Heading
-                  fontFamily="Playfair Display, serif"
-                  fontWeight="700"
-                  fontSize="22px"
-                  color="#021D37"
-                  mb="6px"
-                >
-                  Partnership:
-                </Heading>
-                <Box
-                  fontFamily="Manrope, sans-serif"
-                  fontWeight="400"
-                  fontSize="18px"
-                  color="#021D37"
-                >
-                  <Text>Phone: +234 909 685 6606</Text>
-                  <Text>Email: info@wavecrest.edu.ng</Text>
-                </Box>
-              </Flex>
+              {enquires.map((enquiry) => {
+                return (
+                  <Flex flexDirection="column" mb="30px">
+                    <Heading
+                      mb="6px"
+                      fontFamily="Playfair Display, serif"
+                      fontWeight="700"
+                      fontSize="22px"
+                      color="#021D37"
+                    >
+                      {enquiry.name}
+                    </Heading>
+                    <Box
+                      fontFamily="Manrope, sans-serif"
+                      fontWeight="400"
+                      fontSize="18px"
+                      color="#021D37"
+                    >
+                      <Text> {enquiry.phoneNumber}</Text>
+                      <Text> {enquiry.email}</Text>
+                    </Box>
+                  </Flex>
+                );
+              })}
             </Grid>
           </Flex>
         </Grid>

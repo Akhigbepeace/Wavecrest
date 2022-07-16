@@ -56,7 +56,7 @@ const Training = () => {
   ];
 
   return (
-    <Flex flexDirection="column" mb="70px">
+    <Flex flexDirection="column" mb="70px" >
       {trainings.map((training, index) => {
         return (
           <Box key={index} bg={training.background} p="50px 91px">
@@ -65,13 +65,23 @@ const Training = () => {
               fontWeight="700"
               fontSize="32px"
               color="#021D37"
+              m="0 auto"
+              mb="36px"
+              w="1247px"
             >
               {training.trainingsTitle}
             </Heading>
 
-            <Flex mt="24px" alignItems="center">
-              <Box bg="#FFF" borderRadius="3px" w="100%" h="100%" mr="50px" p="170px">
-                <Image src={training.trainingsImage} align="center"/>
+            <Flex mt="24px" alignItems="center" m="0 auto" w="1200px">
+              <Box
+                bg="#FFF"
+                borderRadius="3px"
+                w="100%"
+                h="100%"
+                mr="50px"
+                p="170px"
+              >
+                <Image src={training.trainingsImage} align="center" />
               </Box>
 
               <Box>
@@ -116,7 +126,7 @@ const Training = () => {
                   w="208px"
                   h="52px"
                   _hover={{
-                    bg: "#",
+                    bg: "#020E1B",
                   }}
                 >
                   {training.button}

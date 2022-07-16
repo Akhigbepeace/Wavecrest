@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <Fragment>
       <Navbar />
-      <Showcase mt="180px" />
+      <Showcase />
       <DiscoverHospitality />
       <Blog />
       <StudyProgrammes />

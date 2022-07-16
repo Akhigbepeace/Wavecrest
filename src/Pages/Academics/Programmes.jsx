@@ -48,7 +48,7 @@ const Programmes = () => {
   ];
 
   return (
-    <Box>
+    <Box >
       {programmes.map((programme) => {
         return (
           <Box bg={programme.background} p="75px 91px">
@@ -56,16 +56,24 @@ const Programmes = () => {
               fontFamily="Playfair Display"
               fontWeight="700"
               fontSize="32px"
+              textAlign="left"
+              m="0 auto"
+              w="1247px"
             >
               {programme.programmeTitle}
             </Heading>
 
-            <Flex flexDirection="column" position="relative">
+            <Flex
+              flexDirection="column"
+              position="relative"
+              m="0 auto"
+              w="1247px"
+            >
               <Image
                 src={programme.imageSrc}
                 alt="coffee"
                 h="394px"
-                w="1247px"
+                w="100%"
                 m="0 auto"
                 mt="25px"
               />

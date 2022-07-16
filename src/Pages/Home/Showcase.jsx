@@ -24,7 +24,7 @@ const showcaseGallery = [
 
 const Showcase = () => {
   return (
-    <Grid templateColumns="1fr 1fr" gap="8px" >
+    <Grid templateColumns="1fr 1fr" gap="8px">
       <Box h="100%" position="relative" zIndex="0">
         <ReactPlayer
           url={waveVid}
@@ -47,7 +47,6 @@ const Showcase = () => {
           position="absolute"
           w="100%"
           h="100%"
-    
         >
           <Text
             fontSize="60px"
@@ -60,6 +59,7 @@ const Showcase = () => {
             fontFamily="Playfair Display"
             fontSize="35px"
             fontWeight="700"
+            w="600px"
             lineHeight="43px"
           >
             NIGERIA'S PREMIERE HOSPITALITY MONOTECHNIC

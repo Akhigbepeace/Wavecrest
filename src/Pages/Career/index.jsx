@@ -1,33 +1,28 @@
 import { Box, Image, Link, Text, Flex } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
 import { useParams } from "react-router-dom";
-import Navbar from "components/layouts/Navbar";
 import about from "assets/Images/About.png";
-import Profile from "./Profile";
-import Milestone from "./Milestone";
-import OurTeam from "./OurTeam";
+// import postJobVacancies from "./postJobVacancies";
+// import viewJobVacancies from "./viewJobVacancies";
+
+import Navbar from "components/layouts/Navbar";
 import Footer from "Pages/Home/Footer";
 import FooterCopywright from "Pages/Home/FooterCopywright";
 
-const About = () => {
+const Career = () => {
   const { id } = useParams();
   console.log("params", id);
 
   const menuLinks = [
     {
-      id: "profile",
-      linkTitle: "PROFILE",
-      content: <Profile />,
+      id: "viewJobVacancies",
+      linkTitle: "VIEW JOB VACANCIES",
+      content: <viewJobVacancies />,
     },
     {
-      id: "milestone",
-      linkTitle: "MILESTONE",
-      content: <Milestone />,
-    },
-    {
-      id: "ourTeam",
-      linkTitle: "OUR TEAM",
-      content: <OurTeam />,
+      id: "postJobVacancies",
+      linkTitle: "POST JOB VACANCIES",
+      content: <postJobVacancies />,
     },
   ];
 
@@ -35,7 +30,7 @@ const About = () => {
     (menu) => menu.id.toLowerCase() === id.toLowerCase()
   );
 
-  const [activeLink, setActiveLink] = useState(profile || menuLinks[0]);
+  const [activeLink, setActiveLink] = useState(profile || menuLinks[1]);
   return (
     <Fragment>
       <Navbar />
@@ -59,7 +54,7 @@ const About = () => {
               textAlign="center"
               mt="140px"
             >
-              ABOUT
+              CARRER
             </Text>
           </Box>
         </Box>
@@ -103,4 +98,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Career;

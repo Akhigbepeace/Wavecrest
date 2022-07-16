@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import ReactPlayer from "react-player";
+
 import waveVid from "assets/Images/wavevid.mp4";
 import aboutGallery1 from "assets/Images/aboutgallery1.png";
 import aboutGallery2 from "assets/Images/aboutgallery2.png";
@@ -39,24 +40,6 @@ const ourStands = [
       "I - Industrious",
       "T - Teamwork",
     ],
-  },
-];
-
-const aboutGalleries = [
-  {
-    image: aboutGallery1,
-  },
-  {
-    image: aboutGallery2,
-  },
-  {
-    image: aboutGallery3,
-  },
-  {
-    image: aboutGallery4,
-  },
-  {
-    image: aboutGallery5,
   },
 ];
 
@@ -91,7 +74,39 @@ const recognitions = [
   },
 ];
 
+const aboutGalleries = [
+  {
+    image: aboutGallery1,
+  },
+  {
+    image: aboutGallery2,
+  },
+  {
+    image: aboutGallery3,
+  },
+  {
+    image: aboutGallery4,
+  },
+  {
+    image: aboutGallery5,
+  },
+  {
+    image: aboutGallery5,
+  },
+  {
+    image: aboutGallery5,
+  },
+  {
+    image: aboutGallery5,
+  },
+  {
+    image: aboutGallery5,
+  },
+];
+
 const Profile = () => {
+ 
+
   return (
     <Fragment>
       <Flex
@@ -339,6 +354,7 @@ const Profile = () => {
             Gallery
           </Heading>
         </Box>
+
         <Grid gridTemplateColumns="repeat(5, 1fr)" gridGap="10px">
           {aboutGalleries.map((gallery, index) => {
             return (
@@ -347,12 +363,16 @@ const Profile = () => {
                 src={gallery.image}
                 w="272px"
                 h="272px"
+
+                objectFit="contain"
                 borderRadius="3px"
                 mr="10px"
               />
             );
           })}
         </Grid>
+
+       
       </Box>
 
       <Box textAlign="center" my="55px">

@@ -72,9 +72,9 @@ const ApplyOnline = () => {
           </Box>
           <Image
             src={aboutus}
-            w="580px"
+            w="323px"
             h="323px"
-            objectFit="cover"
+            objectFit="contain"
             borderRadius="3px"
             ml="78px"
           />

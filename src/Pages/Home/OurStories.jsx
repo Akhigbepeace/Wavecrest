@@ -154,6 +154,7 @@ export default function CaptionCarousel() {
                   p="10px 26px"
                   color="#021D37"
                   fontSize="20px"
+                  fontWeight="700px"
                   textDecoration="none"
                   textAlign="center"
                   mt="20px"

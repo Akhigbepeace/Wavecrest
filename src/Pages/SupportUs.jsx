@@ -8,13 +8,12 @@ import {
   Select,
   Button,
 } from "@chakra-ui/react";
-
 import React, { Fragment } from "react";
 import visa from "assets/Images/visa.png";
 import paypal from "assets/Images/paypal.png";
 import mastercard from "assets/Images/mastercard.png";
 
-const ApplyOnline = () => {
+const SupportUs = () => {
   const forms = [
     {
       fieldType: "name",
@@ -73,7 +72,7 @@ const ApplyOnline = () => {
           fontSize="32px"
           color="#021D37"
         >
-          Pre-Registration Form
+          Support Us
         </Heading>
 
         <Select
@@ -188,4 +187,4 @@ const ApplyOnline = () => {
   );
 };
 
-export default ApplyOnline;
+export default SupportUs;

@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, useBreakpointValue, Image } from "@chakra-ui/react";
-import { Flex, Text, Link } from "@chakra-ui/react";
-import Slider from "react-slick";
+import { Flex, Text, Heading, Link } from "@chakra-ui/react";
 import Nestle from "assets/Images/Nestle.png";
 import Pau from "assets/Images/pau.png";
 import bihc from "assets/Images/bihc.png";
@@ -14,6 +13,8 @@ import crowneplaza from "assets/Images/crowneplaza.png";
 import starwood from "assets/Images/starwood.png";
 import bomahotel from "assets/Images/bomahotel.png";
 
+import Slider from "react-slick";
+
 const settings = {
   dots: false,
   arrows: false,
@@ -25,6 +26,7 @@ const settings = {
   slidesToShow: 5,
   slidesToScroll: 1,
 };
+
 export default function Carousel() {
   const [slider, setSlider] = React.useState();
 
@@ -47,15 +49,14 @@ export default function Carousel() {
 
   return (
     <Box position={"relative"} overflow={"hidden"}>
+
       <Link
         position="absolute"
         left={side}
         top={top}
         zIndex={2}
         onClick={() => slider?.slickPrev()}
-      >
-        {/* <FaChevronLeft size="30px"  /> */}
-      </Link>
+      ></Link>
 
       <Link
         position="absolute"
@@ -63,17 +64,15 @@ export default function Carousel() {
         top={top}
         zIndex={2}
         onClick={() => slider?.slickNext()}
-      >
-        {/* <FaChevronRight size="30px"  /> */}
-      </Link>
+      ></Link>
 
-      <Flex
+<Flex
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
         textAlign="center"
       >
-        <Text
+        <Heading
           position="absolute"
           fontFamily="Dancing Script, cursive"
           fontWeight="400"
@@ -81,7 +80,8 @@ export default function Carousel() {
           color="rgba(3, 29, 56, 0.06)"
         >
           Work with us
-        </Text>
+        </Heading>
+
         <Text
           position="relative"
           top="15px"
@@ -93,7 +93,6 @@ export default function Carousel() {
           Partners and Sponsors
         </Text>
       </Flex>
-
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((image, index) => (
           <Image
@@ -109,3 +108,85 @@ export default function Carousel() {
     </Box>
   );
 }
+
+// import { Heading, Flex, Image, Text } from "@chakra-ui/react";
+
+// import React, { Fragment } from "react";
+// import Nestle from "assets/Images/Nestle.png";
+// import Pau from "assets/Images/pau.png";
+// import bihc from "assets/Images/bihc.png";
+// import raddison from "assets/Images/raddison.png";
+// import maggi from "assets/Images/Maggi.png";
+// import womenBoard from "assets/Images/women's board.jpg";
+// import sheraton from "assets/Images/sheraton.png";
+// import intercontinental from "assets/Images/intercontinental.png";
+// import crowneplaza from "assets/Images/crowneplaza.png";
+// import starwood from "assets/Images/starwood.png";
+// import bomahotel from "assets/Images/bomahotel.png";
+
+// const Partners = () => {
+//   const Partners = [
+//     Nestle,
+//     Pau,
+//     bihc,
+//     raddison,
+//     maggi,
+//     womenBoard,
+//     sheraton,
+//     intercontinental,
+//     crowneplaza,
+//     starwood,
+//     bomahotel,
+//   ];
+
+//   return (
+//     <Fragment>
+//       <Flex
+//         flexDirection="column"
+//         justifyContent="center"
+//         alignItems="center"
+//         textAlign="center"
+//       >
+//         <Heading
+//           position="absolute"
+//           fontFamily="Dancing Script, cursive"
+//           fontWeight="400"
+//           fontSize="130px"
+//           color="rgba(3, 29, 56, 0.06)"
+//         >
+//           Work with us
+//         </Heading>
+
+//         <Text
+//           position="relative"
+//           top="15px"
+//           color="#021D37"
+//           fontFamily="Playfair Display"
+//           fontSize="40px"
+//           fontWeight="700"
+//         >
+//           Partners and Sponsors
+//         </Text>
+//       </Flex>
+
+//         <marquee width="96%" >
+//           <Flex flexDirection="row" alignItems="center" justifyContent="space-between">
+//           {Partners.map((partner) => {
+//             return (
+//               <Image
+//                 key={partner.id}
+//                 src={partner}
+//                 alt="companyLogo"
+//                 h="100px"
+//                 m=" 63px 30px"
+//                 objectFit="contain"
+//               />
+//             );
+//           })}
+//       </Flex>
+//         </marquee>
+//     </Fragment>
+//   );
+// };
+
+// export default Partners;

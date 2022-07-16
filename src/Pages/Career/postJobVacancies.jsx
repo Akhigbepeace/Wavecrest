@@ -1,15 +1,6 @@
-import {
-  Heading,
-  Input,
-  Box,
-  Text,
-  Flex,
-  Select,
-  Button,
-} from "@chakra-ui/react";
+import { Heading, Input, Box, Text, Button, Textarea } from "@chakra-ui/react";
 
 import React, { Fragment } from "react";
-
 
 const ApplyOnline = () => {
   const forms = [
@@ -19,8 +10,8 @@ const ApplyOnline = () => {
       variant: "filled",
     },
     {
-      fieldType: "number",
-      placeHolder: "Phone Number",
+      fieldType: "text",
+      placeHolder: "Company",
       variant: "filled",
     },
     {
@@ -28,21 +19,23 @@ const ApplyOnline = () => {
       placeHolder: "Email",
       variant: "filled",
     },
+    {
+      fieldType: "text",
+      placeHolder: "Job Description",
+      variant: "filled",
+    },
+    {
+      fieldType: "text",
+      placeHolder: "Application Deadline",
+      variant: "filled",
+    },
+    {
+      fieldType: "text",
+      placeHolder: "Application Deadline",
+      variant: "filled",
+    },
   ];
 
-
-
-  const programmes = [
-    {
-      course: "HND in Hospitality Management",
-    },
-    {
-      course: "ND in Hospitality Management",
-    },
-    {
-      course: "Certificate in Hospitality Operations",
-    },
-  ];
   return (
     <Fragment>
       <Box px="91px">
@@ -54,7 +47,7 @@ const ApplyOnline = () => {
             fontSize="32px"
             color="#021D37"
           >
-            Register for NYSC
+            Post Job Vacancy
           </Heading>
 
           <Text
@@ -68,15 +61,11 @@ const ApplyOnline = () => {
             Wavecrest offers accomodation to its students. We have a two well
             furnished hostels orem ipsum dolor sit amet, consectetur adipiscing
             elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute pidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum. sunt in culpa qui officia deserunt mollit anim id est
-            laborum.
+            aliqua.
           </Text>
         </Box>
 
-        <Flex flexDirection="column">
+        <Box>
           {forms.map((form, index) => {
             return (
               <Input
@@ -98,55 +87,36 @@ const ApplyOnline = () => {
               />
             );
           })}
-        </Flex>
 
-        <Select
-          placeholder="Qualification"
-          w="526px"
-          h="67px"
-          bg="#EBEDEF"
-          textAlign="left"
-          fontFamily="Manrope, sans-serif"
-          border="none"
-          color="#021D37"
-          fontSize="18px"
-          lineHeight="25px"
-          fontWeight="400"
-          mb="10px"
-        >
-          {programmes.map((programme, index) => {
-            return (
-              <option
-                value={programme.course}
-                key={index}
-                borderBottom={
-                  programme.length - 1 === index ? "none" : "1px solid #EBEDEF"
-                }
-              >
-                {programme.course}
-              </option>
-            );
-          })}
-        </Select>
-
-        <Box>
-          <Button
-            fontFamily="Manrope"
-            fontSize="16px"
-            fontWeight="700"
-            m="20px 0"
-            borderRadius="3px"
-            bg="#021D37"
-            py="7px"
-            textAlign="center"
-            color="#FFF"
-            _hover={{
-              bg: "#020E1B",
+          <Textarea
+            placeholder="Extra Notes"
+            variant="filled"
+            _placeholder={{
+              fontFamily: "Manrope, sans-serif",
+              color: "#021D37",
+              fontSize: "18px",
+              lineHeight: "25px",
+              fontWeight: "400",
             }}
-          >
-            PRE-REGISTER
-          </Button>
+          />
         </Box>
+
+        <Button
+          fontFamily="Manrope"
+          fontSize="16px"
+          fontWeight="700"
+          m="20px 0"
+          borderRadius="3px"
+          bg="#021D37"
+          py="7px"
+          textAlign="center"
+          color="#FFF"
+          _hover={{
+            bg: "#020E1B",
+          }}
+        >
+          POST
+        </Button>
 
         <Text fontFamily="Manrope" fontSize="24px" fontWeight="400" my="45px">
           NB: After payment, a google link would be sent to your mail to

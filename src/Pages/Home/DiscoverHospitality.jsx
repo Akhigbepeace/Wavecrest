@@ -13,7 +13,7 @@ const DiscoverHospitality = () => {
       my="50px"
       px="91px"
     >
-      <Box mr="28px" >
+      <Box mr="28px" w="500px">
         <Text fontSize="32px" fontWeight="700" fontFamily="Playfair Display">
           NIGERIA'S PREMIERE HOSPITALITY MONOTECHNIC
         </Text>
@@ -47,7 +47,7 @@ const DiscoverHospitality = () => {
             color: "white",
           }}
         >
-          APPLY NOW
+          READ MORE
         </Link>
       </Box>
 

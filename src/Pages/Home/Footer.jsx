@@ -12,6 +12,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import React from "react";
+import { NavLink } from "react-router-dom";
 import logo from "assets/Images/WC-LOGO-july.png";
 import linked from "assets/Images/linked.png";
 import twitter from "assets/Images/Twitter.svg";
@@ -20,6 +21,95 @@ import whatsapp from "assets/Images/whatsapp.png";
 import Instagram from "assets/Images/ig.svg";
 
 const Footer = () => {
+  const socials = [
+    {
+      icon: linked,
+      to: "https://www.linkedin.com/company/wavecrest-college-of-hospitality/",
+      target: "_blank",
+      rel: "noreferrer",
+    },
+
+    {
+      icon: facebook,
+      to: "https://web.facebook.com/WavecrestCollegeLagos/",
+      target: "_blank",
+      rel: "noreferrer",
+    },
+
+    {
+      icon: twitter,
+      to: "https://twitter.com/WaveColl",
+      target: "_blank",
+      rel: "noreferrer",
+    },
+
+    {
+      icon: whatsapp,
+      to: "https://api.whatsapp.com/send/?phone=09096856606 &text&app_absent=0",
+      target: "_blank",
+      rel: "noreferrer",
+    },
+
+    {
+      icon: Instagram,
+      to: "http://instagram.com/wavecrestcollege",
+      target: "_blank",
+      rel: "noreferrer",
+    },
+  ];
+
+  const pages = [
+    {
+      name: "ABOUT US",
+      to: "/about/profile",
+    },
+    {
+      name: "ADMISSION",
+      to: "/admission/admissionRequirements",
+    },
+    {
+      name: "OPUS DEI",
+      to: "https://opusdei.org/en-ng/",
+    },
+    {
+      name: "CONTACT",
+      to: "/contact",
+    },
+    {
+      name: "ACADEMICS",
+      to: "/academics/programmes",
+    },
+    {
+      name: "WOMEN'S BOARD",
+      to: "/academics/programmes",
+    },
+    {
+      name: "FAQs",
+      to: "/admission/faqs",
+    },
+    {
+      name: "ALUMNI",
+      to: "/alumni",
+    },
+    {
+      name: "CAREER",
+      to: "/career",
+    },
+    {
+      name: "BLOG",
+      to: "/blog",
+    },
+    {
+      name: "DOWNLOADS",
+      to: "/blog",
+    },
+
+    {
+      name: "SUPPORT US",
+      to: "/blog",
+    },
+  ];
+
   return (
     <Grid background="#EBEDEF" gridTemplateColumns="repeat(3, 1fr)" pt="54px">
       <Flex
@@ -28,7 +118,9 @@ const Footer = () => {
         textAlign="right"
         mr="82px"
       >
-        <Image src={logo} alt="logo" w="270px" height="54px" mb="10px" />
+        <Link to="/" as={NavLink}>
+          <Image src={logo} alt="logo" w="270px" height="54px" mb="10px" />
+        </Link>
 
         <Text
           w="274px"
@@ -53,54 +145,24 @@ const Footer = () => {
           color="#021D37"
         >
           <Text fontFamily="Manrope'">+234 909 685 6606</Text>
+          <Text fontFamily="Manrope'">+234 808 396 4840</Text>
           <Text fontFamily="Manrope'">info@wavecrest.edu.ng</Text>
         </Flex>
+
         <Flex>
-          <Link
-            href="https://www.linkedin.com/company/wavecrest-college-of-hospitality/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image src={linked} alt="linkedin" w="40px" h="40px" mr="10px" />
-          </Link>
-
-          <Link
-            href="https://web.facebook.com/WavecrestCollegeLagos/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image src={facebook} alt="facebook" w="40px" h="40px" mr="10px" />
-          </Link>
-
-          <Link
-            href="https://twitter.com/WaveColl"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image src={twitter} alt="twitter" w="40px" h="40px" mr="10px" />
-          </Link>
-
-          <Link
-            href="https://api.whatsapp.com/send/?phone=09155003700&text&app_absent=0"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image src={whatsapp} alt="whatsapp" w="40px" h="40px" mr="10px" />
-          </Link>
-
-          <Link
-            href="http://instagram.com/wavecrestcollege"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              src={Instagram}
-              alt="instagram"
-              w="40px"
-              h="40px"
-              mr="10px"
-            />
-          </Link>
+          {socials.map((social) => {
+            return (
+              <Link href={social.to} target={social.target} rel={social.rel}>
+                <Image
+                  src={social.icon}
+                  alt="linkedin"
+                  w="40px"
+                  h="40px"
+                  mr="10px"
+                />
+              </Link>
+            );
+          })}
         </Flex>
       </Flex>
 
@@ -112,161 +174,22 @@ const Footer = () => {
           lineHeight="35px"
           m="0 auto"
         >
-          <ListItem>
-            <Link
-              href="#!"
-              fontFamily="Manrope"
-              fontWeight="700"
-              fontSize="16px"
-              color="#021D37"
-              _hover={{ textDecoration: "none", color: "#020E1B" }}
-            >
-              ABOUT US
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              href="#!"
-              fontFamily="Manrope"
-              fontWeight="700"
-              fontSize="18px"
-              lineHeight="25px"
-              color="#021D37"
-              _hover={{ textDecoration: "none", color: "#020E1B" }}
-            >
-              ADMISSION
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              href="#!"
-              fontFamily="Manrope"
-              fontWeight="700"
-              fontSize="18px"
-              lineHeight="25px"
-              color="#021D37"
-              _hover={{ textDecoration: "none", color: "#020E1B" }}
-            >
-              OPUS DEI
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              href="#!"
-              fontFamily="Manrope"
-              fontWeight="700"
-              fontSize="18px"
-              lineHeight="25px"
-              color="#021D37"
-              _hover={{ textDecoration: "none", color: "#020E1B" }}
-            >
-              CONTACT
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              href="#!"
-              fontFamily="Manrope"
-              fontWeight="700"
-              fontSize="18px"
-              lineHeight="25px"
-              color="#021D37"
-              _hover={{ textDecoration: "none", color: "#020E1B" }}
-            >
-              ACADEMICS
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              href="#!"
-              fontFamily="Manrope"
-              fontWeight="700"
-              fontSize="18px"
-              lineHeight="25px"
-              color="#021D37"
-              _hover={{ textDecoration: "none", color: "#020E1B" }}
-            >
-              WOMEN'S BOARD
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              href="#!"
-              fontFamily="Manrope"
-              fontWeight="700"
-              fontSize="18px"
-              lineHeight="25px"
-              color="#021D37"
-              _hover={{ textDecoration: "none", color: "#020E1B" }}
-            >
-              FAQs
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              href="#!"
-              fontFamily="Manrope"
-              fontWeight="700"
-              fontSize="18px"
-              lineHeight="25px"
-              color="#021D37"
-              _hover={{ textDecoration: "none", color: "#020E1B" }}
-            >
-              ALUMNI
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              href="#!"
-              fontFamily="Manrope"
-              fontWeight="700"
-              fontSize="18px"
-              lineHeight="25px"
-              color="#021D37"
-              _hover={{ textDecoration: "none", color: "#020E1B" }}
-            >
-              CARRER
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              href="#!"
-              fontFamily="Manrope"
-              fontWeight="700"
-              fontSize="18px"
-              lineHeight="25px"
-              color="#021D37"
-              _hover={{ textDecoration: "none", color: "#020E1B" }}
-            >
-              BLOG
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              href="#!"
-              fontFamily="Manrope"
-              fontWeight="700"
-              fontSize="18px"
-              lineHeight="25px"
-              color="#021D37"
-              _hover={{ textDecoration: "none", color: "#020E1B" }}
-            >
-              DOWNLOADS
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              href="#!"
-              fontFamily="Manrope"
-              fontWeight="700"
-              fontSize="18px"
-              lineHeight="25px"
-              color="#021D37"
-              _hover={{ textDecoration: "none", color: "#020E1B" }}
-            >
-              SUPPORT US
-            </Link>
-          </ListItem>
+          {pages.map((page) => {
+            return (
+              <ListItem>
+                <Link
+                  href={page.to}
+                  fontFamily="Manrope"
+                  fontWeight="700"
+                  fontSize="16px"
+                  color="#021D37"
+                  _hover={{ textDecoration: "none", color: "#020E1B" }}
+                >
+                  {page.name}
+                </Link>
+              </ListItem>
+            );
+          })}
         </List>
       </Box>
 
