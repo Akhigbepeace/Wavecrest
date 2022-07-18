@@ -90,18 +90,7 @@ const aboutGalleries = [
   {
     image: aboutGallery5,
   },
-  {
-    image: aboutGallery5,
-  },
-  {
-    image: aboutGallery5,
-  },
-  {
-    image: aboutGallery5,
-  },
-  {
-    image: aboutGallery5,
-  },
+  
 ];
 
 const Profile = () => {

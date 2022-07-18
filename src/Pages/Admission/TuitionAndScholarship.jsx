@@ -494,7 +494,7 @@ const TuitionAndScholarship = () => {
           );
         })}
 
-        <Accordion allowToggle borderTopColor="#FFF" mb="70px">
+        <Accordion allowToggle borderTopColor="#FFF">
           <AccordionItem>
             {({ isExpanded }) => {
               <Box>
