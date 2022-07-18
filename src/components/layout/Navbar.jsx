@@ -9,7 +9,7 @@ import {
   useBoolean,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,  useLocation} from "react-router-dom";
 import Logo from "assets/Images/logo_wavecrest.svg";
 import Linked from "assets/Images/linked.png";
 import Whatapps from "assets/Images/whatsapp.png";
@@ -20,6 +20,8 @@ import searchIcon from "assets/Images/search.svg";
 import Search from "./Search";
 
 const Navbar = () => {
+  const loc = useLocation();
+
   const socials = [
     {
       icon: Linked,
@@ -255,7 +257,8 @@ const Navbar = () => {
                 borderBottom="6px solid transparent"
                 position="relative"
                 borderColor={
-                  currentLink === index && showNestedLinks
+                  loc.pathname.includes(navLink.to) ||
+                  (currentLink === index && showNestedLinks)
                     ? "#fff"
                     : "transparent"
                 }
