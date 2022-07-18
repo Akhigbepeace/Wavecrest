@@ -11,7 +11,7 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import Navbar from "components/layouts/Navbar";
+import Navbar from "components/layout/Navbar";
 import contactpic from "assets/Images/contact.png";
 import Footer from "Pages/Home/Footer";
 import FooterCopywright from "Pages/Home/FooterCopywright";

@@ -18,8 +18,6 @@ import Twitter from "assets/Images/Twitter.svg";
 import Instagram from "assets/Images/ig.svg";
 import searchIcon from "assets/Images/search.svg";
 import Search from "./Search";
-import SupportUs from "Pages/SupportUs";
-import ApplyNow from "Pages/ApplyNow";
 
 const Navbar = () => {
   const socials = [
@@ -147,12 +145,12 @@ const Navbar = () => {
       to: "/career/postJobVacancies",
       NestedLinks: [
         {
-          name: "VIEW JOB VACANCIES",
-          to: "/career/viewJobVacancies",
-        },
-        {
           name: "POST JOB VACANCIES",
           to: "/career/postJobVacancies",
+        },
+        {
+          name: "VIEW JOB VACANCIES",
+          to: "/career/viewJobVacancies",
         },
       ],
     },
@@ -167,7 +165,7 @@ const Navbar = () => {
   const sideLinks = [
     {
       name: "SUPPORT US",
-      to: <SupportUs />,
+      to: "/support",
       bg: "#021D37",
       color: "white",
       hoverBackground: "white",
@@ -177,7 +175,7 @@ const Navbar = () => {
 
     {
       name: "APPLY NOW",
-      to: <ApplyNow />,
+      to: "apply",
       ml: "27px",
       bg: "#FFF",
       color: "#021D37",

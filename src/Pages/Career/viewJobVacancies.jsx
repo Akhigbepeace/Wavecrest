@@ -36,8 +36,13 @@ const viewJobVacancies = () => {
   ];
 
   return (
-    <Box px="95px">
-      <Heading fontFamily="Playfair Display" fontWeight="700" fontSize="32px">
+    <Box my="90px" px="95px">
+      <Heading
+        my="60px"
+        fontFamily="Playfair Display"
+        fontWeight="700"
+        fontSize="32px"
+      >
         View Job Vacancies
       </Heading>
 

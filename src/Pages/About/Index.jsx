@@ -1,7 +1,7 @@
 import { Box, Image, Link, Text, Flex } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
 import { useParams } from "react-router-dom";
-import Navbar from "components/layouts/Navbar";
+import Navbar from "components/layout/Navbar";
 import about from "assets/Images/About.png";
 import Profile from "./Profile";
 import Milestone from "./Milestone";

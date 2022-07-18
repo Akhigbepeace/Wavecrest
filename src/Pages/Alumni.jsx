@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Navbar from "components/layouts/Navbar";
+import Navbar from "components/layout/Navbar";
 import Footer from "Pages/Home/Footer";
 import FooterCopywright from "Pages/Home/FooterCopywright";
 

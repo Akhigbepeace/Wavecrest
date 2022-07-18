@@ -1,28 +1,26 @@
 import { Box, Image, Link, Text, Flex } from "@chakra-ui/react";
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
+import Navbar from "components/layout/Navbar";
 import { useParams } from "react-router-dom";
 import about from "assets/Images/About.png";
-// import postJobVacancies from "./postJobVacancies";
-// import viewJobVacancies from "./viewJobVacancies";
-
-import Navbar from "components/layouts/Navbar";
+import PostJobVacancies from "./postJobVacancies";
+import ViewJobVacancies from "./viewJobVacancies";
 import Footer from "Pages/Home/Footer";
 import FooterCopywright from "Pages/Home/FooterCopywright";
 
 const Career = () => {
   const { id } = useParams();
-  console.log("params", id);
 
   const menuLinks = [
     {
-      id: "viewJobVacancies",
-      linkTitle: "VIEW JOB VACANCIES",
-      content: <viewJobVacancies />,
-    },
-    {
       id: "postJobVacancies",
       linkTitle: "POST JOB VACANCIES",
-      content: <postJobVacancies />,
+      content: <PostJobVacancies />,
+    },
+    {
+      id: "viewJobVacancies",
+      linkTitle: "VIEW JOB VACANCIES",
+      content: <ViewJobVacancies />,
     },
   ];
 
@@ -30,9 +28,10 @@ const Career = () => {
     (menu) => menu.id.toLowerCase() === id.toLowerCase()
   );
 
-  const [activeLink, setActiveLink] = useState(profile || menuLinks[1]);
+  const [activeLink, setActiveLink] = useState(profile || menuLinks[0]);
+
   return (
-    <Fragment>
+    <Box>
       <Navbar />
 
       <Box>
@@ -90,11 +89,10 @@ const Career = () => {
 
           {activeLink.content}
         </Box>
-
-        <Footer />
-        <FooterCopywright />
       </Box>
-    </Fragment>
+      <Footer />
+      <FooterCopywright />
+    </Box>
   );
 };
 

@@ -7,11 +7,16 @@ import {
   Image,
   Select,
   Button,
+  Link,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
+import Navbar from "components/layout/Navbar";
+import admission from "assets/Images/Admission.png";
 import visa from "assets/Images/visa.png";
 import paypal from "assets/Images/paypal.png";
 import mastercard from "assets/Images/mastercard.png";
+import Footer from "./Home/Footer";
+import FooterCopywright from "./Home/FooterCopywright";
 
 const SupportUs = () => {
   const forms = [
@@ -64,6 +69,31 @@ const SupportUs = () => {
   ];
   return (
     <Fragment>
+      <Navbar />
+
+      <Box h="441px" w="100%" gridGap="68px" position="relative">
+        <Image src={admission} h="100%" w="100%" />
+
+        <Box
+          bg="rgba(0, 24, 71, 0.5)"
+          h="100%"
+          w="100%"
+          position="absolute"
+          bottom="0"
+        >
+          <Text
+            color="white"
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="60px"
+            textAlign="center"
+            mt="140px"
+          >
+            SUPPORT US
+          </Text>
+        </Box>
+      </Box>
+
       <Box px="91px">
         <Heading
           my="40px"
@@ -74,6 +104,30 @@ const SupportUs = () => {
         >
           Support Us
         </Heading>
+
+        <Flex flexDirection="column">
+          {forms.map((form, index) => {
+            return (
+              <Input
+                key={index}
+                type={form.fieldType}
+                placeholder={form.placeHolder}
+                variant={form.variant}
+                w="526px"
+                h="67px"
+                mb="10px"
+                bg="#EBEDEF"
+                _placeholder={{
+                  fontFamily: "Manrope, sans-serif",
+                  color: "#021D37",
+                  fontSize: "18px",
+                  lineHeight: "25px",
+                  fontWeight: "400",
+                }}
+              />
+            );
+          })}
+        </Flex>
 
         <Select
           placeholder="Programme"
@@ -104,30 +158,6 @@ const SupportUs = () => {
           })}
         </Select>
 
-        <Flex flexDirection="column">
-          {forms.map((form, index) => {
-            return (
-              <Input
-                key={index}
-                type={form.fieldType}
-                placeholder={form.placeHolder}
-                variant={form.variant}
-                w="526px"
-                h="67px"
-                mb="10px"
-                bg="#EBEDEF"
-                _placeholder={{
-                  fontFamily: "Manrope, sans-serif",
-                  color: "#021D37",
-                  fontSize: "18px",
-                  lineHeight: "25px",
-                  fontWeight: "400",
-                }}
-              />
-            );
-          })}
-        </Flex>
-
         <Box
           my="20px"
           ml="25px"
@@ -140,9 +170,10 @@ const SupportUs = () => {
             Fee for the programme appears here (e.g Subsidized fee for the
             programme is #189,000)
           </Text>
-          <Text color="#CD2026" textDecoration="underline">
+
+          <Link color="#CD2026" textDecoration="underline">
             would you like to pay for the whole fee of #464,000 instead ?
-          </Text>
+          </Link>
         </Box>
 
         <Box>
@@ -183,6 +214,9 @@ const SupportUs = () => {
           complete the registration
         </Text>
       </Box>
+
+      <Footer />
+      <FooterCopywright />
     </Fragment>
   );
 };

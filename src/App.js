@@ -12,6 +12,8 @@ import Contact from "Pages/Contact";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Career from "Pages/Career";
+import SupportUs from "Pages/SupportUs";
+import ApplyNow from "Pages/ApplyNow";
 
 function App() {
   const colors = {
@@ -26,7 +28,7 @@ function App() {
     body: "Open Sans",
   };
   const theme = extendTheme({ colors, fonts });
-  
+
   return (
     <ChakraProvider theme={theme}>
       <Router>
@@ -38,7 +40,10 @@ function App() {
             <Route exact path="/academics/:id" element={<Academics />} />
             <Route exact path="/blog" element={<Blog />} />
             <Route exact path="/alumni" element={<Alumni />} />
-            <Route exact path="/career" element={<Career />} />
+            <Route exact path="/career/:id" element={<Career />} />
+            <Route exact path="/support" element={<SupportUs />} />
+            <Route exact path="/apply" element={<ApplyNow />} />
+
             <Route exact path="/contact" element={<Contact />} />
           </Routes>
         </Fragment>

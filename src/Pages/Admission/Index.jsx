@@ -1,7 +1,7 @@
 import { Box, Image, Text, Flex, Link } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
 import { useParams } from "react-router-dom";
-import Navbar from "components/layouts/Navbar";
+import Navbar from "components/layout/Navbar";
 import admission from "assets/Images/Admission.png";
 import AdmissionRequirements from "Pages/Admission/AdmissionRequirements";
 import TuitionAndScholarship from "Pages/Admission/TuitionAndScholarship";
@@ -14,7 +14,6 @@ import FooterCopywright from "../Home/FooterCopywright";
 const Admission = () => {
   const { id } = useParams();
   console.log("params", id);
-
 
   const menuLinks = [
     {
@@ -82,23 +81,29 @@ const Admission = () => {
           {menuLinks.map((menuLink, index) => {
             const isActive = activeLink.linkTitle === menuLink.linkTitle;
             return (
-              <Flex key={index}>
+              <Flex
+                key={index}
+                bg={isActive ? "#021d37" : "#fff"}
+                border="3px solid #021d37"
+                w="242px"
+                h="74px"
+                m="15px 0"
+                textAlign="center"
+                alignItems="center"
+                justifyContent="center"
+                onClick={() => setActiveLink(menuLink)}
+                cursor="pointer"
+                _hover={{
+                  bg: isActive ? "#021d37" : "#F5F5F5",
+                }}
+              >
                 <Link
-                  m="15px 0"
                   fontFamily="Manrope"
-                  bg={isActive ? "#021d37" : "#fff"}
                   color={isActive ? "#EBEDEF" : "#021d37"}
                   fontWeight="700"
                   fontSize="20px"
-                  textAlign="center"
-                  alignItems="center"
-                  border="3px solid #021d37"
-                  w="242px"
-                  h="74px"
-                  onClick={() => setActiveLink(menuLink)}
                   _hover={{
                     textDecoration: "none",
-                    bg: isActive ? "#021d37" : "#F5F5F5",
                   }}
                 >
                   {menuLink.linkTitle}

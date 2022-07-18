@@ -73,6 +73,7 @@ const ApplyOnline = () => {
                 type={form.fieldType}
                 placeholder={form.placeHolder}
                 variant={form.variant}
+                display="block"
                 w="526px"
                 h="67px"
                 mb="10px"
@@ -91,6 +92,8 @@ const ApplyOnline = () => {
           <Textarea
             placeholder="Extra Notes"
             variant="filled"
+            w="526px"
+            h="80px"
             _placeholder={{
               fontFamily: "Manrope, sans-serif",
               color: "#021D37",
