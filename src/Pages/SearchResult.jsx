@@ -33,9 +33,9 @@ const SearchResult = () => {
             textAlign="center"
             mt="140px"
           >
-            <Text>Tuition</Text>
-            <Text>Search Results</Text>
+            Search Result
           </Text>
+          <Text>Tuition</Text>
         </Box>
       </Box>
 
