@@ -8,7 +8,7 @@ import {
   useBoolean,
 } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Logo from "assets/Images/WC-LOGO-july.png";
 import Linked from "assets/Images/linked.png";
 import Whatapps from "assets/Images/whatsapp.png";
@@ -18,6 +18,8 @@ import Instagram from "assets/Images/Instagram.png";
 import Search from "assets/Images/Search.png";
 
 const Navbar = () => {
+  const loc = useLocation();
+  console.log("loc:", loc.pathname.includes("aca"));
   const socials = [
     {
       icon: Linked,
@@ -54,7 +56,7 @@ const Navbar = () => {
   const navLinks = [
     {
       name: "HOME",
-      to: "/",
+      to: "/home",
       NestedLinks: [],
     },
     {
@@ -63,16 +65,15 @@ const Navbar = () => {
       NestedLinks: [
         {
           name: "PROFILE",
-          to: "/about/profile"
+          to: "/about/profile",
         },
         {
           name: "MILESTONE",
-          to: "/about/milestone"
-          
+          to: "/about/milestone",
         },
         {
           name: "OUR TEAM",
-          to: "/about/ourTeam"
+          to: "/about/ourTeam",
         },
       ],
     },
@@ -156,7 +157,12 @@ const Navbar = () => {
   return (
     <Fragment>
       <Box zIndex="2" w="100%" mt="0">
-        <Flex alignItems="center" bg="#FFF" justifyContent="space-between" p="29px 91px">
+        <Flex
+          alignItems="center"
+          bg="#FFF"
+          justifyContent="space-between"
+          p="29px 91px"
+        >
           <Link to="/" as={NavLink}>
             <Image w="238px" h="52px" src={Logo} />
           </Link>
@@ -168,7 +174,12 @@ const Navbar = () => {
 
             {socials.map((social, index) => {
               return (
-                <Link key={index} to={social.to} target={social.target} rel={social.rel}>
+                <Link
+                  key={index}
+                  to={social.to}
+                  target={social.target}
+                  rel={social.rel}
+                >
                   <Image src={social.icon} w="34px" h="34px" ml="15px" />
                 </Link>
               );
@@ -189,7 +200,8 @@ const Navbar = () => {
                   borderBottom="6px solid transparent"
                   position="relative"
                   borderColor={
-                    currentLink === index && showNestedLinks
+                    loc.pathname.includes(navLink.to) ||
+                    (currentLink === index && showNestedLinks)
                       ? "#fff"
                       : "transparent"
                   }

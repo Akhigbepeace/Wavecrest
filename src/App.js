@@ -1,5 +1,10 @@
 import React, { Fragment } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import Home from "Pages/Home/Index";
 import About from "Pages/About/Index";
@@ -25,13 +30,14 @@ function App() {
     body: "Open Sans",
   };
   const theme = extendTheme({ colors, fonts });
-  
+
   return (
     <ChakraProvider theme={theme}>
       <Router>
         <Fragment>
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/" element={<Navigate to="/home" />} />
+            <Route exact path="/home" element={<Home />} />
             <Route exact path="/about/:id" element={<About />} />
             <Route exact path="/admission/:id" element={<Admission />} />
             <Route exact path="/academics/:id" element={<Academics />} />

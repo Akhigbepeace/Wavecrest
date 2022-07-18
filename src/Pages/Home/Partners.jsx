@@ -21,10 +21,11 @@ const settings = {
   fade: false,
   infinite: true,
   autoplay: true,
-  speed: 1000,
-  autoplaySpeed: 1500,
+  speed: 8000,
+  autoplaySpeed: 0,
   slidesToShow: 5,
   slidesToScroll: 1,
+  cssEase: "linear",
 };
 export default function Carousel() {
   const [slider, setSlider] = React.useState();
@@ -55,7 +56,7 @@ export default function Carousel() {
         zIndex={2}
         onClick={() => slider?.slickPrev()}
       >
-        <FaChevronLeft size="30px"  />
+        <FaChevronLeft size="30px" />
       </Link>
 
       <Link
@@ -65,7 +66,7 @@ export default function Carousel() {
         zIndex={2}
         onClick={() => slider?.slickNext()}
       >
-        <FaChevronRight size="30px"  />
+        <FaChevronRight size="30px" />
       </Link>
 
       <Flex
