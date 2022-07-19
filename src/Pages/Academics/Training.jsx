@@ -1,7 +1,9 @@
 import React from "react";
 import { FaFileDownload } from "react-icons/fa";
 import cth from "assets/Images/cth.png";
-import training2 from "assets/Images/train.png";
+import training1 from "assets/Images/training1.png";
+import training2 from "assets/Images/training2.png";
+import training3 from "assets/Images/training3.png";
 import {
   Box,
   Button,
@@ -16,7 +18,6 @@ const Training = () => {
   const trainings = [
     {
       background: "#EBEDEF",
-
       trainingsTitle: "Confederation of Tourism and Hospitality",
       trainingsImage: cth,
       trainingsText:
@@ -26,19 +27,18 @@ const Training = () => {
       button: "APPLY NOW",
     },
     {
-    background: "#FFF",
-
+      background: "#FFF",
       trainingsTitle: "Hospitality Training Programs",
-      trainingsImage: training2,
+      trainingsImage: training1,
       trainingsText:
         "Hospitality Training Programmes (HTP) is the training and consulting division geared towards industry managers, supervisors and operatives. This was formed to provide specialist human resource training, knowledge and advice to assist industry partners. The training is geared towards members of staff involved with providing service. In the training emphasis is placed on details that matter, customer care and improving standards to exceed expectations.",
       downloadBrochure: "Download HTP Brochure",
       button: "REGISTER",
     },
     {
-    background: "#EBEDEF",
+      background: "#EBEDEF",
       trainingsTitle: "Culinary Courses",
-      trainingsImage: cth,
+      trainingsImage: training2,
       trainingsText:
         "Are you new to the world of Professional cookery or are you on a quest to develop you existing skills? Our culinary programs are designed to provide a step by step introduction to the fundamentals of cookery in the following areas – National and International dishes, yeast products, cakes & icing, pastries, finger foods, mixed drinks and lots more. Through a combined delivery process of demonstrations and hands-on sessions, you will be exposed to a world of eclectic fusions designed to delight your family and friends. ",
       downloadBrochure: "Download Culinary Course Brochure",
@@ -47,7 +47,7 @@ const Training = () => {
     {
       background: "#FFF",
       trainingsTitle: "National Skill Acquisition",
-      trainingsImage: training2,
+      trainingsImage: training3,
       trainingsText:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       downloadBrochure: "Download NSQ Brochure",
@@ -65,13 +65,20 @@ const Training = () => {
               fontWeight="700"
               fontSize="32px"
               color="#021D37"
+              m="0 auto"
+              mb="36px"
+              w="1247px"
             >
               {training.trainingsTitle}
             </Heading>
 
-            <Flex mt="24px" alignItems="center">
-              <Box bg="#FFF" borderRadius="3px" w="100%" h="100%" mr="50px" p="170px">
-                <Image src={training.trainingsImage} align="center"/>
+            <Flex mt="24px" alignItems="center" m="0 auto" w="1200px">
+              <Box bg="#FFF" borderRadius="3px" mr="50px">
+                <Image
+                  src={training.trainingsImage}
+                  maxWidth="none"
+                  align="center"
+                />
               </Box>
 
               <Box>
@@ -116,7 +123,7 @@ const Training = () => {
                   w="208px"
                   h="52px"
                   _hover={{
-                    bg: "#",
+                    bg: "#20E1B",
                   }}
                 >
                   {training.button}
