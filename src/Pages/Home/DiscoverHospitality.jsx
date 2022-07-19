@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Link, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Grid, Link, Text, Image, Heading } from "@chakra-ui/react";
 import React from "react";
 import discoverpic1 from "assets/Images/discoverpic 1.png";
 import discoverpic2 from "assets/Images/discoverpic 2.png";
@@ -13,10 +13,10 @@ const DiscoverHospitality = () => {
       my="50px"
       px="91px"
     >
-      <Box mr="28px" >
-        <Text fontSize="32px" fontWeight="700" fontFamily="Playfair Display">
+      <Box mr="28px" w="500px">
+        <Heading fontSize="32px" fontWeight="700" fontFamily="Playfair Display">
           NIGERIA'S PREMIERE HOSPITALITY MONOTECHNIC
-        </Text>
+        </Heading>
         <Text
           m="22px 0"
           fontSize="18px"
@@ -25,9 +25,9 @@ const DiscoverHospitality = () => {
           textAlign="left"
         >
           Wavecrest College of Hospitality is consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore r magna a h j aliqua. Ut enim
-          ad minim veniam, quis nostrud e exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          do eiusmod tempor incididunt ut labore et dolore r magna a h j aliqua.
+          Ut enim ad minim veniam, quis nostrud e exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur.
         </Text>
@@ -51,7 +51,7 @@ const DiscoverHospitality = () => {
         </Link>
       </Box>
 
-      <Grid gridTemplateColumns="1fr 1fr"  m="50px 0">
+      <Grid gridTemplateColumns="1fr 1fr" m="50px 0">
         <Box w="320px" height="214px">
           <Image
             src={discoverpic1}

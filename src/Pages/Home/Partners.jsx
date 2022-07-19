@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, useBreakpointValue, Image } from "@chakra-ui/react";
+import { Box, useBreakpointValue, Image, Heading } from "@chakra-ui/react";
 import { Flex, Text, Link } from "@chakra-ui/react";
 import Slider from "react-slick";
 import Nestle from "assets/Images/Nestle.png";
@@ -20,10 +20,11 @@ const settings = {
   fade: false,
   infinite: true,
   autoplay: true,
-  speed: 1000,
-  autoplaySpeed: 1500,
+  speed: 8000,
+  autoplaySpeed: 0,
   slidesToShow: 5,
   slidesToScroll: 1,
+  cssEase: "linear",
 };
 export default function Carousel() {
   const [slider, setSlider] = React.useState();
@@ -53,9 +54,7 @@ export default function Carousel() {
         top={top}
         zIndex={2}
         onClick={() => slider?.slickPrev()}
-      >
-        {/* <FaChevronLeft size="30px"  /> */}
-      </Link>
+      ></Link>
 
       <Link
         position="absolute"
@@ -63,9 +62,7 @@ export default function Carousel() {
         top={top}
         zIndex={2}
         onClick={() => slider?.slickNext()}
-      >
-        {/* <FaChevronRight size="30px"  /> */}
-      </Link>
+      ></Link>
 
       <Flex
         flexDirection="column"
@@ -73,7 +70,7 @@ export default function Carousel() {
         alignItems="center"
         textAlign="center"
       >
-        <Text
+        <Heading
           position="absolute"
           fontFamily="Dancing Script, cursive"
           fontWeight="400"
@@ -81,7 +78,8 @@ export default function Carousel() {
           color="rgba(3, 29, 56, 0.06)"
         >
           Work with us
-        </Text>
+        </Heading>
+
         <Text
           position="relative"
           top="15px"
