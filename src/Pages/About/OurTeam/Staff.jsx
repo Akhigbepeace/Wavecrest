@@ -1,6 +1,6 @@
 import React from "react";
 import provost from "assets/Images/provost.png";
-import deputyProvost from "assets/Images/deputyProvost.png";
+import deputyProvost from "assets/Images/deputyprovost.png";
 import bursar from "assets/Images/bursar.png";
 import registrar from "assets/Images/registrar.png";
 import { Box, Grid, Heading, Image, Flex, Text } from "@chakra-ui/react";
