@@ -39,6 +39,38 @@ const Contact = () => {
       placeHolder: "Subject",
     },
   ];
+  const enquires = [
+    {
+      name: "Admission:",
+      phoneNumber: "Phone: +234 909 685 6606",
+      email: "Email: info@wavecrest.edu.ng",
+    },
+    {
+      name: "Training:",
+      phoneNumber: "Phone: +234 909 685 6606",
+      email: "Email: info@wavecrest.edu.ng",
+    },
+    {
+      name: "General:",
+      phoneNumber: "Phone: +234 909 685 6606",
+      email: "Email: info@wavecrest.edu.ng",
+    },
+    {
+      name: "Partnership:",
+      phoneNumber: "Phone: +234 909 685 6606",
+      email: "Email: info@wavecrest.edu.ng",
+    },
+    {
+      name: "Front Desk:",
+      phoneNumber: "Phone: +234 909 685 6606",
+      email: "Email: info@wavecrest.edu.ng",
+    },
+    {
+      name: "Job Placement:",
+      phoneNumber: "Phone: +234 909 685 6606",
+      email: "Email: info@wavecrest.edu.ng",
+    },
+  ];
 
   return (
     <Fragment>
@@ -149,8 +181,9 @@ const Contact = () => {
             </Button>
           </Flex>
 
-          <Flex flexDirection="column">
+          <Grid flexDirection="column">
             <Heading mb="10px">Visit Us</Heading>
+
             <Box>
               <iframe
                 title="Wavecrest College of Hospitality"
@@ -179,91 +212,32 @@ const Contact = () => {
             </Box>
 
             <Grid gridTemplateColumns="1fr 1fr" mt="30px">
-              <Flex flexDirection="column" mb="30px">
-                <Heading
-                  mb="6px"
-                  fontFamily="Playfair Display, serif"
-                  fontWeight="700"
-                  fontSize="22px"
-                  color="#021D37"
-                >
-                  Admission:
-                </Heading>
-                <Box
-                  fontFamily="Manrope, sans-serif"
-                  fontWeight="400"
-                  fontSize="18px"
-                  color="#021D37"
-                >
-                  <Text>Phone: +234 909 685 6606</Text>
-                  <Text>Email: info@wavecrest.edu.ng</Text>
-                </Box>
-              </Flex>
-
-              <Flex flexDirection="column" mb="30px">
-                <Heading
-                  fontFamily="Playfair Display, serif"
-                  fontWeight="700"
-                  fontSize="22px"
-                  color="#021D37"
-                  mb="6px"
-                >
-                  Training:
-                </Heading>
-                <Box
-                  fontFamily="Manrope, sans-serif"
-                  fontWeight="400"
-                  fontSize="18px"
-                  color="#021D37"
-                >
-                  <Text>Phone: +234 909 685 6606</Text>
-                  <Text>Email: info@wavecrest.edu.ng</Text>
-                </Box>
-              </Flex>
-
-              <Flex flexDirection="column" mb="30px">
-                <Heading
-                  mb="6px"
-                  fontFamily="Playfair Display, serif"
-                  fontWeight="700"
-                  fontSize="22px"
-                  color="#021D37"
-                >
-                  General:
-                </Heading>
-                <Box
-                  fontFamily="Manrope, sans-serif"
-                  fontWeight="400"
-                  fontSize="18px"
-                  color="#021D37"
-                >
-                  <Text>Phone: +234 909 685 6606</Text>
-                  <Text>Email: info@wavecrest.edu.ng</Text>
-                </Box>
-              </Flex>
-
-              <Flex flexDirection="column" mb="30px">
-                <Heading
-                  fontFamily="Playfair Display, serif"
-                  fontWeight="700"
-                  fontSize="22px"
-                  color="#021D37"
-                  mb="6px"
-                >
-                  Partnership:
-                </Heading>
-                <Box
-                  fontFamily="Manrope, sans-serif"
-                  fontWeight="400"
-                  fontSize="18px"
-                  color="#021D37"
-                >
-                  <Text>Phone: +234 909 685 6606</Text>
-                  <Text>Email: info@wavecrest.edu.ng</Text>
-                </Box>
-              </Flex>
+              {enquires.map((enquiry) => {
+                return (
+                  <Flex flexDirection="column" mb="30px">
+                    <Heading
+                      mb="6px"
+                      fontFamily="Playfair Display, serif"
+                      fontWeight="700"
+                      fontSize="22px"
+                      color="#021D37"
+                    >
+                      {enquiry.name}
+                    </Heading>
+                    <Box
+                      fontFamily="Manrope, sans-serif"
+                      fontWeight="400"
+                      fontSize="18px"
+                      color="#021D37"
+                    >
+                      <Text> {enquiry.phoneNumber}</Text>
+                      <Text> {enquiry.email}</Text>
+                    </Box>
+                  </Flex>
+                );
+              })}
             </Grid>
-          </Flex>
+          </Grid>
         </Grid>
 
         <Box>
