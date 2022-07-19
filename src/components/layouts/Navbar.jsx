@@ -9,19 +9,20 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "assets/Images/WC-LOGO-july.png";
+import Logo from "assets/Images/logo_wavecrest.svg";
 import Linked from "assets/Images/linked.png";
 import Whatapps from "assets/Images/whatsapp.png";
-import Facebook from "assets/Images/facebook.png";
-import Twitter from "assets/Images/Twitter.png";
-import Instagram from "assets/Images/Instagram.png";
-import Search from "assets/Images/Search.png";
+import Facebook from "assets/Images/facebook.svg";
+import Twitter from "assets/Images/Twitter.svg";
+import Instagram from "assets/Images/ig.svg";
+import Search from "assets/Images/search.svg";
 
 const Navbar = () => {
   const socials = [
     {
       icon: Linked,
       to: "https://www.linkedin.com/company/wavecrest-college-of-hospitality/",
+      as: {NavLink},
       target: "_blank",
       rel: "noreferrer",
     },
@@ -63,16 +64,15 @@ const Navbar = () => {
       NestedLinks: [
         {
           name: "PROFILE",
-          to: "/about/profile"
+          to: "/about/profile",
         },
         {
           name: "MILESTONE",
-          to: "/about/milestone"
-          
+          to: "/about/milestone",
         },
         {
           name: "OUR TEAM",
-          to: "/about/ourTeam"
+          to: "/about/ourTeam",
         },
       ],
     },
@@ -128,15 +128,16 @@ const Navbar = () => {
         },
       ],
     },
-    {
-      name: "BLOG",
-      to: "/blog",
-      NestedLinks: [],
-    },
+
     {
       name: "ALUMNI",
       NestedLinks: [],
       to: "/alumni",
+    },
+    {
+      name: "BLOG",
+      to: "/blog",
+      NestedLinks: [],
     },
     {
       name: "CONTACT US",
@@ -156,7 +157,12 @@ const Navbar = () => {
   return (
     <Fragment>
       <Box zIndex="2" w="100%" mt="0">
-        <Flex alignItems="center" bg="#FFF" justifyContent="space-between" p="29px 91px">
+        <Flex
+          alignItems="center"
+          bg="#FFF"
+          justifyContent="space-between"
+          p="29px 91px"
+        >
           <Link to="/" as={NavLink}>
             <Image w="238px" h="52px" src={Logo} />
           </Link>
@@ -168,7 +174,12 @@ const Navbar = () => {
 
             {socials.map((social, index) => {
               return (
-                <Link key={index} to={social.to} target={social.target} rel={social.rel}>
+                <Link
+                  key={index}
+                  to={social.to}
+                  target={social.target}
+                  rel={social.rel}
+                >
                   <Image src={social.icon} w="34px" h="34px" ml="15px" />
                 </Link>
               );

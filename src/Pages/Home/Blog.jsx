@@ -101,7 +101,6 @@ export default function CaptionCarousel() {
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((card, index) => (
           <Box key={index} h={"446px"} position="relative" bg="#DDD">
-
             <Flex
               flexDirection="row"
               height="100%"
@@ -136,6 +135,7 @@ export default function CaptionCarousel() {
                   fontSize="16px"
                   fontWeight="400"
                   lineHeight="22px"
+                  textAlign="center"
                   mt="22px"
                   w="638px"
                 >
@@ -155,17 +155,18 @@ export default function CaptionCarousel() {
 
                 <Link
                   href="#"
-                  bg="#021d37"
-                  p="10px 25px"
-                  mt="30px"
+                  background="#021d37"
+                  w="168px"
+                  p="10px 26px"
                   color="#fff"
-                  fontFamily="Manrope"
                   fontSize="20px"
-                  fontWeight="700"
                   textDecoration="none"
-                  borderRadius="3px"
-                  w="208px"
                   textAlign="center"
+                  mt="20px"
+                  textTransform="uppercase"
+                  borderRadius="3px"
+                  fontFamily="Manrope"
+                  h="52px"
                   _hover={{
                     textDecoration: "none",
                     color: "white",

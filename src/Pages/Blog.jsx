@@ -15,7 +15,7 @@ import React, { Fragment } from "react";
 import blog from "assets/Images/Blog.png";
 import blogPost from "assets/Images/blogpost.png";
 import blogPost2 from "assets/Images/aboutus.png";
-import searchImg from "assets/Images/Search.png";
+import searchImg from "assets/Images/search.svg";
 import Navbar from "components/layouts/Navbar";
 import Footer from "Pages/Home/Footer";
 import FooterCopywright from "Pages/Home/FooterCopywright";

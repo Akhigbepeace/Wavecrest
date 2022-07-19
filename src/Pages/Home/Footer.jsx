@@ -14,10 +14,10 @@ import {
 import React from "react";
 import logo from "assets/Images/WC-LOGO-july.png";
 import linked from "assets/Images/linked.png";
-import twitter from "assets/Images/Twitter.png";
-import facebook from "assets/Images/facebook.png";
+import twitter from "assets/Images/Twitter.svg";
+import facebook from "assets/Images/facebook.svg";
 import whatsapp from "assets/Images/whatsapp.png";
-import Instagram from "assets/Images/Instagram.png";
+import Instagram from "assets/Images/ig.svg";
 
 const Footer = () => {
   return (
