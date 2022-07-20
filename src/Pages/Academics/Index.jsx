@@ -5,7 +5,6 @@ import Navbar from "components/layouts/Navbar";
 import academics from "assets/Images/academics.png";
 import Programmes from "Pages/Academics/Programmes";
 import Training from "Pages/Academics/Training";
-import JobPlacement from "Pages/Academics/JobPlacement";
 import Intership from "Pages/Academics/Internship";
 import NYSC from "Pages/Academics/NYSC";
 import Footer from "../Home/Footer";
@@ -26,11 +25,6 @@ const Admission = () => {
       content: <Training />,
     },
     {
-      id: "jobPlacement",
-      linkTitle: "JOB PLACEMENT",
-      content: <JobPlacement />,
-    },
-    {
       id: "internship",
       linkTitle: "INTERNSHIP",
       content: <Intership />,
@@ -45,7 +39,6 @@ const Admission = () => {
   const profile = menuLinks.find(
     (menu) => menu.id.toLowerCase() === id.toLowerCase()
   );
-
 
   const [activeLink, setActiveLink] = useState(profile || menuLinks[0]);
 
@@ -81,25 +74,29 @@ const Admission = () => {
           {menuLinks.map((menuLink, index) => {
             const isActive = activeLink.linkTitle === menuLink.linkTitle;
             return (
-              <Flex key={index}>
+              <Flex
+                key={index}
+                bg={isActive ? "#021d37" : "#fff"}
+                border="3px solid #021d37"
+                w="242px"
+                h="74px"
+                m="15px 0"
+                textAlign="center"
+                alignItems="center"
+                justifyContent="center"
+                onClick={() => setActiveLink(menuLink)}
+                cursor="pointer"
+                _hover={{
+                  bg: isActive ? "#021d37" : "#F5F5F5",
+                }}
+              >
                 <Link
-                  m="15px 0"
                   fontFamily="Manrope"
-                  bg={isActive ? "#021d37" : "#fff"}
                   color={isActive ? "#EBEDEF" : "#021d37"}
                   fontWeight="700"
                   fontSize="20px"
-                  textAlign="center"
-                  alignItems="center"
-                  justifySelf="center"
-                  border="3px solid #021d37"
-                  p="auto 0"
-                  w="242px"
-                  h="74px"
-                  onClick={() => setActiveLink(menuLink)}
                   _hover={{
                     textDecoration: "none",
-                    bg: isActive ? "#021d37" : "#F5F5F5",
                   }}
                 >
                   {menuLink.linkTitle}
