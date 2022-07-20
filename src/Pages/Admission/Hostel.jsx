@@ -72,7 +72,7 @@ const ApplyOnline = () => {
           </Box>
           <Image
             src={aboutus}
-            w="580px"
+            w="323px"
             h="323px"
             objectFit="cover"
             borderRadius="3px"
@@ -86,7 +86,7 @@ const ApplyOnline = () => {
               <Image
                 src={image.hotelPic}
                 w="309px"
-                h="414px"
+                h="309px"
                 objectFit="cover"
               />
             );
