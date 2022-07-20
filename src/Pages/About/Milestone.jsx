@@ -112,7 +112,7 @@ const Milestone = () => {
               <Flex key={index} flexDirection="column" alignItems="baseline">
                 <Flex alignItems="baseline" mb="-8px">
                   <Box
-                    bg="#EBEDEF"
+                    bg="#021D37"
                     w="20px"
                     h="20px"
                     ml="-9px"

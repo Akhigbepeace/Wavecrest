@@ -1,11 +1,11 @@
 import { Box, Image, Link, Text, Flex } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
 import { useParams } from "react-router-dom";
-import about from "assets/Images/About.png";
-import Profile from "Pages/About/Profile";
-import Milestone from "Pages/About/Milestone";
-import OurTeam from "Pages/About/OurTeam";
 import Navbar from "components/layouts/Navbar";
+import about from "assets/Images/About.png";
+import Profile from "./Profile";
+import Milestone from "./Milestone";
+import OurTeam from "./Our Team";
 import Footer from "Pages/Home/Footer";
 import FooterCopywright from "Pages/Home/FooterCopywright";
 
@@ -59,7 +59,7 @@ const About = () => {
               textAlign="center"
               mt="140px"
             >
-              ABOUT US
+              ABOUT
             </Text>
           </Box>
         </Box>
@@ -80,7 +80,7 @@ const About = () => {
                   textAlign="center"
                   border="3px solid #021d37"
                   lineHeight="40px"
-                  p="28px 97px"
+                  p="20px 97px"
                   onClick={() => setActiveLink(menuLink)}
                   _hover={{
                     textDecoration: "none",
