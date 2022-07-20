@@ -1,9 +1,9 @@
 import { Box, Image, Link, Text, Flex } from "@chakra-ui/react";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "components/layouts/Navbar";
 import about from "assets/Images/About.png";
-import Profile from "./Profile";
+import Profile from "./Profile/Index";
 import Milestone from "./Milestone";
 import OurTeam from "./Our Team";
 import Footer from "Pages/Home/Footer";
@@ -11,7 +11,8 @@ import FooterCopywright from "Pages/Home/FooterCopywright";
 
 const About = () => {
   const { id } = useParams();
-  console.log("params", id);
+
+  const [currentId, setCurrentId] = useState(id);
 
   const menuLinks = [
     {
@@ -30,12 +31,20 @@ const About = () => {
       content: <OurTeam />,
     },
   ];
+  const [activeLink, setActiveLink] = useState(menuLinks[0]);
 
-  const profile = menuLinks.find(
-    (menu) => menu.id.toLowerCase() === id.toLowerCase()
-  );
+  useEffect(() => {
+    const profile = menuLinks.find(
+      (menu) => menu.id.toLowerCase() === currentId.toLowerCase()
+    );
 
-  const [activeLink, setActiveLink] = useState(profile || menuLinks[0]);
+    setActiveLink(profile);
+  }, [currentId, menuLinks]);
+
+  useEffect(() => {
+    setCurrentId(id);
+  }, [id]);
+
   return (
     <Fragment>
       <Navbar />
@@ -68,6 +77,7 @@ const About = () => {
           <Flex alignItems="center" justifyContent="center">
             {menuLinks.map((menuLink, index) => {
               const isActive = activeLink.linkTitle === menuLink.linkTitle;
+              
               return (
                 <Link
                   key={index}
@@ -81,7 +91,7 @@ const About = () => {
                   border="3px solid #021d37"
                   lineHeight="40px"
                   p="20px 97px"
-                  onClick={() => setActiveLink(menuLink)}
+                  onClick={() => setCurrentId(menuLink.id)}
                   _hover={{
                     textDecoration: "none",
                     bg: isActive ? "#021d37" : "#F5F5F5",
