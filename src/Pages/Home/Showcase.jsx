@@ -1,4 +1,4 @@
-import { Box, Grid, Image, Flex, Text } from "@chakra-ui/react";
+import { Box, Grid, Image, Flex, Text, Heading } from "@chakra-ui/react";
 import React from "react";
 import ReactPlayer from "react-player";
 import showcase1 from "assets/Images/Showcase1.png";
@@ -24,7 +24,7 @@ const showcaseGallery = [
 
 const Showcase = () => {
   return (
-    <Grid templateColumns="1fr 1fr" gap="8px" >
+    <Grid templateColumns="1fr 1fr" gap="8px">
       <Box h="100%" position="relative" zIndex="0">
         <ReactPlayer
           url={waveVid}
@@ -47,20 +47,21 @@ const Showcase = () => {
           position="absolute"
           w="100%"
           h="100%"
-    
         >
-          <Text
+          <Heading
             fontSize="60px"
             fontFamily="Dancing Script, cursive"
             fontWeight="400"
           >
             Study In
-          </Text>
+          </Heading>
+
           <Text
             fontFamily="Playfair Display"
             fontSize="35px"
             fontWeight="700"
             lineHeight="43px"
+            w="600px"
           >
             NIGERIA'S PREMIERE HOSPITALITY MONOTECHNIC
           </Text>
