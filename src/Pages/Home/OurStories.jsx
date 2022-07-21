@@ -148,7 +148,7 @@ export default function CaptionCarousel() {
                   {card.text}
                 </Text>
                 <Link
-                  href="#"
+                  href="/blog"
                   background="#FFF"
                   w="168px"
                   p="10px 26px"
