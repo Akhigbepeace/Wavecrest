@@ -115,10 +115,7 @@ const Navbar = () => {
           name: "TRAINING",
           to: "/academics/training",
         },
-        {
-          name: "JOB PLACEMENT",
-          to: "/academics/jobPlacement",
-        },
+
         {
           name: "INTERNSHIP",
           to: "/academics/internship",
