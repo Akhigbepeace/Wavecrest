@@ -20,7 +20,7 @@ import searchIcon from "assets/Images/search.svg";
 
 const Navbar = () => {
   const loc = useLocation();
-
+  const [showSearchBar, setShowSearchBar] = useBoolean();
   const socials = [
     {
       icon: Linked,
@@ -193,7 +193,14 @@ const Navbar = () => {
   });
 
   return (
-    <Box zIndex="4" w="100%" mt="0" position="sticky" top="0">
+    <Box
+      zIndex="4"
+      w="100%"
+      mt="0"
+      position="sticky"
+      top="0"
+      transition="all 1s ease"
+    >
       <Flex
         alignItems="center"
         bg="#FFF"
@@ -204,19 +211,32 @@ const Navbar = () => {
           <Image w="238px" h="52px" src={Logo} />
         </Link>
 
-        <Stack direction="row" alignItems="center">
-          <Link
-            href="#!"
-            rel="noreferrer"
-            onClick={() => {
-              <Box>
-                <Input variant="filled" type="name" w="278px" h="47px" />
-                <Image src={searchIcon} w="20px" h="20px" />
-              </Box>;
+        <Stack
+          direction="row"
+          alignItems="center"
+          w="100%"
+          justifyContent="flex-end"
+          transition="all 2s linear 1s"
+        >
+          <Input
+            visibility={showSearchBar ? "block" : "hidden"}
+            bg="#EBEDEF"
+            transition="all 2s ease"
+            w={showSearchBar ? "300px" : "0px"}
+            onClick={() => setShowSearchBar.toggle()}
+          />
+
+          <Image
+            display={!showSearchBar ? "block" : "none"}
+            src={searchIcon}
+            w="20px"
+            h="20px"
+            mr="18px"
+            _hover={{
+              cursor: "pointer",
             }}
-          >
-            <Image src={searchIcon} w="20px" h="20px" mr="18px" />
-          </Link>
+            onClick={() => setShowSearchBar.on()}
+          />
 
           {socials.map((social, index) => {
             return (
