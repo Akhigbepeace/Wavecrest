@@ -88,13 +88,14 @@ const Navbar = () => {
           to: "/admission/tuitionAndScholarship",
         },
         {
-          name: "HOSTEL",
-          to: "/admission/hostel",
-        },
-        {
           name: "APPLY ONLINE",
           to: "/admission/applyOnline",
         },
+        {
+          name: "HOSTEL",
+          to: "/admission/hostel",
+        },
+
         {
           name: "FAQs",
           to: "/admission/faqs",

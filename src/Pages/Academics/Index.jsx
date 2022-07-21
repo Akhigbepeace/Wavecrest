@@ -1,5 +1,5 @@
 import { Box, Image, Text, Flex, Link } from "@chakra-ui/react";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect, useMemo } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "components/layouts/Navbar";
 import academics from "assets/Images/academics.png";
@@ -12,6 +12,8 @@ import FooterCopywright from "../Home/FooterCopywright";
 
 const Admission = () => {
   const { id } = useParams();
+
+  const [currentId, setCurrentId] = useState(id);
 
   const menuLinks = [
     {
@@ -36,11 +38,19 @@ const Admission = () => {
     },
   ];
 
-  const profile = menuLinks.find(
-    (menu) => menu.id.toLowerCase() === id.toLowerCase()
-  );
+  const [activeLink, setActiveLink] = useState(menuLinks[0]);
 
-  const [activeLink, setActiveLink] = useState(profile || menuLinks[0]);
+  useEffect(() => {
+    const profile = menuLinks.find(
+      (menu) => menu.id.toLowerCase() === currentId.toLowerCase()
+    );
+
+    setActiveLink(profile);
+  }, [currentId, menuLinks]);
+
+  useEffect(() => {
+    setCurrentId(id);
+  }, [id]);
 
   return (
     <Fragment>
@@ -73,6 +83,7 @@ const Admission = () => {
         <Flex alignItems="center" justifyContent="center">
           {menuLinks.map((menuLink, index) => {
             const isActive = activeLink.linkTitle === menuLink.linkTitle;
+
             return (
               <Flex
                 key={index}
@@ -84,7 +95,7 @@ const Admission = () => {
                 textAlign="center"
                 alignItems="center"
                 justifyContent="center"
-                onClick={() => setActiveLink(menuLink)}
+                onClick={() => setCurrentId(menuLink.id)}
                 cursor="pointer"
                 _hover={{
                   bg: isActive ? "#021d37" : "#F5F5F5",

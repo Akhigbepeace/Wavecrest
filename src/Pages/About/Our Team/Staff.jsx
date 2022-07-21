@@ -27,6 +27,76 @@ const Management = () => {
       name: "Edith Chukwu",
       post: "Bursar",
     },
+    {
+      image: registrar,
+      name: "Edith Chukwu",
+      post: "Bursar",
+    },
+    {
+      image: registrar,
+      name: "Edith Chukwu",
+      post: "Bursar",
+    },
+    {
+      image: registrar,
+      name: "Edith Chukwu",
+      post: "Bursar",
+    },
+    {
+      image: registrar,
+      name: "Edith Chukwu",
+      post: "Bursar",
+    },
+    {
+      image: registrar,
+      name: "Edith Chukwu",
+      post: "Bursar",
+    },
+    {
+      image: registrar,
+      name: "Edith Chukwu",
+      post: "Bursar",
+    },
+    {
+      image: registrar,
+      name: "Edith Chukwu",
+      post: "Bursar",
+    },
+    {
+      image: registrar,
+      name: "Edith Chukwu",
+      post: "Bursar",
+    },
+    {
+      image: registrar,
+      name: "Edith Chukwu",
+      post: "Bursar",
+    },
+    {
+      image: registrar,
+      name: "Edith Chukwu",
+      post: "Bursar",
+    },
+    {
+      image: registrar,
+      name: "Edith Chukwu",
+      post: "Bursar",
+    },
+    {
+      image: registrar,
+      name: "Edith Chukwu",
+      post: "Bursar",
+    },
+    {
+      image: registrar,
+      name: "Edith Chukwu",
+      post: "Bursar",
+    },
+    {
+      image: registrar,
+      name: "Edith Chukwu",
+      post: "Bursar",
+    },
   ];
   return (
     <Box>
@@ -40,16 +110,15 @@ const Management = () => {
         Staff
       </Heading>
 
-      <Grid gridTemplateColumns="auto auto" gridGap="20px">
+      <Grid gridTemplateColumns="1fr 1fr" gridGap="8px" mb="100px">
         {managements.map((management) => {
           return (
-            <Box>
-              <Box w="436px" h="436px">
+            <Box mb="-74px">
+              <Box w="436px">
                 <Image
                   src={management.image}
                   objectFit="contain"
                   borderRadius="5px"
-                  position="absolute"
                 />
               </Box>
 
@@ -58,7 +127,7 @@ const Management = () => {
                 bg="rgba(255, 255, 255, 67%)"
                 p="10px 25px"
                 position="relative"
-                bottom="187px"
+                top="-74px"
                 borderRadius="0px 0px 5px 5px"
                 w="100%"
               >

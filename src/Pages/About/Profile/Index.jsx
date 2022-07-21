@@ -10,15 +10,11 @@ import {
 import React, { Fragment } from "react";
 import ReactPlayer from "react-player";
 import waveVid from "assets/Images/wavevid.mp4";
-import aboutGallery1 from "assets/Images/aboutgallery1.png";
-import aboutGallery2 from "assets/Images/aboutgallery2.png";
-import aboutGallery3 from "assets/Images/aboutgallery3.png";
-import aboutGallery4 from "assets/Images/aboutgallery4.png";
-import aboutGallery5 from "assets/Images/aboutgallery5.png";
 import award1 from "assets/Images/award1.png";
 import award2 from "assets/Images/award2.png";
 import award3 from "assets/Images/award3.png";
 import recog1 from "assets/Images/recog1.png";
+import Gallery from "Pages/About/Profile/Gallery";
 
 const ourStands = [
   {
@@ -41,25 +37,6 @@ const ourStands = [
     ],
   },
 ];
-
-const aboutGalleries = [
-  {
-    image: aboutGallery1,
-  },
-  {
-    image: aboutGallery2,
-  },
-  {
-    image: aboutGallery3,
-  },
-  {
-    image: aboutGallery4,
-  },
-  {
-    image: aboutGallery5,
-  },
-];
-
 const awards = [
   {
     awardImg: award1,
@@ -339,20 +316,10 @@ const Profile = () => {
             Gallery
           </Heading>
         </Box>
-        <Grid gridTemplateColumns="repeat(5, 1fr)" gridGap="10px">
-          {aboutGalleries.map((gallery, index) => {
-            return (
-              <Image
-                key={index}
-                src={gallery.image}
-                w="272px"
-                h="272px"
-                borderRadius="3px"
-                mr="10px"
-              />
-            );
-          })}
-        </Grid>
+
+        <Box>
+          <Gallery />
+        </Box>
       </Box>
 
       <Box textAlign="center" my="55px">

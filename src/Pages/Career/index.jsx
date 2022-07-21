@@ -1,5 +1,5 @@
 import { Box, Image, Link, Text, Flex } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "components/layouts/Navbar";
 import { useParams } from "react-router-dom";
 import about from "assets/Images/About.png";
@@ -10,6 +10,8 @@ import FooterCopywright from "Pages/Home/FooterCopywright";
 
 const Career = () => {
   const { id } = useParams();
+
+  const [currentId, setCurrentId] = useState(id);
 
   const menuLinks = [
     {
@@ -24,11 +26,19 @@ const Career = () => {
     },
   ];
 
-  const profile = menuLinks.find(
-    (menu) => menu.id.toLowerCase() === id.toLowerCase()
-  );
+  const [activeLink, setActiveLink] = useState(menuLinks[0]);
 
-  const [activeLink, setActiveLink] = useState(profile || menuLinks[0]);
+  useEffect(() => {
+    const profile = menuLinks.find(
+      (menu) => menu.id.toLowerCase() === currentId.toLowerCase()
+    );
+
+    setActiveLink(profile);
+  }, [currentId, menuLinks]);
+
+  useEffect(() => {
+    setCurrentId(id);
+  }, [id]);
 
   return (
     <Box>
@@ -75,7 +85,7 @@ const Career = () => {
                   border="3px solid #021d37"
                   lineHeight="40px"
                   p="20px 97px"
-                  onClick={() => setActiveLink(menuLink)}
+                  onClick={() => setCurrentId(menuLink.id)}
                   _hover={{
                     textDecoration: "none",
                     bg: isActive ? "#021d37" : "#F5F5F5",
