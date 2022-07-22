@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   IconButton,
@@ -9,10 +8,12 @@ import {
   Image,
   Link,
 } from "@chakra-ui/react";
+import React from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Slider from "react-slick";
-import Founders from "assets/Images/founder.png";
 import styled from "@emotion/styled";
+import Founders from "assets/Images/founder.png";
+
 const settings = {
   dots: true,
   arrows: false,
@@ -61,6 +62,7 @@ export default function CaptionCarousel() {
           charSet="UTF-8"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
         />
+
         <Link
           rel="stylesheet"
           type="text/css"
@@ -185,8 +187,15 @@ export default function CaptionCarousel() {
     </CaptionCarousel.Wrapper>
   );
 }
+
 CaptionCarousel.Wrapper = styled.div`
   .slick-dots {
     position: static;
+    margin-top: -45px;
+    margin-bottom: 40px;
+  }
+
+  .slick-dots li {
+    margin: 0px;
   }
 `;

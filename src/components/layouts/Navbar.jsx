@@ -4,7 +4,6 @@ import {
   Flex,
   Link,
   Box,
-  Input,
   useOutsideClick,
   useBoolean,
 } from "@chakra-ui/react";
@@ -16,11 +15,10 @@ import Whatapps from "assets/Images/whatsapp.png";
 import Facebook from "assets/Images/facebook.svg";
 import Twitter from "assets/Images/Twitter.svg";
 import Instagram from "assets/Images/ig.svg";
-import searchIcon from "assets/Images/search.svg";
+import Search from "./Search";
 
 const Navbar = () => {
   const loc = useLocation();
-  const [showSearchBar, setShowSearchBar] = useBoolean();
   const socials = [
     {
       icon: Linked,
@@ -218,25 +216,7 @@ const Navbar = () => {
           justifyContent="flex-end"
           transition="all 2s linear 1s"
         >
-          <Input
-            visibility={showSearchBar ? "block" : "hidden"}
-            bg="#EBEDEF"
-            transition="all 2s ease"
-            w={showSearchBar ? "300px" : "0px"}
-            onClick={() => setShowSearchBar.toggle()}
-          />
-
-          <Image
-            display={!showSearchBar ? "block" : "none"}
-            src={searchIcon}
-            w="20px"
-            h="20px"
-            mr="18px"
-            _hover={{
-              cursor: "pointer",
-            }}
-            onClick={() => setShowSearchBar.on()}
-          />
+          <Search />
 
           {socials.map((social, index) => {
             return (

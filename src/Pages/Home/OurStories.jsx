@@ -12,9 +12,11 @@ import {
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Slider from "react-slick";
 import ourstories from "assets/Images/ourstories.png";
+import styled from "@emotion/styled";
+import indicator from "assets/Images/ourStoryIndicator.png";
 
 const settings = {
-  dots: false,
+  dots: true,
   arrows: false,
   fade: false,
   infinite: true,
@@ -50,138 +52,157 @@ export default function CaptionCarousel() {
   ];
 
   return (
-    <Box position={"relative"} width={"full"} overflow={"hidden"}>
-      <IconButton
-        bg="none"
-        position="absolute"
-        left={side}
-        top={top}
-        color="white"
-        zIndex={2}
-        _hover={{
-          bg: "transparent",
-        }}
-        onClick={() => slider?.slickPrev()}
-      >
-        <BiChevronLeft size="40px" />
-      </IconButton>
+    <CaptionCarousel.Wrapper>
+      <Box position={"relative"} width={"full"} overflow={"hidden"}>
+        <IconButton
+          bg="none"
+          position="absolute"
+          left={side}
+          top={top}
+          color="white"
+          zIndex={2}
+          _hover={{
+            bg: "transparent",
+          }}
+          onClick={() => slider?.slickPrev()}
+        >
+          <BiChevronLeft size="40px" />
+        </IconButton>
 
-      <IconButton
-        bg="none"
-        position="absolute"
-        right={side}
-        top={top}
-        zIndex={2}
-        color="white"
-        _hover={{
-          bg: "transparent",
-        }}
-        onClick={() => slider?.slickNext()}
-      >
-        <BiChevronRight size="40px" />
-      </IconButton>
+        <IconButton
+          bg="none"
+          position="absolute"
+          right={side}
+          top={top}
+          zIndex={2}
+          color="white"
+          _hover={{
+            bg: "transparent",
+          }}
+          onClick={() => slider?.slickNext()}
+        >
+          <BiChevronRight size="40px" />
+        </IconButton>
 
-      <Slider {...settings} ref={(slider) => setSlider(slider)}>
-        {cards.map((card, index) => (
-          <Box key={index} h={"559px"} position="relative" bg="#021D37">
-            <Flex
-              flexDirection="column"
-              justifyContent="center"
-              alignItems="center"
-              textAlign="center"
-              marginBottom="58px"
-              position="relative"
-              zIndex="1"
-            >
-              <Text
-                position="absolute"
-                fontFamily="Dancing Script"
-                opacity="0.1"
-                fontSize="150px"
-                color="white"
-              >
-                Wavecrest
-              </Text>
-              <Text
-                position="relative"
-                top="25px"
-                color="white"
-                fontFamily="Playfair Display"
-                fontSize="40px"
-                fontWeight="700"
-              >
-                Our Stories
-              </Text>
-            </Flex>
-
-            <Flex
-              flexDirection="row"
-              position="relative"
-              alignItems="center"
-              justifyContent="center"
-              m="74px auto"
-            >
-              <Box
-                display="flex"
+        <Slider {...settings} ref={(slider) => setSlider(slider)}>
+          {cards.map((card, index) => (
+            <Box key={index} h={"559px"} position="relative" bg="#021D37">
+              <Flex
                 flexDirection="column"
-                alignItems="left"
-                bg={card.bg}
+                justifyContent="center"
+                alignItems="center"
+                textAlign="center"
+                marginBottom="58px"
+                position="relative"
+                zIndex="1"
               >
-                <Heading
-                  color="#fff"
+                <Text
+                  position="absolute"
+                  fontFamily="Dancing Script"
+                  opacity="0.1"
+                  fontSize="150px"
+                  color="white"
+                >
+                  Wavecrest
+                </Text>
+                <Text
+                  position="relative"
+                  top="25px"
+                  color="white"
                   fontFamily="Playfair Display"
-                  fontSize="32px"
+                  fontSize="40px"
                   fontWeight="700"
                 >
-                  {card.name}
-                </Heading>
-
-                <Text
-                  color="#EBEDEF"
-                  margin="20px 0"
-                  fontFamily="Manrope"
-                  fontSize="18px"
-                  fontWeight="400"
-                  lineHeight="25px"
-                  width="457px"
-                >
-                  {card.text}
+                  Our Stories
                 </Text>
-                <Link
-                  href="/blog"
-                  background="#FFF"
-                  w="168px"
-                  p="10px 26px"
-                  color="#021D37"
-                  fontSize="20px"
-                  textDecoration="none"
-                  textAlign="center"
-                  mt="20px"
-                  textTransform="uppercase"
-                  borderRadius="3px"
-                  fontFamily="Manrope"
-                  h="52px"
-                  _hover={{
-                    textDecoration: "none",
-                    color: "#021D37",
-                    bg: "#EBEDEF",
-                  }}
-                >
-                  {card.link}
-                </Link>
-              </Box>
+              </Flex>
 
-              <Image
-                src={ourstories}
-                alt="ourstories"
-                w="576px"
-                h="345px"
-                ml="88px"
-              />
-            </Flex>
-          </Box>
-        ))}
-      </Slider>
-    </Box>
+              <Flex
+                flexDirection="row"
+                position="relative"
+                alignItems="center"
+                justifyContent="center"
+                m="74px auto"
+              >
+                <Box
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="left"
+                  bg={card.bg}
+                >
+                  <Heading
+                    color="#fff"
+                    fontFamily="Playfair Display"
+                    fontSize="32px"
+                    fontWeight="700"
+                  >
+                    {card.name}
+                  </Heading>
+
+                  <Text
+                    color="#EBEDEF"
+                    margin="20px 0"
+                    fontFamily="Manrope"
+                    fontSize="18px"
+                    fontWeight="400"
+                    lineHeight="25px"
+                    width="457px"
+                  >
+                    {card.text}
+                  </Text>
+                  <Link
+                    href="/blog"
+                    background="#FFF"
+                    w="168px"
+                    p="10px 26px"
+                    color="#021D37"
+                    fontSize="20px"
+                    textDecoration="none"
+                    textAlign="center"
+                    mt="20px"
+                    textTransform="uppercase"
+                    borderRadius="3px"
+                    fontFamily="Manrope"
+                    h="52px"
+                    _hover={{
+                      textDecoration: "none",
+                      color: "#021D37",
+                      bg: "#EBEDEF",
+                    }}
+                  >
+                    {card.link}
+                  </Link>
+                </Box>
+
+                <Image
+                  src={ourstories}
+                  alt="ourstories"
+                  w="576px"
+                  h="345px"
+                  ml="88px"
+                />
+              </Flex>
+            </Box>
+          ))}
+        </Slider>
+      </Box>
+    </CaptionCarousel.Wrapper>
   );
 }
+
+CaptionCarousel.Wrapper = styled.div`
+  .slick-dots {
+    position: static;
+    margin-top: -45px;
+    margin-bottom: 40px;
+  }
+
+  .slick-dots li {
+    margin: 0px;
+  }
+
+  .slick-dots li button::before {
+    position:absolute
+    content: ${indicator};
+  }
+`;
