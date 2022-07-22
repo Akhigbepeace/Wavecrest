@@ -10,35 +10,61 @@ import {
   Button,
   Textarea,
 } from "@chakra-ui/react";
-import React, { Fragment } from "react";
+import React, { Fragment, useRef, useState } from "react";
+import emailjs from "emailjs-com";
 import Navbar from "components/layouts/Navbar";
 import contactpic from "assets/Images/contact.png";
 import Footer from "Pages/Home/Footer";
 import FooterCopywright from "Pages/Home/FooterCopywright";
 
 const Contact = () => {
+  const initialValues = {
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  };
+
+  const [inputField, setInputField] = useState(initialValues);
+
+  const inputValues = (e) => {
+    setInputField({
+      ...inputField,
+      [e.target.name]: e.target.value,
+    });
+
+    console.log(inputField);
+  };
+
+  const form = useRef();
+
   const contactFields = [
     {
-      fieldType: "name",
+      fieldType: "text",
+      name: "name",
       variant: "filled",
       placeHolder: "Name",
     },
     {
       fieldType: "email",
+      name: "email",
       variant: "filled",
       placeHolder: "Email",
     },
     {
       fieldType: "number",
+      name: "number",
       variant: "filled",
       placeHolder: "Phone Number",
     },
     {
       fieldType: "text",
+      name: "subject",
       variant: "filled",
       placeHolder: "Subject",
     },
   ];
+
   const enquires = [
     {
       name: "Admission:",
@@ -71,6 +97,31 @@ const Contact = () => {
       email: "Email: info@wavecrest.edu.ng",
     },
   ];
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_djq4ick",
+        "Ytemplate_i27quow",
+        e.target,
+        "JPAG_ZJVlAcuO_5D-"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const submitForm = () => {
+    sendEmail();
+    setInputField(initialValues);
+  };
 
   return (
     <Fragment>
@@ -108,13 +159,14 @@ const Contact = () => {
               fontSize="40px"
               lineHeight="53px"
               color="#021D37"
+              mb="5px"
             >
               Contact Form
             </Heading>
 
             <Text
               w="449px"
-              mb="7px"
+              mb="15px"
               fontFamily="Manrope, sans-serif"
               fontWeight="400"
               fontSize="18px"
@@ -126,15 +178,18 @@ const Contact = () => {
             </Text>
 
             <Stack>
-              {contactFields.map((field) => {
+              {contactFields.map((field, index) => {
                 return (
                   <Input
+                    key={index}
                     type={field.fieldType}
                     variant={field.variant}
                     placeholder={field.placeHolder}
+                    name={field.name}
                     w="526px"
                     h="67px"
                     mb="10px"
+                    onChange={inputValues}
                     _placeholder={{
                       fontFamily: "Manrope, sans-serif",
                       color: "#021D37",
@@ -150,6 +205,8 @@ const Contact = () => {
                 type="text"
                 variant="filled"
                 placeholder="Message"
+                name="message"
+                onChange={inputValues}
                 w="526px"
                 h="223px"
                 mb="10px"
@@ -162,6 +219,7 @@ const Contact = () => {
                 }}
               />
             </Stack>
+
             <Button
               w="103px"
               h="47px"
@@ -173,6 +231,7 @@ const Contact = () => {
               fontSize="16px"
               textAlign="center"
               borderRadius="3px"
+              onClick={submitForm}
               _hover={{
                 bg: "#020E1B",
               }}
@@ -181,11 +240,11 @@ const Contact = () => {
             </Button>
           </Flex>
 
-          <Grid flexDirection="column">
+          <Grid>
             <Heading mb="10px">Visit Us</Heading>
 
             <Box>
-              <iframe
+           <iframe
                 title="Wavecrest College of Hospitality"
                 width="665"
                 height="364"
@@ -212,9 +271,9 @@ const Contact = () => {
             </Box>
 
             <Grid gridTemplateColumns="1fr 1fr" mt="30px">
-              {enquires.map((enquiry) => {
+              {enquires.map((enquiry, index) => {
                 return (
-                  <Flex flexDirection="column" mb="30px">
+                  <Flex key={index} flexDirection="column" mb="30px">
                     <Heading
                       mb="6px"
                       fontFamily="Playfair Display, serif"
