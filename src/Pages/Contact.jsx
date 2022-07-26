@@ -12,7 +12,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import React, { Fragment, useRef, useState } from "react";
-// import { useNavigate } from "react-router-dom";
+
 import emailjs from "emailjs-com";
 import Navbar from "components/layouts/Navbar";
 import contactpic from "assets/Images/contact.png";
