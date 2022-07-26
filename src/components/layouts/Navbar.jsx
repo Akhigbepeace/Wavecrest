@@ -153,31 +153,9 @@ const Navbar = () => {
     },
 
     {
-      name: "CONTACT US",
+      name: "CONTACT",
       to: "/contact",
       NestedLinks: [],
-    },
-  ];
-
-  const sideLinks = [
-    {
-      name: "SUPPORT US",
-      to: "/support",
-      bg: "#021D37",
-      color: "white",
-      hoverBackground: "white",
-      hoverColor: "#021d37",
-      textDecoration: "none",
-    },
-
-    {
-      name: "APPLY NOW",
-      to: "apply",
-      ml: "27px",
-      bg: "#FFF",
-      color: "#021D37",
-      hoverBackground: "#EBEDEF",
-      hoverColor: "#021d37",
     },
   ];
 
@@ -191,14 +169,7 @@ const Navbar = () => {
   });
 
   return (
-    <Box
-      zIndex="4"
-      w="100%"
-      mt="0"
-      position="sticky"
-      top="0"
-      transition="all 1s ease"
-    >
+    <Box>
       <Flex
         alignItems="center"
         bg="#FFF"
@@ -238,6 +209,10 @@ const Navbar = () => {
         pt="34px"
         justifyContent="space-between"
         h="91px"
+        w="100%"
+        position="sticky"
+        top="0"
+        zIndex="4"
         bg="#021D37"
         alignItems="center"
       >
@@ -322,29 +297,51 @@ const Navbar = () => {
         </Flex>
 
         <Flex pb="29px">
-          {sideLinks.map((sideLink) => {
-            return (
-              <Link
-                href={sideLink.to}
-                color={sideLink.color}
-                p="7px"
-                w="133px"
-                ml={sideLink.ml}
-                bg={sideLink.bg}
-                border="2px solid #fff"
-                borderRadius="3px"
-                fontFamily="Open Sans"
-                fontWeight="700"
-                fontSize="17px"
-                textAlign="center"
-                _hover={{
-                  textDecoration: "none",
-                }}
-              >
-                {sideLink.name}
-              </Link>
-            );
-          })}
+          <Link
+            href="/support"
+            bg="#021D37"
+            p="7px"
+            w="133px"
+            ml="27px"
+            color="#FFF"
+            border="2px solid #fff"
+            borderRadius="3px"
+            fontFamily="Open Sans"
+            fontWeight="700"
+            fontSize="17px"
+            textAlign="center"
+            _hover={{
+              textDecoration: "none",
+              bg: "#020E1B",
+              border: "2px solid #EBEDEF",
+              color: "#FFF",
+            }}
+          >
+            SUPPORT US
+          </Link>
+
+          <Link
+            href="/admission/applyOnline"
+            color="#021D37"
+            p="7px"
+            w="133px"
+            ml="27px"
+            bg="#FFF"
+            border="2px solid #fff"
+            borderRadius="3px"
+            fontFamily="Open Sans"
+            fontWeight="700"
+            fontSize="17px"
+            textAlign="center"
+            _hover={{
+              textDecoration: "none",
+              bg: "#EBEDEF",
+              border: "2px solid #EBEDEF",
+              color: "#021d37",
+            }}
+          >
+            APPLY NOW
+          </Link>
         </Flex>
       </Flex>
     </Box>

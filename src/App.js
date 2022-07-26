@@ -12,13 +12,17 @@ import Admission from "Pages/Admission/Index";
 import Academics from "Pages/Academics/Index";
 import Alumni from "Pages/Alumni";
 import Blog from "Pages/Blog";
-import Contact from "Pages/Contact";
 import Career from "Pages/Career";
+import Contact from "Pages/Contact";
+import BlogPost from "Pages/BlogPost";
 import SupportUs from "Pages/SupportUs";
 import ApplyNow from "Pages/ApplyNow";
+import ViewVacancies from "Pages/ViewVacancies";
 import SearchResult from "Pages/SearchResult";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Downloads from "Pages/Downloads";
 
 function App() {
   const colors = {
@@ -52,8 +56,10 @@ function App() {
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/support" element={<SupportUs />} />
             <Route exact path="/apply" element={<ApplyNow />} />
-            {/* <Route exact path="/searhResults" element={<SearchResult />} /> */}
             <Route exact path="/searhResults" element={<SearchResult />} />
+            <Route exact path="/posts" element={<BlogPost />} />
+            <Route exact path="/viewVacancies" element={<ViewVacancies />} />
+            <Route exact path="/downloads" element={<Downloads />} />
           </Routes>
         </Fragment>
       </Router>

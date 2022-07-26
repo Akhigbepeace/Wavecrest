@@ -9,11 +9,17 @@ import {
   Input,
   Button,
   Textarea,
+  Link,
 } from "@chakra-ui/react";
 import React, { Fragment, useRef, useState } from "react";
+// import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 import Navbar from "components/layouts/Navbar";
 import contactpic from "assets/Images/contact.png";
+import aboutgallery1 from "assets/Images/aboutgallery1.png";
+import aboutgallery2 from "assets/Images/aboutgallery2.png";
+import aboutgallery3 from "assets/Images/aboutgallery3.png";
+import aboutgallery4 from "assets/Images/aboutgallery4.png";
 import Footer from "Pages/Home/Footer";
 import FooterCopywright from "Pages/Home/FooterCopywright";
 
@@ -27,14 +33,16 @@ const Contact = () => {
 
   const [inputField, setInputField] = useState(initialValues);
 
+  const [clearFields, setClearFields] = useState();
+
   const inputValues = (e) => {
     setInputField({
       ...inputField,
       [e.target.name]: e.target.value,
     });
 
-    console.log(inputField);
   };
+  console.log(inputField);
 
   const form = useRef();
 
@@ -98,6 +106,29 @@ const Contact = () => {
     },
   ];
 
+  const quickLinks = [
+    {
+      image: { aboutgallery1 },
+      text: "News and Events",
+      linkTo: "/blog",
+    },
+    {
+      image: { aboutgallery2 },
+      text: "Testimonials",
+      linkTo: "/blog",
+    },
+    {
+      image: { aboutgallery3 },
+      text: "About",
+      linkTo: "/about/profile",
+    },
+    {
+      image: { aboutgallery4 },
+      text: "Programmes",
+      linkTo: "/academics/programmes",
+    },
+  ];
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -116,11 +147,6 @@ const Contact = () => {
           console.log(error.text);
         }
       );
-  };
-
-  const submitForm = () => {
-    sendEmail();
-    setInputField(initialValues);
   };
 
   return (
@@ -145,7 +171,7 @@ const Contact = () => {
             textAlign="center"
             mt="242px"
           >
-            CONTACT US
+            CONTACT
           </Text>
         </Box>
       </Box>
@@ -177,74 +203,78 @@ const Contact = () => {
               possible
             </Text>
 
-            <Stack>
-              {contactFields.map((field, index) => {
-                return (
-                  <Input
-                    key={index}
-                    type={field.fieldType}
-                    variant={field.variant}
-                    placeholder={field.placeHolder}
-                    name={field.name}
-                    w="526px"
-                    h="67px"
-                    mb="10px"
-                    onChange={inputValues}
-                    _placeholder={{
-                      fontFamily: "Manrope, sans-serif",
-                      color: "#021D37",
-                      fontSize: "18px",
-                      lineHeight: "25px",
-                      fontWeight: "400",
-                    }}
-                  />
-                );
-              })}
+            <form ref={form}>
+              <Stack>
+                {contactFields.map((field, index) => {
+                  return (
+                    <Input
+                      key={index}
+                      type={field.fieldType}
+                      variant={field.variant}
+                      placeholder={field.placeHolder}
+                      name={field.name}
+                      value={clearFields}
+                      w="526px"
+                      h="67px"
+                      onChange={inputValues}
+                      _placeholder={{
+                        fontFamily: "Manrope, sans-serif",
+                        color: "#021D37",
+                        fontSize: "18px",
+                        lineHeight: "25px",
+                        fontWeight: "400",
+                      }}
+                    />
+                  );
+                })}
 
-              <Textarea
-                type="text"
-                variant="filled"
-                placeholder="Message"
-                name="message"
-                onChange={inputValues}
-                w="526px"
-                h="223px"
-                mb="10px"
-                _placeholder={{
-                  fontFamily: "Manrope, sans-serif",
-                  color: "#021D37",
-                  fontSize: "18px",
-                  lineHeight: "25px",
-                  fontWeight: "400",
+                <Textarea
+                  type="text"
+                  variant="filled"
+                  placeholder="Message"
+                  name="message"
+                  onChange={inputValues}
+                  value={clearFields}
+                  w="526px"
+                  h="223px"
+                  mb="10px"
+                  _placeholder={{
+                    fontFamily: "Manrope, sans-serif",
+                    color: "#021D37",
+                    fontSize: "18px",
+                    lineHeight: "25px",
+                    fontWeight: "400",
+                  }}
+                />
+              </Stack>
+
+              <Button
+                w="103px"
+                h="47px"
+                mt="10px"
+                bg="#021D37"
+                color="white"
+                fontFamily="Manrope, sans-serif"
+                fontWeight="700"
+                fontSize="16px"
+                textAlign="center"
+                borderRadius="3px"
+                onSubmit={() => sendEmail()}
+                onClick={() => setClearFields()}
+                _hover={{
+                  bg: "#020E1B",
                 }}
-              />
-            </Stack>
-
-            <Button
-              w="103px"
-              h="47px"
-              mt="10px"
-              bg="#021D37"
-              color="white"
-              fontFamily="Manrope, sans-serif"
-              fontWeight="700"
-              fontSize="16px"
-              textAlign="center"
-              borderRadius="3px"
-              onClick={submitForm}
-              _hover={{
-                bg: "#020E1B",
-              }}
-            >
-              SUBMIT
-            </Button>
+              >
+                SUBMIT
+              </Button>
+            </form>
           </Flex>
 
           <Grid>
             <Heading mb="10px">Visit Us</Heading>
 
             <Box>
-           <iframe
+              <iframe
                 title="Wavecrest College of Hospitality"
                 width="665"
                 height="364"
@@ -310,35 +340,43 @@ const Contact = () => {
           >
             Quick Links
           </Heading>
+
           <Flex>
-            <Box
-              w="294px"
-              h="241px"
-              background="#EBEDEF"
-              borderRadius="3px"
-              mr="27px"
-            ></Box>
-            <Box
-              w="294px"
-              h="241px"
-              background="#EBEDEF"
-              borderRadius="3px"
-              mr="27px"
-            ></Box>
-            <Box
-              w="294px"
-              h="241px"
-              background="#EBEDEF"
-              borderRadius="3px"
-              mr="27px"
-            ></Box>
-            <Box
-              w="294px"
-              h="241px"
-              background="#EBEDEF"
-              borderRadius="3px"
-              mr="27px"
-            ></Box>
+            {quickLinks.map((quickLink) => {
+              return (
+                <Link
+                  href={quickLink.linkTo}
+                  w="294px"
+                  h="241px"
+                  borderRadius="30px"
+                  bg="contact.png"
+                  mr="27px"
+                  _hover={{
+                    transition: "all ease 0.8s",
+                    transform: "scale(1.2)",
+                  }}
+                >
+                  <Image src="https://picsum.photos/200" w="100%" h="100%" />
+
+                  <Flex
+                    bg="rgba(2,29,55, 0.65)"
+                    position="relative"
+                    h="100%"
+                    top="-241px"
+                  >
+                    <Text
+                      color="#FFF"
+                      alignSelf="center"
+                      fontFamily="Playfair Display"
+                      fontSize="28px"
+                      mx="auto"
+                    >
+                      {quickLink.text}
+                    </Text>
+                  </Flex>
+                </Link>
+              );
+            })}
           </Flex>
         </Box>
       </Box>

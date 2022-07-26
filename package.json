@@ -22,6 +22,7 @@
     "react-slick": "^0.29.0",
     "sass": "^1.52.2",
     "slick-carousel": "^1.8.1",
+    "talkjs": "^0.15.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

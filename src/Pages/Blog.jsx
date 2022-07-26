@@ -11,7 +11,9 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import React, { Fragment } from "react";
+import Talk from "talkjs";
+import React, { Fragment, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import blog from "assets/Images/Blog.png";
 import blogPost from "assets/Images/blogpost.png";
 import blogPost2 from "assets/Images/aboutus.png";
@@ -40,6 +42,30 @@ const Blog = () => {
     },
     {
       postsImg: blogPost,
+      postsDate: "News & Events / October 8, 2022.",
+      postHeading:
+        "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+      postsText:
+        "Featuring in the Guinness World Records is obviously not a yearly event. This is why Wavecrest College was excited to be a part of an amazing project partnering with the...",
+    },
+    {
+      postsImg: blogPost2,
+      postsDate: "News & Events / October 8, 2022.",
+      postHeading:
+        "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+      postsText:
+        "Featuring in the Guinness World Records is obviously not a yearly event. This is why Wavecrest College was excited to be a part of an amazing project partnering with the...",
+    },
+    {
+      postsImg: blogPost,
+      postsDate: "News & Events / October 8, 2022.",
+      postHeading:
+        "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+      postsText:
+        "Featuring in the Guinness World Records is obviously not a yearly event. This is why Wavecrest College was excited to be a part of an amazing project partnering with the...",
+    },
+    {
+      postsImg: blogPost2,
       postsDate: "News & Events / October 8, 2022.",
       postHeading:
         "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
@@ -88,6 +114,36 @@ const Blog = () => {
       postDate: "News & Events / October 8, 2022.",
     },
   ];
+
+  const navigate = useNavigate();
+
+  const ShowPosts = (e) => {
+    e.preventDefault();
+
+    navigate("/posts", { replace: true });
+  };
+
+  const InboxComponent = () => {
+    useEffect(() => {
+      const currentUser = this.props.currentUser;
+      Talk.ready.then(() => {
+        var me = new Talk.User({
+          id: currentUser.id,
+          name: currentUser.name,
+          email: currentUser.email,
+          photoUrl: currentUser.photo,
+          welcomeMessage: "Hey there! How are you? :-)",
+          role: "default",
+        });
+        
+        window.talkSession = new Talk.Session({
+          appId: "tNsIMPuP",
+          me: me,
+        });
+      });
+    }, []);
+  };
+
   return (
     <Fragment>
       <Navbar />
@@ -250,94 +306,56 @@ const Blog = () => {
               </Box>
             </Box>
 
-            <Grid gridTemplateColumns="1fr 1fr" gridGap="30px" w="832px">
+            <Grid
+              gridTemplateColumns="1fr 1fr"
+              gridGap="30px"
+              w="832px"
+              cursor="pointer"
+              onClick={(e) => ShowPosts(e)}
+            >
               {posts.map((post, index) => {
                 return (
-                  <Fragment>
-                    <Box key={index} mb="33px">
-                      <Image
-                        src={post.postsImg}
-                        borderRadius="3px"
-                        h="279px"
-                        w="100%"
-                        objectFit="cover"
-                      />
+                  <Box key={index} mb="33px">
+                    <Image
+                      src={post.postsImg}
+                      borderRadius="3px"
+                      h="279px"
+                      w="100%"
+                      objectFit="cover"
+                    />
 
-                      <Text
-                        mt="8px"
-                        color="rgba(2, 29, 55, 0.44)"
-                        fontFamily="Manrope"
-                        fontWeight="400"
-                        fontSize="18px"
-                        lineHeight="25px"
-                      >
-                        {post.postsDate}
-                      </Text>
+                    <Text
+                      mt="8px"
+                      color="rgba(2, 29, 55, 0.44)"
+                      fontFamily="Manrope"
+                      fontWeight="400"
+                      fontSize="18px"
+                      lineHeight="25px"
+                    >
+                      {post.postsDate}
+                    </Text>
 
-                      <Heading
-                        color="#021d37"
-                        fontFamily="Playfair Display"
-                        fontWeight="700"
-                        fontSize="22px"
-                        lineHeight="30px"
-                      >
-                        {post.postHeading}
-                      </Heading>
+                    <Heading
+                      color="#021d37"
+                      fontFamily="Playfair Display"
+                      fontWeight="700"
+                      fontSize="22px"
+                      lineHeight="30px"
+                    >
+                      {post.postHeading}
+                    </Heading>
 
-                      <Text
-                        mt="10px"
-                        color="#021d37"
-                        fontFamily="Manrope"
-                        fontWeight="400"
-                        fontSize="18px"
-                        lineHeight="25px"
-                      >
-                        {post.postsText}
-                      </Text>
-                    </Box>
-
-                    <Box mb="33px">
-                      <Image
-                        src={post.postsImg}
-                        borderRadius="3px"
-                        h="279px"
-                        w="100%"
-                        objectFit="cover"
-                      />
-
-                      <Text
-                        mt="8px"
-                        color="rgba(2, 29, 55, 0.44)"
-                        fontFamily="Manrope"
-                        fontWeight="400"
-                        fontSize="18px"
-                        lineHeight="25px"
-                      >
-                        {post.postsDate}
-                      </Text>
-
-                      <Heading
-                        color="#021d37"
-                        fontFamily="Playfair Display"
-                        fontWeight="700"
-                        fontSize="22px"
-                        lineHeight="30px"
-                      >
-                        {post.postHeading}
-                      </Heading>
-
-                      <Text
-                        mt="10px"
-                        color="#021d37"
-                        fontFamily="Manrope"
-                        fontWeight="400"
-                        fontSize="18px"
-                        lineHeight="25px"
-                      >
-                        {post.postsText}
-                      </Text>
-                    </Box>
-                  </Fragment>
+                    <Text
+                      mt="10px"
+                      color="#021d37"
+                      fontFamily="Manrope"
+                      fontWeight="400"
+                      fontSize="18px"
+                      lineHeight="25px"
+                    >
+                      {post.postsText}
+                    </Text>
+                  </Box>
                 );
               })}
             </Grid>

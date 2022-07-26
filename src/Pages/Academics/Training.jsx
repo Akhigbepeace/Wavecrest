@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { FaFileDownload } from "react-icons/fa";
 import cth from "assets/Images/cth.png";
 import training1 from "assets/Images/training1.png";
@@ -12,6 +12,14 @@ import {
   Heading,
   Image,
   Text,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
 } from "@chakra-ui/react";
 
 const Training = () => {
@@ -55,6 +63,36 @@ const Training = () => {
     },
   ];
 
+  function TransitionExample() {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    return (
+      <Fragment>
+        <Button onClick={onOpen}>Open Modal</Button>
+        <Modal
+          isCentered
+          onClose={onClose}
+          isOpen={isOpen}
+          motionPreset="slideInRight"
+        >
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>Modal Title</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <Text>Hello</Text>
+            </ModalBody>
+            <ModalFooter>
+              <Button colorScheme="blue" mr={3} onClick={onClose}>
+                Close
+              </Button>
+              <Button variant="ghost">Secondary Action</Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      </Fragment>
+    );
+  }
+
   return (
     <Flex flexDirection="column" mb="70px">
       {trainings.map((training, index) => {
@@ -92,6 +130,7 @@ const Training = () => {
                 </Text>
 
                 <Link
+                  onClick={TransitionExample()}
                   fontFamily="Manrope"
                   fontWeight="700"
                   fontSize="24px"

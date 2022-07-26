@@ -78,7 +78,7 @@ const Profile = () => {
         px="91px"
         justifyContent="center"
       >
-        <Box w="65%" mr="60px">
+        <Box w="55%" mr="60px">
           <Text
             fontFamily="Manrope"
             fontSize="24px"
@@ -105,7 +105,7 @@ const Profile = () => {
             fontWeight="400"
             lineHeight="25px"
             color="#021D37"
-            mt="7px"
+            mt="15px"
           >
             Wavecrest College of Hospitality is a private Monotechnic located in
             Lagos, Nigeria. The Institution has been involved with the
@@ -126,7 +126,7 @@ const Profile = () => {
           </Text>
         </Box>
 
-        <Box w="35%">
+        <Box w="50%" h="10%">
           <ReactPlayer
             url={waveVid}
             playing
@@ -138,7 +138,7 @@ const Profile = () => {
         </Box>
       </Flex>
 
-      <Box bg="#EBEDEF" p="50px 118px" w="100%" mb="50px">
+      <Box bg="#EBEDEF" p="50px 91px" w="100%" mb="50px">
         <Text
           fontFamily="Manrope"
           fontWeight="400"

@@ -81,7 +81,7 @@ const Footer = () => {
     },
     {
       name: "WOMEN'S BOARD",
-      to: "/academics/programmes",
+      to: "#!",
     },
     {
       name: "FAQs",
@@ -93,7 +93,7 @@ const Footer = () => {
     },
     {
       name: "CAREER",
-      to: "/career",
+      to: "/career/postJobVacancies",
     },
     {
       name: "BLOG",
@@ -101,12 +101,12 @@ const Footer = () => {
     },
     {
       name: "DOWNLOADS",
-      to: "/blog",
+      to: "/downloads",
     },
 
     {
       name: "SUPPORT US",
-      to: "/blog",
+      to: "/support",
     },
   ];
 

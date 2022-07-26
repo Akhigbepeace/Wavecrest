@@ -61,7 +61,7 @@ const SearchResult = () => {
     <Box>
       <Navbar />
 
-      <Box h="200px" w="100%" gridGap="68px" position="relative">
+      <Box h="200px" w="100%" gridGap="68px" position="relative" >
         <Image src={about} h="100%" w="100%" objectFit="cover" />
 
         <Flex
@@ -124,7 +124,7 @@ const SearchResult = () => {
             return (
               <Fragment>
                 <Link
-                  href="/blog"
+                  href="/posts"
                   _hover={{
                     textDecoration: "none",
                   }}

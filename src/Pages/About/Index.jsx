@@ -86,11 +86,11 @@ const About = () => {
                   bg={isActive ? "#021d37" : "#fff"}
                   color={isActive ? "#EBEDEF" : "#021d37"}
                   fontWeight="700"
-                  fontSize="30px"
+                  fontSize="24px"
                   textAlign="center"
-                  border="3px solid #021d37"
+                  border="2px solid #021d37"
                   lineHeight="40px"
-                  p="20px 97px"
+                  p="10px 50px"
                   onClick={() => setCurrentId(menuLink.id)}
                   _hover={{
                     textDecoration: "none",

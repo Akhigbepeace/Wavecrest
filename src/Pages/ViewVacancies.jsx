@@ -1,17 +1,14 @@
-import { Heading, Input, Box, Text, Button, Textarea } from "@chakra-ui/react";
+import { Box, Button, Heading, Input, Text } from "@chakra-ui/react";
+import React from "react";
+import Navbar from "components/layouts/Navbar";
+import Footer from "Pages/Home/Footer";
+import FooterCopywright from "Pages/Home/FooterCopywright";
 
-import React, { Fragment } from "react";
-
-const postJobVacancies = () => {
+const ViewVacancies = () => {
   const forms = [
     {
-      fieldType: "name",
-      placeHolder: "FullName",
-      variant: "filled",
-    },
-    {
       fieldType: "text",
-      placeHolder: "Company",
+      placeHolder: "Full Name",
       variant: "filled",
     },
     {
@@ -20,19 +17,30 @@ const postJobVacancies = () => {
       variant: "filled",
     },
     {
-      fieldType: "text",
-      placeHolder: "Job Description",
+      fieldType: "number",
+      placeHolder: "Phone Number",
       variant: "filled",
     },
     {
       fieldType: "text",
-      placeHolder: "Application Deadline",
+      placeHolder: "Address",
+      variant: "filled",
+    },
+    {
+      fieldType: "text",
+      placeHolder: "Company",
+      variant: "filled",
+    },
+    {
+      fieldType: "text",
+      placeHolder: "Post",
       variant: "filled",
     },
   ];
-
   return (
-    <Fragment>
+    <Box>
+      <Navbar />
+
       <Box px="91px">
         <Box>
           <Heading
@@ -42,7 +50,7 @@ const postJobVacancies = () => {
             fontSize="32px"
             color="#021D37"
           >
-            Post Job Vacancy
+            Apply For Job
           </Heading>
 
           <Text
@@ -68,6 +76,7 @@ const postJobVacancies = () => {
                 type={form.fieldType}
                 placeholder={form.placeHolder}
                 variant={form.variant}
+                required={true}
                 display="block"
                 w="526px"
                 h="67px"
@@ -83,20 +92,6 @@ const postJobVacancies = () => {
               />
             );
           })}
-
-          <Textarea
-            placeholder="Extra Notes"
-            variant="filled"
-            w="526px"
-            h="80px"
-            _placeholder={{
-              fontFamily: "Manrope, sans-serif",
-              color: "#021D37",
-              fontSize: "18px",
-              lineHeight: "25px",
-              fontWeight: "400",
-            }}
-          />
         </Box>
 
         <Button
@@ -113,11 +108,14 @@ const postJobVacancies = () => {
             bg: "#020E1B",
           }}
         >
-          POST
+          APPLY
         </Button>
       </Box>
-    </Fragment>
+
+      <Footer />
+      <FooterCopywright />
+    </Box>
   );
 };
 
-export default postJobVacancies;
+export default ViewVacancies;
