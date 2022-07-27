@@ -9,6 +9,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
+import { useParams } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Navbar from "components/layouts/Navbar";
 import about from "assets/Images/About.png";
@@ -57,11 +58,14 @@ const SearchResult = () => {
     },
   ];
 
+  const id = useParams();
+  console.log(id.valueOf());
+
   return (
     <Box>
       <Navbar />
 
-      <Box h="200px" w="100%" gridGap="68px" position="relative" >
+      <Box h="200px" w="100%" gridGap="68px" position="relative">
         <Image src={about} h="100%" w="100%" objectFit="cover" />
 
         <Flex
@@ -82,7 +86,7 @@ const SearchResult = () => {
               fontSize="30px"
               textAlign="left"
             >
-              Tuition
+              Heading
             </Heading>
             <Text
               color="white"
@@ -120,9 +124,9 @@ const SearchResult = () => {
         </Box>
 
         <Grid gridTemplateColumns="1fr 1fr" gridGap="30px" mb="60px">
-          {results.map((result) => {
+          {results.map((result, index) => {
             return (
-              <Fragment>
+              <Fragment key={index}>
                 <Link
                   href="/posts"
                   _hover={{

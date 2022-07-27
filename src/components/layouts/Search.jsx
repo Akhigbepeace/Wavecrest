@@ -8,16 +8,13 @@ const Search = () => {
   const [inputField, setInputField] = useState();
 
   const inputValues = (e) => {
-    setInputField({
-      ...inputField,
-      [e.target.name]: e.target.value,
-    });
+    setInputField(e.target.value);
   };
 
   const ShowResult = (e) => {
     e.preventDefault();
 
-    navigate(`/searhResults?searchTerm=${inputValues}`, { replace: true });
+    navigate(`/searhResults?searchTerm=${inputField}`, { replace: true });
   };
 
   const navigate = useNavigate();

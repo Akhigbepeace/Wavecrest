@@ -150,9 +150,14 @@ const Footer = () => {
         </Flex>
 
         <Flex>
-          {socials.map((social) => {
+          {socials.map((social, index) => {
             return (
-              <Link href={social.to} target={social.target} rel={social.rel}>
+              <Link
+                key={index}
+                href={social.to}
+                target={social.target}
+                rel={social.rel}
+              >
                 <Image
                   src={social.icon}
                   alt="linkedin"
@@ -174,9 +179,9 @@ const Footer = () => {
           lineHeight="35px"
           m="0 auto"
         >
-          {pages.map((page) => {
+          {pages.map((page, index) => {
             return (
-              <ListItem>
+              <ListItem key={index}>
                 <Link
                   href={page.to}
                   fontFamily="Manrope"

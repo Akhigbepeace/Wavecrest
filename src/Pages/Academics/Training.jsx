@@ -1,9 +1,10 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { FaFileDownload } from "react-icons/fa";
 import cth from "assets/Images/cth.png";
 import training1 from "assets/Images/training1.png";
 import training2 from "assets/Images/training2.png";
 import training3 from "assets/Images/training3.png";
+import trainingCert from "assets/Images/trainingCert.png";
 import {
   Box,
   Button,
@@ -15,10 +16,8 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
   ModalCloseButton,
   ModalBody,
-  ModalFooter,
   useDisclosure,
 } from "@chakra-ui/react";
 
@@ -63,36 +62,7 @@ const Training = () => {
     },
   ];
 
-  function TransitionExample() {
-    const { isOpen, onOpen, onClose } = useDisclosure();
-    return (
-      <Fragment>
-        <Button onClick={onOpen}>Open Modal</Button>
-        <Modal
-          isCentered
-          onClose={onClose}
-          isOpen={isOpen}
-          motionPreset="slideInRight"
-        >
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Modal Title</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody>
-              <Text>Hello</Text>
-            </ModalBody>
-            <ModalFooter>
-              <Button colorScheme="blue" mr={3} onClick={onClose}>
-                Close
-              </Button>
-              <Button variant="ghost">Secondary Action</Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
-      </Fragment>
-    );
-  }
-
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Flex flexDirection="column" mb="70px">
       {trainings.map((training, index) => {
@@ -129,16 +99,59 @@ const Training = () => {
                   {training.trainingsText}
                 </Text>
 
+                {/* <Box mt="10px">
+             
+
+                  <Modal
+                    isCentered
+                    onClose={onClose}
+                    isOpen={isOpen}
+                    motionPreset="slideInRight"
+                  >
+                    <ModalOverlay />
+                    <ModalContent bg="#DCE5E5" maxWidth="0px">
+                      <ModalCloseButton
+                        bg="#021D37"
+                        color="#FFF"
+                        _hover={{
+                          bg: "#020E1B",
+                        }}
+                      />
+                      <ModalBody>
+                      </ModalBody>
+                    </ModalContent>
+                  </Modal>
+                </Box> */}
+
                 <Link
-                  onClick={TransitionExample()}
+                  onClick={onOpen}
                   fontFamily="Manrope"
                   fontWeight="700"
                   fontSize="24px"
                   textDecoration="underline"
-                  _hover={{ textDecoration: "none" }}
+                  _hover={{
+                    textDecoration: "none",
+                  }}
                 >
                   {training.reapprovalCert}
                 </Link>
+
+                <Modal isCentered isOpen={isOpen} onClose={onClose}>
+                  <ModalOverlay />
+                  <ModalContent bg="#DCE5E5" p="30px" maxW="none" w="1110px">
+                    <ModalCloseButton
+                      bg="#021D37"
+                      color="#FFF"
+                      _hover={{
+                        bg: "#020E1B",
+                      }}
+                    />
+
+                    <ModalBody m="0 auto">
+                      <Image src={trainingCert} />
+                    </ModalBody>
+                  </ModalContent>
+                </Modal>
 
                 <Flex alignItems="center" mt="19px">
                   <FaFileDownload size="30px" color="#021D37" />
@@ -162,7 +175,7 @@ const Training = () => {
                   w="208px"
                   h="52px"
                   _hover={{
-                    bg: "#20E1B",
+                    bg: "#020E1B",
                   }}
                 >
                   {training.button}

@@ -33,16 +33,15 @@ const Contact = () => {
 
   const [inputField, setInputField] = useState(initialValues);
 
-  const [clearFields, setClearFields] = useState();
+  // const [clearFields, setClearFields] = useState();
 
   const inputValues = (e) => {
     setInputField({
       ...inputField,
       [e.target.name]: e.target.value,
     });
-
+    console.log(inputField);
   };
-  console.log(inputField);
 
   const form = useRef();
 
@@ -110,7 +109,7 @@ const Contact = () => {
     {
       image: { aboutgallery1 },
       text: "News and Events",
-      linkTo: "/blog",
+      linkTo: "/",
     },
     {
       image: { aboutgallery2 },
@@ -213,7 +212,7 @@ const Contact = () => {
                       variant={field.variant}
                       placeholder={field.placeHolder}
                       name={field.name}
-                      value={clearFields}
+                      // value={clearFields}
                       w="526px"
                       h="67px"
                       onChange={inputValues}
@@ -234,8 +233,8 @@ const Contact = () => {
                   placeholder="Message"
                   name="message"
                   onChange={inputValues}
-                  value={clearFields}
-                  w="526px"
+     
+                       // value={clearFields}        w="526px"
                   h="223px"
                   mb="10px"
                   _placeholder={{
@@ -260,7 +259,7 @@ const Contact = () => {
                 textAlign="center"
                 borderRadius="3px"
                 onSubmit={() => sendEmail()}
-                onClick={() => setClearFields()}
+                // onClick={() => setClearFields()}
                 _hover={{
                   bg: "#020E1B",
                 }}
@@ -351,8 +350,8 @@ const Contact = () => {
                   borderRadius="30px"
                   bg="contact.png"
                   mr="27px"
+                  transition="all ease 0.8s"
                   _hover={{
-                    transition: "all ease 0.8s",
                     transform: "scale(1.2)",
                   }}
                 >

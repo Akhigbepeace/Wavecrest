@@ -16,7 +16,6 @@ import Career from "Pages/Career";
 import Contact from "Pages/Contact";
 import BlogPost from "Pages/BlogPost";
 import SupportUs from "Pages/SupportUs";
-import ApplyNow from "Pages/ApplyNow";
 import ViewVacancies from "Pages/ViewVacancies";
 import SearchResult from "Pages/SearchResult";
 
@@ -55,7 +54,6 @@ function App() {
             <Route exact path="/career/:id" element={<Career />} />
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/support" element={<SupportUs />} />
-            <Route exact path="/apply" element={<ApplyNow />} />
             <Route exact path="/searhResults" element={<SearchResult />} />
             <Route exact path="/posts" element={<BlogPost />} />
             <Route exact path="/viewVacancies" element={<ViewVacancies />} />

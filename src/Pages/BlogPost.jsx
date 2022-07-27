@@ -1,23 +1,75 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  Link,
+  Input,
+  InputGroup,
+  InputRightElement,
+} from "@chakra-ui/react";
 import React, { Fragment } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Navbar from "components/layouts/Navbar";
-import blog from "assets/Images/Blog.png";
 import blogPostImage from "assets/Images/blogpost.png";
-
+import searchImg from "assets/Images/search.svg";
 import Footer from "./Home/Footer";
 import FooterCopywright from "./Home/FooterCopywright";
 
 const BlogPost = () => {
+  const categories = [
+    {
+      categoryName: "News & Events",
+    },
+    {
+      categoryName: "Tips & Categories",
+    },
+    {
+      categoryName: "Recepies",
+    },
+    {
+      categoryName: "Personal Categories",
+    },
+    {
+      categoryName: "Admission & Scholarship",
+    },
+  ];
+
+  const topPosts = [
+    {
+      post: "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+      postDate: "News & Events / October 8, 2022.",
+    },
+    {
+      post: "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+      postDate: "News & Events / October 8, 2022.",
+    },
+    {
+      post: "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+      postDate: "News & Events / October 8, 2022.",
+    },
+    {
+      post: "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+      postDate: "News & Events / October 8, 2022.",
+    },
+    {
+      post: "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+      postDate: "News & Events / October 8, 2022.",
+    },
+  ];
+
   return (
     <Fragment>
       <Navbar />
 
-      <Box h="300px" w="100%" gridGap="68px" position="relative">
-        <Image src={blog} h="100%" w="100%" objectFit="cover" />
+      <Box h="441px" w="100%" position="relative">
+        <Image src={blogPostImage} h="100%" w="100%" objectFit="cover" />
 
         <Flex
           bg="rgba(0, 24, 71, 0.5)"
           w="100%"
+          h="100%"
           position="absolute"
           bottom="0"
           p="20px 91px"
@@ -26,131 +78,263 @@ const BlogPost = () => {
             color="white"
             fontFamily="Playfair Display, serif"
             fontWeight="700"
-            fontSize="34px"
-            textAlign="center"
+            fontSize="30px"
+            lineHeight="40px"
             alignSelf="flex-end"
           >
-            ‘The icing on the cake’ …
+            ‘The icing on the cake’ …Wavecrest College of Hospitality Partners
+            with Fly Africa Initiative to break Guinness World Record 2020 -
+            <br />- Wavecrest College
           </Text>
         </Flex>
       </Box>
 
-      <Box w="1256px" m="50px auto">
-        <Flex>
-          <Image
-            src={blogPostImage}
-            w="300"
-            h="300"
-            objectFit="cover"
-            mr="30px"
-          />
+      <Flex w="1258px" my="23px" mx="auto">
+        <Box w="75%">
+          <Heading
+            color="rgba(2, 29, 55, 0.44)"
+            fontFamily="Manrope"
+            fontWeight="400"
+            fontSize="18px"
+          >
+            News & Events / October 8, 2022.
+          </Heading>
+
+          <Box>
+            <Text
+              mt="52px"
+              fontFamily="Manrope"
+              fontSize="18px"
+              fontWeight="400"
+              lineHeight="25px"
+              color="#021D37"
+            >
+              Featuring in the Guinness World Records is obviously not a yearly
+              event. This is why Wavecrest College was excited to be a part of
+              an amazing project partnering with the Featuring in the Guinness
+              World Records is obviously not a yearly event. This is why
+              Wavecrest College was excited to be a part of an amazing project
+              partnering with the...Featuring in the Guinness World Records is
+              obviously not a yearly event. This is why Wavecrest College was
+              excited to be a part of an amazing project partnering with
+              the...Featuring in the Guinness World Records is obviously not a
+              yearly event. This is why Wavecrest College was excited to be a
+              part of an amazing project partnering with the...Featuring in the
+              Guinness World Records is obviously not a yearly event. This is
+              why Wavecrest College was excited to be a part of an amazing
+              project partnering with the...Featuring in the Guinness World
+              Records is obviously not a yearly event. This is why Wavecrest
+              College was excited to be a part of an amazing project partnering
+              with the...Featuring in the Guinness World Records is obviously
+              not a yearly event. This is why Wavecrest College was excited to
+              be a part of an amazing project partnering with the...Featuring in
+              the Guinness World Records is obviously not a yearly event. This
+              is why Wavecrest College was excited to be a part of an amazing
+              project partnering with the...Featuring in the Guinness World
+              Records is obviously not a yearly event. This is why Wavecrest
+              College was excited to be a part of an amazing project partnering
+              with the...Featuring in the Guinness World Records is obviously
+              not a yearly event. This is why Wavecrest College was excited to
+              be a part of an amazing project partnering with the...
+            </Text>
+
+            <Image
+              src={blogPostImage}
+              w="100%"
+              h="315px"
+              objectFit="cover"
+              my="10px"
+            />
+
+            <Text
+              fontFamily="Manrope"
+              fontSize="18px"
+              fontWeight="400"
+              lineHeight="25px"
+              color="#021D37"
+              mb="27px"
+            >
+              Featuring in the Guinness World Records is obviously not a yearly
+              event. This is why Wavecrest College was excited to be a part of
+              an amazing project partnering with the Featuring in the Guinness
+              World Records is obviously not a yearly event. This is why
+              Wavecrest College was excited to be a part of an amazing project
+              partnering with the...Featuring in the Guinness World Records is
+              obviously not a yearly event. This is why Wavecrest College was
+              excited to be a part of an amazing project partnering with
+              the...Featuring in the Guinness World Records is obviously not a
+              yearly event. This is why Wavecrest College was excited to be a
+              part of an amazing project partnering with the...Featuring in the
+              Guinness World Records is obviously not a yearly event. This is
+              why Wavecrest College was excited to be a part of an amazing
+              project partnering with the...Featuring in the Guinness World
+              Records is obviously not a yearly event. This is why Wavecrest
+              College was excited to be a part of an amazing project partnering
+              with the...Featuring in the Guinness World Records is obviously
+              not a yearly event. This is why Wavecrest College was excited to
+              be a part of an amazing project partnering with the...Featuring in
+              the Guinness World Records is obviously not a yearly event. This
+              is why Wavecrest College was excited to be a part of an amazing
+              project partnering with the...Featuring in the Guinness World
+              Records is obviously not a yearly event. This is why Wavecrest
+              College was excited to be a part of an amazing project partnering
+              with the...Featuring in the Guinness World Records is obviously
+              not a yearly event. This is why Wavecrest College was excited to
+              be a part of an amazing project partnering with the...
+            </Text>
+
+            <Flex>
+              <Link
+                bg="#021D37"
+                p="15px"
+                borderRadius="3px"
+                color="#FFF"
+                mr="20px"
+              >
+                <FaChevronLeft size="20px" />
+              </Link>
+              <Link bg="#021D37" p="15px" borderRadius="3px" color="#FFF">
+                <FaChevronRight size="20px" />
+              </Link>
+            </Flex>
+          </Box>
+        </Box>
+
+        <Box pl="48px" w="35%">
+          <InputGroup>
+            <Input
+              type="text"
+              variant="filled"
+              placeholder="Search"
+              w="100%"
+              h="67px"
+              mb="60px"
+              _placeholder={{
+                fontFamily: "Manrope, sans-serif",
+                color: "#021D37",
+                fontSize: "18px",
+                lineHeight: "25px",
+                fontWeight: "400",
+              }}
+            />
+            <InputRightElement
+              children={
+                <Image
+                  src={searchImg}
+                  w="20px"
+                  h="20px"
+                  mt="23px"
+                  mr="24px"
+                  alignItems="center"
+                />
+              }
+            />
+          </InputGroup>
 
           <Box>
             <Heading
-              fontFamily="Playfair Display, serif"
+              fontFamily="Playfair Display"
               fontWeight="700"
-              fontSize="30px"
-              lineHeight="40px"
-              textAlign="left"
-              color="#021D37"
+              fontSize="32px"
             >
-              ‘The icing on the cake’ …Wavecrest College of Hospitality Partners
-              with Fly Africa Initiative to break Guinness World Record 2020
+              Categories
             </Heading>
 
-            <Text
-              mt="6px"
-              color="rgba(2, 29, 55, 0.44)"
-              fontFamily="Manrope"
-              fontWeight="400"
-              fontSize="18px"
-              lineHeight="25px"
-            >
-              News & Events / October 8, 2022.
-            </Text>
-
-            <Text
-              mt="35px"
-              fontFamily="Manrope"
-              fontSize="18px"
-              fontWeight="600"
-              color="#021D37"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-              architecto, unde modi ducimus nemo adipisci maxime quos nesciunt
-              voluptatibus beatae? Earum, sed aspernatur vero fugiat iure nihil
-              nemo quae neque? Nihil, fuga quibusdam maxime asperiores illo
-              possimus optio vitae soluta maiores incidunt necessitatibus ullam
-              repellendus deserunt doloremque magnam repellat ducimus est
-              aliquid dolorem! Nisi delectus, in sit sequi neque voluptate?
-            </Text>
+            <Box mt="25px">
+              {categories.map((category, index) => {
+                return (
+                  <Link
+                    key={index}
+                    display="flex"
+                    flexDirection="column"
+                    fontFamily="Manrope"
+                    fontWeight="400"
+                    fontSize="18px"
+                    borderRadius="3px"
+                    bg="#EBEDEF"
+                    p="25px 20px"
+                    w="100%"
+                    lineHeight="24px"
+                    borderBottom={
+                      categories.length - 1 === index
+                        ? "none"
+                        : "2px solid rgba(2, 29, 55, 0.25)"
+                    }
+                    _hover={{
+                      textDecoration: "none",
+                      bg: "rgba(2, 29, 55, 0.25)",
+                    }}
+                  >
+                    <Text>{category.categoryName}</Text>
+                  </Link>
+                );
+              })}
+            </Box>
           </Box>
-        </Flex>
 
-        <Text
-          fontFamily="Manrope"
-          fontSize="18px"
-          fontWeight="600"
-          color="#021D37"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio,
-          delectus laborum quidem esse ipsa, nemo maxime harum eaque ipsam quo
-          numquam dicta. Soluta, officiis atque amet asperiores corrupti cum
-          nulla veritatis libero molestiae aspernatur porro numquam consequatur
-          facere officia quia voluptas laboriosam velit tenetur delectus!
-          Mollitia officia dolorem, quibusdam tenetur, ipsam incidunt non quia
-          perferendis, nisi deleniti sunt repellendus eaque nostrum cupiditate
-          ab labore fugit id. <br /> <br /> &nbsp; &nbsp; Placeat, ratione
-          officiis, sed fuga minima voluptates, consequuntur autem temporibus
-          fugit id consequatur magnam quae repellendus ipsum corrupti adipisci
-          ipsa. Velit, ipsum voluptates id nemo reprehenderit animi asperiores
-          quae tempore repudiandae quisquam eos labore et quidem sit harum ab
-          nulla consequuntur. Labore hic delectus magnam pariatur! Reiciendis
-          consequatur, a tenetur in saepe laudantium odio quo mollitia
-          cupiditate alias officiis repellendus delectus suscipit quam voluptate
-          perspiciatis dignissimos eum, aperiam est asperiores? Fuga incidunt
-          possimus fugit adipisci mollitia velit qui suscipit ad recusandae
-          inventore voluptates nisi ipsam exercitationem, ipsum deserunt
-          distinctio illum alias. <br /> <br /> &nbsp; &nbsp; Necessitatibus
-          delectus voluptate soluta, inventore velit consequuntur sequi aut
-          laboriosam repellendus impedit expedita atque ad ea temporibus cumque
-          id consequatur quis consectetur facere ratione, sint recusandae. Quas
-          in vitae perspiciatis consectetur debitis non animi iure, qui
-          excepturi delectus odio, culpa dolore illo labore nulla alias! Sit ab
-          atque sint iste exercitationem amet, repellendus neque omnis
-          voluptatibus facere incidunt reprehenderit libero, labore quae, porro
-          minus. Velit, possimus sunt. Libero, similique accusantium dolores
-          sapiente quaerat, ullam porro sint labore, neque laborum natus odio.
-          Reprehenderit officia soluta asperiores officiis est hic earum magni,
-          debitis voluptatem animi dolorem ducimus, facere veniam fugiat illo
-          aliquid tempore error praesentium vel. Doloremque voluptate nihil
-          eligendi quas ab fuga temporibus ut aperiam nam labore quo aliquam
-          incidunt ullam id, animi eaque quis a aspernatur et? Suscipit deleniti
-          tempora, earum, cupiditate, error facilis doloremque repellendus at
-          odio exercitationem nulla necessitatibus accusamus sunt.
-        </Text>
+          <Box>
+            <Heading
+              fontFamily="Playfair Display"
+              fontWeight="700"
+              fontSize="32px"
+              mt="60px"
+              mb="25px"
+            >
+              Top Posts
+            </Heading>
 
-        <Flex mb="70px">
-          <Text
-            fontFamily="Manrope"
-            fontSize="18px"
-            fontWeight="600"
-            color="#021D37"
-            w="65%"
-            mr="20px"
+            <Box>
+              {topPosts.map((topPost, index) => {
+                return (
+                  <Box
+                    key={index}
+                    bg="#EBEDEF"
+                    borderRadius="3px"
+                    p="25px 35px"
+                  >
+                    <Flex>
+                      <Text
+                        color="#021D37"
+                        fontFamily="Playfair Display"
+                        fontWeight="600"
+                        fontSize="40px"
+                        mt="-15px"
+                      >
+                        {index + 1}
+                      </Text>
 
-          >
-            <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Blanditiis doloremque vero odio, autem fugit magni rerum aspernatur
-            sed. Autem omnis nemo nobis necessitatibus voluptates aliquam quo
-            iure consequatur perferendis amet voluptas sit, mollitia provident
-            non tempore nisi voluptate labore ad perspiciatis eaque adipisci.
-            Cumque fuga ducimus nulla, et libero minus ad vitae, error dolorem
-            facilis esse! Vero non magnam quod?
-          </Text>
-          <Image src={blogPostImage} w="30%" />
-        </Flex>
-      </Box>
+                      <Box>
+                        <Heading
+                          fontFamily="Playfair Display"
+                          fontWeight="700"
+                          fontSize="16px"
+                          ml="20px"
+                          lineHeight="21px"
+                        >
+                          {topPost.post}
+                        </Heading>
+
+                        <Text
+                          fontFamily="Manrope"
+                          fontWeight="400"
+                          fontSize="12px"
+                          lineHeight="16px"
+                          textAlign="left"
+                          color="rgba(2, 29, 55, 0.5)"
+                          mt="5px"
+                          ml="22px"
+                        >
+                          {topPost.postDate}
+                        </Text>
+                      </Box>
+                    </Flex>
+                  </Box>
+                );
+              })}
+            </Box>
+          </Box>
+        </Box>
+      </Flex>
 
       <Footer />
       <FooterCopywright />

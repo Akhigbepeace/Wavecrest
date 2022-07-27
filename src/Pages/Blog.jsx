@@ -361,7 +361,7 @@ const Blog = () => {
             </Grid>
           </Flex>
 
-          <Flex mr="-390px">
+          <Flex>
             <Link
               bg="#021D37"
               p="15px"

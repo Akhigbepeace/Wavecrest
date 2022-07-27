@@ -210,22 +210,22 @@ const Navbar = () => {
         justifyContent="space-between"
         h="91px"
         w="100%"
+        bg="#021D37"
+        alignItems="center"
         position="sticky"
         top="0"
         zIndex="4"
-        bg="#021D37"
-        alignItems="center"
       >
         <Flex alignItems="center">
           {navLinks.map((navLink, index) => {
             return (
               <Flex
-                alignItems="center"
-                ref={ref}
+              key={index}
+              ref={ref}
+              alignItems="center"
                 pb="25px"
                 mr="25px"
                 onMouseLeave={() => setShowNestedLinks.off()}
-                key={index}
                 borderBottom="6px solid transparent"
                 position="relative"
                 borderColor={
