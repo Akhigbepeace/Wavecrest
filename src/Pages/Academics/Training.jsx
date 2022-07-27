@@ -98,31 +98,6 @@ const Training = () => {
                 >
                   {training.trainingsText}
                 </Text>
-
-                {/* <Box mt="10px">
-             
-
-                  <Modal
-                    isCentered
-                    onClose={onClose}
-                    isOpen={isOpen}
-                    motionPreset="slideInRight"
-                  >
-                    <ModalOverlay />
-                    <ModalContent bg="#DCE5E5" maxWidth="0px">
-                      <ModalCloseButton
-                        bg="#021D37"
-                        color="#FFF"
-                        _hover={{
-                          bg: "#020E1B",
-                        }}
-                      />
-                      <ModalBody>
-                      </ModalBody>
-                    </ModalContent>
-                  </Modal>
-                </Box> */}
-
                 <Link
                   onClick={onOpen}
                   fontFamily="Manrope"
