@@ -52,7 +52,6 @@ function App() {
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/support" element={<SupportUs />} />
             <Route exact path="/apply" element={<ApplyNow />} />
-            {/* <Route exact path="/searhResults" element={<SearchResult />} /> */}
             <Route exact path="/searhResults" element={<SearchResult />} />
           </Routes>
         </Fragment>
