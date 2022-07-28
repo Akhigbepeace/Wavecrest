@@ -4,7 +4,6 @@ import {
   Flex,
   Link,
   Box,
-  Input,
   useOutsideClick,
   useBoolean,
 } from "@chakra-ui/react";
@@ -16,11 +15,10 @@ import Whatapps from "assets/Images/whatsapp.png";
 import Facebook from "assets/Images/facebook.svg";
 import Twitter from "assets/Images/Twitter.svg";
 import Instagram from "assets/Images/ig.svg";
-import searchIcon from "assets/Images/search.svg";
+import Search from "./Search";
 
 const Navbar = () => {
   const loc = useLocation();
-
   const socials = [
     {
       icon: Linked,
@@ -193,7 +191,14 @@ const Navbar = () => {
   });
 
   return (
-    <Box zIndex="4" w="100%" mt="0" position="sticky" top="0">
+    <Box
+      zIndex="4"
+      w="100%"
+      mt="0"
+      position="sticky"
+      top="0"
+      transition="all 1s ease"
+    >
       <Flex
         alignItems="center"
         bg="#FFF"
@@ -204,19 +209,14 @@ const Navbar = () => {
           <Image w="238px" h="52px" src={Logo} />
         </Link>
 
-        <Stack direction="row" alignItems="center">
-          <Link
-            href="#!"
-            rel="noreferrer"
-            onClick={() => {
-              <Box>
-                <Input variant="filled" type="name" w="278px" h="47px" />
-                <Image src={searchIcon} w="20px" h="20px" />
-              </Box>;
-            }}
-          >
-            <Image src={searchIcon} w="20px" h="20px" mr="18px" />
-          </Link>
+        <Stack
+          direction="row"
+          alignItems="center"
+          w="100%"
+          justifyContent="flex-end"
+          transition="all 2s linear 1s"
+        >
+          <Search />
 
           {socials.map((social, index) => {
             return (

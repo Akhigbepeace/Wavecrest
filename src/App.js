@@ -16,6 +16,7 @@ import Contact from "Pages/Contact";
 import Career from "Pages/Career";
 import SupportUs from "Pages/SupportUs";
 import ApplyNow from "Pages/ApplyNow";
+import SearchResult from "Pages/SearchResult";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -51,6 +52,7 @@ function App() {
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/support" element={<SupportUs />} />
             <Route exact path="/apply" element={<ApplyNow />} />
+            <Route exact path="/searhResults" element={<SearchResult />} />
           </Routes>
         </Fragment>
       </Router>

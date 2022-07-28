@@ -32,8 +32,6 @@ const Contact = () => {
       ...inputField,
       [e.target.name]: e.target.value,
     });
-
-    console.log(inputField);
   };
 
   const form = useRef();
@@ -101,26 +99,12 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_djq4ick",
-        "Ytemplate_i27quow",
-        e.target,
-        "JPAG_ZJVlAcuO_5D-"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
-
-  const submitForm = () => {
-    sendEmail();
-    setInputField(initialValues);
+    emailjs.sendForm(
+      "service_djq4ick",
+      "Ytemplate_i27quow",
+      e.target,
+      "JPAG_ZJVlAcuO_5D-"
+    );
   };
 
   return (
@@ -177,48 +161,50 @@ const Contact = () => {
               possible
             </Text>
 
-            <Stack>
-              {contactFields.map((field, index) => {
-                return (
-                  <Input
-                    key={index}
-                    type={field.fieldType}
-                    variant={field.variant}
-                    placeholder={field.placeHolder}
-                    name={field.name}
-                    w="526px"
-                    h="67px"
-                    mb="10px"
-                    onChange={inputValues}
-                    _placeholder={{
-                      fontFamily: "Manrope, sans-serif",
-                      color: "#021D37",
-                      fontSize: "18px",
-                      lineHeight: "25px",
-                      fontWeight: "400",
-                    }}
-                  />
-                );
-              })}
+            <form ref={form} onSubmit={sendEmail}>
+              <Stack>
+                {contactFields.map((field, index) => {
+                  return (
+                    <Input
+                      key={index}
+                      type={field.fieldType}
+                      variant={field.variant}
+                      placeholder={field.placeHolder}
+                      name={field.name}
+                      w="526px"
+                      h="67px"
+                      mb="10px"
+                      onChange={inputValues}
+                      _placeholder={{
+                        fontFamily: "Manrope, sans-serif",
+                        color: "#021D37",
+                        fontSize: "18px",
+                        lineHeight: "25px",
+                        fontWeight: "400",
+                      }}
+                    />
+                  );
+                })}
 
-              <Textarea
-                type="text"
-                variant="filled"
-                placeholder="Message"
-                name="message"
-                onChange={inputValues}
-                w="526px"
-                h="223px"
-                mb="10px"
-                _placeholder={{
-                  fontFamily: "Manrope, sans-serif",
-                  color: "#021D37",
-                  fontSize: "18px",
-                  lineHeight: "25px",
-                  fontWeight: "400",
-                }}
-              />
-            </Stack>
+                <Textarea
+                  type="text"
+                  variant="filled"
+                  placeholder="Message"
+                  name="message"
+                  onChange={inputValues}
+                  w="526px"
+                  h="223px"
+                  mb="10px"
+                  _placeholder={{
+                    fontFamily: "Manrope, sans-serif",
+                    color: "#021D37",
+                    fontSize: "18px",
+                    lineHeight: "25px",
+                    fontWeight: "400",
+                  }}
+                />
+              </Stack>
+            </form>
 
             <Button
               w="103px"
@@ -231,7 +217,6 @@ const Contact = () => {
               fontSize="16px"
               textAlign="center"
               borderRadius="3px"
-              onClick={submitForm}
               _hover={{
                 bg: "#020E1B",
               }}
@@ -244,7 +229,7 @@ const Contact = () => {
             <Heading mb="10px">Visit Us</Heading>
 
             <Box>
-           <iframe
+              <iframe
                 title="Wavecrest College of Hospitality"
                 width="665"
                 height="364"
