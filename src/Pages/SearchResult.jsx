@@ -9,7 +9,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import { useParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Navbar from "components/layouts/Navbar";
 import about from "assets/Images/About.png";
@@ -58,8 +58,7 @@ const SearchResult = () => {
     },
   ];
 
-  const id = useParams();
-  console.log(id.valueOf());
+  const [searchParams] = useSearchParams();
 
   return (
     <Box>
@@ -86,7 +85,7 @@ const SearchResult = () => {
               fontSize="30px"
               textAlign="left"
             >
-              Heading
+              {searchParams.get("searchTerm")}
             </Heading>
             <Text
               color="white"
