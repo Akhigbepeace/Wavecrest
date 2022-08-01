@@ -5,6 +5,7 @@ import {
   Text,
   Flex,
   Image,
+  Link,
   Button,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
@@ -81,7 +82,7 @@ const SupportUs = () => {
         </Box>
       </Box>
 
-      <Box px="91px">
+      <Box w="1200px" mx="auto">
         <Heading
           my="40px"
           fontFamily="Playfair Display"
@@ -130,24 +131,31 @@ const SupportUs = () => {
               );
             })}
           </Flex>
-
-          <Button
-            fontFamily="Manrope"
-            fontSize="16px"
-            fontWeight="700"
-            mt="30px"
-            mb="100px"
-            w="423px"
-            bg="#021D37"
-            py="7px"
-            textAlign="center"
-            color="#FFF"
+          <Link
+            href="https://paystack.com/pay/wchdonate"
+            target="_blank"
             _hover={{
-              bg: "#020E1B",
+              textDecor: "none",
             }}
           >
-            PAY NOW
-          </Button>
+            <Button
+              fontFamily="Manrope"
+              fontSize="16px"
+              fontWeight="700"
+              mt="30px"
+              mb="100px"
+              w="423px"
+              bg="#021D37"
+              py="7px"
+              textAlign="center"
+              color="#FFF"
+              _hover={{
+                bg: "#020E1B",
+              }}
+            >
+              PAY NOW
+            </Button>
+          </Link>
         </Box>
       </Box>
 

@@ -5,6 +5,7 @@ import {
   Text,
   Flex,
   Image,
+  Link,
   Select,
   Button,
 } from "@chakra-ui/react";
@@ -161,22 +162,26 @@ const ApplyOnline = () => {
             })}
           </Flex>
 
-          <Button
-            fontFamily="Manrope"
-            fontSize="16px"
-            fontWeight="700"
-            m=" 30px 0"
-            w="423px"
-            bg="#021D37"
-            py="7px"
-            textAlign="center"
-            color="#FFF"
-            _hover={{
-              bg: "#020E1B",
-            }}
-          >
-            PAY NOW
-          </Button>
+          <Link href="https://paystack.com/pay/wchform1" target="_blank" _hover={{
+            textDecor: "none"
+          }}>
+            <Button
+              fontFamily="Manrope"
+              fontSize="16px"
+              fontWeight="700"
+              m=" 30px 0"
+              w="423px"
+              bg="#021D37"
+              py="7px"
+              textAlign="center"
+              color="#FFF"
+              _hover={{
+                bg: "#020E1B",
+              }}
+            >
+              PAY NOW
+            </Button>
+          </Link>
         </Box>
 
         <Text fontFamily="Manrope" fontSize="24px" fontWeight="400" my="45px">

@@ -21,6 +21,7 @@ import waveimg from "assets/Images/waveimg.png";
 const AdmissionRequirements = () => {
   const requirements = [
     {
+      linkTo: "https://paystack.com/pay/wchform2",
       background: "#FFF",
       course: "Higher National Diploma (HND) in Hospitality Management",
       coursePic: waveimg,
@@ -32,6 +33,7 @@ const AdmissionRequirements = () => {
       ],
     },
     {
+      linkTo: "https://paystack.com/pay/wchform1",
       background: "#EBEDEF",
       course: "National Diploma (ND) in Hospitality Management",
       coursePic: waveimg,
@@ -42,6 +44,8 @@ const AdmissionRequirements = () => {
       viewUpdate: "Click to view updated Subject combinations",
     },
     {
+      linkTo: "https://paystack.com/pay/wchform1",
+
       background: "#FFF",
       course: "Certificate in Hospitality Operations",
       coursePic: waveimg,
@@ -175,7 +179,8 @@ const AdmissionRequirements = () => {
                 </Modal>
 
                 <Link
-                  href="/admission/applyOnline"
+                  href={requirement.linkTo}
+                  target="_blank"
                   display="block"
                   textAlign="center"
                   bg="#021D37"
