@@ -11,8 +11,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import Talk from "talkjs";
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import blog from "assets/Images/Blog.png";
 import blogPost from "assets/Images/blogpost.png";
@@ -121,27 +120,6 @@ const Blog = () => {
     e.preventDefault();
 
     navigate("/posts", { replace: true });
-  };
-
-  const InboxComponent = () => {
-    useEffect(() => {
-      const currentUser = this.props.currentUser;
-      Talk.ready.then(() => {
-        var me = new Talk.User({
-          id: currentUser.id,
-          name: currentUser.name,
-          email: currentUser.email,
-          photoUrl: currentUser.photo,
-          welcomeMessage: "Hey there! How are you? :-)",
-          role: "default",
-        });
-        
-        window.talkSession = new Talk.Session({
-          appId: "tNsIMPuP",
-          me: me,
-        });
-      });
-    }, []);
   };
 
   return (
