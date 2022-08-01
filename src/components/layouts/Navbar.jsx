@@ -169,7 +169,14 @@ const Navbar = () => {
   });
 
   return (
-    <Box>
+    <Box
+      zIndex="4"
+      w="100%"
+      mt="0"
+      position="sticky"
+      top="0"
+      transition="all 1s ease"
+    >
       <Flex
         alignItems="center"
         bg="#FFF"

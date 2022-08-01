@@ -40,7 +40,6 @@ const Contact = () => {
       ...inputField,
       [e.target.name]: e.target.value,
     });
-    console.log(inputField);
   };
 
   const form = useRef();
@@ -131,21 +130,12 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_djq4ick",
-        "Ytemplate_i27quow",
-        e.target,
-        "JPAG_ZJVlAcuO_5D-"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    emailjs.sendForm(
+      "service_djq4ick",
+      "Ytemplate_i27quow",
+      e.target,
+      "JPAG_ZJVlAcuO_5D-"
+    );
   };
 
   return (
@@ -202,7 +192,7 @@ const Contact = () => {
               possible
             </Text>
 
-            <form ref={form}>
+            <form ref={form} onSubmit={sendEmail}>
               <Stack>
                 {contactFields.map((field, index) => {
                   return (
@@ -212,9 +202,9 @@ const Contact = () => {
                       variant={field.variant}
                       placeholder={field.placeHolder}
                       name={field.name}
-                      // value={clearFields}
                       w="526px"
                       h="67px"
+                      mb="10px"
                       onChange={inputValues}
                       _placeholder={{
                         fontFamily: "Manrope, sans-serif",
@@ -233,8 +223,7 @@ const Contact = () => {
                   placeholder="Message"
                   name="message"
                   onChange={inputValues}
-     
-                       // value={clearFields}        w="526px"
+                  w="526px"
                   h="223px"
                   mb="10px"
                   _placeholder={{
@@ -246,27 +235,25 @@ const Contact = () => {
                   }}
                 />
               </Stack>
-
-              <Button
-                w="103px"
-                h="47px"
-                mt="10px"
-                bg="#021D37"
-                color="white"
-                fontFamily="Manrope, sans-serif"
-                fontWeight="700"
-                fontSize="16px"
-                textAlign="center"
-                borderRadius="3px"
-                onSubmit={() => sendEmail()}
-                // onClick={() => setClearFields()}
-                _hover={{
-                  bg: "#020E1B",
-                }}
-              >
-                SUBMIT
-              </Button>
             </form>
+
+            <Button
+              w="103px"
+              h="47px"
+              mt="10px"
+              bg="#021D37"
+              color="white"
+              fontFamily="Manrope, sans-serif"
+              fontWeight="700"
+              fontSize="16px"
+              textAlign="center"
+              borderRadius="3px"
+              _hover={{
+                bg: "#020E1B",
+              }}
+            >
+              SUBMIT
+            </Button>
           </Flex>
 
           <Grid>

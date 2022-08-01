@@ -11,10 +11,12 @@ const Search = () => {
     setInputField(e.target.value);
   };
 
+  const navigateTo = `/searhResults?searchTerm=${inputField}`;
+  
   const ShowResult = (e) => {
     e.preventDefault();
 
-    navigate(`/searhResults?searchTerm=${inputField}`, { replace: true });
+    navigate( navigateTo , { replace: true });
   };
 
   const navigate = useNavigate();
