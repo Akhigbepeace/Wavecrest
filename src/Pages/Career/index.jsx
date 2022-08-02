@@ -63,7 +63,7 @@ const Career = () => {
               textAlign="center"
               mt="140px"
             >
-              CARRER
+              CAREER
             </Text>
           </Box>
         </Box>
@@ -84,7 +84,7 @@ const Career = () => {
                   textAlign="center"
                   border="3px solid #021d37"
                   lineHeight="40px"
-                  p="20px 97px"
+                  p="15px 30px"
                   onClick={() => setCurrentId(menuLink.id)}
                   _hover={{
                     textDecoration: "none",

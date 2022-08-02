@@ -1,7 +1,6 @@
 import {
   Box,
   Text,
-  Button,
   Image,
   Flex,
   Heading,
@@ -100,8 +99,8 @@ const StudyProgrammes = () => {
               currentprogram.linkContent === programm.linkContent;
 
             return (
-              <Link
-                href="#!"
+              <Box
+                cursor="pointer"
                 fontWeight="600"
                 p="10px"
                 w="315px"
@@ -122,7 +121,7 @@ const StudyProgrammes = () => {
                 }}
               >
                 {programm.linkContent}
-              </Link>
+              </Box>
             );
           })}
         </Flex>
@@ -138,45 +137,49 @@ const StudyProgrammes = () => {
                 m="0 auto"
                 position="absolute"
               />
+
               <Box
                 bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(1, 15, 29, 0.52) 46.35%, rgba(2, 29, 55, 0.87) 100%)"
                 textAlign="center"
                 position="relative"
-                top="6.45rem"
+                bottom="-175px"
+                py="40px"
               >
                 <Heading
                   color="#fff"
-                  pt="101px"
                   fontWeight="700"
                   fontSize="40px"
                   fontFamily="Playfair Display"
                 >
                   {value.captionHeading}
                 </Heading>
+
                 <Text
                   fontSize="20px"
                   lineHeight="27px"
                   color="#EBEDEF"
-                  fontFamily="Manrope, san"
-                  m="1rem 0"
+                  mb="28px"
+                  fontFamily="Manrope"
                 >
                   {value.captionTime}
                 </Text>
-                <Button
+
+                <Link
+                  href="/admission/applyOnline"
                   bg="#fff"
                   color="#021d37"
                   h="52px"
                   w="208px"
-                  m="1rem 0"
                   p="10px 25px"
                   border="none"
                   borderRadius="3px"
-                  fontFamily="Manrope, san"
+                  fontFamily="Manrope"
                   fontSize="24px"
                   fontWeight="700"
+                  _hover={{ textDecoration: "none", bg: "#EBEDEF" }}
                 >
                   {value.captionButton}
-                </Button>
+                </Link>
               </Box>
             </Box>
           ))}

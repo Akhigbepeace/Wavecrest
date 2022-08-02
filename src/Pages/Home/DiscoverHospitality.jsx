@@ -32,7 +32,7 @@ const DiscoverHospitality = () => {
           pariatur.
         </Text>
         <Link
-          to="#!"
+          href="/admission/applyOnline"
           background="#021d37"
           w="208px"
           p="10px 26px"

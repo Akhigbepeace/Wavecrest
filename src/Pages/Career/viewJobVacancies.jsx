@@ -1,7 +1,8 @@
 import { Box, Button, Grid, Heading, Text } from "@chakra-ui/react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const viewJobVacancies = () => {
+const ViewJobVacancies = () => {
   const jobVacancies = [
     {
       company: "Radisson Blu Hotels & suits",
@@ -35,6 +36,14 @@ const viewJobVacancies = () => {
     },
   ];
 
+  const navigate = useNavigate();
+
+  const ViewVacancies = (e) => {
+    e.preventDefault();
+
+    navigate("/viewVacancies", { replace: true });
+  };
+  
   return (
     <Box my="90px" px="95px">
       <Heading
@@ -73,11 +82,11 @@ const viewJobVacancies = () => {
                 py="10px"
                 textAlign="center"
                 color="#FFF"
+                onClick={ViewVacancies}
                 _hover={{
                   bg: "#020E1B",
                 }}
               >
-                {" "}
                 APPLY
               </Button>
             </Box>
@@ -88,4 +97,4 @@ const viewJobVacancies = () => {
   );
 };
 
-export default viewJobVacancies;
+export default ViewJobVacancies;

@@ -13,8 +13,18 @@ import React, { Fragment } from "react";
 const NYSC = () => {
   const forms = [
     {
-      fieldType: "name",
+      fieldType: "text",
       placeHolder: "FullName",
+      variant: "filled",
+    },
+    {
+      fieldType: "text",
+      placeHolder: "Address",
+      variant: "filled",
+    },
+    {
+      fieldType: "email",
+      placeHolder: "Email",
       variant: "filled",
     },
     {
@@ -23,8 +33,8 @@ const NYSC = () => {
       variant: "filled",
     },
     {
-      fieldType: "email",
-      placeHolder: "Email",
+      fieldType: "text",
+      placeHolder: "Class",
       variant: "filled",
     },
   ];
@@ -98,7 +108,7 @@ const NYSC = () => {
         </Flex>
 
         <Select
-          placeholder="Qualification"
+          placeholder="Programme"
           w="526px"
           h="67px"
           bg="#EBEDEF"

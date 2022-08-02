@@ -13,8 +13,18 @@ import React, { Fragment } from "react";
 const Internship = () => {
   const forms = [
     {
-      fieldType: "name",
+      fieldType: "text",
       placeHolder: "FullName",
+      variant: "filled",
+    },
+    {
+      fieldType: "text",
+      placeHolder: "Address",
+      variant: "filled",
+    },
+    {
+      fieldType: "email",
+      placeHolder: "Email",
       variant: "filled",
     },
     {
@@ -23,8 +33,8 @@ const Internship = () => {
       variant: "filled",
     },
     {
-      fieldType: "email",
-      placeHolder: "Email",
+      fieldType: "text",
+      placeHolder: "Class",
       variant: "filled",
     },
   ];
@@ -86,7 +96,7 @@ const Internship = () => {
                 mb="10px"
                 bg="#EBEDEF"
                 _placeholder={{
-                  fontFamily: "Manrope, sans-serif",
+                  fontFamily: "Manrope",
                   color: "#021D37",
                   fontSize: "18px",
                   lineHeight: "25px",
@@ -98,12 +108,12 @@ const Internship = () => {
         </Flex>
 
         <Select
-          placeholder="Qualification"
+          placeholder="Programme"
           w="526px"
           h="67px"
           bg="#EBEDEF"
           textAlign="left"
-          fontFamily="Manrope, sans-serif"
+          fontFamily="Manrope"
           border="none"
           color="#021D37"
           fontSize="18px"

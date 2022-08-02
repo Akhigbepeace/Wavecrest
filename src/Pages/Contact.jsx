@@ -9,11 +9,17 @@ import {
   Input,
   Button,
   Textarea,
+  Link,
 } from "@chakra-ui/react";
 import React, { Fragment, useRef, useState } from "react";
+
 import emailjs from "emailjs-com";
 import Navbar from "components/layouts/Navbar";
 import contactpic from "assets/Images/contact.png";
+import aboutgallery1 from "assets/Images/aboutgallery1.png";
+import aboutgallery2 from "assets/Images/aboutgallery2.png";
+import aboutgallery3 from "assets/Images/aboutgallery3.png";
+import aboutgallery4 from "assets/Images/aboutgallery4.png";
 import Footer from "Pages/Home/Footer";
 import FooterCopywright from "Pages/Home/FooterCopywright";
 
@@ -26,6 +32,8 @@ const Contact = () => {
   };
 
   const [inputField, setInputField] = useState(initialValues);
+
+  // const [clearFields, setClearFields] = useState();
 
   const inputValues = (e) => {
     setInputField({
@@ -96,6 +104,29 @@ const Contact = () => {
     },
   ];
 
+  const quickLinks = [
+    {
+      image: { aboutgallery1 },
+      text: "News and Events",
+      linkTo: "/",
+    },
+    {
+      image: { aboutgallery2 },
+      text: "Testimonials",
+      linkTo: "/blog",
+    },
+    {
+      image: { aboutgallery3 },
+      text: "About",
+      linkTo: "/about/profile",
+    },
+    {
+      image: { aboutgallery4 },
+      text: "Programmes",
+      linkTo: "/academics/programmes",
+    },
+  ];
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -129,7 +160,7 @@ const Contact = () => {
             textAlign="center"
             mt="242px"
           >
-            CONTACT US
+            CONTACT
           </Text>
         </Box>
       </Box>
@@ -295,35 +326,43 @@ const Contact = () => {
           >
             Quick Links
           </Heading>
+
           <Flex>
-            <Box
-              w="294px"
-              h="241px"
-              background="#EBEDEF"
-              borderRadius="3px"
-              mr="27px"
-            ></Box>
-            <Box
-              w="294px"
-              h="241px"
-              background="#EBEDEF"
-              borderRadius="3px"
-              mr="27px"
-            ></Box>
-            <Box
-              w="294px"
-              h="241px"
-              background="#EBEDEF"
-              borderRadius="3px"
-              mr="27px"
-            ></Box>
-            <Box
-              w="294px"
-              h="241px"
-              background="#EBEDEF"
-              borderRadius="3px"
-              mr="27px"
-            ></Box>
+            {quickLinks.map((quickLink) => {
+              return (
+                <Link
+                  href={quickLink.linkTo}
+                  w="294px"
+                  h="241px"
+                  borderRadius="30px"
+                  bg="contact.png"
+                  mr="27px"
+                  transition="all ease 0.8s"
+                  _hover={{
+                    transform: "scale(1.2)",
+                  }}
+                >
+                  <Image src="https://picsum.photos/200" w="100%" h="100%" />
+
+                  <Flex
+                    bg="rgba(2,29,55, 0.65)"
+                    position="relative"
+                    h="100%"
+                    top="-241px"
+                  >
+                    <Text
+                      color="#FFF"
+                      alignSelf="center"
+                      fontFamily="Playfair Display"
+                      fontSize="28px"
+                      mx="auto"
+                    >
+                      {quickLink.text}
+                    </Text>
+                  </Flex>
+                </Link>
+              );
+            })}
           </Flex>
         </Box>
       </Box>

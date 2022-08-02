@@ -34,19 +34,15 @@ const OurTeam = () => {
   const [activeLink, setActiveLink] = useState(profile || menuLinks[1]);
 
   return (
-    <Flex w="1167px" m="0 auto" mt="100px">
+    <Flex w="1250px" m="0 auto" mt="100px">
       <Flex flexDirection="column" mt="50px">
         {menuLinks.map((menuLink, index) => {
           const isActive = activeLink.linkTitle === menuLink.linkTitle;
           return (
             <Flex
               alignItems="center"
-              borderBottom={
-                isActive.length - 1 === index
-                  ? "none"
-                  : "1px solid rgba(2, 29, 55, 0.63)"
-              }
-              mr="70px"
+              borderBottom="1px solid rgba(2, 29, 55, 0.63)"
+              mr="60px"
             >
               <FaChevronRight
                 size="15px"

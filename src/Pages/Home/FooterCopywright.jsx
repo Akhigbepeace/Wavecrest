@@ -6,7 +6,7 @@ const FooterCopywright = () => {
     <Box>
       <Text
         bg="#021d37"
-        p="2rem 0"
+        py="25px"
         fontWeight="600"
         fontSize="22px"
         lineHeight="30px"

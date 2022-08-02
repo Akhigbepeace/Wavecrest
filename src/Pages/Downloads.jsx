@@ -1,18 +1,19 @@
-import React from "react";
+import { Box } from "@chakra-ui/react";
 import Navbar from "components/layouts/Navbar";
+import React from "react";
 import Footer from "./Home/Footer";
 import FooterCopywright from "./Home/FooterCopywright";
-import { Box } from "@chakra-ui/react";
 
-const ApplyNow = () => {
+const Downloads = () => {
   return (
     <Box>
       <Navbar />
-      Apply Now
+
+      Downloads
+      
       <Footer />
       <FooterCopywright />
     </Box>
   );
 };
-
-export default ApplyNow;
+export default Downloads;

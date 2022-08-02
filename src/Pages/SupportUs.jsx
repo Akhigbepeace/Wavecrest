@@ -5,9 +5,8 @@ import {
   Text,
   Flex,
   Image,
-  Select,
-  Button,
   Link,
+  Button,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import Navbar from "components/layouts/Navbar";
@@ -56,17 +55,6 @@ const SupportUs = () => {
     },
   ];
 
-  const programmes = [
-    {
-      course: "HND in Hospitality Management",
-    },
-    {
-      course: "ND in Hospitality Management",
-    },
-    {
-      course: "Certificate in Hospitality Operations",
-    },
-  ];
   return (
     <Fragment>
       <Navbar />
@@ -94,7 +82,7 @@ const SupportUs = () => {
         </Box>
       </Box>
 
-      <Box px="91px">
+      <Box w="1200px" mx="auto">
         <Heading
           my="40px"
           fontFamily="Playfair Display"
@@ -129,53 +117,6 @@ const SupportUs = () => {
           })}
         </Flex>
 
-        <Select
-          placeholder="Programme"
-          w="526px"
-          h="67px"
-          bg="#EBEDEF"
-          textAlign="left"
-          fontFamily="Manrope, sans-serif"
-          border="none"
-          color="#021D37"
-          fontSize="18px"
-          lineHeight="25px"
-          fontWeight="400"
-          mb="10px"
-        >
-          {programmes.map((programme, index) => {
-            return (
-              <option
-                value={programme.course}
-                key={index}
-                borderBottom={
-                  programme.length - 1 === index ? "none" : "1px solid #EBEDEF"
-                }
-              >
-                {programme.course}
-              </option>
-            );
-          })}
-        </Select>
-
-        <Box
-          my="20px"
-          ml="25px"
-          fontFamily="Manrope"
-          fontSize="18px"
-          fontWeight="400"
-          lineHeight="33px"
-        >
-          <Text color="#021D37">
-            Fee for the programme appears here (e.g Subsidized fee for the
-            programme is #189,000)
-          </Text>
-
-          <Link color="#CD2026" textDecoration="underline">
-            would you like to pay for the whole fee of #464,000 instead ?
-          </Link>
-        </Box>
-
         <Box>
           <Flex mt="50px" alignItems="center">
             {payNow.map((pay, index) => {
@@ -190,29 +131,32 @@ const SupportUs = () => {
               );
             })}
           </Flex>
-
-          <Button
-            fontFamily="Manrope"
-            fontSize="16px"
-            fontWeight="700"
-            m=" 30px 0"
-            w="423px"
-            bg="#021D37"
-            py="7px"
-            textAlign="center"
-            color="#FFF"
+          <Link
+            href="https://paystack.com/pay/wchdonate"
+            target="_blank"
             _hover={{
-              bg: "#020E1B",
+              textDecor: "none",
             }}
           >
-            PAY NOW
-          </Button>
+            <Button
+              fontFamily="Manrope"
+              fontSize="16px"
+              fontWeight="700"
+              mt="30px"
+              mb="100px"
+              w="423px"
+              bg="#021D37"
+              py="7px"
+              textAlign="center"
+              color="#FFF"
+              _hover={{
+                bg: "#020E1B",
+              }}
+            >
+              PAY NOW
+            </Button>
+          </Link>
         </Box>
-
-        <Text fontFamily="Manrope" fontSize="24px" fontWeight="400" my="45px">
-          NB: After payment, a google link would be sent to your mail to
-          complete the registration
-        </Text>
       </Box>
 
       <Footer />

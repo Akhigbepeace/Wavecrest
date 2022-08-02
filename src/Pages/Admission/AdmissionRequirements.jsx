@@ -3,10 +3,17 @@ import {
   Flex,
   Heading,
   Image,
-  Button,
   UnorderedList,
   ListItem,
   Link,
+  Text,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalCloseButton,
+  ModalBody,
+  ModalHeader,
+  useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
 import waveimg from "assets/Images/waveimg.png";
@@ -14,6 +21,7 @@ import waveimg from "assets/Images/waveimg.png";
 const AdmissionRequirements = () => {
   const requirements = [
     {
+      linkTo: "https://paystack.com/pay/wchform2",
       background: "#FFF",
       course: "Higher National Diploma (HND) in Hospitality Management",
       coursePic: waveimg,
@@ -25,6 +33,7 @@ const AdmissionRequirements = () => {
       ],
     },
     {
+      linkTo: "https://paystack.com/pay/wchform1",
       background: "#EBEDEF",
       course: "National Diploma (ND) in Hospitality Management",
       coursePic: waveimg,
@@ -35,6 +44,8 @@ const AdmissionRequirements = () => {
       viewUpdate: "Click to view updated Subject combinations",
     },
     {
+      linkTo: "https://paystack.com/pay/wchform1",
+
       background: "#FFF",
       course: "Certificate in Hospitality Operations",
       coursePic: waveimg,
@@ -45,6 +56,19 @@ const AdmissionRequirements = () => {
       ],
     },
   ];
+
+  const subjects = [
+    "Physics",
+    "Chemistry",
+    "Mathematics/Statistics",
+    "Geography",
+    "Food and Nutrition",
+    "Technical Drawing",
+    "English Language/Literature in English",
+    "Home Management/Catering Craft",
+  ];
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Box>
@@ -95,22 +119,86 @@ const AdmissionRequirements = () => {
                   textDecoration="underline"
                   mt="33px"
                   lineHeight="33px"
+                  onClick={onOpen}
                 >
                   {requirement.viewUpdate}
                 </Link>
-                <Button
+
+                <Modal isCentered isOpen={isOpen} onClose={onClose}>
+                  <ModalOverlay />
+                  <ModalContent bg="#DCE5E5" p="30px" maxW="none" w="1110px">
+                    <ModalHeader
+                      fontFamily="Playfair Display"
+                      fontWeight="700"
+                      fontSize="32px"
+                      color="#021D37"
+                    >
+                      Updated Subject Combinations
+                    </ModalHeader>
+                    <ModalCloseButton
+                      bg="#021D37"
+                      color="#FFF"
+                      _hover={{
+                        bg: "#020E1B",
+                      }}
+                    />
+                    <ModalBody>
+                      <Heading
+                        fontFamily="Manrope"
+                        fontWeight="700"
+                        fontSize="24px"
+                        color="#021D37"
+                      >
+                        Five (5) credit passes in SSCE/NECO/GCE
+                      </Heading>
+                      <UnorderedList>
+                        <Text
+                          fontFamily="Manrope"
+                          fontWeight="700"
+                          fontSize="24px"
+                          color="#021D37"
+                        >
+                          Four (4) Subjects can be chosen from this list:
+                        </Text>
+                        {subjects.map((subject) => {
+                          return (
+                            <ListItem
+                              listStyleType="none"
+                              fontFamily="Manrope"
+                              fontWeight="400"
+                              fontSize="24px"
+                              color="#021D37"
+                            >
+                              {subject}
+                            </ListItem>
+                          );
+                        })}
+                      </UnorderedList>
+                    </ModalBody>
+                  </ModalContent>
+                </Modal>
+
+                <Link
+                  href={requirement.linkTo}
+                  target="_blank"
+                  display="block"
+                  textAlign="center"
                   bg="#021D37"
+                  fontFamily="Manrope"
+                  fontWeight="700"
+                  fontSize="20px"
                   color="#FFF"
                   borderRadius="3px"
                   mt="30px"
+                  pt="10px"
                   w="208px"
                   h="52px"
                   _hover={{
-                    bg: "#",
+                    bg: "#020E1B",
                   }}
                 >
                   APPLY NOW
-                </Button>
+                </Link>
               </Box>
             </Flex>
           </Box>

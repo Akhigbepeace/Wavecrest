@@ -92,7 +92,7 @@ export default function Carousel() {
         </Text>
       </Flex>
 
-      <Slider {...settings} ref={(slider) => setSlider(slider)}>
+      <Slider {...settings} ref={(slider) => setSlider(slider)} pauseOnFocus>
         {cards.map((image, index) => (
           <Image
             src={image}

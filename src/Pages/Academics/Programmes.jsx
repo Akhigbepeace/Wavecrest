@@ -1,12 +1,4 @@
-import {
-  Box,
-  Text,
-  Button,
-  Image,
-  Heading,
-  Flex,
-  Link,
-} from "@chakra-ui/react";
+import { Box, Text, Image, Heading, Flex, Link } from "@chakra-ui/react";
 import React from "react";
 import studyProgrammes1 from "assets/Images/studyprogrammes1.png";
 import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
@@ -77,12 +69,14 @@ const Programmes = () => {
                 m="0 auto"
                 mt="25px"
               />
+
               <Box
                 bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(1, 15, 29, 0.52) 46.35%, rgba(2, 29, 55, 0.87) 100%)"
                 textAlign="center"
                 position="absolute"
-                bottom="0rem"
+                bottom="0px"
                 w="100%"
+                pt="30px"
               >
                 <Heading
                   color="#fff"
@@ -97,26 +91,31 @@ const Programmes = () => {
                   fontSize="20px"
                   lineHeight="27px"
                   color="#EBEDEF"
-                  fontFamily="Manrope, san"
+                  fontFamily="Manrope"
+                  mb="15px"
                 >
                   {programme.captionTime}
                 </Text>
 
-                <Button
+                <Link
+                  href="/admission/applyOnline"
                   bg="#fff"
                   color="#021d37"
                   h="52px"
                   w="208px"
-                  mt="1rem"
                   p="10px 25px"
                   border="none"
                   borderRadius="3px"
                   fontFamily="Manrope"
                   fontSize="24px"
                   fontWeight="700"
+                  _hover={{
+                    textDecoration: "none",
+                    bg: "#EBEDEF",
+                  }}
                 >
                   {programme.captionButton}
-                </Button>
+                </Link>
                 <Link
                   display="flex"
                   textAlign="center"
@@ -126,9 +125,9 @@ const Programmes = () => {
                   fontSize="24px"
                   fontWeight="800"
                   color="#FFF"
-                  my="25px"
+                  my="20px"
                 >
-                  <Image src={fileDownload} mr="13px" />{" "}
+                  <Image src={fileDownload} mr="13px" />
                   <Text>Download Programme Brochure</Text>
                 </Link>
               </Box>
