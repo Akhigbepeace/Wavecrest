@@ -86,28 +86,26 @@ export default function CaptionCarousel() {
 
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {cards.map((card, index) => (
-            <Box key={index} h={"559px"} position="relative" bg="#021D37">
+            <Box key={index} position="relative" bg="#021D37">
               <Flex
                 flexDirection="column"
                 justifyContent="center"
                 alignItems="center"
                 textAlign="center"
-                marginBottom="58px"
                 position="relative"
+                mt="-40px"
                 zIndex="1"
               >
                 <Text
-                  position="absolute"
-                  fontFamily="Dancing Script"
+                  fontFamily="Visual Hollow Script"
                   opacity="0.1"
-                  fontSize="150px"
+                  fontSize="170px"
                   color="white"
                 >
                   Wavecrest
                 </Text>
                 <Text
-                  position="relative"
-                  top="25px"
+                  position="absolute"
                   color="white"
                   fontFamily="Playfair Display"
                   fontSize="40px"
@@ -122,7 +120,8 @@ export default function CaptionCarousel() {
                 position="relative"
                 alignItems="center"
                 justifyContent="center"
-                m="74px auto"
+                m="0 auto"
+                pb="74px"
               >
                 <Box
                   display="flex"
@@ -193,8 +192,8 @@ export default function CaptionCarousel() {
 CaptionCarousel.Wrapper = styled.div`
   .slick-dots {
     position: static;
-    margin-top: -45px;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
+    background: #021D37
   }
 
   .slick-dots li {

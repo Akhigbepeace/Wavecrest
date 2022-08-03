@@ -9,10 +9,18 @@ import {
   Input,
   Button,
   Textarea,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
   Link,
 } from "@chakra-ui/react";
 import React, { Fragment, useRef, useState } from "react";
-
+import { BsFillCheckCircleFill } from "react-icons/bs";
+import { FaTimesCircle } from "react-icons/fa";
 import emailjs from "emailjs-com";
 import Navbar from "components/layouts/Navbar";
 import contactpic from "assets/Images/contact.png";
@@ -32,8 +40,6 @@ const Contact = () => {
   };
 
   const [inputField, setInputField] = useState(initialValues);
-
-  // const [clearFields, setClearFields] = useState();
 
   const inputValues = (e) => {
     setInputField({
@@ -130,12 +136,60 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      "service_djq4ick",
-      "Ytemplate_i27quow",
-      e.target,
-      "JPAG_ZJVlAcuO_5D-"
-    );
+    emailjs
+      .sendForm(
+        "service_djq4ick",
+        "Ytemplate_i27quow",
+        e.target,
+        "JPAG_ZJVlAcuO_5D-"
+      )
+      .then(
+        <Box>
+          <Modal>
+            <ModalOverlay />
+            <ModalContent>
+              <ModalHeader></ModalHeader>
+              <ModalCloseButton />
+              <ModalBody>
+                <Heading>
+                  <BsFillCheckCircleFill color="green" /> Success!!!
+                </Heading>
+                <Text>Your Message has been sent successful </Text>
+              </ModalBody>
+
+              <ModalFooter>
+                <Button colorScheme="blue" mr={3}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
+        </Box>
+      )
+      .catch(
+        <Box>
+          <Modal>
+            <ModalOverlay />
+            <ModalContent>
+              <ModalHeader></ModalHeader>
+              <ModalCloseButton />
+              <ModalBody>
+                <Heading>
+                  <FaTimesCircle color="red" />
+                  Oops, Something went wrong!!!
+                </Heading>
+                <Text>Your Message wasn't delivered </Text>
+              </ModalBody>
+
+              <ModalFooter>
+                <Button colorScheme="blue" mr={3}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
+        </Box>
+      );
   };
 
   return (
