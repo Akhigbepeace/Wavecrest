@@ -71,22 +71,22 @@ export default function Carousel() {
         textAlign="center"
       >
         <Heading
-          position="absolute"
-          fontFamily="Dancing Script, cursive"
+          // position="relative"
+          fontFamily="Visual Hollow Script"
           fontWeight="400"
-          fontSize="130px"
+          fontSize="150px"
           color="rgba(3, 29, 56, 0.06)"
         >
           Work with us
         </Heading>
 
         <Text
-          position="relative"
-          top="15px"
+          position="absolute"
           color="#021D37"
           fontFamily="Playfair Display"
           fontSize="40px"
           fontWeight="700"
+          mb='25px'
         >
           Partners and Sponsors
         </Text>
@@ -99,7 +99,7 @@ export default function Carousel() {
             key={index}
             alt="companyLogo"
             h="100px"
-            my="63px"
+            mb="63px"
             objectFit="contain"
           />
         ))}

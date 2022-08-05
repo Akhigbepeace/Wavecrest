@@ -50,7 +50,7 @@ const Showcase = () => {
         >
           <Heading
             fontSize="60px"
-            fontFamily="Dancing Script, cursive"
+            fontFamily="Visual Hollow Script"
             fontWeight="400"
           >
             Study In

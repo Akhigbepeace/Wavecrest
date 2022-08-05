@@ -17,11 +17,10 @@ import Contact from "Pages/Contact";
 import BlogPost from "Pages/BlogPost";
 import SupportUs from "Pages/SupportUs";
 import ViewVacancies from "Pages/ViewVacancies";
+import Downloads from "Pages/Downloads";
 import SearchResult from "Pages/SearchResult";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Downloads from "Pages/Downloads";
 
 function App() {
   const colors = {
