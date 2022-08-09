@@ -71,7 +71,6 @@ export default function Carousel() {
         textAlign="center"
       >
         <Heading
-          // position="relative"
           fontFamily="Visual Hollow Script"
           fontWeight="400"
           fontSize="150px"
@@ -86,7 +85,7 @@ export default function Carousel() {
           fontFamily="Playfair Display"
           fontSize="40px"
           fontWeight="700"
-          mb='25px'
+          mb="25px"
         >
           Partners and Sponsors
         </Text>

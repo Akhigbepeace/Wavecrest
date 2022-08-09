@@ -8,7 +8,13 @@ const FooterCopywright = () => {
         bg="#021d37"
         py="25px"
         fontWeight="600"
-        fontSize="22px"
+        fontSize={{
+          sm: "14px",
+          md: "14px",
+          lg: "22px",
+          xl: "22px",
+          "2xl": "22px",
+        }}
         lineHeight="30px"
         textAlign="center"
         color="#FFFFFF"

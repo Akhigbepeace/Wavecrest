@@ -1,14 +1,15 @@
-import { Box, Image, Text, Flex, Link } from "@chakra-ui/react";
-import React, { Fragment, useState, useEffect, useMemo } from "react";
+import { Box, Image, Text } from "@chakra-ui/react";
+import React, { Fragment, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Navbar from "components/layouts/Navbar";
+import Navbar from "components/Navbar";
 import academics from "assets/Images/academics.png";
 import Programmes from "Pages/Academics/Programmes";
 import Training from "Pages/Academics/Training";
 import Intership from "Pages/Academics/Internship";
 import NYSC from "Pages/Academics/NYSC";
-import Footer from "../Home/Footer";
-import FooterCopywright from "../Home/FooterCopywright";
+import Footer from "../../components/Footer";
+import FooterCopywright from "../../components/FooterCopywright";
+import LinkTabs from "../../components/LinkTabs";
 
 const Admission = () => {
   const { id } = useParams();
@@ -52,6 +53,10 @@ const Admission = () => {
     setCurrentId(id);
   }, [id]);
 
+  const handleLinkChange = (menuId) => {
+    setCurrentId(menuId);
+  };
+
   return (
     <Fragment>
       <Navbar />
@@ -79,46 +84,13 @@ const Admission = () => {
         </Box>
       </Box>
 
-      <Box>
-        <Flex alignItems="center" justifyContent="center">
-          {menuLinks.map((menuLink, index) => {
-            const isActive = activeLink.linkTitle === menuLink.linkTitle;
-
-            return (
-              <Flex
-                key={index}
-                bg={isActive ? "#021d37" : "#fff"}
-                border="3px solid #021d37"
-                w="242px"
-                h="74px"
-                m="15px 0"
-                textAlign="center"
-                alignItems="center"
-                justifyContent="center"
-                onClick={() => setCurrentId(menuLink.id)}
-                cursor="pointer"
-                _hover={{
-                  bg: isActive ? "#021d37" : "#F5F5F5",
-                }}
-              >
-                <Link
-                  fontFamily="Manrope"
-                  color={isActive ? "#EBEDEF" : "#021d37"}
-                  fontWeight="700"
-                  fontSize="20px"
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  {menuLink.linkTitle}
-                </Link>
-              </Flex>
-            );
-          })}
-        </Flex>
-
+      <LinkTabs
+        menuLinks={menuLinks}
+        activeItem={activeLink.linkTitle}
+        onLinkChange={handleLinkChange}
+      >
         {activeLink.content}
-      </Box>
+      </LinkTabs>
 
       <Footer />
       <FooterCopywright />

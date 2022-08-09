@@ -1,13 +1,13 @@
 import {
   Image,
-  Stack,
   Flex,
   Link,
   Box,
   useOutsideClick,
   useBoolean,
+  Stack,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import Logo from "assets/Images/logo_wavecrest.svg";
 import Linked from "assets/Images/linked.png";
@@ -19,6 +19,7 @@ import Search from "./Search";
 
 const Navbar = () => {
   const loc = useLocation();
+
   const socials = [
     {
       icon: Linked,
@@ -27,24 +28,28 @@ const Navbar = () => {
       target: "_blank",
       rel: "noreferrer",
     },
+
     {
       icon: Facebook,
       to: "https://web.facebook.com/WavecrestCollegeLagos/",
       target: "_blank",
       rel: "noreferrer",
     },
+
     {
       icon: Twitter,
       to: "https://twitter.com/WaveColl",
       target: "_blank",
       rel: "noreferrer",
     },
+
     {
       icon: Whatapps,
       to: "https://api.whatsapp.com/send/?phone=09096856606 &text&app_absent=0",
       target: "_blank",
       rel: "noreferrer",
     },
+
     {
       icon: Instagram,
       to: "http://instagram.com/wavecrestcollege",
@@ -74,6 +79,30 @@ const Navbar = () => {
     },
 
     {
+      name: "ACADEMICS",
+      to: "/academics/programmes",
+      NestedLinks: [
+        {
+          name: "PROGRAMMES",
+          to: "/academics/programmes",
+        },
+        {
+          name: "TRAINING",
+          to: "/academics/training",
+        },
+
+        {
+          name: "INTERNSHIP",
+          to: "/academics/internship",
+        },
+        {
+          name: "NYSC",
+          to: "/academics/nysc",
+        },
+      ],
+    },
+
+    {
       name: "ADMISSION",
       to: "/admission/admissionRequirements",
       NestedLinks: [
@@ -97,30 +126,6 @@ const Navbar = () => {
         {
           name: "FAQs",
           to: "/admission/faqs",
-        },
-      ],
-    },
-
-    {
-      name: "ACADEMICS",
-      to: "/academics/programmes",
-      NestedLinks: [
-        {
-          name: "PROGRAMMES",
-          to: "/academics/programmes",
-        },
-        {
-          name: "TRAINING",
-          to: "/academics/training",
-        },
-
-        {
-          name: "INTERNSHIP",
-          to: "/academics/internship",
-        },
-        {
-          name: "NYSC",
-          to: "/academics/nysc",
         },
       ],
     },
@@ -169,14 +174,7 @@ const Navbar = () => {
   });
 
   return (
-    <Box
-      zIndex="4"
-      w="100%"
-      mt="0"
-      position="sticky"
-      top="0"
-      transition="all 1s ease"
-    >
+    <Fragment>
       <Flex
         alignItems="center"
         bg="#FFF"
@@ -187,13 +185,7 @@ const Navbar = () => {
           <Image w="238px" h="52px" src={Logo} />
         </Link>
 
-        <Stack
-          direction="row"
-          alignItems="center"
-          w="100%"
-          justifyContent="flex-end"
-          transition="all 2s linear 1s"
-        >
+        <Stack direction="row" alignItems="center">
           <Search />
 
           {socials.map((social, index) => {
@@ -211,7 +203,7 @@ const Navbar = () => {
         </Stack>
       </Flex>
 
-      <Flex
+      <Box
         px="91px"
         pt="34px"
         justifyContent="space-between"
@@ -222,14 +214,21 @@ const Navbar = () => {
         position="sticky"
         top="0"
         zIndex="4"
+        display={{
+          sm: "none",
+          md: "none",
+          lg: "none",
+          xl: "flex",
+          "2xl": "flex",
+        }}
       >
         <Flex alignItems="center">
           {navLinks.map((navLink, index) => {
             return (
               <Flex
-              key={index}
-              ref={ref}
-              alignItems="center"
+                key={index}
+                ref={ref}
+                alignItems="center"
                 pb="25px"
                 mr="25px"
                 onMouseLeave={() => setShowNestedLinks.off()}
@@ -281,13 +280,14 @@ const Navbar = () => {
                         display="block"
                         fontWeight="100"
                         key={index}
-                        p="5px 20px"
+                        p="4px 20px"
                         borderBottom={
                           navLink.NestedLinks.length - 1 === index
                             ? "none"
                             : "1px solid white"
                         }
                         transition="all ease 0.5s"
+                        zIndex="2"
                         _hover={{
                           textDecoration: "none",
                           color: "brown",
@@ -350,8 +350,8 @@ const Navbar = () => {
             APPLY NOW
           </Link>
         </Flex>
-      </Flex>
-    </Box>
+      </Box>
+    </Fragment>
   );
 };
 

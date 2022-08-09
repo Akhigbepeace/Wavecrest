@@ -11,11 +11,11 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import Navbar from "components/layouts/Navbar";
+import Navbar from "components/Navbar";
 import blogPostImage from "assets/Images/blogpost.png";
 import searchImg from "assets/Images/search.svg";
-import Footer from "./Home/Footer";
-import FooterCopywright from "./Home/FooterCopywright";
+import Footer from "../components/Footer";
+import FooterCopywright from "../components/FooterCopywright";
 
 const BlogPost = () => {
   const categories = [

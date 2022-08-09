@@ -1,13 +1,13 @@
 import { Box, Image, Link, Text, Flex } from "@chakra-ui/react";
 import React, { Fragment, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Navbar from "components/layouts/Navbar";
+import Navbar from "components/Navbar";
 import about from "assets/Images/About.png";
 import Profile from "./Profile/Index";
 import Milestone from "./Milestone";
 import OurTeam from "./Our Team";
-import Footer from "Pages/Home/Footer";
-import FooterCopywright from "Pages/Home/FooterCopywright";
+import Footer from "components/Footer";
+import FooterCopywright from "components/FooterCopywright";
 
 const About = () => {
   const { id } = useParams();

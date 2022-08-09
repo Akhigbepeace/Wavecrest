@@ -166,7 +166,7 @@ const Profile = () => {
             return (
               <Box key={index}>
                 <Heading
-                  fontFamily="Dancing Script"
+                  fontFamily="Visual Hollow Script"
                   color="#021d37"
                   fontSize="55px"
                   fontWeight="400"

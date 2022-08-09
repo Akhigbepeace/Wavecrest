@@ -1,5 +1,4 @@
 import {
-  Box,
   Grid,
   Link,
   Image,
@@ -7,6 +6,7 @@ import {
   Button,
   Flex,
   ListItem,
+  Heading,
   Input,
   List,
   Stack,
@@ -111,15 +111,44 @@ const Footer = () => {
   ];
 
   return (
-    <Grid background="#EBEDEF" gridTemplateColumns="repeat(3, 1fr)" pt="54px">
+    <Grid
+      background="#EBEDEF"
+      gridTemplateColumns={{
+        sm: "1fr",
+        md: "1fr",
+        lg: "1fr",
+        xl: "repeat(3, auto)",
+        "2xl": "repeat(3, auto)",
+      }}
+      gridGap="45px"
+      pt="54px"
+      px={{
+        sm: "91px",
+        md: "91px",
+        lg: "91px",
+        xl: "91px",
+        "2xl": "91px",
+      }}
+    >
       <Flex
         flexDirection="column"
-        alignItems="flex-end"
-        textAlign="right"
-        mr="82px"
+        alignItems={{
+          sm: "flex-start",
+          md: "flex-start",
+          lg: "flex-start",
+          xl: "flex-end",
+          "2xl": "flex-end",
+        }}
       >
         <Link to="/" as={NavLink}>
-          <Image src={logo} alt="logo" w="270px" height="54px" mb="10px" />
+          <Image
+            src={logo}
+            alt="logo"
+            w="270px"
+            height="54px"
+            mb="10px"
+            alignSelf="right"
+          />
         </Link>
 
         <Text
@@ -129,9 +158,9 @@ const Footer = () => {
           fontWeight="400"
           fontSize="18px"
           lineHeight="25px"
-          mr="7px"
+          textAlign="right"
         >
-          75 Adisa Bashua Street Off Adelabu Street, Surulere, Lagos State,
+          75 Adisa Bashua Street,Off Adelabu Street, Surulere,Lagos State,
           Nigeria.
         </Text>
 
@@ -141,15 +170,16 @@ const Footer = () => {
           fontSize="18px"
           fontWeight="700"
           lineHeight="25px"
-          m="15px 7px"
           color="#021D37"
+          textAlign="right"
+          mt="10px"
         >
           <Text fontFamily="Manrope">+234 909 685 6606</Text>
           <Text fontFamily="Manrope">+234 808 396 4840</Text>
           <Text fontFamily="Manrope">info@wavecrest.edu.ng</Text>
         </Flex>
 
-        <Flex>
+        <Flex justifyContent="space-between">
           {socials.map((social, index) => {
             return (
               <Link
@@ -163,7 +193,8 @@ const Footer = () => {
                   alt="linkedin"
                   w="40px"
                   h="40px"
-                  mr="10px"
+                  mt="10px"
+                  ml="15px"
                 />
               </Link>
             );
@@ -171,35 +202,33 @@ const Footer = () => {
         </Flex>
       </Flex>
 
-      <Box>
-        <List
-          display="grid"
-          gridTemplateColumns="repeat(3, auto)"
-          gridGap="20px"
-          lineHeight="35px"
-          m="0 auto"
-        >
-          {pages.map((page, index) => {
-            return (
-              <ListItem key={index}>
-                <Link
-                  href={page.to}
-                  fontFamily="Manrope"
-                  fontWeight="700"
-                  fontSize="16px"
-                  color="#021D37"
-                  _hover={{ textDecoration: "none", color: "#020E1B" }}
-                >
-                  {page.name}
-                </Link>
-              </ListItem>
-            );
-          })}
-        </List>
-      </Box>
+      <List display="grid" gridTemplateColumns="repeat(3, 1fr)">
+        {pages.map((page, index) => {
+          return (
+            <ListItem key={index}>
+              <Link
+                href={page.to}
+                fontFamily="Manrope"
+                fontWeight="700"
+                fontSize={{
+                  sm: "14px",
+                  md: "14px",
+                  lg: "14px",
+                  xl: "16px",
+                  "2xl": "16px",
+                }}
+                color="#021D37"
+                _hover={{ textDecoration: "none", color: "#020E1B" }}
+              >
+                {page.name}
+              </Link>
+            </ListItem>
+          );
+        })}
+      </List>
 
-      <Flex flexDirection="column" pr="24px">
-        <Text
+      <Flex flexDirection="column">
+        <Heading
           color="#021D37"
           fontFamily="Playfair Display"
           fontWeight="700"
@@ -207,9 +236,8 @@ const Footer = () => {
           lineHeight="29px"
         >
           Suscribe to our Newsletter
-        </Text>
+        </Heading>
         <Text
-          w="436px"
           color="#021d37"
           p="5px 0"
           fontFamily="Manrope"
@@ -223,7 +251,6 @@ const Footer = () => {
           <Input
             placeholder="Name"
             bg="#fff"
-            w="435px"
             h="51px"
             mt="15px"
             p="15px 20px"
@@ -240,7 +267,6 @@ const Footer = () => {
           <Input
             placeholder="Email"
             bg="#fff"
-            w="435px"
             h="51px"
             mt="10px"
             borderRadius="3px"

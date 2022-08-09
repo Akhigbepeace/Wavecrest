@@ -9,27 +9,18 @@ import {
   Input,
   Button,
   Textarea,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
   Link,
 } from "@chakra-ui/react";
-import React, { Fragment, useRef, useState } from "react";
-import { BsFillCheckCircleFill } from "react-icons/bs";
-import { FaTimesCircle } from "react-icons/fa";
+import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
-import Navbar from "components/layouts/Navbar";
+import Navbar from "components/Navbar";
 import contactpic from "assets/Images/contact.png";
 import aboutgallery1 from "assets/Images/aboutgallery1.png";
 import aboutgallery2 from "assets/Images/aboutgallery2.png";
 import aboutgallery3 from "assets/Images/aboutgallery3.png";
 import aboutgallery4 from "assets/Images/aboutgallery4.png";
-import Footer from "Pages/Home/Footer";
-import FooterCopywright from "Pages/Home/FooterCopywright";
+import Footer from "components/Footer";
+import FooterCopywright from "components/FooterCopywright";
 
 const Contact = () => {
   const initialValues = {
@@ -112,22 +103,22 @@ const Contact = () => {
 
   const quickLinks = [
     {
-      image: { aboutgallery1 },
+      image: aboutgallery1,
       text: "News and Events",
       linkTo: "/",
     },
     {
-      image: { aboutgallery2 },
+      image: aboutgallery2,
       text: "Testimonials",
       linkTo: "/blog",
     },
     {
-      image: { aboutgallery3 },
+      image: aboutgallery3,
       text: "About",
       linkTo: "/about/profile",
     },
     {
-      image: { aboutgallery4 },
+      image: aboutgallery4,
       text: "Programmes",
       linkTo: "/academics/programmes",
     },
@@ -143,61 +134,16 @@ const Contact = () => {
         e.target,
         "JPAG_ZJVlAcuO_5D-"
       )
-      .then(
-        <Box>
-          <Modal>
-            <ModalOverlay />
-            <ModalContent>
-              <ModalHeader></ModalHeader>
-              <ModalCloseButton />
-              <ModalBody>
-                <Heading>
-                  <BsFillCheckCircleFill color="green" /> Success!!!
-                </Heading>
-                <Text>Your Message has been sent successful </Text>
-              </ModalBody>
-
-              <ModalFooter>
-                <Button colorScheme="blue" mr={3}>
-                  Close
-                </Button>
-              </ModalFooter>
-            </ModalContent>
-          </Modal>
-        </Box>
-      )
-      .catch(
-        <Box>
-          <Modal>
-            <ModalOverlay />
-            <ModalContent>
-              <ModalHeader></ModalHeader>
-              <ModalCloseButton />
-              <ModalBody>
-                <Heading>
-                  <FaTimesCircle color="red" />
-                  Oops, Something went wrong!!!
-                </Heading>
-                <Text>Your Message wasn't delivered </Text>
-              </ModalBody>
-
-              <ModalFooter>
-                <Button colorScheme="blue" mr={3}>
-                  Close
-                </Button>
-              </ModalFooter>
-            </ModalContent>
-          </Modal>
-        </Box>
-      );
+      .then()
+      .catch();
   };
 
   return (
-    <Fragment>
+    <Box>
       <Navbar />
 
-      <Box h="441px" w="100%" gridGap="68px" position="relative">
-        <Image src={contactpic} h="100%" w="100%" />
+      <Box h="441px" position="relative">
+        <Image src={contactpic} h="100%" w="100%" objectFit="cover" />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -219,8 +165,31 @@ const Contact = () => {
         </Box>
       </Box>
 
-      <Box p="50px">
-        <Grid gridTemplateColumns="1fr 1fr" gridGap="68px">
+      <Box
+        pt="50px"
+        px={{
+          sm: "15px",
+          md: "15px",
+        }}
+        maxW={{
+          sm: "320px",
+          md: "768px",
+          lg: "960px",
+          xl: "1200px",
+          "2xl": "1440px",
+        }}
+        mx="auto"
+      >
+        <Grid
+          gridTemplateColumns={{
+            sm: "1fr",
+            md: "1fr",
+            lg: "auto auto",
+            xl: "auto auto",
+            "2xl": "auto auto",
+          }}
+          gridGap="50px"
+        >
           <Flex flexDirection="column" textAlign="left">
             <Heading
               fontFamily="Playfair Display, serif"
@@ -234,7 +203,6 @@ const Contact = () => {
             </Heading>
 
             <Text
-              w="449px"
               mb="15px"
               fontFamily="Manrope, sans-serif"
               fontWeight="400"
@@ -256,7 +224,6 @@ const Contact = () => {
                       variant={field.variant}
                       placeholder={field.placeHolder}
                       name={field.name}
-                      w="526px"
                       h="67px"
                       mb="10px"
                       onChange={inputValues}
@@ -277,7 +244,6 @@ const Contact = () => {
                   placeholder="Message"
                   name="message"
                   onChange={inputValues}
-                  w="526px"
                   h="223px"
                   mb="10px"
                   _placeholder={{
@@ -310,13 +276,19 @@ const Contact = () => {
             </Button>
           </Flex>
 
-          <Grid>
+          <Box>
             <Heading mb="10px">Visit Us</Heading>
 
             <Box>
               <iframe
                 title="Wavecrest College of Hospitality"
-                width="665"
+                width={{
+                  sm: "335",
+                  md: "335",
+                  lg: "665",
+                  xl: "665",
+                  "2xl": "665",
+                }}
                 height="364"
                 frameBorder="0"
                 scrolling="no"
@@ -340,7 +312,16 @@ const Contact = () => {
               </Text>
             </Box>
 
-            <Grid gridTemplateColumns="1fr 1fr" mt="30px">
+            <Grid
+              gridTemplateColumns={{
+                sm: "1fr",
+                md: "1fr",
+                lg: "1fr",
+                xl: "auto auto",
+                "2xl": "auto auto",
+              }}
+              mt="30px"
+            >
               {enquires.map((enquiry, index) => {
                 return (
                   <Flex key={index} flexDirection="column" mb="30px">
@@ -366,10 +347,19 @@ const Contact = () => {
                 );
               })}
             </Grid>
-          </Grid>
+          </Box>
         </Grid>
 
-        <Box>
+        <Box
+          display={{
+            sm: "none",
+            md: "none",
+            lg: "none",
+            xl: "block",
+            "2xl": "block",
+          }}
+          mb="100px"
+        >
           <Heading
             m="22px 0"
             color="#021D37"
@@ -381,35 +371,42 @@ const Contact = () => {
             Quick Links
           </Heading>
 
-          <Flex>
+          <Flex justifyContent="space-between">
             {quickLinks.map((quickLink) => {
               return (
                 <Link
                   href={quickLink.linkTo}
                   w="294px"
                   h="241px"
-                  borderRadius="30px"
                   bg="contact.png"
-                  mr="27px"
                   transition="all ease 0.8s"
                   _hover={{
                     transform: "scale(1.2)",
                   }}
                 >
-                  <Image src="https://picsum.photos/200" w="100%" h="100%" />
+                  <Image
+                    src={quickLink.image}
+                    w="100%"
+                    h="100%"
+                    borderRadius="3px"
+                    objectFit="cover"
+                  />
 
                   <Flex
-                    bg="rgba(2,29,55, 0.65)"
+                    bg="linear-gradient(180deg, rgba(2, 29, 55, 0) 0%, rgba(2, 29, 55, 0.7) 100%);"
                     position="relative"
                     h="100%"
                     top="-241px"
+                    borderRadius="3px"
                   >
                     <Text
                       color="#FFF"
-                      alignSelf="center"
                       fontFamily="Playfair Display"
-                      fontSize="28px"
+                      fontSize="22px"
+                      mt="auto"
                       mx="auto"
+                      mb="20px"
+                      textAlign="center"
                     >
                       {quickLink.text}
                     </Text>
@@ -423,7 +420,7 @@ const Contact = () => {
 
       <Footer />
       <FooterCopywright />
-    </Fragment>
+    </Box>
   );
 };
 

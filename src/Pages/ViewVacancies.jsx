@@ -1,8 +1,8 @@
 import { Box, Button, Heading, Input, Text } from "@chakra-ui/react";
 import React from "react";
-import Navbar from "components/layouts/Navbar";
-import Footer from "Pages/Home/Footer";
-import FooterCopywright from "Pages/Home/FooterCopywright";
+import Navbar from "components/Navbar";
+import Footer from "components/Footer";
+import FooterCopywright from "components/FooterCopywright";
 
 const ViewVacancies = () => {
   const forms = [
