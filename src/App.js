@@ -18,6 +18,9 @@ import BlogPost from "Pages/BlogPost";
 import SupportUs from "Pages/SupportUs";
 import ViewVacancies from "Pages/ViewVacancies";
 import Downloads from "Pages/Downloads";
+import HNDProgrammeDesc from "Pages/HNDProgrammeDesc";
+import NDProgrammeDesc from "Pages/NDProgrammeDesc";
+import CertificateCoursesDesc from "Pages/CertificateCoursesDesc";
 import SearchResult from "Pages/SearchResult";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -65,6 +68,13 @@ function App() {
             <Route exact path="/posts" element={<BlogPost />} />
             <Route exact path="/viewVacancies" element={<ViewVacancies />} />
             <Route exact path="/downloads" element={<Downloads />} />
+            <Route exact path="/HNDProgramme" element={<HNDProgrammeDesc />} />
+            <Route exact path="/NDProgramme" element={<NDProgrammeDesc />} />
+            <Route
+              exact
+              path="/CertificateCourses"
+              element={<CertificateCoursesDesc />}
+            />
           </Routes>
         </Fragment>
       </Router>
