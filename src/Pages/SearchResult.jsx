@@ -11,12 +11,12 @@ import {
 import React, { Fragment } from "react";
 import { useSearchParams } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import Navbar from "components/layouts/Navbar";
+import Navbar from "components/Navbar";
 import about from "assets/Images/About.png";
 import searchImg from "assets/Images/search.svg";
 import blogPost2 from "assets/Images/aboutus.png";
-import Footer from "./Home/Footer";
-import FooterCopywright from "./Home/FooterCopywright";
+import Footer from "../components/Footer";
+import FooterCopywright from "../components/FooterCopywright";
 
 const SearchResult = () => {
   const results = [

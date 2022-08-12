@@ -9,13 +9,13 @@ import {
   Button,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import Navbar from "components/layouts/Navbar";
+import Navbar from "components/Navbar";
 import admission from "assets/Images/Admission.png";
 import visa from "assets/Images/visa.png";
 import paypal from "assets/Images/paypal.png";
 import mastercard from "assets/Images/mastercard.png";
-import Footer from "./Home/Footer";
-import FooterCopywright from "./Home/FooterCopywright";
+import Footer from "../components/Footer";
+import FooterCopywright from "../components/FooterCopywright";
 
 const SupportUs = () => {
   const forms = [

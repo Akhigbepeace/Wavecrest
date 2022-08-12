@@ -31,12 +31,20 @@ function App() {
     },
   };
 
+  const breakpoints = {
+    sm: "320px",
+    md: "768px",
+    lg: "960px",
+    xl: "1200px",
+    "2xl": "1440px",
+  };
+
   const fonts = {
     heading: "Open Sans",
     body: "Open Sans",
   };
 
-  const theme = extendTheme({ colors, fonts });
+  const theme = extendTheme({ colors, fonts, breakpoints });
 
   return (
     <ChakraProvider theme={theme}>

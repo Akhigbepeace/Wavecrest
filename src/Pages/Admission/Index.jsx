@@ -1,15 +1,15 @@
 import { Box, Image, Text, Flex, Link } from "@chakra-ui/react";
 import React, { Fragment, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Navbar from "components/layouts/Navbar";
+import Navbar from "components/Navbar";
 import admission from "assets/Images/Admission.png";
 import AdmissionRequirements from "Pages/Admission/AdmissionRequirements";
 import TuitionAndScholarship from "Pages/Admission/TuitionAndScholarship";
 import ApplyOnline from "Pages/Admission/ApplyOnline";
 import Hostel from "Pages/Admission/Hostel";
 import FAQs from "Pages/Admission/FAQs";
-import Footer from "../Home/Footer";
-import FooterCopywright from "../Home/FooterCopywright";
+import Footer from "../../components/Footer";
+import FooterCopywright from "../../components/FooterCopywright";
 
 const Admission = () => {
   const { id } = useParams();
