@@ -1,5 +1,6 @@
 import { Box, Text, Image, Heading, Flex, Link } from "@chakra-ui/react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import studyProgrammes1 from "assets/Images/studyprogrammes1.png";
 import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
 import studyProgrammes4 from "assets/Images/studyprogrammes4.png";
@@ -16,9 +17,14 @@ const Programmes = () => {
       captionHeading: "ACQUIRE AN HND IN HOSPITALITY MANAGEMENT",
       captionTime: "2 Years | Full Time",
       captionButton: "Apply Now",
+      navigateTo: function ShowProgramme(e) {
+        e.preventDefault();
+
+        navigate("/HNDProgramme", { replace: true });
+      },
     },
     {
-      programmeTitle: "Higher National Diploma (HND) in Hospitality Management",
+      programmeTitle: "National Diploma (ND) in Hospitality Management",
       background: "#EBEDEF",
       linkContent: "SHORT COURSES",
       imageSrc: studyProgrammes4,
@@ -26,9 +32,14 @@ const Programmes = () => {
       captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
       captionTime: "2 Years | Part Time",
       captionButton: "Apply Now",
+      navigateTo: function ShowProgramme(e) {
+        e.preventDefault();
+
+        navigate("/NDProgramme", { replace: true });
+      },
     },
     {
-      programmeTitle: "Higher National Diploma (HND) in Hospitality Management",
+      programmeTitle: "Certificate Course In Hospitality Operations",
       background: "#FFF",
       linkContent: "CERTIFICATE COURSE IN HOSPITALITY OPERATIONS",
       imageSrc: studyProgrammes3,
@@ -36,21 +47,34 @@ const Programmes = () => {
       captionHeading: "SPEND A GAP YEAR IN HOSPITALITY TRAINING",
       captionTime: "1 Year | Full Time",
       captionButton: "Apply Now",
+      navigateTo: function ShowProgramme(e) {
+        e.preventDefault();
+
+        navigate("/CertificateCourses", { replace: true });
+      },
     },
   ];
+  const navigate = useNavigate();
+
+  const ApplyNow = (e) => {
+    e.preventDefault();
+    navigate("/admission/applyOnline", { replace: true });
+  };
 
   return (
     <Box>
       {programmes.map((programme) => {
         return (
-          <Box bg={programme.background} p="75px 91px">
+          <Box bg={programme.background} py="75px">
             <Heading
               fontFamily="Playfair Display"
               fontWeight="700"
               fontSize="32px"
               textAlign="left"
+              cursor="pointer"
+              onClick={programme.navigateTo}
               m="0 auto"
-              w="1247px"
+              w="1147px"
             >
               {programme.programmeTitle}
             </Heading>
@@ -58,8 +82,11 @@ const Programmes = () => {
             <Flex
               flexDirection="column"
               position="relative"
+              cursor="pointer"
+              onClick={(e) => ApplyNow(e)}
               m="0 auto"
-              w="1247px"
+              w="1147px"
+              transition="all ease 0.7s"
             >
               <Image
                 src={programme.imageSrc}
@@ -116,6 +143,7 @@ const Programmes = () => {
                 >
                   {programme.captionButton}
                 </Link>
+
                 <Link
                   display="flex"
                   textAlign="center"
