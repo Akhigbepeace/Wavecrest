@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "components/Navbar";
 import about from "assets/Images/About.png";
 import Profile from "./Profile/Index";
-import Milestone from "./Milestone";
+import Milestone from "./Milestone/Milestone";
 import OurTeam from "./Our Team";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
@@ -51,7 +51,7 @@ const About = () => {
 
       <Box>
         <Box h="441px" w="100%" gridGap="68px" position="relative">
-          <Image src={about} h="100%" w="100%" />
+          <Image src={about} h="100%" w="100%" objectFit="cover" />
 
           <Box
             bg="rgba(0, 24, 71, 0.5)"
@@ -74,10 +74,20 @@ const About = () => {
         </Box>
 
         <Box>
-          <Flex alignItems="center" justifyContent="center">
+          <Flex
+            alignItems="center"
+            justifyContent="center"
+            display={{
+              sm: "none",
+              md: "none",
+              lg: "none",
+              xl: "flex",
+              "2xl": "flex",
+            }}
+          >
             {menuLinks.map((menuLink, index) => {
               const isActive = activeLink.linkTitle === menuLink.linkTitle;
-              
+
               return (
                 <Link
                   key={index}

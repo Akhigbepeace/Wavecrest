@@ -2,11 +2,11 @@ import {
   Box,
   IconButton,
   useBreakpointValue,
-  Flex,
   Heading,
   Text,
   Image,
   Link,
+  Flex,
 } from "@chakra-ui/react";
 import React from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
@@ -77,6 +77,13 @@ export default function CaptionCarousel() {
           top={top}
           transform={"translate(0%, -50%)"}
           zIndex={2}
+          display={{
+            sm: "none",
+            md: "none",
+            lg: "none",
+            xl: "block",
+            "2xl": "block",
+          }}
           _hover={{
             bg: "transparent",
           }}
@@ -93,6 +100,13 @@ export default function CaptionCarousel() {
           top={top}
           transform={"translate(0%, -50%)"}
           zIndex={2}
+          display={{
+            sm: "none",
+            md: "none",
+            lg: "none",
+            xl: "block",
+            "2xl": "block",
+          }}
           _hover={{
             bg: "transparent",
           }}
@@ -101,32 +115,118 @@ export default function CaptionCarousel() {
           <BiChevronRight size="40px" />
         </IconButton>
 
-        <Slider {...settings} ref={(slider) => setSlider(slider)}>
+        <Box
+          display={{
+            sm: "block",
+            md: "block",
+            lg: "block",
+            xl: "none",
+            "2xl": "none",
+          }}
+          px={{
+            sm: "20px",
+            md: "20px",
+            lg: "20px",
+          }}
+          pt={{
+            sm: "20px",
+            md: "20px",
+            lg: "20px",
+          }}
+          bg="#DDD"
+        >
+          <Box bg="#021D37" h="3px" w="88px" mt="20px"></Box>
+
+          <Heading
+            fontSize="22px"
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            mt="10px"
+          >
+            Upcoming Events
+          </Heading>
+        </Box>
+
+        <Slider {...settings} ref={(slider) => setSlider(slider)} pauseOnFocus>
           {cards.map((card, index) => (
-            <Box key={index} h={"446px"} position="relative" bg="#DDD">
+            <Box
+              key={index}
+              bg="#DDD"
+              position="relative"
+              pt={{
+                sm: "40px",
+                md: "40px",
+                lg: "40px",
+              }}
+            >
               <Flex
-                flexDirection="row"
+                flexDirection={{
+                  sm: "column",
+                  md: "row",
+                  lg: "row",
+                  xl: "row",
+                  "2xl": "row",
+                }}
                 height="100%"
                 position="relative"
                 alignItems="center"
                 justifyContent="center"
                 w="80%"
                 m="0 auto"
+                pb={{
+                  sm: "90px",
+                  md: "90px",
+                  lg: "90px",
+                }}
               >
-                <Image src={Founders} alt="founders day" w="303px" h="295px" />
+                <Image
+                  src={Founders}
+                  alt="founders day"
+                  w={{
+                    sm: "216px",
+                    md: "216px",
+                    lg: "216px",
+                    xl: "303px",
+                    "2xl": "303px",
+                  }}
+                  h={{
+                    sm: "211px",
+                    md: "211px",
+                    lg: "211px",
+                    xl: "295px",
+                    "2xl": "295px",
+                  }}
+                  mr={{
+                    sm: "0",
+                    md: "100px",
+                    lg: "100px",
+                    xl: "122px",
+                    "2xl": "122px",
+                  }}
+                />
 
-                <Box
-                  display="flex"
+                <Flex
                   flexDirection="column"
                   alignItems="center"
-                  ml="122px"
-                  bg={card.bg}
+                  textAlign="center"
+                  justifyContent="center"
                 >
                   <Heading
                     color="#021D37"
                     fontFamily="Playfair Display"
                     fontWeight="700"
-                    fontSize="40px"
+                    mb={{
+                      sm: "-30px",
+                      md: "-30px",
+                      lg: "-30px",
+                    }}
+                    fontSize={{
+                      sm: "22px",
+                      md: "22px",
+                      lg: "22px",
+                      xl: "40px",
+                      "2xl": "40px",
+                    }}
                     lineHeight="53px"
                     textAlign="center"
                   >
@@ -135,12 +235,30 @@ export default function CaptionCarousel() {
 
                   <Text
                     fontFamily="Manrope"
-                    fontSize="16px"
+                    fontSize={{
+                      sm: "14px",
+                      md: "14px",
+                      lg: "14px",
+                      xl: "16px",
+                      "2xl": "16px",
+                    }}
                     fontWeight="400"
                     lineHeight="22px"
-                    textAlign="center"
+                    textAlign={{
+                      sm: "left",
+                      md: "left",
+                      lg: "left",
+                      xl: "center",
+                      "2xl": "center",
+                    }}
                     mt="22px"
-                    w="638px"
+                    w={{
+                      sm: "291px",
+                      md: "291px",
+                      lg: "291px",
+                      xl: "638px",
+                      "2xl": "638px",
+                    }}
                   >
                     {card.text}
                   </Text>
@@ -178,7 +296,7 @@ export default function CaptionCarousel() {
                   >
                     {card.link}
                   </Link>
-                </Box>
+                </Flex>
               </Flex>
             </Box>
           ))}

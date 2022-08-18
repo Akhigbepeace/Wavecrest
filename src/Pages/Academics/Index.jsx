@@ -7,9 +7,9 @@ import Programmes from "Pages/Academics/Programmes";
 import Training from "Pages/Academics/Training";
 import Intership from "Pages/Academics/Internship";
 import NYSC from "Pages/Academics/NYSC";
-import Footer from "../../components/Footer";
-import FooterCopywright from "../../components/FooterCopywright";
-import LinkTabs from "../../components/LinkTabs";
+import Footer from "components/Footer";
+import FooterCopywright from "components/FooterCopywright";
+import LinkTabs from "components/LinkTabs";
 
 const Admission = () => {
   const { id } = useParams();

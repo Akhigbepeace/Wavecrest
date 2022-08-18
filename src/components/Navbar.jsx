@@ -1,13 +1,21 @@
 import {
-  Image,
-  Flex,
-  Link,
   Box,
+  Flex,
+  Image,
+  Link,
+  Modal,
+  ModalOverlay,
+  ModalCloseButton,
+  ModalContent,
+  ModalBody,
+  useDisclosure,
+  Stack,
   useOutsideClick,
   useBoolean,
-  Stack,
+  Text,
 } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
+import { FaChevronRight } from "react-icons/fa";
 import { NavLink, useLocation } from "react-router-dom";
 import Logo from "assets/Images/logo_wavecrest.svg";
 import Linked from "assets/Images/linked.png";
@@ -16,6 +24,7 @@ import Facebook from "assets/Images/facebook.svg";
 import Twitter from "assets/Images/Twitter.svg";
 import Instagram from "assets/Images/ig.svg";
 import Search from "./Search";
+import Menu from "assets/Images/Menu.png";
 
 const Navbar = () => {
   const loc = useLocation();
@@ -62,6 +71,7 @@ const Navbar = () => {
     {
       name: "ABOUT",
       to: "/about/profile",
+      icon: <FaChevronRight size="15px" />,
       NestedLinks: [
         {
           name: "PROFILE",
@@ -81,6 +91,7 @@ const Navbar = () => {
     {
       name: "ACADEMICS",
       to: "/academics/programmes",
+      icon: <FaChevronRight size="15px" />,
       NestedLinks: [
         {
           name: "PROGRAMMES",
@@ -105,6 +116,7 @@ const Navbar = () => {
     {
       name: "ADMISSION",
       to: "/admission/admissionRequirements",
+      icon: <FaChevronRight size="15px" />,
       NestedLinks: [
         {
           name: "ADMISSION REQUIREMENTS",
@@ -145,6 +157,7 @@ const Navbar = () => {
     {
       name: "CAREER",
       to: "/career/postJobVacancies",
+      icon: <FaChevronRight size="15px" />,
       NestedLinks: [
         {
           name: "POST JOB VACANCIES",
@@ -173,6 +186,8 @@ const Navbar = () => {
     handler: () => setShowNestedLinks.off(),
   });
 
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <Fragment>
       <Flex
@@ -180,6 +195,13 @@ const Navbar = () => {
         bg="#FFF"
         justifyContent="space-between"
         p="29px 91px"
+        display={{
+          sm: "none",
+          md: "none",
+          lg: "none",
+          xl: "flex",
+          "2xl": "flex",
+        }}
       >
         <Link to="/" as={NavLink}>
           <Image w="238px" h="52px" src={Logo} />
@@ -201,6 +223,180 @@ const Navbar = () => {
             );
           })}
         </Stack>
+      </Flex>
+
+      <Flex
+        bg="#FFF"
+        justifyContent="space-between"
+        p="29px 20px"
+        position="sticky"
+        top="0"
+        zIndex="4"
+        display={{
+          sm: "flex",
+          md: "flex",
+          lg: "flex",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <Link to="/" as={NavLink}>
+          <Image
+            w={{
+              sm: "143px",
+              md: "143px",
+              lg: "160px",
+              xl: "238px",
+              "2xl": "238px",
+            }}
+            h={{
+              sm: "37px",
+              md: "37px",
+              lg: "37px",
+              xl: "52px",
+              "2xl": "52px",
+            }}
+            src={Logo}
+          />
+        </Link>
+
+        <Box cursor="pointer">
+          <Image
+            src={Menu}
+            w="37px"
+            h="37px"
+            display={{
+              sm: "block",
+              md: "block",
+              lg: "block",
+              xl: "none",
+              "2xl": "none",
+            }}
+            onClick={onOpen}
+          />
+
+          <Modal
+            isCentered
+            isOpen={isOpen}
+            motionPreset="slideInRight"
+            onClose={onClose}
+            display={{
+              sm: "block",
+              md: "block",
+              lg: "block",
+              xl: "none",
+              "2xl": "none",
+            }}
+          >
+            <ModalOverlay bg="none" />
+
+            <ModalContent
+              bg="#021D37"
+              p="0"
+              margin="auto"
+              borderRadius="0"
+              h="100%"
+              w={{
+                sm: "235px",
+                md: "345px",
+                lg: "355px",
+              }}
+              ml="0"
+            >
+              <ModalCloseButton
+                bg="#021D37"
+                color="#FFF"
+                cursor="pointer"
+                _hover={{
+                  bg: "#020E1B",
+                }}
+              />
+
+              <ModalBody
+                w={{
+                  sm: "235px",
+                  md: "345px",
+                  lg: "355px",
+                }}
+              >
+                <Flex flexDirection="column">
+                  {navLinks.map((navLink, index) => {
+                    return (
+                      <Link
+                        key={index}
+                        display="flex"
+                        color="#FFF"
+                        fontFamily="Open Sans"
+                        fontWeight="700"
+                        fontSize="16px"
+                        lineHeight="30px"
+                        mt="20px"
+                        transition="all ease 0.5s"
+                        to={navLink.to}
+                        as={NavLink}
+                        _hover={{
+                          color: "brown",
+                          textDecoration: "none",
+                        }}
+                      >
+                        <Text>{navLink.name}</Text>
+
+                        <Box color="white" mt="7px" ml="10px">
+                          {navLink.icon}
+                        </Box>
+                      </Link>
+                    );
+                  })}
+                </Flex>
+
+                <Flex flexDirection="column" mt="80px" w="160px">
+                  <Link
+                    href="/support"
+                    bg="transparent"
+                    p="7px"
+                    color="#FFF"
+                    mb="20px"
+                    border="2px solid #fff"
+                    borderRadius="3px"
+                    fontFamily="Open Sans"
+                    fontWeight="700"
+                    fontSize="17px"
+                    textAlign="center"
+                    _hover={{
+                      textDecoration: "none",
+                      bg: "#020E1B",
+                      border: "2px solid #EBEDEF",
+                      color: "#FFF",
+                    }}
+                  >
+                    SUPPORT US
+                  </Link>
+
+                  <Link
+                    href="/admission/applyOnline"
+                    color="#021D37"
+                    p="7px"
+                    bg="#FFF"
+                    border="2px solid #fff"
+                    borderRadius="3px"
+                    fontFamily="Open Sans"
+                    fontWeight="700"
+                    fontSize="17px"
+                    textAlign="center"
+                    _hover={{
+                      textDecoration: "none",
+                      bg: "#EBEDEF",
+                      border: "2px solid #EBEDEF",
+                      color: "#021d37",
+                    }}
+                  >
+                    APPLY NOW
+                  </Link>
+                </Flex>
+              </ModalBody>
+            </ModalContent>
+          </Modal>
+        </Box>
       </Flex>
 
       <Box

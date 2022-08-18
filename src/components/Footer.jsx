@@ -116,14 +116,14 @@ const Footer = () => {
       gridTemplateColumns={{
         sm: "1fr",
         md: "1fr",
-        lg: "1fr",
+        lg: "auto",
         xl: "repeat(3, auto)",
         "2xl": "repeat(3, auto)",
       }}
       gridGap="45px"
       pt="54px"
       px={{
-        sm: "91px",
+        sm: "20px",
         md: "91px",
         lg: "91px",
         xl: "91px",
@@ -133,22 +133,11 @@ const Footer = () => {
       <Flex
         flexDirection="column"
         alignItems={{
-          sm: "flex-start",
-          md: "flex-start",
-          lg: "flex-start",
-          xl: "flex-end",
-          "2xl": "flex-end",
+          sm: "flex-end",
         }}
       >
         <Link to="/" as={NavLink}>
-          <Image
-            src={logo}
-            alt="logo"
-            w="270px"
-            height="54px"
-            mb="10px"
-            alignSelf="right"
-          />
+          <Image src={logo} alt="logo" w="270px" height="54px" mb="10px" />
         </Link>
 
         <Text
@@ -202,7 +191,15 @@ const Footer = () => {
         </Flex>
       </Flex>
 
-      <List display="grid" gridTemplateColumns="repeat(3, 1fr)">
+      <List
+        display="grid"
+        gridTemplateColumns="repeat(3, 1fr)"
+        textAlign={{
+          sm: "left",
+          md: "left",
+          lg: "left",
+        }}
+      >
         {pages.map((page, index) => {
           return (
             <ListItem key={index}>
@@ -217,6 +214,9 @@ const Footer = () => {
                   xl: "16px",
                   "2xl": "16px",
                 }}
+                             ml={{
+                  sm: "14px",
+                  md: "14px",}}
                 color="#021D37"
                 _hover={{ textDecoration: "none", color: "#020E1B" }}
               >

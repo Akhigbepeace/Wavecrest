@@ -1,4 +1,4 @@
-import { Box, Image, Heading, Text, Grid } from "@chakra-ui/react";
+import { Box, Image, Heading, Text, Grid, Button } from "@chakra-ui/react";
 import Navbar from "components/Navbar";
 import React from "react";
 import contactpic from "assets/Images/contact.png";
@@ -35,13 +35,22 @@ const Downloads = () => {
     {
       name: "programme fliers",
     },
+    {
+      name: "cth brochure",
+    },
+    {
+      name: "nsq brochure",
+    },
+    {
+      name: "programme fliers",
+    },
   ];
   return (
     <Box>
       <Navbar />
 
       <Box h="441px" w="100%" gridGap="68px" position="relative">
-        <Image src={contactpic} h="100%" w="100%" />
+        <Image src={contactpic} h="100%" w="100%" objectFit="cover" />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -54,7 +63,13 @@ const Downloads = () => {
             color="white"
             fontFamily="Playfair Display, serif"
             fontWeight="700"
-            fontSize="60px"
+            fontSize={{
+              sm: "34px",
+              md: "50px",
+              lg: "50px",
+              xl: "60px",
+              "2xl": "60px",
+            }}
             textAlign="center"
             mt="242px"
           >
@@ -63,7 +78,16 @@ const Downloads = () => {
         </Box>
       </Box>
 
-      <Box w="1340px" m="0 auto" px="91px">
+      <Box
+        m="0 auto"
+        px={{
+          sm: "20px",
+          md: "20px",
+          lg: "30px",
+          xl: "91px",
+          "2xl": "91px",
+        }}
+      >
         <Box>
           <Heading
             mt="60px"
@@ -84,35 +108,42 @@ const Downloads = () => {
             mt="24px"
             mb="30px"
           >
-            Wavecrest offers accomodation to its students. We have a two well
-            furnished hostels orem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua.
+            Wavecrestsssss offers accomodation to its students. We have a two
+            well furnished hostels orem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
           </Text>
         </Box>
 
-        <Grid gridTemplateColumns="repeat(3, auto)" mb="100px">
-          {donwloadables.map((donwloadable) => {
+        <Grid
+          gridTemplateColumns={{
+            sm: "1fr",
+            md: "repeat(2, auto)",
+            lg: "repeat(2, auto)",
+            xl: "repeat(3, auto)",
+            "2xl": "repeat(3, auto)",
+          }}
+          gridGap="20px"
+          mb="100px"
+        >
+          {donwloadables.map((donwloadable, index) => {
             return (
-              <Heading
+              <Button
+                key={index}
                 bg="#EBEDEF"
                 color="#021D37"
                 fontFamily="Manrope"
                 fontWeight="700"
-                fontSize="30px"
+                fontSize="20px"
                 py="20px"
-                w="360px"
-                mb="15px"
-                textAlign="center"
-                cursor="pointer"
-                border="5px solid #021D37"
+                border="3px solid #021D37"
                 textTransform="uppercase"
                 _hover={{
                   bg: "#EDEEFF",
                 }}
               >
                 {donwloadable.name}
-              </Heading>
+              </Button>
             );
           })}
         </Grid>
