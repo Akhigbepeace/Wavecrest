@@ -4,6 +4,9 @@ import provost from "assets/Images/provost.png";
 import deputyProvost from "assets/Images/deputyprovost.png";
 import bursar from "assets/Images/bursar.png";
 import registrar from "assets/Images/registrar.png";
+import ResponsiveManagement from "Pages/About/Our Team/Media Query/Responsive Management";
+import Board from "./Board";
+import Staff from "./Staff";
 
 const Management = () => {
   const managements = [
@@ -28,22 +31,46 @@ const Management = () => {
       post: "Bursar",
     },
   ];
+
   return (
     <Box>
-      <Heading
-        fontFamily="Playfair Display"
-        fontSize="32px"
-        fontWeight="700"
-        color="#021D37"
-        mb="30px"
-      >
-        Management
-      </Heading>
+      <Box>
+        <Box
+          w="88px"
+          h="3px"
+          bg="#021D37"
+          mb="5px"
+          display={{
+            sm: "block",
+            md: "block",
+            lg: "block",
+            xl: "none",
+            "2xl": "none",
+          }}
+        ></Box>
+        <Heading
+          fontFamily="Playfair Display"
+          fontSize="32px"
+          fontWeight="700"
+          color="#021D37"
+          mb="30px"
+        >
+          Management
+        </Heading>
+      </Box>
 
-      <Flex>
-        {managements.map((management) => {
+      <Flex
+        display={{
+          sm: "none",
+          md: "none",
+          lg: "none",
+          xl: "flex",
+          "2xl": "flex",
+        }}
+      >
+        {managements.map((management, index) => {
           return (
-            <Box w="250px" h="250px" mr="10px">
+            <Box key={index} w="250px" h="250px" mr="10px">
               <Image
                 src={management.image}
                 objectFit="contain"
@@ -90,6 +117,25 @@ const Management = () => {
           );
         })}
       </Flex>
+
+      <Box
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+        px={{
+          sm: "20px",
+          md: "40px",
+          lg: "60px",
+        }}
+      >
+        <ResponsiveManagement />
+        <Board />
+        <Staff />
+      </Box>
     </Box>
   );
 };

@@ -27,6 +27,7 @@ const Training = () => {
       background: "#EBEDEF",
       trainingsTitle: "Confederation of Tourism and Hospitality",
       trainingsImage: cth,
+      trainingDuration: "FULLTIME  |  2YEARS",
       trainingsText:
         "Wavecrest College is an approved International Centre for the delivery and assessment of the Professional Management Qualifications of the Institute of Hospitality, UK. ",
       reapprovalCert: "See Wavecrest College Reapproval Certificate 2020",
@@ -37,6 +38,7 @@ const Training = () => {
       background: "#FFF",
       trainingsTitle: "Hospitality Training Programs",
       trainingsImage: training1,
+      trainingDuration: "FULLTIME  |  2YEARS",
       trainingsText:
         "Hospitality Training Programmes (HTP) is the training and consulting division geared towards industry managers, supervisors and operatives. This was formed to provide specialist human resource training, knowledge and advice to assist industry partners. The training is geared towards members of staff involved with providing service. In the training emphasis is placed on details that matter, customer care and improving standards to exceed expectations.",
       downloadBrochure: "Download HTP Brochure",
@@ -46,6 +48,7 @@ const Training = () => {
       background: "#EBEDEF",
       trainingsTitle: "Culinary Courses",
       trainingsImage: training2,
+      trainingDuration: "FULLTIME  |  2YEARS",
       trainingsText:
         "Are you new to the world of Professional cookery or are you on a quest to develop you existing skills? Our culinary programs are designed to provide a step by step introduction to the fundamentals of cookery in the following areas – National and International dishes, yeast products, cakes & icing, pastries, finger foods, mixed drinks and lots more. Through a combined delivery process of demonstrations and hands-on sessions, you will be exposed to a world of eclectic fusions designed to delight your family and friends. ",
       downloadBrochure: "Download Culinary Course Brochure",
@@ -55,6 +58,7 @@ const Training = () => {
       background: "#FFF",
       trainingsTitle: "National Skill Acquisition",
       trainingsImage: training3,
+      trainingDuration: "FULLTIME  |  2YEARS",
       trainingsText:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       downloadBrochure: "Download NSQ Brochure",
@@ -67,42 +71,147 @@ const Training = () => {
     <Flex flexDirection="column" mb="70px">
       {trainings.map((training, index) => {
         return (
-          <Box key={index} bg={training.background} p="50px 91px">
-            <Heading
-              fontFamily="Playfair Display"
-              fontWeight="700"
-              fontSize="32px"
-              color="#021D37"
-              m="0 auto"
-              mb="36px"
-              w="1247px"
-            >
-              {training.trainingsTitle}
-            </Heading>
+          <Box
+            key={index}
+            bg={training.background}
+            p={{
+              sm: "20px",
+              md: "20px 40px",
+              lg: "30px 91px",
+              xl: "20px 91px",
+              "2xl": "20px 91px",
+            }}
+            mb="30px"
+          >
+            <Box>
+              <Box
+                w="88px"
+                h="3px"
+                bg="#021D37"
+                mb="10px"
+                display={{
+                  sm: "block",
+                  md: "block",
+                  lg: "block",
+                  xl: "none",
+                  "2xl": "none",
+                }}
+              ></Box>
+              <Heading
+                fontFamily="Playfair Display"
+                fontWeight="700"
+                fontSize={{
+                  sm: "22px",
+                  md: "25px",
+                  lg: "30px",
+                  xl: "32px",
+                  "2xl": "32px",
+                }}
+                color="#021D37"
+                m="0 auto"
+                mb="36px"
+                w={{
+                  sm: "100%",
+                  md: "100%",
+                  lg: "100%",
+                  xl: "1200px",
+                  "2xl": "1200px",
+                }}
+              >
+                {training.trainingsTitle}
+              </Heading>
+            </Box>
 
-            <Flex mt="24px" alignItems="center" m="0 auto" w="1200px">
-              <Box bg="#FFF" borderRadius="3px" mr="50px">
+            <Flex
+              mt="24px"
+              alignItems="center"
+              m="0 auto"
+              w={{
+                sm: "100%",
+                md: "100%",
+                lg: "100%",
+                xl: "1200px",
+                "2xl": "1200px",
+              }}
+              display={{
+                sm: "block",
+                md: "block",
+                lg: "block",
+                xl: "flex",
+                "2xl": "flex",
+              }}
+            >
+              <Box
+                bg="#FFF"
+                borderRadius="3px"
+                mr={{
+                  sm: "0",
+                  md: "0",
+                  lg: "0",
+                  xl: "50px",
+                  "2xl": "50px",
+                }}
+              >
                 <Image
                   src={training.trainingsImage}
                   maxWidth="none"
-                  align="center"
+                  w={{
+                    sm: "100%",
+                    md: "100%",
+                    lg: "100%",
+                    xl: "auto",
+                    "2xl": "auto",
+                  }}
                 />
               </Box>
+
+              <Heading
+                fontFamily="Manrope"
+                fontWeight="700"
+                fontSize={{
+                  sm: "20px",
+                  md: "20px",
+                  lg: "20px",
+                }}
+                my="20px"
+                display={{
+                  sm: "block",
+                  md: "block",
+                  lg: "block",
+                  xl: "none",
+                  "2xl": "none",
+                }}
+              >
+                {training.trainingDuration}
+              </Heading>
 
               <Box>
                 <Text
                   fontFamily="Manrope"
                   fontWeight="400"
-                  fontSize="24px"
+                  fontSize={{
+                    sm: "20px",
+                    md: "24px",
+                    lg: "24px",
+                    xl: "24px",
+                    "2xl": "24px",
+                  }}
                   lineHeight="33px"
                 >
                   {training.trainingsText}
                 </Text>
+
                 <Link
                   onClick={onOpen}
                   fontFamily="Manrope"
                   fontWeight="700"
-                  fontSize="24px"
+                  fontSize={{
+                    sm: "20px",
+                    md: "24px",
+                    lg: "24px",
+                    xl: "24px",
+                    "2xl": "24px",
+                  }}
                   textDecoration="underline"
                   _hover={{
                     textDecoration: "none",
@@ -128,7 +237,17 @@ const Training = () => {
                   </ModalContent>
                 </Modal>
 
-                <Flex alignItems="center" mt="19px">
+                <Flex
+                  alignItems="center"
+                  mt="19px"
+                  display={{
+                    sm: "none",
+                    md: "none",
+                    lg: "none",
+                    xl: "flex",
+                    "2xl": "flex",
+                  }}
+                >
                   <FaFileDownload size="30px" color="#021D37" />
                   <Link
                     lineHeight="33px"
@@ -155,6 +274,36 @@ const Training = () => {
                 >
                   {training.button}
                 </Button>
+
+                <Flex
+                  alignItems="center"
+                  mt="19px"
+                  display={{
+                    sm: "flex",
+                    md: "flex",
+                    lg: "flex",
+                    xl: "none",
+                    "2xl": "none",
+                  }}
+                >
+                  <FaFileDownload size="30px" color="#021D37" />
+                  <Link
+                    lineHeight="33px"
+                    fontFamily="Manrope"
+                    fontWeight="400"
+                    fontSize={{
+                      sm: "18px",
+                      md: "18px",
+                      lg: "20px",
+                      xl: "24px",
+                      "2xl": "24px",
+                    }}
+                    ml="10px"
+                    color="#201D37"
+                  >
+                    {training.downloadBrochure}
+                  </Link>
+                </Flex>
               </Box>
             </Flex>
           </Box>

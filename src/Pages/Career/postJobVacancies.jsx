@@ -33,17 +33,47 @@ const postJobVacancies = () => {
 
   return (
     <Fragment>
-      <Box px="91px">
+      <Box
+        px={{
+          sm: "20px",
+          md: "20px",
+          lg: "91px",
+          xl: "91px",
+          "2xl": "91px",
+        }}
+      >
         <Box>
-          <Heading
-            mt="60px"
-            fontFamily="Playfair Display"
-            fontWeight="700"
-            fontSize="32px"
-            color="#021D37"
-          >
-            Post Job Vacancy
-          </Heading>
+          <Box>
+            <Box
+              w="88px"
+              h="3px"
+              bg="#021D37"
+              mb="10px"
+              mt="60px"
+              display={{
+                sm: "block",
+                md: "block",
+                lg: "block",
+                xl: "none",
+                "2xl": "none",
+              }}
+            ></Box>
+            <Heading
+              mt={{
+                sm: "0",
+                md: "0px",
+                lg: "0",
+                xl: "60px",
+                "2xl": "60px",
+              }}
+              fontFamily="Playfair Display"
+              fontWeight="700"
+              fontSize="32px"
+              color="#021D37"
+            >
+              Post Job Vacancy
+            </Heading>
+          </Box>
 
           <Text
             fontFamily="Manrope"
@@ -69,7 +99,13 @@ const postJobVacancies = () => {
                 placeholder={form.placeHolder}
                 variant={form.variant}
                 display="block"
-                w="526px"
+                w={{
+                  sm: "100%",
+                  md: "400px",
+                  lg: "526px",
+                  xl: "526px",
+                  "2xl": "526px",
+                }}
                 h="67px"
                 mb="10px"
                 bg="#EBEDEF"
@@ -87,7 +123,13 @@ const postJobVacancies = () => {
           <Textarea
             placeholder="Extra Notes"
             variant="filled"
-            w="526px"
+            w={{
+              sm: "100%",
+              md: "400px",
+              lg: "526px",
+              xl: "526px",
+              "2xl": "526px",
+            }}
             h="80px"
             _placeholder={{
               fontFamily: "Manrope, sans-serif",

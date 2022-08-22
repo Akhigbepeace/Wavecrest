@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Flex,
   Heading,
   Image,
@@ -10,6 +11,7 @@ import {
   InputRightElement,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Navbar from "components/Navbar";
 import blogPostImage from "assets/Images/blogpost.png";
@@ -59,6 +61,13 @@ const BlogPost = () => {
     },
   ];
 
+  const navigate = useNavigate();
+
+  const BackToBlog = (e) => {
+    e.preventDefault();
+    navigate("/blog", { replace: true });
+  };
+
   return (
     <Fragment>
       <Navbar />
@@ -72,14 +81,32 @@ const BlogPost = () => {
           h="100%"
           position="absolute"
           bottom="0"
-          p="20px 91px"
+          p={{
+            sm: "20px",
+            md: "20px 40px",
+            lg: "30px 91px",
+            xl: "20px 91px",
+            "2xl": "20px 91px",
+          }}
         >
           <Text
             color="white"
             fontFamily="Playfair Display, serif"
             fontWeight="700"
-            fontSize="30px"
-            lineHeight="40px"
+            fontSize={{
+              sm: "25px",
+              md: "25px",
+              lg: "30px",
+              xl: "30px",
+              "2xl": "30px",
+            }}
+            lineHeight={{
+              sm: "35px",
+              md: "35px",
+              lg: "35px",
+              xl: "35px",
+              "2xl": "40px",
+            }}
             alignSelf="flex-end"
           >
             ‘The icing on the cake’ …Wavecrest College of Hospitality Partners
@@ -89,20 +116,53 @@ const BlogPost = () => {
         </Flex>
       </Box>
 
-      <Flex w="1258px" my="23px" mx="auto">
-        <Box w="75%">
+      <Flex
+        w="100%"
+        my="23px"
+        mx="auto"
+        px={{
+          sm: "0",
+          md: "0",
+          lg: "0",
+          xl: "91px",
+          "2xl": "91px",
+        }}
+      >
+        <Box
+          w={{
+            sm: "90%",
+            md: "85%",
+            lg: "80%",
+            xl: "75%",
+            "2xl": "75%",
+          }}
+          mx="auto"
+        >
+          <Button
+            fontFamily="Manrope"
+            fontSize="18px"
+            py="25px"
+            mb="52px"
+            fontWeight="700"
+            bg="#EEE"
+            onClick={(e) => BackToBlog(e)}
+          >
+            <FaChevronLeft size="20px" />
+            Back To Blog
+          </Button>
+
           <Heading
             color="rgba(2, 29, 55, 0.44)"
             fontFamily="Manrope"
             fontWeight="400"
             fontSize="18px"
+            mb="20px"
           >
             News & Events / October 8, 2022.
           </Heading>
 
           <Box>
             <Text
-              mt="52px"
               fontFamily="Manrope"
               fontSize="18px"
               fontWeight="400"
@@ -200,7 +260,17 @@ const BlogPost = () => {
           </Box>
         </Box>
 
-        <Box pl="48px" w="35%">
+        <Box
+          pl="48px"
+          w="35%"
+          display={{
+            sm: "none",
+            md: "none",
+            lg: "none",
+            xl: "block",
+            "2xl": "block",
+          }}
+        >
           <InputGroup>
             <Input
               type="text"

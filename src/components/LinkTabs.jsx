@@ -5,7 +5,17 @@ const LinkTabs = (props) => {
   const { menuLinks, activeItem, children, onLinkChange } = props;
   return (
     <Box>
-      <Flex alignItems="center" justifyContent="center">
+      <Flex
+        alignItems="center"
+        justifyContent="center"
+        display={{
+          sm: "none",
+          md: "none",
+          lg: "none",
+          xl: "flex",
+          "2xl": "flex",
+        }}
+      >
         {menuLinks.map((menuLink, index) => {
           const isActive = menuLink.linkTitle === activeItem;
 

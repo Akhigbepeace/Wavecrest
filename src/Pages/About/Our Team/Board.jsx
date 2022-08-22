@@ -4,9 +4,10 @@ import provost from "assets/Images/provost.png";
 import deputyProvost from "assets/Images/deputyprovost.png";
 import bursar from "assets/Images/bursar.png";
 import registrar from "assets/Images/registrar.png";
+import ResponsiveBoard from "Pages/About/Our Team/Media Query/Responsive Board";
 
-const Management = () => {
-  const managements = [
+const Board = () => {
+  const boards = [
     {
       image: provost,
       name: "Rosana Forsuelo",
@@ -37,7 +38,6 @@ const Management = () => {
       name: "Edith Chukwu",
       post: "Bursar",
     },
-
     {
       image: registrar,
       name: "Edith Chukwu",
@@ -59,25 +59,53 @@ const Management = () => {
       post: "Bursar",
     },
   ];
+
   return (
     <Box>
-      <Heading
-        fontFamily="Playfair Display"
-        fontSize="32px"
-        fontWeight="700"
-        color="#021D37"
-        mb="30px"
-      >
-        Board
-      </Heading>
+      <Box>
+        <Box
+          w="88px"
+          h="3px"
+          bg="#021D37"
+          mb="5px"
+          display={{
+            sm: "block",
+            md: "block",
+            lg: "block",
+            xl: "none",
+            "2xl": "none",
+          }}
+        ></Box>
 
-      <Grid gridTemplateColumns="1fr 1fr" gridGap="8px" mb="100px">
-        {managements.map((management) => {
+        <Heading
+          fontFamily="Playfair Display"
+          fontSize="32px"
+          fontWeight="700"
+          color="#021D37"
+          mb="30px"
+        >
+          Board
+        </Heading>
+      </Box>
+
+      <Grid
+        gridTemplateColumns="1fr 1fr"
+        gridGap="8px"
+        mb="100px"
+        display={{
+          sm: "none",
+          md: "none",
+          lg: "none",
+          xl: "grid",
+          "2xl": "grid",
+        }}
+      >
+        {boards.map((board, index) => {
           return (
-            <Box mb="-74px">
+            <Box key={index} mb="-74px">
               <Box w="436px">
                 <Image
-                  src={management.image}
+                  src={board.image}
                   objectFit="contain"
                   borderRadius="5px"
                 />
@@ -108,7 +136,7 @@ const Management = () => {
                     color="#021D37"
                     lineHeight="27px"
                   >
-                    {management.name}
+                    {board.name}
                   </Heading>
                   <Text
                     fontFamily="Manrope"
@@ -117,7 +145,7 @@ const Management = () => {
                     color="rgba(2, 29, 55, 0.63);"
                     lineHeight="27px"
                   >
-                    {management.post}
+                    {board.post}
                   </Text>
                 </Box>
               </Flex>
@@ -125,8 +153,20 @@ const Management = () => {
           );
         })}
       </Grid>
+
+      <Box
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <ResponsiveBoard />
+      </Box>
     </Box>
   );
 };
 
-export default Management;
+export default Board;

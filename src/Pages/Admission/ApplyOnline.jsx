@@ -8,6 +8,7 @@ import {
   Link,
   Select,
   Button,
+  Grid,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import visa from "assets/Images/visa.png";
@@ -65,16 +66,54 @@ const ApplyOnline = () => {
   ];
   return (
     <Fragment>
-      <Box px="91px">
-        <Heading
-          my="40px"
-          fontFamily="Playfair Display"
-          fontWeight="700"
-          fontSize="32px"
-          color="#021D37"
-        >
-          Pre-Registration Form
-        </Heading>
+      <Box
+        px={{
+          sm: "20px",
+          md: "20px",
+          lg: "91px",
+          xl: "91px",
+          "2xl": "91px",
+        }}
+      >
+        <Box>
+          <Box
+            w="88px"
+            h="3px"
+            mb="10px"
+            mt="40px"
+            bg="#021D37"
+            display={{
+              sm: "block",
+              md: "block",
+              lg: "block",
+              xl: "none",
+              "2xl": "none",
+            }}
+          ></Box>
+          <Heading
+            my={{
+              xl: "30px",
+              "2xl": "30px",
+            }}
+            mb={{
+              sm: "30px",
+              md: "30px",
+              lg: "30px",
+            }}
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize={{
+              sm: "24px",
+              md: "32px",
+              lg: "32px",
+              xl: "32px",
+              "2xl": "32px",
+            }}
+            color="#021D37"
+          >
+            Pre-Registration Form
+          </Heading>
+        </Box>
 
         <Flex flexDirection="column">
           {forms.map((form, index) => {
@@ -84,7 +123,13 @@ const ApplyOnline = () => {
                 type={form.fieldType}
                 placeholder={form.placeHolder}
                 variant={form.variant}
-                w="526px"
+                w={{
+                  sm: "100%",
+                  md: "400px",
+                  lg: "526px",
+                  xl: "526px",
+                  "2xl": "526px",
+                }}
                 h="67px"
                 mb="10px"
                 bg="#EBEDEF"
@@ -101,7 +146,13 @@ const ApplyOnline = () => {
 
           <Select
             placeholder="Programme"
-            w="526px"
+            w={{
+              sm: "100%",
+              md: "400px",
+              lg: "526px",
+              xl: "526px",
+              "2xl": "526px",
+            }}
             h="67px"
             bg="#EBEDEF"
             textAlign="left"
@@ -148,7 +199,20 @@ const ApplyOnline = () => {
         </Box>
 
         <Box>
-          <Flex mt="50px" alignItems="center">
+          <Flex
+            mt="50px"
+            alignItems="center"
+            gridTemplateColumns={{
+              sm: "auto auto",
+            }}
+            display={{
+              sm: "grid",
+              md: "flex",
+              lg: "flex",
+              xl: "flex",
+              "2xl": "flex",
+            }}
+          >
             {payNow.map((pay, index) => {
               return (
                 <Image
@@ -156,21 +220,32 @@ const ApplyOnline = () => {
                   src={pay.image}
                   w={pay.width}
                   mx="10px"
+                  mb="10px"
                   h={pay.height}
                 />
               );
             })}
           </Flex>
 
-          <Link href="https://paystack.com/pay/wchform1" target="_blank" _hover={{
-            textDecor: "none"
-          }}>
+          <Link
+            href="https://paystack.com/pay/wchform1"
+            target="_blank"
+            _hover={{
+              textDecor: "none",
+            }}
+          >
             <Button
               fontFamily="Manrope"
               fontSize="16px"
               fontWeight="700"
               m=" 30px 0"
-              w="423px"
+              w={{
+                sm: "100%",
+                md: "400px",
+                lg: "526px",
+                xl: "423px",
+                "2xl": "423px",
+              }}
               bg="#021D37"
               py="7px"
               textAlign="center"

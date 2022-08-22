@@ -46,7 +46,7 @@ const Career = () => {
 
       <Box>
         <Box h="441px" w="100%" gridGap="68px" position="relative">
-          <Image src={about} h="100%" w="100%" />
+          <Image src={about} h="100%" w="100%" objectFit="cover" />
 
           <Box
             bg="rgba(0, 24, 71, 0.5)"
@@ -69,7 +69,17 @@ const Career = () => {
         </Box>
 
         <Box>
-          <Flex alignItems="center" justifyContent="center">
+          <Flex
+            alignItems="center"
+            justifyContent="center"
+            display={{
+              sm: "none",
+              md: "none",
+              lg: "none",
+              xl: "flex",
+              "2xl": "flex",
+            }}
+          >
             {menuLinks.map((menuLink, index) => {
               const isActive = activeLink.linkTitle === menuLink.linkTitle;
               return (
@@ -97,7 +107,7 @@ const Career = () => {
             })}
           </Flex>
 
-          {activeLink.content}
+          <Box>{activeLink.content}</Box>
         </Box>
       </Box>
       <Footer />

@@ -52,17 +52,46 @@ const Internship = () => {
   ];
   return (
     <Fragment>
-      <Box px="91px">
+      <Box
+        px={{
+          sm: "20px",
+          md: "20px",
+          lg: "91px",
+          xl: "91px",
+          "2xl": "91px",
+        }}
+      >
         <Box>
-          <Heading
-            mt="60px"
-            fontFamily="Playfair Display"
-            fontWeight="700"
-            fontSize="32px"
-            color="#021D37"
-          >
-            Apply for Internship
-          </Heading>
+          <Box>
+            <Box
+              w="88px"
+              h="3px"
+              bg="#021D37"
+              mt={{
+                sm: "60px",
+                md: "60px",
+                lg: "60px",
+                xl: "none",
+                "2xl": "none",
+              }}
+              mb="10px"
+              display={{
+                sm: "block",
+                md: "block",
+                lg: "block",
+                xl: "none",
+                "2xl": "none",
+              }}
+            ></Box>
+            <Heading
+              fontFamily="Playfair Display"
+              fontWeight="700"
+              fontSize="32px"
+              color="#021D37"
+            >
+              Apply for Internship
+            </Heading>
+          </Box>
 
           <Text
             fontFamily="Manrope"
@@ -91,7 +120,13 @@ const Internship = () => {
                 type={form.fieldType}
                 placeholder={form.placeHolder}
                 variant={form.variant}
-                w="526px"
+                w={{
+                  sm: "100%",
+                  md: "400px",
+                  lg: "526px",
+                  xl: "526px",
+                  "2xl": "526px",
+                }}
                 h="67px"
                 mb="10px"
                 bg="#EBEDEF"
@@ -109,7 +144,13 @@ const Internship = () => {
 
         <Select
           placeholder="Programme"
-          w="526px"
+          w={{
+            sm: "100%",
+            md: "400px",
+            lg: "526px",
+            xl: "526px",
+            "2xl": "526px",
+          }}
           h="67px"
           bg="#EBEDEF"
           textAlign="left"

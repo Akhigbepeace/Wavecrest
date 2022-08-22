@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Flex,
   Grid,
   Image,
@@ -32,6 +33,7 @@ const Blog = () => {
         "Featuring in the Guinness World Records is obviously not a yearly event. This is why Wavecrest College was excited to be a part of an amazing project partnering with the...",
     },
     {
+      bg: "#EBEDEF",
       postsImg: blogPost2,
       postsDate: "Personal stories / October 22, 2022.",
       postHeading:
@@ -48,6 +50,7 @@ const Blog = () => {
         "Featuring in the Guinness World Records is obviously not a yearly event. This is why Wavecrest College was excited to be a part of an amazing project partnering with the...",
     },
     {
+      bg: "#EBEDEF",
       postsImg: blogPost2,
       postsDate: "News & Events / October 8, 2022.",
       postHeading:
@@ -64,6 +67,7 @@ const Blog = () => {
         "Featuring in the Guinness World Records is obviously not a yearly event. This is why Wavecrest College was excited to be a part of an amazing project partnering with the...",
     },
     {
+      bg: "#EBEDEF",
       postsImg: blogPost2,
       postsDate: "News & Events / October 8, 2022.",
       postHeading:
@@ -127,8 +131,8 @@ const Blog = () => {
       <Navbar />
 
       <Box mb="150px">
-        <Box w="100%" gridGap="68px" position="relative">
-          <Image src={blog} h="100%" w="100%" />
+        <Box w="100%" position="relative">
+          <Image src={blog} h="441px" w="100%" objectFit="cover" />
 
           <Box
             bg="rgba(0, 24, 71, 0.5)"
@@ -151,8 +155,18 @@ const Blog = () => {
         </Box>
 
         <Flex flexDirection="column" alignItems="center">
-          <Flex p="50px 0px" justifyContent="space-between">
-            <Box pr="46px" w="382px">
+          <Flex p="80px 50px" justifyContent="space-between">
+            <Box
+              pr="46px"
+              w="400px"
+              display={{
+                sm: "none",
+                md: "none",
+                lg: "none",
+                xl: "block",
+                "2xl": "block",
+              }}
+            >
               <InputGroup>
                 <Input
                   type="text"
@@ -285,21 +299,57 @@ const Blog = () => {
             </Box>
 
             <Grid
-              gridTemplateColumns="1fr 1fr"
-              gridGap="30px"
-              w="832px"
+              gridTemplateColumns={{
+                sm: "auto",
+                md: "1fr 1fr",
+                lg: "1fr 1fr",
+                xl: "1fr 1fr",
+                "2xl": "1fr 1fr",
+              }}
+              w="100%"
               cursor="pointer"
-              onClick={(e) => ShowPosts(e)}
             >
               {posts.map((post, index) => {
                 return (
-                  <Box key={index} mb="33px">
+                  <Box
+                    key={index}
+                    bg={{
+                      sm: post.bg,
+                      md: post.bg,
+                      lg: post.bg,
+                      xl: "none",
+                      "2xl": "none",
+                    }}
+                    w="100%"
+                    p={{
+                      sm: "40px",
+                      md: "30px",
+                      lg: "40px",
+                      xl: "none",
+                      "2xl": "none",
+                    }}
+                    transition="all ease 0.5s"
+                    onClick={(e) => ShowPosts(e)}
+                    _hover={{
+                      bg: "#FFF",
+                      transform: "scale(1.05)",
+                      borderRadius: "10px",
+                      boxShadow: "3px 3px 10px 1px rgba(0,0,0,0.2)",
+                    }}
+                  >
                     <Image
                       src={post.postsImg}
                       borderRadius="3px"
                       h="279px"
                       w="100%"
                       objectFit="cover"
+                      mb={{
+                        sm: "20px",
+                        md: "20px",
+                        lg: "20px",
+                        xl: "0",
+                        "2xl": "0",
+                      }}
                     />
 
                     <Text
@@ -309,19 +359,60 @@ const Blog = () => {
                       fontWeight="400"
                       fontSize="18px"
                       lineHeight="25px"
+                      display={{
+                        sm: "none",
+                        md: "none",
+                        lg: "none",
+                        xl: "block",
+                        "2xl": "block",
+                      }}
                     >
                       {post.postsDate}
                     </Text>
 
-                    <Heading
-                      color="#021d37"
-                      fontFamily="Playfair Display"
-                      fontWeight="700"
-                      fontSize="22px"
-                      lineHeight="30px"
+                    <Box>
+                      <Box
+                        w="88px"
+                        h="3px"
+                        bg="#021D37"
+                        mb="10px"
+                        display={{
+                          sm: "block",
+                          md: "block",
+                          lg: "block",
+                          xl: "none",
+                          "2xl": "none",
+                        }}
+                      ></Box>
+
+                      <Heading
+                        color="#021d37"
+                        fontFamily="Playfair Display"
+                        fontWeight="700"
+                        fontSize="22px"
+                        lineHeight="30px"
+                      >
+                        {post.postHeading}
+                      </Heading>
+                    </Box>
+
+                    <Text
+                      mt="8px"
+                      color="rgba(2, 29, 55, 0.44)"
+                      fontFamily="Manrope"
+                      fontWeight="400"
+                      fontSize="18px"
+                      lineHeight="25px"
+                      display={{
+                        sm: "block",
+                        md: "block",
+                        lg: "block",
+                        xl: "none",
+                        "2xl": "none",
+                      }}
                     >
-                      {post.postHeading}
-                    </Heading>
+                      {post.postsDate}
+                    </Text>
 
                     <Text
                       mt="10px"
@@ -333,6 +424,32 @@ const Blog = () => {
                     >
                       {post.postsText}
                     </Text>
+
+                    <Button
+                      w="110px"
+                      h="40px"
+                      borderRadius="5px"
+                      border="2px solid #021D37"
+                      bg="transparent"
+                      fontFamily="Marope"
+                      fontWeight="700"
+                      fontSize="16px"
+                      mt="25px"
+                      onClick={(e) => ShowPosts(e)}
+                      transition="all ease 0.5s"
+                      display={{
+                        sm: "block",
+                        md: "block",
+                        lg: "block",
+                        xl: "none",
+                        "2xl": "none",
+                      }}
+                      _hover={{
+                        bg: "#EBEDEF",
+                      }}
+                    >
+                      Learn More
+                    </Button>
                   </Box>
                 );
               })}
