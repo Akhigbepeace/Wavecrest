@@ -1,5 +1,10 @@
 import React, { Fragment } from "react";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import Seventies from "./Responsive Milestone/Seventies";
+import Eighties from "./Responsive Milestone/Eighties";
+import Nineties from "./Responsive Milestone/Nineties";
+import Twenties from "./Responsive Milestone/Twenties";
+import TwentyTens from "./Responsive Milestone/TwentyTens";
 
 const milestones = [
   {
@@ -97,16 +102,35 @@ const milestones = [
   },
 ];
 
+
 const Milestone = () => {
   return (
-    <Flex p="91px" flexDirection="column">
-      <Box>
+    <Flex
+      p={{
+        sm: "50px 20px",
+        md: "50px 40px",
+        lg: "50px",
+        xl: "50px 91px",
+        "2xl": "50px 91px",
+      }}
+      flexDirection="column"
+    >
+      <Box
+        display={{
+          sm: "none",
+          md: "none",
+          lg: "none",
+          xl: "block",
+          "2xl": "block",
+        }}
+      >
         {milestones.map((milestone, index) => {
           const textToShow = Array.isArray(milestone.achievement)
             ? milestone.achievement.map((values, i) => (
                 <Box key={i}>{values}</Box>
               ))
             : milestone.achievement;
+
           return (
             <Fragment>
               <Flex key={index} flexDirection="column" alignItems="baseline">
@@ -150,6 +174,26 @@ const Milestone = () => {
             </Fragment>
           );
         })}
+      </Box>
+
+      <Box
+        position={"relative"}
+        overflow={"hidden"}
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <Box>
+          <Seventies />
+          <Eighties />
+          <Nineties />
+          <Twenties />
+          <TwentyTens />
+        </Box>
       </Box>
     </Flex>
   );

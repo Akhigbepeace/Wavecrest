@@ -127,6 +127,7 @@ const CertificateCoursesDesc = () => {
               url={waveVid}
               playing
               loop
+              controls
               muted
               width="100%"
               height="100%"

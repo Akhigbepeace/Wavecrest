@@ -92,7 +92,7 @@ const NDProgrammeDesc = () => {
               color="#021D37"
               lineHeight="43px"
             >
-              Higher National Diploma (HND) <br /> in Hospitality Management
+              National Diploma (ND) <br /> in Hospitality Management
             </Heading>
 
             <Text
@@ -127,6 +127,7 @@ const NDProgrammeDesc = () => {
               playing
               loop
               muted
+              controls
               width="100%"
               height="100%"
             />

@@ -7,6 +7,7 @@ import {
   Image,
   Link,
   Button,
+  Grid,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import Navbar from "components/Navbar";
@@ -60,7 +61,7 @@ const SupportUs = () => {
       <Navbar />
 
       <Box h="441px" w="100%" gridGap="68px" position="relative">
-        <Image src={admission} h="100%" w="100%" />
+        <Image src={admission} h="100%" w="100%" objectFit="cover" />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -73,7 +74,13 @@ const SupportUs = () => {
             color="white"
             fontFamily="Playfair Display"
             fontWeight="700"
-            fontSize="60px"
+            fontSize={{
+              sm: "34px",
+              md: "50px",
+              lg: "50px",
+              xl: "60px",
+              "2xl": "60px",
+            }}
             textAlign="center"
             mt="140px"
           >
@@ -82,13 +89,21 @@ const SupportUs = () => {
         </Box>
       </Box>
 
-      <Box w="1200px" mx="auto">
+      <Box>
         <Heading
-          my="40px"
           fontFamily="Playfair Display"
           fontWeight="700"
           fontSize="32px"
           color="#021D37"
+          my="40px"
+          w={{
+            sm: "290px",
+            md: "400px",
+            lg: "526px",
+            xl: "526px",
+            "2xl": "526px",
+          }}
+          mx="auto"
         >
           Support Us
         </Heading>
@@ -101,9 +116,16 @@ const SupportUs = () => {
                 type={form.fieldType}
                 placeholder={form.placeHolder}
                 variant={form.variant}
-                w="526px"
                 h="67px"
                 mb="10px"
+                w={{
+                  sm: "290px",
+                  md: "400px",
+                  lg: "526px",
+                  xl: "526px",
+                  "2xl": "526px",
+                }}
+                mx="auto"
                 bg="#EBEDEF"
                 _placeholder={{
                   fontFamily: "Manrope, sans-serif",
@@ -117,20 +139,40 @@ const SupportUs = () => {
           })}
         </Flex>
 
-        <Box>
-          <Flex mt="50px" alignItems="center">
+        <Box
+          w={{
+            sm: "290px",
+            md: "400px",
+            lg: "526px",
+            xl: "526px",
+            "2xl": "526px",
+          }}
+          mx="auto"
+        >
+          <Grid
+            mt="50px"
+            alignItems="center"
+            gridTemplateColumns={{
+              sm: "repeat(2, auto)",
+              md: "repeat(3, auto)",
+              lg: "repeat(3, auto)",
+              xl: "repeat(3, auto)",
+              "2xl": "repeat(3, auto)",
+            }}
+          >
             {payNow.map((pay, index) => {
               return (
                 <Image
                   key={index}
                   src={pay.image}
                   w={pay.width}
-                  mx="10px"
+                  mr="10px"
                   h={pay.height}
                 />
               );
             })}
-          </Flex>
+          </Grid>
+
           <Link
             href="https://paystack.com/pay/wchdonate"
             target="_blank"
@@ -144,7 +186,6 @@ const SupportUs = () => {
               fontWeight="700"
               mt="30px"
               mb="100px"
-              w="423px"
               bg="#021D37"
               py="7px"
               textAlign="center"

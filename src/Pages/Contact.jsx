@@ -156,7 +156,13 @@ const Contact = () => {
             color="white"
             fontFamily="Playfair Display, serif"
             fontWeight="700"
-            fontSize="60px"
+            fontSize={{
+              sm: "34px",
+              md: "50px",
+              lg: "50px",
+              xl: "60px",
+              "2xl": "60px",
+            }}
             textAlign="center"
             mt="242px"
           >
@@ -168,17 +174,12 @@ const Contact = () => {
       <Box
         pt="50px"
         px={{
-          sm: "15px",
-          md: "15px",
+          sm: "20px",
+          md: "20px",
+          lg: "30px",
+          xl: "91px",
+          "2xl": "91px",
         }}
-        maxW={{
-          sm: "320px",
-          md: "768px",
-          lg: "960px",
-          xl: "1200px",
-          "2xl": "1440px",
-        }}
-        mx="auto"
       >
         <Grid
           gridTemplateColumns={{
@@ -225,7 +226,10 @@ const Contact = () => {
                       placeholder={field.placeHolder}
                       name={field.name}
                       h="67px"
-                      mb="10px"
+                      mt="10px"
+                      w={{
+                        md: "500px",
+                      }}
                       onChange={inputValues}
                       _placeholder={{
                         fontFamily: "Manrope, sans-serif",
@@ -246,6 +250,9 @@ const Contact = () => {
                   onChange={inputValues}
                   h="223px"
                   mb="10px"
+                  w={{
+                    md: "500px",
+                  }}
                   _placeholder={{
                     fontFamily: "Manrope, sans-serif",
                     color: "#021D37",
@@ -315,8 +322,8 @@ const Contact = () => {
             <Grid
               gridTemplateColumns={{
                 sm: "1fr",
-                md: "1fr",
-                lg: "1fr",
+                md: "auto auto",
+                lg: "auto auto",
                 xl: "auto auto",
                 "2xl": "auto auto",
               }}
@@ -378,7 +385,7 @@ const Contact = () => {
                   href={quickLink.linkTo}
                   w="294px"
                   h="241px"
-                  bg="contact.png"
+                  ml="25px"
                   transition="all ease 0.8s"
                   _hover={{
                     transform: "scale(1.2)",

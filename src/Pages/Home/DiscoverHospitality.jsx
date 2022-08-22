@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Link, Text, Image, Heading } from "@chakra-ui/react";
+import { Box, Grid, Link, Text, Image, Heading } from "@chakra-ui/react";
 import React from "react";
 import discoverpic1 from "assets/Images/discoverpic 1.png";
 import discoverpic2 from "assets/Images/discoverpic 2.png";
@@ -6,7 +6,14 @@ import discoverpic3 from "assets/Images/discoverpic 3.png";
 
 const DiscoverHospitality = () => {
   return (
-    <Flex
+    <Box
+      display={{
+        sm: "none",
+        md: "none",
+        lg: "none",
+        xl: "flex",
+        "2xl": "flex",
+      }}
       alignItems="center"
       justifyContent="center"
       h="421px"
@@ -98,7 +105,7 @@ const DiscoverHospitality = () => {
           />
         </Box>
       </Grid>
-    </Flex>
+    </Box>
   );
 };
 

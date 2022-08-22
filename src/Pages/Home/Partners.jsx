@@ -1,10 +1,17 @@
 import React from "react";
-import { Box, useBreakpointValue, Image, Heading } from "@chakra-ui/react";
-import { Flex, Text, Link } from "@chakra-ui/react";
+import {
+  Box,
+  Grid,
+  Heading,
+  Image,
+  Link,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import Slider from "react-slick";
-import Nestle from "assets/Images/Nestle.png";
+// import Nestle from "assets/Images/Nestle.png";
 import Pau from "assets/Images/pau.png";
-import bihc from "assets/Images/bihc.png";
+// import bihc from "assets/Images/bihc.png";
 import raddison from "assets/Images/raddison.png";
 import maggi from "assets/Images/Maggi.png";
 import womenBoard from "assets/Images/women's board.jpg";
@@ -33,9 +40,9 @@ export default function Carousel() {
   const side = useBreakpointValue({ base: "30%", md: "10px" });
 
   const cards = [
-    Nestle,
+    // Nestle,
     Pau,
-    bihc,
+    // bihc,
     raddison,
     maggi,
     womenBoard,
@@ -64,7 +71,19 @@ export default function Carousel() {
         onClick={() => slider?.slickNext()}
       ></Link>
 
-      <Flex
+      <Box
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "flex",
+          "2xl": "flex",
+        }}
+        px={{
+          sm: "20px",
+          md: "20px",
+          lg: "20px",
+        }}
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
@@ -75,34 +94,121 @@ export default function Carousel() {
           fontWeight="400"
           fontSize="150px"
           color="rgba(3, 29, 56, 0.06)"
+          display={{
+            sm: "none",
+            md: "none",
+            lg: "none",
+            xl: "block",
+            "2xl": "block",
+          }}
         >
           Work with us
         </Heading>
+        <Box
+          bg="#021D37"
+          h="3px"
+          w="88px"
+          mt="20px"
+          display={{
+            sm: "block",
+            md: "block",
+            lg: "block",
+            xl: "none",
+            "2xl": "none",
+          }}
+        ></Box>
 
         <Text
           position="absolute"
           color="#021D37"
           fontFamily="Playfair Display"
-          fontSize="40px"
+          fontSize={{
+            sm: "20px",
+            md: "20px",
+            lg: "20px",
+            xl: "40px",
+            "2xl": "40px",
+          }}
           fontWeight="700"
           mb="25px"
         >
           Partners and Sponsors
         </Text>
-      </Flex>
+      </Box>
+      <Box
+        display={{
+          sm: "none",
+          md: "none",
+          lg: "none",
+          xl: "block",
+          "2xl": "block",
+        }}
+      >
+        <Slider {...settings} ref={(slider) => setSlider(slider)} pauseOnFocus>
+          {cards.map((image, index) => (
+            <Image
+              src={image}
+              key={index}
+              alt="companyLogo"
+              h="75px"
+              mb="50px"
+              objectFit="contain"
+            />
+          ))}
+        </Slider>
+      </Box>
 
-      <Slider {...settings} ref={(slider) => setSlider(slider)} pauseOnFocus>
+      <Grid
+        display={{
+          sm: "grid",
+          md: "grid",
+          lg: "grid",
+          xl: "none",
+          "2xl": "none",
+        }}
+        gridTemplateColumns={{
+          sm: "auto auto",
+          md: "auto auto",
+          lg: "1fr 1fr 1fr",
+        }}
+        px={{
+          sm: "20px",
+          md: "40px",
+          lg: "40px",
+          xl: "none",
+          "2xl": "none",
+        }}
+        mt={{
+          sm: "60px",
+          md: "60px",
+          lg: "60px",
+        }}
+        alignItems="center"
+      >
         {cards.map((image, index) => (
           <Image
             src={image}
             key={index}
             alt="companyLogo"
-            h="100px"
-            mb="63px"
+            alignItems="center"
             objectFit="contain"
+            mb={{
+              sm: "30px",
+              md: "30px",
+              lg: "30px",
+              xl: "50px",
+              "2xl": "50px",
+            }}
+            pr={{
+              sm: "30px",
+              md: "30px",
+              lg: "30px",
+              xl: "50px",
+              "2xl": "50px",
+            }}
           />
         ))}
-      </Slider>
+      </Grid>
     </Box>
   );
 }
