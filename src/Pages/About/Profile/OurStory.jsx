@@ -137,8 +137,8 @@ const OurStory = () => {
         <ReactPlayer
           url={waveVid}
           playing
+          controls
           loop
-          muted
           width="100%"
           height="100%"
         />

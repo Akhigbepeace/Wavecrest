@@ -2,7 +2,6 @@ import { Flex, Link } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa";
-
 import Management from "./Management";
 import Board from "./Board";
 import Staff from "./Staff";
@@ -31,11 +30,23 @@ const OurTeam = () => {
   const profile = menuLinks.find(
     (menu) => menu.id.toLowerCase() === id.toLowerCase()
   );
+
   const [activeLink, setActiveLink] = useState(profile || menuLinks[1]);
 
   return (
-    <Flex w="1250px" m="0 auto" mt="100px">
-      <Flex flexDirection="column" mt="50px">
+    <Flex m="0 auto" mt="100px">
+      <Flex
+        flexDirection="column"
+        mt="50px"
+        pl="51px"
+        display={{
+          sm: "none",
+          md: "none",
+          lg: "none",
+          xl: "flex",
+          "2xl": "flex",
+        }}
+      >
         {menuLinks.map((menuLink, index) => {
           const isActive = activeLink.linkTitle === menuLink.linkTitle;
           return (

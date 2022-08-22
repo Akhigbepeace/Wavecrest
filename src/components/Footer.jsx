@@ -118,13 +118,13 @@ const Footer = () => {
         md: "1fr",
         lg: "auto",
         xl: "repeat(3, auto)",
-        "2xl": "repeat(3, auto)",
+        "2xl": "repeat(3, 1fr)",
       }}
       gridGap="45px"
       pt="54px"
       px={{
         sm: "20px",
-        md: "91px",
+        md: "20px",
         lg: "91px",
         xl: "91px",
         "2xl": "91px",
@@ -133,11 +133,15 @@ const Footer = () => {
       <Flex
         flexDirection="column"
         alignItems={{
-          sm: "flex-end",
+          sm: "flex-start",
+          md: "flex-start",
+          lg: "flex-start",
+          xl: "flex-end",
+          "2xl": "flex-end",
         }}
       >
         <Link to="/" as={NavLink}>
-          <Image src={logo} alt="logo" w="270px" height="54px" mb="10px" />
+          <Image src={logo} alt="logo" w="270px" height="54px" mb="15px" />
         </Link>
 
         <Text
@@ -147,10 +151,16 @@ const Footer = () => {
           fontWeight="400"
           fontSize="18px"
           lineHeight="25px"
-          textAlign="right"
+          textAlign={{
+            sm: "left",
+            md: "left",
+            lg: "left",
+            xl: "right",
+            "2xl": "right",
+          }}
         >
-          75 Adisa Bashua Street,Off Adelabu Street, Surulere,Lagos State,
-          Nigeria.
+          75 Adisa Bashua Street, <br /> Off Adelabu Street, Surulere, <br />
+          Lagos State, Nigeria.
         </Text>
 
         <Flex
@@ -161,14 +171,14 @@ const Footer = () => {
           lineHeight="25px"
           color="#021D37"
           textAlign="right"
-          mt="10px"
+          mt="15px"
         >
           <Text fontFamily="Manrope">+234 909 685 6606</Text>
           <Text fontFamily="Manrope">+234 808 396 4840</Text>
           <Text fontFamily="Manrope">info@wavecrest.edu.ng</Text>
         </Flex>
 
-        <Flex justifyContent="space-between">
+        <Flex>
           {socials.map((social, index) => {
             return (
               <Link
@@ -183,7 +193,20 @@ const Footer = () => {
                   w="40px"
                   h="40px"
                   mt="10px"
-                  ml="15px"
+                  mr={{
+                    sm: "15px",
+                    md: "15px",
+                    lg: "15px",
+                    xl: "0",
+                    "2xl": "0",
+                  }}
+                  ml={{
+                    sm: "0",
+                    md: "0",
+                    lg: "0",
+                    xl: "15px",
+                    "2xl": "15px",
+                  }}
                 />
               </Link>
             );
@@ -193,7 +216,15 @@ const Footer = () => {
 
       <List
         display="grid"
-        gridTemplateColumns="repeat(3, 1fr)"
+        gridTemplateColumns={{
+          sm: "repeat(2, 1fr)",
+          md: "repeat(3, 1fr)",
+          lg: "repeat(3, 1fr)",
+          xl: "repeat(3, 1fr)",
+          "2xl": "repeat(3, 1fr)",
+        }}
+        h="220px"
+        lineHeight="35px"
         textAlign={{
           sm: "left",
           md: "left",
@@ -214,9 +245,11 @@ const Footer = () => {
                   xl: "16px",
                   "2xl": "16px",
                 }}
-                             ml={{
+                mb="-90px"
+                ml={{
                   sm: "14px",
-                  md: "14px",}}
+                  md: "14px",
+                }}
                 color="#021D37"
                 _hover={{ textDecoration: "none", color: "#020E1B" }}
               >

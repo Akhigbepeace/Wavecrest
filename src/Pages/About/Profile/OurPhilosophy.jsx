@@ -102,8 +102,8 @@ const OurPhilosophy = () => {
           sm: "none",
           md: "none",
           lg: "none",
-          xl: "block",
-          "2xl": "block",
+          xl: "grid",
+          "2xl": "grid",
         }}
       >
         {ourStands.map((ourStand, index) => {

@@ -1,6 +1,9 @@
-import { Box, Button, Heading, Input, Text } from "@chakra-ui/react";
+import { Box, Button, Heading, Input, Image, Text } from "@chakra-ui/react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { FaChevronLeft } from "react-icons/fa";
 import Navbar from "components/Navbar";
+import about from "assets/Images/About.png";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
 
@@ -37,21 +40,96 @@ const ViewVacancies = () => {
       variant: "filled",
     },
   ];
+
+  const navigate = useNavigate();
+
+  const BackToJobVancanies = (e) => {
+    e.preventDefault();
+    navigate("/career/viewJobVacancies", { replace: true });
+  };
+
   return (
     <Box>
       <Navbar />
 
-      <Box px="91px">
-        <Box>
-          <Heading
-            mt="60px"
+      <Box h="441px" w="100%" gridGap="68px" position="relative">
+        <Image src={about} h="100%" w="100%" objectFit="cover" />
+
+        <Box
+          bg="rgba(0, 24, 71, 0.5)"
+          h="100%"
+          w="100%"
+          position="absolute"
+          bottom="0"
+        >
+          <Text
+            color="white"
             fontFamily="Playfair Display"
             fontWeight="700"
-            fontSize="32px"
-            color="#021D37"
+            fontSize="60px"
+            textAlign="center"
+            mt="140px"
           >
-            Apply For Job
-          </Heading>
+            APPLY FOR JOB
+          </Text>
+        </Box>
+      </Box>
+
+      <Box
+        px={{
+          sm: "20px",
+          md: "20px",
+          lg: "91px",
+          xl: "91px",
+          "2xl": "91px",
+        }}
+      >
+        <Box>
+          <Box>
+            <Button
+              fontFamily="Manrope"
+              fontSize="18px"
+              py="25px"
+              mb="52px"
+              fontWeight="700"
+              bg="#EEE"
+              mt={{
+                sm: "20px",
+                md: "20px",
+                lg: "20px",
+                xl: "20px",
+                "2xl": "20px",
+              }}
+              onClick={(e) => BackToJobVancanies(e)}
+            >
+              <FaChevronLeft size="20px" />
+              Back To Job Vacancies
+            </Button>
+
+            <Box
+              w="88px"
+              h="3px"
+              bg="#021D37"
+              mb="10px"
+              mt="60px"
+              display={{
+                sm: "block",
+                md: "block",
+                lg: "block",
+                xl: "none",
+                "2xl": "none",
+              }}
+            ></Box>
+
+            <Heading
+              fontFamily="Playfair Display"
+              fontWeight="700"
+              fontSize="32px"
+              color="#021D37"
+            >
+              Apply For Job
+            </Heading>
+          </Box>
 
           <Text
             fontFamily="Manrope"
@@ -76,9 +154,14 @@ const ViewVacancies = () => {
                 type={form.fieldType}
                 placeholder={form.placeHolder}
                 variant={form.variant}
-                required={true}
                 display="block"
-                w="526px"
+                w={{
+                  sm: "100%",
+                  md: "400px",
+                  lg: "526px",
+                  xl: "526px",
+                  "2xl": "526px",
+                }}
                 h="67px"
                 mb="10px"
                 bg="#EBEDEF"
@@ -108,7 +191,7 @@ const ViewVacancies = () => {
             bg: "#020E1B",
           }}
         >
-          APPLY
+          Apply
         </Button>
       </Box>
 

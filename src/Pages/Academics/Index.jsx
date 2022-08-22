@@ -62,7 +62,7 @@ const Admission = () => {
       <Navbar />
 
       <Box h="441px" w="100%" gridGap="68px" position="relative">
-        <Image src={academics} h="100%" w="100%" />
+        <Image src={academics} h="100%" w="100%" objectFit="cover" />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -75,7 +75,13 @@ const Admission = () => {
             color="white"
             fontFamily="Playfair Display"
             fontWeight="700"
-            fontSize="60px"
+            fontSize={{
+              sm: "30px",
+              md: "20px",
+              lg: "20px",
+              xl: "60px",
+              "2xl": "60px",
+            }}
             textAlign="center"
             mt="140px"
           >
