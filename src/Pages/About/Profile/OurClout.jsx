@@ -166,7 +166,13 @@ const OurClout = () => {
                       xl: "28px",
                       "2xl": "28px",
                     }}
-                    lineHeight="50px"
+                    lineHeight={{
+                      sm: "30px",
+                      md: "30px",
+                      lg: "30px",
+                      xl: "50px",
+                      "2xl": "50px",
+                    }}
                     alignItems="center"
                     ml={{
                       sm: "30px",

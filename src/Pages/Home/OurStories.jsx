@@ -115,8 +115,8 @@ export default function CaptionCarousel() {
             sm: "0",
             md: "0",
             lg: "0",
-            xl: "-40px",
-            "2xl": "-40px",
+            xl: "-80px",
+            "2xl": "-80px",
           }}
           pt={{ sm: "75px", md: "75px", lg: "75px" }}
           px={{ sm: "20px", md: "20px", lg: "20px" }}
@@ -197,7 +197,7 @@ export default function CaptionCarousel() {
                 }}
                 pb="74px"
               >
-                <Image
+                {/* <Image
                   src={ourstories}
                   alt="ourstories"
                   ml="88px"
@@ -223,7 +223,7 @@ export default function CaptionCarousel() {
                     "2xl": "345px",
                   }}
                   mx="auto"
-                />
+                /> */}
 
                 <Flex
                   flexDirection="column"
@@ -281,7 +281,7 @@ export default function CaptionCarousel() {
                     fontSize="20px"
                     textDecoration="none"
                     textAlign="center"
-                    mt="20px"
+                    my="20px"
                     mx={{
                       sm: "auto",
                       md: "auto",
@@ -301,21 +301,20 @@ export default function CaptionCarousel() {
                   </Link>
                 </Flex>
 
-                {/* <Image
+                <Image
                   src={ourstories}
                   alt="ourstories"
-                  ml="88px"
                   display={{
-                    sm: "none",
-                    md: "none",
-                    lg: "none",
-                    xl: "block",
-                    "2xl": "block",
+                    sm: "block",
+                    md: "block",
+                    lg: "block",
+                    xl: "none",
+                    "2xl": "none",
                   }}
                   w={{
-                    sm: "335px",
-                    md: "335px",
-                    lg: "335px",
+                    sm: "310px",
+                    md: "310px",
+                    lg: "310px",
                     xl: "576px",
                     "2xl": "576px",
                   }}
@@ -326,7 +325,8 @@ export default function CaptionCarousel() {
                     xl: "345px",
                     "2xl": "345px",
                   }}
-                /> */}
+                  mx="auto"
+                />
               </Flex>
             </Box>
           ))}

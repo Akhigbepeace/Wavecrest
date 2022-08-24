@@ -148,23 +148,67 @@ const FAQs = () => {
 
   return (
     <Fragment>
-      <Heading
-        fontFamily="Playfair Display"
-        fontWeight="700"
-        fontSize="32px"
-        color="#021D37"
-        px="91px"
-        my="50px"
+      <Box
+        px={{
+          sm: "20px",
+          md: "20px",
+          lg: "50px",
+          xl: "91px",
+          "2xl": "91px",
+        }}
+        my={{
+          sm: "20px",
+          md: "20px",
+          lg: "50px",
+          xl: "50px",
+          "2xl": "50px",
+        }}
       >
-        Frequently Asked Questions
-      </Heading>
+        <Box
+          w="88px"
+          h="3px"
+          bg="#021D37"
+          mb="10px"
+          mt="50px"
+          display={{
+            sm: "block",
+            md: "block",
+            lg: "block",
+            xl: "none",
+            "2xl": "none",
+          }}
+        ></Box>
+        <Heading
+          fontFamily="Playfair Display"
+          fontWeight="700"
+          fontSize={{
+            sm: "21px",
+            md: "25px",
+            lg: "28px",
+            xl: "32px",
+            "2xl": "32px",
+          }}
+          color="#021D37"
+        >
+          Frequently Asked Questions
+        </Heading>
+      </Box>
 
       {FAQs.map((faq, index) => {
         return (
           <Accordion key={index} allowToggle borderTopColor="#FFF">
             <AccordionItem borderBottom="none">
               {({ isExpanded }) => (
-                <Box mx="91px" border="none">
+                <Box
+                  mx={{
+                    sm: "20px",
+                    md: "20px",
+                    lg: "50px",
+                    xl: "50px",
+                    "2xl": "50px",
+                  }}
+                  border="none"
+                >
                   <h2>
                     <AccordionButton
                       bg="#EBEDEF"
@@ -177,7 +221,13 @@ const FAQs = () => {
                         textAlign="left"
                         p="10px "
                         fontFamily="Manrope"
-                        fontSize="24px"
+                        fontSize={{
+                          sm: "18px",
+                          md: "20px",
+                          lg: "22px",
+                          xl: "24px",
+                          "2xl": "24px",
+                        }}
                         fontWeight="700"
                       >
                         {faq.question}
@@ -191,11 +241,22 @@ const FAQs = () => {
                   </h2>
 
                   <AccordionPanel
-                    p="10px 57px"
+                    p={{
+                      sm: "20px",
+                      md: "20px",
+                      lg: "50px",
+                      xl: "91px",
+                      "2xl": "10px 57px",
+                    }}
                     fontFamily="Manrope"
-                    fontSize="24px"
+                    fontSize={{
+                      sm: "18px",
+                      md: "20px",
+                      lg: "22px",
+                      xl: "24px",
+                      "2xl": "24px",
+                    }}
                     fontWeight="400"
-                    lineHeight="33px"
                   >
                     {faq.answer}
                   </AccordionPanel>

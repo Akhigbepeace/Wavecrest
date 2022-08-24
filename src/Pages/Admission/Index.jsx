@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "components/Navbar";
 import admission from "assets/Images/Admission.png";
 import AdmissionRequirements from "Pages/Admission/AdmissionRequirements";
-import TuitionAndScholarship from "Pages/Admission/TuitionAndScholarship";
+import TuitionAndScholarship from "Pages/Admission/Tuition And Scholarship/TuitionAndScholarship";
 import ApplyOnline from "Pages/Admission/ApplyOnline";
 import Hostel from "Pages/Admission/Hostel";
 import FAQs from "Pages/Admission/FAQs";
