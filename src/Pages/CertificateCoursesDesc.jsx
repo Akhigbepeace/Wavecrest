@@ -46,7 +46,7 @@ const CertificateCoursesDesc = () => {
       <Navbar />
 
       <Box h="441px" w="100%" gridGap="68px" position="relative">
-        <Image src={about} h="100%" w="100%" />
+        <Image src={about} h="100%" w="100%" objectFit="cover" />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -59,7 +59,13 @@ const CertificateCoursesDesc = () => {
             color="white"
             fontFamily="Playfair Display"
             fontWeight="700"
-            fontSize="40px"
+            fontSize={{
+              sm: "25px",
+              md: "35px",
+              lg: "40px",
+              xl: "40px",
+              "2xl": "40px",
+            }}
             textAlign="center"
             mt="140px"
             textTransform="uppercase"
@@ -83,15 +89,56 @@ const CertificateCoursesDesc = () => {
         Back To Programmes
       </Button>
 
-      <Box px="91px">
-        <Flex bg="#FFF" p="50px 0" alignItems="center" justifyContent="center">
-          <Box w="55%" mr="60px">
+      <Box
+        px={{
+          sm: "20px",
+          md: "20px",
+          lg: "91px",
+          xl: "91px",
+          "2xl": "91px",
+        }}
+      >
+        <Flex
+          bg="#FFF"
+          p="50px 0"
+          alignItems="center"
+          justifyContent="center"
+          display={{
+            sm: "block",
+            md: "flex",
+            lg: "flex",
+            xl: "flex",
+            "2xl": "flex",
+          }}
+        >
+          <Box
+            w={{
+              sm: "100%",
+              md: "100%",
+              lg: "55%",
+              xl: "55%",
+              "2xl": "55%",
+            }}
+            mr="60px"
+          >
             <Heading
               fontFamily="Playfair Display"
-              fontSize="32px"
+              fontSize={{
+                sm: "25px",
+                md: "25px",
+                lg: "30px",
+                xl: "30px",
+                "2xl": "30px",
+              }}
               fontWeight="400"
               color="#021D37"
-              lineHeight="43px"
+              lineHeight={{
+                sm: "30px",
+                md: "30 px",
+                lg: "30px",
+                xl: "30px",
+                "2xl": "43px",
+              }}
             >
               Certificate Course <br /> In Hospitality Operations
             </Heading>
@@ -122,20 +169,44 @@ const CertificateCoursesDesc = () => {
             </Text>
           </Box>
 
-          <Box w="50%" h="10%">
+          <Box
+            h="10%"
+            mt={{
+              sm: "25px",
+              md: "25px",
+              lg: "25px",
+              xl: "none",
+              "2xl": "none",
+            }}
+            w={{
+              sm: "100%",
+              md: "100%",
+              lg: "100%",
+              xl: "50%",
+              "2xl": "50%",
+            }}
+          >
             <ReactPlayer
               url={waveVid}
               playing
               loop
-              controls
-              muted
               width="100%"
               height="100%"
             />
           </Box>
         </Flex>
 
-        <Flex textAlign="center" mb="50px">
+        <Flex
+          textAlign="center"
+          mb="50px"
+          display={{
+            sm: "block",
+            md: "flex",
+            lg: "flex",
+            xl: "flex",
+            "2xl": "flex",
+          }}
+        >
           <Link
             href="/admission/applyOnline"
             bg="#021D37"
@@ -143,7 +214,13 @@ const CertificateCoursesDesc = () => {
             h="52px"
             w="208px"
             p="10px 25px"
-            mr="20px"
+            mr={{
+              sm: "0",
+              md: "20px",
+              lg: "20px",
+              xl: "20px",
+              "2xl": "20px",
+            }}
             border="none"
             borderRadius="3px"
             fontFamily="Manrope"
@@ -159,6 +236,13 @@ const CertificateCoursesDesc = () => {
 
           <Button
             h="52px"
+            mt={{
+              sm: "20px",
+              md: "0px",
+              lg: "0px",
+              xl: "0px",
+              "2xl": "0px",
+            }}
             fontFamily="Manrope"
             fontSize="24px"
             fontWeight="700"
@@ -180,7 +264,17 @@ const CertificateCoursesDesc = () => {
             Other Programmes Include:
           </Heading>
 
-          <Flex justifyContent="center" mt="30px">
+          <Flex
+            justifyContent="center"
+            mt="30px"
+            display={{
+              sm: "block",
+              md: "flex",
+              lg: "flex",
+              xl: "flex",
+              "2xl": "flex",
+            }}
+          >
             {quickLinks.map((quickLink) => {
               return (
                 <Link

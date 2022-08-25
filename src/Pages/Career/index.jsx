@@ -45,7 +45,19 @@ const Career = () => {
       <Navbar />
 
       <Box>
-        <Box h="441px" w="100%" gridGap="68px" position="relative">
+        <Box
+          h="441px"
+          w="100%"
+          gridGap="68px"
+          position="relative"
+          display={{
+            sm: "none",
+            md: "none",
+            lg: "none",
+            xl: "block",
+            "2xl": "block",
+          }}
+        >
           <Image src={about} h="100%" w="100%" objectFit="cover" />
 
           <Box

@@ -66,9 +66,9 @@ const ViewVacancies = () => {
             color="white"
             fontFamily="Playfair Display"
             fontWeight="700"
-            fontSize="60px"
+            fontSize="35px"
             textAlign="center"
-            mt="140px"
+            mt="250px"
           >
             APPLY FOR JOB
           </Text>

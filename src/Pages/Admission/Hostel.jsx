@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import aboutus from "assets/Images/aboutus.png";
+import waveimg from "assets/Images/waveimg.png";
 
 const ApplyOnline = () => {
   const images = [
@@ -28,6 +29,41 @@ const ApplyOnline = () => {
 
   return (
     <Fragment>
+      <Box
+        h="441px"
+        w="100%"
+        gridGap="68px"
+        position="relative"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <Image src={waveimg} h="100%" w="100%" objectFit="cover" />
+
+        <Box
+          bg="rgba(0, 24, 71, 0.5)"
+          h="100%"
+          w="100%"
+          position="absolute"
+          bottom="0"
+        >
+          <Text
+            color="white"
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="30px"
+            textAlign="center"
+            mt="250px"
+          >
+            HOSTEL APPLICATION
+          </Text>
+        </Box>
+      </Box>
+
       <Box
         p={{
           sm: "35px 20px",
@@ -77,7 +113,7 @@ const ApplyOnline = () => {
                     "2xl": "block",
                   }}
                 >
-                  Hostel Application
+                  Hostel <br /> Application
                 </Heading>
                 <Heading
                   fontFamily="Playfair Display"
@@ -97,9 +133,37 @@ const ApplyOnline = () => {
               </Box>
             </Box>
 
+            <Image
+              src={aboutus}
+              w="323px"
+              h="323px"
+              objectFit="cover"
+              borderRadius="5px"
+              ml={{
+                sm: "0",
+                md: "0",
+                lg: "0",
+                xl: "78px",
+                "2xl": "78px",
+              }}
+              mt={{
+                sm: "50px",
+                md: "50px",
+                lg: "50px",
+                xl: "0",
+                "2xl": "0",
+              }}
+            />
+
             <Text
               fontFamily="Manrope"
-              fontSize="24px"
+              fontSize={{
+                sm: "20px",
+                md: "24px",
+                lg: "24px",
+                xl: "24px",
+                "2xl": "24px",
+              }}
               fontWeight="400"
               lineHeight="33px"
               my="24px"
@@ -111,6 +175,7 @@ const ApplyOnline = () => {
               reprehenderit quo, ut perferendis, maxime dolor culpa recusandae
               autem saepe laborum possimus fugiat quisquam ipsum incidunt quae.
             </Text>
+
             <Button
               bg="#021D37"
               color="#FFF"
@@ -128,28 +193,6 @@ const ApplyOnline = () => {
               Register
             </Button>
           </Box>
-
-          <Image
-            src={aboutus}
-            w="323px"
-            h="323px"
-            objectFit="cover"
-            borderRadius="5px"
-            ml={{
-              sm: "0",
-              md: "0",
-              lg: "0",
-              xl: "78px",
-              "2xl": "78px",
-            }}
-            mt={{
-              sm: "50px",
-              md: "50px",
-              lg: "50px",
-              xl: "0",
-              "2xl": "0",
-            }}
-          />
         </Flex>
 
         <Grid

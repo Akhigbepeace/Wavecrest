@@ -132,7 +132,15 @@ const Staff = () => {
         {staffs.map((staff, index) => {
           return (
             <Box key={index} mb="-74px">
-              <Box w="436px">
+              <Box
+                w={{
+                  sm: "250px",
+                  md: "100%",
+                  lg: "100%",
+                  xl: "436px",
+                  "2xl": "436px",
+                }}
+              >
                 <Image
                   src={staff.image}
                   objectFit="contain"

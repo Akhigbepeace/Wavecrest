@@ -1,5 +1,7 @@
 import {
   Box,
+  Image,
+  Text,
   Heading,
   Accordion,
   AccordionItem,
@@ -9,6 +11,7 @@ import {
 import { FaChevronCircleDown } from "react-icons/fa";
 import { FaChevronCircleUp } from "react-icons/fa";
 import React, { Fragment } from "react";
+import waveimg from "assets/Images/waveimg.png";
 
 const FAQs = () => {
   const FAQs = [
@@ -149,123 +152,160 @@ const FAQs = () => {
   return (
     <Fragment>
       <Box
-        px={{
-          sm: "20px",
-          md: "20px",
-          lg: "50px",
-          xl: "91px",
-          "2xl": "91px",
-        }}
-        my={{
-          sm: "20px",
-          md: "20px",
-          lg: "50px",
-          xl: "50px",
-          "2xl": "50px",
+        h="441px"
+        w="100%"
+        gridGap="68px"
+        position="relative"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
         }}
       >
+        <Image src={waveimg} h="100%" w="100%" objectFit="cover" />
+
         <Box
-          w="88px"
-          h="3px"
-          bg="#021D37"
-          mb="10px"
-          mt="50px"
-          display={{
-            sm: "block",
-            md: "block",
-            lg: "block",
-            xl: "none",
-            "2xl": "none",
-          }}
-        ></Box>
-        <Heading
-          fontFamily="Playfair Display"
-          fontWeight="700"
-          fontSize={{
-            sm: "21px",
-            md: "25px",
-            lg: "28px",
-            xl: "32px",
-            "2xl": "32px",
-          }}
-          color="#021D37"
+          bg="rgba(0, 24, 71, 0.5)"
+          h="100%"
+          w="100%"
+          position="absolute"
+          bottom="0"
         >
-          Frequently Asked Questions
-        </Heading>
+          <Text
+            color="white"
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="40px"
+            textAlign="center"
+            mt="250px"
+          >
+            FAQs
+          </Text>
+        </Box>
       </Box>
 
-      {FAQs.map((faq, index) => {
-        return (
-          <Accordion key={index} allowToggle borderTopColor="#FFF">
-            <AccordionItem borderBottom="none">
-              {({ isExpanded }) => (
-                <Box
-                  mx={{
-                    sm: "20px",
-                    md: "20px",
-                    lg: "50px",
-                    xl: "50px",
-                    "2xl": "50px",
-                  }}
-                  border="none"
-                >
-                  <h2>
-                    <AccordionButton
-                      bg="#EBEDEF"
-                      mb="20px"
-                      borderTop="none"
-                      _expanded={{ bg: "#021D37", color: "white" }}
-                    >
-                      <Box
-                        flex="1"
-                        textAlign="left"
-                        p="10px "
-                        fontFamily="Manrope"
-                        fontSize={{
-                          sm: "18px",
-                          md: "20px",
-                          lg: "22px",
-                          xl: "24px",
-                          "2xl": "24px",
-                        }}
-                        fontWeight="700"
-                      >
-                        {faq.question}
-                      </Box>
-                      {isExpanded ? (
-                        <FaChevronCircleDown size="30px" />
-                      ) : (
-                        <FaChevronCircleUp size="30px" />
-                      )}
-                    </AccordionButton>
-                  </h2>
+      <Box>
+        <Box
+          px={{
+            sm: "20px",
+            md: "20px",
+            lg: "50px",
+            xl: "91px",
+            "2xl": "91px",
+          }}
+          my={{
+            sm: "20px",
+            md: "20px",
+            lg: "50px",
+            xl: "50px",
+            "2xl": "50px",
+          }}
+        >
+          <Box
+            w="88px"
+            h="3px"
+            bg="#021D37"
+            mb="10px"
+            mt="50px"
+            display={{
+              sm: "block",
+              md: "block",
+              lg: "block",
+              xl: "none",
+              "2xl": "none",
+            }}
+          ></Box>
+          <Heading
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize={{
+              sm: "21px",
+              md: "25px",
+              lg: "28px",
+              xl: "32px",
+              "2xl": "32px",
+            }}
+            color="#021D37"
+          >
+            Frequently Asked Questions
+          </Heading>
+        </Box>
 
-                  <AccordionPanel
-                    p={{
+        {FAQs.map((faq, index) => {
+          return (
+            <Accordion key={index} allowToggle borderTopColor="#FFF">
+              <AccordionItem borderBottom="none">
+                {({ isExpanded }) => (
+                  <Box
+                    mx={{
                       sm: "20px",
                       md: "20px",
                       lg: "50px",
-                      xl: "91px",
-                      "2xl": "10px 57px",
+                      xl: "50px",
+                      "2xl": "50px",
                     }}
-                    fontFamily="Manrope"
-                    fontSize={{
-                      sm: "18px",
-                      md: "20px",
-                      lg: "22px",
-                      xl: "24px",
-                      "2xl": "24px",
-                    }}
-                    fontWeight="400"
+                    border="none"
                   >
-                    {faq.answer}
-                  </AccordionPanel>
-                </Box>
-              )}
-            </AccordionItem>
-          </Accordion>
-        );
-      })}
+                    <h2>
+                      <AccordionButton
+                        bg="#EBEDEF"
+                        mb="20px"
+                        borderTop="none"
+                        _expanded={{ bg: "#021D37", color: "white" }}
+                      >
+                        <Box
+                          flex="1"
+                          textAlign="left"
+                          p="10px "
+                          fontFamily="Manrope"
+                          fontSize={{
+                            sm: "18px",
+                            md: "20px",
+                            lg: "22px",
+                            xl: "24px",
+                            "2xl": "24px",
+                          }}
+                          fontWeight="700"
+                        >
+                          {faq.question}
+                        </Box>
+                        {isExpanded ? (
+                          <FaChevronCircleDown size="30px" />
+                        ) : (
+                          <FaChevronCircleUp size="30px" />
+                        )}
+                      </AccordionButton>
+                    </h2>
+
+                    <AccordionPanel
+                      p={{
+                        sm: "20px",
+                        md: "20px",
+                        lg: "50px",
+                        xl: "91px",
+                        "2xl": "10px 57px",
+                      }}
+                      fontFamily="Manrope"
+                      fontSize={{
+                        sm: "18px",
+                        md: "20px",
+                        lg: "22px",
+                        xl: "24px",
+                        "2xl": "24px",
+                      }}
+                      fontWeight="400"
+                    >
+                      {faq.answer}
+                    </AccordionPanel>
+                  </Box>
+                )}
+              </AccordionItem>
+            </Accordion>
+          );
+        })}
+      </Box>
     </Fragment>
   );
 };

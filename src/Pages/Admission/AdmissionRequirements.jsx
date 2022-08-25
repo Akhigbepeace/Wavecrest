@@ -15,7 +15,7 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { Fragment } from "react";
 import waveimg from "assets/Images/waveimg.png";
 import fileDownload from "assets/Images/paperDownload.png";
 
@@ -72,215 +72,252 @@ const AdmissionRequirements = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box>
-      {requirements.map((requirement, index) => {
-        const textToShow = requirement.courseRequirements.map((values, i) => {
-          return (
-            <UnorderedList key={i}>
-              <ListItem
-                mb={{
-                  sm: "10px",
-                  md: "15px",
-                  lg: "15px",
-                  xl: "20px",
-                  "2xl": "20px",
-                }}
-                fontFamily="Manrope"
-                fontWeight="400"
-                fontSize={{
-                  sm: "18px",
-                  md: "22px",
-                  lg: "22px",
-                  xl: "24px",
-                  "2xl": "24px",
-                }}
-                lineHeight="33px"
-                listStyleType="disc"
-              >
-                {values}
-              </ListItem>
-            </UnorderedList>
-          );
-        });
+    <Fragment>
+      <Box
+        h="441px"
+        w="100%"
+        gridGap="68px"
+        position="relative"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <Image src={waveimg} h="100%" w="100%" objectFit="cover" />
 
-        return (
-          <Box
-            key={index}
-            bg={requirement.background}
-            p={{
-              sm: "20px",
-              md: "20px 40px",
-              lg: "30px 91px",
-              xl: "50px 91px",
-              "2xl": "50px 91px",
-            }}
+        <Box
+          bg="rgba(0, 24, 71, 0.5)"
+          h="100%"
+          w="100%"
+          position="absolute"
+          bottom="0"
+        >
+          <Text
+            color="white"
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="30px"
+            textAlign="center"
+            mt="250px"
           >
-            <Box>
-              <Box
-                w="88px"
-                h="3px"
-                bg="#021D37"
-                mb="10px"
-                mt="30px"
+            ADMISSION REQUIREMENTS
+          </Text>
+        </Box>
+      </Box>
+
+      <Box>
+        {requirements.map((requirement, index) => {
+          const textToShow = requirement.courseRequirements.map((values, i) => {
+            return (
+              <UnorderedList key={i}>
+                <ListItem
+                  mb={{
+                    sm: "10px",
+                    md: "15px",
+                    lg: "15px",
+                    xl: "20px",
+                    "2xl": "20px",
+                  }}
+                  fontFamily="Manrope"
+                  fontWeight="400"
+                  fontSize={{
+                    sm: "18px",
+                    md: "22px",
+                    lg: "22px",
+                    xl: "24px",
+                    "2xl": "24px",
+                  }}
+                  lineHeight="33px"
+                  listStyleType="disc"
+                >
+                  {values}
+                </ListItem>
+              </UnorderedList>
+            );
+          });
+
+          return (
+            <Box
+              key={index}
+              bg={requirement.background}
+              p={{
+                sm: "20px",
+                md: "20px 40px",
+                lg: "30px 91px",
+                xl: "50px 91px",
+                "2xl": "50px 91px",
+              }}
+            >
+              <Box>
+                <Box
+                  w="88px"
+                  h="3px"
+                  bg="#021D37"
+                  mb="10px"
+                  mt="30px"
+                  display={{
+                    sm: "block",
+                    md: "block",
+                    lg: "block",
+                    xl: "none",
+                    "2xl": "none",
+                  }}
+                ></Box>
+                <Heading
+                  fontFamily="Playfair Display"
+                  fontWeight="700"
+                  fontSize={{
+                    sm: "24px",
+                    md: "block",
+                    lg: "block",
+                    xl: "32px",
+                    "2xl": "32px",
+                  }}
+                >
+                  {requirement.course}
+                </Heading>
+              </Box>
+
+              <Flex
+                mt="24px"
+                alignItems="center"
                 display={{
                   sm: "block",
                   md: "block",
                   lg: "block",
-                  xl: "none",
-                  "2xl": "none",
-                }}
-              ></Box>
-              <Heading
-                fontFamily="Playfair Display"
-                fontWeight="700"
-                fontSize={{
-                  sm: "24px",
-                  md: "block",
-                  lg: "block",
-                  xl: "32px",
-                  "2xl": "32px",
+                  xl: "flex",
+                  "2xl": "flex",
                 }}
               >
-                {requirement.course}
-              </Heading>
-            </Box>
+                <Image
+                  src={waveimg}
+                  w="580px"
+                  h="323px"
+                  borderRadius="3px"
+                  mr="45px"
+                  objectFit="cover"
+                />
 
-            <Flex
-              mt="24px"
-              alignItems="center"
-              display={{
-                sm: "block",
-                md: "block",
-                lg: "block",
-                xl: "flex",
-                "2xl": "flex",
-              }}
-            >
-              <Image
-                src={waveimg}
-                w="580px"
-                h="323px"
-                borderRadius="3px"
-                mr="45px"
-                objectFit="cover"
-              />
+                <Box>
+                  <Box>{textToShow}</Box>
 
-              <Box>
-                <Box>{textToShow}</Box>
+                  <Link
+                    fontFamily="Manrope"
+                    fontWeight="700"
+                    fontSize="22px"
+                    textDecoration="underline"
+                    mt="33px"
+                    lineHeight="33px"
+                    onClick={onOpen}
+                  >
+                    {requirement.viewUpdate}
+                  </Link>
 
-                <Link
-                  fontFamily="Manrope"
-                  fontWeight="700"
-                  fontSize="22px"
-                  textDecoration="underline"
-                  mt="33px"
-                  lineHeight="33px"
-                  onClick={onOpen}
-                >
-                  {requirement.viewUpdate}
-                </Link>
-
-                <Modal isCentered isOpen={isOpen} onClose={onClose}>
-                  <ModalOverlay />
-                  <ModalContent bg="#DCE5E5" p="30px" maxW="none" w="1110px">
-                    <ModalHeader
-                      fontFamily="Playfair Display"
-                      fontWeight="700"
-                      fontSize="32px"
-                      color="#021D37"
-                    >
-                      Updated Subject Combinations
-                    </ModalHeader>
-                    <ModalCloseButton
-                      bg="#021D37"
-                      color="#FFF"
-                      _hover={{
-                        bg: "#020E1B",
-                      }}
-                    />
-                    <ModalBody>
-                      <Heading
-                        fontFamily="Manrope"
+                  <Modal isCentered isOpen={isOpen} onClose={onClose}>
+                    <ModalOverlay />
+                    <ModalContent bg="#DCE5E5" p="30px" maxW="none" w="1110px">
+                      <ModalHeader
+                        fontFamily="Playfair Display"
                         fontWeight="700"
-                        fontSize="24px"
+                        fontSize="32px"
                         color="#021D37"
                       >
-                        Five (5) credit passes in SSCE/NECO/GCE
-                      </Heading>
-                      <UnorderedList>
-                        <Text
+                        Updated Subject Combinations
+                      </ModalHeader>
+                      <ModalCloseButton
+                        bg="#021D37"
+                        color="#FFF"
+                        _hover={{
+                          bg: "#020E1B",
+                        }}
+                      />
+                      <ModalBody>
+                        <Heading
                           fontFamily="Manrope"
                           fontWeight="700"
                           fontSize="24px"
                           color="#021D37"
                         >
-                          Four (4) Subjects can be chosen from this list:
-                        </Text>
-                        {subjects.map((subject) => {
-                          return (
-                            <ListItem
-                              listStyleType="none"
-                              fontFamily="Manrope"
-                              fontWeight="400"
-                              fontSize="24px"
-                              color="#021D37"
-                            >
-                              {subject}
-                            </ListItem>
-                          );
-                        })}
-                      </UnorderedList>
-                    </ModalBody>
-                  </ModalContent>
-                </Modal>
+                          Five (5) credit passes in SSCE/NECO/GCE
+                        </Heading>
+                        <UnorderedList>
+                          <Text
+                            fontFamily="Manrope"
+                            fontWeight="700"
+                            fontSize="24px"
+                            color="#021D37"
+                          >
+                            Four (4) Subjects can be chosen from this list:
+                          </Text>
+                          {subjects.map((subject) => {
+                            return (
+                              <ListItem
+                                listStyleType="none"
+                                fontFamily="Manrope"
+                                fontWeight="400"
+                                fontSize="24px"
+                                color="#021D37"
+                              >
+                                {subject}
+                              </ListItem>
+                            );
+                          })}
+                        </UnorderedList>
+                      </ModalBody>
+                    </ModalContent>
+                  </Modal>
 
-                <Link
-                  href={requirement.linkTo}
-                  target="_blank"
-                  display="block"
-                  textAlign="center"
-                  bg="#021D37"
-                  fontFamily="Manrope"
-                  fontWeight="700"
-                  fontSize="20px"
-                  color="#FFF"
-                  borderRadius="3px"
-                  mt="30px"
-                  pt="10px"
-                  w="208px"
-                  h="52px"
-                  _hover={{
-                    bg: "#020E1B",
-                  }}
-                >
-                  APPLY NOW
-                </Link>
+                  <Link
+                    href={requirement.linkTo}
+                    target="_blank"
+                    display="block"
+                    textAlign="center"
+                    bg="#021D37"
+                    fontFamily="Manrope"
+                    fontWeight="700"
+                    fontSize="20px"
+                    color="#FFF"
+                    borderRadius="3px"
+                    mt="30px"
+                    pt="10px"
+                    w="208px"
+                    h="52px"
+                    _hover={{
+                      bg: "#020E1B",
+                    }}
+                  >
+                    APPLY NOW
+                  </Link>
 
-                <Link
-                  display={{
-                    sm: "flex",
-                    md: "flex",
-                    lg: "flex",
-                    xl: "none",
-                    "2xl": "none",
-                  }}
-                  textAlign="center"
-                  alignItems="center"
-                  fontFamily="Manrope"
-                  fontSize="14px"
-                  fontWeight="800"
-                  color="#021D37"
-                  my="14px"
-                >
-                  <Image src={fileDownload} w="20px" mr="13px" />
-                  <Text>Download Programme Brochure</Text>
-                </Link>
-              </Box>
-            </Flex>
-          </Box>
-        );
-      })}
-    </Box>
+                  <Link
+                    display={{
+                      sm: "flex",
+                      md: "flex",
+                      lg: "flex",
+                      xl: "none",
+                      "2xl": "none",
+                    }}
+                    textAlign="center"
+                    alignItems="center"
+                    fontFamily="Manrope"
+                    fontSize="14px"
+                    fontWeight="800"
+                    color="#021D37"
+                    my="14px"
+                  >
+                    <Image src={fileDownload} w="20px" mr="13px" />
+                    <Text>Download Programme Brochure</Text>
+                  </Link>
+                </Box>
+              </Flex>
+            </Box>
+          );
+        })}
+      </Box>
+    </Fragment>
   );
 };
 

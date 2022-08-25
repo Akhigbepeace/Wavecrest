@@ -155,7 +155,7 @@ const OurPhilosophy = () => {
               : card.text;
 
             return (
-              <Box key={index} bg="#021D37" p="15px 30px" h="330px" mt="20px">
+              <Box key={index} bg="#021D37" p="15px 30px" h="350px" mt="20px">
                 <Heading
                   fontFamily="Visual Hollow Script"
                   color="#FFF"

@@ -93,9 +93,9 @@ const Board = () => {
         gridGap="8px"
         mb="100px"
         display={{
-          sm: "none",
-          md: "none",
-          lg: "none",
+          sm: "block",
+          md: "block",
+          lg: "block",
           xl: "grid",
           "2xl": "grid",
         }}
@@ -103,7 +103,15 @@ const Board = () => {
         {boards.map((board, index) => {
           return (
             <Box key={index} mb="-74px">
-              <Box w="436px">
+              <Box
+                w={{
+                  sm: "250px",
+                  md: "100%",
+                  lg: "100%",
+                  xl: "436px",
+                  "2xl": "436px",
+                }}
+              >
                 <Image
                   src={board.image}
                   objectFit="contain"
@@ -154,7 +162,7 @@ const Board = () => {
         })}
       </Grid>
 
-      <Box
+      {/* <Box
         display={{
           sm: "block",
           md: "block",
@@ -164,7 +172,7 @@ const Board = () => {
         }}
       >
         <ResponsiveBoard />
-      </Box>
+      </Box> */}
     </Box>
   );
 };

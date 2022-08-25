@@ -4,11 +4,13 @@ import {
   Box,
   Text,
   Flex,
+  Image,
   Select,
   Button,
 } from "@chakra-ui/react";
 
 import React, { Fragment } from "react";
+import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
 
 const NYSC = () => {
   const forms = [
@@ -52,6 +54,41 @@ const NYSC = () => {
   ];
   return (
     <Fragment>
+      <Box
+        h="441px"
+        w="100%"
+        gridGap="68px"
+        position="relative"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <Image src={studyProgrammes3} h="100%" w="100%" objectFit="cover" />
+
+        <Box
+          bg="rgba(0, 24, 71, 0.5)"
+          h="100%"
+          w="100%"
+          position="absolute"
+          bottom="0"
+        >
+          <Text
+            color="white"
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="40px"
+            textAlign="center"
+            mt="250px"
+          >
+            NYSC
+          </Text>
+        </Box>
+      </Box>
+
       <Box
         px={{
           sm: "20px",
