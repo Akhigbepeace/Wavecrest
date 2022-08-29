@@ -1,10 +1,9 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   Box,
   Button,
   Heading,
-  UnorderedList,
-  ListItem,
+  Image,
   Table,
   Text,
   Thead,
@@ -14,6 +13,7 @@ import {
   Td,
   TableContainer,
 } from "@chakra-ui/react";
+import waveimg from "assets/Images/waveimg.png";
 
 const Tuitions = [
   {
@@ -97,269 +97,319 @@ const Tuitions = [
 
 const RespTuition = () => {
   return (
-    <Box>
-      {Tuitions.map((tuition, index) => {
-        return (
-          <Box
-            key={index}
-            p={{
-              sm: "50px 20px",
-              md: "50px",
-              lg: "50px",
-            }}
+    <Fragment>
+      <Box
+        h="441px"
+        w="100%"
+        gridGap="68px"
+        position="relative"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <Image src={waveimg} h="100%" w="100%" objectFit="cover" />
+
+        <Box
+          bg="rgba(0, 24, 71, 0.5)"
+          h="100%"
+          w="100%"
+          position="absolute"
+          bottom="0"
+        >
+          <Text
+            color="white"
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="30px"
+            textAlign="center"
+            mt="250px"
           >
+            TUITION AND SCHOLARSHIP
+          </Text>
+        </Box>
+      </Box>
+
+      <Box>
+        {Tuitions.map((tuition, index) => {
+          return (
+            <Box
+              key={index}
+              p={{
+                sm: "50px 20px",
+                md: "50px",
+                lg: "50px",
+              }}
+            >
+              <Box>
+                <Box w="88px" h="3px" bg="#021D37" mb="5px"></Box>
+                <Heading
+                  fontFamily="Playfair Display"
+                  fontSize="22px"
+                  fontWeight="700"
+                  mb="30px"
+                >
+                  {tuition.courseTitle}
+                </Heading>
+              </Box>
+
+              <Box>
+                <TableContainer mt="26px" mb="40px">
+                  <Table>
+                    <Thead borderBottom="2px solid #FFF">
+                      <Tr>
+                        <Th
+                          py="20px"
+                          fontFamily="Manrope"
+                          fontWeight="700"
+                          fontSize="24px"
+                          textAlign="center"
+                          borderRight="2px solid #FFF"
+                          bg="#EBEDEF"
+                        >
+                          {tuition.item}
+                        </Th>
+
+                        <Th
+                          py="20px"
+                          fontFamily="Manrope"
+                          fontWeight="700"
+                          fontSize="24px"
+                          ml="12px"
+                          borderRight="2px solid #FFF"
+                          textAlign="center"
+                          bg="#EBEDEF"
+                        >
+                          {tuition.year1}
+                        </Th>
+                      </Tr>
+                    </Thead>
+
+                    <Tbody>
+                      <Tr
+                        bg="rgba(235, 237, 239, 0.38);"
+                        borderBottom="2px solid #FFF"
+                      >
+                        <Td borderRight="2px solid #FFF">
+                          {tuition.tuitionFee}
+                        </Td>
+                        <Td textAlign="right" borderRight="2px solid #FFF">
+                          {tuition.tuitionFeePrice1}
+                        </Td>
+                      </Tr>
+
+                      <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
+                        <Td borderRight="2px solid #FFF">
+                          {tuition.examinationFee}
+                        </Td>
+                        <Td textAlign="right" borderRight="2px solid #FFF">
+                          {tuition.examinationFeePrice1}
+                        </Td>
+                      </Tr>
+
+                      <Tr
+                        bg="rgba(235, 237, 239, 0.38);"
+                        borderBottom="2px solid #FFF"
+                      >
+                        <Td borderRight="2px solid #FFF">
+                          {tuition.workshopFee}
+                        </Td>
+                        <Td textAlign="right" borderRight="2px solid #FFF">
+                          {tuition.workshopFeePrice1}
+                        </Td>
+                      </Tr>
+
+                      <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
+                        <Td borderRight="2px solid #FFF">{tuition.devFee}</Td>
+                        <Td textAlign="right" borderRight="2px solid #FFF">
+                          {tuition.devFeePrice1}
+                        </Td>
+                      </Tr>
+
+                      <Tr
+                        bg="rgba(235, 237, 239, 0.38);"
+                        borderBottom="2px solid #FFF"
+                      >
+                        <Td borderRight="2px solid #FFF">
+                          {tuition.practicalFee}
+                        </Td>
+                        <Td textAlign="right" borderRight="2px solid #FFF">
+                          {tuition.practicalFeePrice1}
+                        </Td>
+                      </Tr>
+
+                      <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
+                        <Td borderRight="2px solid #FFF">
+                          {tuition.studentID}
+                        </Td>
+                        <Td textAlign="right" borderRight="2px solid #FFF">
+                          {tuition.studentIDPrice1}
+                        </Td>
+                      </Tr>
+
+                      <Tr
+                        bg="rgba(235, 237, 239, 0.38);"
+                        borderBottom="2px solid #FFF"
+                      >
+                        <Td borderRight="2px solid #FFF">
+                          {tuition.hmoScheme}
+                        </Td>
+                        <Td textAlign="right" borderRight="2px solid #FFF">
+                          {tuition.hmoSchemePrice1}
+                        </Td>
+                      </Tr>
+
+                      <Tr bg="#021D37" color="#FFF">
+                        <Td borderRight="2px solid #FFF">{tuition.fees}</Td>
+                        <Td textAlign="right" borderRight="2px solid #FFF">
+                          {tuition.feesPrice1}
+                        </Td>
+                      </Tr>
+
+                      <Tr
+                        bg="rgba(235, 237, 239, 0.38);"
+                        borderBottom="2px solid #FFF"
+                      >
+                        <Td borderRight="2px solid #FFF">{tuition.discount}</Td>
+                        <Td textAlign="right" borderRight="2px solid #FFF">
+                          {tuition.discountPrice1}
+                        </Td>
+                      </Tr>
+
+                      <Tr bg="#021D37" color="#FFF">
+                        <Td borderRight="2px solid #FFF">
+                          {tuition.totalFees}
+                        </Td>
+                        <Td textAlign="right" borderRight="2px solid #FFF">
+                          {tuition.totalFeesPrice1}
+                        </Td>
+                      </Tr>
+                    </Tbody>
+                  </Table>
+                </TableContainer>
+              </Box>
+            </Box>
+          );
+        })}
+
+        <Box
+          bg="#EBEDEF"
+          p={{
+            sm: "20px",
+            md: "20px 40px",
+            lg: "30px 91px",
+          }}
+        >
+          <Box>
             <Box>
               <Box w="88px" h="3px" bg="#021D37" mb="5px"></Box>
+
               <Heading
                 fontFamily="Playfair Display"
-                fontSize="22px"
                 fontWeight="700"
-                mb="30px"
+                fontSize="24px"
+                mb="7px"
               >
-                {tuition.courseTitle}
+                Other Requirements may Include:
               </Heading>
             </Box>
 
-            <Box>
-              <TableContainer mt="26px" mb="40px">
-                <Table>
-                  <Thead borderBottom="2px solid #FFF">
-                    <Tr>
-                      <Th
-                        py="20px"
-                        fontFamily="Manrope"
-                        fontWeight="700"
-                        fontSize="24px"
-                        textAlign="center"
-                        borderRight="2px solid #FFF"
-                        bg="#EBEDEF"
-                      >
-                        {tuition.item}
-                      </Th>
-
-                      <Th
-                        py="20px"
-                        fontFamily="Manrope"
-                        fontWeight="700"
-                        fontSize="24px"
-                        ml="12px"
-                        borderRight="2px solid #FFF"
-                        textAlign="center"
-                        bg="#EBEDEF"
-                      >
-                        {tuition.year1}
-                      </Th>
-                    </Tr>
-                  </Thead>
-
-                  <Tbody>
-                    <Tr
-                      bg="rgba(235, 237, 239, 0.38);"
-                      borderBottom="2px solid #FFF"
-                    >
-                      <Td borderRight="2px solid #FFF">{tuition.tuitionFee}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.tuitionFeePrice1}
-                      </Td>
-                    </Tr>
-
-                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
-                      <Td borderRight="2px solid #FFF">
-                        {tuition.examinationFee}
-                      </Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.examinationFeePrice1}
-                      </Td>
-                    </Tr>
-
-                    <Tr
-                      bg="rgba(235, 237, 239, 0.38);"
-                      borderBottom="2px solid #FFF"
-                    >
-                      <Td borderRight="2px solid #FFF">
-                        {tuition.workshopFee}
-                      </Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.workshopFeePrice1}
-                      </Td>
-                    </Tr>
-
-                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
-                      <Td borderRight="2px solid #FFF">{tuition.devFee}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.devFeePrice1}
-                      </Td>
-                    </Tr>
-
-                    <Tr
-                      bg="rgba(235, 237, 239, 0.38);"
-                      borderBottom="2px solid #FFF"
-                    >
-                      <Td borderRight="2px solid #FFF">
-                        {tuition.practicalFee}
-                      </Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.practicalFeePrice1}
-                      </Td>
-                    </Tr>
-
-                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
-                      <Td borderRight="2px solid #FFF">{tuition.studentID}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.studentIDPrice1}
-                      </Td>
-                    </Tr>
-
-                    <Tr
-                      bg="rgba(235, 237, 239, 0.38);"
-                      borderBottom="2px solid #FFF"
-                    >
-                      <Td borderRight="2px solid #FFF">{tuition.hmoScheme}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.hmoSchemePrice1}
-                      </Td>
-                    </Tr>
-
-                    <Tr bg="#021D37" color="#FFF">
-                      <Td borderRight="2px solid #FFF">{tuition.fees}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.feesPrice1}
-                      </Td>
-                    </Tr>
-
-                    <Tr
-                      bg="rgba(235, 237, 239, 0.38);"
-                      borderBottom="2px solid #FFF"
-                    >
-                      <Td borderRight="2px solid #FFF">{tuition.discount}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.discountPrice1}
-                      </Td>
-                    </Tr>
-
-                    <Tr bg="#021D37" color="#FFF">
-                      <Td borderRight="2px solid #FFF">{tuition.totalFees}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.totalFeesPrice1}
-                      </Td>
-                    </Tr>
-                  </Tbody>
-                </Table>
-              </TableContainer>
-            </Box>
+            <Text fontFamily="Manrope" fontWeight="400" fontSize="18px">
+              Medical Examination: ₦25,000 <br /> Practical Workshop Uniforms:
+              ₦35,000 <br />
+              Manuals: ₦15,000 <br /> Acceptance fee: N5,000 <br /> Students are
+              expected to pay for their breakages
+            </Text>
           </Box>
-        );
-      })}
 
-      <Box
-        bg="#EBEDEF"
-        p={{
-          sm: "20px",
-          md: "20px 40px",
-          lg: "30px 91px",
-        }}
-      >
-        <Box>
+          <Text fontFamily="Manrope" fontWeight="400" fontSize="18px" mt="40px">
+            <b>NOTE:</b> Wavecrest College of Hospitality is a project of
+            Women’s Board, Educational Cooperation Society a non-governmental
+            not-for-profit organization. In consideration of the college’s
+            mission to reach out to and give education opportunity to the
+            financially challenged, it has therefore subsidized its fees.
+            <br />
+            <br />
+            However, those who can pay the full fees are encouraged to do so in
+            order to assist in training more students.
+          </Text>
+
+          <Box>
+            <Box mt="80px">
+              <Box w="88px" h="3px" bg="#021D37"></Box>
+              <Heading
+                fontFamily="Playfair Display"
+                fontWeight="700"
+                fontSize="24px"
+                lineHeight="43px"
+              >
+                Account Details
+              </Heading>
+            </Box>
+
+            <Text
+              fontFamily="Manrope"
+              fontWeight="400"
+              fontSize="18px"
+              mt="7px"
+            >
+              All payments must be made into the bank account of the College
+              during registration.
+              <br />
+              <br /> Pay to: <b>“Wavecrest College” </b>
+              <br /> Bank Name: <b>Access Bank</b>
+              <br /> Account no.<b> 001-054-6867</b>
+            </Text>
+
+            <Button
+              bg="#021D37"
+              fontFamily="Manrope"
+              fontSize="16px"
+              fontWeight="700"
+              color="#FFF"
+              mt="16px"
+              w="183px"
+              borderRadius="3px"
+            >
+              PAY NOW
+            </Button>
+          </Box>
+        </Box>
+
+        <Box
+          p={{
+            sm: "40px 20px",
+            md: "40px",
+            lg: "30px 91px",
+          }}
+        >
           <Box>
             <Box w="88px" h="3px" bg="#021D37" mb="5px"></Box>
 
             <Heading
               fontFamily="Playfair Display"
-              fontWeight="700"
               fontSize="24px"
-              mb="7px"
+              fontWeight="700"
             >
-              Other Requirements may Include:
+              Scholarships
             </Heading>
           </Box>
 
-          <Text fontFamily="Manrope" fontWeight="400" fontSize="18px">
-            Medical Examination: ₦25,000 <br /> Practical Workshop Uniforms:
-            ₦35,000 <br />
-            Manuals: ₦15,000 <br /> Acceptance fee: N5,000 <br /> Students are
-            expected to pay for their breakages
+          <Text fontFamily="Manrope" fontWeight="400" fontSize="18px" mt="15px">
+            For over 40 years, we have constantly trained girls and produced
+            graduates who are in very High demand in the Hospitality Industry.
+            In order to assist those who would like to pursue a career in
+            Hospitality but are unable to afford the complete tuition fees,
+            Wavecrest College seeks the collaboration of well-meaning
+            Individuals or Corporate bodies in order to train these young ladies
+            through the Scholarship fund.
           </Text>
         </Box>
-
-        <Text fontFamily="Manrope" fontWeight="400" fontSize="18px" mt="40px">
-          <b>NOTE:</b> Wavecrest College of Hospitality is a project of Women’s
-          Board, Educational Cooperation Society a non-governmental
-          not-for-profit organization. In consideration of the college’s mission
-          to reach out to and give education opportunity to the financially
-          challenged, it has therefore subsidized its fees.
-          <br />
-          <br />
-          However, those who can pay the full fees are encouraged to do so in
-          order to assist in training more students.
-        </Text>
-
-        <Box>
-          <Box mt="80px">
-            <Box w="88px" h="3px" bg="#021D37"></Box>
-            <Heading
-              fontFamily="Playfair Display"
-              fontWeight="700"
-              fontSize="24px"
-              lineHeight="43px"
-            >
-              Account Details
-            </Heading>
-          </Box>
-
-          <Text fontFamily="Manrope" fontWeight="400" fontSize="18px" mt="7px">
-            All payments must be made into the bank account of the College
-            during registration.
-            <br />
-            <br /> Pay to: <b>“Wavecrest College” </b>
-            <br /> Bank Name: <b>Access Bank</b>
-            <br /> Account no.<b> 001-054-6867</b>
-          </Text>
-
-          <Button
-            bg="#021D37"
-            fontFamily="Manrope"
-            fontSize="16px"
-            fontWeight="700"
-            color="#FFF"
-            mt="16px"
-            w="183px"
-            borderRadius="3px"
-          >
-            PAY NOW
-          </Button>
-        </Box>
       </Box>
-
-      <Box
-        p={{
-          sm: "40px 20px",
-          md: "40px",
-          lg: "30px 91px",
-        }}
-      >
-        <Box>
-          <Box w="88px" h="3px" bg="#021D37" mb="5px"></Box>
-
-          <Heading
-            fontFamily="Playfair Display"
-            fontSize="24px"
-            fontWeight="700"
-          >
-            Scholarships
-          </Heading>
-        </Box>
-
-        <Text fontFamily="Manrope" fontWeight="400" fontSize="18px" mt="15px">
-          For over 40 years, we have constantly trained girls and produced
-          graduates who are in very High demand in the Hospitality Industry. In
-          order to assist those who would like to pursue a career in Hospitality
-          but are unable to afford the complete tuition fees, Wavecrest College
-          seeks the collaboration of well-meaning Individuals or Corporate
-          bodies in order to train these young ladies through the Scholarship
-          fund.
-        </Text>
-      </Box>
-    </Box>
+    </Fragment>
   );
 };
 

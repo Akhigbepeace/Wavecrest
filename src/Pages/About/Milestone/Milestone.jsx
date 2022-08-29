@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import about from "assets/Images/About.png";
 import Seventies from "./Responsive Milestone/Seventies";
 import Eighties from "./Responsive Milestone/Eighties";
 import Nineties from "./Responsive Milestone/Nineties";
@@ -102,83 +103,14 @@ const milestones = [
   },
 ];
 
-
 const Milestone = () => {
   return (
-    <Flex
-      p={{
-        sm: "50px 20px",
-        md: "50px 40px",
-        lg: "50px",
-        xl: "50px 91px",
-        "2xl": "50px 91px",
-      }}
-      flexDirection="column"
-    >
+    <Box>
       <Box
-        display={{
-          sm: "none",
-          md: "none",
-          lg: "none",
-          xl: "block",
-          "2xl": "block",
-        }}
-      >
-        {milestones.map((milestone, index) => {
-          const textToShow = Array.isArray(milestone.achievement)
-            ? milestone.achievement.map((values, i) => (
-                <Box key={i}>{values}</Box>
-              ))
-            : milestone.achievement;
-
-          return (
-            <Fragment>
-              <Flex key={index} flexDirection="column" alignItems="baseline">
-                <Flex alignItems="baseline" mb="-8px">
-                  <Box
-                    bg="#021D37"
-                    w="20px"
-                    h="20px"
-                    ml="-9px"
-                    borderRadius="100%"
-                  ></Box>
-
-                  <Heading
-                    fontFamily="Playfair Display"
-                    fontSize="32px"
-                    fontWeight="700"
-                    lineHeight="43px"
-                    color="#021D37"
-                    pt="15px"
-                    ml="34px"
-                  >
-                    {milestone.year}
-                  </Heading>
-                </Flex>
-
-                <Box borderLeft="2px solid #EBEDEF" mb="-30px">
-                  <Text
-                    fontFamily="Manrope"
-                    fontSize="24px"
-                    fontWeight="400"
-                    lineHeight="33px"
-                    mb="10px"
-                    ml="45px"
-                    pt="15px"
-                    pb="25px"
-                  >
-                    {textToShow}
-                  </Text>
-                </Box>
-              </Flex>
-            </Fragment>
-          );
-        })}
-      </Box>
-
-      <Box
-        position={"relative"}
-        overflow={"hidden"}
+        h="441px"
+        w="100%"
+        gridGap="68px"
+        position="relative"
         display={{
           sm: "block",
           md: "block",
@@ -187,15 +119,120 @@ const Milestone = () => {
           "2xl": "none",
         }}
       >
-        <Box>
-          <Seventies />
-          <Eighties />
-          <Nineties />
-          <Twenties />
-          <TwentyTens />
+        <Image src={about} h="100%" w="100%" objectFit="cover" />
+
+        <Box
+          bg="rgba(0, 24, 71, 0.5)"
+          h="100%"
+          w="100%"
+          position="absolute"
+          bottom="0"
+        >
+          <Text
+            color="white"
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="40px"
+            textAlign="center"
+            mt="250px"
+          >
+            MILESTONE
+          </Text>
         </Box>
       </Box>
-    </Flex>
+
+      <Flex
+        p={{
+          sm: "50px 20px",
+          md: "50px 40px",
+          lg: "50px",
+          xl: "50px 91px",
+          "2xl": "50px 91px",
+        }}
+        flexDirection="column"
+      >
+        <Box
+          display={{
+            sm: "none",
+            md: "none",
+            lg: "none",
+            xl: "block",
+            "2xl": "block",
+          }}
+        >
+          {milestones.map((milestone, index) => {
+            const textToShow = Array.isArray(milestone.achievement)
+              ? milestone.achievement.map((values, i) => (
+                  <Box key={i}>{values}</Box>
+                ))
+              : milestone.achievement;
+
+            return (
+              <Fragment>
+                <Flex key={index} flexDirection="column" alignItems="baseline">
+                  <Flex alignItems="baseline" mb="-8px">
+                    <Box
+                      bg="#021D37"
+                      w="20px"
+                      h="20px"
+                      ml="-9px"
+                      borderRadius="100%"
+                    ></Box>
+
+                    <Heading
+                      fontFamily="Playfair Display"
+                      fontSize="32px"
+                      fontWeight="700"
+                      lineHeight="43px"
+                      color="#021D37"
+                      pt="15px"
+                      ml="34px"
+                    >
+                      {milestone.year}
+                    </Heading>
+                  </Flex>
+
+                  <Box borderLeft="2px solid #EBEDEF" mb="-30px">
+                    <Text
+                      fontFamily="Manrope"
+                      fontSize="24px"
+                      fontWeight="400"
+                      lineHeight="33px"
+                      mb="10px"
+                      ml="45px"
+                      pt="15px"
+                      pb="25px"
+                    >
+                      {textToShow}
+                    </Text>
+                  </Box>
+                </Flex>
+              </Fragment>
+            );
+          })}
+        </Box>
+
+        <Box
+          position={"relative"}
+          overflow={"hidden"}
+          display={{
+            sm: "block",
+            md: "block",
+            lg: "block",
+            xl: "none",
+            "2xl": "none",
+          }}
+        >
+          <Box>
+            <Seventies />
+            <Eighties />
+            <Nineties />
+            <Twenties />
+            <TwentyTens />
+          </Box>
+        </Box>
+      </Flex>
+    </Box>
   );
 };
 

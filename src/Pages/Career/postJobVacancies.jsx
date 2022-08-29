@@ -1,6 +1,6 @@
-import { Heading, Input, Box, Text, Button, Textarea } from "@chakra-ui/react";
-
+import { Heading, Input, Box, Text, Image, Button, Textarea } from "@chakra-ui/react";
 import React, { Fragment } from "react";
+import waveimg from "assets/Images/waveimg.png";
 
 const postJobVacancies = () => {
   const forms = [
@@ -33,6 +33,41 @@ const postJobVacancies = () => {
 
   return (
     <Fragment>
+      <Box
+        h="441px"
+        w="100%"
+        gridGap="68px"
+        position="relative"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <Image src={waveimg} h="100%" w="100%" objectFit="cover" />
+
+        <Box
+          bg="rgba(0, 24, 71, 0.5)"
+          h="100%"
+          w="100%"
+          position="absolute"
+          bottom="0"
+        >
+          <Text
+            color="white"
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="30px"
+            textAlign="center"
+            mt="250px"
+          >
+          POST JOB VACANCIES
+          </Text>
+        </Box>
+      </Box>
+
       <Box
         px={{
           sm: "20px",

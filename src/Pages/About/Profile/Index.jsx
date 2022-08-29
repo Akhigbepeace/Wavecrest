@@ -1,7 +1,7 @@
-import { Box, Text, Heading, Button } from "@chakra-ui/react";
+import { Box, Text, Heading, Button, Image } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import OurStory from "./OurStory";
-
+import about from "assets/Images/About.png";
 import Gallery from "Pages/About/Profile/Gallery";
 import OurPhilosophy from "./OurPhilosophy";
 import OurClout from "./OurClout";
@@ -9,6 +9,41 @@ import OurClout from "./OurClout";
 const Profile = () => {
   return (
     <Fragment>
+      <Box
+        h="441px"
+        w="100%"
+        gridGap="68px"
+        position="relative"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <Image src={about} h="100%" w="100%" objectFit="cover" />
+
+        <Box
+          bg="rgba(0, 24, 71, 0.5)"
+          h="100%"
+          w="100%"
+          position="absolute"
+          bottom="0"
+        >
+          <Text
+            color="white"
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="40px"
+            textAlign="center"
+            mt="250px"
+          >
+            PROFILE
+          </Text>
+        </Box>
+      </Box>
+
       <OurStory />
 
       <OurPhilosophy />

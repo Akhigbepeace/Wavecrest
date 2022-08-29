@@ -12,7 +12,6 @@ import {
   Link,
 } from "@chakra-ui/react";
 import React, { useRef, useState } from "react";
-import emailjs from "emailjs-com";
 import Navbar from "components/Navbar";
 import contactpic from "assets/Images/contact.png";
 import aboutgallery1 from "assets/Images/aboutgallery1.png";
@@ -124,19 +123,19 @@ const Contact = () => {
     },
   ];
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_djq4ick",
-        "Ytemplate_i27quow",
-        e.target,
-        "JPAG_ZJVlAcuO_5D-"
-      )
-      .then()
-      .catch();
-  };
+  //   emailjs
+  //     .sendForm(
+  //       "service_djq4ick",
+  //       "Ytemplate_i27quow",
+  //       e.target,
+  //       "JPAG_ZJVlAcuO_5D-"
+  //     )
+  //     .then()
+  //     .catch();
+  // };
 
   return (
     <Box>
@@ -215,7 +214,7 @@ const Contact = () => {
               possible
             </Text>
 
-            <form ref={form} onSubmit={sendEmail}>
+            <form ref={form} >
               <Stack>
                 {contactFields.map((field, index) => {
                   return (

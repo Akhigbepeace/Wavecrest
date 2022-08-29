@@ -80,46 +80,101 @@ const Programmes = () => {
 
   return (
     <Box>
-      {programmes.map((programme) => {
-        return (
-          <Box
-            bg={programme.background}
-            py="75px"
-            px={{
-              sm: "20px",
-              md: "20px",
-              lg: "91px",
-              xl: "none",
-              "2xl": "none",
-            }}
+      <Box
+        h="441px"
+        w="100%"
+        gridGap="68px"
+        position="relative"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <Image src={studyProgrammes3} h="100%" w="100%" objectFit="cover" />
+
+        <Box
+          bg="rgba(0, 24, 71, 0.5)"
+          h="100%"
+          w="100%"
+          position="absolute"
+          bottom="0"
+        >
+          <Text
+            color="white"
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="40px"
+            textAlign="center"
+            mt="250px"
           >
-            <Box>
-              <Box
-                w="88px"
-                h="3px"
-                bg="#021D37"
-                mb="10px"
-                display={{
-                  sm: "block",
-                  md: "block",
-                  lg: "none",
-                  xl: "none",
-                  "2xl": "none",
-                }}
-              ></Box>
-              <Heading
-                fontFamily="Playfair Display"
-                fontWeight="700"
-                fontSize={{
-                  sm: "22px",
-                  md: "27px",
-                  lg: "30px",
-                  xl: "32px",
-                  "2xl": "32px",
-                }}
-                textAlign="left"
+            PROGRAMMES
+          </Text>
+        </Box>
+      </Box>
+
+      <Box>
+        {programmes.map((programme, index) => {
+          return (
+            <Box
+              key={index}
+              bg={programme.background}
+              py="75px"
+              px={{
+                sm: "20px",
+                md: "20px",
+                lg: "91px",
+                xl: "none",
+                "2xl": "none",
+              }}
+            >
+              <Box>
+                <Box
+                  w="88px"
+                  h="3px"
+                  bg="#021D37"
+                  mb="10px"
+                  display={{
+                    sm: "block",
+                    md: "block",
+                    lg: "none",
+                    xl: "none",
+                    "2xl": "none",
+                  }}
+                ></Box>
+                <Heading
+                  fontFamily="Playfair Display"
+                  fontWeight="700"
+                  fontSize={{
+                    sm: "22px",
+                    md: "27px",
+                    lg: "30px",
+                    xl: "32px",
+                    "2xl": "32px",
+                  }}
+                  textAlign="left"
+                  cursor="pointer"
+                  onClick={programme.navigateTo}
+                  m="0 auto"
+                  w={{
+                    sm: "100%",
+                    md: "100%",
+                    lg: "100%",
+                    xl: "1147px",
+                    "2xl": "1147px",
+                  }}
+                >
+                  {programme.programmeTitle}
+                </Heading>
+              </Box>
+
+              <Flex
+                flexDirection="column"
+                position="relative"
                 cursor="pointer"
-                onClick={programme.navigateTo}
+                onClick={(e) => ApplyNow(e)}
                 m="0 auto"
                 w={{
                   sm: "100%",
@@ -128,124 +183,89 @@ const Programmes = () => {
                   xl: "1147px",
                   "2xl": "1147px",
                 }}
+                transition="all ease 0.7s"
               >
-                {programme.programmeTitle}
-              </Heading>
-            </Box>
+                <Image
+                  src={programme.imageSrc}
+                  alt="coffee"
+                  h="394px"
+                  w="100%"
+                  m="0 auto"
+                  mt="25px"
+                  objectFit="cover"
+                />
 
-            <Flex
-              flexDirection="column"
-              position="relative"
-              cursor="pointer"
-              onClick={(e) => ApplyNow(e)}
-              m="0 auto"
-              w={{
-                sm: "100%",
-                md: "100%",
-                lg: "100%",
-                xl: "1147px",
-                "2xl": "1147px",
-              }}
-              transition="all ease 0.7s"
-            >
-              <Image
-                src={programme.imageSrc}
-                alt="coffee"
-                h="394px"
-                w="100%"
-                m="0 auto"
-                mt="25px"
-                objectFit="cover"
-              />
-
-              <Box
-                bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(1, 15, 29, 0.52) 46.35%, rgba(2, 29, 55, 0.87) 100%)"
-                textAlign="center"
-                position="absolute"
-                bottom="0px"
-                display={{
-                  sm: "none",
-                  md: "none",
-                  lg: "none",
-                  xl: "block",
-                  "2xl": "block",
-                }}
-                w="100%"
-                pt="30px"
-              >
-                <Heading
-                  color="#fff"
-                  fontWeight="700"
-                  fontSize="40px"
-                  fontFamily="Playfair Display"
-                >
-                  {programme.captionHeading}
-                </Heading>
-
-                <Text
-                  fontSize="20px"
-                  lineHeight="27px"
-                  color="#EBEDEF"
-                  fontFamily="Manrope"
-                  mb="15px"
-                >
-                  {programme.captionTime}
-                </Text>
-
-                <Link
-                  href="/admission/applyOnline"
-                  bg="#fff"
-                  color="#021d37"
-                  h="52px"
-                  w="208px"
-                  p="10px 25px"
-                  border="none"
-                  borderRadius="3px"
-                  fontFamily="Manrope"
-                  fontSize="24px"
-                  fontWeight="700"
-                  _hover={{
-                    textDecoration: "none",
-                    bg: "#EBEDEF",
-                  }}
-                >
-                  {programme.captionButton}
-                </Link>
-
-                <Link
-                  display="flex"
+                <Box
+                  bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(1, 15, 29, 0.52) 46.35%, rgba(2, 29, 55, 0.87) 100%)"
                   textAlign="center"
-                  alignItems="center"
-                  justifyContent="center"
-                  fontFamily="Manrope"
-                  fontSize="24px"
-                  fontWeight="800"
-                  color="#FFF"
-                  my="20px"
-                >
-                  <Image src={fileDownload} mr="13px" />
-                  <Text>Download Programme Brochure</Text>
-                </Link>
-              </Box>
-
-              <Box
-                display={{
-                  sm: "block",
-                  md: "block",
-                  lg: "block",
-                  xl: "none",
-                  "2xl": "none",
-                }}
-              >
-                <Heading
-                  fontFamily="Manrope"
-                  fontWeight="700"
-                  fontSize={{
-                    sm: "20px",
-                    md: "20px",
-                    lg: "20px",
+                  position="absolute"
+                  bottom="0px"
+                  display={{
+                    sm: "none",
+                    md: "none",
+                    lg: "none",
+                    xl: "block",
+                    "2xl": "block",
                   }}
-                  my="20px"
+                  w="100%"
+                  pt="30px"
+                >
+                  <Heading
+                    color="#fff"
+                    fontWeight="700"
+                    fontSize="40px"
+                    fontFamily="Playfair Display"
+                  >
+                    {programme.captionHeading}
+                  </Heading>
+
+                  <Text
+                    fontSize="20px"
+                    lineHeight="27px"
+                    color="#EBEDEF"
+                    fontFamily="Manrope"
+                    mb="15px"
+                  >
+                    {programme.captionTime}
+                  </Text>
+
+                  <Link
+                    href="/admission/applyOnline"
+                    bg="#fff"
+                    color="#021d37"
+                    h="52px"
+                    w="208px"
+                    p="10px 25px"
+                    border="none"
+                    borderRadius="3px"
+                    fontFamily="Manrope"
+                    fontSize="24px"
+                    fontWeight="700"
+                    _hover={{
+                      textDecoration: "none",
+                      bg: "#EBEDEF",
+                    }}
+                  >
+                    {programme.captionButton}
+                  </Link>
+
+                  <Link
+                    display="flex"
+                    textAlign="center"
+                    alignItems="center"
+                    justifyContent="center"
+                    fontFamily="Manrope"
+                    fontSize="24px"
+                    fontWeight="800"
+                    color="#FFF"
+                    my="20px"
+                  >
+                    <Image src={fileDownload} mr="13px" />
+                    <Text>Download Programme Brochure</Text>
+                  </Link>
+                </Box>
+
+                <Box
                   display={{
                     sm: "block",
                     md: "block",
@@ -254,38 +274,56 @@ const Programmes = () => {
                     "2xl": "none",
                   }}
                 >
-                  {programme.programmeDuration}
-                </Heading>
+                  <Heading
+                    fontFamily="Manrope"
+                    fontWeight="700"
+                    fontSize={{
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
+                    }}
+                    my="20px"
+                    display={{
+                      sm: "block",
+                      md: "block",
+                      lg: "block",
+                      xl: "none",
+                      "2xl": "none",
+                    }}
+                  >
+                    {programme.programmeDuration}
+                  </Heading>
 
-                <Text
-                  fontFamily="Manrope"
-                  fontWeight="400"
-                  fontSize="20px"
-                  lineHeight="33px"
-                >
-                  {programme.responsiveDesc}
-                </Text>
+                  <Text
+                    fontFamily="Manrope"
+                    fontWeight="400"
+                    fontSize="20px"
+                    lineHeight="33px"
+                  >
+                    {programme.responsiveDesc}
+                  </Text>
 
-                <Button
-                  href="/admission/applyOnline"
-                  bg="#021D37"
-                  display="block"
-                  color="#FFF"
-                  borderRadius="3px"
-                  mt="30px"
-                  w="208px"
-                  h="52px"
-                  _hover={{
-                    bg: "#020E1B",
-                  }}
-                >
-                  Apply Now
-                </Button>
-              </Box>
-            </Flex>
-          </Box>
-        );
-      })}
+                  <Button
+                    href="/admission/applyOnline"
+                    bg="#021D37"
+                    display="block"
+                    color="#FFF"
+                    borderRadius="3px"
+                    mt="30px"
+                    w="208px"
+                    h="52px"
+                    _hover={{
+                      bg: "#020E1B",
+                    }}
+                  >
+                    Apply Now
+                  </Button>
+                </Box>
+              </Flex>
+            </Box>
+          );
+        })}
+      </Box>
     </Box>
   );
 };

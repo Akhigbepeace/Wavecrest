@@ -177,6 +177,29 @@ const Navbar = () => {
     },
   ];
 
+  const sideLinks = [
+    {
+      name: "SUPPORT US",
+      href: "/support",
+      bg: "transparent",
+      color: "#FFF",
+      border: "2px solid #fff",
+      hoverBg: "#020E1B",
+      hoverBorder: "2px solid #EBEDEF",
+      hoverColor: "#FFF",
+    },
+    {
+      name: "APPLY NOW",
+      href: "/admission/applyOnline",
+      bg: "#FFF",
+      border: "2px solid #fff",
+      color: "#021D37",
+      hoverBg: "#EBEDEF",
+      hoverBorder: "2px solid #EBEDEF",
+      hoverColor: "#021d37",
+    },
+  ];
+
   const ref = React.useRef();
   const [showNestedLinks, setShowNestedLinks] = useBoolean();
   const [currentLink, setCurrentLink] = useState(0);
@@ -295,13 +318,12 @@ const Navbar = () => {
               p="0"
               margin="auto"
               borderRadius="0"
-              h="100%"
               w={{
                 sm: "235px",
                 md: "345px",
                 lg: "355px",
               }}
-              ml="0"
+              mr="0"
             >
               <ModalCloseButton
                 bg="#021D37"
@@ -322,76 +344,81 @@ const Navbar = () => {
                 <Flex flexDirection="column">
                   {navLinks.map((navLink, index) => {
                     return (
-                      <Link
-                        key={index}
-                        display="flex"
-                        color="#FFF"
-                        fontFamily="Open Sans"
-                        fontWeight="700"
-                        fontSize="16px"
-                        lineHeight="30px"
-                        mt="20px"
-                        transition="all ease 0.5s"
-                        to={navLink.to}
-                        as={NavLink}
-                        _hover={{
-                          color: "brown",
-                          textDecoration: "none",
-                        }}
-                      >
-                        <Text>{navLink.name}</Text>
+                      <Fragment>
+                        <Link
+                          to={navLink.to}
+                          as={NavLink}
+                          key={index}
+                          display="flex"
+                          color="#FFF"
+                          fontFamily="Open Sans"
+                          fontWeight="700"
+                          fontSize="16px"
+                          lineHeight="30px"
+                          mt="20px"
+                          transition="all ease 0.5s"
+                          _hover={{
+                            color: "brown",
+                            textDecoration: "none",
+                          }}
+                        >
+                          <Text>{navLink.name}</Text>
 
-                        <Box color="white" mt="7px" ml="10px">
-                          {navLink.icon}
+                          <Box color="white" mt="7px" ml="10px">
+                            {navLink.icon}
+                          </Box>
+                        </Link>
+
+                        <Box>
+                          {navLink.NestedLinks.map((nestedLink, index) => {
+                            return (
+                              <Link
+                                to={nestedLink.to}
+                                as={NavLink}
+                                display="block"
+                                fontWeight="100"
+                                key={index}
+                                transition="all ease 0.5s"
+                                zIndex="2"
+                                color="#FFF"
+                              >
+                                {nestedLink.name}
+                              </Link>
+                            );
+                          })}
                         </Box>
-                      </Link>
+                      </Fragment>
                     );
                   })}
                 </Flex>
 
                 <Flex flexDirection="column" mt="80px" w="160px">
-                  <Link
-                    href="/support"
-                    bg="transparent"
-                    p="7px"
-                    color="#FFF"
-                    mb="20px"
-                    border="2px solid #fff"
-                    borderRadius="3px"
-                    fontFamily="Open Sans"
-                    fontWeight="700"
-                    fontSize="17px"
-                    textAlign="center"
-                    _hover={{
-                      textDecoration: "none",
-                      bg: "#020E1B",
-                      border: "2px solid #EBEDEF",
-                      color: "#FFF",
-                    }}
-                  >
-                    SUPPORT US
-                  </Link>
-
-                  <Link
-                    href="/admission/applyOnline"
-                    color="#021D37"
-                    p="7px"
-                    bg="#FFF"
-                    border="2px solid #fff"
-                    borderRadius="3px"
-                    fontFamily="Open Sans"
-                    fontWeight="700"
-                    fontSize="17px"
-                    textAlign="center"
-                    _hover={{
-                      textDecoration: "none",
-                      bg: "#EBEDEF",
-                      border: "2px solid #EBEDEF",
-                      color: "#021d37",
-                    }}
-                  >
-                    APPLY NOW
-                  </Link>
+                  {sideLinks.map((sideLink, index) => {
+                    return (
+                      <Link
+                        key={index}
+                        href={sideLink.href}
+                        bg={sideLink.bg}
+                        p="7px"
+                        color={sideLink.color}
+                        mb="20px"
+                        border="2px solid #fff"
+                        borderRadius="3px"
+                        fontFamily="Open Sans"
+                        fontWeight="700"
+                        fontSize="17px"
+                        textAlign="center"
+                        _hover={{
+                          textDecoration: "none",
+                          bg: sideLink.hoverBg,
+                          border: sideLink.hoverBorder,
+                          color: sideLink.hoverColor,
+                        }}
+                      >
+                        {sideLink.name}
+                      </Link>
+                    );
+                  })}
                 </Flex>
               </ModalBody>
             </ModalContent>
@@ -500,51 +527,33 @@ const Navbar = () => {
         </Flex>
 
         <Flex pb="29px">
-          <Link
-            href="/support"
-            bg="#021D37"
-            p="7px"
-            w="133px"
-            ml="27px"
-            color="#FFF"
-            border="2px solid #fff"
-            borderRadius="3px"
-            fontFamily="Open Sans"
-            fontWeight="700"
-            fontSize="17px"
-            textAlign="center"
-            _hover={{
-              textDecoration: "none",
-              bg: "#020E1B",
-              border: "2px solid #EBEDEF",
-              color: "#FFF",
-            }}
-          >
-            SUPPORT US
-          </Link>
-
-          <Link
-            href="/admission/applyOnline"
-            color="#021D37"
-            p="7px"
-            w="133px"
-            ml="27px"
-            bg="#FFF"
-            border="2px solid #fff"
-            borderRadius="3px"
-            fontFamily="Open Sans"
-            fontWeight="700"
-            fontSize="17px"
-            textAlign="center"
-            _hover={{
-              textDecoration: "none",
-              bg: "#EBEDEF",
-              border: "2px solid #EBEDEF",
-              color: "#021d37",
-            }}
-          >
-            APPLY NOW
-          </Link>
+          {sideLinks.map((sideLink, index) => {
+            return (
+              <Link
+                key={index}
+                href={sideLink.href}
+                bg={sideLink.bg}
+                p="7px"
+                w="133px"
+                ml="27px"
+                color={sideLink.color}
+                border="2px solid #fff"
+                borderRadius="3px"
+                fontFamily="Open Sans"
+                fontWeight="700"
+                fontSize="17px"
+                textAlign="center"
+                _hover={{
+                  textDecoration: "none",
+                  bg: sideLink.hoverBg,
+                  border: sideLink.hoverBorder,
+                  color: sideLink.hoverColor,
+                }}
+              >
+                {sideLink.name}
+              </Link>
+            );
+          })}
         </Flex>
       </Box>
     </Fragment>

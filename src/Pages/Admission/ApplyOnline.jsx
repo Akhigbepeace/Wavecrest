@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import visa from "assets/Images/visa.png";
+import waveimg from "assets/Images/waveimg.png";
 import paypal from "assets/Images/paypal.png";
 import mastercard from "assets/Images/mastercard.png";
 
@@ -65,6 +66,41 @@ const ApplyOnline = () => {
   ];
   return (
     <Fragment>
+      <Box
+        h="441px"
+        w="100%"
+        gridGap="68px"
+        position="relative"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <Image src={waveimg} h="100%" w="100%" objectFit="cover" />
+
+        <Box
+          bg="rgba(0, 24, 71, 0.5)"
+          h="100%"
+          w="100%"
+          position="absolute"
+          bottom="0"
+        >
+          <Text
+            color="white"
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="30px"
+            textAlign="center"
+            mt="250px"
+          >
+            APPLY ONLINE
+          </Text>
+        </Box>
+      </Box>
+
       <Box
         px={{
           sm: "20px",

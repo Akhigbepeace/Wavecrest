@@ -33,7 +33,15 @@ const Management = () => {
   ];
 
   return (
-    <Box>
+    <Box
+      px={{
+        sm: "20px",
+        md: "40px",
+        lg: "60px",
+        xl: "0px",
+        "2xl": "0px",
+      }}
+    >
       <Box>
         <Box
           w="88px"
@@ -48,6 +56,7 @@ const Management = () => {
             "2xl": "none",
           }}
         ></Box>
+
         <Heading
           fontFamily="Playfair Display"
           fontSize="32px"
@@ -61,9 +70,9 @@ const Management = () => {
 
       <Flex
         display={{
-          sm: "none",
-          md: "none",
-          lg: "none",
+          sm: "block",
+          md: "block",
+          lg: "block",
           xl: "flex",
           "2xl": "flex",
         }}
@@ -126,13 +135,8 @@ const Management = () => {
           xl: "none",
           "2xl": "none",
         }}
-        px={{
-          sm: "20px",
-          md: "40px",
-          lg: "60px",
-        }}
       >
-        <ResponsiveManagement />
+        {/* <ResponsiveManagement /> */}
         <Board />
         <Staff />
       </Box>
