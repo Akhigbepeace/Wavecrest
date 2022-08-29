@@ -10,6 +10,7 @@ import {
   Input,
   List,
   Stack,
+  Box,
 } from "@chakra-ui/react";
 import React from "react";
 import { NavLink } from "react-router-dom";
@@ -159,24 +160,57 @@ const Footer = () => {
             "2xl": "right",
           }}
         >
-          75 Adisa Bashua Street, <br /> Off Adelabu Street, Surulere, <br />
-          Lagos State, Nigeria.
+          75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos State,
+          Nigeria.
         </Text>
 
-        <Flex
-          flexDirection="column"
+        <Box
           fontFamily="Manrope"
-          fontSize="18px"
+          fontSize={{
+            sm: "16px",
+            md: "18px",
+            lg: "18px",
+            xl: "18px",
+            "2xl": "18px",
+          }}
           fontWeight="700"
           lineHeight="25px"
           color="#021D37"
-          textAlign="right"
+          textAlign={{
+            sm: "left",
+            md: "left",
+            lg: "left",
+            xl: "right",
+            "2xl": "right",
+          }}
           mt="15px"
         >
-          <Text fontFamily="Manrope">+234 909 685 6606</Text>
-          <Text fontFamily="Manrope">+234 808 396 4840</Text>
-          <Text fontFamily="Manrope">info@wavecrest.edu.ng</Text>
-        </Flex>
+          <Text
+            display={{
+              sm: "block",
+              md: "block",
+              lg: "block",
+              xl: "none",
+              "2xl": "none",
+            }}
+          >
+            +234 909 685 6606 &nbsp; | &nbsp; +234 808 396 4840
+          </Text>
+
+          <Box
+            display={{
+              sm: "none",
+              md: "none",
+              lg: "none",
+              xl: "block",
+              "2xl": "block",
+            }}
+          >
+            <Text>+234 909 685 6606</Text>
+            <Text>+234 808 396 4840</Text>
+          </Box>
+          <Text fontFamily="Manrope"> info@wavecrest.edu.ng</Text>
+        </Box>
 
         <Flex>
           {socials.map((social, index) => {

@@ -9,9 +9,9 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import Slider from "react-slick";
-// import Nestle from "assets/Images/Nestle.png";
+import Nestle from "assets/Images/Nestle.png";
 import Pau from "assets/Images/pau.png";
-// import bihc from "assets/Images/bihc.png";
+import bihc from "assets/Images/bihc.png";
 import raddison from "assets/Images/raddison.png";
 import maggi from "assets/Images/Maggi.png";
 import womenBoard from "assets/Images/women's board.jpg";
@@ -40,9 +40,9 @@ export default function Carousel() {
   const side = useBreakpointValue({ base: "30%", md: "10px" });
 
   const cards = [
-    // Nestle,
+    Nestle,
     Pau,
-    // bihc,
+    bihc,
     raddison,
     maggi,
     womenBoard,

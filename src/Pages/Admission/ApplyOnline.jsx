@@ -8,7 +8,6 @@ import {
   Link,
   Select,
   Button,
-  Grid,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import visa from "assets/Images/visa.png";
