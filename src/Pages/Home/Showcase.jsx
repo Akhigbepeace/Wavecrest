@@ -99,11 +99,6 @@ const Showcase = () => {
           xl: "none",
           "2xl": "none",
         }}
-        px={{
-          sm: "15px",
-          md: "15px",
-          lg: "15px",
-        }}
       >
         <Box>
           <Box>
@@ -116,7 +111,13 @@ const Showcase = () => {
             />
           </Box>
 
-          <Box>
+          <Box
+            px={{
+              sm: "15px",
+              md: "15px",
+              lg: "15px",
+            }}
+          >
             <Box bg="#021D37" h="3px" w="88px" mt="20px"></Box>
 
             <Heading

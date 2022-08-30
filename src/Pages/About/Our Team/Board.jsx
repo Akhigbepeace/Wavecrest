@@ -93,9 +93,9 @@ const Board = () => {
         gridGap="8px"
         mb="100px"
         display={{
-          sm: "block",
-          md: "block",
-          lg: "block",
+          sm: "none",
+          md: "none",
+          lg: "none",
           xl: "grid",
           "2xl": "grid",
         }}
@@ -161,18 +161,6 @@ const Board = () => {
           );
         })}
       </Grid>
-
-      {/* <Box
-        display={{
-          sm: "block",
-          md: "block",
-          lg: "block",
-          xl: "none",
-          "2xl": "none",
-        }}
-      >
-        <ResponsiveBoard />
-      </Box> */}
     </Box>
   );
 };

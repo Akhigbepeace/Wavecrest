@@ -12,6 +12,7 @@ import Navbar from "components/Navbar";
 import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
 import ReactPlayer from "react-player";
+import JsFileDownloader from "js-file-downloader";
 import about from "assets/Images/About.png";
 import waveVid from "assets/Images/wavevid.mp4";
 import aboutgallery3 from "assets/Images/aboutgallery3.png";
@@ -40,6 +41,7 @@ const NDProgrammeDesc = () => {
     navigate("/academics/programmes", { replace: true });
   };
 
+  const fileUrl = "/documents/Ojumo House.pdf";
   return (
     <Fragment>
       <Navbar />
@@ -246,6 +248,7 @@ const NDProgrammeDesc = () => {
             fontSize="24px"
             fontWeight="700"
             bg="#EEE"
+            onClick={() => new JsFileDownloader({ url: fileUrl })}
             _hover={{
               bg: "#DDD",
             }}

@@ -12,6 +12,7 @@ import Navbar from "components/Navbar";
 import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
 import ReactPlayer from "react-player";
+import JsFileDownloader from "js-file-downloader";
 import about from "assets/Images/About.png";
 import waveVid from "assets/Images/wavevid.mp4";
 import aboutgallery2 from "assets/Images/aboutgallery2.png";
@@ -29,7 +30,6 @@ const CertificateCoursesDesc = () => {
 
     {
       image: aboutgallery4,
-
       text: "National Diploma (ND) in Hospitality Management",
       linkTo: "/NDProgramme",
     },
@@ -40,6 +40,8 @@ const CertificateCoursesDesc = () => {
     e.preventDefault();
     navigate("/academics/programmes", { replace: true });
   };
+
+  const fileUrl = "/documents/Ojumo House.pdf";
 
   return (
     <Fragment>
@@ -247,6 +249,7 @@ const CertificateCoursesDesc = () => {
             fontSize="24px"
             fontWeight="700"
             bg="#EEE"
+            onClick={() => new JsFileDownloader({ url: fileUrl })}
             _hover={{
               bg: "#DDD",
             }}

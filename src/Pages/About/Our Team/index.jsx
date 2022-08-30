@@ -71,7 +71,17 @@ const OurTeam = () => {
         </Box>
       </Box>
 
-      <Flex m="0 auto" mt="100px">
+      <Flex
+        m="0 auto"
+        mt="100px"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "flex",
+          "2xl": "flex",
+        }}
+      >
         <Flex
           flexDirection="column"
           mt="50px"

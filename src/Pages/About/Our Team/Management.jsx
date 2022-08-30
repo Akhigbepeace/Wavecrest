@@ -5,8 +5,9 @@ import deputyProvost from "assets/Images/deputyprovost.png";
 import bursar from "assets/Images/bursar.png";
 import registrar from "assets/Images/registrar.png";
 import ResponsiveManagement from "Pages/About/Our Team/Media Query/Responsive Management";
-import Board from "./Board";
-import Staff from "./Staff";
+import Gallery from "Pages/About/Profile/Gallery";
+import ResponsiveBoard from "Pages/About/Our Team/Media Query/Responsive Board";
+import ResponsiveStaff from "Pages/About/Our Team/Media Query/Responsive Staff";
 
 const Management = () => {
   const managements = [
@@ -42,37 +43,28 @@ const Management = () => {
         "2xl": "0px",
       }}
     >
-      <Box>
-        <Box
-          w="88px"
-          h="3px"
-          bg="#021D37"
-          mb="5px"
-          display={{
-            sm: "block",
-            md: "block",
-            lg: "block",
-            xl: "none",
-            "2xl": "none",
-          }}
-        ></Box>
-
-        <Heading
-          fontFamily="Playfair Display"
-          fontSize="32px"
-          fontWeight="700"
-          color="#021D37"
-          mb="30px"
-        >
-          Management
-        </Heading>
-      </Box>
+      <Heading
+        fontFamily="Playfair Display"
+        fontSize="32px"
+        fontWeight="700"
+        color="#021D37"
+        mb="30px"
+        display={{
+          sm: "none",
+          md: "none",
+          lg: "none",
+          xl: "block",
+          "2xl": "block",
+        }}
+      >
+        Management
+      </Heading>
 
       <Flex
         display={{
-          sm: "block",
-          md: "block",
-          lg: "block",
+          sm: "none",
+          md: "none",
+          lg: "none",
           xl: "flex",
           "2xl": "flex",
         }}
@@ -136,9 +128,9 @@ const Management = () => {
           "2xl": "none",
         }}
       >
-        {/* <ResponsiveManagement /> */}
-        <Board />
-        <Staff />
+        <ResponsiveBoard />
+        <ResponsiveManagement />
+        <ResponsiveStaff />
       </Box>
     </Box>
   );

@@ -15,7 +15,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
-import { FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { NavLink, useLocation } from "react-router-dom";
 import Logo from "assets/Images/logo_wavecrest.svg";
 import Linked from "assets/Images/linked.png";
@@ -28,7 +28,6 @@ import Menu from "assets/Images/Menu.png";
 
 const Navbar = () => {
   const loc = useLocation();
-
   const socials = [
     {
       icon: Linked,
@@ -177,6 +176,114 @@ const Navbar = () => {
     },
   ];
 
+  const mobileNavLinks = [
+    {
+      name: "ABOUT",
+      icon: <FaChevronRight size="15px" />,
+      NestedLinks: [
+        {
+          name: "PROFILE",
+          to: "/about/profile",
+        },
+        {
+          name: "MILESTONE",
+          to: "/about/milestone",
+        },
+        {
+          name: "OUR TEAM",
+          to: "/about/ourTeam",
+        },
+      ],
+    },
+
+    {
+      name: "ACADEMICS",
+      icon: <FaChevronRight size="15px" />,
+      NestedLinks: [
+        {
+          name: "PROGRAMMES",
+          to: "/academics/programmes",
+        },
+        {
+          name: "TRAINING",
+          to: "/academics/training",
+        },
+
+        {
+          name: "INTERNSHIP",
+          to: "/academics/internship",
+        },
+        {
+          name: "NYSC",
+          to: "/academics/nysc",
+        },
+      ],
+    },
+
+    {
+      name: "ADMISSION",
+      icon: <FaChevronRight size="15px" />,
+      NestedLinks: [
+        {
+          name: "ADMISSION REQUIREMENTS",
+          to: "/admission/admissionRequirements",
+        },
+        {
+          name: "TUITION AND SCHOLARSHIPS",
+          to: "/admission/tuitionAndScholarship",
+        },
+        {
+          name: "APPLY ONLINE",
+          to: "/admission/applyOnline",
+        },
+        {
+          name: "HOSTEL",
+          to: "/admission/hostel",
+        },
+
+        {
+          name: "FAQs",
+          to: "/admission/faqs",
+        },
+      ],
+    },
+
+    {
+      name: "ALUMNI",
+      NestedLinks: [],
+      to: "/alumni",
+    },
+
+    {
+      name: "BLOG",
+      to: "/blog",
+      NestedLinks: [],
+    },
+
+    {
+      name: "CAREER",
+      icon: <FaChevronRight size="15px" />,
+      NestedLinks: [
+        {
+          name: "POST JOB VACANCIES",
+          to: "/career/postJobVacancies",
+        },
+        {
+          name: "VIEW JOB VACANCIES",
+          to: "/career/viewJobVacancies",
+        },
+      ],
+    },
+
+    {
+      name: "CONTACT",
+      to: "/contact",
+      NestedLinks: [],
+    },
+  ];
+
+  const [activeModalMenu, setActiveModalMenu] = useState(mobileNavLinks);
+  const [showBackButton, setShowBackButton] = useState(false);
   const sideLinks = [
     {
       name: "SUPPORT US",
@@ -316,6 +423,7 @@ const Navbar = () => {
             <ModalContent
               bg="#021D37"
               p="0"
+              h="100%"
               margin="auto"
               borderRadius="0"
               w={{
@@ -325,6 +433,17 @@ const Navbar = () => {
               }}
               mr="0"
             >
+              <Box
+                p="10px"
+                onClick={() => {
+                  setActiveModalMenu(mobileNavLinks);
+                  setShowBackButton(false);
+                }}
+                display={showBackButton ? "block" : "none"}
+              >
+                <FaChevronLeft color="#FFF" size="20px" />
+              </Box>
+
               <ModalCloseButton
                 bg="#021D37"
                 color="#FFF"
@@ -342,51 +461,64 @@ const Navbar = () => {
                 }}
               >
                 <Flex flexDirection="column">
-                  {navLinks.map((navLink, index) => {
+                  {activeModalMenu.map((navLink, index) => {
                     return (
                       <Fragment>
-                        <Link
-                          to={navLink.to}
-                          as={NavLink}
-                          key={index}
-                          display="flex"
-                          color="#FFF"
-                          fontFamily="Open Sans"
-                          fontWeight="700"
-                          fontSize="16px"
-                          lineHeight="30px"
-                          mt="20px"
-                          transition="all ease 0.5s"
-                          _hover={{
-                            color: "brown",
-                            textDecoration: "none",
-                          }}
-                        >
-                          <Text>{navLink.name}</Text>
+                        {navLink.to ? (
+                          <Link
+                            as={NavLink}
+                            to={navLink.to}
+                            color="#FFF"
+                            fontFamily="Open Sans"
+                            fontWeight="700"
+                            fontSize="16px"
+                            lineHeight="30px"
+                            mt="10px"
+                            transition="all ease 0.5s"
+                            _hover={{
+                              color: "brown",
+                              textDecoration: "none",
+                            }}
+                          >
+                            <Text>{navLink.name}</Text>
 
-                          <Box color="white" mt="7px" ml="10px">
-                            {navLink.icon}
+                            <Box color="white" mt="7px" ml="10px">
+                              {navLink.icon}
+                            </Box>
+                          </Link>
+                        ) : (
+                          <Box>
+                            <Box
+                              key={index}
+                              display="flex"
+                              color="#FFF"
+                              fontFamily="Open Sans"
+                              fontWeight="700"
+                              fontSize="16px"
+                              lineHeight="30px"
+                              mt="10px"
+                              transition="all ease 0.5s"
+                              onClick={() => {
+                                if (navLink.NestedLinks.length) {
+                                  setActiveModalMenu(navLink.NestedLinks);
+                                  setShowBackButton(true);
+                                }
+                              }}
+                              _hover={{
+                                color: "brown",
+                                textDecoration: "none",
+                              }}
+                            >
+                              <Flex>
+                                <Text>{navLink.name}</Text>
+
+                                <Box color="white" mt="7px" ml="10px">
+                                  {navLink.icon}
+                                </Box>
+                              </Flex>
+                            </Box>
                           </Box>
-                        </Link>
-
-                        <Box>
-                          {navLink.NestedLinks.map((nestedLink, index) => {
-                            return (
-                              <Link
-                                to={nestedLink.to}
-                                as={NavLink}
-                                display="block"
-                                fontWeight="100"
-                                key={index}
-                                transition="all ease 0.5s"
-                                zIndex="2"
-                                color="#FFF"
-                              >
-                                {nestedLink.name}
-                              </Link>
-                            );
-                          })}
-                        </Box>
+                        )}
                       </Fragment>
                     );
                   })}

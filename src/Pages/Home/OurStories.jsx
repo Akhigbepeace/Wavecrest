@@ -197,34 +197,6 @@ export default function CaptionCarousel() {
                 }}
                 pb="74px"
               >
-                {/* <Image
-                  src={ourstories}
-                  alt="ourstories"
-                  ml="88px"
-                  display={{
-                    sm: "block",
-                    md: "block",
-                    lg: "block",
-                    xl: "none",
-                    "2xl": "none",
-                  }}
-                  w={{
-                    sm: "310px",
-                    md: "310px",
-                    lg: "310px",
-                    xl: "576px",
-                    "2xl": "576px",
-                  }}
-                  h={{
-                    sm: "213px",
-                    md: "213px",
-                    lg: "213px",
-                    xl: "345px",
-                    "2xl": "345px",
-                  }}
-                  mx="auto"
-                /> */}
-
                 <Flex
                   flexDirection="column"
                   alignItems="left"

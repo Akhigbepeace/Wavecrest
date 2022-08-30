@@ -12,8 +12,9 @@ import {
   Stack,
   Box,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
+import emailjs from "emailjs-com";
 import logo from "assets/Images/WC-LOGO-july.png";
 import linked from "assets/Images/linked.png";
 import twitter from "assets/Images/Twitter.svg";
@@ -110,6 +111,39 @@ const Footer = () => {
       to: "/support",
     },
   ];
+
+  const initialValues = {
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  };
+
+  const [inputField, setInputField] = useState(initialValues);
+
+  const inputValues = (e) => {
+    setInputField({
+      ...inputField,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const form = useRef();
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    const res = await emailjs.sendForm(
+      "service_djq4ick",
+      "template_igsv77r",
+      form.current,
+      "JPAG_ZJVlAcuO_5D-"
+    );
+
+    if (res.status === 200 || res.text === "OK") {
+      setInputField(initialValues);
+    }
+  };
 
   return (
     <Grid
@@ -212,7 +246,15 @@ const Footer = () => {
           <Text fontFamily="Manrope"> info@wavecrest.edu.ng</Text>
         </Box>
 
-        <Flex>
+        <Flex
+          display={{
+            sm: "none",
+            md: "none",
+            lg: "none",
+            xl: "flex",
+            "2xl": "flex",
+          }}
+        >
           {socials.map((social, index) => {
             return (
               <Link
@@ -304,6 +346,7 @@ const Footer = () => {
         >
           Suscribe to our Newsletter
         </Heading>
+
         <Text
           color="#021d37"
           p="5px 0"
@@ -314,60 +357,112 @@ const Footer = () => {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos tenetur
           voluptate, similique earum obcaecati placeat.
         </Text>
-        <Stack>
-          <Input
-            placeholder="Name"
-            bg="#fff"
-            h="51px"
-            mt="15px"
-            p="15px 20px"
-            borderRadius="3px"
-            border="none"
-            _placeholder={{
-              color: "#021D37",
-              fontFamily: "Manrope",
-              fontSize: "16px",
-              fontWeight: "400",
-            }}
-          />
 
-          <Input
-            placeholder="Email"
-            bg="#fff"
-            h="51px"
-            mt="10px"
-            borderRadius="3px"
-            border="none"
-            p="15px 20px"
-            _placeholder={{
-              color: "#021D37",
-              fontFamily: "Manrope",
-              fontSize: "16px",
-              fontWeight: "400",
-            }}
-          />
-        </Stack>
+        <form ref={form} onSubmit={sendEmail}>
+          <Stack>
+            <Input
+              name="user_name"
+              placeholder="Name"
+              bg="#fff"
+              h="51px"
+              mt="15px"
+              p="15px 20px"
+              borderRadius="3px"
+              onChange={inputValues}
+              border="none"
+              _placeholder={{
+                color: "#021D37",
+                fontFamily: "Manrope",
+                fontSize: "16px",
+                fontWeight: "400",
+              }}
+            />
 
-        <Button
-          w="142px"
-          height="46.89px"
-          bg="#021D37"
-          border="none"
-          color="#fff"
-          fontWeight="700"
-          fontSize="16px"
-          lineHeight="22px"
-          textAlign="center"
-          borderRadius="3px"
-          mt="8px"
-          mb="70px"
-          _hover={{
-            bg: "#020E1B",
-            transition: "all ease 0.4s",
-          }}
-        >
-          SUBSCRIBE
-        </Button>
+            <Input
+              name="user_email"
+              placeholder="Email"
+              bg="#fff"
+              h="51px"
+              mt="10px"
+              borderRadius="3px"
+              border="none"
+              p="15px 20px"
+              onChange={inputValues}
+              _placeholder={{
+                color: "#021D37",
+                fontFamily: "Manrope",
+                fontSize: "16px",
+                fontWeight: "400",
+              }}
+            />
+          </Stack>
+
+          <Button
+            type="submit"
+            w="142px"
+            height="46.89px"
+            bg="#021D37"
+            border="none"
+            color="#fff"
+            fontWeight="700"
+            fontSize="16px"
+            lineHeight="22px"
+            textAlign="center"
+            borderRadius="3px"
+            mt="8px"
+            mb="70px"
+            _hover={{
+              bg: "#020E1B",
+              transition: "all ease 0.4s",
+            }}
+          >
+            SUBSCRIBE
+          </Button>
+        </form>
+      </Flex>
+
+      <Flex
+        display={{
+          sm: "flex",
+          md: "flex",
+          lg: "flex",
+          xl: "none",
+          "2xl": "none",
+        }}
+        mb="30px"
+      >
+        {socials.map((social, index) => {
+          return (
+            <Link
+              key={index}
+              href={social.to}
+              target={social.target}
+              rel={social.rel}
+            >
+              <Image
+                src={social.icon}
+                alt="linkedin"
+                w="40px"
+                h="40px"
+                mt="10px"
+                mr={{
+                  sm: "15px",
+                  md: "15px",
+                  lg: "15px",
+                  xl: "0",
+                  "2xl": "0",
+                }}
+                ml={{
+                  sm: "0",
+                  md: "0",
+                  lg: "0",
+                  xl: "15px",
+                  "2xl": "15px",
+                }}
+              />
+            </Link>
+          );
+        })}
       </Flex>
     </Grid>
   );

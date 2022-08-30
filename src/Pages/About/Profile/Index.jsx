@@ -1,12 +1,15 @@
 import { Box, Text, Heading, Button, Image } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import OurStory from "./OurStory";
+import JsFileDownloader from "js-file-downloader";
 import about from "assets/Images/About.png";
 import Gallery from "Pages/About/Profile/Gallery";
 import OurPhilosophy from "./OurPhilosophy";
 import OurClout from "./OurClout";
 
 const Profile = () => {
+  const fileUrl = "/documents/Ojumo House.pdf";
+
   return (
     <Fragment>
       <Box
@@ -143,6 +146,7 @@ const Profile = () => {
           bg="#021D37"
           borderRadius="3px"
           color="#fff"
+          onClick={() => new JsFileDownloader({ url: fileUrl })}
           _hover={{
             bg: " #020E1B",
           }}
