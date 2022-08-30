@@ -18,10 +18,10 @@ const settings = {
   dots: false,
   arrows: false,
   fade: false,
-  infinite: false,
-  autoplay: false,
-  speed: 0,
-  autoplaySpeed: 0,
+  infinite: true,
+  autoplay: true,
+  speed: 1000,
+  autoplaySpeed: 1500,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
@@ -103,7 +103,7 @@ export default function Carousel() {
         onClick={() => slider?.slickNext()}
       ></Link>
 
-          <Box>
+      <Box>
         <Box w="70px" h="3px" bg="#021D37" mb="5px"></Box>
 
         <Heading
@@ -116,7 +116,6 @@ export default function Carousel() {
           Staff
         </Heading>
       </Box>
-
 
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {boards.map((board, index) => (

@@ -131,11 +131,19 @@ const Showcase = () => {
             </Heading>
 
             <Heading
-              fontSize="25px"
+              fontSize={{
+                sm: "25px",
+                md: "30px",
+                lg: "40px",
+              }}
               fontFamily="Playfair Display"
               fontWeight="700"
               lineHeight="32px"
-              w="335px"
+              w={{
+                sm: "295px",
+                md: "350px",
+                lg: "350px",
+              }}
             >
               Nigeria's Premiere Hospitality Monotechnic
             </Heading>

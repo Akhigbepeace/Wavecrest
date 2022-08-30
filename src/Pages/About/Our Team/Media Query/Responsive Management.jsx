@@ -52,36 +52,6 @@ export default function Carousel() {
       name: "Edith Chukwu",
       post: "Bursar",
     },
-    {
-      image: registrar,
-      name: "Edith Chukwu",
-      post: "Bursar",
-    },
-    {
-      image: registrar,
-      name: "Edith Chukwu",
-      post: "Bursar",
-    },
-    {
-      image: registrar,
-      name: "Edith Chukwu",
-      post: "Bursar",
-    },
-    {
-      image: registrar,
-      name: "Edith Chukwu",
-      post: "Bursar",
-    },
-    {
-      image: registrar,
-      name: "Edith Chukwu",
-      post: "Bursar",
-    },
-    {
-      image: registrar,
-      name: "Edith Chukwu",
-      post: "Bursar",
-    },
   ];
 
   return (
