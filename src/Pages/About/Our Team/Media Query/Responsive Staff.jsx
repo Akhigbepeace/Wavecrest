@@ -14,22 +14,25 @@ import deputyProvost from "assets/Images/deputyprovost.png";
 import bursar from "assets/Images/bursar.png";
 import registrar from "assets/Images/registrar.png";
 
-const settings = {
-  dots: false,
-  arrows: false,
-  fade: false,
-  infinite: true,
-  autoplay: true,
-  speed: 1000,
-  autoplaySpeed: 1500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};
+
 export default function Carousel() {
   const [slider, setSlider] = React.useState();
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "10px" });
+  const slideNo = useBreakpointValue({ base: 1, md: 2, lg: 3 });
+
+  const settings = {
+    dots: false,
+    arrows: false,
+    fade: false,
+    infinite: true,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 1500,
+    slidesToShow: slideNo,
+    slidesToScroll: 1,
+  };
 
   const boards = [
     {
