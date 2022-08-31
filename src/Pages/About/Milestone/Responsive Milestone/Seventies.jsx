@@ -23,7 +23,7 @@ const Seventies = () => {
     arrows: false,
     fade: false,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
