@@ -8,6 +8,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
+import JsFileDownloader from "js-file-downloader";
 import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
 import Navbar from "components/Navbar";
@@ -40,6 +41,8 @@ const HNDProgrammeDesc = () => {
     e.preventDefault();
     navigate("/academics/programmes", { replace: true });
   };
+
+  const fileUrl = "/documents/Ojumo House.pdf";
 
   return (
     <Fragment>
@@ -247,6 +250,7 @@ const HNDProgrammeDesc = () => {
             fontSize="24px"
             fontWeight="700"
             bg="#EEE"
+            onClick={() => new JsFileDownloader({ url: fileUrl })}
             _hover={{
               bg: "#DDD",
             }}
@@ -275,9 +279,10 @@ const HNDProgrammeDesc = () => {
               "2xl": "flex",
             }}
           >
-            {quickLinks.map((quickLink) => {
+            {quickLinks.map((quickLink, index) => {
               return (
                 <Link
+                  key={index}
                   href={quickLink.linkTo}
                   w="294px"
                   h="241px"

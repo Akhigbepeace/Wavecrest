@@ -99,11 +99,6 @@ const Showcase = () => {
           xl: "none",
           "2xl": "none",
         }}
-        px={{
-          sm: "15px",
-          md: "15px",
-          lg: "15px",
-        }}
       >
         <Box>
           <Box>
@@ -116,7 +111,13 @@ const Showcase = () => {
             />
           </Box>
 
-          <Box>
+          <Box
+            px={{
+              sm: "15px",
+              md: "15px",
+              lg: "15px",
+            }}
+          >
             <Box bg="#021D37" h="3px" w="88px" mt="20px"></Box>
 
             <Heading
@@ -130,11 +131,19 @@ const Showcase = () => {
             </Heading>
 
             <Heading
-              fontSize="25px"
+              fontSize={{
+                sm: "25px",
+                md: "30px",
+                lg: "40px",
+              }}
               fontFamily="Playfair Display"
               fontWeight="700"
               lineHeight="32px"
-              w="335px"
+              w={{
+                sm: "295px",
+                md: "350px",
+                lg: "350px",
+              }}
             >
               Nigeria's Premiere Hospitality Monotechnic
             </Heading>

@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useRef, useState } from "react";
 import Navbar from "components/Navbar";
+import emailjs from "emailjs-com";
 import contactpic from "assets/Images/contact.png";
 import aboutgallery1 from "assets/Images/aboutgallery1.png";
 import aboutgallery2 from "assets/Images/aboutgallery2.png";
@@ -43,25 +44,25 @@ const Contact = () => {
   const contactFields = [
     {
       fieldType: "text",
-      name: "name",
+      name: "user_name",
       variant: "filled",
       placeHolder: "Name",
     },
     {
       fieldType: "email",
-      name: "email",
+      name: "user_email",
       variant: "filled",
       placeHolder: "Email",
     },
     {
       fieldType: "number",
-      name: "number",
+      name: "user_number",
       variant: "filled",
       placeHolder: "Phone Number",
     },
     {
       fieldType: "text",
-      name: "subject",
+      name: "user_subject",
       variant: "filled",
       placeHolder: "Subject",
     },
@@ -123,19 +124,20 @@ const Contact = () => {
     },
   ];
 
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
+  const sendEmail = async (e) => {
+    e.preventDefault();
 
-  //   emailjs
-  //     .sendForm(
-  //       "service_djq4ick",
-  //       "Ytemplate_i27quow",
-  //       e.target,
-  //       "JPAG_ZJVlAcuO_5D-"
-  //     )
-  //     .then()
-  //     .catch();
-  // };
+    const res = await emailjs.sendForm(
+      "service_djq4ick",
+      "template_i27quow",
+      form.current,
+      "JPAG_ZJVlAcuO_5D-"
+    );
+
+    if (res.status === 200 || res.text === "OK") {
+      setInputField(initialValues);
+    }
+  };
 
   return (
     <Box>
@@ -206,7 +208,7 @@ const Contact = () => {
               mb="15px"
               fontFamily="Manrope, sans-serif"
               fontWeight="400"
-              fontSize="18px"
+              fontSize="20px"
               lineHeight="25px"
               color="#021D37"
             >
@@ -214,7 +216,7 @@ const Contact = () => {
               possible
             </Text>
 
-            <form ref={form} >
+            <form ref={form} onSubmit={sendEmail}>
               <Stack>
                 {contactFields.map((field, index) => {
                   return (
@@ -261,40 +263,62 @@ const Contact = () => {
                   }}
                 />
               </Stack>
-            </form>
 
-            <Button
-              w="103px"
-              h="47px"
-              mt="10px"
-              bg="#021D37"
-              color="white"
-              fontFamily="Manrope, sans-serif"
-              fontWeight="700"
-              fontSize="16px"
-              textAlign="center"
-              borderRadius="3px"
-              _hover={{
-                bg: "#020E1B",
-              }}
-            >
-              SUBMIT
-            </Button>
+              <Button
+                type="submit"
+                w="103px"
+                h="47px"
+                mt="10px"
+                bg="#021D37"
+                color="white"
+                fontFamily="Manrope, sans-serif"
+                fontWeight="700"
+                fontSize="16px"
+                textAlign="center"
+                borderRadius="3px"
+                _hover={{
+                  bg: "#020E1B",
+                }}
+              >
+                SUBMIT
+              </Button>
+            </form>
           </Flex>
 
           <Box>
-            <Heading mb="10px">Visit Us</Heading>
-
             <Box>
+              <Box
+                w="88px"
+                bg="#021D37"
+                h="3px"
+                mt="40px"
+                mb="5px"
+                display={{
+                  sm: "block",
+                  md: "block",
+                  lg: "block",
+                  xl: "none",
+                  "2xl": "none",
+                }}
+              ></Box>
+
+              <Heading mb="10px" fontFamily="Playfair Display">
+                Visit Us
+              </Heading>
+            </Box>
+
+            <Box
+              w={{
+                sm: "335",
+                md: "335",
+                lg: "665",
+                xl: "665",
+                "2xl": "665",
+              }}
+            >
               <iframe
                 title="Wavecrest College of Hospitality"
-                width={{
-                  sm: "335",
-                  md: "335",
-                  lg: "665",
-                  xl: "665",
-                  "2xl": "665",
-                }}
+                width="100%"
                 height="364"
                 frameBorder="0"
                 scrolling="no"
@@ -303,10 +327,12 @@ const Contact = () => {
                 id="gmap_canvas"
                 src="https://maps.google.com/maps?width=665&amp;height=364&amp;hl=en&amp;q=75%20Adisa%20Bashua%20Street,%20Off%20Adelabu%20Street,%20Surulere,%20Lagos%20State,%20Nigeria.%20%20+(Wavecrest)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               ></iframe>
+
               <script
                 type="text/javascript"
                 src="https://embedmaps.com/google-maps-authorization/script.js?id=1e38e70d8c3f5fe4769bac191f721c59a7bdb19c"
               ></script>
+
               <Text
                 mt="10px"
                 fontFamily="Manrope, sans-serif"

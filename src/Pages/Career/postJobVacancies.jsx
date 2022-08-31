@@ -1,4 +1,12 @@
-import { Heading, Input, Box, Text, Image, Button, Textarea } from "@chakra-ui/react";
+import {
+  Heading,
+  Input,
+  Box,
+  Text,
+  Image,
+  Button,
+  Textarea,
+} from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import waveimg from "assets/Images/waveimg.png";
 
@@ -25,7 +33,7 @@ const postJobVacancies = () => {
       variant: "filled",
     },
     {
-      fieldType: "text",
+      fieldType: "date",
       placeHolder: "Application Deadline",
       variant: "filled",
     },
@@ -62,8 +70,9 @@ const postJobVacancies = () => {
             fontSize="30px"
             textAlign="center"
             mt="250px"
+            px="10px"
           >
-          POST JOB VACANCIES
+            POST JOB VACANCIES
           </Text>
         </Box>
       </Box>
@@ -113,7 +122,7 @@ const postJobVacancies = () => {
           <Text
             fontFamily="Manrope"
             fontWeight="400"
-            fontSize="24px"
+            fontSize="21px"
             lineHeight="33px"
             color="#021D37"
             my="24px"
@@ -145,7 +154,7 @@ const postJobVacancies = () => {
                 mb="10px"
                 bg="#EBEDEF"
                 _placeholder={{
-                  fontFamily: "Manrope, sans-serif",
+                  fontFamily: "Manrope",
                   color: "#021D37",
                   fontSize: "18px",
                   lineHeight: "25px",
@@ -155,9 +164,28 @@ const postJobVacancies = () => {
             );
           })}
 
+          <Input
+            type="file"
+            variant="filled"
+            display="block"
+            accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.png, .jpg, .jpeg"
+            placeholder="Upload CV"
+            w={{
+              sm: "100%",
+              md: "400px",
+              lg: "526px",
+              xl: "526px",
+              "2xl": "526px",
+            }}
+   
+            mb="10px"
+            bg="#EBEDEF"
+          ></Input>
+
           <Textarea
             placeholder="Extra Notes"
             variant="filled"
+            bg="#EBEDEF"
             w={{
               sm: "100%",
               md: "400px",
@@ -178,12 +206,11 @@ const postJobVacancies = () => {
 
         <Button
           fontFamily="Manrope"
-          fontSize="16px"
+          fontSize="20px"
           fontWeight="700"
           m="20px 0"
-          borderRadius="3px"
+          borderRadius="5px"
           bg="#021D37"
-          py="7px"
           textAlign="center"
           color="#FFF"
           _hover={{

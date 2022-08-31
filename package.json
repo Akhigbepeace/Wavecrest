@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^13.5.0",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^6.3.11",
+    "js-file-downloader": "^1.1.24",
     "node-sass": "^7.0.1",
     "react": "^18.1.0",
     "react-bootstrap": "^2.4.0",

@@ -23,7 +23,7 @@ const Eighties = () => {
     arrows: false,
     fade: false,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -39,15 +39,20 @@ const Eighties = () => {
         </Heading>
       </Box>
 
-      <Slider {...settings} ref={(slider) => setSlider(slider)} pr="30px">
-        {eighties.map((seventy, index) => {
-          const textToShow = Array.isArray(seventy.achievement)
-            ? seventy.achievement.map((values, i) => (
+      <Slider
+        {...settings}
+        ref={(slider) => setSlider(slider)}
+        pr="30px"
+        pauseOnHover
+      >
+        {eighties.map((eighty, index) => {
+          const textToShow = Array.isArray(eighty.achievement)
+            ? eighty.achievement.map((values, i) => (
                 <UnorderedList key={i}>
                   <ListItem>{values}</ListItem>
                 </UnorderedList>
               ))
-            : seventy.achievement;
+            : eighty.achievement;
 
           return (
             <Box
@@ -67,7 +72,7 @@ const Eighties = () => {
                 fontWeight="700"
                 mb="20px"
               >
-                {eighties.year}
+                {eighty.year}
               </Heading>
 
               <Text

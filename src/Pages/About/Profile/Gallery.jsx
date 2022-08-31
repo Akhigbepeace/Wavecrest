@@ -8,23 +8,31 @@ import aboutGallery3 from "assets/Images/aboutgallery3.png";
 import aboutGallery4 from "assets/Images/aboutgallery4.png";
 import aboutGallery5 from "assets/Images/aboutgallery5.png";
 
-const settings = {
-  dots: false,
-  arrows: false,
-  fade: false,
-  infinite: true,
-  autoplay: true,
-  speed: 8000,
-  autoplaySpeed: 0,
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  cssEase: "linear",
-};
 export default function Carousel() {
   const [slider, setSlider] = React.useState();
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "10px" });
+  const slideNo = useBreakpointValue({
+    base: 1,
+    md: 2,
+    lg: 3,
+    xl: 4,
+    "2xl": 5,
+  });
+
+  const settings = {
+    dots: false,
+    arrows: false,
+    fade: false,
+    infinite: true,
+    autoplay: true,
+    speed: 8000,
+    autoplaySpeed: 0,
+    slidesToShow: slideNo,
+    slidesToScroll: 1,
+    cssEase: "linear",
+  };
 
   const cards = [
     aboutGallery1,

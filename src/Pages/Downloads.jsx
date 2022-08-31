@@ -2,7 +2,7 @@ import { Box, Image, Heading, Text, Grid, Button } from "@chakra-ui/react";
 import Navbar from "components/Navbar";
 import React from "react";
 import contactpic from "assets/Images/contact.png";
-
+import JsFileDownloader from "js-file-downloader";
 import Footer from "../components/Footer";
 import FooterCopywright from "../components/FooterCopywright";
 
@@ -10,9 +10,11 @@ const Downloads = () => {
   const donwloadables = [
     {
       name: "cth brochure",
+      fileUrl: "/documents/Ojumo House.pdf",
     },
     {
       name: "nsq brochure",
+      fileUrl: "/documents/Ojumo House.pdf",
     },
     {
       name: "programme fliers",
@@ -45,6 +47,8 @@ const Downloads = () => {
       name: "programme fliers",
     },
   ];
+
+  const fileUrl = "/documents/Ojumo House.pdf";
   return (
     <Box>
       <Navbar />
@@ -138,6 +142,9 @@ const Downloads = () => {
                 py="20px"
                 border="3px solid #021D37"
                 textTransform="uppercase"
+                onClick={() =>
+                  new JsFileDownloader({ url: fileUrl }
+                )}
                 _hover={{
                   bg: "#EDEEFF",
                 }}

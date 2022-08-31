@@ -4,7 +4,6 @@ import provost from "assets/Images/provost.png";
 import deputyProvost from "assets/Images/deputyprovost.png";
 import bursar from "assets/Images/bursar.png";
 import registrar from "assets/Images/registrar.png";
-import ResponsiveStaff from "Pages/About/Our Team/Media Query/Responsive Staff";
 
 const Staff = () => {
   const staffs = [
@@ -128,7 +127,18 @@ const Staff = () => {
         </Heading>
       </Box>
 
-      <Grid gridTemplateColumns="1fr 1fr" gridGap="8px" mb="100px">
+      <Grid
+        gridTemplateColumns="1fr 1fr"
+        gridGap="8px"
+        mb="100px"
+        display={{
+          sm: "none",
+          md: "none",
+          lg: "none",
+          xl: "grid",
+          "2xl": "grid",
+        }}
+      >
         {staffs.map((staff, index) => {
           return (
             <Box key={index} mb="-74px">
@@ -190,18 +200,6 @@ const Staff = () => {
           );
         })}
       </Grid>
-
-      <Box
-        display={{
-          sm: "block",
-          md: "block",
-          lg: "block",
-          xl: "none",
-          "2xl": "none",
-        }}
-      >
-        <ResponsiveStaff />
-      </Box>
     </Box>
   );
 };

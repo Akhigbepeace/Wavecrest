@@ -155,7 +155,16 @@ const Blog = () => {
         </Box>
 
         <Flex flexDirection="column" alignItems="center">
-          <Flex p="80px 50px" justifyContent="space-between">
+          <Flex
+            p={{
+              sm: "80px 0px",
+              md: "80px 0px",
+              lg: "80px 0",
+              xl: "80px 50px",
+              "2xl": "80px 50px",
+            }}
+            justifyContent="space-between"
+          >
             <Box
               pr="46px"
               w="400px"
@@ -322,7 +331,7 @@ const Blog = () => {
                     }}
                     w="100%"
                     p={{
-                      sm: "40px",
+                      sm: "20px",
                       md: "30px",
                       lg: "40px",
                       xl: "none",
