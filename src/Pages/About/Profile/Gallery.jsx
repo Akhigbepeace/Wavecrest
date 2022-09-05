@@ -14,7 +14,7 @@ export default function Carousel() {
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "10px" });
   const slideNo = useBreakpointValue({
-    base: 1,
+    base: 2,
     md: 2,
     lg: 3,
     xl: 4,

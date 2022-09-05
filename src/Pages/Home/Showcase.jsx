@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import ReactPlayer from "react-player";
+import { useNavigate } from "react-router-dom";
 import showcase1 from "assets/Images/Showcase1.png";
 import showcase2 from "assets/Images/Showcase2.png";
 import showcase3 from "assets/Images/Showcase3.png";
@@ -18,6 +19,14 @@ import waveVid from "assets/Images/wavevid.mp4";
 const showcaseGallery = [showcase1, showcase2, showcase3, showcase4];
 
 const Showcase = () => {
+  const navigate = useNavigate();
+
+  const Redirect = (e) => {
+    e.preventDefault();
+
+    navigate("/about/profile", { replace: true });
+  };
+
   return (
     <Fragment>
       <Grid
@@ -185,6 +194,7 @@ const Showcase = () => {
               bg="none"
               mt="14px"
               mb="55px"
+              onClick={(e) => Redirect(e)}
             >
               Learn More
             </Button>

@@ -18,37 +18,46 @@ const Downloads = () => {
     },
     {
       name: "programme fliers",
+      fileUrl: "/documents/Ojumo House.pdf",
     },
     {
       name: "cth brochure",
+      fileUrl: "/documents/Ojumo House.pdf",
     },
     {
       name: "nsq brochure",
+      fileUrl: "/documents/Ojumo House.pdf",
     },
     {
       name: "programme fliers",
+      fileUrl: "/documents/Ojumo House.pdf",
     },
     {
       name: "cth brochure",
+      fileUrl: "/documents/Ojumo House.pdf",
     },
     {
       name: "nsq brochure",
+      fileUrl: "/documents/Ojumo House.pdf",
     },
     {
       name: "programme fliers",
+      fileUrl: "/documents/Ojumo House.pdf",
     },
     {
       name: "cth brochure",
+      fileUrl: "/documents/Ojumo House.pdf",
     },
     {
       name: "nsq brochure",
+      fileUrl: "/documents/Ojumo House.pdf",
     },
     {
       name: "programme fliers",
+      fileUrl: "/documents/Ojumo House.pdf",
     },
   ];
 
-  const fileUrl = "/documents/Ojumo House.pdf";
   return (
     <Box>
       <Navbar />
@@ -143,8 +152,8 @@ const Downloads = () => {
                 border="3px solid #021D37"
                 textTransform="uppercase"
                 onClick={() =>
-                  new JsFileDownloader({ url: fileUrl }
-                )}
+                  new JsFileDownloader({ url: donwloadable.fileUrl })
+                }
                 _hover={{
                   bg: "#EDEEFF",
                 }}

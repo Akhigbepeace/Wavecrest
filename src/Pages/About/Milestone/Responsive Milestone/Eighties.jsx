@@ -1,11 +1,28 @@
-import { Box, Text, Heading, UnorderedList, ListItem } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Heading,
+  UnorderedList,
+  ListItem,
+  Flex,
+} from "@chakra-ui/react";
 import React from "react";
-import Slider from "react-slick";
 
 const Eighties = () => {
   const eighties = [
     {
+      year: "1986",
+      achievement:
+        "Student's were presented as external candidates for the WAEC Technical Examinations in Hotel and Catering",
+    },
+    {
       year: "1987",
+      achievement:
+        "Student's were presented as external candidates for the WAEC Technical Examinations in Hotel and Catering",
+    },
+
+    {
+      year: "1988",
       achievement:
         "Student's were presented as external candidates for the WAEC Technical Examinations in Hotel and Catering",
     },
@@ -15,19 +32,6 @@ const Eighties = () => {
         "Student's were presented as external candidates for the WAEC Technical Examinations in Hotel and Catering",
     },
   ];
-
-  const [slider, setSlider] = React.useState(null);
-
-  const settings = {
-    dots: false,
-    arrows: false,
-    fade: false,
-    infinite: true,
-    autoplay: true,
-    speed: 1500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
 
   return (
     <Box mt="55px">
@@ -39,12 +43,7 @@ const Eighties = () => {
         </Heading>
       </Box>
 
-      <Slider
-        {...settings}
-        ref={(slider) => setSlider(slider)}
-        pr="30px"
-        pauseOnHover
-      >
+      <Flex overflowY="scroll">
         {eighties.map((eighty, index) => {
           const textToShow = Array.isArray(eighty.achievement)
             ? eighty.achievement.map((values, i) => (
@@ -58,12 +57,12 @@ const Eighties = () => {
             <Box
               key={index}
               bg="#EBEDEF"
-              w="211px"
               p="15px 30px"
-              h="330px"
-              mt="20px"
+              // h="350px"
+              w="300px"
+              mt="10px"
               borderRadius="15px"
-              mr="50px"
+              mr="20px"
             >
               <Heading
                 fontFamily="Playfair Display"
@@ -87,7 +86,7 @@ const Eighties = () => {
             </Box>
           );
         })}
-      </Slider>
+      </Flex>
     </Box>
   );
 };

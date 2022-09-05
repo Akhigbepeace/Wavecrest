@@ -118,7 +118,7 @@ export default function CaptionCarousel() {
             xl: "-80px",
             "2xl": "-80px",
           }}
-          pt={{ sm: "75px", md: "75px", lg: "75px" }}
+          pt={{ sm: "55px", md: "55px", lg: "55px" }}
           px={{ sm: "20px", md: "20px", lg: "20px" }}
           zIndex="1"
           bg="#021D37"
@@ -191,7 +191,7 @@ export default function CaptionCarousel() {
                 alignItems="center"
                 justifyContent="center"
                 mt={{
-                  sm: "80px",
+                  sm: "40px",
                   md: "80px",
                   lg: "80px",
                 }}
@@ -212,12 +212,12 @@ export default function CaptionCarousel() {
                     fontSize="32px"
                     fontWeight="700"
                     mt={{
-                      sm: "30px",
-                      md: "30px",
-                      lg: "30px",
+                      sm: "40px",
+                      md: "40px",
+                      lg: "40px",
                     }}
                     textAlign={{
-                      sm: "center",
+                      sm: "left",
                       md: "center",
                       lg: "center",
                     }}
@@ -254,15 +254,22 @@ export default function CaptionCarousel() {
                     textDecoration="none"
                     textAlign="center"
                     my="20px"
+                    textTransform="uppercase"
+                    borderRadius="3px"
+                    fontFamily="Manrope"
+                    h="52px"
                     mx={{
                       sm: "auto",
                       md: "auto",
                       lg: "auto",
                     }}
-                    textTransform="uppercase"
-                    borderRadius="3px"
-                    fontFamily="Manrope"
-                    h="52px"
+                    display={{
+                      sm: "none",
+                      md: "block",
+                      lg: "block",
+                      xl: "block",
+                      "2xl": "block",
+                    }}
                     _hover={{
                       textDecoration: "none",
                       color: "#021D37",
@@ -299,6 +306,41 @@ export default function CaptionCarousel() {
                   }}
                   mx="auto"
                 />
+
+                <Link
+                  href="/blog"
+                  background="#FFF"
+                  w="168px"
+                  p="10px 26px"
+                  color="#021D37"
+                  fontSize="20px"
+                  textDecoration="none"
+                  textAlign="center"
+                  mt="60px"
+                  textTransform="uppercase"
+                  borderRadius="3px"
+                  fontFamily="Manrope"
+                  h="52px"
+                  mx={{
+                    sm: "auto",
+                    md: "auto",
+                    lg: "auto",
+                  }}
+                  display={{
+                    sm: "block",
+                    md: "none",
+                    lg: "none",
+                    xl: "none",
+                    "2xl": "none",
+                  }}
+                  _hover={{
+                    textDecoration: "none",
+                    color: "#021D37",
+                    bg: "#EBEDEF",
+                  }}
+                >
+                  {card.link}
+                </Link>
               </Flex>
             </Box>
           ))}

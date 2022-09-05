@@ -44,6 +44,7 @@ const Tuitions = [
 
   {
     courseTitle: "National Diploma (ND) in Hospitality Management",
+    bg: "#EBEDEF",
     item: "ITEM",
     year1: "YEAR 1",
     tuitionFee: "TUITION FEE",
@@ -138,6 +139,7 @@ const RespTuition = () => {
           return (
             <Box
               key={index}
+              bg={tuition.bg}
               p={{
                 sm: "50px 20px",
                 md: "50px",
@@ -156,141 +158,133 @@ const RespTuition = () => {
                 </Heading>
               </Box>
 
-              <Box>
-                <TableContainer mt="26px" mb="40px">
-                  <Table>
-                    <Thead borderBottom="2px solid #FFF">
-                      <Tr>
-                        <Th
-                          py="20px"
-                          fontFamily="Manrope"
-                          fontWeight="700"
-                          fontSize="24px"
-                          textAlign="center"
-                          borderRight="2px solid #FFF"
-                          bg="#EBEDEF"
-                        >
-                          {tuition.item}
-                        </Th>
-
-                        <Th
-                          py="20px"
-                          fontFamily="Manrope"
-                          fontWeight="700"
-                          fontSize="24px"
-                          ml="12px"
-                          borderRight="2px solid #FFF"
-                          textAlign="center"
-                          bg="#EBEDEF"
-                        >
-                          {tuition.year1}
-                        </Th>
-                      </Tr>
-                    </Thead>
-
-                    <Tbody>
-                      <Tr
-                        bg="rgba(235, 237, 239, 0.38);"
-                        borderBottom="2px solid #FFF"
+              <TableContainer mt="26px" mb="40px">
+                <Table>
+                  <Thead borderBottom="2px solid #FFF">
+                    <Tr>
+                      <Th
+                        py="20px"
+                        fontFamily="Manrope"
+                        fontWeight="700"
+                        fontSize="24px"
+                        textAlign="center"
+                        borderRight="2px solid #FFF"
+                        bg="#021D37"
+                        color="#FFF"
                       >
-                        <Td borderRight="2px solid #FFF">
-                          {tuition.tuitionFee}
-                        </Td>
-                        <Td textAlign="right" borderRight="2px solid #FFF">
-                          {tuition.tuitionFeePrice1}
-                        </Td>
-                      </Tr>
+                        {tuition.item}
+                      </Th>
 
-                      <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
-                        <Td borderRight="2px solid #FFF">
-                          {tuition.examinationFee}
-                        </Td>
-                        <Td textAlign="right" borderRight="2px solid #FFF">
-                          {tuition.examinationFeePrice1}
-                        </Td>
-                      </Tr>
-
-                      <Tr
-                        bg="rgba(235, 237, 239, 0.38);"
-                        borderBottom="2px solid #FFF"
+                      <Th
+                        py="20px"
+                        fontFamily="Manrope"
+                        fontWeight="700"
+                        fontSize="24px"
+                        ml="12px"
+                        borderRight="2px solid #FFF"
+                        textAlign="center"
+                        bg="#021D37"
+                        color="#FFF"
                       >
-                        <Td borderRight="2px solid #FFF">
-                          {tuition.workshopFee}
-                        </Td>
-                        <Td textAlign="right" borderRight="2px solid #FFF">
-                          {tuition.workshopFeePrice1}
-                        </Td>
-                      </Tr>
+                        {tuition.year1}
+                      </Th>
+                    </Tr>
+                  </Thead>
 
-                      <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
-                        <Td borderRight="2px solid #FFF">{tuition.devFee}</Td>
-                        <Td textAlign="right" borderRight="2px solid #FFF">
-                          {tuition.devFeePrice1}
-                        </Td>
-                      </Tr>
+                  <Tbody>
+                    <Tr
+                      bg="rgba(235, 237, 239, 0.38);"
+                      borderBottom="2px solid #FFF"
+                    >
+                      <Td borderRight="2px solid #FFF">{tuition.tuitionFee}</Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {tuition.tuitionFeePrice1}
+                      </Td>
+                    </Tr>
 
-                      <Tr
-                        bg="rgba(235, 237, 239, 0.38);"
-                        borderBottom="2px solid #FFF"
-                      >
-                        <Td borderRight="2px solid #FFF">
-                          {tuition.practicalFee}
-                        </Td>
-                        <Td textAlign="right" borderRight="2px solid #FFF">
-                          {tuition.practicalFeePrice1}
-                        </Td>
-                      </Tr>
+                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
+                      <Td borderRight="2px solid #FFF">
+                        {tuition.examinationFee}
+                      </Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {tuition.examinationFeePrice1}
+                      </Td>
+                    </Tr>
 
-                      <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
-                        <Td borderRight="2px solid #FFF">
-                          {tuition.studentID}
-                        </Td>
-                        <Td textAlign="right" borderRight="2px solid #FFF">
-                          {tuition.studentIDPrice1}
-                        </Td>
-                      </Tr>
+                    <Tr
+                      bg="rgba(235, 237, 239, 0.38);"
+                      borderBottom="2px solid #FFF"
+                    >
+                      <Td borderRight="2px solid #FFF">
+                        {tuition.workshopFee}
+                      </Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {tuition.workshopFeePrice1}
+                      </Td>
+                    </Tr>
 
-                      <Tr
-                        bg="rgba(235, 237, 239, 0.38);"
-                        borderBottom="2px solid #FFF"
-                      >
-                        <Td borderRight="2px solid #FFF">
-                          {tuition.hmoScheme}
-                        </Td>
-                        <Td textAlign="right" borderRight="2px solid #FFF">
-                          {tuition.hmoSchemePrice1}
-                        </Td>
-                      </Tr>
+                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
+                      <Td borderRight="2px solid #FFF">{tuition.devFee}</Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {tuition.devFeePrice1}
+                      </Td>
+                    </Tr>
 
-                      <Tr bg="#021D37" color="#FFF">
-                        <Td borderRight="2px solid #FFF">{tuition.fees}</Td>
-                        <Td textAlign="right" borderRight="2px solid #FFF">
-                          {tuition.feesPrice1}
-                        </Td>
-                      </Tr>
+                    <Tr
+                      bg="rgba(235, 237, 239, 0.38);"
+                      borderBottom="2px solid #FFF"
+                    >
+                      <Td borderRight="2px solid #FFF">
+                        {tuition.practicalFee}
+                      </Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {tuition.practicalFeePrice1}
+                      </Td>
+                    </Tr>
 
-                      <Tr
-                        bg="rgba(235, 237, 239, 0.38);"
-                        borderBottom="2px solid #FFF"
-                      >
-                        <Td borderRight="2px solid #FFF">{tuition.discount}</Td>
-                        <Td textAlign="right" borderRight="2px solid #FFF">
-                          {tuition.discountPrice1}
-                        </Td>
-                      </Tr>
+                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
+                      <Td borderRight="2px solid #FFF">{tuition.studentID}</Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {tuition.studentIDPrice1}
+                      </Td>
+                    </Tr>
 
-                      <Tr bg="#021D37" color="#FFF">
-                        <Td borderRight="2px solid #FFF">
-                          {tuition.totalFees}
-                        </Td>
-                        <Td textAlign="right" borderRight="2px solid #FFF">
-                          {tuition.totalFeesPrice1}
-                        </Td>
-                      </Tr>
-                    </Tbody>
-                  </Table>
-                </TableContainer>
-              </Box>
+                    <Tr
+                      bg="rgba(235, 237, 239, 0.38);"
+                      borderBottom="2px solid #FFF"
+                    >
+                      <Td borderRight="2px solid #FFF">{tuition.hmoScheme}</Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {tuition.hmoSchemePrice1}
+                      </Td>
+                    </Tr>
+
+                    <Tr bg="#021D37" color="#FFF">
+                      <Td borderRight="2px solid #FFF">{tuition.fees}</Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {tuition.feesPrice1}
+                      </Td>
+                    </Tr>
+
+                    <Tr
+                      bg="rgba(235, 237, 239, 0.38);"
+                      borderBottom="2px solid #FFF"
+                    >
+                      <Td borderRight="2px solid #FFF">{tuition.discount}</Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {tuition.discountPrice1}
+                      </Td>
+                    </Tr>
+
+                    <Tr bg="#021D37" color="#FFF">
+                      <Td borderRight="2px solid #FFF">{tuition.totalFees}</Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {tuition.totalFeesPrice1}
+                      </Td>
+                    </Tr>
+                  </Tbody>
+                </Table>
+              </TableContainer>
             </Box>
           );
         })}

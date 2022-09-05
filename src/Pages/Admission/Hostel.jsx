@@ -158,8 +158,8 @@ const ApplyOnline = () => {
             <Text
               fontFamily="Manrope"
               fontSize={{
-                sm: "20px",
-                md: "24px",
+                sm: "18px",
+                md: "22px",
                 lg: "24px",
                 xl: "24px",
                 "2xl": "24px",
@@ -177,27 +177,30 @@ const ApplyOnline = () => {
             </Text>
 
             <Button
+              w="142px"
+              height="46.89px"
               bg="#021D37"
-              color="#FFF"
-              textAlign="center"
               border="none"
-              fontFamily="Manrope"
-              fontSize="16px"
+              color="#fff"
               fontWeight="700"
-              w="226px"
-              h="47px"
+              fontSize="16px"
+              lineHeight="22px"
+              textAlign="center"
+              borderRadius="3px"
+              mt="8px"
               _hover={{
                 bg: "#020E1B",
+                transition: "all ease 0.4s",
               }}
             >
-              Register
+              REGISTER
             </Button>
           </Box>
         </Flex>
 
         <Grid
           gridTemplateColumns={{
-            sm: "1fr",
+            sm: "1fr 1fr",
             md: "1fr 1fr",
             lg: "1fr 1fr 1fr",
             xl: "repeat(4, 1fr)",
@@ -210,8 +213,20 @@ const ApplyOnline = () => {
             return (
               <Image
                 src={image.hotelPic}
-                w="309px"
-                h="309px"
+                w={{
+                  sm: "auto",
+                  md: "1fr 1fr",
+                  lg: "1fr 1fr 1fr",
+                  xl: "309px",
+                  "2xl": "309px",
+                }}
+                h={{
+                  sm: "auto",
+                  md: "1fr 1fr",
+                  lg: "1fr 1fr 1fr",
+                  xl: "309px",
+                  "2xl": "309px",
+                }}
                 borderRadius="5px"
                 objectFit="cover"
               />

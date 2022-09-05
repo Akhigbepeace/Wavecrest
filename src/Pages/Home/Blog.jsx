@@ -135,10 +135,10 @@ export default function CaptionCarousel() {
           }}
           bg="#DDD"
         >
-          <Box bg="#021D37" h="3px" w="88px" mt="20px"></Box>
+          <Box bg="#021D37" h="3px" w="88px" mt="55px"></Box>
 
           <Heading
-            fontSize="22px"
+            fontSize="30px"
             fontFamily="Playfair Display"
             fontWeight="700"
             mt="10px"
@@ -221,13 +221,13 @@ export default function CaptionCarousel() {
                       lg: "-30px",
                     }}
                     fontSize={{
-                      sm: "22px",
-                      md: "22px",
-                      lg: "22px",
+                      sm: "28px",
+                      md: "28px",
+                      lg: "28px",
                       xl: "40px",
                       "2xl": "40px",
                     }}
-                    lineHeight="53px"
+                    lineHeight="60px"
                     textAlign="center"
                   >
                     {card.title}
@@ -244,13 +244,7 @@ export default function CaptionCarousel() {
                     }}
                     fontWeight="400"
                     lineHeight="22px"
-                    textAlign={{
-                      sm: "left",
-                      md: "left",
-                      lg: "left",
-                      xl: "center",
-                      "2xl": "center",
-                    }}
+                    textAlign="center"
                     mt="22px"
                     w={{
                       sm: "291px",

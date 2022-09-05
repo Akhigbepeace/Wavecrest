@@ -6,6 +6,7 @@ import {
   Image,
   Button,
   Textarea,
+  FormLabel,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import waveimg from "assets/Images/waveimg.png";
@@ -14,27 +15,31 @@ const postJobVacancies = () => {
   const forms = [
     {
       fieldType: "name",
+      label: "Full Name",
       placeHolder: "FullName",
       variant: "filled",
     },
     {
       fieldType: "text",
-      placeHolder: "Company",
+      label: "Company",
+      placeHolder: "Name Of Company",
       variant: "filled",
     },
     {
       fieldType: "email",
-      placeHolder: "Email",
+      label: "Email",
+      placeHolder: "Please Enter Your Email",
       variant: "filled",
     },
     {
       fieldType: "text",
+      label: "Job Description",
       placeHolder: "Job Description",
       variant: "filled",
     },
     {
       fieldType: "date",
-      placeHolder: "Application Deadline",
+      label: "Application Deadline",
       variant: "filled",
     },
   ];
@@ -122,7 +127,13 @@ const postJobVacancies = () => {
           <Text
             fontFamily="Manrope"
             fontWeight="400"
-            fontSize="21px"
+            fontSize={{
+              sm: "18px",
+              md: "21px",
+              lg: "21px",
+              xl: "21px",
+              "2xl": "21px",
+            }}
             lineHeight="33px"
             color="#021D37"
             my="24px"
@@ -137,84 +148,126 @@ const postJobVacancies = () => {
         <Box>
           {forms.map((form, index) => {
             return (
-              <Input
-                key={index}
-                type={form.fieldType}
-                placeholder={form.placeHolder}
-                variant={form.variant}
-                display="block"
-                w={{
-                  sm: "100%",
-                  md: "400px",
-                  lg: "526px",
-                  xl: "526px",
-                  "2xl": "526px",
-                }}
-                h="67px"
-                mb="10px"
-                bg="#EBEDEF"
-                _placeholder={{
-                  fontFamily: "Manrope",
-                  color: "#021D37",
-                  fontSize: "18px",
-                  lineHeight: "25px",
-                  fontWeight: "400",
-                }}
-              />
+              <Fragment>
+                <FormLabel
+                  key={index}
+                  fontFamily="Manrope"
+                  color="#021D37"
+                  fontSize="18px"
+                  lineHeight="25px"
+                  fontWeight="600"
+                  mt="20px"
+                >
+                  {form.label}
+                </FormLabel>
+                <Input
+                  type={form.fieldType}
+                  placeholder={form.placeHolder}
+                  variant={form.variant}
+                  display="block"
+                  w={{
+                    sm: "100%",
+                    md: "400px",
+                    lg: "526px",
+                    xl: "526px",
+                    "2xl": "526px",
+                  }}
+                  h="67px"
+                  mb="10px"
+                  bg="#EBEDEF"
+                  _placeholder={{
+                    fontFamily: "Manrope",
+                    color: "#021D37",
+                    fontSize: "18px",
+                    lineHeight: "25px",
+                    fontWeight: "400",
+                  }}
+                />
+              </Fragment>
             );
           })}
 
-          <Input
-            type="file"
-            variant="filled"
-            display="block"
-            accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.png, .jpg, .jpeg"
-            placeholder="Upload CV"
-            w={{
-              sm: "100%",
-              md: "400px",
-              lg: "526px",
-              xl: "526px",
-              "2xl": "526px",
-            }}
-   
-            mb="10px"
-            bg="#EBEDEF"
-          ></Input>
+          <Box>
+            <FormLabel
+              fontFamily="Manrope"
+              color="#021D37"
+              fontSize="18px"
+              lineHeight="25px"
+              fontWeight="700"
+              mt="20px"
+            >
+              Upload CV
+            </FormLabel>
+            <Input
+              type="file"
+              variant="filled"
+              display="block"
+              accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.png, .jpg, .jpeg"
+              h="67px"
+              pt="15px"
+              w={{
+                sm: "100%",
+                md: "400px",
+                lg: "526px",
+                xl: "526px",
+                "2xl": "526px",
+              }}
+              mb="10px"
+              bg="#EBEDEF"
+            ></Input>
+          </Box>
 
-          <Textarea
-            placeholder="Extra Notes"
-            variant="filled"
-            bg="#EBEDEF"
-            w={{
-              sm: "100%",
-              md: "400px",
-              lg: "526px",
-              xl: "526px",
-              "2xl": "526px",
-            }}
-            h="80px"
-            _placeholder={{
-              fontFamily: "Manrope, sans-serif",
-              color: "#021D37",
-              fontSize: "18px",
-              lineHeight: "25px",
-              fontWeight: "400",
-            }}
-          />
+          <Box>
+            <FormLabel
+              fontFamily="Manrope"
+              color="#021D37"
+              fontSize="18px"
+              lineHeight="25px"
+              fontWeight="700"
+              mt="20px"
+            >
+              Notes:
+            </FormLabel>
+
+            <Textarea
+              placeholder="Extra Notes"
+              variant="filled"
+              bg="#EBEDEF"
+              w={{
+                sm: "100%",
+                md: "400px",
+                lg: "526px",
+                xl: "526px",
+                "2xl": "526px",
+              }}
+              h="80px"
+              _placeholder={{
+                fontFamily: "Manrope",
+                color: "#021D37",
+                fontSize: "18px",
+                lineHeight: "25px",
+                fontWeight: "400",
+              }}
+            />
+          </Box>
         </Box>
 
         <Button
-          fontFamily="Manrope"
-          fontSize="20px"
-          fontWeight="700"
-          m="20px 0"
-          borderRadius="5px"
+          w="142px"
+          height="46.89px"
           bg="#021D37"
+          border="none"
+          color="#fff"
+          fontWeight="700"
+          fontSize="16px"
+          lineHeight="22px"
           textAlign="center"
-          color="#FFF"
+          borderRadius="3px"
+          mt="20px"
+          mb="70px"
           _hover={{
             bg: "#020E1B",
+            transition: "all ease 0.4s",
           }}
         >
           POST

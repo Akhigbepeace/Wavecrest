@@ -12,11 +12,11 @@ const Search = () => {
   };
 
   const navigateTo = `/searhResults?searchTerm=${inputField}`;
-  
+
   const ShowResult = (e) => {
     e.preventDefault();
 
-    navigate( navigateTo , { replace: true });
+    navigate(navigateTo, { replace: true });
   };
 
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ const Search = () => {
           placeholder="Search"
           onChange={inputValues}
           _placeholder={{
-            fontFamily: "Manrope, sans-serif",
+            fontFamily: "Manrope",
             color: "#021D37",
             fontSize: "18px",
             lineHeight: "25px",
