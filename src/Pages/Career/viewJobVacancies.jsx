@@ -128,7 +128,6 @@ const ViewJobVacancies = () => {
             xl: "1fr 1fr",
             "2xl": "1fr 1fr",
           }}
-          // mt="30px"
           mx={{
             sm: "0px",
             md: "0px",

@@ -151,25 +151,34 @@ const ShortCourses = () => {
                               borderRadius="5px"
                               fontFamily="Manrope"
                               fontWeight="700"
-                              h="52px"
-                              bg="none"
-                              color="#FFF"
-                              w={{
-                                sm: "110px",
-                                md: "110px",
-                                lg: "150px",
+                              fontSize="16px"
+                              lineHeight="22px"
+                              textTransform="uppercase"
+                              bg={{
+                                sm: "none",
+                                md: "none",
+                                lg: "none",
+                                xl: "#FFF",
+                                "2xl": "#FFF",
                               }}
+                              color={{
+                                sm: "#FFF",
+                                md: "#FFF",
+                                lg: "#FFF",
+                                xl: "#021d37",
+                                "2xl": "#021d37",
+                              }}
+                              w="142px"
+                              height="46.89px"
                               p="10px 25px"
-                              border="2px solid #FFF"
-                              fontSize={{
-                                sm: "16px",
-                                md: "16px",
-                                lg: "20px",
+                              border={{
+                                sm: "2px solid #FFF",
+                                md: "2px solid #FFF",
+                                lg: "2px solid #FFF",
+                                xl: "none",
+                                "2xl": "none",
                               }}
-                              _hover={{
-                                textDecoration: "none",
-                                bg: "#EBEDEF",
-                              }}
+                              _hover={{ textDecoration: "none", bg: "#EBEDEF" }}
                             >
                               {value.captionButton}
                             </Link>

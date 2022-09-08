@@ -1,39 +1,17 @@
 import {
   Box,
-  useBreakpointValue,
   Heading,
   Text,
   Image,
   Flex,
-  Link,
 } from "@chakra-ui/react";
 import React from "react";
-import Slider from "react-slick";
 import provost from "assets/Images/provost.png";
 import deputyProvost from "assets/Images/deputyprovost.png";
 import bursar from "assets/Images/bursar.png";
 import registrar from "assets/Images/registrar.png";
 
 export default function Carousel() {
-  const [slider, setSlider] = React.useState();
-
-  const top = useBreakpointValue({ base: "90%", md: "50%" });
-
-  const side = useBreakpointValue({ base: "30%", md: "10px" });
-  const slideNo = useBreakpointValue({ base: 1, md: 2, lg: 3 });
-
-  const settings = {
-    dots: false,
-    arrows: false,
-    fade: false,
-    infinite: true,
-    autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 1500,
-    slidesToShow: slideNo,
-    slidesToScroll: 1,
-  };
-
   const boards = [
     {
       image: deputyProvost,
@@ -91,22 +69,6 @@ export default function Carousel() {
 
   return (
     <Box position={"relative"} overflow={"hidden"}>
-      <Link
-        position="absolute"
-        left={side}
-        top={top}
-        zIndex={2}
-        onClick={() => slider?.slickPrev()}
-      ></Link>
-
-      <Link
-        position="absolute"
-        right={side}
-        top={top}
-        zIndex={2}
-        onClick={() => slider?.slickNext()}
-      ></Link>
-
       <Box>
         <Box w="88px" h="3px" bg="#021D37" mb="5px"></Box>
 
@@ -121,9 +83,9 @@ export default function Carousel() {
         </Heading>
       </Box>
 
-      <Slider {...settings} ref={(slider) => setSlider(slider)}>
+      <Flex overflowY="scroll">
         {boards.map((board, index) => (
-          <Flex key={index}>
+          <Box key={index}>
             <Box w="250px" h="168px">
               <Image
                 src={board.image}
@@ -153,7 +115,7 @@ export default function Carousel() {
               <Box ml="20px">
                 <Heading
                   fontFamily="Playfair Display"
-                  fontSize="22px"
+                  fontSize="20px"
                   fontWeight="700"
                   color="#021D37"
                   lineHeight="27px"
@@ -162,7 +124,7 @@ export default function Carousel() {
                 </Heading>
                 <Text
                   fontFamily="Manrope"
-                  fontSize="20px"
+                  fontSize="18px"
                   fontWeight="400"
                   color="rgba(2, 29, 55, 0.63);"
                   lineHeight="27px"
@@ -171,9 +133,9 @@ export default function Carousel() {
                 </Text>
               </Box>
             </Flex>
-          </Flex>
+          </Box>
         ))}
-      </Slider>
+      </Flex>
     </Box>
   );
 }

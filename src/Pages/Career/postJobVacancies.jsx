@@ -8,41 +8,82 @@ import {
   Textarea,
   FormLabel,
 } from "@chakra-ui/react";
-import React, { Fragment } from "react";
+import React, { Fragment, useRef, useState } from "react";
+import emailjs from "emailjs-com";
 import waveimg from "assets/Images/waveimg.png";
 
-const postJobVacancies = () => {
+const PostJobVacancies = () => {
+  const initialValues = {
+    user_name: "",
+    user_email: "",
+    user_company: "",
+    job_description: "",
+    application_deadline: "",
+    user_message: "",
+  };
+
+  const [inputField, setInputField] = useState(initialValues);
+
+  const inputValues = (e) => {
+    setInputField({
+      ...inputField,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const form = useRef();
+
   const forms = [
     {
       fieldType: "name",
+      name: "user_name",
       label: "Full Name",
       placeHolder: "FullName",
       variant: "filled",
     },
     {
-      fieldType: "text",
-      label: "Company",
-      placeHolder: "Name Of Company",
-      variant: "filled",
-    },
-    {
       fieldType: "email",
+      name: "user_email",
       label: "Email",
       placeHolder: "Please Enter Your Email",
       variant: "filled",
     },
     {
       fieldType: "text",
+      name: "user_company",
+      label: "Company",
+      placeHolder: "Name Of Company",
+      variant: "filled",
+    },
+    {
+      fieldType: "text",
+      name: "job_description",
       label: "Job Description",
       placeHolder: "Job Description",
       variant: "filled",
     },
     {
       fieldType: "date",
+      name: "application_deadline",
       label: "Application Deadline",
       variant: "filled",
     },
   ];
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    const res = await emailjs.sendForm(
+      "service_djq4ick",
+      "template_i27quow",
+      form.current,
+      "JPAG_ZJVlAcuO_5D-"
+    );
+
+    if (res.status === 200 || res.text === "OK") {
+      setInputField(initialValues);
+    }
+  };
 
   return (
     <Fragment>
@@ -145,136 +186,146 @@ const postJobVacancies = () => {
           </Text>
         </Box>
 
-        <Box>
-          {forms.map((form, index) => {
-            return (
-              <Fragment>
-                <FormLabel
-                  key={index}
-                  fontFamily="Manrope"
-                  color="#021D37"
-                  fontSize="18px"
-                  lineHeight="25px"
-                  fontWeight="600"
-                  mt="20px"
-                >
-                  {form.label}
-                </FormLabel>
-                <Input
-                  type={form.fieldType}
-                  placeholder={form.placeHolder}
-                  variant={form.variant}
-                  display="block"
-                  w={{
-                    sm: "100%",
-                    md: "400px",
-                    lg: "526px",
-                    xl: "526px",
-                    "2xl": "526px",
-                  }}
-                  h="67px"
-                  mb="10px"
-                  bg="#EBEDEF"
-                  _placeholder={{
-                    fontFamily: "Manrope",
-                    color: "#021D37",
-                    fontSize: "18px",
-                    lineHeight: "25px",
-                    fontWeight: "400",
-                  }}
-                />
-              </Fragment>
-            );
-          })}
-
+        <form ref={form} onSubmit={sendEmail}>
           <Box>
-            <FormLabel
-              fontFamily="Manrope"
-              color="#021D37"
-              fontSize="18px"
-              lineHeight="25px"
-              fontWeight="700"
-              mt="20px"
-            >
-              Upload CV
-            </FormLabel>
-            <Input
-              type="file"
-              variant="filled"
-              display="block"
-              accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.png, .jpg, .jpeg"
-              h="67px"
-              pt="15px"
-              w={{
-                sm: "100%",
-                md: "400px",
-                lg: "526px",
-                xl: "526px",
-                "2xl": "526px",
-              }}
-              mb="10px"
-              bg="#EBEDEF"
-            ></Input>
+            {forms.map((form, index) => {
+              return (
+                <Fragment>
+                  <FormLabel
+                    key={index}
+                    fontFamily="Manrope"
+                    color="#021D37"
+                    fontSize="18px"
+                    lineHeight="25px"
+                    fontWeight="600"
+                    mt="20px"
+                  >
+                    {form.label}
+                  </FormLabel>
+                  <Input
+                    type={form.fieldType}
+                    placeholder={form.placeHolder}
+                    variant={form.variant}
+                    name={form.name}
+                    display="block"
+                    value={inputField[form.name]}
+                    onChange={inputValues}
+                    w={{
+                      sm: "100%",
+                      md: "400px",
+                      lg: "526px",
+                      xl: "526px",
+                      "2xl": "526px",
+                    }}
+                    h="67px"
+                    mb="10px"
+                    bg="#EBEDEF"
+                    _placeholder={{
+                      fontFamily: "Manrope",
+                      color: "#021D37",
+                      fontSize: "18px",
+                      lineHeight: "25px",
+                      fontWeight: "400",
+                    }}
+                  />
+                </Fragment>
+              );
+            })}
+
+            <Box>
+              <FormLabel
+                fontFamily="Manrope"
+                color="#021D37"
+                fontSize="18px"
+                lineHeight="25px"
+                fontWeight="700"
+                mt="20px"
+              >
+                Upload CV
+              </FormLabel>
+              <Input
+                type="file"
+                variant="filled"
+                display="block"
+                accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.png, .jpg, .jpeg"
+                h="67px"
+                pt="15px"
+                onChange={inputValues}
+                w={{
+                  sm: "100%",
+                  md: "400px",
+                  lg: "526px",
+                  xl: "526px",
+                  "2xl": "526px",
+                }}
+                mb="10px"
+                bg="#EBEDEF"
+              ></Input>
+            </Box>
+
+            <Box>
+              <FormLabel
+                fontFamily="Manrope"
+                color="#021D37"
+                fontSize="18px"
+                lineHeight="25px"
+                fontWeight="700"
+                mt="20px"
+              >
+                Notes:
+              </FormLabel>
+
+              <Textarea
+                placeholder="Extra Notes"
+                variant="filled"
+                bg="#EBEDEF"
+                onChange={inputValues}
+                name="user_message"
+                value={inputField.user_message}
+                w={{
+                  sm: "100%",
+                  md: "400px",
+                  lg: "526px",
+                  xl: "526px",
+                  "2xl": "526px",
+                }}
+                h="80px"
+                _placeholder={{
+                  fontFamily: "Manrope",
+                  color: "#021D37",
+                  fontSize: "18px",
+                  lineHeight: "25px",
+                  fontWeight: "400",
+                }}
+              />
+            </Box>
           </Box>
 
-          <Box>
-            <FormLabel
-              fontFamily="Manrope"
-              color="#021D37"
-              fontSize="18px"
-              lineHeight="25px"
-              fontWeight="700"
-              mt="20px"
-            >
-              Notes:
-            </FormLabel>
-
-            <Textarea
-              placeholder="Extra Notes"
-              variant="filled"
-              bg="#EBEDEF"
-              w={{
-                sm: "100%",
-                md: "400px",
-                lg: "526px",
-                xl: "526px",
-                "2xl": "526px",
-              }}
-              h="80px"
-              _placeholder={{
-                fontFamily: "Manrope",
-                color: "#021D37",
-                fontSize: "18px",
-                lineHeight: "25px",
-                fontWeight: "400",
-              }}
-            />
-          </Box>
-        </Box>
-
-        <Button
-          w="142px"
-          height="46.89px"
-          bg="#021D37"
-          border="none"
-          color="#fff"
-          fontWeight="700"
-          fontSize="16px"
-          lineHeight="22px"
-          textAlign="center"
-          borderRadius="3px"
-          mt="20px"
-          mb="70px"
-          _hover={{
-            bg: "#020E1B",
-            transition: "all ease 0.4s",
-          }}
-        >
-          POST
-        </Button>
+          <Button
+            type="submit"
+            w="142px"
+            height="46.89px"
+            bg="#021D37"
+            border="none"
+            color="#fff"
+            fontWeight="700"
+            fontSize="16px"
+            lineHeight="22px"
+            textAlign="center"
+            borderRadius="3px"
+            mt="20px"
+            mb="70px"
+            _hover={{
+              bg: "#020E1B",
+              transition: "all ease 0.4s",
+            }}
+          >
+            POST
+          </Button>
+        </form>
       </Box>
     </Fragment>
   );
 };
 
-export default postJobVacancies;
+export default PostJobVacancies;

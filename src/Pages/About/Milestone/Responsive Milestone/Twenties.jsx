@@ -1,6 +1,5 @@
-import { Box, Text, Heading } from "@chakra-ui/react";
+import { Box, Text, Heading, Flex } from "@chakra-ui/react";
 import React from "react";
-import Slider from "react-slick";
 
 const Twenties = () => {
   const twenties = [
@@ -20,19 +19,6 @@ const Twenties = () => {
     },
   ];
 
-  const [slider, setSlider] = React.useState(null);
-
-  const settings = {
-    dots: false,
-    arrows: false,
-    fade: false,
-    infinite: true,
-    autoplay: false,
-    speed: 1500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
   return (
     <Box mt="55px">
       <Box>
@@ -43,24 +29,21 @@ const Twenties = () => {
         </Heading>
       </Box>
 
-      <Slider {...settings} ref={(slider) => setSlider(slider)} pr="30px">
-        {twenties.map((seventy, index) => {
-          const textToShow = Array.isArray(seventy.achievement)
-            ? seventy.achievement.map((values, i) => (
-                <Box key={i}>{values}</Box>
-              ))
-            : seventy.achievement;
+      <Flex overflowY="scroll">
+        {twenties.map((twenty, index) => {
+          const textToShow = Array.isArray(twenty.achievement)
+            ? twenty.achievement.map((values, i) => <Box key={i}>{values}</Box>)
+            : twenty.achievement;
 
           return (
             <Box
               key={index}
               bg="#EBEDEF"
-              w="211px"
+              minW="250px"
               p="15px 30px"
-              h="330px"
               mt="20px"
               borderRadius="15px"
-              mr="50px"
+              mr="10px"
             >
               <Heading
                 fontFamily="Playfair Display"
@@ -69,7 +52,7 @@ const Twenties = () => {
                 fontWeight="700"
                 mb="20px"
               >
-                {seventy.year}
+                {twenty.year}
               </Heading>
 
               <Text
@@ -84,7 +67,7 @@ const Twenties = () => {
             </Box>
           );
         })}
-      </Slider>
+      </Flex>
     </Box>
   );
 };

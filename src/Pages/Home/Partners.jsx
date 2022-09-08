@@ -230,13 +230,6 @@ export default function Carousel() {
               "2xl": "50px",
             }}
             mx="auto"
-            // pr={{
-            //   sm: "30px",
-            //   md: "30px",
-            //   lg: "30px",
-            //   xl: "50px",
-            //   "2xl": "50px",
-            // }}
           />
         ))}
       </Grid>

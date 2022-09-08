@@ -144,7 +144,9 @@ const Courses = () => {
                         borderRadius="5px"
                         fontFamily="Manrope"
                         fontWeight="700"
-                        h="52px"
+                        fontSize="16px"
+                        lineHeight="22px"
+                        textTransform="uppercase"
                         bg={{
                           sm: "none",
                           md: "none",
@@ -159,13 +161,8 @@ const Courses = () => {
                           xl: "#021d37",
                           "2xl": "#021d37",
                         }}
-                        w={{
-                          sm: "110px",
-                          md: "110px",
-                          lg: "150px",
-                          xl: "208px",
-                          "2xl": "208px",
-                        }}
+                        w="142px"
+                        height="46.89px"
                         p="10px 25px"
                         border={{
                           sm: "2px solid #FFF",
@@ -173,13 +170,6 @@ const Courses = () => {
                           lg: "2px solid #FFF",
                           xl: "none",
                           "2xl": "none",
-                        }}
-                        fontSize={{
-                          sm: "16px",
-                          md: "16px",
-                          lg: "20px",
-                          xl: "24px",
-                          "2xl": "24px",
                         }}
                         _hover={{ textDecoration: "none", bg: "#EBEDEF" }}
                       >

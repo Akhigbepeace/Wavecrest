@@ -466,6 +466,7 @@ const Navbar = () => {
                       <Fragment>
                         {navLink.to ? (
                           <Link
+                            key={index}
                             as={NavLink}
                             to={navLink.to}
                             color="#FFF"
