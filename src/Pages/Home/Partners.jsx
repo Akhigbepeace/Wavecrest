@@ -40,17 +40,45 @@ export default function Carousel() {
   const side = useBreakpointValue({ base: "30%", md: "10px" });
 
   const cards = [
-    Nestle,
-    Pau,
-    bihc,
-    raddison,
-    maggi,
-    womenBoard,
-    sheraton,
-    intercontinental,
-    crowneplaza,
-    starwood,
-    bomahotel,
+    {
+      logo: Nestle,
+      width: "80px",
+      height: "80px",
+    },
+    {
+      logo: Pau,
+    },
+    {
+      logo: bihc,
+      width: "80px",
+      height: "80px",
+    },
+    {
+      logo: raddison,
+    },
+    {
+      logo: maggi,
+      width: "80px",
+      height: "80px",
+    },
+    {
+      logo: womenBoard,
+    },
+    {
+      logo: sheraton,
+    },
+    {
+      logo: intercontinental,
+    },
+    {
+      logo: crowneplaza,
+    },
+    {
+      logo: starwood,
+    },
+    {
+      logo: bomahotel,
+    },
   ];
 
   return (
@@ -108,7 +136,7 @@ export default function Carousel() {
           bg="#021D37"
           h="3px"
           w="88px"
-          mt="20px"
+          mt="55px"
           display={{
             sm: "block",
             md: "block",
@@ -123,9 +151,9 @@ export default function Carousel() {
           color="#021D37"
           fontFamily="Playfair Display"
           fontSize={{
-            sm: "20px",
-            md: "20px",
-            lg: "20px",
+            sm: "30px",
+            md: "30px",
+            lg: "30px",
             xl: "40px",
             "2xl": "40px",
           }}
@@ -147,8 +175,8 @@ export default function Carousel() {
         <Slider {...settings} ref={(slider) => setSlider(slider)} pauseOnFocus>
           {cards.map((image, index) => (
             <Image
-              src={image}
               key={index}
+              src={image.logo}
               alt="companyLogo"
               h="75px"
               mb="50px"
@@ -167,8 +195,8 @@ export default function Carousel() {
           "2xl": "none",
         }}
         gridTemplateColumns={{
-          sm: "auto auto",
-          md: "auto auto",
+          sm: "auto auto auto",
+          md: "auto auto auto",
           lg: "1fr 1fr 1fr",
         }}
         px={{
@@ -179,33 +207,36 @@ export default function Carousel() {
           "2xl": "none",
         }}
         mt={{
-          sm: "60px",
-          md: "60px",
-          lg: "60px",
+          sm: "80px",
+          md: "80px",
+          lg: "80px",
         }}
         alignItems="center"
       >
         {cards.map((image, index) => (
           <Image
-            src={image}
             key={index}
+            src={image.logo}
             alt="companyLogo"
             alignItems="center"
+            w={image.width}
+            h={image.height}
             objectFit="contain"
             mb={{
-              sm: "30px",
-              md: "30px",
-              lg: "30px",
+              sm: "40px",
+              md: "40px",
+              lg: "40px",
               xl: "50px",
               "2xl": "50px",
             }}
-            pr={{
-              sm: "30px",
-              md: "30px",
-              lg: "30px",
-              xl: "50px",
-              "2xl": "50px",
-            }}
+            mx="auto"
+            // pr={{
+            //   sm: "30px",
+            //   md: "30px",
+            //   lg: "30px",
+            //   xl: "50px",
+            //   "2xl": "50px",
+            // }}
           />
         ))}
       </Grid>

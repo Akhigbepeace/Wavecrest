@@ -169,7 +169,7 @@ const ApplyOnline = () => {
                 mb="10px"
                 bg="#EBEDEF"
                 _placeholder={{
-                  fontFamily: "Manrope, sans-serif",
+                  fontFamily: "Manrope",
                   color: "#021D37",
                   fontSize: "18px",
                   lineHeight: "25px",
@@ -191,7 +191,7 @@ const ApplyOnline = () => {
             h="67px"
             bg="#EBEDEF"
             textAlign="left"
-            fontFamily="Manrope, sans-serif"
+            fontFamily="Manrope"
             border="none"
             color="#021D37"
             fontSize="18px"
@@ -215,23 +215,6 @@ const ApplyOnline = () => {
             })}
           </Select>
         </Flex>
-
-        <Box
-          my="20px"
-          ml="25px"
-          fontFamily="Manrope"
-          fontSize="18px"
-          fontWeight="400"
-          lineHeight="33px"
-        >
-          <Text color="#021D37">
-            Fee for the programme appears here (e.g Subsidized fee for the
-            programme is #189,000)
-          </Text>
-          <Text color="#CD2026" textDecoration="underline">
-            would you like to pay for the whole fee of #464,000 instead ?
-          </Text>
-        </Box>
 
         <Box>
           <Flex
@@ -282,7 +265,7 @@ const ApplyOnline = () => {
                 "2xl": "423px",
               }}
               bg="#021D37"
-              py="7px"
+              height="46.89px"
               textAlign="center"
               color="#FFF"
               _hover={{
@@ -294,7 +277,18 @@ const ApplyOnline = () => {
           </Link>
         </Box>
 
-        <Text fontFamily="Manrope" fontSize="24px" fontWeight="400" my="45px">
+        <Text
+          fontFamily="Manrope"
+          fontSize={{
+            sm: "18px",
+            md: "24px",
+            lg: "24px",
+            xl: "24px",
+            "2xl": "24px",
+          }}
+          fontWeight="400"
+          my="45px"
+        >
           NB: After payment, a google link would be sent to your mail to
           complete the registration
         </Text>

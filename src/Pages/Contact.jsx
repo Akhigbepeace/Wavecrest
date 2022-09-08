@@ -172,16 +172,7 @@ const Contact = () => {
         </Box>
       </Box>
 
-      <Box
-        pt="50px"
-        px={{
-          sm: "20px",
-          md: "20px",
-          lg: "30px",
-          xl: "91px",
-          "2xl": "91px",
-        }}
-      >
+      <Box pt="50px">
         <Grid
           gridTemplateColumns={{
             sm: "1fr",
@@ -192,21 +183,41 @@ const Contact = () => {
           }}
           gridGap="50px"
         >
-          <Flex flexDirection="column" textAlign="left">
-            <Heading
-              fontFamily="Playfair Display, serif"
-              fontWeight="700"
-              fontSize="40px"
-              lineHeight="53px"
-              color="#021D37"
-              mb="5px"
-            >
-              Contact Form
-            </Heading>
+          <Flex
+            flexDirection="column"
+            textAlign="left"
+            px={{
+              sm: "20px",
+              md: "20px",
+              lg: "30px",
+              xl: "91px",
+              "2xl": "91px",
+            }}
+          >
+            <Box>
+              <Box
+                w="88px"
+                bg="#021D37"
+                h="3px"
+                mt="40px"
+                mb="5px"
+                display={{
+                  sm: "block",
+                  md: "block",
+                  lg: "block",
+                  xl: "none",
+                  "2xl": "none",
+                }}
+              ></Box>
+
+              <Heading mb="10px" fontFamily="Playfair Display">
+                Contact Form
+              </Heading>
+            </Box>
 
             <Text
               mb="15px"
-              fontFamily="Manrope, sans-serif"
+              fontFamily="Manrope"
               fontWeight="400"
               fontSize="20px"
               lineHeight="25px"
@@ -233,7 +244,7 @@ const Contact = () => {
                       }}
                       onChange={inputValues}
                       _placeholder={{
-                        fontFamily: "Manrope, sans-serif",
+                        fontFamily: "Manrope",
                         color: "#021D37",
                         fontSize: "18px",
                         lineHeight: "25px",
@@ -255,7 +266,7 @@ const Contact = () => {
                     md: "500px",
                   }}
                   _placeholder={{
-                    fontFamily: "Manrope, sans-serif",
+                    fontFamily: "Manrope",
                     color: "#021D37",
                     fontSize: "18px",
                     lineHeight: "25px",
@@ -266,18 +277,20 @@ const Contact = () => {
 
               <Button
                 type="submit"
-                w="103px"
-                h="47px"
-                mt="10px"
+                w="142px"
+                height="46.89px"
                 bg="#021D37"
-                color="white"
-                fontFamily="Manrope, sans-serif"
+                border="none"
+                color="#fff"
                 fontWeight="700"
                 fontSize="16px"
+                lineHeight="22px"
                 textAlign="center"
                 borderRadius="3px"
+                mt="10px"
                 _hover={{
                   bg: "#020E1B",
+                  transition: "all ease 0.4s",
                 }}
               >
                 SUBMIT
@@ -285,7 +298,29 @@ const Contact = () => {
             </form>
           </Flex>
 
-          <Box>
+          <Box
+            bg={{
+              sm: "#EBEDEF",
+              md: "#EBEDEF",
+              lg: "none",
+              xl: "none",
+              "2xl": "none",
+            }}
+            px={{
+              sm: "20px",
+              md: "20px",
+              lg: "30px",
+              xl: "91px",
+              "2xl": "91px",
+            }}
+            mb={{
+              sm: "100px",
+              md: "100px",
+              lg: "0",
+              xl: "0",
+              "2xl": "0",
+            }}
+          >
             <Box>
               <Box
                 w="88px"
@@ -335,7 +370,7 @@ const Contact = () => {
 
               <Text
                 mt="10px"
-                fontFamily="Manrope, sans-serif"
+                fontFamily="Manrope"
                 fontSize="16px"
                 fontWeight="400"
               >
@@ -367,7 +402,7 @@ const Contact = () => {
                       {enquiry.name}
                     </Heading>
                     <Box
-                      fontFamily="Manrope, sans-serif"
+                      fontFamily="Manrope"
                       fontWeight="400"
                       fontSize="18px"
                       color="#021D37"
@@ -390,6 +425,13 @@ const Contact = () => {
             xl: "block",
             "2xl": "block",
           }}
+          px={{
+            sm: "100px",
+            md: "100px",
+            lg: "30px",
+            xl: "91px",
+            "2xl": "91px",
+          }}
           mb="100px"
         >
           <Heading
@@ -404,9 +446,10 @@ const Contact = () => {
           </Heading>
 
           <Flex justifyContent="space-between">
-            {quickLinks.map((quickLink) => {
+            {quickLinks.map((quickLink, index) => {
               return (
                 <Link
+                  key={index}
                   href={quickLink.linkTo}
                   w="294px"
                   h="241px"

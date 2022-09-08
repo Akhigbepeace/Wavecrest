@@ -198,6 +198,7 @@ const AdmissionRequirements = () => {
                   h="323px"
                   borderRadius="3px"
                   mr="45px"
+                  mb="20px"
                   objectFit="cover"
                 />
 
@@ -218,7 +219,7 @@ const AdmissionRequirements = () => {
 
                   <Modal isCentered isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
-                    <ModalContent bg="#DCE5E5" p="30px" maxW="none" w="1110px">
+                    <ModalContent bg="#DCE5E5" p="30px" maxW="none" w="900px">
                       <ModalHeader
                         fontFamily="Playfair Display"
                         fontWeight="700"
@@ -252,9 +253,10 @@ const AdmissionRequirements = () => {
                           >
                             Four (4) Subjects can be chosen from this list:
                           </Text>
-                          {subjects.map((subject) => {
+                          {subjects.map((subject, index) => {
                             return (
                               <ListItem
+                                key={index}
                                 listStyleType="none"
                                 fontFamily="Manrope"
                                 fontWeight="400"
@@ -274,19 +276,21 @@ const AdmissionRequirements = () => {
                     href={requirement.linkTo}
                     target="_blank"
                     display="block"
-                    textAlign="center"
+                    w="142px"
+                    height="46.89px"
                     bg="#021D37"
-                    fontFamily="Manrope"
+                    border="none"
+                    color="#fff"
                     fontWeight="700"
-                    fontSize="20px"
-                    color="#FFF"
+                    fontSize="16px"
+                    lineHeight="22px"
+                    pt="12px"
+                    textAlign="center"
                     borderRadius="3px"
-                    mt="30px"
-                    pt="10px"
-                    w="208px"
-                    h="52px"
+                    mt="8px"
                     _hover={{
                       bg: "#020E1B",
+                      transition: "all ease 0.4s",
                     }}
                   >
                     APPLY NOW
@@ -309,7 +313,20 @@ const AdmissionRequirements = () => {
                     my="14px"
                   >
                     <Image src={fileDownload} w="20px" mr="13px" />
-                    <Text>Download Programme Brochure</Text>
+                    <Text
+                      fontFamily="Manrope"
+                      fontWeight="700"
+                      fontSize={{
+                        sm: "17px",
+                        md: "18px",
+                        lg: "20px",
+                        xl: "24px",
+                        "2xl": "24px",
+                      }}
+                      color="#201D37"
+                    >
+                      Download Programme Brochure
+                    </Text>
                   </Link>
                 </Box>
               </Flex>

@@ -108,7 +108,7 @@ const SearchResult = () => {
               placeholder="Search"
               h="67px"
               _placeholder={{
-                fontFamily: "Manrope, sans-serif",
+                fontFamily: "Manrope",
                 color: "#021D37",
                 fontSize: "18px",
                 lineHeight: "25px",

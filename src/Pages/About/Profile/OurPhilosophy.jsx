@@ -32,7 +32,7 @@ const OurPhilosophy = () => {
     arrows: false,
     fade: false,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     speed: 1500,
     autoplaySpeed: 2000,
     slidesToShow: 1,
@@ -155,7 +155,15 @@ const OurPhilosophy = () => {
               : card.text;
 
             return (
-              <Box key={index} bg="#021D37" p="15px 30px" h="350px" mt="20px">
+              <Box
+                key={index}
+                bg="#021D37"
+                p="35px 30px"
+                h="370px"
+                mt="20px"
+                maxW="100%"
+                mr="20px"
+              >
                 <Heading
                   fontFamily="Visual Hollow Script"
                   color="#FFF"

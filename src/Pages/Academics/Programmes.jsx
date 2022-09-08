@@ -20,7 +20,8 @@ const Programmes = () => {
       programmeTitle: "Higher National Diploma (HND) in Hospitality Management",
       background: "#FFF",
       linkContent: "HND IN HOSPITALITY MANAGEMENT",
-      programmeDuration: "FULLTIME  |  2YEARS",
+      programmeDurationTime: "FULLTIME",
+      programmeDurationYear: "2YEARS",
       imageSrc: studyProgrammes1,
       current: false,
       captionHeading: "ACQUIRE AN HND IN HOSPITALITY MANAGEMENT",
@@ -38,7 +39,8 @@ const Programmes = () => {
       programmeTitle: "National Diploma (ND) in Hospitality Management",
       background: "#EBEDEF",
       linkContent: "SHORT COURSES",
-      programmeDuration: "FULLTIME  |  2YEARS",
+      programmeDurationTime: "FULLTIME",
+      programmeDurationYear: "2YEARS",
       imageSrc: studyProgrammes4,
       current: false,
       captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
@@ -56,7 +58,8 @@ const Programmes = () => {
       programmeTitle: "Certificate Course In Hospitality Operations",
       background: "#FFF",
       linkContent: "CERTIFICATE COURSE IN HOSPITALITY OPERATIONS",
-      programmeDuration: "FULLTIME  |  2YEARS",
+      trainingDurationTime: "FULLTIME",
+      programmeDurationYear: "2YEARS",
       imageSrc: studyProgrammes3,
       current: true,
       captionHeading: "SPEND A GAP YEAR IN HOSPITALITY TRAINING",
@@ -274,30 +277,32 @@ const Programmes = () => {
                     "2xl": "none",
                   }}
                 >
-                  <Heading
-                    fontFamily="Manrope"
-                    fontWeight="700"
-                    fontSize={{
-                      sm: "20px",
-                      md: "20px",
-                      lg: "20px",
-                    }}
-                    my="20px"
-                    display={{
-                      sm: "block",
-                      md: "block",
-                      lg: "block",
-                      xl: "none",
-                      "2xl": "none",
-                    }}
-                  >
-                    {programme.programmeDuration}
-                  </Heading>
+                  <Flex alignItems="center">
+                    <Heading
+                      fontFamily="Manrope"
+                      fontWeight="700"
+                      fontSize="20px"
+                      my="20px"
+                    >
+                      {programme.programmeDurationTime}
+                    </Heading>
+
+                    <Box bg="#021D37" w="2px" h="20px" m="auto 8px"></Box>
+
+                    <Heading
+                      fontFamily="Manrope"
+                      fontWeight="700"
+                      fontSize="20px"
+                      my="20px"
+                    >
+                      {programme.programmeDurationYear}
+                    </Heading>
+                  </Flex>
 
                   <Text
                     fontFamily="Manrope"
                     fontWeight="400"
-                    fontSize="20px"
+                    fontSize="18px"
                     lineHeight="33px"
                   >
                     {programme.responsiveDesc}
@@ -305,18 +310,23 @@ const Programmes = () => {
 
                   <Button
                     href="/admission/applyOnline"
+                    w="142px"
+                    height="46.89px"
                     bg="#021D37"
-                    display="block"
-                    color="#FFF"
+                    border="none"
+                    color="#fff"
+                    fontWeight="700"
+                    fontSize="16px"
+                    lineHeight="22px"
+                    textAlign="center"
                     borderRadius="3px"
                     mt="30px"
-                    w="208px"
-                    h="52px"
                     _hover={{
                       bg: "#020E1B",
+                      transition: "all ease 0.4s",
                     }}
                   >
-                    Apply Now
+                    APPLY NOW
                   </Button>
                 </Box>
               </Flex>

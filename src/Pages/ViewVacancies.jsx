@@ -134,7 +134,13 @@ const ViewVacancies = () => {
           <Text
             fontFamily="Manrope"
             fontWeight="400"
-            fontSize="24px"
+            fontSize={{
+              sm: "18px",
+              md: "18px",
+              lg: "22px",
+              xl: "22px",
+              "2xl": "22px",
+            }}
             lineHeight="33px"
             color="#021D37"
             my="24px"
@@ -166,7 +172,7 @@ const ViewVacancies = () => {
                 mb="10px"
                 bg="#EBEDEF"
                 _placeholder={{
-                  fontFamily: "Manrope, sans-serif",
+                  fontFamily: "Manrope",
                   color: "#021D37",
                   fontSize: "18px",
                   lineHeight: "25px",
@@ -178,20 +184,25 @@ const ViewVacancies = () => {
         </Box>
 
         <Button
-          fontFamily="Manrope"
-          fontSize="16px"
-          fontWeight="700"
-          m="20px 0"
-          borderRadius="3px"
+          type="submit"
+          w="142px"
+          height="46.89px"
           bg="#021D37"
-          py="7px"
+          border="none"
+          color="#fff"
+          fontWeight="700"
+          fontSize="16px"
+          lineHeight="22px"
           textAlign="center"
-          color="#FFF"
+          borderRadius="3px"
+          mt="8px"
+          mb="70px"
           _hover={{
             bg: "#020E1B",
+            transition: "all ease 0.4s",
           }}
         >
-          Apply
+          APPLY
         </Button>
       </Box>
 

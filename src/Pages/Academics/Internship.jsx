@@ -133,7 +133,13 @@ const Internship = () => {
           <Text
             fontFamily="Manrope"
             fontWeight="400"
-            fontSize="24px"
+            fontSize={{
+              sm: "18px",
+              md: "24px",
+              lg: "24px",
+              xl: "24px",
+              "2xl": "24px",
+            }}
             lineHeight="33px"
             color="#021D37"
             my="24px"
@@ -214,26 +220,39 @@ const Internship = () => {
           })}
         </Select>
 
-        <Box>
-          <Button
-            fontFamily="Manrope"
-            fontSize="16px"
-            fontWeight="700"
-            m="20px 0"
-            borderRadius="3px"
-            bg="#021D37"
-            py="7px"
-            textAlign="center"
-            color="#FFF"
-            _hover={{
-              bg: "#020E1B",
-            }}
-          >
-            PRE-REGISTER
-          </Button>
-        </Box>
+        <Button
+          w="142px"
+          height="46.89px"
+          bg="#021D37"
+          border="none"
+          color="#fff"
+          fontFamily="Manrope"
+          fontWeight="700"
+          fontSize="16px"
+          lineHeight="22px"
+          textAlign="center"
+          borderRadius="3px"
+          mt="8px"
+          _hover={{
+            bg: "#020E1B",
+            transition: "all ease 0.4s",
+          }}
+        >
+          PRE-REGISTER
+        </Button>
 
-        <Text fontFamily="Manrope" fontSize="24px" fontWeight="400" my="45px">
+        <Text
+          fontFamily="Manrope"
+          fontSize={{
+            sm: "18px",
+            md: "24px",
+            lg: "24px",
+            xl: "24px",
+            "2xl": "24px",
+          }}
+          fontWeight="400"
+          my="45px"
+        >
           NB: After payment, a google link would be sent to your mail to
           complete the registration
         </Text>

@@ -56,7 +56,6 @@ const ViewJobVacancies = () => {
       <Box
         h="441px"
         w="100%"
-        gridGap="68px"
         position="relative"
         display={{
           sm: "block",
@@ -83,7 +82,7 @@ const ViewJobVacancies = () => {
             textAlign="center"
             mt="250px"
           >
-            VIEW JOB VACANCIES
+            VIEW JOB <br /> VACANCIES
           </Text>
         </Box>
       </Box>
@@ -129,7 +128,7 @@ const ViewJobVacancies = () => {
             xl: "1fr 1fr",
             "2xl": "1fr 1fr",
           }}
-          mt="30px"
+          // mt="30px"
           mx={{
             sm: "0px",
             md: "0px",
@@ -139,7 +138,13 @@ const ViewJobVacancies = () => {
           }}
           alignItems="center"
           justifyContent="center"
-          gridGap="30px"
+          gridGap={{
+            sm: "0px",
+            md: "0px",
+            lg: "30px",
+            xl: "30px",
+            "2xl": "30px",
+          }}
         >
           {jobVacancies.map((vacancy, index) => {
             return (
@@ -149,7 +154,7 @@ const ViewJobVacancies = () => {
                 bg={{
                   sm: vacancy.bg,
                   md: vacancy.bg,
-                  lg: vacancy.bg,
+                  lg: "#EBEDEF",
                   xl: "#EBEDEF",
                   "2xl": "#EBEDEF",
                 }}
@@ -175,10 +180,8 @@ const ViewJobVacancies = () => {
                 </Box>
 
                 <Button
-                  fontFamily="Manrope"
-                  fontSize="24px"
-                  fontWeight="700"
-                  borderRadius="3px"
+                  w="142px"
+                  height="46.89px"
                   bg={{
                     sm: "transparent",
                     md: "transparent",
@@ -187,8 +190,6 @@ const ViewJobVacancies = () => {
                     "2xl": "#021D37",
                   }}
                   border="3px solid #021D37"
-                  py="10px"
-                  textAlign="center"
                   color={{
                     sm: "#021D37",
                     md: "#021D37",
@@ -196,9 +197,16 @@ const ViewJobVacancies = () => {
                     xl: "#FFF",
                     "2xl": "#FFF",
                   }}
+                  fontWeight="700"
+                  fontSize="18px"
+                  lineHeight="22px"
+                  textAlign="center"
+                  borderRadius="5px"
+                  mt="20px"
                   onClick={ViewVacancies}
                   _hover={{
                     bg: "#020E1B",
+                    transition: "all ease 0.4s",
                   }}
                 >
                   APPLY

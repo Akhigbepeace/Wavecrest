@@ -157,9 +157,9 @@ const Blog = () => {
         <Flex flexDirection="column" alignItems="center">
           <Flex
             p={{
-              sm: "80px 0px",
-              md: "80px 0px",
-              lg: "80px 0",
+              sm: "0px",
+              md: "0px",
+              lg: "0",
               xl: "80px 50px",
               "2xl": "80px 50px",
             }}
@@ -185,7 +185,7 @@ const Blog = () => {
                   h="67px"
                   mb="60px"
                   _placeholder={{
-                    fontFamily: "Manrope, sans-serif",
+                    fontFamily: "Manrope",
                     color: "#021D37",
                     fontSize: "18px",
                     lineHeight: "25px",
@@ -294,7 +294,7 @@ const Blog = () => {
                               lineHeight="16px"
                               textAlign="center"
                               color="rgba(2, 29, 55, 0.5)"
-                              mt="5px"
+                              mb="15px"
                             >
                               {topPost.postDate}
                             </Text>
@@ -307,84 +307,167 @@ const Blog = () => {
               </Box>
             </Box>
 
-            <Grid
-              gridTemplateColumns={{
-                sm: "auto",
-                md: "1fr 1fr",
-                lg: "1fr 1fr",
-                xl: "1fr 1fr",
-                "2xl": "1fr 1fr",
-              }}
-              w="100%"
-              cursor="pointer"
-            >
-              {posts.map((post, index) => {
-                return (
-                  <Box
-                    key={index}
-                    bg={{
-                      sm: post.bg,
-                      md: post.bg,
-                      lg: post.bg,
-                      xl: "none",
-                      "2xl": "none",
-                    }}
-                    w="100%"
-                    p={{
-                      sm: "20px",
-                      md: "30px",
-                      lg: "40px",
-                      xl: "none",
-                      "2xl": "none",
-                    }}
-                    transition="all ease 0.5s"
-                    onClick={(e) => ShowPosts(e)}
-                    _hover={{
-                      bg: "#FFF",
-                      transform: "scale(1.05)",
-                      borderRadius: "10px",
-                      boxShadow: "3px 3px 10px 1px rgba(0,0,0,0.2)",
-                    }}
-                  >
-                    <Image
-                      src={post.postsImg}
-                      borderRadius="3px"
-                      h="279px"
-                      w="100%"
-                      objectFit="cover"
-                      mb={{
-                        sm: "20px",
-                        md: "20px",
-                        lg: "20px",
-                        xl: "0",
-                        "2xl": "0",
-                      }}
-                    />
+            <Box>
+              <InputGroup
+                display={{
+                  sm: "block",
+                  md: "block",
+                  lg: "block",
+                  xl: "none",
+                  "2xl": "none",
+                }}
+                p={{
+                  sm: "20px",
+                  md: "30px",
+                  lg: "40px",
+                  xl: "none",
+                  "2xl": "none",
+                }}
+              >
+                <Input
+                  type="text"
+                  variant="filled"
+                  placeholder="Search"
+                  w={{
+                    sm: "100%",
+                    md: "40%",
+                    lg: "40%",
+                    xl: "none",
+                    "2xl": "none",
+                  }}
+                  h="45px"
+                  bg="#EBEDEF"
+                  _placeholder={{
+                    fontFamily: "Manrope",
+                    color: "#021D37",
+                    fontSize: "18px",
+                    lineHeight: "25px",
+                    fontWeight: "400",
+                  }}
+                />
 
-                    <Text
-                      mt="8px"
-                      color="rgba(2, 29, 55, 0.44)"
-                      fontFamily="Manrope"
-                      fontWeight="400"
-                      fontSize="18px"
-                      lineHeight="25px"
-                      display={{
-                        sm: "none",
-                        md: "none",
-                        lg: "none",
-                        xl: "block",
-                        "2xl": "block",
+                <InputRightElement
+                  bg="#021D37"
+                  borderRadius="3px"
+                  mt="20px"
+                  mr="20px"
+                  h="45px"
+                  children={<Image src={searchImg} w="20px" h="20px" />}
+                />
+              </InputGroup>
+
+              <Grid
+                gridTemplateColumns={{
+                  sm: "auto",
+                  md: "1fr 1fr",
+                  lg: "1fr 1fr",
+                  xl: "1fr 1fr",
+                  "2xl": "1fr 1fr",
+                }}
+                w="100%"
+                cursor="pointer"
+              >
+                {posts.map((post, index) => {
+                  return (
+                    <Box
+                      key={index}
+                      bg={{
+                        sm: post.bg,
+                        md: post.bg,
+                        lg: post.bg,
+                        xl: "none",
+                        "2xl": "none",
+                      }}
+                      w="100%"
+                      p={{
+                        sm: "20px",
+                        md: "30px",
+                        lg: "40px",
+                        xl: "none",
+                        "2xl": "none",
+                      }}
+                      transition="all ease 0.5s"
+                      onClick={(e) => ShowPosts(e)}
+                      _hover={{
+                        bg: "#FFF",
+                        transform: "scale(1.05)",
+                        borderRadius: "10px",
+                        boxShadow: "3px 3px 10px 1px rgba(0,0,0,0.2)",
                       }}
                     >
-                      {post.postsDate}
-                    </Text>
+                      <Image
+                        src={post.postsImg}
+                        borderRadius="3px"
+                        h="279px"
+                        w="100%"
+                        objectFit="cover"
+                        mb={{
+                          sm: "20px",
+                          md: "20px",
+                          lg: "20px",
+                          xl: "0",
+                          "2xl": "0",
+                        }}
+                      />
 
-                    <Box>
-                      <Box
-                        w="88px"
-                        h="3px"
-                        bg="#021D37"
-                        mb="10px"
+                      <Text
+                        mt="8px"
+                        color="rgba(2, 29, 55, 0.44)"
+                        fontFamily="Manrope"
+                        fontWeight="400"
+                        fontSize="18px"
+                        lineHeight="25px"
+                        display={{
+                          sm: "none",
+                          md: "none",
+                          lg: "none",
+                          xl: "block",
+                          "2xl": "block",
+                        }}
+                      >
+                        {post.postsDate}
+                      </Text>
+
+                      <Box>
+                        <Box
+                          w="88px"
+                          h="3px"
+                          bg="#021D37"
+                          mb="10px"
+                          display={{
+                            sm: "block",
+                            md: "block",
+                            lg: "block",
+                            xl: "none",
+                            "2xl": "none",
+                          }}
+                        ></Box>
+
+                        <Heading
+                          color="#021d37"
+                          fontFamily="Playfair Display"
+                          fontWeight="700"
+                          fontSize={{
+                            sm: "20px",
+                            md: "22px",
+                            lg: "22px",
+                            xl: "22px",
+                            "2xl": "22px",
+                          }}
+                          lineHeight="30px"
+                        >
+                          {post.postHeading}
+                        </Heading>
+                      </Box>
+
+                      <Text
+                        mt="4px"
+                        mb="20px"
+                        color="rgba(2, 29, 55, 0.44)"
+                        fontFamily="Manrope"
+                        fontWeight="400"
+                        fontSize="18px"
+                        lineHeight="25px"
                         display={{
                           sm: "block",
                           md: "block",
@@ -392,77 +475,53 @@ const Blog = () => {
                           xl: "none",
                           "2xl": "none",
                         }}
-                      ></Box>
-
-                      <Heading
-                        color="#021d37"
-                        fontFamily="Playfair Display"
-                        fontWeight="700"
-                        fontSize="22px"
-                        lineHeight="30px"
                       >
-                        {post.postHeading}
-                      </Heading>
+                        {post.postsDate}
+                      </Text>
+
+                      <Text
+                        mt="10px"
+                        color="#021d37"
+                        fontFamily="Manrope"
+                        fontWeight="400"
+                        fontSize="18px"
+                        lineHeight="25px"
+                      >
+                        {post.postsText}
+                      </Text>
+
+                      <Button
+                        w="142px"
+                        height="46.89px"
+                        border="2px solid #021D37"
+                        bg="transparent"
+                        fontWeight="700"
+                        fontSize="16px"
+                        lineHeight="22px"
+                        textAlign="center"
+                        borderRadius="3px"
+                        mt="25px"
+                        onClick={(e) => ShowPosts(e)}
+                        transition="all ease 0.5s"
+                        display={{
+                          sm: "block",
+                          md: "block",
+                          lg: "block",
+                          xl: "none",
+                          "2xl": "none",
+                        }}
+                        _hover={{
+                          bg: "#020E1B",
+                          transition: "all ease 0.4s",
+                        }}
+                      >
+                        LEARN MORE
+                      </Button>
                     </Box>
-
-                    <Text
-                      mt="8px"
-                      color="rgba(2, 29, 55, 0.44)"
-                      fontFamily="Manrope"
-                      fontWeight="400"
-                      fontSize="18px"
-                      lineHeight="25px"
-                      display={{
-                        sm: "block",
-                        md: "block",
-                        lg: "block",
-                        xl: "none",
-                        "2xl": "none",
-                      }}
-                    >
-                      {post.postsDate}
-                    </Text>
-
-                    <Text
-                      mt="10px"
-                      color="#021d37"
-                      fontFamily="Manrope"
-                      fontWeight="400"
-                      fontSize="18px"
-                      lineHeight="25px"
-                    >
-                      {post.postsText}
-                    </Text>
-
-                    <Button
-                      w="110px"
-                      h="40px"
-                      borderRadius="5px"
-                      border="2px solid #021D37"
-                      bg="transparent"
-                      fontFamily="Marope"
-                      fontWeight="700"
-                      fontSize="16px"
-                      mt="25px"
-                      onClick={(e) => ShowPosts(e)}
-                      transition="all ease 0.5s"
-                      display={{
-                        sm: "block",
-                        md: "block",
-                        lg: "block",
-                        xl: "none",
-                        "2xl": "none",
-                      }}
-                      _hover={{
-                        bg: "#EBEDEF",
-                      }}
-                    >
-                      Learn More
-                    </Button>
-                  </Box>
-                );
-              })}
-            </Grid>
+                  );
+                })}
+              </Grid>
+            </Box>
           </Flex>
 
           <Flex>
@@ -474,6 +533,15 @@ const Blog = () => {
               mr="50px"
             >
               <FaChevronLeft size="35px" />
+              {/* <FaChevronLeft
+                size={{
+                  sm: "20px",
+                  md: "block",
+                  lg: "block",
+                  xl: "35px",
+                  "2xl": "35px",
+                }}
+              /> */}
             </Link>
             <Link bg="#021D37" p="15px" borderRadius="3px" color="#FFF">
               <FaChevronRight size="35px" />

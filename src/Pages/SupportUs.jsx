@@ -128,7 +128,7 @@ const SupportUs = () => {
                 mx="auto"
                 bg="#EBEDEF"
                 _placeholder={{
-                  fontFamily: "Manrope, sans-serif",
+                  fontFamily: "Manrope",
                   color: "#021D37",
                   fontSize: "18px",
                   lineHeight: "25px",
