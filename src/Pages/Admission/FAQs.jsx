@@ -272,21 +272,15 @@ const FAQs = () => {
                           {faq.question}
                         </Box>
                         {isExpanded ? (
-                          <FaChevronCircleDown size="30px" />
-                        ) : (
                           <FaChevronCircleUp size="30px" />
+                        ) : (
+                          <FaChevronCircleDown size="30px" />
                         )}
                       </AccordionButton>
                     </h2>
 
                     <AccordionPanel
-                      p={{
-                        sm: "20px",
-                        md: "20px",
-                        lg: "50px",
-                        xl: "91px",
-                        "2xl": "10px 57px",
-                      }}
+                      p="10px"
                       fontFamily="Manrope"
                       fontSize={{
                         sm: "18px",

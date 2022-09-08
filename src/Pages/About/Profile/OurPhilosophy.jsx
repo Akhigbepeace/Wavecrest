@@ -1,4 +1,4 @@
-import { Box, Text, Heading, Grid } from "@chakra-ui/react";
+import { Box, Text, Heading, useBreakpointValue, Grid } from "@chakra-ui/react";
 import React from "react";
 import Slider from "react-slick";
 
@@ -26,6 +26,11 @@ const OurPhilosophy = () => {
   ];
 
   const [slider, setSlider] = React.useState(null);
+  const slideNo = useBreakpointValue({
+    sm: 1,
+    md: 2,
+    lg: 3,
+  });
 
   const settings = {
     dots: true,
@@ -35,7 +40,7 @@ const OurPhilosophy = () => {
     autoplay: false,
     speed: 1500,
     autoplaySpeed: 2000,
-    slidesToShow: 1,
+    slidesToShow: slideNo,
     slidesToScroll: 1,
   };
 
@@ -159,10 +164,9 @@ const OurPhilosophy = () => {
                 key={index}
                 bg="#021D37"
                 p="35px 30px"
-                h="370px"
+                h="400px"
                 mt="20px"
-                maxW="100%"
-                mr="20px"
+                borderRadius="5px"
               >
                 <Heading
                   fontFamily="Visual Hollow Script"

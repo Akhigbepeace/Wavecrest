@@ -10,6 +10,7 @@ import {
 import React, { Fragment } from "react";
 import aboutus from "assets/Images/aboutus.png";
 import waveimg from "assets/Images/waveimg.png";
+import { NavLink } from "react-router-dom";
 
 const ApplyOnline = () => {
   const images = [
@@ -113,8 +114,9 @@ const ApplyOnline = () => {
                     "2xl": "block",
                   }}
                 >
-                  Hostel <br /> Application
+                  Hostel Application
                 </Heading>
+
                 <Heading
                   fontFamily="Playfair Display"
                   fontSize="24px"
@@ -139,20 +141,7 @@ const ApplyOnline = () => {
               h="323px"
               objectFit="cover"
               borderRadius="5px"
-              ml={{
-                sm: "0",
-                md: "0",
-                lg: "0",
-                xl: "78px",
-                "2xl": "78px",
-              }}
-              mt={{
-                sm: "50px",
-                md: "50px",
-                lg: "50px",
-                xl: "0",
-                "2xl": "0",
-              }}
+              mt="30px"
             />
 
             <Text
@@ -177,6 +166,8 @@ const ApplyOnline = () => {
             </Text>
 
             <Button
+              to="/admission/hostelApplication"
+              as={NavLink}
               w="142px"
               height="46.89px"
               bg="#021D37"

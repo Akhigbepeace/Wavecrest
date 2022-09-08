@@ -10,16 +10,19 @@ import {
 } from "@chakra-ui/react";
 
 import React, { Fragment, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { FaChevronLeft } from "react-icons/fa";
 import emailjs from "emailjs-com";
 import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
+import Navbar from "components/Navbar";
+import Footer from "components/Footer";
+import FooterCopywright from "components/FooterCopywright";
 
-const Internship = () => {
+const HostelApplication = () => {
   const initialValues = {
     user_name: "",
     user_email: "",
     user_number: "",
-    user_address: "",
-    user_class: "",
   };
 
   const [inputField, setInputField] = useState(initialValues);
@@ -41,12 +44,6 @@ const Internship = () => {
       variant: "filled",
     },
     {
-      fieldType: "text",
-      name: "user_address",
-      placeHolder: "Address",
-      variant: "filled",
-    },
-    {
       fieldType: "email",
       placeHolder: "Email",
       name: "user_email",
@@ -58,23 +55,20 @@ const Internship = () => {
       placeHolder: "Phone Number",
       variant: "filled",
     },
-    {
-      fieldType: "text",
-      placeHolder: "Class",
-      name: "user_class",
-      variant: "filled",
-    },
   ];
 
   const programmes = [
     {
-      course: "HND in Hospitality Management",
+      course: "Presidential Suite",
     },
     {
-      course: "ND in Hospitality Management",
+      course: "Royal Hostels",
     },
     {
-      course: "Certificate in Hospitality Operations",
+      course: "Executive Hostels",
+    },
+    {
+      course: "One-man Hostels",
     },
   ];
 
@@ -91,21 +85,18 @@ const Internship = () => {
     setInputField(initialValues);
   };
 
+  const navigate = useNavigate();
+
+  const BackToHostel = (e) => {
+    e.preventDefault();
+
+    navigate("/admission/hostel", { replace: true });
+  };
+
   return (
     <Fragment>
-      <Box
-        h="441px"
-        w="100%"
-        gridGap="68px"
-        position="relative"
-        display={{
-          sm: "block",
-          md: "block",
-          lg: "block",
-          xl: "none",
-          "2xl": "none",
-        }}
-      >
+      <Navbar />
+      <Box h="441px" w="100%" gridGap="68px" position="relative">
         <Image src={studyProgrammes3} h="100%" w="100%" objectFit="cover" />
 
         <Box
@@ -123,7 +114,7 @@ const Internship = () => {
             textAlign="center"
             mt="250px"
           >
-            INTERNSHIP
+            HOSTEL APPLICATION
           </Text>
         </Box>
       </Box>
@@ -137,6 +128,20 @@ const Internship = () => {
           "2xl": "91px",
         }}
       >
+        <Button
+          fontFamily="Manrope"
+          fontSize="18px"
+          py="25px"
+          mt="20px"
+          mb="52px"
+          fontWeight="700"
+          bg="#EEE"
+          onClick={(e) => BackToHostel(e)}
+        >
+          <FaChevronLeft size="20px" />
+          Back To Hostel
+        </Button>
+
         <Box>
           <Box>
             <Box
@@ -165,7 +170,7 @@ const Internship = () => {
               fontSize="32px"
               color="#021D37"
             >
-              Apply for Internship
+              Apply for Hostel
             </Heading>
           </Box>
 
@@ -229,7 +234,7 @@ const Internship = () => {
           </Flex>
 
           <Select
-            placeholder="Programme"
+            placeholder="Hostel Types"
             w={{
               sm: "100%",
               md: "400px",
@@ -280,33 +285,21 @@ const Internship = () => {
             textAlign="center"
             borderRadius="3px"
             mt="8px"
+            mb="100px"
             _hover={{
               bg: "#020E1B",
               transition: "all ease 0.4s",
             }}
           >
-            PRE-REGISTER
+            REGISTER
           </Button>
         </form>
-
-        <Text
-          fontFamily="Manrope"
-          fontSize={{
-            sm: "18px",
-            md: "24px",
-            lg: "24px",
-            xl: "24px",
-            "2xl": "24px",
-          }}
-          fontWeight="400"
-          my="45px"
-        >
-          NB: After payment, a google link would be sent to your mail to
-          complete the registration
-        </Text>
       </Box>
+
+      <Footer />
+      <FooterCopywright />
     </Fragment>
   );
 };
 
-export default Internship;
+export default HostelApplication;

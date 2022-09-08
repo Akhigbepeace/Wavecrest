@@ -9,33 +9,58 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-import React, { Fragment } from "react";
+import React, { Fragment, useRef, useState } from "react";
+import emailjs from "emailjs-com";
 import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
 
 const NYSC = () => {
+  const initialValues = {
+    user_name: "",
+    user_email: "",
+    user_number: "",
+    user_address: "",
+    user_class: "",
+  };
+
+  const [inputField, setInputField] = useState(initialValues);
+
+  const inputValues = (e) => {
+    setInputField({
+      ...inputField,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const form = useRef();
+
   const forms = [
     {
       fieldType: "text",
+      name: "user_name",
       placeHolder: "FullName",
       variant: "filled",
     },
     {
       fieldType: "text",
+      name: "user_address",
       placeHolder: "Address",
       variant: "filled",
     },
     {
       fieldType: "email",
+      name: "user_email",
       placeHolder: "Email",
       variant: "filled",
     },
     {
       fieldType: "number",
+      name: "user_number",
       placeHolder: "Phone Number",
       variant: "filled",
     },
     {
       fieldType: "text",
+      name: "user_class",
       placeHolder: "Class",
       variant: "filled",
     },
@@ -52,6 +77,20 @@ const NYSC = () => {
       course: "Certificate in Hospitality Operations",
     },
   ];
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    const res = await emailjs.sendForm(
+      "service_djq4ick",
+      "template_i27quow",
+      form.current,
+      "JPAG_ZJVlAcuO_5D-"
+    );
+
+    setInputField(initialValues);
+  };
+
   return (
     <Fragment>
       <Box
@@ -155,91 +194,101 @@ const NYSC = () => {
           </Text>
         </Box>
 
-        <Flex flexDirection="column">
-          {forms.map((form, index) => {
-            return (
-              <Input
-                key={index}
-                type={form.fieldType}
-                placeholder={form.placeHolder}
-                variant={form.variant}
-                w={{
-                  sm: "100%",
-                  md: "400px",
-                  lg: "526px",
-                  xl: "526px",
-                  "2xl": "526px",
-                }}
-                h="67px"
-                mb="10px"
-                bg="#EBEDEF"
-                _placeholder={{
-                  fontFamily: "Manrope",
-                  color: "#021D37",
-                  fontSize: "18px",
-                  lineHeight: "25px",
-                  fontWeight: "400",
-                }}
-              />
-            );
-          })}
-        </Flex>
+        <form ref={form} onSubmit={sendEmail}>
+          <Flex flexDirection="column">
+            {forms.map((form, index) => {
+              return (
+                <Input
+                  key={index}
+                  type={form.fieldType}
+                  placeholder={form.placeHolder}
+                  variant={form.variant}
+                  name={form.name}
+                  value={inputField[form.name]}
+                  w={{
+                    sm: "100%",
+                    md: "400px",
+                    lg: "526px",
+                    xl: "526px",
+                    "2xl": "526px",
+                  }}
+                  h="67px"
+                  mb="10px"
+                  onChange={inputValues}
+                  bg="#EBEDEF"
+                  _placeholder={{
+                    fontFamily: "Manrope",
+                    color: "#021D37",
+                    fontSize: "18px",
+                    lineHeight: "25px",
+                    fontWeight: "400",
+                  }}
+                />
+              );
+            })}
+          </Flex>
 
-        <Select
-          placeholder="Programme"
-          w={{
-            sm: "100%",
-            md: "400px",
-            lg: "526px",
-            xl: "526px",
-            "2xl": "526px",
-          }}
-          h="67px"
-          bg="#EBEDEF"
-          textAlign="left"
-          fontFamily="Manrope"
-          border="none"
-          color="#021D37"
-          fontSize="18px"
-          lineHeight="25px"
-          fontWeight="400"
-          mb="10px"
-        >
-          {programmes.map((programme, index) => {
-            return (
-              <option
-                value={programme.course}
-                key={index}
-                borderBottom={
-                  programme.length - 1 === index ? "none" : "1px solid #EBEDEF"
-                }
-              >
-                {programme.course}
-              </option>
-            );
-          })}
-        </Select>
+          <Select
+            placeholder="Programme"
+            w={{
+              sm: "100%",
+              md: "400px",
+              lg: "526px",
+              xl: "526px",
+              "2xl": "526px",
+            }}
+            h="67px"
+            onChange={inputValues}
+            bg="#EBEDEF"
+            textAlign="left"
+            fontFamily="Manrope"
+            border="none"
+            color="#021D37"
+            fontSize="18px"
+            lineHeight="25px"
+            fontWeight="400"
+            mb="10px"
+          >
+            {programmes.map((programme, index) => {
+              return (
+                <option
+                  key={index}
+                  name={programme.name}
+                  value={inputField[programme.course]}
+                  borderBottom={
+                    programme.length - 1 === index
+                      ? "none"
+                      : "1px solid #EBEDEF"
+                  }
+                >
+                  {programme.course}
+                </option>
+              );
+            })}
+          </Select>
 
-        <Button
-          w="142px"
-          height="46.89px"
-          bg="#021D37"
-          border="none"
-          color="#fff"
-          fontFamily="Manrope"
-          fontWeight="700"
-          fontSize="16px"
-          lineHeight="22px"
-          textAlign="center"
-          borderRadius="3px"
-          mt="8px"
-          _hover={{
-            bg: "#020E1B",
-            transition: "all ease 0.4s",
-          }}
-        >
-          PRE-REGISTER
-        </Button>
+          <Button
+            type="submit"
+            w="142px"
+            height="46.89px"
+            bg="#021D37"
+            border="none"
+            color="#fff"
+            fontFamily="Manrope"
+            fontWeight="700"
+            fontSize="16px"
+            lineHeight="22px"
+            textAlign="center"
+            borderRadius="3px"
+            mt="8px"
+            _hover={{
+              bg: "#020E1B",
+              transition: "all ease 0.4s",
+            }}
+          >
+            PRE-REGISTER
+          </Button>
+        </form>
 
         <Text
           fontFamily="Manrope"

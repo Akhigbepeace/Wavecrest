@@ -182,19 +182,23 @@ const Showcase = () => {
             />
 
             <Button
-              w="110px"
-              h="40px"
+              w="142px"
+              height="46.89px"
+              bg="transparent"
               border="2px solid #021D37"
-              fontFamily="Manrope"
-              fontSize="16px"
-              fontWeight="700"
-              textAlign="center"
               color="#021D37"
-              borderRadius="3px"
-              bg="none"
+              fontWeight="700"
+              fontSize="16px"
+              lineHeight="22px"
+              textAlign="center"
+              textTransform="uppercase"
               mt="14px"
               mb="55px"
               onClick={(e) => Redirect(e)}
+              _hover={{
+                bg: "#020E1B",
+                transition: "all ease 0.4s",
+              }}
             >
               Learn More
             </Button>

@@ -1,5 +1,6 @@
 import { Box, Button, Heading, Input, Image, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "emailjs-com";
 import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
 import Navbar from "components/Navbar";
@@ -8,38 +9,75 @@ import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
 
 const ViewVacancies = () => {
+  const initialValues = {
+    user_name: "",
+    user_email: "",
+    user_company: "",
+    user_number: "",
+    user_address: "",
+    user_post: "",
+  };
+
+  const [inputField, setInputField] = useState(initialValues);
+
+  const inputValues = (e) => {
+    setInputField({
+      ...inputField,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const form = useRef();
   const forms = [
     {
       fieldType: "text",
+      name: "user_name",
       placeHolder: "Full Name",
       variant: "filled",
     },
     {
       fieldType: "email",
+      name: "user_email",
       placeHolder: "Email",
       variant: "filled",
     },
     {
       fieldType: "number",
+      name: "user_number",
       placeHolder: "Phone Number",
       variant: "filled",
     },
     {
       fieldType: "text",
+      name: "user_address",
       placeHolder: "Address",
       variant: "filled",
     },
     {
       fieldType: "text",
+      name: "user_company",
       placeHolder: "Company",
       variant: "filled",
     },
     {
       fieldType: "text",
+      name: "user_post",
       placeHolder: "Post",
       variant: "filled",
     },
   ];
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    const res = await emailjs.sendForm(
+      "service_djq4ick",
+      "template_i27quow",
+      form.current,
+      "JPAG_ZJVlAcuO_5D-"
+    );
+
+    setInputField(initialValues);
+  };
 
   const navigate = useNavigate();
 
@@ -152,58 +190,63 @@ const ViewVacancies = () => {
           </Text>
         </Box>
 
-        <Box>
-          {forms.map((form, index) => {
-            return (
-              <Input
-                key={index}
-                type={form.fieldType}
-                placeholder={form.placeHolder}
-                variant={form.variant}
-                display="block"
-                w={{
-                  sm: "100%",
-                  md: "400px",
-                  lg: "526px",
-                  xl: "526px",
-                  "2xl": "526px",
-                }}
-                h="67px"
-                mb="10px"
-                bg="#EBEDEF"
-                _placeholder={{
-                  fontFamily: "Manrope",
-                  color: "#021D37",
-                  fontSize: "18px",
-                  lineHeight: "25px",
-                  fontWeight: "400",
-                }}
-              />
-            );
-          })}
-        </Box>
+        <form ref={form} onSubmit={sendEmail}>
+          <Box>
+            {forms.map((form, index) => {
+              return (
+                <Input
+                  key={index}
+                  type={form.fieldType}
+                  placeholder={form.placeHolder}
+                  variant={form.variant}
+                  display="block"
+                  onChange={inputValues}
+                  name={form.name}
+                  value={inputField[form.name]}
+                  w={{
+                    sm: "100%",
+                    md: "400px",
+                    lg: "526px",
+                    xl: "526px",
+                    "2xl": "526px",
+                  }}
+                  h="67px"
+                  mb="10px"
+                  bg="#EBEDEF"
+                  _placeholder={{
+                    fontFamily: "Manrope",
+                    color: "#021D37",
+                    fontSize: "18px",
+                    lineHeight: "25px",
+                    fontWeight: "400",
+                  }}
+                />
+              );
+            })}
+          </Box>
 
-        <Button
-          type="submit"
-          w="142px"
-          height="46.89px"
-          bg="#021D37"
-          border="none"
-          color="#fff"
-          fontWeight="700"
-          fontSize="16px"
-          lineHeight="22px"
-          textAlign="center"
-          borderRadius="3px"
-          mt="8px"
-          mb="70px"
-          _hover={{
-            bg: "#020E1B",
-            transition: "all ease 0.4s",
-          }}
-        >
-          APPLY
-        </Button>
+          <Button
+            type="submit"
+            w="142px"
+            height="46.89px"
+            bg="#021D37"
+            border="none"
+            color="#fff"
+            fontWeight="700"
+            fontSize="16px"
+            lineHeight="22px"
+            textAlign="center"
+            borderRadius="3px"
+            mt="8px"
+            mb="70px"
+            _hover={{
+              bg: "#020E1B",
+              transition: "all ease 0.4s",
+            }}
+          >
+            APPLY
+          </Button>
+        </form>
       </Box>
 
       <Footer />

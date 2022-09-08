@@ -24,10 +24,11 @@ import FooterCopywright from "components/FooterCopywright";
 
 const Contact = () => {
   const initialValues = {
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+    user_name: "",
+    user_email: "",
+    user_number: "",
+    user_subject: "",
+    user_message: "",
   };
 
   const [inputField, setInputField] = useState(initialValues);
@@ -134,9 +135,8 @@ const Contact = () => {
       "JPAG_ZJVlAcuO_5D-"
     );
 
-    if (res.status === 200 || res.text === "OK") {
-      setInputField(initialValues);
-    }
+
+    setInputField(initialValues);
   };
 
   return (
@@ -182,6 +182,13 @@ const Contact = () => {
             "2xl": "auto auto",
           }}
           gridGap="50px"
+          px={{
+            sm: "0",
+            md: "0",
+            lg: "30px",
+            xl: "91px",
+            "2xl": "91px",
+          }}
         >
           <Flex
             flexDirection="column"
@@ -189,9 +196,9 @@ const Contact = () => {
             px={{
               sm: "20px",
               md: "20px",
-              lg: "30px",
-              xl: "91px",
-              "2xl": "91px",
+              lg: "0px",
+              xl: "0",
+              "2xl": "0",
             }}
           >
             <Box>
@@ -237,6 +244,7 @@ const Contact = () => {
                       variant={field.variant}
                       placeholder={field.placeHolder}
                       name={field.name}
+                      value={inputField[field.name]}
                       h="67px"
                       mt="10px"
                       w={{
@@ -258,8 +266,9 @@ const Contact = () => {
                   type="text"
                   variant="filled"
                   placeholder="Message"
-                  name="message"
+                  name="user_message"
                   onChange={inputValues}
+                  value={inputField.user_message}
                   h="223px"
                   mb="10px"
                   w={{
@@ -288,6 +297,7 @@ const Contact = () => {
                 textAlign="center"
                 borderRadius="3px"
                 mt="10px"
+                onClick={() => setInputField(initialValues)}
                 _hover={{
                   bg: "#020E1B",
                   transition: "all ease 0.4s",
@@ -310,8 +320,8 @@ const Contact = () => {
               sm: "20px",
               md: "20px",
               lg: "30px",
-              xl: "91px",
-              "2xl": "91px",
+              xl: "0",
+              "2xl": "0",
             }}
             mb={{
               sm: "100px",

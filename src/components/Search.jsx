@@ -12,14 +12,13 @@ const Search = () => {
   };
 
   const navigateTo = `/searhResults?searchTerm=${inputField}`;
+  const navigate = useNavigate();
 
   const ShowResult = (e) => {
     e.preventDefault();
 
     navigate(navigateTo, { replace: true });
   };
-
-  const navigate = useNavigate();
 
   return (
     <Flex alignItems="center" w="278px" h="47px">

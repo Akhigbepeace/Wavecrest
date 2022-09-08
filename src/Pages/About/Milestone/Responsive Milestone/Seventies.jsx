@@ -1,6 +1,5 @@
-import { Box, Text, Heading } from "@chakra-ui/react";
+import { Box, Text, Heading, Flex } from "@chakra-ui/react";
 import React from "react";
-import Slider from "react-slick";
 
 const Seventies = () => {
   const seventies = [
@@ -16,19 +15,6 @@ const Seventies = () => {
     },
   ];
 
-  const [slider, setSlider] = React.useState(null);
-
-  const settings = {
-    dots: false,
-    arrows: false,
-    fade: false,
-    infinite: true,
-    autoplay: true,
-    speed: 1500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
   return (
     <Box>
       <Box>
@@ -38,7 +24,7 @@ const Seventies = () => {
         </Heading>
       </Box>
 
-      <Slider {...settings} ref={(slider) => setSlider(slider)} pr="30px">
+      <Flex overflowY="scroll">
         {seventies.map((seventy, index) => {
           const textToShow = Array.isArray(seventy.achievement)
             ? seventy.achievement.map((values, i) => (
@@ -50,12 +36,11 @@ const Seventies = () => {
             <Box
               key={index}
               bg="#021D37"
-              w="211px"
+              minW="250px"
               p="15px 30px"
-              h="330px"
               mt="20px"
               borderRadius="15px"
-              mr="50px"
+              mr="10px"
             >
               <Heading
                 fontFamily="Playfair Display"
@@ -79,7 +64,7 @@ const Seventies = () => {
             </Box>
           );
         })}
-      </Slider>
+      </Flex>
     </Box>
   );
 };

@@ -380,7 +380,6 @@ const Training = () => {
                         xl: "24px",
                         "2xl": "24px",
                       }}
-                      // ml="10px"
                       color="#201D37"
                     >
                       {training.downloadBrochure}

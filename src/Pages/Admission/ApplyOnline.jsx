@@ -9,26 +9,43 @@ import {
   Select,
   Button,
 } from "@chakra-ui/react";
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import visa from "assets/Images/visa.png";
 import waveimg from "assets/Images/waveimg.png";
 import paypal from "assets/Images/paypal.png";
 import mastercard from "assets/Images/mastercard.png";
 
 const ApplyOnline = () => {
+  const initialValues = {
+    user_name: "",
+    user_email: "",
+    user_number: "",
+  };
+
+  const [inputField, setInputField] = useState(initialValues);
+
+  const inputValues = (e) => {
+    setInputField({
+      ...inputField,
+      [e.target.name]: e.target.value,
+    });
+  };
   const forms = [
     {
       fieldType: "name",
+      name: "user_name",
       placeHolder: "FullName",
       variant: "filled",
     },
     {
       fieldType: "number",
+      name: "user_number",
       placeHolder: "Phone Number",
       variant: "filled",
     },
     {
       fieldType: "email",
+      name: "user_email",
       placeHolder: "Email",
       variant: "filled",
     },
@@ -158,6 +175,9 @@ const ApplyOnline = () => {
                 type={form.fieldType}
                 placeholder={form.placeHolder}
                 variant={form.variant}
+                name={form.name}
+                value={inputField[form.name]}
+                onChange={inputValues}
                 w={{
                   sm: "100%",
                   md: "400px",

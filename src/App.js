@@ -18,6 +18,7 @@ import BlogPost from "Pages/BlogPost";
 import SupportUs from "Pages/SupportUs";
 import ViewVacancies from "Pages/ViewVacancies";
 import Downloads from "Pages/Downloads";
+import HostelApplication from "Pages/HostelApplication";
 import HNDProgrammeDesc from "Pages/HNDProgrammeDesc";
 import NDProgrammeDesc from "Pages/NDProgrammeDesc";
 import CertificateCoursesDesc from "Pages/CertificateCoursesDesc";
@@ -59,6 +60,11 @@ function App() {
             <Route exact path="/about/:id" element={<About />} />
             <Route exact path="/admission/:id" element={<Admission />} />
             <Route exact path="/academics/:id" element={<Academics />} />
+            <Route
+              exact
+              path="/admission/hostelApplication"
+              element={<HostelApplication />}
+            />
             <Route exact path="/blog" element={<Blog />} />
             <Route exact path="/alumni" element={<Alumni />} />
             <Route exact path="/career/:id" element={<Career />} />

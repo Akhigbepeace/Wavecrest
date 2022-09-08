@@ -7,7 +7,6 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import React from "react";
-// import Slider from "react-slick";
 
 const TwentyTens = () => {
   const twentyTens = [
@@ -58,18 +57,6 @@ const TwentyTens = () => {
       ],
     },
   ];
-  // const [slider, setSlider] = React.useState(null);
-
-  // const settings = {
-  //   dots: false,
-  //   arrows: false,
-  //   fade: false,
-  //   infinite: true,
-  //   autoplay: false,
-  //   speed: 1500,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  // };
 
   return (
     <Box mt="55px">
@@ -81,22 +68,21 @@ const TwentyTens = () => {
       </Box>
 
       <Flex overflowY="scroll">
-        {twentyTens.map((seventy, index) => {
-          const textToShow = Array.isArray(seventy.achievement)
-            ? seventy.achievement.map((values, i) => (
+        {twentyTens.map((twentyTen, index) => {
+          const textToShow = Array.isArray(twentyTen.achievement)
+            ? twentyTen.achievement.map((values, i) => (
                 <UnorderedList key={i}>
                   <ListItem>{values}</ListItem>
                 </UnorderedList>
               ))
-            : seventy.achievement;
+            : twentyTen.achievement;
 
           return (
             <Box
               key={index}
               bg="#021D37"
-              w="300px"
+              minW="250px"
               p="15px 30px"
-              h="100%"
               mt="20px"
               borderRadius="15px"
               mr="10px"
@@ -108,7 +94,7 @@ const TwentyTens = () => {
                 fontWeight="700"
                 mb="20px"
               >
-                {seventy.year}
+                {twentyTen.year}
               </Heading>
 
               <Text

@@ -18,7 +18,7 @@ const Eighties = () => {
     {
       year: "1987",
       achievement:
-        "Student's were presented as external candidates for the WAEC Technical Examinations in Hotel and Catering",
+        "Student's were presented as external candidates for the WAEC Technical Examinations in Hotel and Catering ",
     },
 
     {
@@ -58,11 +58,10 @@ const Eighties = () => {
               key={index}
               bg="#EBEDEF"
               p="15px 30px"
-              // h="350px"
-              w="300px"
+              minW="250px"
               mt="10px"
               borderRadius="15px"
-              mr="20px"
+              mr="10px"
             >
               <Heading
                 fontFamily="Playfair Display"
