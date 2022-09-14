@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, forwardRef } from "react";
 import { FaFileDownload } from "react-icons/fa";
 import JsFileDownloader from "js-file-downloader";
 import cth from "assets/Images/cth.png";
@@ -22,8 +22,9 @@ import {
   ModalBody,
   useDisclosure,
 } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
-const Training = () => {
+const Training = forwardRef((props, ref) => {
   const trainings = [
     {
       background: "#EBEDEF",
@@ -77,6 +78,13 @@ const Training = () => {
   ];
 
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const navigate = useNavigate();
+  const redirect = (e) => {
+    e.preventDefault();
+
+    navigate("/admission/applyOnline", { replace: true });
+  };
   return (
     <Fragment>
       <Box
@@ -114,7 +122,7 @@ const Training = () => {
         </Box>
       </Box>
 
-      <Flex flexDirection="column" mb="70px">
+      <Flex flexDirection="column" mb="70px" ref={ref}>
         {trainings.map((training, index) => {
           return (
             <Box
@@ -231,7 +239,19 @@ const Training = () => {
                     {training.trainingDurationTime}
                   </Heading>
 
-                  <Box bg="#021D37" w="2px" h="20px" m="auto 8px"></Box>
+                  <Box
+                    bg="#021D37"
+                    w="2px"
+                    h="20px"
+                    m="auto 8px"
+                    display={{
+                      sm: "block",
+                      md: "block",
+                      lg: "block",
+                      xl: "none",
+                      "2xl": "none",
+                    }}
+                  ></Box>
 
                   <Heading
                     fontFamily="Manrope"
@@ -334,6 +354,7 @@ const Training = () => {
                   </Flex>
 
                   <Button
+                    display="block"
                     w="142px"
                     height="46.89px"
                     bg="#021D37"
@@ -345,6 +366,7 @@ const Training = () => {
                     textAlign="center"
                     borderRadius="3px"
                     mt="40px"
+                    onClick={(e) => redirect(e)}
                     _hover={{
                       bg: "#020E1B",
                       transition: "all ease 0.4s",
@@ -393,6 +415,6 @@ const Training = () => {
       </Flex>
     </Fragment>
   );
-};
+});
 
 export default Training;

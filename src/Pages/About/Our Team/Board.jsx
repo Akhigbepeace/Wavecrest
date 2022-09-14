@@ -89,7 +89,7 @@ const Board = () => {
       </Box>
 
       <Grid
-        gridTemplateColumns="1fr 1fr"
+        gridTemplateColumns="1fr 1fr 1fr 1fr"
         gridGap="8px"
         mb="100px"
         display={{
@@ -102,56 +102,40 @@ const Board = () => {
       >
         {boards.map((board, index) => {
           return (
-            <Box key={index} mb="-74px">
-              <Box
-                w={{
-                  sm: "250px",
-                  md: "100%",
-                  lg: "100%",
-                  xl: "436px",
-                  "2xl": "436px",
-                }}
-              >
-                <Image
-                  src={board.image}
-                  objectFit="contain"
-                  borderRadius="5px"
-                />
-              </Box>
+            <Box key={index} w="250px" h="250px" mb="-62px">
+              <Image src={board.image} objectFit="contain" borderRadius="5px" />
 
               <Flex
                 alignItems="center"
                 bg="rgba(255, 255, 255, 67%)"
                 p="10px 25px"
                 position="relative"
-                top="-74px"
+                top="-62px"
                 borderRadius="0px 0px 5px 5px"
-                w="100%"
               >
                 <Box
                   bg="#021D37"
-                  w="7px"
+                  w="3px"
+                  my="auto"
                   h="80%"
                   position="absolute"
                   zIndex="1"
                 ></Box>
 
-                <Box ml="20px">
+                <Box ml="10px">
                   <Heading
                     fontFamily="Playfair Display"
-                    fontSize="32px"
+                    fontSize="22px"
                     fontWeight="700"
                     color="#021D37"
-                    lineHeight="27px"
                   >
                     {board.name}
                   </Heading>
                   <Text
                     fontFamily="Manrope"
-                    fontSize="20px"
+                    fontSize="14px"
                     fontWeight="400"
                     color="rgba(2, 29, 55, 0.63);"
-                    lineHeight="27px"
                   >
                     {board.post}
                   </Text>

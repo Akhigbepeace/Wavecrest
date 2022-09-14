@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Logo from "assets/Images/logo_wavecrest.svg";
 import Linked from "assets/Images/linked.png";
 import Whatapps from "assets/Images/whatsapp.png";
@@ -282,8 +282,6 @@ const Navbar = () => {
     },
   ];
 
-  const [activeModalMenu, setActiveModalMenu] = useState(mobileNavLinks);
-  const [showBackButton, setShowBackButton] = useState(false);
   const sideLinks = [
     {
       name: "SUPPORT US",
@@ -308,15 +306,23 @@ const Navbar = () => {
   ];
 
   const ref = React.useRef();
+
+  const [activeModalMenu, setActiveModalMenu] = useState(mobileNavLinks);
+  const [showBackButton, setShowBackButton] = useState(false);
   const [showNestedLinks, setShowNestedLinks] = useBoolean();
   const [currentLink, setCurrentLink] = useState(0);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   useOutsideClick({
     ref: ref,
     handler: () => setShowNestedLinks.off(),
   });
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const navigate = useNavigate();
+
+  const redirect = (e) => {
+    navigate("/home", { replace: true });
+  };
 
   return (
     <Fragment>
@@ -333,9 +339,9 @@ const Navbar = () => {
           "2xl": "flex",
         }}
       >
-        <Link to="/" as={NavLink}>
+        <Box onClick={() => redirect()} cursor="pointer">
           <Image w="238px" h="52px" src={Logo} />
-        </Link>
+        </Box>
 
         <Stack direction="row" alignItems="center">
           <Search />

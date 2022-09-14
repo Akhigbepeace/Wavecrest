@@ -10,8 +10,9 @@ import {
   Button,
   Textarea,
   Link,
+  useToast,
 } from "@chakra-ui/react";
-import React, { useRef, useState } from "react";
+import React, { Fragment, useRef, useState } from "react";
 import Navbar from "components/Navbar";
 import emailjs from "emailjs-com";
 import contactpic from "assets/Images/contact.png";
@@ -30,17 +31,6 @@ const Contact = () => {
     user_subject: "",
     user_message: "",
   };
-
-  const [inputField, setInputField] = useState(initialValues);
-
-  const inputValues = (e) => {
-    setInputField({
-      ...inputField,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const form = useRef();
 
   const contactFields = [
     {
@@ -125,20 +115,54 @@ const Contact = () => {
     },
   ];
 
+  const [inputField, setInputField] = useState(initialValues);
+  const [formErrors, setformErrors] = useState({});
+
+  const inputValues = (e) => {
+    setInputField({
+      ...inputField,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const validate = (values) => {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+    if (!values.user_name) {
+      errors.user_name = "This field is required";
+    }
+    if (!values.user_email) {
+      errors.user_email = "This field is required";
+    }
+    if (!values.user_number) {
+      errors.user_number = "This field is required";
+    }
+    if (!values.user_subject) {
+      errors.user_subject = "This field is required";
+    }
+    if (!values.user_message) {
+      errors.user_message = "This field is required";
+    }
+
+    return errors;
+  };
+
   const sendEmail = async (e) => {
     e.preventDefault();
-
     const res = await emailjs.sendForm(
       "service_djq4ick",
       "template_i27quow",
       form.current,
       "JPAG_ZJVlAcuO_5D-"
     );
-
-
+    setformErrors(validate(inputField));
     setInputField(initialValues);
   };
 
+  const form = useRef();
+
+  const toast = useToast();
   return (
     <Box>
       <Navbar />
@@ -177,15 +201,14 @@ const Contact = () => {
           gridTemplateColumns={{
             sm: "1fr",
             md: "1fr",
-            lg: "auto auto",
+            lg: "1fr",
             xl: "auto auto",
             "2xl": "auto auto",
           }}
-          gridGap="50px"
           px={{
             sm: "0",
             md: "0",
-            lg: "30px",
+            lg: "91px",
             xl: "91px",
             "2xl": "91px",
           }}
@@ -223,6 +246,7 @@ const Contact = () => {
             </Box>
 
             <Text
+              w="80%"
               mb="15px"
               fontFamily="Manrope"
               fontWeight="400"
@@ -238,27 +262,30 @@ const Contact = () => {
               <Stack>
                 {contactFields.map((field, index) => {
                   return (
-                    <Input
-                      key={index}
-                      type={field.fieldType}
-                      variant={field.variant}
-                      placeholder={field.placeHolder}
-                      name={field.name}
-                      value={inputField[field.name]}
-                      h="67px"
-                      mt="10px"
-                      w={{
-                        md: "500px",
-                      }}
-                      onChange={inputValues}
-                      _placeholder={{
-                        fontFamily: "Manrope",
-                        color: "#021D37",
-                        fontSize: "18px",
-                        lineHeight: "25px",
-                        fontWeight: "400",
-                      }}
-                    />
+                    <Fragment>
+                      <Input
+                        isRequired
+                        key={index}
+                        type={field.fieldType}
+                        variant={field.variant}
+                        placeholder={field.placeHolder}
+                        name={field.name}
+                        value={inputField[field.name]}
+                        h="67px"
+                        mt="10px"
+                        w={{
+                          md: "500px",
+                        }}
+                        onChange={inputValues}
+                        _placeholder={{
+                          fontFamily: "Manrope",
+                          color: "#021D37",
+                          fontSize: "18px",
+                          lineHeight: "25px",
+                          fontWeight: "400",
+                        }}
+                      />
+                    </Fragment>
                   );
                 })}
 
@@ -297,7 +324,22 @@ const Contact = () => {
                 textAlign="center"
                 borderRadius="3px"
                 mt="10px"
-                onClick={() => setInputField(initialValues)}
+                mb={{
+                  sm: "100px",
+                  md: "100px",
+                  lg: "0",
+                  xl: "0",
+                  "2xl": "0",
+                }}
+                onClick={() =>
+                  toast({
+                    title: "SUCCESSFUL !",
+                    description: "Your request has been submitted",
+                    status: "success",
+                    duration: 5000,
+                    isClosable: true,
+                  })
+                }
                 _hover={{
                   bg: "#020E1B",
                   transition: "all ease 0.4s",
@@ -319,7 +361,7 @@ const Contact = () => {
             px={{
               sm: "20px",
               md: "20px",
-              lg: "30px",
+              lg: "0",
               xl: "0",
               "2xl": "0",
             }}

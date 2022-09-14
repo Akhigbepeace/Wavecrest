@@ -17,6 +17,7 @@ import {
   AccordionItem,
   AccordionButton,
   AccordionPanel,
+  Link,
 } from "@chakra-ui/react";
 import { FaChevronCircleDown } from "react-icons/fa";
 import { FaChevronCircleUp } from "react-icons/fa";
@@ -195,10 +196,11 @@ const TuitionAndScholarship = () => {
                                 fontFamily="Manrope"
                                 fontWeight="700"
                                 fontSize="24px"
+                                color="#FFF"
                                 ml="12px"
                                 textAlign="center"
                                 borderRight="2px solid #FFF"
-                                bg="#EBEDEF"
+                                bg="#021D37"
                               >
                                 {fee.item}
                               </Th>
@@ -210,8 +212,9 @@ const TuitionAndScholarship = () => {
                                 fontSize="24px"
                                 ml="12px"
                                 borderRight="2px solid #FFF"
+                                color="#FFF"
                                 textAlign="center"
-                                bg="#EBEDEF"
+                                bg="#021D37"
                               >
                                 {fee.year1}
                               </Th>
@@ -222,7 +225,8 @@ const TuitionAndScholarship = () => {
                                   fontFamily="Manrope"
                                   fontWeight="700"
                                   fontSize="24px"
-                                  bg="#EBEDEF"
+                                  color="#FFF"
+                                  bg="#021D37"
                                 >
                                   {fee.year2}
                                 </Th>
@@ -548,7 +552,7 @@ const TuitionAndScholarship = () => {
                     bodies in order to train these young ladies through the
                     Scholarship fund.
                   </Text>
-                  
+
                   <Box>
                     <Heading
                       fontFamily="Manrope"
@@ -624,31 +628,30 @@ const TuitionAndScholarship = () => {
                       fontWeight="700"
                       fontSize="32px"
                       lineHeight="43px"
-                      mb="7px"
+                      mb="20px"
                     >
-                      You can Support the Scholarship Scheme
+                      You can Support the Scholarship Scheme by reaching out to
+                      us:
                     </Heading>
-                    <Box
-                      fontFamily=" Manrope"
-                      fontWeight="400"
-                      fontSize="24px"
-                      lineHeight="33px"
+                    <Link
+                      href="/support"
+                      bg="#021D37"
+                      p="10px"
+                      w="142px"
+                      height="46.89px"
+                      color="#FFF"
+                      borderRadius="5px"
+                      fontFamily="Open Sans"
+                      fontWeight="700"
+                      fontSize="17px"
+                      textAlign="center"
+                      _hover={{
+                        textDecoration: "none",
+                        bg: "#020E1B",
+                      }}
                     >
-                      <Text>
-                        For your Collaboration, kindly complete the Wavecrest
-                        College
-                        <b> Scholarship Fund form </b> stating clearly the
-                        category of your donation.
-                      </Text>
-                      <br />
-                      <Text>
-                        All payments are to the details below <br /> Account
-                        name:
-                        <b> Wavecrest College</b> <br />
-                        Bank Name: <b> Access Bank </b> <br /> Account no:
-                        <b> 001-054-6867 </b>
-                      </Text>
-                    </Box>
+                      SUPPORT US
+                    </Link>
                   </Box>
                 </AccordionPanel>
               </Box>

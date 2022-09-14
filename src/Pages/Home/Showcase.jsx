@@ -15,6 +15,7 @@ import showcase2 from "assets/Images/Showcase2.png";
 import showcase3 from "assets/Images/Showcase3.png";
 import showcase4 from "assets/Images/Showcase4.png";
 import waveVid from "assets/Images/wavevid.mp4";
+import ShowcaseSlider from "components/ShowcaseSlider";
 
 const showcaseGallery = [showcase1, showcase2, showcase3, showcase4];
 
@@ -76,7 +77,9 @@ const Showcase = () => {
               fontSize="35px"
               fontWeight="700"
               lineHeight="43px"
-              w="600px"
+              w={{
+                "2xl": "600px",
+              }}
             >
               NIGERIA'S PREMIERE HOSPITALITY MONOTECHNIC
             </Text>
@@ -111,13 +114,7 @@ const Showcase = () => {
       >
         <Box>
           <Box>
-            <Image
-              src={showcase1}
-              alt="Wavecrest Images"
-              objectFit="cover"
-              w="100%"
-              h="280px"
-            />
+            <ShowcaseSlider />
           </Box>
 
           <Box

@@ -1,4 +1,5 @@
 import { Box, Text, Heading, useBreakpointValue, Grid } from "@chakra-ui/react";
+import styled from "@emotion/styled";
 import React from "react";
 import Slider from "react-slick";
 
@@ -37,7 +38,7 @@ const OurPhilosophy = () => {
     arrows: false,
     fade: false,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     speed: 1500,
     autoplaySpeed: 2000,
     slidesToShow: slideNo,
@@ -141,58 +142,65 @@ const OurPhilosophy = () => {
         })}
       </Grid>
 
-      <Box
-        position={"relative"}
-        width={"full"}
-        overflow={"hidden"}
-        display={{
-          sm: "block",
-          md: "block",
-          lg: "block",
-          xl: "none",
-          "2xl": "none",
-        }}
-      >
-        <Slider {...settings} ref={(slider) => setSlider(slider)} pr="30px">
-          {ourStands.map((card, index) => {
-            const textToShow = Array.isArray(card.text)
-              ? card.text.map((values, i) => <Box key={i}>{values}</Box>)
-              : card.text;
+      <OurPhilosophy.Wrapper>
+        <Box
+          position={"relative"}
+          width={"full"}
+          overflow={"hidden"}
+          display={{
+            sm: "block",
+            md: "block",
+            lg: "block",
+            xl: "none",
+            "2xl": "none",
+          }}
+        >
+          <Slider {...settings} ref={(slider) => setSlider(slider)} pr="30px">
+            {ourStands.map((card, index) => {
+              const textToShow = Array.isArray(card.text)
+                ? card.text.map((values, i) => <Box key={i}>{values}</Box>)
+                : card.text;
 
-            return (
-              <Box
-                key={index}
-                bg="#021D37"
-                p="35px 30px"
-                h="400px"
-                mt="20px"
-                borderRadius="5px"
-              >
-                <Heading
-                  fontFamily="Visual Hollow Script"
-                  color="#FFF"
-                  fontSize="55px"
-                  fontWeight="400"
+              return (
+                <Box
+                  key={index}
+                  bg="#021D37"
+                  p="35px 30px"
+                  h="400px"
+                  mt="20px"
+                  borderRadius="5px"
                 >
-                  {card.heading}
-                </Heading>
+                  <Heading
+                    fontFamily="Visual Hollow Script"
+                    color="#FFF"
+                    fontSize="55px"
+                    fontWeight="400"
+                  >
+                    {card.heading}
+                  </Heading>
 
-                <Text
-                  color="#FFF"
-                  fontFamily="Manrope"
-                  fontSize="18px"
-                  lineHeight="25px"
-                  fontWeight="400"
-                >
-                  {textToShow}
-                </Text>
-              </Box>
-            );
-          })}
-        </Slider>
-      </Box>
+                  <Text
+                    color="#FFF"
+                    fontFamily="Manrope"
+                    fontSize="18px"
+                    lineHeight="25px"
+                    fontWeight="400"
+                  >
+                    {textToShow}
+                  </Text>
+                </Box>
+              );
+            })}
+          </Slider>
+        </Box>
+      </OurPhilosophy.Wrapper>
     </Box>
   );
 };
+OurPhilosophy.Wrapper = styled.div`
+  .slick-slide div {
+    margin-right: 5px;
+  }
+`;
 
 export default OurPhilosophy;

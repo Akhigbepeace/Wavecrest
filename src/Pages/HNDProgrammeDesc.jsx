@@ -24,14 +24,19 @@ const HNDProgrammeDesc = () => {
   const quickLinks = [
     {
       image: aboutgallery4,
-
       text: "National Diploma (ND) in Hospitality Management",
-      linkTo: "/NDProgramme",
+      linkTo: (e) => {
+        e.preventDefault();
+        navigate("/NDProgramme", { replace: true });
+      },
     },
     {
       image: aboutgallery1,
       text: "Certificate Course In Hospitality Operations",
-      linkTo: "/CertificateCourses",
+      linkTo: (e) => {
+        e.preventDefault();
+        navigate("/CertificateCourses", { replace: true });
+      },
     },
   ];
 
@@ -108,7 +113,7 @@ const HNDProgrammeDesc = () => {
           justifyContent="center"
           display={{
             sm: "block",
-            md: "flex",
+            md: "block",
             lg: "flex",
             xl: "flex",
             "2xl": "flex",
@@ -271,6 +276,7 @@ const HNDProgrammeDesc = () => {
           <Flex
             justifyContent="center"
             mt="30px"
+            mb="100px"
             display={{
               sm: "block",
               md: "flex",
@@ -281,13 +287,26 @@ const HNDProgrammeDesc = () => {
           >
             {quickLinks.map((quickLink, index) => {
               return (
-                <Link
+                <Box
                   key={index}
                   href={quickLink.linkTo}
-                  w="294px"
+                  w={{
+                    sm: "100%",
+                    md: "294px",
+                    lg: "294px",
+                    xl: "294px",
+                    "2xl": "294px",
+                  }}
+                  onClick={quickLink.linkTo}
                   h="241px"
                   mr="30px"
-                  mb="100px"
+                  mb={{
+                    sm: "20px",
+                    md: "20px",
+                    lg: "20px",
+                    xl: "0",
+                    "2xl": "0",
+                  }}
                   transition="all ease 0.8s"
                   _hover={{
                     transform: "scale(1.2)",
@@ -321,7 +340,7 @@ const HNDProgrammeDesc = () => {
                       {quickLink.text}
                     </Text>
                   </Flex>
-                </Link>
+                </Box>
               );
             })}
           </Flex>

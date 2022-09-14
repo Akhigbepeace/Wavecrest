@@ -25,12 +25,18 @@ const NDProgrammeDesc = () => {
     {
       image: aboutgallery3,
       text: "Higher National Diploma (HND) in Hospitality Management",
-      linkTo: "/HNDProgramme",
+      linkTo: (e) => {
+        e.preventDefault();
+        navigate("/HNDProgramme", { replace: true });
+      },
     },
     {
       image: aboutgallery4,
       text: "Certificate Course In Hospitality Operations",
-      linkTo: "/CertificateCourses",
+      linkTo: (e) => {
+        e.preventDefault();
+        navigate("/CertificateCourses", { replace: true });
+      },
     },
   ];
 
@@ -106,7 +112,7 @@ const NDProgrammeDesc = () => {
           justifyContent="center"
           display={{
             sm: "block",
-            md: "flex",
+            md: "block",
             lg: "flex",
             xl: "flex",
             "2xl": "flex",
@@ -278,14 +284,28 @@ const NDProgrammeDesc = () => {
               "2xl": "flex",
             }}
           >
-            {quickLinks.map((quickLink) => {
+            {quickLinks.map((quickLink, index) => {
               return (
-                <Link
-                  href={quickLink.linkTo}
-                  w="294px"
+                <Box
+                  key={index}
+                  w={{
+                    sm: "100%",
+                    md: "294px",
+                    lg: "294px",
+                    xl: "294px",
+                    "2xl": "294px",
+                  }}
                   h="241px"
                   mr="30px"
+                  mb={{
+                    sm: "20px",
+                    md: "20px",
+                    lg: "20px",
+                    xl: "0",
+                    "2xl": "0",
+                  }}
                   transition="all ease 0.8s"
+                  onClick={quickLink.linkTo}
                   _hover={{
                     transform: "scale(1.2)",
                   }}
@@ -301,7 +321,7 @@ const NDProgrammeDesc = () => {
                   <Flex
                     bg="linear-gradient(180deg, rgba(2, 29, 55, 0) 0%, rgba(2, 29, 55, 0.7) 100%);"
                     position="relative"
-                    h="81px"
+                    h="100%"
                     top="-241px"
                     borderRadius="3px"
                   >
@@ -318,7 +338,7 @@ const NDProgrammeDesc = () => {
                       {quickLink.text}
                     </Text>
                   </Flex>
-                </Link>
+                </Box>
               );
             })}
           </Flex>

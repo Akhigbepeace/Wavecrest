@@ -6,14 +6,14 @@ import {
   Flex,
   Heading,
   Text,
-  Link,
   Image,
+  Button,
 } from "@chakra-ui/react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Slider from "react-slick";
+import { useNavigate } from "react-router-dom";
 import ourstories from "assets/Images/ourstories.png";
 import styled from "@emotion/styled";
-import indicator from "assets/Images/ourStoryIndicator.png";
 
 const settings = {
   dots: true,
@@ -50,6 +50,14 @@ export default function CaptionCarousel() {
       link: "READ MORE",
     },
   ];
+
+  const navigate = useNavigate();
+
+  const showStory = (e) => {
+    e.preventDefault();
+
+    navigate("/posts", { replace: true });
+  };
 
   return (
     <CaptionCarousel.Wrapper>
@@ -244,8 +252,8 @@ export default function CaptionCarousel() {
                     {card.text}
                   </Text>
 
-                  <Link
-                    href="/blog"
+                  <Button
+                    onClick={(e) => showStory(e)}
                     background="#FFF"
                     w="168px"
                     p="10px 26px"
@@ -277,7 +285,7 @@ export default function CaptionCarousel() {
                     }}
                   >
                     {card.link}
-                  </Link>
+                  </Button>
                 </Flex>
 
                 <Image
@@ -307,8 +315,8 @@ export default function CaptionCarousel() {
                   mx="auto"
                 />
 
-                <Link
-                  href="/blog"
+                <Button
+                  onClick={(e) => showStory(e)}
                   background="#FFF"
                   w="168px"
                   p="10px 26px"
@@ -340,7 +348,7 @@ export default function CaptionCarousel() {
                   }}
                 >
                   {card.link}
-                </Link>
+                </Button>
               </Flex>
             </Box>
           ))}
@@ -354,7 +362,7 @@ CaptionCarousel.Wrapper = styled.div`
   .slick-dots {
     position: static;
     padding-bottom: 40px;
-    background: #021D37
+    background: #021d37;
   }
 
   .slick-dots li {
@@ -362,7 +370,8 @@ CaptionCarousel.Wrapper = styled.div`
   }
 
   .slick-dots li button::before {
-    position:absolute
-    content: ${indicator};
+    position: absolute;
+    color: white;
+    font-size: 15px;
   }
 `;
