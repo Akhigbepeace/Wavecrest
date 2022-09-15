@@ -58,7 +58,7 @@ const Programmes = () => {
       programmeTitle: "Certificate Course In Hospitality Operations",
       background: "#FFF",
       linkContent: "CERTIFICATE COURSE IN HOSPITALITY OPERATIONS",
-      trainingDurationTime: "FULLTIME",
+      programmeDurationTime: "FULLTIME",
       programmeDurationYear: "2YEARS",
       imageSrc: studyProgrammes3,
       current: true,
@@ -176,8 +176,6 @@ const Programmes = () => {
               <Flex
                 flexDirection="column"
                 position="relative"
-                cursor="pointer"
-                onClick={(e) => ApplyNow(e)}
                 m="0 auto"
                 w={{
                   sm: "100%",

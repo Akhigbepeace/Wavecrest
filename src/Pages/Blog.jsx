@@ -31,29 +31,33 @@ const Blog = () => {
         {
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "News & Events / October 28, 2022.",
+          postDate: "News and Events / October 28, 2022.",
+          postsImg: blogPost,
+        },
+        {
+          postHeading:
+            "‘News and Events’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+          postDate: "News and Events / October 8, 2022.",
+          postsImg: blogPost,
         },
         {
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "News & Events / October 8, 2022.",
+          postDate: "News and Events / October 8, 2022.",
+          postsImg: blogPost,
         },
         {
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "News & Events / October 8, 2022.",
-        },
-        {
-          postHeading:
-            "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "News & Events / October 8, 2022.",
+          postDate: "News and Events / October 8, 2022.",
+          postsImg: blogPost,
         },
       ],
       posts: [
         {
           bg: "#FFF",
           postsImg: blogPost,
-          postsDate: "News & Events / October 28, 2022.",
+          postsDate: "News and Events / October 28, 2022.",
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postsText:
@@ -62,7 +66,7 @@ const Blog = () => {
         {
           bg: "#EBEDEF",
           postsImg: blogPost2,
-          postsDate: "Personal stories / October 22, 2022.",
+          postsDate: "News and Events / October 22, 2022.",
           postHeading:
             "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
           postsText:
@@ -71,7 +75,7 @@ const Blog = () => {
         {
           bg: "#FFF",
           postsImg: blogPost,
-          postsDate: "News & Events / October 8, 2022.",
+          postsDate: "News and Events / October 8, 2022.",
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postsText:
@@ -80,7 +84,7 @@ const Blog = () => {
         {
           bg: "#EBEDEF",
           postsImg: blogPost2,
-          postsDate: "Personal stories / October 22, 2022.",
+          postsDate: "News and Events / October 22, 2022.",
           postHeading:
             "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
           postsText:
@@ -90,34 +94,38 @@ const Blog = () => {
     },
 
     {
-      category: "Tips & Categories",
+      category: "Tips and Categories",
       topPosts: [
         {
+          postsImg: blogPost,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Tips & Categories / October 8, 2022.",
+          postDate: "Tips and Categories / October 8, 2022.",
         },
         {
+          postsImg: blogPost2,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Tips & Categories / October 8, 2022.",
+          postDate: "Tips and Categories / October 8, 2022.",
         },
         {
+          postsImg: blogPost,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Tips & Categories / October 8, 2022.",
+          postDate: "Tips and Categories / October 8, 2022.",
         },
         {
+          postsImg: blogPost2,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Tips & Categories / October 8, 2022.",
+          postDate: "Tips and Categories / October 8, 2022.",
         },
       ],
       posts: [
         {
           bg: "#FFF",
           postsImg: blogPost,
-          postsDate: "News & Events / October 8, 2022.",
+          postsDate: "Tips and Categories / October 8, 2022.",
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postsText:
@@ -126,7 +134,7 @@ const Blog = () => {
         {
           bg: "#EBEDEF",
           postsImg: blogPost2,
-          postsDate: "Personal stories / October 22, 2022.",
+          postsDate: "Tips and Categories / October 22, 2022.",
           postHeading:
             "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
           postsText:
@@ -135,7 +143,7 @@ const Blog = () => {
         {
           bg: "#FFF",
           postsImg: blogPost,
-          postsDate: "News & Events / October 8, 2022.",
+          postsDate: "Tips and Categories / October 8, 2022.",
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postsText:
@@ -144,7 +152,7 @@ const Blog = () => {
         {
           bg: "#EBEDEF",
           postsImg: blogPost2,
-          postsDate: "Personal stories / October 22, 2022.",
+          postsDate: "Tips and Categories / October 22, 2022.",
           postHeading:
             "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
           postsText:
@@ -154,25 +162,28 @@ const Blog = () => {
     },
 
     {
-      category: "Recepies",
-
+      category: "Receipes",
       topPosts: [
         {
+          postsImg: blogPost,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postDate: "Recepies / October 8, 2022.",
         },
         {
+          postsImg: blogPost2,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postDate: "Recepies / October 8, 2022.",
         },
         {
+          postsImg: blogPost,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postDate: "Recepies / October 8, 2022.",
         },
         {
+          postsImg: blogPost2,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postDate: "Recepies / October 8, 2022.",
@@ -183,7 +194,7 @@ const Blog = () => {
         {
           bg: "#FFF",
           postsImg: blogPost,
-          postsDate: "News & Events / October 8, 2022.",
+          postsDate: "Recepies / October 8, 2022.",
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postsText:
@@ -192,7 +203,7 @@ const Blog = () => {
         {
           bg: "#EBEDEF",
           postsImg: blogPost2,
-          postsDate: "Personal stories / October 22, 2022.",
+          postsDate: "Recepies / October 22, 2022.",
           postHeading:
             "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
           postsText:
@@ -201,7 +212,7 @@ const Blog = () => {
         {
           bg: "#FFF",
           postsImg: blogPost,
-          postsDate: "News & Events / October 8, 2022.",
+          postsDate: "Recepies / October 8, 2022.",
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postsText:
@@ -210,7 +221,7 @@ const Blog = () => {
         {
           bg: "#EBEDEF",
           postsImg: blogPost2,
-          postsDate: "Personal stories / October 22, 2022.",
+          postsDate: "Recepies / October 22, 2022.",
           postHeading:
             "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
           postsText:
@@ -221,24 +232,27 @@ const Blog = () => {
 
     {
       category: "Personal Categories",
-
       topPosts: [
         {
+          postsImg: blogPost,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postDate: "Personal Categories / October 8, 2022.",
         },
         {
+          postsImg: blogPost2,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postDate: "Personal Categories / October 8, 2022.",
         },
         {
+          postsImg: blogPost2,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postDate: "Personal Categories / October 8, 2022.",
         },
         {
+          postsImg: blogPost,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postDate: "Personal Categories / October 8, 2022.",
@@ -249,7 +263,7 @@ const Blog = () => {
         {
           bg: "#FFF",
           postsImg: blogPost,
-          postsDate: "News & Events / October 8, 2022.",
+          postsDate: "Personal Categories / October 8, 2022.",
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postsText:
@@ -258,7 +272,7 @@ const Blog = () => {
         {
           bg: "#EBEDEF",
           postsImg: blogPost2,
-          postsDate: "Personal stories / October 22, 2022.",
+          postsDate: "Personal Categories / October 22, 2022.",
           postHeading:
             "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
           postsText:
@@ -267,7 +281,7 @@ const Blog = () => {
         {
           bg: "#FFF",
           postsImg: blogPost,
-          postsDate: "News & Events / October 8, 2022.",
+          postsDate: "Personal Categories / October 8, 2022.",
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postsText:
@@ -276,7 +290,7 @@ const Blog = () => {
         {
           bg: "#EBEDEF",
           postsImg: blogPost2,
-          postsDate: "Personal stories / October 22, 2022.",
+          postsDate: "Personal Categories / October 22, 2022.",
           postHeading:
             "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
           postsText:
@@ -286,34 +300,38 @@ const Blog = () => {
     },
 
     {
-      category: "Admission & Scholarship",
+      category: "Admission and Scholarship",
       topPosts: [
         {
+          postsImg: blogPost,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Admission & Scholarship / October 8, 2022.",
+          postDate: "Admission and Scholarship / October 8, 2022.",
         },
         {
+          postsImg: blogPost2,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Admission & Scholarship / October 8, 2022.",
+          postDate: "Admission and Scholarship / October 8, 2022.",
         },
         {
+          postsImg: blogPost,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Admission & Scholarship / October 8, 2022.",
+          postDate: "Admission and Scholarship / October 8, 2022.",
         },
         {
+          postsImg: blogPost2,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Admission & Scholarship / October 8, 2022.",
+          postDate: "Admission and Scholarship / October 8, 2022.",
         },
       ],
       posts: [
         {
           bg: "#FFF",
           postsImg: blogPost,
-          postsDate: "News & Events / October 8, 2022.",
+          postsDate: "Admission and Scholarship/ October 8, 2022.",
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postsText:
@@ -322,7 +340,7 @@ const Blog = () => {
         {
           bg: "#EBEDEF",
           postsImg: blogPost2,
-          postsDate: "Personal stories / October 22, 2022.",
+          postsDate: "Admission and Scholarship/ October 22, 2022.",
           postHeading:
             "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
           postsText:
@@ -331,7 +349,7 @@ const Blog = () => {
         {
           bg: "#FFF",
           postsImg: blogPost,
-          postsDate: "News & Events / October 8, 2022.",
+          postsDate: "Admission and Scholarship/ October 8, 2022.",
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postsText:
@@ -340,7 +358,7 @@ const Blog = () => {
         {
           bg: "#EBEDEF",
           postsImg: blogPost2,
-          postsDate: "Personal stories / October 22, 2022.",
+          postsDate: "Admission and Scholarship/ October 22, 2022.",
           postHeading:
             "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
           postsText:
@@ -350,16 +368,32 @@ const Blog = () => {
     },
   ];
 
+  const categoryMap = {};
+  const categories = [];
+  blogs.forEach((bl) => {
+    categories.push(bl.category);
+    categoryMap[bl.category] = bl;
+  });
+
   const [showCategories, setShowCategories] = useState(false);
 
-  const [currentPost, setCurrentPost] = useState(blogs[0]);
+  const [currentBlog, setCurrentBlog] = useState(categoryMap[categories[0]]);
+  const [mobileBlog, setMobileBlog] = useState(blogs);
 
   const navigate = useNavigate();
 
-  const ShowPosts = (e) => {
-    e.preventDefault();
+  const ShowPosts = (post) => {
+    navigate(
+      `/posts?image=${post.postsImg}&date=${post.postsDate}&headline=${post.postHeading}&texts=${post.postsText}`,
+      { replace: true }
+    );
+  };
 
-    navigate("/posts", { replace: true });
+  const topPosts = (topPost) => {
+    navigate(
+      `/posts?image=${topPost.postsImg}&date=${topPost.postDate}&headline=${topPost.postHeading}&texts=${topPost.postText}`,
+      { replace: true }
+    );
   };
 
   return (
@@ -451,35 +485,36 @@ const Blog = () => {
                 </Heading>
 
                 <Box mt="25px">
-                  {blogs.map((categories, index) => {
+                  {categories.map((category, index) => {
                     return (
-                      <Fragment>
-                        <Link
-                          key={index}
-                          display="flex"
-                          flexDirection="column"
-                          fontFamily="Manrope"
-                          fontWeight="400"
-                          fontSize="18px"
-                          borderRadius="3px"
-                          bg="#EBEDEF"
-                          p="25px 20px"
-                          w="100%"
-                          lineHeight="24px"
-                          onClick={() => setCurrentPost(currentPost)}
-                          borderBottom={
-                            categories.length - 1 === index
-                              ? "none"
-                              : "1px solid rgba(2, 29, 55, 0.25)"
-                          }
-                          _hover={{
-                            textDecoration: "none",
-                            bg: "rgba(2, 29, 55, 0.25)",
-                          }}
-                        >
-                          <Text>{categories.category}</Text>
-                        </Link>
-                      </Fragment>
+                      <Box
+                        key={index}
+                        display="flex"
+                        flexDirection="column"
+                        fontFamily="Manrope"
+                        fontWeight="400"
+                        fontSize="18px"
+                        borderRadius="3px"
+                        bg="#EBEDEF"
+                        p="25px 20px"
+                        w="100%"
+                        cursor="pointer"
+                        lineHeight="24px"
+                        onClick={() => {
+                          setCurrentBlog(categoryMap[category]);
+                        }}
+                        borderBottom={
+                          categories.length - 1 === index
+                            ? "none"
+                            : "1px solid rgba(2, 29, 55, 0.25)"
+                        }
+                        _hover={{
+                          textDecoration: "none",
+                          bg: "rgba(2, 29, 55, 0.25)",
+                        }}
+                      >
+                        <Text>{category}</Text>
+                      </Box>
                     );
                   })}
                 </Box>
@@ -497,54 +532,59 @@ const Blog = () => {
                 </Heading>
 
                 <Box>
-                  {blogs.map((blogTopPost, index) => {
+                  {currentBlog.topPosts.map((topPost, index) => {
                     return (
-                      <Box key={index}>
-                        {blogTopPost.topPosts.map((topPost, index) => {
-                          return (
-                            <Flex
-                              key={index}
-                              bg="#EBEDEF"
-                              p="25px 35px"
-                              borderBottom="1px solid rgba(2, 29, 55, 0.25)"
-                            >
-                              <Text
-                                color="#021D37"
-                                fontFamily="Playfair Display"
-                                fontWeight="600"
-                                fontSize="40px"
-                                mt="-15px"
-                              >
-                                {index + 1}
-                              </Text>
+                      <Flex
+                        key={index}
+                        bg="#EBEDEF"
+                        p="25px 35px"
+                        borderBottom={
+                          currentBlog.topPosts.length - 1 === index
+                            ? "none"
+                            : "1px solid rgba(2, 29, 55, 0.25)"
+                        }
+                        cursor="pointer"
+                        onClick={() => topPosts(topPost)}
+                        transition="all ease 0.5s"
+                        _hover={{
+                          bg: "#DDD",
+                        }}
+                      >
+                        <Text
+                          color="#021D37"
+                          fontFamily="Playfair Display"
+                          fontWeight="600"
+                          fontSize="40px"
+                          mt="-15px"
+                        >
+                          {index + 1}
+                        </Text>
 
-                              <Box>
-                                <Heading
-                                  fontFamily="Playfair Display"
-                                  fontWeight="700"
-                                  fontSize="16px"
-                                  ml="20px"
-                                  lineHeight="21px"
-                                >
-                                  {topPost.postHeading}
-                                </Heading>
-                                <Text
-                                  fontFamily="Manrope"
-                                  fontWeight="400"
-                                  fontSize="12px"
-                                  lineHeight="16px"
-                                  color="rgba(2, 29, 55, 0.5)"
-                                  mt="10px"
-                                  mb="15px"
-                                  ml="20px"
-                                >
-                                  {topPost.postDate}
-                                </Text>
-                              </Box>
-                            </Flex>
-                          );
-                        })}
-                      </Box>
+                        <Box>
+                          <Heading
+                            fontFamily="Playfair Display"
+                            fontWeight="700"
+                            fontSize="16px"
+                            ml="20px"
+                            lineHeight="21px"
+                          >
+                            {topPost.postHeading}
+                          </Heading>
+
+                          <Text
+                            fontFamily="Manrope"
+                            fontWeight="400"
+                            fontSize="12px"
+                            lineHeight="16px"
+                            color="rgba(2, 29, 55, 0.5)"
+                            mt="10px"
+                            mb="15px"
+                            ml="20px"
+                          >
+                            {topPost.postDate}
+                          </Text>
+                        </Box>
+                      </Flex>
                     );
                   })}
                 </Box>
@@ -552,7 +592,7 @@ const Blog = () => {
             </Box>
 
             <Box>
-              <Box onClick={() => setShowCategories(true)}>
+              <Box>
                 <Flex
                   display={{
                     sm: "flex",
@@ -599,85 +639,99 @@ const Blog = () => {
                     _hover={{
                       bg: "#020E1B",
                     }}
+                    transition="all ease 0.5s"
+                    onClick={() => setShowCategories(!showCategories)}
                   >
                     <Image src={filter} w="20px" h="20px" />
                   </Button>
                 </Flex>
 
-                <Box
-                  flexDirection="column"
-                  justifyContent="flex-end"
-                  w="180px"
-                  display={
-                    showCategories
-                      ? {
-                          sm: "flex",
-                          md: "flex",
-                          lg: "flex",
-                          xl: "none",
-                          "2xl": "none",
-                        }
-                      : "none"
-                  }
-                >
+                {showCategories ? (
                   <Box
-                    bg="#EBEDEF"
-                    w="20px"
-                    h="20px"
-                    mb="-10px"
-                    ml="130px"
-                    alignItems="right"
-                    transform="rotate(-135deg)"
-                  />
-
-                  <Flex alignItems="center" flexDirection="column" bg="#EBEDEF">
-                    {blogs.map((categories, index) => {
-                      return (
-                        <Link
-                          key={index}
-                          p="10px 20px"
-                          mx="10px"
-                          w="100%"
-                          fontFamily="Manrope"
-                          fontSize="14px"
-                          fontWeight="400"
-                          color="#021D37"
-                          textAlign="left"
-                          transition="all ease 0.5s"
-                          borderBottom={
-                            categories.length - 1 === index
-                              ? "none"
-                              : "1px solid rgba(2, 29, 55, 0.25)"
+                    flexDirection="column"
+                    justifyContent="flex-end"
+                    w="180px"
+                    ml="100px"
+                    display={
+                      showCategories
+                        ? {
+                            sm: "flex",
+                            md: "flex",
+                            lg: "flex",
+                            xl: "none",
+                            "2xl": "none",
                           }
-                          _hover={{
-                            textDecoration: "none",
-                            bg: "#DDD",
-                            zIndex: "3",
-                          }}
-                        >
-                          {categories.category}
-                        </Link>
-                      );
-                    })}
-                  </Flex>
-                </Box>
+                        : "none"
+                    }
+                  >
+                    <Box
+                      bg="#EBEDEF"
+                      w="20px"
+                      h="20px"
+                      mb="-10px"
+                      mr="15px"
+                      transform="rotate(-135deg)"
+                      alignSelf="flex-end"
+                    />
+
+                    <Flex
+                      alignItems="center"
+                      flexDirection="column"
+                      bg="#EBEDEF"
+                    >
+                      {mobileBlog.map((categories, index) => {
+                        return (
+                          <Text
+                            key={index}
+                            p="10px 20px"
+                            mx="10px"
+                            w="100%"
+                            fontFamily="Manrope"
+                            fontSize="14px"
+                            fontWeight="400"
+                            color="#021D37"
+                            textAlign="left"
+                            transition="all ease 0.5s"
+                            cursor="pointer"
+                            onClick={() => {
+                              setShowCategories();
+                            }}
+                            borderBottom={
+                              categories.length - 1 === index
+                                ? "none"
+                                : "1px solid rgba(2, 29, 55, 0.25)"
+                            }
+                            _hover={{
+                              textDecoration: "none",
+                              bg: "#DDD",
+                              zIndex: "3",
+                            }}
+                          >
+                            {categories.category}
+                          </Text>
+                        );
+                      })}
+                    </Flex>
+                  </Box>
+                ) : null}
               </Box>
 
-              <Grid
-                gridTemplateColumns={{
-                  sm: "auto",
-                  md: "1fr 1fr",
-                  lg: "1fr 1fr",
-                  xl: "1fr 1fr",
-                  "2xl": "1fr 1fr",
-                }}
-                w="100%"
-                cursor="pointer"
-              >
+              <Box>
                 {blogs.map((post, index) => {
                   return (
-                    <Box key={index}>
-                      {post.posts.map((post, index) => {
+                    <Grid
+                      key={index}
+                      gridTemplateColumns={{
+                        sm: "auto",
+                        md: "1fr 1fr",
+                        lg: "1fr 1fr",
+                        xl: "1fr 1fr",
+                        "2xl": "1fr 1fr",
+                      }}
+                      w="100%"
+                      cursor="pointer"
+                    >
+                      {currentBlog.posts.map((post, index) => {
                         return (
                           <Box
                             key={index}
@@ -696,7 +750,7 @@ const Blog = () => {
                               "2xl": "none",
                             }}
                             transition="all ease 0.5s"
-                            onClick={(e) => ShowPosts(e)}
+                            onClick={() => ShowPosts(post)}
                             _hover={{
                               bg: post.bg,
                               transform: "scale(1.01)",
@@ -829,10 +883,10 @@ const Blog = () => {
                           </Box>
                         );
                       })}
-                    </Box>
+                    </Grid>
                   );
                 })}
-              </Grid>
+              </Box>
             </Box>
           </Flex>
 

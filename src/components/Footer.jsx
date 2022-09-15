@@ -72,6 +72,7 @@ const Footer = () => {
     {
       name: "OPUS DEI",
       to: "https://opusdei.org/en-ng/",
+      target: "_blank",
     },
     {
       name: "CONTACT",
@@ -83,7 +84,8 @@ const Footer = () => {
     },
     {
       name: "WOMEN'S BOARD",
-      to: "#!",
+      to: "https://womensboard.org.ng/",
+      target: "_blank",
     },
     {
       name: "FAQs",
@@ -328,6 +330,7 @@ const Footer = () => {
                 }}
                 color="#021D37"
                 _hover={{ textDecoration: "none", color: "#020E1B" }}
+                target={page.target}
               >
                 {page.name}
               </Link>

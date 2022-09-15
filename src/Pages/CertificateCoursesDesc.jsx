@@ -25,13 +25,19 @@ const CertificateCoursesDesc = () => {
     {
       image: aboutgallery2,
       text: "Higher National Diploma (HND) in Hospitality Management",
-      linkTo: "/HNDProgramme",
+      linkTo: (e) => {
+        e.preventDefault();
+        navigate("/HNDProgramme", { replace: true });
+      },
     },
 
     {
       image: aboutgallery4,
       text: "National Diploma (ND) in Hospitality Management",
-      linkTo: "/NDProgramme",
+      linkTo: (e) => {
+        e.preventDefault();
+        navigate("/NDProgramme", { replace: true });
+      },
     },
   ];
   const navigate = useNavigate();
@@ -142,7 +148,7 @@ const CertificateCoursesDesc = () => {
                 "2xl": "43px",
               }}
             >
-              Certificate Course <br /> In Hospitality Operations
+              Certificate Course <br /> In Hospitality Operationssss
             </Heading>
 
             <Text
@@ -157,7 +163,7 @@ const CertificateCoursesDesc = () => {
               in Lagos, Nigeria. The Institution has been involved with the
               development of Hospitality Education since 1974. It is a project
               of Women’s Board – Education Co-operation Society, a Nigerian,
-              Not-for profit organization for the development of the Girl Child.{" "}
+              Not-for profit organization for the development of the Girl Child.
               <br></br>
               <br></br>
               The focus of the College is targeted towards capable young women
@@ -270,6 +276,7 @@ const CertificateCoursesDesc = () => {
           <Flex
             justifyContent="center"
             mt="30px"
+            mb="100px"
             display={{
               sm: "block",
               md: "flex",
@@ -280,12 +287,24 @@ const CertificateCoursesDesc = () => {
           >
             {quickLinks.map((quickLink) => {
               return (
-                <Link
-                  href={quickLink.linkTo}
-                  w="294px"
+                <Box
+                  onClick={quickLink.linkTo}
+                  w={{
+                    sm: "100%",
+                    md: "294px",
+                    lg: "294px",
+                    xl: "294px",
+                    "2xl": "294px",
+                  }}
+                  mb={{
+                    sm: "20px",
+                    md: "20px",
+                    lg: "20px",
+                    xl: "0",
+                    "2xl": "0",
+                  }}
                   h="241px"
                   mr="30px"
-                  mb="100px"
                   transition="all ease 0.8s"
                   _hover={{
                     transform: "scale(1.2)",
@@ -319,7 +338,7 @@ const CertificateCoursesDesc = () => {
                       {quickLink.text}
                     </Text>
                   </Flex>
-                </Link>
+                </Box>
               );
             })}
           </Flex>

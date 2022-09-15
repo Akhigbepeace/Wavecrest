@@ -45,10 +45,10 @@ const ViewJobVacancies = () => {
 
   const navigate = useNavigate();
 
-  const ViewVacancies = (e) => {
-    e.preventDefault();
+  const ViewVacancies = (vacancy) => {
+    const navigateTo = `/viewVacancies?companyName=${vacancy.company}&deadline=${vacancy.deadLine}&desc=${vacancy.desc}`;
 
-    navigate("/viewVacancies", { replace: true });
+    navigate(navigateTo, { replace: true });
   };
 
   return (
@@ -172,7 +172,6 @@ const ViewJobVacancies = () => {
                 >
                   {vacancy.company}
                 </Heading>
-
                 <Box my="20px">
                   <Text fontWeight="400">Description: {vacancy.desc} </Text>
                   <Text fontWeight="400">Deadline: {vacancy.deadLine} </Text>
@@ -202,13 +201,13 @@ const ViewJobVacancies = () => {
                   textAlign="center"
                   borderRadius="5px"
                   mt="20px"
-                  onClick={ViewVacancies}
+                  onClick={() => ViewVacancies(vacancy)}
                   _hover={{
                     bg: "#020E1B",
                     transition: "all ease 0.4s",
                   }}
                 >
-                  APPLY
+                  VIEW
                 </Button>
               </Box>
             );

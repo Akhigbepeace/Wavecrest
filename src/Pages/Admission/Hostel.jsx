@@ -135,57 +135,71 @@ const ApplyOnline = () => {
               </Box>
             </Box>
 
-            <Image
-              src={aboutus}
-              w="323px"
-              h="323px"
-              objectFit="cover"
-              borderRadius="5px"
-              mt="30px"
-            />
-
-            <Text
-              fontFamily="Manrope"
-              fontSize={{
-                sm: "18px",
-                md: "22px",
-                lg: "24px",
-                xl: "24px",
-                "2xl": "24px",
-              }}
-              fontWeight="400"
-              lineHeight="33px"
-              my="24px"
-              color="#021D37"
-            >
-              Wavecrest offers accomodation to its students. We have a two well
-              furnished hostels. Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit. Reiciendis possimus quasi distinctio! Eaque
-              reprehenderit quo, ut perferendis, maxime dolor culpa recusandae
-              autem saepe laborum possimus fugiat quisquam ipsum incidunt quae.
-            </Text>
-
-            <Button
-              to="/admission/hostelApplication"
-              as={NavLink}
-              w="142px"
-              height="46.89px"
-              bg="#021D37"
-              border="none"
-              color="#fff"
-              fontWeight="700"
-              fontSize="16px"
-              lineHeight="22px"
-              textAlign="center"
-              borderRadius="3px"
-              mt="8px"
-              _hover={{
-                bg: "#020E1B",
-                transition: "all ease 0.4s",
+            <Flex
+              display={{
+                sm: "block",
+                md: "block",
+                lg: "block",
+                xl: "flex",
+                "2xl": "flex",
               }}
             >
-              REGISTER
-            </Button>
+              <Image
+                src={aboutus}
+                w="323px"
+                h="323px"
+                objectFit="cover"
+                borderRadius="5px"
+                mt="30px"
+                mr="30px"
+              />
+
+              <Box>
+                <Text
+                  fontFamily="Manrope"
+                  fontSize={{
+                    sm: "18px",
+                    md: "22px",
+                    lg: "24px",
+                    xl: "24px",
+                    "2xl": "24px",
+                  }}
+                  fontWeight="400"
+                  lineHeight="33px"
+                  my="24px"
+                  color="#021D37"
+                >
+                  Wavecrest offers accomodation to its students. We have a two
+                  well furnished hostels. Lorem ipsum dolor sit amet,
+                  consectetur adipisicing elit. Reiciendis possimus quasi
+                  distinctio! Eaque reprehenderit quo, ut perferendis, maxime
+                  dolor culpa recusandae autem saepe laborum possimus fugiat
+                  quisquam ipsum incidunt quae.
+                </Text>
+
+                <Button
+                  to="/admission/hostelApplication"
+                  as={NavLink}
+                  w="142px"
+                  height="46.89px"
+                  bg="#021D37"
+                  border="none"
+                  color="#fff"
+                  fontWeight="700"
+                  fontSize="16px"
+                  lineHeight="22px"
+                  textAlign="center"
+                  borderRadius="3px"
+                  mt="8px"
+                  _hover={{
+                    bg: "#020E1B",
+                    transition: "all ease 0.4s",
+                  }}
+                >
+                  REGISTER
+                </Button>
+              </Box>
+            </Flex>
           </Box>
         </Flex>
 

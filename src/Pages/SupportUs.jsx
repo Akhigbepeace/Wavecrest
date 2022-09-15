@@ -8,6 +8,7 @@ import {
   Link,
   Button,
   Grid,
+  Textarea,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import Navbar from "components/Navbar";
@@ -108,7 +109,17 @@ const SupportUs = () => {
           Support Us
         </Heading>
 
-        <Flex flexDirection="column">
+        <Flex
+          flexDirection="column"
+          w={{
+            sm: "290px",
+            md: "400px",
+            lg: "526px",
+            xl: "526px",
+            "2xl": "526px",
+          }}
+          mx="auto"
+        >
           {forms.map((form, index) => {
             return (
               <Input
@@ -118,14 +129,6 @@ const SupportUs = () => {
                 variant={form.variant}
                 h="67px"
                 mb="10px"
-                w={{
-                  sm: "290px",
-                  md: "400px",
-                  lg: "526px",
-                  xl: "526px",
-                  "2xl": "526px",
-                }}
-                mx="auto"
                 bg="#EBEDEF"
                 _placeholder={{
                   fontFamily: "Manrope",
@@ -137,6 +140,19 @@ const SupportUs = () => {
               />
             );
           })}
+
+          <Textarea
+            placeholder="Comments"
+            h="67px"
+            bg="#EBEDEF"
+            _placeholder={{
+              fontFamily: "Manrope",
+              color: "#021D37",
+              fontSize: "18px",
+              lineHeight: "25px",
+              fontWeight: "400",
+            }}
+          />
         </Flex>
 
         <Box
@@ -181,17 +197,22 @@ const SupportUs = () => {
             }}
           >
             <Button
-              fontFamily="Manrope"
-              fontSize="16px"
-              fontWeight="700"
-              mt="30px"
-              mb="100px"
+              type="submit"
+              w="142px"
+              height="46.89px"
               bg="#021D37"
-              py="7px"
+              border="none"
+              color="#fff"
+              fontWeight="700"
+              fontSize="16px"
+              lineHeight="22px"
               textAlign="center"
-              color="#FFF"
+              borderRadius="3px"
+              mt="8px"
+              mb="70px"
               _hover={{
                 bg: "#020E1B",
+                transition: "all ease 0.4s",
               }}
             >
               PAY NOW

@@ -1,5 +1,6 @@
 import { Box, Image, Text, Link, Heading } from "@chakra-ui/react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import studyProgrammes1 from "assets/Images/studyprogrammes1.png";
 import studyProgrammes2 from "assets/Images/studyprogrammes2.png";
 import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
@@ -13,6 +14,11 @@ const Courses = () => {
           imageSrc: studyProgrammes1,
           current: false,
           captionHeading: "ACQUIRE AN HND IN HOSPITALITY MANAGEMENT",
+          redirect: (e) => {
+            e.preventDefault();
+
+            navigate("/HNDProgramme", { replace: true });
+          },
           captionTime: "2 Years | Full Time",
           captionButton: "Apply Now",
         },
@@ -26,6 +32,11 @@ const Courses = () => {
           imageSrc: studyProgrammes2,
           current: false,
           captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
+          redirect: (e) => {
+            e.preventDefault();
+
+            navigate("/NDProgramme", { replace: true });
+          },
           captionTime: "2 Years | Full Time",
           captionButton: "Apply Now",
         },
@@ -39,12 +50,19 @@ const Courses = () => {
           imageSrc: studyProgrammes3,
           current: true,
           captionHeading: "SPEND A GAP YEAR IN HOSPITALITY TRAINING",
+          redirect: (e) => {
+            e.preventDefault();
+
+            navigate("/CertificateCourses", { replace: true });
+          },
           captionTime: "1 Year | Full Time",
           captionButton: "Apply Now",
         },
       ],
     },
   ];
+
+  const navigate = useNavigate();
 
   return (
     <Box>
@@ -63,16 +81,15 @@ const Courses = () => {
                       lg: "350px",
                     }}
                     w={{
-                      sm: "300px",
+                      sm: "100%",
                       md: "600px",
-                      lg: "900px",
+                      lg: "600px",
                     }}
                   >
                     <Image
                       src={value.imageSrc}
                       alt="coffee"
                       mx="auto"
-                      position="absolute"
                       objectFit="cover"
                       h={{
                         sm: "274px",
@@ -80,7 +97,7 @@ const Courses = () => {
                         lg: "274px",
                       }}
                       w={{
-                        sm: "300px",
+                        sm: "100%",
                         md: "600px",
                         lg: "900px",
                       }}
@@ -97,9 +114,9 @@ const Courses = () => {
                       position="relative"
                       py="40px"
                       bottom={{
-                        sm: "-62px",
-                        md: "-90px",
-                        lg: "-85px",
+                        sm: "212px",
+                        md: "182px",
+                        lg: "184px",
                         xl: "-175px",
                         "2xl": "-175px",
                       }}
@@ -107,6 +124,11 @@ const Courses = () => {
                       <Heading
                         color="#fff"
                         fontWeight="700"
+                        px={{
+                          sm: "20px",
+                          md: "20px",
+                          lg: "20px",
+                        }}
                         fontSize={{
                           sm: "20px",
                           md: "20px",
@@ -119,6 +141,7 @@ const Courses = () => {
                           xl: "Playfair Display",
                           "2xl": "Playfair Display",
                         }}
+                        onClick={value.redirect}
                       >
                         {value.captionHeading}
                       </Heading>

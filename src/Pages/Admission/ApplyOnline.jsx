@@ -22,14 +22,13 @@ const ApplyOnline = () => {
     user_number: "",
   };
 
-  const [inputField, setInputField] = useState(initialValues);
-
   const inputValues = (e) => {
     setInputField({
       ...inputField,
       [e.target.name]: e.target.value,
     });
   };
+
   const forms = [
     {
       fieldType: "name",
@@ -59,7 +58,6 @@ const ApplyOnline = () => {
     },
     {
       image: mastercard,
-
       width: "92px",
       height: "55px",
     },
@@ -72,15 +70,42 @@ const ApplyOnline = () => {
 
   const programmes = [
     {
+      course: "Programme",
+      price: "",
+    },
+    {
       course: "HND in Hospitality Management",
+      price: " The fee for this course is: #500,000",
     },
     {
       course: "ND in Hospitality Management",
+      price: " The fee for this course is: #300,000",
     },
     {
       course: "Certificate in Hospitality Operations",
+      price: " The fee for this course is: #300,000",
+    },
+    {
+      course: "Confederation of Tourism and Hospitality",
+      price: " The fee for this course is: #200,000",
+    },
+    {
+      course: "Hospitality Training Programs",
+      price: " The fee for this course is: #250,000",
+    },
+    {
+      course: "Culinary Courses",
+      price: " The fee for this course is: #150,000",
+    },
+    {
+      course: "National Skill Acquisition",
+      price: " The fee for this course is: #200,000",
     },
   ];
+
+  const [inputField, setInputField] = useState(initialValues);
+  const [showCoursePrice, setShowCoursePrice] = useState({});
+
   return (
     <Fragment>
       <Box
@@ -200,7 +225,7 @@ const ApplyOnline = () => {
           })}
 
           <Select
-            placeholder="Programme"
+            placeholder=""
             w={{
               sm: "100%",
               md: "400px",
@@ -217,23 +242,36 @@ const ApplyOnline = () => {
             fontSize="18px"
             lineHeight="25px"
             fontWeight="400"
+            cursor="pointer"
+            onChange={(e) => {
+              const programme = JSON.parse(e.target.value);
+              setShowCoursePrice(programme);
+            }}
           >
             {programmes.map((programme, index) => {
               return (
                 <option
-                  value={programme.course}
                   key={index}
-                  borderBottom={
+                  value={JSON.stringify(programme)}
+                  borderbottom={
                     programme.length - 1 === index
                       ? "none"
                       : "1px solid #EBEDEF"
                   }
+                  _hover={{
+                    bg: "#EBEDEF",
+                    transition: "all ease 0.5s",
+                  }}
                 >
                   {programme.course}
                 </option>
               );
             })}
           </Select>
+
+          <Text fontFamily="Manrope" fontSize="18px" fontWeight="400">
+            <b> {showCoursePrice.price} </b>
+          </Text>
         </Flex>
 
         <Box>

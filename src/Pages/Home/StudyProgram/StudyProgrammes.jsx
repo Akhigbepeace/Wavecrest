@@ -1,4 +1,4 @@
-import { Box, Text, Image, Flex, Heading, Link } from "@chakra-ui/react";
+import { Box, Text, Image, Flex, Heading } from "@chakra-ui/react";
 import React, { useState } from "react";
 import studyProgrammes1 from "assets/Images/studyprogrammes1.png";
 import studyProgrammes2 from "assets/Images/studyprogrammes2.png";
@@ -6,6 +6,7 @@ import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
 import studyProgrammes4 from "assets/Images/studyprogrammes4.png";
 import Courses from "./Courses";
 import ShortCourses from "./ShortCourses";
+import { useNavigate } from "react-router-dom";
 
 const StudyProgrammes = () => {
   const objArr = [
@@ -14,6 +15,11 @@ const StudyProgrammes = () => {
       values: [
         {
           imageSrc: studyProgrammes1,
+          redirect: (e) => {
+            e.preventDefault();
+
+            navigate("/HNDProgramme", { replace: true });
+          },
           current: false,
           captionHeading: "ACQUIRE AN HND IN HOSPITALITY MANAGEMENT",
           captionTime: "2 Years | Full Time",
@@ -24,9 +30,15 @@ const StudyProgrammes = () => {
 
     {
       linkContent: "ND IN HOTEL AND CATERING MANAGEMENT",
+
       values: [
         {
           imageSrc: studyProgrammes2,
+          redirect: (e) => {
+            e.preventDefault();
+
+            navigate("/NDProgramme", { replace: true });
+          },
           current: false,
           captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
           captionTime: "2 Years | Full Time",
@@ -40,6 +52,11 @@ const StudyProgrammes = () => {
       values: [
         {
           imageSrc: studyProgrammes3,
+          redirect: (e) => {
+            e.preventDefault();
+
+            navigate("/CertificateCourses", { replace: true });
+          },
           current: true,
           captionHeading: "SPEND A GAP YEAR IN HOSPITALITY TRAINING",
           captionTime: "1 Year | Full Time",
@@ -49,26 +66,53 @@ const StudyProgrammes = () => {
     },
 
     {
-      linkContent: "SHORT COURSES",
+      linkContent: "TRAINING",
       values: [
         {
           imageSrc: studyProgrammes4,
           current: false,
-          captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
+          redirect: (e) => {
+            e.preventDefault();
+
+            navigate("/academics/training", { replace: true });
+          },
+          captionHeading: "CONFEDERATION OF TOURISM AND HOSPITALITY",
           captionTime: "2 Years | Part Time",
           captionButton: "Apply Now",
         },
         {
           imageSrc: studyProgrammes1,
           current: false,
-          captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
+          redirect: (e) => {
+            e.preventDefault();
+
+            navigate("/academics/training", { replace: true });
+          },
+          captionHeading: "HOSPITALITY TRAINING PROGRAMMES",
           captionTime: "2 Years | Part Time",
           captionButton: "Apply Now",
         },
         {
           imageSrc: studyProgrammes2,
           current: false,
-          captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
+          redirect: (e) => {
+            e.preventDefault();
+
+            navigate("/academics/training", { replace: true });
+          },
+          captionHeading: "CULINARY COURSES",
+          captionTime: "2 Years | Part Time",
+          captionButton: "Apply Now",
+        },
+        {
+          imageSrc: studyProgrammes1,
+          current: false,
+          redirect: (e) => {
+            e.preventDefault();
+
+            navigate("/academics/training", { replace: true });
+          },
+          captionHeading: "NATIONAL SKILL ACQUISITION",
           captionTime: "2 Years | Part Time",
           captionButton: "Apply Now",
         },
@@ -78,6 +122,13 @@ const StudyProgrammes = () => {
 
   const [currentprogram, setCurrentProgram] = useState(objArr[2]);
 
+  const navigate = useNavigate();
+
+  const redirect = (e) => {
+    e.preventDefault();
+
+    navigate("/admission/applyOnline", { replace: true });
+  };
   return (
     <Box
       px={{
@@ -190,13 +241,16 @@ const StudyProgrammes = () => {
               textAlign="center"
               position="relative"
               bottom="-175px"
-              py="40px"
+              pt="40px"
+              pb="20px"
             >
               <Heading
                 color="#fff"
                 fontWeight="700"
                 fontSize="40px"
                 fontFamily="Playfair Display"
+                cursor="pointer"
+                onClick={value.redirect}
               >
                 {value.captionHeading}
               </Heading>
@@ -211,22 +265,24 @@ const StudyProgrammes = () => {
                 {value.captionTime}
               </Text>
 
-              <Link
-                href="/admission/applyOnline"
+              <Text
                 bg="#fff"
                 color="#021d37"
-                h="52px"
                 w="208px"
+                mx="auto"
                 p="10px 25px"
                 border="none"
                 borderRadius="3px"
                 fontFamily="Manrope"
                 fontSize="24px"
                 fontWeight="700"
+                textAlign="center"
+                cursor="pointer"
                 _hover={{ textDecoration: "none", bg: "#EBEDEF" }}
+                onClick={(e) => redirect(e)}
               >
                 {value.captionButton}
-              </Link>
+              </Text>
             </Box>
           </Box>
         ))}

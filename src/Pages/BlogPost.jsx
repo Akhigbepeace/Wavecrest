@@ -11,7 +11,7 @@ import {
   InputRightElement,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Navbar from "components/Navbar";
 import blogPostImage from "assets/Images/blogpost.png";
@@ -67,13 +67,18 @@ const BlogPost = () => {
     e.preventDefault();
     navigate("/blog", { replace: true });
   };
-
+  const [searchParams] = useSearchParams();
   return (
     <Fragment>
       <Navbar />
 
       <Box h="441px" w="100%" position="relative">
-        <Image src={blogPostImage} h="100%" w="100%" objectFit="cover" />
+        <Image
+          src={searchParams.get("image")}
+          h="100%"
+          w="100%"
+          objectFit="cover"
+        />
 
         <Flex
           bg="rgba(0, 24, 71, 0.5)"
@@ -109,9 +114,7 @@ const BlogPost = () => {
             }}
             alignSelf="flex-end"
           >
-            ‘The icing on the cake’ …Wavecrest College of Hospitality Partners
-            with Fly Africa Initiative to break Guinness World Record 2020 -
-            <br />- Wavecrest College
+            {searchParams.get("headline")}
           </Text>
         </Flex>
       </Box>
@@ -158,7 +161,7 @@ const BlogPost = () => {
             fontSize="18px"
             mb="20px"
           >
-            News & Events / October 8, 2022.
+            {searchParams.get("date")}
           </Heading>
 
           <Box>
@@ -199,7 +202,7 @@ const BlogPost = () => {
             </Text>
 
             <Image
-              src={blogPostImage}
+              src={searchParams.get("image")}
               w="100%"
               h="315px"
               objectFit="cover"
@@ -361,6 +364,11 @@ const BlogPost = () => {
                     bg="#EBEDEF"
                     borderRadius="3px"
                     p="25px 35px"
+                    cursor="pointer"
+                    transition="all ease 0.5s"
+                    _hover={{
+                      bg: "#DDD",
+                    }}
                   >
                     <Flex>
                       <Text

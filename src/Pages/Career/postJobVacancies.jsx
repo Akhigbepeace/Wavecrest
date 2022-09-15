@@ -241,37 +241,6 @@ const PostJobVacancies = () => {
                 fontWeight="700"
                 mt="20px"
               >
-                Upload CV
-              </FormLabel>
-              <Input
-                type="file"
-                variant="filled"
-                display="block"
-                accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.png, .jpg, .jpeg"
-                h="67px"
-                pt="15px"
-                onChange={inputValues}
-                w={{
-                  sm: "100%",
-                  md: "400px",
-                  lg: "526px",
-                  xl: "526px",
-                  "2xl": "526px",
-                }}
-                mb="10px"
-                bg="#EBEDEF"
-              ></Input>
-            </Box>
-
-            <Box>
-              <FormLabel
-                fontFamily="Manrope"
-                color="#021D37"
-                fontSize="18px"
-                lineHeight="25px"
-                fontWeight="700"
-                mt="20px"
-              >
                 Notes:
               </FormLabel>
 

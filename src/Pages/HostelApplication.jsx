@@ -57,18 +57,26 @@ const HostelApplication = () => {
     },
   ];
 
-  const programmes = [
+  const hostels = [
     {
-      course: "Presidential Suite",
+      hostel: "Hostel Types",
+      price: "",
     },
     {
-      course: "Royal Hostels",
+      hostel: "Presidential Suite",
+      price: " The fee for this hostel is: #500,000",
     },
     {
-      course: "Executive Hostels",
+      hostel: "Royal Hostels",
+      price: " The fee for this hostel is: #400,000",
     },
     {
-      course: "One-man Hostels",
+      hostel: "Executive Hostels",
+      price: " The fee for this hostel is: #300,000",
+    },
+    {
+      hostel: "One-man Hostels",
+      price: " The fee for this hostel is: #200,000",
     },
   ];
 
@@ -92,6 +100,8 @@ const HostelApplication = () => {
 
     navigate("/admission/hostel", { replace: true });
   };
+
+  const [showCoursePrice, setShowCoursePrice] = useState({});
 
   return (
     <Fragment>
@@ -234,7 +244,6 @@ const HostelApplication = () => {
           </Flex>
 
           <Select
-            placeholder="Hostel Types"
             w={{
               sm: "100%",
               md: "400px",
@@ -247,29 +256,34 @@ const HostelApplication = () => {
             textAlign="left"
             fontFamily="Manrope"
             border="none"
-            onChange={inputValues}
+            onChange={(e) => {
+              const programme = JSON.parse(e.target.value);
+              setShowCoursePrice(programme);
+            }}
             color="#021D37"
             fontSize="18px"
             lineHeight="25px"
             fontWeight="400"
             mb="10px"
           >
-            {programmes.map((programme, index) => {
+            {hostels.map((items, index) => {
               return (
                 <option
-                  value={programme.course}
                   key={index}
+                  value={JSON.stringify(items)}
                   borderbottom={
-                    programme.length - 1 === index
-                      ? "none"
-                      : "1px solid #EBEDEF"
+                    items.length - 1 === index ? "none" : "1px solid #EBEDEF"
                   }
                 >
-                  {programme.course}
+                  {items.hostel}
                 </option>
               );
             })}
           </Select>
+
+          <Text fontFamily="Manrope" fontSize="18px" fontWeight="400">
+            <b> {showCoursePrice.price} </b>
+          </Text>
 
           <Button
             type="submit"

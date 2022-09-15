@@ -1,5 +1,15 @@
-import { Box, Button, Heading, Input, Image, Text } from "@chakra-ui/react";
-import React, { useRef, useState } from "react";
+import {
+  Box,
+  Button,
+  Heading,
+  Input,
+  Image,
+  Text,
+  FormLabel,
+  Flex,
+} from "@chakra-ui/react";
+import React, { Fragment, useRef, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import emailjs from "emailjs-com";
 import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
@@ -32,37 +42,22 @@ const ViewVacancies = () => {
     {
       fieldType: "text",
       name: "user_name",
-      placeHolder: "Full Name",
+      placeHolder: "Enter Full Name",
+      label: "Full Name",
       variant: "filled",
     },
     {
       fieldType: "email",
       name: "user_email",
-      placeHolder: "Email",
+      label: "Email Address",
+      placeHolder: "Enter Email address",
       variant: "filled",
     },
     {
       fieldType: "number",
       name: "user_number",
-      placeHolder: "Phone Number",
-      variant: "filled",
-    },
-    {
-      fieldType: "text",
-      name: "user_address",
-      placeHolder: "Address",
-      variant: "filled",
-    },
-    {
-      fieldType: "text",
-      name: "user_company",
-      placeHolder: "Company",
-      variant: "filled",
-    },
-    {
-      fieldType: "text",
-      name: "user_post",
-      placeHolder: "Post",
+      label: "Phone Number",
+      placeHolder: "Enter Phone Number",
       variant: "filled",
     },
   ];
@@ -85,6 +80,7 @@ const ViewVacancies = () => {
     e.preventDefault();
     navigate("/career/viewJobVacancies", { replace: true });
   };
+  const [searchParams] = useSearchParams();
 
   return (
     <Box>
@@ -144,85 +140,167 @@ const ViewVacancies = () => {
               Back To Job Vacancies
             </Button>
 
-            <Box
-              w="88px"
-              h="3px"
-              bg="#021D37"
-              mb="10px"
-              mt="60px"
-              display={{
-                sm: "block",
-                md: "block",
-                lg: "block",
-                xl: "none",
-                "2xl": "none",
-              }}
-            ></Box>
-
-            <Heading
-              fontFamily="Playfair Display"
-              fontWeight="700"
-              fontSize="32px"
-              color="#021D37"
+            <Flex
+              my="20px"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
             >
-              Apply For Job
-            </Heading>
-          </Box>
+              <Flex alignItems="center">
+                <Heading fontWeight="700" fontFamily="Manrope" fontSize="25px">
+                  Company Name: &nbsp;
+                </Heading>
 
-          <Text
-            fontFamily="Manrope"
-            fontWeight="400"
-            fontSize={{
-              sm: "18px",
-              md: "18px",
-              lg: "22px",
-              xl: "22px",
-              "2xl": "22px",
-            }}
-            lineHeight="33px"
-            color="#021D37"
-            my="24px"
-          >
-            Wavecrest offers accomodation to its students. We have a two well
-            furnished hostels orem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua.
-          </Text>
+                <Text
+                  fontWeight="400"
+                  fontFamily="Manrope"
+                  fontSize="20px"
+                  textAlign="center"
+                >
+                  {searchParams.get("companyName")}
+                </Text>
+              </Flex>
+
+              <Flex alignItems="center" my="10px">
+                <Heading fontWeight="700" fontFamily="Manrope" fontSize="25px">
+                  Description: &nbsp;
+                </Heading>
+
+                <Text
+                  fontWeight="400"
+                  fontFamily="Manrope"
+                  fontSize="20px"
+                  textAlign="center"
+                >
+                  {searchParams.get("deadline")}
+                </Text>
+              </Flex>
+
+              <Flex alignItems="center">
+                <Heading fontWeight="700" fontFamily="Manrope" fontSize="25px">
+                  Deadline: &nbsp;
+                </Heading>
+
+                <Text
+                  fontWeight="400"
+                  fontFamily="Manrope"
+                  fontSize="20px"
+                  textAlign="center"
+                >
+                  {searchParams.get("desc")}
+                </Text>
+              </Flex>
+            </Flex>
+          </Box>
         </Box>
 
         <form ref={form} onSubmit={sendEmail}>
           <Box>
             {forms.map((form, index) => {
               return (
-                <Input
-                  key={index}
-                  type={form.fieldType}
-                  placeholder={form.placeHolder}
-                  variant={form.variant}
-                  display="block"
-                  onChange={inputValues}
-                  name={form.name}
-                  value={inputField[form.name]}
-                  w={{
-                    sm: "100%",
-                    md: "400px",
-                    lg: "526px",
-                    xl: "526px",
-                    "2xl": "526px",
-                  }}
-                  h="67px"
-                  mb="10px"
-                  bg="#EBEDEF"
-                  _placeholder={{
-                    fontFamily: "Manrope",
-                    color: "#021D37",
-                    fontSize: "18px",
-                    lineHeight: "25px",
-                    fontWeight: "400",
-                  }}
-                />
+                <Fragment>
+                  <FormLabel
+                    fontFamily="Manrope"
+                    color="#021D37"
+                    fontSize="18px"
+                    lineHeight="25px"
+                    fontWeight="700"
+                    mt="20px"
+                  >
+                    {form.label}
+                  </FormLabel>
+                  <Input
+                    key={index}
+                    type={form.fieldType}
+                    placeholder={form.placeHolder}
+                    variant={form.variant}
+                    display="block"
+                    onChange={inputValues}
+                    name={form.name}
+                    value={inputField[form.name]}
+                    w={{
+                      sm: "100%",
+                      md: "400px",
+                      lg: "526px",
+                      xl: "526px",
+                      "2xl": "526px",
+                    }}
+                    h="67px"
+                    mb="10px"
+                    bg="#EBEDEF"
+                    _placeholder={{
+                      fontFamily: "Manrope",
+                      color: "#021D37",
+                      fontSize: "18px",
+                      lineHeight: "25px",
+                      fontWeight: "400",
+                    }}
+                  />
+                </Fragment>
               );
             })}
+          </Box>
+
+          <Box>
+            <FormLabel
+              fontFamily="Manrope"
+              color="#021D37"
+              fontSize="18px"
+              lineHeight="25px"
+              fontWeight="700"
+              mt="20px"
+            >
+              Resume
+            </FormLabel>
+            <Input
+              type="file"
+              variant="filled"
+              display="block"
+              accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.png, .jpg, .jpeg"
+              h="67px"
+              pt="15px"
+              onChange={inputValues}
+              w={{
+                sm: "100%",
+                md: "400px",
+                lg: "526px",
+                xl: "526px",
+                "2xl": "526px",
+              }}
+              mb="10px"
+              bg="#EBEDEF"
+            ></Input>
+          </Box>
+
+          <Box>
+            <FormLabel
+              fontFamily="Manrope"
+              color="#021D37"
+              fontSize="18px"
+              lineHeight="25px"
+              fontWeight="700"
+              mt="20px"
+            >
+              Cover Letter
+            </FormLabel>
+            <Input
+              type="file"
+              variant="filled"
+              display="block"
+              accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.png, .jpg, .jpeg"
+              h="67px"
+              pt="15px"
+              onChange={inputValues}
+              w={{
+                sm: "100%",
+                md: "400px",
+                lg: "526px",
+                xl: "526px",
+                "2xl": "526px",
+              }}
+              mb="10px"
+              bg="#EBEDEF"
+            ></Input>
           </Box>
 
           <Button

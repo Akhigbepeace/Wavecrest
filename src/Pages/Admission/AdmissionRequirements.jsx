@@ -223,7 +223,13 @@ const AdmissionRequirements = () => {
                       <ModalHeader
                         fontFamily="Playfair Display"
                         fontWeight="700"
-                        fontSize="32px"
+                        fontSize={{
+                          sm: "24px",
+                          md: "32px",
+                          lg: "32px",
+                          xl: "32px",
+                          "2xl": "32px",
+                        }}
                         color="#021D37"
                       >
                         Updated Subject Combinations
@@ -239,7 +245,12 @@ const AdmissionRequirements = () => {
                         <Heading
                           fontFamily="Manrope"
                           fontWeight="700"
-                          fontSize="24px"
+                          fontSize={{
+                            md: "24px",
+                            lg: "24px",
+                            xl: "24px",
+                            "2xl": "24px",
+                          }}
                           color="#021D37"
                         >
                           Five (5) credit passes in SSCE/NECO/GCE
@@ -248,8 +259,15 @@ const AdmissionRequirements = () => {
                           <Text
                             fontFamily="Manrope"
                             fontWeight="700"
-                            fontSize="24px"
+                            fontSize={{
+                              md: "24px",
+                              lg: "24px",
+                              xl: "24px",
+                              "2xl": "24px",
+                            }}
                             color="#021D37"
+                            my="10px"
+                            lineHeight="20px"
                           >
                             Four (4) Subjects can be chosen from this list:
                           </Text>
@@ -260,7 +278,12 @@ const AdmissionRequirements = () => {
                                 listStyleType="none"
                                 fontFamily="Manrope"
                                 fontWeight="400"
-                                fontSize="24px"
+                                fontSize={{
+                                  md: "24px",
+                                  lg: "24px",
+                                  xl: "24px",
+                                  "2xl": "24px",
+                                }}
                                 color="#021D37"
                               >
                                 {subject}

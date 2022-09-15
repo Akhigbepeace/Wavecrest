@@ -83,7 +83,7 @@ const Internship = () => {
 
     const res = await emailjs.sendForm(
       "service_djq4ick",
-      "template_i27quow",
+      "template_krcopwh",
       form.current,
       "JPAG_ZJVlAcuO_5D-"
     );

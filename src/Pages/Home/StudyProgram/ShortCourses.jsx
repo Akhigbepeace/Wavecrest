@@ -2,7 +2,6 @@ import React from "react";
 import {
   Box,
   Text,
-  Link,
   Image,
   Heading,
   Accordion,
@@ -15,36 +14,62 @@ import { FaChevronCircleUp } from "react-icons/fa";
 import studyProgrammes1 from "assets/Images/studyprogrammes1.png";
 import studyProgrammes2 from "assets/Images/studyprogrammes2.png";
 import studyProgrammes4 from "assets/Images/studyprogrammes4.png";
+import { useNavigate } from "react-router-dom";
 
-const ShortCourses = () => {
+const ShortCourses = ({ trainingRef }) => {
   const shortCourses = [
     {
-      linkContent: "SHORT COURSES",
+      linkContent: "TRAINING",
       values: [
         {
           imageSrc: studyProgrammes4,
           current: false,
-          captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
+          captionHeading: "Confederation of Tourism and Hospitality",
           captionTime: "1 Year | Part Time",
           captionButton: "Apply Now",
         },
         {
           imageSrc: studyProgrammes1,
           current: false,
-          captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
+          captionHeading: "Hospitality Training Programs",
           captionTime: "1 Year | Part Time",
           captionButton: "Apply Now",
         },
         {
           imageSrc: studyProgrammes2,
           current: false,
-          captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
+          captionHeading: "Culinary Courses",
+          captionTime: "1 Year | Part Time",
+          captionButton: "Apply Now",
+        },
+        {
+          imageSrc: studyProgrammes2,
+          current: false,
+          captionHeading: "National Skill Acquisition",
           captionTime: "1 Year | Part Time",
           captionButton: "Apply Now",
         },
       ],
     },
   ];
+  const navigate = useNavigate();
+
+  const onClick = (e) => {
+    e.preventDefault();
+
+    trainingRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const linkTo = (e) => {
+    e.preventDefault();
+
+    navigate("/academics/training", { replace: true });
+  };
+  const redirect = (e) => {
+    e.preventDefault();
+
+    navigate("/admission/applyOnline", { replace: true });
+  };
 
   return (
     <Box>
@@ -77,9 +102,9 @@ const ShortCourses = () => {
                         {shortCourse.linkContent}
                       </Box>
                       {isExpanded ? (
-                        <FaChevronCircleDown size="30px" />
-                      ) : (
                         <FaChevronCircleUp size="30px" />
+                      ) : (
+                        <FaChevronCircleDown size="30px" />
                       )}
                     </AccordionButton>
                   </h2>
@@ -92,22 +117,21 @@ const ShortCourses = () => {
                           mx="auto"
                           h="300px"
                           w={{
-                            sm: "300px",
+                            sm: "100%",
                             md: "600px",
-                            lg: "900px",
+                            lg: "600px",
                           }}
                         >
                           <Image
                             src={value.imageSrc}
                             alt="coffee"
                             mx="auto"
-                            position="absolute"
                             objectFit="cover"
                             h="274px"
                             w={{
-                              sm: "300px",
+                              sm: "100%",
                               md: "600px",
-                              lg: "900px",
+                              lg: "600px",
                             }}
                             borderRadius="3px"
                           />
@@ -118,9 +142,11 @@ const ShortCourses = () => {
                             position="relative"
                             py="40px"
                             bottom={{
-                              sm: "-62px",
-                              md: "-90px",
-                              lg: "-85px",
+                              sm: "212px",
+                              md: "206px",
+                              lg: "206px",
+                              xl: "-175px",
+                              "2xl": "-175px",
                             }}
                           >
                             <Heading
@@ -128,6 +154,8 @@ const ShortCourses = () => {
                               fontWeight="700"
                               fontSize="20px"
                               fontFamily="Manrope"
+                              textTransform="uppercase"
+                              onClick={(e) => linkTo(e)}
                             >
                               {value.captionHeading}
                             </Heading>
@@ -146,8 +174,8 @@ const ShortCourses = () => {
                               {value.captionTime}
                             </Text>
 
-                            <Link
-                              href="/admission/applyOnline"
+                            <Text
+                              mx="auto"
                               borderRadius="5px"
                               fontFamily="Manrope"
                               fontWeight="700"
@@ -178,10 +206,14 @@ const ShortCourses = () => {
                                 xl: "none",
                                 "2xl": "none",
                               }}
-                              _hover={{ textDecoration: "none", bg: "#EBEDEF" }}
+                              _hover={{
+                                textDecoration: "none",
+                                cursor: "pointer",
+                              }}
+                              onClick={(e) => redirect(e)}
                             >
                               {value.captionButton}
-                            </Link>
+                            </Text>
                           </Box>
                         </Box>
                       );
