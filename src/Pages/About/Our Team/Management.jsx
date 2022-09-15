@@ -1,13 +1,13 @@
-import { Box, Heading, Image, Flex, Text } from "@chakra-ui/react";
+import { Box, Heading, Image, Flex, Text, Button } from "@chakra-ui/react";
 import React from "react";
 import provost from "assets/Images/provost.png";
 import deputyProvost from "assets/Images/deputyprovost.png";
 import bursar from "assets/Images/bursar.png";
 import registrar from "assets/Images/registrar.png";
 import ResponsiveManagement from "Pages/About/Our Team/Media Query/Responsive Management";
-import Gallery from "Pages/About/Profile/Gallery";
 import ResponsiveBoard from "Pages/About/Our Team/Media Query/Responsive Board";
 import ResponsiveStaff from "Pages/About/Our Team/Media Query/Responsive Staff";
+import { useNavigate } from "react-router-dom";
 
 const Management = () => {
   const managements = [
@@ -32,6 +32,16 @@ const Management = () => {
       post: "Bursar",
     },
   ];
+
+  const navigate = useNavigate();
+  const profile = (e) => {
+    e.preventDefault();
+    navigate("/about/profile", { replace: true });
+  };
+  const milestone = (e) => {
+    e.preventDefault();
+    navigate("/about/milestone", { replace: true });
+  };
 
   return (
     <Box
@@ -128,9 +138,50 @@ const Management = () => {
           "2xl": "none",
         }}
       >
-        <ResponsiveBoard />
-        <ResponsiveManagement />
-        <ResponsiveStaff />
+        <Box>
+          <ResponsiveBoard />
+          <ResponsiveManagement />
+          <ResponsiveStaff />
+        </Box>
+        
+        <Box mt="100px">
+          <Heading
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="32px"
+            color="#021D37"
+            textAlign="center"
+            mb="22px"
+          >
+            Navigate To:
+          </Heading>
+          <Flex justifyContent="space-evenly">
+            <Button
+              fontFamily="Manrope"
+              fontSize="18px"
+              py="25px"
+              mb="52px"
+              textAlign="center"
+              fontWeight="700"
+              bg="#EEE"
+              onClick={(e) => profile(e)}
+            >
+              PROFILE
+            </Button>
+            <Button
+              fontFamily="Manrope"
+              fontSize="18px"
+              py="25px"
+              mb="52px"
+              textAlign="center"
+              fontWeight="700"
+              bg="#EEE"
+              onClick={(e) => milestone(e)}
+            >
+              MILESTONE
+            </Button>
+          </Flex>
+        </Box>
       </Box>
     </Box>
   );

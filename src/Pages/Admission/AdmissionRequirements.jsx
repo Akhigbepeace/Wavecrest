@@ -6,6 +6,8 @@ import {
   UnorderedList,
   ListItem,
   Link,
+  Grid,
+  Button,
   Text,
   Modal,
   ModalOverlay,
@@ -18,6 +20,7 @@ import {
 import React, { Fragment } from "react";
 import waveimg from "assets/Images/waveimg.png";
 import fileDownload from "assets/Images/paperDownload.png";
+import { useNavigate } from "react-router-dom";
 
 const AdmissionRequirements = () => {
   const requirements = [
@@ -70,7 +73,33 @@ const AdmissionRequirements = () => {
   ];
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-
+const navigate = useNavigate();
+const navigateTo = [
+  {
+    name: "TUITION AND SCHOLARSHIP",
+    redirect: () => {
+      navigate("/admission/tuitionAndScholarship", { replace: true });
+    },
+  },
+  {
+    name: "APPLY ONLINE",
+    redirect: () => {
+      navigate("/admission/applyOnline", { replace: true });
+    },
+  },
+  {
+    name: "HOSTEL",
+    redirect: () => {
+      navigate("/admission/hostel", { replace: true });
+    },
+  },
+  {
+    name: "FAQs",
+    redirect: () => {
+      navigate("/admission/faqs", { replace: true });
+    },
+  },
+];
   return (
     <Fragment>
       <Box
@@ -356,6 +385,62 @@ const AdmissionRequirements = () => {
             </Box>
           );
         })}
+
+        <Box
+          mt="70px"
+          display={{
+            sm: "block",
+            md: "block",
+            lg: "block",
+            xl: "none",
+            "2xl": "none",
+          }}
+          px={{
+            sm: "20px",
+            md: "20px",
+            lg: "91px",
+            xl: "91px",
+            "2xl": "91px",
+          }}
+        >
+          <Heading
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="32px"
+            color="#021D37"
+            textAlign="center"
+            mb="22px"
+          >
+            Navigate To:
+          </Heading>
+          <Grid
+            gridTemplateColumns={{
+              sm: "1fr",
+              md: "1fr 1fr",
+              lg: "1fr 1fr",
+            }}
+            mb="50px"
+          >
+            {navigateTo.map((items, index) => {
+              return (
+                <Button
+                  key={index}
+                  fontFamily="Manrope"
+                  fontSize="18px"
+                  py="25px"
+                  mb="15px"
+                  mr="15px"
+                  textAlign="center"
+                  fontWeight="700"
+                  bg="#EEE"
+                  onClick={items.redirect}
+                >
+                  {items.name}
+                </Button>
+              );
+            })}
+          </Grid>
+        </Box>
       </Box>
     </Fragment>
   );

@@ -1,11 +1,12 @@
 import React, { Fragment } from "react";
-import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Image, Button } from "@chakra-ui/react";
 import about from "assets/Images/About.png";
 import Seventies from "./Responsive Milestone/Seventies";
 import Eighties from "./Responsive Milestone/Eighties";
 import Nineties from "./Responsive Milestone/Nineties";
 import Twenties from "./Responsive Milestone/Twenties";
 import TwentyTens from "./Responsive Milestone/TwentyTens";
+import { useNavigate } from "react-router-dom";
 
 const milestones = [
   {
@@ -104,6 +105,16 @@ const milestones = [
 ];
 
 const Milestone = () => {
+  const navigate = useNavigate();
+
+  const profile = (e) => {
+    e.preventDefault();
+    navigate("/about/profile", { replace: true });
+  };
+  const ourTeam = (e) => {
+    e.preventDefault();
+    navigate("/about/ourTeam", { replace: true });
+  };
   return (
     <Box>
       <Box
@@ -229,6 +240,45 @@ const Milestone = () => {
             <Nineties />
             <Twenties />
             <TwentyTens />
+          </Box>
+
+          <Box mt="100px">
+            <Heading
+              fontFamily="Playfair Display"
+              fontWeight="700"
+              fontSize="32px"
+              color="#021D37"
+              textAlign="center"
+              mb="22px"
+            >
+              Navigate To:
+            </Heading>
+            <Flex justifyContent="space-evenly">
+              <Button
+                fontFamily="Manrope"
+                fontSize="18px"
+                py="25px"
+                mb="52px"
+                textAlign="center"
+                fontWeight="700"
+                bg="#EEE"
+                onClick={(e) => profile(e)}
+              >
+                PROFILE
+              </Button>
+              <Button
+                fontFamily="Manrope"
+                fontSize="18px"
+                py="25px"
+                mb="52px"
+                textAlign="center"
+                fontWeight="700"
+                bg="#EEE"
+                onClick={(e) => ourTeam(e)}
+              >
+                OUR TEAM
+              </Button>
+            </Flex>
           </Box>
         </Box>
       </Flex>

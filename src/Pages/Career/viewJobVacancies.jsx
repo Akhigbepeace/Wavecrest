@@ -1,4 +1,12 @@
-import { Box, Button, Grid, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  Heading,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import waveimg from "assets/Images/waveimg.png";
@@ -49,6 +57,10 @@ const ViewJobVacancies = () => {
     const navigateTo = `/viewVacancies?companyName=${vacancy.company}&deadline=${vacancy.deadLine}&desc=${vacancy.desc}`;
 
     navigate(navigateTo, { replace: true });
+  };
+  const postJobVacancy = (e) => {
+    e.preventDefault();
+    navigate("/career/postJobVacancies", { replace: true });
   };
 
   return (
@@ -213,6 +225,41 @@ const ViewJobVacancies = () => {
             );
           })}
         </Grid>
+      </Box>
+      <Box
+        mt="100px"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <Heading
+          fontFamily="Playfair Display"
+          fontWeight="700"
+          fontSize="32px"
+          color="#021D37"
+          textAlign="center"
+          mb="22px"
+        >
+          Navigate To:
+        </Heading>
+        <Flex justifyContent="space-evenly">
+          <Button
+            fontFamily="Manrope"
+            fontSize="18px"
+            py="25px"
+            mb="52px"
+            textAlign="center"
+            fontWeight="700"
+            bg="#EEE"
+            onClick={(e) => postJobVacancy(e)}
+          >
+            POST JOB VACANCY
+          </Button>
+        </Flex>
       </Box>
     </Fragment>
   );

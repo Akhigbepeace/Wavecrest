@@ -10,7 +10,7 @@ import {
 import React, { Fragment } from "react";
 import aboutus from "assets/Images/aboutus.png";
 import waveimg from "assets/Images/waveimg.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const ApplyOnline = () => {
   const images = [
@@ -27,7 +27,33 @@ const ApplyOnline = () => {
       hotelPic: aboutus,
     },
   ];
-
+  const navigate = useNavigate();
+  const navigateTo = [
+    {
+      name: "ADMISSION REQUIREMENTS",
+      redirect: () => {
+        navigate("/admission/admissionRequirements", { replace: true });
+      },
+    },
+    {
+      name: "TUITION AND SCHOLARSHIP",
+      redirect: () => {
+        navigate("/admission/tuitionAndScholarship", { replace: true });
+      },
+    },
+    {
+      name: "APPLY ONLINE",
+      redirect: () => {
+        navigate("/admission/applyOnline", { replace: true });
+      },
+    },
+    {
+      name: "FAQs",
+      redirect: () => {
+        navigate("/admission/faqs", { replace: true });
+      },
+    },
+  ];
   return (
     <Fragment>
       <Box
@@ -85,56 +111,6 @@ const ApplyOnline = () => {
           }}
         >
           <Box>
-            <Box>
-              <Box
-                w="88px"
-                h="3px"
-                bg="#021D37"
-                mb="10px"
-                display={{
-                  sm: "block",
-                  md: "block",
-                  lg: "block",
-                  xl: "none",
-                  "2xl": "none",
-                }}
-              ></Box>
-
-              <Box>
-                <Heading
-                  fontFamily="Playfair Display"
-                  fontSize="32px"
-                  fontWeight="700"
-                  color="#021D37"
-                  display={{
-                    sm: "none",
-                    md: "none",
-                    lg: "none",
-                    xl: "block",
-                    "2xl": "block",
-                  }}
-                >
-                  Hostel Application
-                </Heading>
-
-                <Heading
-                  fontFamily="Playfair Display"
-                  fontSize="24px"
-                  fontWeight="700"
-                  color="#021D37"
-                  display={{
-                    sm: "block",
-                    md: "block",
-                    lg: "block",
-                    xl: "none",
-                    "2xl": "none",
-                  }}
-                >
-                  Apply For A Hostel
-                </Heading>
-              </Box>
-            </Box>
-
             <Flex
               display={{
                 sm: "block",
@@ -143,6 +119,7 @@ const ApplyOnline = () => {
                 xl: "flex",
                 "2xl": "flex",
               }}
+              alignItems="center"
             >
               <Image
                 src={aboutus}
@@ -152,9 +129,67 @@ const ApplyOnline = () => {
                 borderRadius="5px"
                 mt="30px"
                 mr="30px"
+                display={{
+                  sm: "block",
+                  md: "block",
+                  lg: "block",
+                  xl: "none",
+                  "2xl": "none",
+                }}
               />
 
               <Box>
+                <Box>
+                  <Box
+                    w="88px"
+                    h="3px"
+                    bg="#021D37"
+                    mb="5px"
+                    mt="20px"
+                    display={{
+                      sm: "block",
+                      md: "block",
+                      lg: "block",
+                      xl: "none",
+                      "2xl": "none",
+                    }}
+                  ></Box>
+
+                  <Box>
+                    <Heading
+                      fontFamily="Playfair Display"
+                      fontSize="32px"
+                      fontWeight="700"
+                      color="#021D37"
+                      display={{
+                        sm: "none",
+                        md: "none",
+                        lg: "none",
+                        xl: "block",
+                        "2xl": "block",
+                      }}
+                    >
+                      Hostel Application
+                    </Heading>
+
+                    <Heading
+                      fontFamily="Playfair Display"
+                      fontSize="24px"
+                      fontWeight="700"
+                      color="#021D37"
+                      display={{
+                        sm: "block",
+                        md: "block",
+                        lg: "block",
+                        xl: "none",
+                        "2xl": "none",
+                      }}
+                    >
+                      Apply For A Hostel
+                    </Heading>
+                  </Box>
+                </Box>
+
                 <Text
                   fontFamily="Manrope"
                   fontSize={{
@@ -199,6 +234,23 @@ const ApplyOnline = () => {
                   REGISTER
                 </Button>
               </Box>
+
+              <Image
+                src={aboutus}
+                w="323px"
+                h="323px"
+                objectFit="cover"
+                borderRadius="5px"
+                mt="30px"
+                ml="30px"
+                display={{
+                  sm: "none",
+                  md: "none",
+                  lg: "none",
+                  xl: "block",
+                  "2xl": "block",
+                }}
+              />
             </Flex>
           </Box>
         </Flex>
@@ -238,6 +290,55 @@ const ApplyOnline = () => {
             );
           })}
         </Grid>
+
+        <Box
+          mt="70px"
+          display={{
+            sm: "block",
+            md: "block",
+            lg: "block",
+            xl: "none",
+            "2xl": "none",
+          }}
+        >
+          <Heading
+            fontFamily="Playfair Display"
+            fontWeight="700"
+            fontSize="32px"
+            color="#021D37"
+            textAlign="center"
+            mb="22px"
+          >
+            Navigate To:
+          </Heading>
+          <Grid
+            gridTemplateColumns={{
+              sm: "1fr",
+              md: "1fr 1fr",
+              lg: "1fr 1fr",
+            }}
+            mb="50px"
+          >
+            {navigateTo.map((items, index) => {
+              return (
+                <Button
+                  key={index}
+                  fontFamily="Manrope"
+                  fontSize="18px"
+                  py="25px"
+                  mb="15px"
+                  mr="15px"
+                  textAlign="center"
+                  fontWeight="700"
+                  bg="#EEE"
+                  onClick={items.redirect}
+                >
+                  {items.name}
+                </Button>
+              );
+            })}
+          </Grid>
+        </Box>
       </Box>
     </Fragment>
   );

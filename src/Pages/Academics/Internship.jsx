@@ -7,11 +7,13 @@ import {
   Image,
   Select,
   Button,
+  Grid,
 } from "@chakra-ui/react";
 
 import React, { Fragment, useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
+import { useNavigate } from "react-router-dom";
 
 const Internship = () => {
   const initialValues = {
@@ -75,6 +77,27 @@ const Internship = () => {
     },
     {
       course: "Certificate in Hospitality Operations",
+    },
+  ];
+  const navigate = useNavigate();
+  const navigateTo = [
+    {
+      name: "PROGRAMMES",
+      redirect: () => {
+        navigate("/academics/programmes", { replace: true });
+      },
+    },
+    {
+      name: "TRAINING",
+      redirect: () => {
+        navigate("/academics/training", { replace: true });
+      },
+    },
+    {
+      name: "NYSC",
+      redirect: () => {
+        navigate("/academics/nysc", { replace: true });
+      },
     },
   ];
 
@@ -280,6 +303,7 @@ const Internship = () => {
             textAlign="center"
             borderRadius="3px"
             mt="8px"
+            mb="45px"
             _hover={{
               bg: "#020E1B",
               transition: "all ease 0.4s",
@@ -288,22 +312,62 @@ const Internship = () => {
             PRE-REGISTER
           </Button>
         </form>
+      </Box>
 
-        <Text
-          fontFamily="Manrope"
-          fontSize={{
-            sm: "18px",
-            md: "24px",
-            lg: "24px",
-            xl: "24px",
-            "2xl": "24px",
-          }}
-          fontWeight="400"
-          my="45px"
+      <Box
+        mt="70px"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+        px={{
+          sm: "20px",
+          md: "20px",
+          lg: "91px",
+          xl: "91px",
+          "2xl": "91px",
+        }}
+      >
+        <Heading
+          fontFamily="Playfair Display"
+          fontWeight="700"
+          fontSize="32px"
+          color="#021D37"
+          textAlign="center"
+          mb="22px"
         >
-          NB: After payment, a google link would be sent to your mail to
-          complete the registration
-        </Text>
+          Navigate To:
+        </Heading>
+        <Grid
+          gridTemplateColumns={{
+            sm: "1fr",
+            md: "1fr 1fr",
+            lg: "1fr 1fr",
+          }}
+          mb="50px"
+        >
+          {navigateTo.map((items, index) => {
+            return (
+              <Button
+                key={index}
+                fontFamily="Manrope"
+                fontSize="18px"
+                py="25px"
+                mb="15px"
+                mr="15px"
+                textAlign="center"
+                fontWeight="700"
+                bg="#EEE"
+                onClick={items.redirect}
+              >
+                {items.name}
+              </Button>
+            );
+          })}
+        </Grid>
       </Box>
     </Fragment>
   );
