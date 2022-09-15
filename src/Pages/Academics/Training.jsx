@@ -15,6 +15,7 @@ import {
   Heading,
   Image,
   Text,
+  Grid,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -85,6 +86,26 @@ const Training = forwardRef((props, ref) => {
 
     navigate("/admission/applyOnline", { replace: true });
   };
+  const navigateTo = [
+    {
+      name: "PROGRAMMES",
+      redirect: () => {
+        navigate("/academics/programmes", { replace: true });
+      },
+    },
+    {
+      name: "INTERNSHIP",
+      redirect: () => {
+        navigate("/academics/internship", { replace: true });
+      },
+    },
+    {
+      name: "NYSC",
+      redirect: () => {
+        navigate("/academics/nysc", { replace: true });
+      },
+    },
+  ];
   return (
     <Fragment>
       <Box
@@ -413,6 +434,62 @@ const Training = forwardRef((props, ref) => {
           );
         })}
       </Flex>
+
+      <Box
+        mt="70px"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+        px={{
+          sm: "20px",
+          md: "20px",
+          lg: "91px",
+          xl: "91px",
+          "2xl": "91px",
+        }}
+      >
+        <Heading
+          fontFamily="Playfair Display"
+          fontWeight="700"
+          fontSize="32px"
+          color="#021D37"
+          textAlign="center"
+          mb="22px"
+        >
+          Navigate To:
+        </Heading>
+        <Grid
+          gridTemplateColumns={{
+            sm: "1fr",
+            md: "1fr 1fr",
+            lg: "1fr 1fr",
+          }}
+          mb="50px"
+        >
+          {navigateTo.map((items, index) => {
+            return (
+              <Button
+                key={index}
+                fontFamily="Manrope"
+                fontSize="18px"
+                py="25px"
+                mb="15px"
+                mr="15px"
+                textAlign="center"
+                fontWeight="700"
+                bg="#EEE"
+                onClick={items.redirect}
+              >
+                {items.name}
+              </Button>
+            );
+          })}
+        </Grid>
+      </Box>
     </Fragment>
   );
 });

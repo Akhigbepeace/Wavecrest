@@ -7,8 +7,10 @@ import {
   Button,
   Textarea,
   FormLabel,
+  Flex,
 } from "@chakra-ui/react";
 import React, { Fragment, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 import waveimg from "assets/Images/waveimg.png";
 
@@ -83,6 +85,12 @@ const PostJobVacancies = () => {
     if (res.status === 200 || res.text === "OK") {
       setInputField(initialValues);
     }
+  };
+  const navigate = useNavigate();
+
+  const viewJobVacancy = (e) => {
+    e.preventDefault();
+    navigate("/career/viewJobVacancies", { replace: true });
   };
 
   return (
@@ -233,40 +241,81 @@ const PostJobVacancies = () => {
             })}
 
             <Box>
-              <FormLabel
-                fontFamily="Manrope"
-                color="#021D37"
-                fontSize="18px"
-                lineHeight="25px"
-                fontWeight="700"
-                mt="20px"
-              >
-                Notes:
-              </FormLabel>
+              <Box>
+                <FormLabel
+                  fontFamily="Manrope"
+                  color="#021D37"
+                  fontSize="18px"
+                  lineHeight="25px"
+                  fontWeight="600"
+                  mt="20px"
+                >
+                  Upload Job Description
+                </FormLabel>
+                <Input
+                  type="file"
+                  variant="filled"
+                  name="job_description"
+                  display="block"
+                  pt="15px"
+                  value={inputField[form.name]}
+                  onChange={inputValues}
+                  w={{
+                    sm: "100%",
+                    md: "400px",
+                    lg: "526px",
+                    xl: "526px",
+                    "2xl": "526px",
+                  }}
+                  h="67px"
+                  mb="10px"
+                  bg="#EBEDEF"
+                  _placeholder={{
+                    fontFamily: "Manrope",
+                    color: "#021D37",
+                    fontSize: "18px",
+                    lineHeight: "25px",
+                    fontWeight: "400",
+                  }}
+                />
+              </Box>
 
-              <Textarea
-                placeholder="Extra Notes"
-                variant="filled"
-                bg="#EBEDEF"
-                onChange={inputValues}
-                name="user_message"
-                value={inputField.user_message}
-                w={{
-                  sm: "100%",
-                  md: "400px",
-                  lg: "526px",
-                  xl: "526px",
-                  "2xl": "526px",
-                }}
-                h="80px"
-                _placeholder={{
-                  fontFamily: "Manrope",
-                  color: "#021D37",
-                  fontSize: "18px",
-                  lineHeight: "25px",
-                  fontWeight: "400",
-                }}
-              />
+              <Box>
+                <FormLabel
+                  fontFamily="Manrope"
+                  color="#021D37"
+                  fontSize="18px"
+                  lineHeight="25px"
+                  fontWeight="700"
+                  mt="20px"
+                >
+                  Notes:
+                </FormLabel>
+
+                <Textarea
+                  placeholder="Extra Notes"
+                  variant="filled"
+                  bg="#EBEDEF"
+                  onChange={inputValues}
+                  name="user_message"
+                  value={inputField.user_message}
+                  w={{
+                    sm: "100%",
+                    md: "400px",
+                    lg: "526px",
+                    xl: "526px",
+                    "2xl": "526px",
+                  }}
+                  h="80px"
+                  _placeholder={{
+                    fontFamily: "Manrope",
+                    color: "#021D37",
+                    fontSize: "18px",
+                    lineHeight: "25px",
+                    fontWeight: "400",
+                  }}
+                />
+              </Box>
             </Box>
           </Box>
 
@@ -292,6 +341,42 @@ const PostJobVacancies = () => {
             POST
           </Button>
         </form>
+      </Box>
+
+      <Box
+        mt="100px"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <Heading
+          fontFamily="Playfair Display"
+          fontWeight="700"
+          fontSize="32px"
+          color="#021D37"
+          textAlign="center"
+          mb="22px"
+        >
+          Navigate To:
+        </Heading>
+        <Flex justifyContent="space-evenly">
+          <Button
+            fontFamily="Manrope"
+            fontSize="18px"
+            py="25px"
+            mb="52px"
+            textAlign="center"
+            fontWeight="700"
+            bg="#EEE"
+            onClick={(e) => viewJobVacancy(e)}
+          >
+            VIEW JOB VACANCY
+          </Button>
+        </Flex>
       </Box>
     </Fragment>
   );

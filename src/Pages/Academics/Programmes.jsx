@@ -4,6 +4,7 @@ import {
   Image,
   Heading,
   Flex,
+  Grid,
   Link,
   Button,
 } from "@chakra-ui/react";
@@ -80,6 +81,27 @@ const Programmes = () => {
     e.preventDefault();
     navigate("/admission/applyOnline", { replace: true });
   };
+
+  const navigateTo = [
+    {
+      name: "TRAINING",
+      redirect: () => {
+        navigate("/academics/training", { replace: true });
+      },
+    },
+    {
+      name: "INTERNSHIP",
+      redirect: () => {
+        navigate("/academics/internship", { replace: true });
+      },
+    },
+    {
+      name: "NYSC",
+      redirect: () => {
+        navigate("/academics/nysc", { replace: true });
+      },
+    },
+  ];
 
   return (
     <Box>
@@ -307,7 +329,6 @@ const Programmes = () => {
                   </Text>
 
                   <Button
-                    href="/admission/applyOnline"
                     w="142px"
                     height="46.89px"
                     bg="#021D37"
@@ -319,6 +340,7 @@ const Programmes = () => {
                     textAlign="center"
                     borderRadius="3px"
                     mt="30px"
+                    onClick={(e) => ApplyNow(e)}
                     _hover={{
                       bg: "#020E1B",
                       transition: "all ease 0.4s",
@@ -331,6 +353,62 @@ const Programmes = () => {
             </Box>
           );
         })}
+      </Box>
+
+      <Box
+        mt="70px"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+        px={{
+          sm: "20px",
+          md: "20px",
+          lg: "91px",
+          xl: "91px",
+          "2xl": "91px",
+        }}
+      >
+        <Heading
+          fontFamily="Playfair Display"
+          fontWeight="700"
+          fontSize="32px"
+          color="#021D37"
+          textAlign="center"
+          mb="22px"
+        >
+          Navigate To:
+        </Heading>
+        <Grid
+          gridTemplateColumns={{
+            sm: "1fr",
+            md: "1fr 1fr",
+            lg: "1fr 1fr",
+          }}
+          mb="50px"
+        >
+          {navigateTo.map((items, index) => {
+            return (
+              <Button
+                key={index}
+                fontFamily="Manrope"
+                fontSize="18px"
+                py="25px"
+                mb="15px"
+                mr="15px"
+                textAlign="center"
+                fontWeight="700"
+                bg="#EEE"
+                onClick={items.redirect}
+              >
+                {items.name}
+              </Button>
+            );
+          })}
+        </Grid>
       </Box>
     </Box>
   );

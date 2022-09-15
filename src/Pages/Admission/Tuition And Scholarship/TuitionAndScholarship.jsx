@@ -22,6 +22,7 @@ import {
 import { FaChevronCircleDown } from "react-icons/fa";
 import { FaChevronCircleUp } from "react-icons/fa";
 import RespTuition from "./RespTuition";
+import { useNavigate } from "react-router-dom";
 
 const TuitionAndScholarship = () => {
   const Tuition = [
@@ -131,6 +132,10 @@ const TuitionAndScholarship = () => {
       totalFeesPrice1: "#148,000",
     },
   ];
+  const navigate = useNavigate();
+  const redirect = () => {
+    navigate("", { replace: true });
+  };
 
   return (
     <Fragment>
@@ -486,6 +491,7 @@ const TuitionAndScholarship = () => {
                             mt="16px"
                             w="183px"
                             borderRadius="3px"
+                            onClick={() => redirect}
                           >
                             PAY NOW
                           </Button>

@@ -1,4 +1,4 @@
-import { Box, Text, Heading, Button, Image } from "@chakra-ui/react";
+import { Box, Text, Heading, Button, Image, Flex } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import OurStory from "./OurStory";
 import JsFileDownloader from "js-file-downloader";
@@ -6,9 +6,21 @@ import about from "assets/Images/About.png";
 import Gallery from "Pages/About/Profile/Gallery";
 import OurPhilosophy from "./OurPhilosophy";
 import OurClout from "./OurClout";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
   const fileUrl = "/documents/Ojumo House.pdf";
+
+  const navigate = useNavigate();
+
+  const milestone = (e) => {
+    e.preventDefault();
+    navigate("/about/milestone", { replace: true });
+  };
+  const ourTeam = (e) => {
+    e.preventDefault();
+    navigate("/about/ourTeam", { replace: true });
+  };
 
   return (
     <Fragment>
@@ -153,6 +165,54 @@ const Profile = () => {
         >
           Download Here
         </Button>
+      </Box>
+
+      <Box
+        mt="100px"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <Heading
+          fontFamily="Playfair Display"
+          fontWeight="700"
+          fontSize="32px"
+          color="#021D37"
+          textAlign="center"
+          mb="22px"
+        >
+          Navigate To:
+        </Heading>
+        <Flex justifyContent="space-evenly">
+          <Button
+            fontFamily="Manrope"
+            fontSize="18px"
+            py="25px"
+            mb="52px"
+            textAlign="center"
+            fontWeight="700"
+            bg="#EEE"
+            onClick={(e) => milestone(e)}
+          >
+            MILESTONE
+          </Button>
+          <Button
+            fontFamily="Manrope"
+            fontSize="18px"
+            py="25px"
+            mb="52px"
+            textAlign="center"
+            fontWeight="700"
+            bg="#EEE"
+            onClick={(e) => ourTeam(e)}
+          >
+            OUR TEAM
+          </Button>
+        </Flex>
       </Box>
     </Fragment>
   );

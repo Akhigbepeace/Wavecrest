@@ -109,15 +109,7 @@ const ViewVacancies = () => {
         </Box>
       </Box>
 
-      <Box
-        px={{
-          sm: "20px",
-          md: "20px",
-          lg: "91px",
-          xl: "91px",
-          "2xl": "91px",
-        }}
-      >
+      <Box>
         <Box>
           <Box>
             <Button
@@ -127,6 +119,13 @@ const ViewVacancies = () => {
               mb="52px"
               fontWeight="700"
               bg="#EEE"
+              mx={{
+                sm: "20px",
+                md: "20px",
+                lg: "91px",
+                xl: "91px",
+                "2xl": "91px",
+              }}
               mt={{
                 sm: "20px",
                 md: "20px",
@@ -141,12 +140,35 @@ const ViewVacancies = () => {
             </Button>
 
             <Flex
-              my="20px"
+              bg={{
+                sm: "#EBEDEF",
+                md: "#EBEDEF",
+                lg: "none",
+                xl: "none",
+                "2xl": "none",
+              }}
+              mt="20px"
+              mb="90px"
               flexDirection="column"
-              justifyContent="center"
-              alignItems="center"
+              px={{
+                sm: "20px",
+                md: "20px",
+                lg: "91px",
+                xl: "91px",
+                "2xl": "91px",
+              }}
+              py="20px"
             >
-              <Flex alignItems="center">
+              <Flex
+                display={{
+                  sm: "block",
+                  md: "flex",
+                  lg: "flex",
+                  xl: "flex",
+                  "2xl": "flex",
+                }}
+                alignItems="center"
+              >
                 <Heading fontWeight="700" fontFamily="Manrope" fontSize="25px">
                   Company Name: &nbsp;
                 </Heading>
@@ -155,13 +177,29 @@ const ViewVacancies = () => {
                   fontWeight="400"
                   fontFamily="Manrope"
                   fontSize="20px"
-                  textAlign="center"
+                  textAlign={{
+                    sm: "left",
+                    md: "center",
+                    lg: "center",
+                    xl: "center",
+                    "2xl": "center",
+                  }}
                 >
                   {searchParams.get("companyName")}
                 </Text>
               </Flex>
 
-              <Flex alignItems="center" my="10px">
+              <Flex
+                display={{
+                  sm: "block",
+                  md: "flex",
+                  lg: "flex",
+                  xl: "flex",
+                  "2xl": "flex",
+                }}
+                alignItems="center"
+                my="10px"
+              >
                 <Heading fontWeight="700" fontFamily="Manrope" fontSize="25px">
                   Description: &nbsp;
                 </Heading>
@@ -170,13 +208,28 @@ const ViewVacancies = () => {
                   fontWeight="400"
                   fontFamily="Manrope"
                   fontSize="20px"
-                  textAlign="center"
+                  textAlign={{
+                    sm: "left",
+                    md: "center",
+                    lg: "center",
+                    xl: "center",
+                    "2xl": "center",
+                  }}
                 >
-                  {searchParams.get("deadline")}
+                  {searchParams.get("desc")}
                 </Text>
               </Flex>
 
-              <Flex alignItems="center">
+              <Flex
+                display={{
+                  sm: "block",
+                  md: "flex",
+                  lg: "flex",
+                  xl: "flex",
+                  "2xl": "flex",
+                }}
+                alignItems="center"
+              >
                 <Heading fontWeight="700" fontFamily="Manrope" fontSize="25px">
                   Deadline: &nbsp;
                 </Heading>
@@ -185,9 +238,15 @@ const ViewVacancies = () => {
                   fontWeight="400"
                   fontFamily="Manrope"
                   fontSize="20px"
-                  textAlign="center"
+                  textAlign={{
+                    sm: "left",
+                    md: "center",
+                    lg: "center",
+                    xl: "center",
+                    "2xl": "center",
+                  }}
                 >
-                  {searchParams.get("desc")}
+                  {searchParams.get("deadline")}
                 </Text>
               </Flex>
             </Flex>
@@ -195,7 +254,15 @@ const ViewVacancies = () => {
         </Box>
 
         <form ref={form} onSubmit={sendEmail}>
-          <Box>
+          <Box
+            px={{
+              sm: "20px",
+              md: "20px",
+              lg: "91px",
+              xl: "91px",
+              "2xl": "91px",
+            }}
+          >
             {forms.map((form, index) => {
               return (
                 <Fragment>
@@ -241,7 +308,15 @@ const ViewVacancies = () => {
             })}
           </Box>
 
-          <Box>
+          <Box
+            px={{
+              sm: "20px",
+              md: "20px",
+              lg: "91px",
+              xl: "91px",
+              "2xl": "91px",
+            }}
+          >
             <FormLabel
               fontFamily="Manrope"
               color="#021D37"
@@ -272,7 +347,15 @@ const ViewVacancies = () => {
             ></Input>
           </Box>
 
-          <Box>
+          <Box
+            px={{
+              sm: "20px",
+              md: "20px",
+              lg: "91px",
+              xl: "91px",
+              "2xl": "91px",
+            }}
+          >
             <FormLabel
               fontFamily="Manrope"
               color="#021D37"
@@ -317,6 +400,13 @@ const ViewVacancies = () => {
             borderRadius="3px"
             mt="8px"
             mb="70px"
+            mx={{
+              sm: "20px",
+              md: "20px",
+              lg: "91px",
+              xl: "91px",
+              "2xl": "91px",
+            }}
             _hover={{
               bg: "#020E1B",
               transition: "all ease 0.4s",
