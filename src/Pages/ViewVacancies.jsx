@@ -275,9 +275,6 @@ const ViewVacancies = () => {
                     mt="20px"
                   >
                     {form.label}
-                    <Text display="inline" color={"red"}>
-                      *
-                    </Text>
                   </FormLabel>
                   <Input
                     key={index}
