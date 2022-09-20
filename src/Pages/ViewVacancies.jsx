@@ -325,7 +325,7 @@ const ViewVacancies = () => {
               fontWeight="700"
               mt="20px"
             >
-              Resume
+              Upload Resumé
             </FormLabel>
             <Input
               type="file"
@@ -364,7 +364,7 @@ const ViewVacancies = () => {
               fontWeight="700"
               mt="20px"
             >
-              Cover Letter
+              Upload Cover Letter
             </FormLabel>
             <Input
               type="file"
