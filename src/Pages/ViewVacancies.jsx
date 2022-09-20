@@ -7,6 +7,7 @@ import {
   Text,
   FormLabel,
   Flex,
+  useToast,
 } from "@chakra-ui/react";
 import React, { Fragment, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
@@ -22,10 +23,9 @@ const ViewVacancies = () => {
   const initialValues = {
     user_name: "",
     user_email: "",
-    user_company: "",
     user_number: "",
-    user_address: "",
-    user_post: "",
+    user_resume: "",
+    user_coverLetter: "",
   };
 
   const [inputField, setInputField] = useState(initialValues);
@@ -66,12 +66,20 @@ const ViewVacancies = () => {
 
     const res = await emailjs.sendForm(
       "service_djq4ick",
-      "template_i27quow",
+      "template_krcopwh",
       form.current,
       "JPAG_ZJVlAcuO_5D-"
     );
 
     setInputField(initialValues);
+
+    toast({
+      title: "SUCCESSFUL !",
+      description: "Your request has been submitted",
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+    });
   };
 
   const navigate = useNavigate();
@@ -81,6 +89,7 @@ const ViewVacancies = () => {
     navigate("/career/viewJobVacancies", { replace: true });
   };
   const [searchParams] = useSearchParams();
+  const toast = useToast();
 
   return (
     <Box>
@@ -111,146 +120,144 @@ const ViewVacancies = () => {
 
       <Box>
         <Box>
-          <Box>
-            <Button
-              fontFamily="Manrope"
-              fontSize="18px"
-              py="25px"
-              mb="52px"
-              fontWeight="700"
-              bg="#EEE"
-              mx={{
-                sm: "20px",
-                md: "20px",
-                lg: "91px",
-                xl: "91px",
-                "2xl": "91px",
+          <Button
+            fontFamily="Manrope"
+            fontSize="18px"
+            py="25px"
+            mb="52px"
+            fontWeight="700"
+            bg="#EEE"
+            mx={{
+              sm: "20px",
+              md: "20px",
+              lg: "91px",
+              xl: "91px",
+              "2xl": "91px",
+            }}
+            mt={{
+              sm: "20px",
+              md: "20px",
+              lg: "20px",
+              xl: "20px",
+              "2xl": "20px",
+            }}
+            onClick={(e) => BackToJobVancanies(e)}
+          >
+            <FaChevronLeft size="20px" />
+            Back To Job Vacancies
+          </Button>
+
+          <Flex
+            bg={{
+              sm: "#EBEDEF",
+              md: "#EBEDEF",
+              lg: "none",
+              xl: "none",
+              "2xl": "none",
+            }}
+            mt="20px"
+            mb="90px"
+            flexDirection="column"
+            px={{
+              sm: "20px",
+              md: "20px",
+              lg: "91px",
+              xl: "91px",
+              "2xl": "91px",
+            }}
+            py="20px"
+          >
+            <Flex
+              display={{
+                sm: "block",
+                md: "flex",
+                lg: "flex",
+                xl: "flex",
+                "2xl": "flex",
               }}
-              mt={{
-                sm: "20px",
-                md: "20px",
-                lg: "20px",
-                xl: "20px",
-                "2xl": "20px",
-              }}
-              onClick={(e) => BackToJobVancanies(e)}
+              alignItems="center"
             >
-              <FaChevronLeft size="20px" />
-              Back To Job Vacancies
-            </Button>
+              <Heading fontWeight="700" fontFamily="Manrope" fontSize="25px">
+                Company Name: &nbsp;
+              </Heading>
+
+              <Text
+                fontWeight="400"
+                fontFamily="Manrope"
+                fontSize="20px"
+                textAlign={{
+                  sm: "left",
+                  md: "center",
+                  lg: "center",
+                  xl: "center",
+                  "2xl": "center",
+                }}
+              >
+                {searchParams.get("companyName")}
+              </Text>
+            </Flex>
 
             <Flex
-              bg={{
-                sm: "#EBEDEF",
-                md: "#EBEDEF",
-                lg: "none",
-                xl: "none",
-                "2xl": "none",
+              display={{
+                sm: "block",
+                md: "flex",
+                lg: "flex",
+                xl: "flex",
+                "2xl": "flex",
               }}
-              mt="20px"
-              mb="90px"
-              flexDirection="column"
-              px={{
-                sm: "20px",
-                md: "20px",
-                lg: "91px",
-                xl: "91px",
-                "2xl": "91px",
-              }}
-              py="20px"
+              alignItems="center"
+              my="10px"
             >
-              <Flex
-                display={{
-                  sm: "block",
-                  md: "flex",
-                  lg: "flex",
-                  xl: "flex",
-                  "2xl": "flex",
+              <Heading fontWeight="700" fontFamily="Manrope" fontSize="25px">
+                Description: &nbsp;
+              </Heading>
+
+              <Text
+                fontWeight="400"
+                fontFamily="Manrope"
+                fontSize="20px"
+                textAlign={{
+                  sm: "left",
+                  md: "center",
+                  lg: "center",
+                  xl: "center",
+                  "2xl": "center",
                 }}
-                alignItems="center"
               >
-                <Heading fontWeight="700" fontFamily="Manrope" fontSize="25px">
-                  Company Name: &nbsp;
-                </Heading>
-
-                <Text
-                  fontWeight="400"
-                  fontFamily="Manrope"
-                  fontSize="20px"
-                  textAlign={{
-                    sm: "left",
-                    md: "center",
-                    lg: "center",
-                    xl: "center",
-                    "2xl": "center",
-                  }}
-                >
-                  {searchParams.get("companyName")}
-                </Text>
-              </Flex>
-
-              <Flex
-                display={{
-                  sm: "block",
-                  md: "flex",
-                  lg: "flex",
-                  xl: "flex",
-                  "2xl": "flex",
-                }}
-                alignItems="center"
-                my="10px"
-              >
-                <Heading fontWeight="700" fontFamily="Manrope" fontSize="25px">
-                  Description: &nbsp;
-                </Heading>
-
-                <Text
-                  fontWeight="400"
-                  fontFamily="Manrope"
-                  fontSize="20px"
-                  textAlign={{
-                    sm: "left",
-                    md: "center",
-                    lg: "center",
-                    xl: "center",
-                    "2xl": "center",
-                  }}
-                >
-                  {searchParams.get("desc")}
-                </Text>
-              </Flex>
-
-              <Flex
-                display={{
-                  sm: "block",
-                  md: "flex",
-                  lg: "flex",
-                  xl: "flex",
-                  "2xl": "flex",
-                }}
-                alignItems="center"
-              >
-                <Heading fontWeight="700" fontFamily="Manrope" fontSize="25px">
-                  Deadline: &nbsp;
-                </Heading>
-
-                <Text
-                  fontWeight="400"
-                  fontFamily="Manrope"
-                  fontSize="20px"
-                  textAlign={{
-                    sm: "left",
-                    md: "center",
-                    lg: "center",
-                    xl: "center",
-                    "2xl": "center",
-                  }}
-                >
-                  {searchParams.get("deadline")}
-                </Text>
-              </Flex>
+                {searchParams.get("desc")}
+              </Text>
             </Flex>
-          </Box>
+
+            <Flex
+              display={{
+                sm: "block",
+                md: "flex",
+                lg: "flex",
+                xl: "flex",
+                "2xl": "flex",
+              }}
+              alignItems="center"
+            >
+              <Heading fontWeight="700" fontFamily="Manrope" fontSize="25px">
+                Deadline: &nbsp;
+              </Heading>
+
+              <Text
+                fontWeight="400"
+                fontFamily="Manrope"
+                fontSize="20px"
+                textAlign={{
+                  sm: "left",
+                  md: "center",
+                  lg: "center",
+                  xl: "center",
+                  "2xl": "center",
+                }}
+              >
+                {searchParams.get("deadline")}
+              </Text>
+            </Flex>
+          </Flex>
         </Box>
 
         <form ref={form} onSubmit={sendEmail}>
@@ -277,6 +284,7 @@ const ViewVacancies = () => {
                     {form.label}
                   </FormLabel>
                   <Input
+                    required
                     key={index}
                     type={form.fieldType}
                     placeholder={form.placeHolder}
@@ -328,10 +336,13 @@ const ViewVacancies = () => {
               Upload Resumé
             </FormLabel>
             <Input
+              required
               type="file"
               variant="filled"
               display="block"
               accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.png, .jpg, .jpeg"
+              name="user_resume"
+              value={inputField.user_resume}
               h="67px"
               pt="15px"
               onChange={inputValues}
@@ -367,13 +378,16 @@ const ViewVacancies = () => {
               Upload Cover Letter
             </FormLabel>
             <Input
+              required
               type="file"
               variant="filled"
               display="block"
+              name="user_coverLetter"
               accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.png, .jpg, .jpeg"
               h="67px"
               pt="15px"
               onChange={inputValues}
+              value={inputField.user_coverLetter}
               w={{
                 sm: "100%",
                 md: "400px",

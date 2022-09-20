@@ -8,6 +8,7 @@ import {
   Textarea,
   FormLabel,
   Flex,
+  useToast,
 } from "@chakra-ui/react";
 import React, { Fragment, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -58,13 +59,6 @@ const PostJobVacancies = () => {
       variant: "filled",
     },
     {
-      fieldType: "text",
-      name: "job_description",
-      label: "Job Description",
-      placeHolder: "Job Description",
-      variant: "filled",
-    },
-    {
       fieldType: "date",
       name: "application_deadline",
       label: "Application Deadline",
@@ -74,16 +68,33 @@ const PostJobVacancies = () => {
 
   const sendEmail = async (e) => {
     e.preventDefault();
+    try {
+      const res = await emailjs.sendForm(
+        "service_djq4ick",
+        "template_krcopwh",
+        form.current,
+        "JPAG_ZJVlAcuO_5D-"
+      );
 
-    const res = await emailjs.sendForm(
-      "service_djq4ick",
-      "template_i27quow",
-      form.current,
-      "JPAG_ZJVlAcuO_5D-"
-    );
-
-    if (res.status === 200 || res.text === "OK") {
       setInputField(initialValues);
+      toast({
+        title: "SUCCESSFUL !",
+        description:
+          "Your request has been submitted",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+    } catch (err) {
+      toast({
+        title: "ERROR !",
+        description: "File size too large! Maximum file size of 50kb",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+
+      // console.log(err)
     }
   };
   const navigate = useNavigate();
@@ -93,6 +104,7 @@ const PostJobVacancies = () => {
     navigate("/career/viewJobVacancies", { replace: true });
   };
 
+  const toast = useToast();
   return (
     <Fragment>
       <Box
@@ -211,6 +223,7 @@ const PostJobVacancies = () => {
                     {form.label}
                   </FormLabel>
                   <Input
+                    required
                     type={form.fieldType}
                     placeholder={form.placeHolder}
                     variant={form.variant}
@@ -258,7 +271,7 @@ const PostJobVacancies = () => {
                   name="job_description"
                   display="block"
                   pt="15px"
-                  value={inputField[form.name]}
+                  value={inputField.job_description}
                   onChange={inputValues}
                   w={{
                     sm: "100%",

@@ -8,6 +8,7 @@ import {
   Grid,
   Select,
   Button,
+  useToast,
 } from "@chakra-ui/react";
 
 import React, { Fragment, useRef, useState } from "react";
@@ -22,6 +23,7 @@ const NYSC = () => {
     user_number: "",
     user_address: "",
     user_class: "",
+    user_programme: "",
   };
 
   const [inputField, setInputField] = useState(initialValues);
@@ -55,7 +57,7 @@ const NYSC = () => {
       variant: "filled",
     },
     {
-      fieldType: "number",
+      fieldType: "tel",
       name: "user_number",
       placeHolder: "Phone Number",
       variant: "filled",
@@ -113,7 +115,16 @@ const NYSC = () => {
     );
 
     setInputField(initialValues);
+    toast({
+      title: "SUCCESSFUL !",
+      description: "Your request has been submitted",
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+    });
   };
+
+  const toast = useToast();
 
   return (
     <Fragment>
@@ -277,7 +288,7 @@ const NYSC = () => {
               return (
                 <option
                   key={index}
-                  name={programme.name}
+                  name={inputField.user_programme}
                   value={inputField[programme.course]}
                   borderBottom={
                     programme.length - 1 === index

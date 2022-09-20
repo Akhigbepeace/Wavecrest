@@ -156,8 +156,15 @@ const Contact = () => {
       form.current,
       "JPAG_ZJVlAcuO_5D-"
     );
-    setformErrors(validate(inputField));
+
     setInputField(initialValues);
+    toast({
+      title: "SUCCESSFUL !",
+      description: "Your request has been submitted",
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+    });
   };
 
   const form = useRef();
@@ -331,15 +338,6 @@ const Contact = () => {
                   xl: "0",
                   "2xl": "0",
                 }}
-                onClick={() =>
-                  toast({
-                    title: "SUCCESSFUL !",
-                    description: "Your request has been submitted",
-                    status: "success",
-                    duration: 5000,
-                    isClosable: true,
-                  })
-                }
                 _hover={{
                   bg: "#020E1B",
                   transition: "all ease 0.4s",

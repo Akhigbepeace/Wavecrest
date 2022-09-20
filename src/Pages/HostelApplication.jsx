@@ -7,6 +7,7 @@ import {
   Image,
   Select,
   Button,
+  useToast,
 } from "@chakra-ui/react";
 
 import React, { Fragment, useRef, useState } from "react";
@@ -23,6 +24,7 @@ const HostelApplication = () => {
     user_name: "",
     user_email: "",
     user_number: "",
+    user_programme: "",
   };
 
   const [inputField, setInputField] = useState(initialValues);
@@ -91,6 +93,14 @@ const HostelApplication = () => {
     );
 
     setInputField(initialValues);
+
+    toast({
+      title: "SUCCESSFUL !",
+      description: "Your request has been submitted",
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+    });
   };
 
   const navigate = useNavigate();
@@ -103,6 +113,7 @@ const HostelApplication = () => {
 
   const [showCoursePrice, setShowCoursePrice] = useState({});
 
+  const toast = useToast();
   return (
     <Fragment>
       <Navbar />
@@ -214,6 +225,7 @@ const HostelApplication = () => {
             {forms.map((form, index) => {
               return (
                 <Input
+                  required
                   key={index}
                   type={form.fieldType}
                   placeholder={form.placeHolder}
@@ -270,6 +282,7 @@ const HostelApplication = () => {
               return (
                 <option
                   key={index}
+                  name={inputField.user_programme}
                   value={JSON.stringify(items)}
                   borderbottom={
                     items.length - 1 === index ? "none" : "1px solid #EBEDEF"
