@@ -11,6 +11,7 @@ import {
   List,
   Stack,
   Box,
+  useToast,
 } from "@chakra-ui/react";
 import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -117,8 +118,6 @@ const Footer = () => {
   const initialValues = {
     name: "",
     email: "",
-    subject: "",
-    message: "",
   };
 
   const [inputField, setInputField] = useState(initialValues);
@@ -141,11 +140,29 @@ const Footer = () => {
       form.current,
       "JPAG_ZJVlAcuO_5D-"
     );
-
-    if (res.status === 200 || res.text === "OK") {
-      setInputField(initialValues);
-    }
+    setInputField(initialValues);
+    toast({
+      title: "SUCCESSFUL !",
+      description: "Your request has been submitted",
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+    });
   };
+
+  const subscribeForm = [
+    {
+      fieldType: "text",
+      name: "user_name",
+      placeHolder: "Name",
+    },
+    {
+      fieldType: "email",
+      name: "user_email",
+      placeHolder: "Email",
+    },
+  ];
+  const toast = useToast();
 
   return (
     <Grid
@@ -363,41 +380,31 @@ const Footer = () => {
 
         <form ref={form} onSubmit={sendEmail}>
           <Stack>
-            <Input
-              name="user_name"
-              placeholder="Name"
-              bg="#fff"
-              h="51px"
-              mt="15px"
-              p="15px 20px"
-              borderRadius="3px"
-              onChange={inputValues}
-              border="none"
-              _placeholder={{
-                color: "#021D37",
-                fontFamily: "Manrope",
-                fontSize: "16px",
-                fontWeight: "400",
-              }}
-            />
-
-            <Input
-              name="user_email"
-              placeholder="Email"
-              bg="#fff"
-              h="51px"
-              mt="10px"
-              borderRadius="3px"
-              border="none"
-              p="15px 20px"
-              onChange={inputValues}
-              _placeholder={{
-                color: "#021D37",
-                fontFamily: "Manrope",
-                fontSize: "16px",
-                fontWeight: "400",
-              }}
-            />
+            {subscribeForm.map((form, index) => {
+              return (
+                <Input
+                  required
+                  key={index}
+                  type={form.type}
+                  name={form.name}
+                  placeholder={form.placeHolder}
+                  bg="#fff"
+                  h="51px"
+                  mt="15px"
+                  p="15px 20px"
+                  value={inputField[form.name]}
+                  borderRadius="3px"
+                  onChange={inputValues}
+                  border="none"
+                  _placeholder={{
+                    color: "#021D37",
+                    fontFamily: "Manrope",
+                    fontSize: "16px",
+                    fontWeight: "400",
+                  }}
+                />
+              );
+            })}
           </Stack>
 
           <Button

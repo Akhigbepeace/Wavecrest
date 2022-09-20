@@ -8,6 +8,7 @@ import {
   Select,
   Button,
   Grid,
+  useToast,
 } from "@chakra-ui/react";
 
 import React, { Fragment, useRef, useState } from "react";
@@ -22,6 +23,7 @@ const Internship = () => {
     user_number: "",
     user_address: "",
     user_class: "",
+    user_programme: "",
   };
 
   const [inputField, setInputField] = useState(initialValues);
@@ -112,8 +114,16 @@ const Internship = () => {
     );
 
     setInputField(initialValues);
-  };
 
+    toast({
+      title: "SUCCESSFUL !",
+      description: "Your request has been submitted",
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+    });
+  };
+  const toast = useToast();
   return (
     <Fragment>
       <Box
@@ -275,6 +285,7 @@ const Internship = () => {
             {programmes.map((programme, index) => {
               return (
                 <option
+                  name={inputField.user_programme}
                   value={programme.course}
                   key={index}
                   borderbottom={
