@@ -93,8 +93,6 @@ const PostJobVacancies = () => {
         duration: 5000,
         isClosable: true,
       });
-
-      // console.log(err)
     }
   };
   const navigate = useNavigate();
