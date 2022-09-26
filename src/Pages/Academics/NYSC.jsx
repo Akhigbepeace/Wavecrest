@@ -344,16 +344,6 @@ const NYSC = () => {
           "2xl": "91px",
         }}
       >
-        <Heading
-          fontFamily="Playfair Display"
-          fontWeight="700"
-          fontSize="32px"
-          color="#021D37"
-          textAlign="center"
-          mb="22px"
-        >
-          Navigate To:
-        </Heading>
         <Grid
           gridTemplateColumns={{
             sm: "1fr",

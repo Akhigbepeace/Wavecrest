@@ -387,7 +387,6 @@ const ApplyOnline = () => {
           sm: "20px",
           md: "20px",
           lg: "91px",
-        
         }}
         display={{
           sm: "block",
@@ -397,16 +396,6 @@ const ApplyOnline = () => {
           "2xl": "none",
         }}
       >
-        <Heading
-          fontFamily="Playfair Display"
-          fontWeight="700"
-          fontSize="32px"
-          color="#021D37"
-          textAlign="center"
-          mb="22px"
-        >
-          Navigate To:
-        </Heading>
         <Grid
           gridTemplateColumns={{
             sm: "1fr",
