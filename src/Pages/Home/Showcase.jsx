@@ -81,7 +81,7 @@ const Showcase = () => {
                 "2xl": "600px",
               }}
             >
-              NIGERIA'S PREMIERE HOSPITALITY MONOTECHNIC
+              NIGERIA'S PREMIER HOSPITALITY MONOTECHNIC
             </Text>
           </Flex>
         </Box>
@@ -148,25 +148,19 @@ const Showcase = () => {
               w={{
                 sm: "295px",
                 md: "350px",
-                lg: "350px",
+                lg: "400px",
               }}
             >
               Nigeria's Premiere Hospitality Monotechnic
             </Heading>
 
-            <Text
-              fontSize="14px"
-              fontFamily="Manrope"
-              fontWeight="400"
-              lineHeight="19px"
-              my="15px"
-            >
-              Wavecrest College of Hospitality is consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+            <Text fontSize="14px" fontWeight="400" lineHeight="19px" my="15px">
+              In the last 40 years we have consistently trained individuals and
+              produced graduates who are in very high demand in the Industry.
+              100% of our graduates are decently employed within 3 months after
+              graduation. About 40% become entrepreneurs while working and even
+              employers of labour soon after graduation. Presently, Hospitality
+              Education is a guarantee of employment in Nigeria.
             </Text>
 
             <ReactPlayer

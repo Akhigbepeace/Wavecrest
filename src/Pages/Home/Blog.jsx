@@ -12,16 +12,16 @@ import React from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Slider from "react-slick";
 import styled from "@emotion/styled";
-import Founders from "assets/Images/founder.png";
-
+import CTHFlier from "assets/Images/tch flier.png";
+import PCHFlier from "assets/Images/P.C.H. flier.png";
 const settings = {
   dots: true,
   arrows: false,
   fade: false,
   infinite: true,
   autoplay: true,
-  speed: 1500,
-  autoplaySpeed: 2000,
+  speed: 2500,
+  autoplaySpeed: 3000,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
@@ -34,21 +34,25 @@ export default function CaptionCarousel() {
 
   const cards = [
     {
-      title: "Founders Day",
-      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit aperiam officiis repudiandae quo ipsa, accusamus omnis quaerat? Nulla laborum ab est a expedita hic doloribus modi magni fuga asperiores.",
-      date: "July 24th, 2022",
+      flier: "",
+      title: "Culinary Courses",
+      text: "A professional programme providing the skill sets for culinary knowledge.",
+      date: "31st Oct - 30th Nov",
+      linkTo: "https://forms.gle/VQtgEFMa9qhsojGn7",
       link: "Apply Now",
     },
     {
-      title: "Founders Day",
-      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit aperiam officiis repudiandae quo ipsa, accusamus omnis quaerat? Nulla laborum ab est a expedita hic doloribus modi magni fuga asperiores.",
-      date: "July 24th, 2022",
+      flier: PCHFlier,
+      title: "Professional Certificate in Hospitality",
+      text: "Training program geared towards industry managers, supervisors, and operatives.  ",
+      linkTo: "https://forms.gle/7vmuHrzHSxHmkh8s8",
       link: "Apply Now",
     },
     {
-      title: "Founders Day",
-      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit aperiam officiis repudiandae quo ipsa, accusamus omnis quaerat? Nulla laborum ab est a expedita hic doloribus modi magni fuga asperiores.",
-      date: "July 24th, 2022",
+      flier: CTHFlier,
+      title: "Confederation of Tourism and Hospitality",
+      text: "UK International Gold standard qualifications  for the Hospitality, Culinary & Tourism industries",
+      linkTo: "https://tinyurl.com/CTH-Registration-Form1",
       link: "Apply Now",
     },
   ];
@@ -180,7 +184,7 @@ export default function CaptionCarousel() {
                 }}
               >
                 <Image
-                  src={Founders}
+                  src={card.flier}
                   alt="founders day"
                   w={{
                     sm: "216px",
@@ -220,6 +224,7 @@ export default function CaptionCarousel() {
                       md: "-30px",
                       lg: "-30px",
                     }}
+                    // mb="10px"
                     fontSize={{
                       sm: "28px",
                       md: "28px",
@@ -269,7 +274,8 @@ export default function CaptionCarousel() {
                   </Text>
 
                   <Link
-                    href="#"
+                    href={card.linkTo}
+                    target="_blank"
                     background="#021d37"
                     w="168px"
                     p="10px 26px"

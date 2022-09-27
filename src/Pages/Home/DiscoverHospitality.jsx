@@ -2,7 +2,7 @@ import { Box, Grid, Link, Text, Image, Heading } from "@chakra-ui/react";
 import React from "react";
 import discoverpic1 from "assets/Images/discoverpic 1.png";
 import discoverpic2 from "assets/Images/discoverpic 2.png";
-import discoverpic3 from "assets/Images/discoverpic 3.png";
+import training3 from "assets/Images/training3.png";
 
 const DiscoverHospitality = () => {
   return (
@@ -22,7 +22,7 @@ const DiscoverHospitality = () => {
     >
       <Box mr="28px" w="500px">
         <Heading fontSize="32px" fontWeight="700" fontFamily="Playfair Display">
-          NIGERIA'S PREMIERE HOSPITALITY MONOTECHNIC
+          WAVECREST <br /> COLLEGE OF HOSPITALITY
         </Heading>
         <Text
           m="22px 0"
@@ -31,12 +31,12 @@ const DiscoverHospitality = () => {
           fontFamily="Manrope"
           textAlign="left"
         >
-          Wavecrest College of Hospitality is consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore r magna a h j aliqua.
-          Ut enim ad minim veniam, quis nostrud e exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          In the last 40 years we have consistently trained individuals and
+          produced graduates who are in very high demand in the Industry. 100%
+          of our graduates are decently employed within 3 months after
+          graduation. About 40% become entrepreneurs while working and even
+          employers of labour soon after graduation. Presently, Hospitality
+          Education is a guarantee of employment in Nigeria.
         </Text>
         <Link
           href="/admission/applyOnline"
@@ -86,7 +86,7 @@ const DiscoverHospitality = () => {
 
         <Box w="320px" h="214px">
           <Image
-            src={discoverpic2}
+            src={training3}
             w="100%"
             h="100%"
             alt="img_ny"
@@ -94,9 +94,9 @@ const DiscoverHospitality = () => {
           />
         </Box>
 
-        <Box className="last-pic" w="320px" h="214px">
+        <Box w="320px" h="214px">
           <Image
-            src={discoverpic3}
+            src={discoverpic2}
             w="100%"
             h="100%"
             p="33px"

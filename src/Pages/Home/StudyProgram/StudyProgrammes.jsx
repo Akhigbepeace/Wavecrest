@@ -21,28 +21,28 @@ const StudyProgrammes = () => {
             navigate("/HNDProgramme", { replace: true });
           },
           current: false,
-          captionHeading: "ACQUIRE AN HND IN HOSPITALITY MANAGEMENT",
+          captionHeading:
+            " A Programme for ND Hospitality Graduates in preparation for NYSC",
           captionTime: "2 Years | Full Time",
-          captionButton: "Apply Now",
+          captionButton: "APPLY NOW",
         },
       ],
     },
 
     {
-      linkContent: "ND IN HOTEL AND CATERING MANAGEMENT",
-
+      linkContent: "ND IN HOSPITALITY MANAGEMENT",
       values: [
         {
-          imageSrc: studyProgrammes2,
+          imageSrc: studyProgrammes3,
           redirect: (e) => {
             e.preventDefault();
 
             navigate("/NDProgramme", { replace: true });
           },
           current: false,
-          captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
+          captionHeading: "A programme for Hospitality Career aspirants",
           captionTime: "2 Years | Full Time",
-          captionButton: "Apply Now",
+          captionButton: "APPLY NOW",
         },
       ],
     },
@@ -51,25 +51,26 @@ const StudyProgrammes = () => {
       linkContent: "CERTIFICATE COURSE IN HOSPITALITY OPERATIONS",
       values: [
         {
-          imageSrc: studyProgrammes3,
+          imageSrc: studyProgrammes2,
           redirect: (e) => {
             e.preventDefault();
 
             navigate("/CertificateCourses", { replace: true });
           },
           current: true,
-          captionHeading: "SPEND A GAP YEAR IN HOSPITALITY TRAINING",
+          captionHeading:
+            " An accelerated certificate programme for young school leavers ",
           captionTime: "1 Year | Full Time",
-          captionButton: "Apply Now",
+          captionButton: "APPLY NOW",
         },
       ],
     },
 
     {
-      linkContent: "TRAINING",
+      linkContent: "TRAININGS",
       values: [
         {
-          imageSrc: studyProgrammes4,
+          imageSrc: studyProgrammes2,
           current: false,
           redirect: (e) => {
             e.preventDefault();
@@ -77,8 +78,8 @@ const StudyProgrammes = () => {
             navigate("/academics/training", { replace: true });
           },
           captionHeading: "CONFEDERATION OF TOURISM AND HOSPITALITY",
-          captionTime: "2 Years | Part Time",
-          captionButton: "Apply Now",
+          captionTime: "Duration: Flexible",
+          captionButton: "APPLY NOW",
         },
         {
           imageSrc: studyProgrammes1,
@@ -89,11 +90,11 @@ const StudyProgrammes = () => {
             navigate("/academics/training", { replace: true });
           },
           captionHeading: "HOSPITALITY TRAINING PROGRAMMES",
-          captionTime: "2 Years | Part Time",
-          captionButton: "Apply Now",
+          captionTime: "Flexible",
+          captionButton: "APPLY NOW",
         },
         {
-          imageSrc: studyProgrammes2,
+          imageSrc: studyProgrammes4,
           current: false,
           redirect: (e) => {
             e.preventDefault();
@@ -101,8 +102,8 @@ const StudyProgrammes = () => {
             navigate("/academics/training", { replace: true });
           },
           captionHeading: "CULINARY COURSES",
-          captionTime: "2 Years | Part Time",
-          captionButton: "Apply Now",
+          captionTime: "5 weeks - 3 Months",
+          captionButton: "APPLY NOW",
         },
         {
           imageSrc: studyProgrammes1,
@@ -112,9 +113,9 @@ const StudyProgrammes = () => {
 
             navigate("/academics/training", { replace: true });
           },
-          captionHeading: "NATIONAL SKILL ACQUISITION",
-          captionTime: "2 Years | Part Time",
-          captionButton: "Apply Now",
+          captionHeading: "PROFESSISONAL CERTIFICATE IN HOSPITALITY",
+          captionTime: "10 weeks",
+          captionButton: "APPLY NOW",
         },
       ],
     },
@@ -174,7 +175,7 @@ const StudyProgrammes = () => {
 
       <Flex
         h="91px"
-        w="1247px"
+        w="1200px"
         m="0 auto"
         display={{
           sm: "none",
@@ -226,12 +227,13 @@ const StudyProgrammes = () => {
         }}
       >
         {currentprogram.values.map((value, index) => (
-          <Box key={index} w="1247px" h="400px" mb="70px" m="0 auto">
+          <Box key={index} w="1200px" h="400px" mb="70px" m="0 auto">
             <Image
               src={value.imageSrc}
+              objectFit="cover"
               alt="coffee"
               h="394px"
-              w="1247px"
+              w="1200px"
               m="0 auto"
               position="absolute"
             />
@@ -250,6 +252,7 @@ const StudyProgrammes = () => {
                 fontSize="40px"
                 fontFamily="Playfair Display"
                 cursor="pointer"
+                textTransform="uppercase"
                 onClick={value.redirect}
               >
                 {value.captionHeading}

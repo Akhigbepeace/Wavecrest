@@ -1,0 +1,57 @@
+import { Box, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
+import React from "react";
+
+const Statistics = () => {
+  const statistics = [
+    {
+      count: "2500+",
+      name: "Student Graduated",
+      bg: "#EBEDEF",
+    },
+    {
+      count: "500",
+      name: "Industry Partners",
+      bg: "#DDD",
+    },
+    {
+      count: "100%",
+      name: "Employment Rate",
+      bg: "#EBEDEF",
+    },
+    {
+      count: "20%",
+      name: "Enterpreneurs",
+      bg: "#DDD",
+    },
+  ];
+  return (
+    <Box mt="-50px">
+      <Grid
+        gridTemplateColumns={{
+          sm: "1fr",
+          md: "1fr",
+          lg: "auto",
+          xl: "repeat(4, auto)",
+          "2xl": "repeat(4, 1fr)",
+        }}
+        mt="30px"
+        color="#021D37"
+      >
+        {statistics.map((statistic, index) => {
+          return (
+            <GridItem key={index} textAlign="center" py="40px">
+              <Text fontFamily="Manrope" fontSize="20px" fontWeight="400">
+                {statistic.count}
+              </Text>
+              <Heading fontFamily="Open sans" fontSize="25px">
+                {statistic.name}
+              </Heading>
+            </GridItem>
+          );
+        })}
+      </Grid>
+    </Box>
+  );
+};
+
+export default Statistics;

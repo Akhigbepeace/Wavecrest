@@ -35,13 +35,13 @@ export default function CaptionCarousel() {
 
   const cards = [
     {
-      name: "Sara Smart",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit aperiam officiis repudiandae quo ipsa, accusamus omnis quaerat? Nulla laborum ab est a expedita hic doloribus modi magni fuga asperiores.",
+      name: "Chinonyerem Favour",
+      text: "Studying in Wavecrest has made my dreams broader; I haven't gotten the feel of any limitations ever.My colleagues and customers are always captivated by my performance and keep asking me about where I trained.",
       link: "READ MORE",
     },
     {
-      name: "Joy Samuel",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit aperiam officiis repudiandae quo ipsa, accusamus omnis quaerat? Nulla laborum ab est a expedita hic doloribus modi magni fuga asperiores.",
+      name: "Udodirim Peace",
+      text: "My dream was to build my career in hospitality. I met graduates of the College and I admired them a lot. In fact, they lit the fire of Education and Excellence that kept burning in me till date.",
       link: "READ MORE",
     },
     {
