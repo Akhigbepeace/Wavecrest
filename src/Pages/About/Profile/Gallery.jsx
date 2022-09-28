@@ -28,7 +28,7 @@ export default function Carousel() {
     arrows: false,
     fade: false,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     speed: 8000,
     autoplaySpeed: 0,
     slidesToShow: slideNo,
@@ -66,7 +66,17 @@ export default function Carousel() {
 
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((image, index) => (
-          <Box key={index} w="272px" h="291px">
+          <Box
+            key={index}
+            w="272px"
+            h={{
+              sm: "150px",
+              md: "211px",
+              lg: "211px",
+              xl: "272px",
+              "2xl": "272px",
+            }}
+          >
             <Image
               src={image}
               w="100%"

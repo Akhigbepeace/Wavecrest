@@ -20,7 +20,7 @@ const settings = {
   arrows: false,
   fade: false,
   infinite: true,
-  autoplay: true,
+  autoplay: false,
   speed: 1500,
   autoplaySpeed: 2500,
   slidesToShow: 1,
@@ -37,26 +37,36 @@ export default function CaptionCarousel() {
     {
       name: "Chinonyerem Favour",
       text: "Studying in Wavecrest has made my dreams broader; I haven't gotten the feel of any limitations ever.My colleagues and customers are always captivated by my performance and keep asking me about where I trained.",
-      link: "READ MORE",
+      headline: "STAND YOUR GROUND  - THE EARLIER, THE BETTER",
+      image1: "",
+      blogPost:
+        "My name is Chinonyerem Favour, am 20 years of age. At the time I finished secondary school I couldn't get into University because I wasn't old enough so I spent one year here and there doing nothing of great importance before I took my (JAMB) – This is a National exam everyone who intends to go the University takes in Nigeria and in my opinion is really not a true test of one’s knowledge as there are several hitches one may encounter in writing this exam especially when it became a computer based exam. I took my JAMB exam twice seeking to get into a desired University for a desired course but I wasn't fortunate enough because I did not make the cut-off mark for the course. This meant that I already ‘wasted’ two years trying to get into University.After the second trial, I decided to give my true passion a chance to come alive! The truth is I have always been a lover of the fields in Hospitality especially that of culinary arts and event planning. However, in the part of the world I live, hospitality is not given enough credit for several reasons. Parents prefer their children doing more ‘prestigious’ courses like Law, Engineering and Medicine. This is true especially for children who are brilliant and brainy and unfortunately even for those who are not – there is this ‘class’ thing in the minds of parents.For me, it was not easy at first to convince my parents and the teachers in my life to allow me pursue a career in Hospitality because I was considered a brilliant and brainy student in Secondary School. But I gave it a try and succeeded. When I finally started this journey, I realized how much time I had wasted before pursuing my true dreams.  3 years after Secondary School was when I managed to convince my parents amidst different bad reviews from people telling me I was going to waste my knowledge if I pursued Hospitality courses. This time I did not bother listening to them and I set out to find the best hospitality school so I would not give anyone any opportunity to mock me later if I did not get the best. I did a Google search for the best hospitality schools in the State where I lived and I wrote down the 10 best that I saw. I started going to each of them one by one to make enquiries in person and see what they had to offer. Wavecrest was the 4th and last school I visited.",
     },
     {
       name: "Udodirim Peace",
+      headline:
+        "My dreams have improved because of Wavecrest College and the exposure it has given me. ",
       text: "My dream was to build my career in hospitality. I met graduates of the College and I admired them a lot. In fact, they lit the fire of Education and Excellence that kept burning in me till date.",
-      link: "READ MORE",
+      image1: "",
+      image2: "",
+      blogPost: "",
     },
     {
       name: "Mia Rich",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit aperiam officiis repudiandae quo ipsa, accusamus omnis quaerat? Nulla laborum ab est a expedita hic doloribus modi magni fuga asperiores.",
-      link: "READ MORE",
+      image1: "",
+      image2: "",
+      blogPost: "",
     },
   ];
 
   const navigate = useNavigate();
 
-  const showStory = (e) => {
-    e.preventDefault();
-
-    navigate("/posts", { replace: true });
+  const showStory = (card) => {
+    navigate(
+      `/posts?image1=${card.image1}&name=${card.name}&headline=${card.headline}&texts=${card.blogPost}&image2=${card.image2}`,
+      { replace: true }
+    );
   };
 
   return (
@@ -253,7 +263,7 @@ export default function CaptionCarousel() {
                   </Text>
 
                   <Button
-                    onClick={(e) => showStory(e)}
+                    onClick={(card) => showStory(card)}
                     background="#FFF"
                     w="168px"
                     p="10px 26px"
@@ -284,7 +294,7 @@ export default function CaptionCarousel() {
                       bg: "#EBEDEF",
                     }}
                   >
-                    {card.link}
+                    READ MORE
                   </Button>
                 </Flex>
 

@@ -216,14 +216,13 @@ const Internship = () => {
             color="#021D37"
             my="24px"
           >
-            Wavecrest offers accomodation to its students. We have a two well
-            furnished hostels orem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute pidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum. sunt in culpa qui officia deserunt mollit anim id est
-            laborum.
+            The National Board for Technical Education &#40;NBTE&#41; requires
+            that students go for an internship. The Industrial Training
+            &#40;IT&#41; enables students to put into practice, in the real
+            world of work, the theoretical and practical knowledge gained in the
+            College in the areas of Front Office, Food &#38; Beverage
+            Production, Food &#38; Beverage Service, Housekeeping and any other
+            relevant department.
           </Text>
         </Box>
 
@@ -343,7 +342,6 @@ const Internship = () => {
           "2xl": "91px",
         }}
       >
- 
         <Grid
           gridTemplateColumns={{
             sm: "1fr",

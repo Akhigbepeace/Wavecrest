@@ -33,7 +33,12 @@ const OurClout = () => {
     {
       recogImg: recog1,
       recogDesc:
-        "Vocational Training Centre in Hospitality for Lagos State Employment Trust Fund (LSETF) through the Lagos State Employability Support Project 2018",
+        "The icing on the cake”…Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+    },
+    {
+      recogImg: recog1,
+      recogDesc:
+        "Appointed Training Provider for the National Vocational Qualification (NVQ) Recently Approved by the Federal Government 2015",
     },
   ];
 
@@ -193,13 +198,13 @@ const OurClout = () => {
         <Flex
           flexDirection="row"
           alignItems="center"
-          h={{
-            sm: "none",
-            md: "none",
-            lg: "none",
-            xl: "248px",
-            "2xl": "248px",
-          }}
+          // h={{
+          //   sm: "none",
+          //   md: "none",
+          //   lg: "none",
+          //   xl: "248px",
+          //   "2xl": "248px",
+          // }}
           my={{
             sm: "none",
             md: "none",
