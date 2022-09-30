@@ -13,9 +13,10 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import React, { Fragment, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "components/Navbar";
 import emailjs from "emailjs-com";
-import contactpic from "assets/Images/contact.png";
+import contactpic from "assets/Images/aboutDesktopBanner.jpg";
 import aboutgallery1 from "assets/Images/aboutgallery1.png";
 import aboutgallery2 from "assets/Images/aboutgallery2.png";
 import aboutgallery3 from "assets/Images/aboutgallery3.png";
@@ -62,33 +63,33 @@ const Contact = () => {
   const enquires = [
     {
       name: "Admission:",
-      phoneNumber: "Phone: +234 909 685 6606",
-      email: "Email: info@wavecrest.edu.ng",
+      phoneNumber: "+234 909 685 6606",
+      email: " wavecrestadmissions@gmail.com",
     },
     {
       name: "Training:",
-      phoneNumber: "Phone: +234 909 685 6606",
-      email: "Email: info@wavecrest.edu.ng",
+      phoneNumber: "+234 909 685 6606",
+      email: "info@wavecrest.edu.ng",
     },
     {
       name: "General:",
-      phoneNumber: "Phone: +234 909 685 6606",
-      email: "Email: info@wavecrest.edu.ng",
+      phoneNumber: ["0909 685 6606", "0808 396 4840"],
+      email: "info@wavecrest.edu.ng",
     },
     {
       name: "Partnership:",
-      phoneNumber: "Phone: +234 909 685 6606",
-      email: "Email: info@wavecrest.edu.ng",
+      phoneNumber: "+234 802 819 1726",
+      email: "info@wavecrest.edu.ng",
     },
     {
       name: "Front Desk:",
-      phoneNumber: "Phone: +234 909 685 6606",
-      email: "Email: info@wavecrest.edu.ng",
+      phoneNumber: "+234 909 685 6606",
+      email: "info@wavecrest.edu.ng",
     },
     {
       name: "Job Placement:",
-      phoneNumber: "Phone: +234 909 685 6606",
-      email: "Email: info@wavecrest.edu.ng",
+      phoneNumber: "+234 909 685 6606",
+      email: "wavecrestjobplacement@gmail.com",
     },
   ];
 
@@ -104,7 +105,7 @@ const Contact = () => {
       linkTo: "/blog",
     },
     {
-      image: aboutgallery3,
+      image: contactpic,
       text: "About",
       linkTo: "/about/profile",
     },
@@ -142,10 +143,17 @@ const Contact = () => {
       isClosable: true,
     });
   };
+  const navigate = useNavigate();
 
   const form = useRef();
 
   const toast = useToast();
+
+  const navigateTo = (e) => {
+    e.preventDefault();
+
+    navigate();
+  };
   return (
     <Box>
       <Navbar />
@@ -188,13 +196,12 @@ const Contact = () => {
             xl: "auto auto",
             "2xl": "auto auto",
           }}
-          px={{
-            sm: "0",
-            md: "0",
-            lg: "91px",
-            xl: "91px",
-            "2xl": "91px",
+          gridGap="10px"
+          w={{
+            xl: "1100px",
+            "2xl": "1100px",
           }}
+          mx="auto"
         >
           <Flex
             flexDirection="column"
@@ -400,8 +407,8 @@ const Contact = () => {
                 fontSize="16px"
                 fontWeight="400"
               >
-                75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos
-                State, Nigeria.
+                75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos,
+                Nigeria.
               </Text>
             </Box>
 
@@ -416,8 +423,13 @@ const Contact = () => {
               mt="30px"
             >
               {enquires.map((enquiry, index) => {
+                const multiplePhoneNum = Array.isArray(enquiry.phoneNumber)
+                  ? enquiry.phoneNumber.map((number, index) => {
+                      return <Text key={index}>{number}</Text>;
+                    })
+                  : enquiry.phoneNumber;
                 return (
-                  <Flex key={index} flexDirection="column" mb="30px">
+                  <Flex key={index} flexDirection="column" mb="30px" mr="30px">
                     <Heading
                       mb="6px"
                       fontFamily="Playfair Display, serif"
@@ -433,8 +445,15 @@ const Contact = () => {
                       fontSize="18px"
                       color="#021D37"
                     >
-                      <Text> {enquiry.phoneNumber}</Text>
-                      <Text> {enquiry.email}</Text>
+                      <Flex>
+                        <Text> Phone: &nbsp; </Text>
+                        <Text>{multiplePhoneNum}</Text>
+                      </Flex>
+
+                      <Flex>
+                        <Text>Email: &nbsp; </Text>
+                        <Text w="196px">{enquiry.email}</Text>
+                      </Flex>
                     </Box>
                   </Flex>
                 );
@@ -451,6 +470,11 @@ const Contact = () => {
             xl: "block",
             "2xl": "block",
           }}
+          w={{
+            xl: "1300px",
+            "2xl": "1300px",
+          }}
+          mx="auto"
           px={{
             sm: "100px",
             md: "100px",

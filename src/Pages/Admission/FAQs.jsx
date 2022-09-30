@@ -9,6 +9,8 @@ import {
   AccordionItem,
   AccordionButton,
   AccordionPanel,
+  OrderedList,
+  ListItem,
 } from "@chakra-ui/react";
 import { FaChevronCircleDown } from "react-icons/fa";
 import { FaChevronCircleUp } from "react-icons/fa";
@@ -21,134 +23,109 @@ const FAQs = () => {
     {
       question: "What is Wavecrest College",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "Wavecrest College of Hospitality is a Private Monotechnic that provides unique Hospitality Education. <br /> <br /> <b style='marginBottom: 90px'> Programs we offer:</b> <br /> <b><u>FULL-TIME PROGRAMS:</u></b> <ol><li>A Gap year Program (Certificate program in Hospitality Operations)  - 1 year </li><li>National Diploma in Hospitality Management (ND)  -  2 years </li><li>Higher National Diploma (HND)   – 2 years </li> &nbsp; &nbsp; &nbsp;<b>Our Full-Time Programs are exclusive to young females from every ethnic group, social background, and creed.</b> </ol> <br/> <b><u>SHORT - TIME COURSES: </b></u> <br/><ol><li>Culinary Courses - Ranging from 5 weeks   - 3 months</li><li> Professional Certificate in Hospitality   - 10 weeks</li><li> Hospitality Training Programs   - Flexible duration</li><li> Confederation of Tourism and Hospitality   - 22 weeks</li></ol> &nbsp; &nbsp; &nbsp; <b  style='margin-left: 20px'>Training fit for aspirants to become competent professionals able to meet the challenges of the fast-paced world of Hospitality</b>",
     },
     {
       question: "What are the programs offered at the college?",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "<ol><li>Gap year Program (One-year Certificate program in Hospitality Operations_. <br /> Entry requirement: Four (4) credit passes in SSCE/NECO/WAEC.</li> <br /> <li>National Diploma in Hospitality Management (ND) 2 years.<br />Entry Requirement: <br /> <ul><li> Five (5) credit passes in an O'level (SSCE/NECO/GCE) result which <b>Must</b> include <b>One science subject</b> from any of these: Biology/ Agric Science/ Health Science/Food and Nutrition/ Catering Craft UTME. </li> <li>Any Four (4) subjects including the English language</li></li> </ul>  <br /> <li>Higher National Diploma (HND) – 2 years <br /> Entry requirement: <br /> <ul> <li> N.D in Hospitality Management.</li>  <li>Completion of a one-year internship</li></ul></li> </ol>",
     },
     {
       question:
         "What are the processes to gain admission to the college National Diploma program?",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "STEP 1: 	Five (5) credit passes in an O'level (SSCE/NECO/GCE) result which Must include One science subject from any of these: Biology/ Agric Science/ Health Science/Food and Nutrition/ Catering Craft <br /> STEP 2: 	UTME – COMPULSORY SUBJECT: ENGLISH LANGUAGE and any other three (3) subjects. Excluding IRS OR CRS. <br />STEP 3:	 Purchase the Application Form at the college or online (https://bit.ly/3dnCLu5) or call (09096856606)<br /> STEP 4: 	Attend the Wavecrest Screening at the College <br /> STEP 5: 	Await results from the screening. Check your Email regularly. ",
     },
     {
       question: "What is the Gap-year programme?",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "The Gap-Year Programme is an accelerated certificate program for young school leavers designed to develop knowledge and skills in Hospitality Operations. Its course outline incorporates Courses such as food and beverage, housekeeping, and reception operations.  <br /> <br />    *Entry requirement: <br />	a. Four (4) credit passes in SSCE/NECO/WAEC. <br />b. The Wavecrest Screening at the College        ",
     },
     {
       question: "Is the Gap-year same as Certificate programme?",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "The full name for this Full-time program is Gap-year (Certificate in Hospitality Operations)",
     },
     {
       question:
         "Can I use the Gap year program and gain direct entry into the ND program?",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "NIL for now. We have not been approved for direct entry from the NBTE",
     },
     {
       question:
         "Must I be a science student to enrol for the either of the programs?",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "No, you must not be a Science Student to enrol for the GAP year. However, you need at least one science subject to enrol for the National Diploma <br /><br /> FOR SSCE/NECO/GCE: The <b>ONLY COMPULSORY Subject</b> is Biology OR Agric Science OR Health Science OR Food and Nutrition OR Catering Craft. <br /> FOR UTME: The <b>ONLY COMPULSORY Subject</b> is <b>ENGLISH LANGUAGE</b>",
     },
     {
       question: "Are males allowed to enrol at the college?",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
-    },
-    {
-      question: "Are married women allowed to enrol for the Programs?",
-      answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "Wavecrest College of Hospitality is one of the projects of the Women’s Board Educational Cooperation Society, a Nigerian Non-Governmental Not-for-Profit Organisation created in 1972 to contribute to women’s development. Thus, our full-time programs are <b> Exclusive to young females </b> from every ethnic group, social background, and creed.<br /><br /><b>Nonetheless, our Short-time programs such as *The Culinary Course, *Hospitality Training Programs (HTP), and the *Professional Certificate in Hospitality (PCH). These programs are open to all gender.</b>",
     },
     {
       question: "What are the subjects required to enrol for the ND program?",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "FOR SSCE/NECO/GCE: The <b>ONLY COMPULSORY Subject</b> is Biology OR Agric Science OR Health Science OR Food and Nutrition OR Catering Craft. <br /> <br />  FOR UTME: The <b>ONLY COMPULSORY Subject</b> is <b>ENGLISH LANGUAGE</b>",
     },
     {
       question:
         "Does the college accept National Diploma Certificate from another Polytechnics to enrol for the HND?",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "Yes. The entry requirement for HND is as thus: <br /> <ul><li> N.D in Hospitality Management.</li><li> Completion of a one-year internship.</li></ul>",
     },
     {
       question: "How much is the Tuition?",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "<ul><li>Gap-year Program: N98,000  </li> <li> National Diploma (YEAR. 1): N91,000  </li><li>   Higher National Diploma (YEAR. 1): N94,000</li>  </ul><b>  * Wavecrest College. Access – Diamond Bank. Account no. 0010546867   </b> <br/> As a project of the Women’s Board, the Educational Cooperation Society is a non-governmental not-for-profit organization. In consideration of the college’s mission to reach out to and give education opportunities to the financially challenged, the above fee has been subsidized. However, those who can pay the total costs are encouraged to do so to assist in training more students. All payments must be made into the College's bank account during registration.",
     },
     {
       question: "Are there accommodation available?",
-      answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+      answer: "Accommodation is available based on request and screening.",
     },
 
     {
       question: "Where is the college situated at?",
-      answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+      answer: "75, Adisa Bashua, Off Adelabu, Masha, Surulere, Lagos, Nigeria.",
     },
     {
       question: "Can I apply online?",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "Yes. You can purchase the Application form online by request. Contact (09096856606) or Click here: <a href='https://bit.ly/3dnCLu5' style='color:blue' >https://bit.ly/3dnCLu5 </a> <br /> <br /> <ul><li> Application form for Gap-Year Program / National Diploma: N2,000</li><li> Application form for Higher National Diploma: N2,500</li></ul>",
     },
     {
       question: "Do the HND students go for NYSC?",
-      answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+      answer: "Yes, They do.",
     },
     {
       question: "Does the Gap year programme require JAMB?      ",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "No! The Gap Year does not require JAMB. <br /> <br />  *Entry requirement: <br />		a. Four (4) credit passes in SSCE/NECO/WAEC. <br />b. The Wavecrest Screening at the College",
     },
     {
       question:
         "What other programmes does the school offer and can I apply for them online?      ",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
-    },
-    {
-      question: "Is a certificate issued after the courses?      ",
-      answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
-    },
-    {
-      question: "Does the college offer Jobs for her students?      ",
-      answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
-    },
-    {
-      question: "Is the college a Catholic institution?      ",
-      answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "Wavecrest also offers Short-time courses: <br /> <br /><ul><li> The Culinary Course. <br /><br /> Course Description: This course aims to develop your basic culinary knowledge and skills in the following modules - Yeast production, Pastries, Finger foods, Nigerian and Continental dishes, Basic cake making, and icing techniques. <br /> It is a combination of demonstration, hands-on learning, and lecture methods.<br /> <b>Click here for more information:	______ </b></li><br /><li>Hospitality Training Programs (HTP) <br /><br />Course Description: Training programs broken into modules to provide knowledge and advice to Hospitality operatives and aspirants. Duration: 3 months for Full Program     Modules are Flexible Click here for more information:	_____ </li><br /><br /><li>Professional Certificate in Hospitality (PCH) <br />Course Description: A training geared towards industry managers, supervisors, and operatives.  Duration: Ten week Click here for more information:	______</li> </ul> <br />The above-mentioned programs are professional courses that are guaranteed Certifications after each course.<br /> <b>*Wavecrest College is also the Approved Centre in Nigeria for CTH, a U.K online and certification course.</b>",
     },
     {
       question: "Does the college go on strike?      ",
-      answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+      answer: "NEVER! Never have and Never Will!",
     },
     {
       question:
         "Apart from the payment of school fees are there other payments that needs to be made?      ",
-      answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+      answer: "Yes. Click here for more information:	______",
     },
     {
       question: "Contact Number to reach for further enquires?      ",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "<ul><li>Full-time Programs / Culinary: +234 909 685 6606	| +234 808 396 4840</li><br/><li>PCH/ HTP Trainings: +234 810 466 2299		|+234 909 685 6606</li></ul>",
     },
     {
       question: "Which program do you have for graduates?",
       answer:
-        "The Certificate course is #148,000, National Diploma 1 is #172,000 and Higher National Diploma 1 is #189,000. Medicals - #21,500, Uniform - #22,700 ",
+        "Our Short-time courses are all fitting for graduates of every degree: <br/><br /> <ul><li>The Culinary Course.					Click here for more information:	______</li><li> Hospitality Training Programs (HTP)			Click here for more information:	______ </li><li>Professional Certificate in Hospitality (PCH)		Click here for more information:	______ </li></ul> <br/><b> The above-mentioned programs are professional courses that are guaranteed Certifications after each course.</b> <b>*Wavecrest College is also the Approved Centre in Nigeria for CTH, a U.K online and certification course.</b>",
     },
   ];
 
@@ -264,6 +241,15 @@ const FAQs = () => {
         </Box>
 
         {FAQs.map((faq, index) => {
+          const multipleAnswer = Array.isArray(faq.answer)
+            ? faq.answer.map((ans, index) => {
+                return (
+                  <OrderedList key={index}>
+                    <ListItem>{ans}</ListItem>
+                  </OrderedList>
+                );
+              })
+            : faq.answer;
           return (
             <Accordion key={index} allowToggle borderTopColor="#FFF">
               <AccordionItem borderBottom="none">
@@ -310,19 +296,18 @@ const FAQs = () => {
                     </h2>
 
                     <AccordionPanel
-                      p="10px"
+                      ml="50px"
                       fontFamily="Manrope"
                       fontSize={{
                         sm: "18px",
                         md: "20px",
                         lg: "22px",
-                        xl: "24px",
-                        "2xl": "24px",
+                        xl: "22px",
+                        "2xl": "22px",
                       }}
                       fontWeight="400"
-                    >
-                      {faq.answer}
-                    </AccordionPanel>
+                      dangerouslySetInnerHTML={{ __html: multipleAnswer }}
+                    />
                   </Box>
                 )}
               </AccordionItem>
@@ -343,7 +328,6 @@ const FAQs = () => {
             sm: "20px",
             md: "20px",
             lg: "50px",
-         
           }}
         >
           <Heading

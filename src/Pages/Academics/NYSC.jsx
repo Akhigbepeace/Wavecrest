@@ -218,14 +218,7 @@ const NYSC = () => {
             lineHeight="33px"
             my="24px"
           >
-            Wavecrest offers accomodation to its students. We have a two well
-            furnished hostels orem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute pidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum. sunt in culpa qui officia deserunt mollit anim id est
-            laborum.
+            Our HND 2 graduates go for the National Youth Service &#40;NYSC&#41;
           </Text>
         </Box>
 

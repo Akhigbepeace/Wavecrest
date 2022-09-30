@@ -198,13 +198,6 @@ const OurClout = () => {
         <Flex
           flexDirection="row"
           alignItems="center"
-          // h={{
-          //   sm: "none",
-          //   md: "none",
-          //   lg: "none",
-          //   xl: "248px",
-          //   "2xl": "248px",
-          // }}
           my={{
             sm: "none",
             md: "none",

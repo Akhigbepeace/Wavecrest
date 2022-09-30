@@ -94,74 +94,6 @@ const Blog = () => {
     },
 
     {
-      category: "Tips and Categories",
-      topPosts: [
-        {
-          postsImg: blogPost,
-          postHeading:
-            "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Tips and Categories / October 8, 2022.",
-        },
-        {
-          postsImg: blogPost2,
-          postHeading:
-            "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Tips and Categories / October 8, 2022.",
-        },
-        {
-          postsImg: blogPost,
-          postHeading:
-            "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Tips and Categories / October 8, 2022.",
-        },
-        {
-          postsImg: blogPost2,
-          postHeading:
-            "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Tips and Categories / October 8, 2022.",
-        },
-      ],
-      posts: [
-        {
-          bg: "#FFF",
-          postsImg: blogPost,
-          postsDate: "Tips and Categories / October 8, 2022.",
-          postHeading:
-            "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postsText:
-            "Featuring in the Guinness World Records is obviously not a yearly event. This is why Wavecrest College was excited to be a part of an amazing project partnering with the...",
-        },
-        {
-          bg: "#EBEDEF",
-          postsImg: blogPost2,
-          postsDate: "Tips and Categories / October 22, 2022.",
-          postHeading:
-            "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
-          postsText:
-            "Hello, may we meet you?My name is Victoria JosephWhat inspired you to study at Wavecrest College?I have always wanted to own my restaurant so looking for a school that can...",
-        },
-        {
-          bg: "#FFF",
-          postsImg: blogPost,
-          postsDate: "Tips and Categories / October 8, 2022.",
-          postHeading:
-            "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postsText:
-            "Featuring in the Guinness World Records is obviously not a yearly event. This is why Wavecrest College was excited to be a part of an amazing project partnering with the...",
-        },
-        {
-          bg: "#EBEDEF",
-          postsImg: blogPost2,
-          postsDate: "Tips and Categories / October 22, 2022.",
-          postHeading:
-            "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
-          postsText:
-            "Hello, may we meet you?My name is Victoria JosephWhat inspired you to study at Wavecrest College?I have always wanted to own my restaurant so looking for a school that can...",
-        },
-      ],
-    },
-
-    {
       category: "Receipes",
       topPosts: [
         {
@@ -231,39 +163,38 @@ const Blog = () => {
     },
 
     {
-      category: "Personal Categories",
+      category: "Testimonials",
       topPosts: [
         {
           postsImg: blogPost,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Personal Categories / October 8, 2022.",
+          postDate: "Testimonials / October 8, 2022.",
         },
         {
           postsImg: blogPost2,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Personal Categories / October 8, 2022.",
-        },
-        {
-          postsImg: blogPost2,
-          postHeading:
-            "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Personal Categories / October 8, 2022.",
+          postDate: "Testimonials / October 8, 2022.",
         },
         {
           postsImg: blogPost,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Personal Categories / October 8, 2022.",
+          postDate: "Testimonials / October 8, 2022.",
+        },
+        {
+          postsImg: blogPost2,
+          postHeading:
+            "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+          postDate: "Testimonials / October 8, 2022.",
         },
       ],
-
       posts: [
         {
           bg: "#FFF",
           postsImg: blogPost,
-          postsDate: "Personal Categories / October 8, 2022.",
+          postsDate: "Testimonials / October 8, 2022.",
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postsText:
@@ -272,7 +203,7 @@ const Blog = () => {
         {
           bg: "#EBEDEF",
           postsImg: blogPost2,
-          postsDate: "Personal Categories / October 22, 2022.",
+          postsDate: "Testimonials / October 22, 2022.",
           postHeading:
             "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
           postsText:
@@ -281,7 +212,7 @@ const Blog = () => {
         {
           bg: "#FFF",
           postsImg: blogPost,
-          postsDate: "Personal Categories / October 8, 2022.",
+          postsDate: "Testimonials / October 8, 2022.",
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postsText:
@@ -290,7 +221,7 @@ const Blog = () => {
         {
           bg: "#EBEDEF",
           postsImg: blogPost2,
-          postsDate: "Personal Categories / October 22, 2022.",
+          postsDate: "Testimonials / October 22, 2022.",
           postHeading:
             "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
           postsText:
@@ -300,38 +231,38 @@ const Blog = () => {
     },
 
     {
-      category: "Admission and Scholarship",
+      category: "Hospitality Articles",
       topPosts: [
         {
           postsImg: blogPost,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Admission and Scholarship / October 8, 2022.",
+          postDate: "Hospitality Articles / October 8, 2022.",
         },
         {
           postsImg: blogPost2,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Admission and Scholarship / October 8, 2022.",
+          postDate: "Hospitality Articles / October 8, 2022.",
         },
         {
           postsImg: blogPost,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Admission and Scholarship / October 8, 2022.",
+          postDate: "Hospitality Articles / October 8, 2022.",
         },
         {
           postsImg: blogPost2,
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-          postDate: "Admission and Scholarship / October 8, 2022.",
+          postDate: "Hospitality Articles / October 8, 2022.",
         },
       ],
       posts: [
         {
           bg: "#FFF",
           postsImg: blogPost,
-          postsDate: "Admission and Scholarship/ October 8, 2022.",
+          postsDate: "Hospitality Articles/ October 8, 2022.",
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postsText:
@@ -340,7 +271,7 @@ const Blog = () => {
         {
           bg: "#EBEDEF",
           postsImg: blogPost2,
-          postsDate: "Admission and Scholarship/ October 22, 2022.",
+          postsDate: "Hospitality Articles/ October 22, 2022.",
           postHeading:
             "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
           postsText:
@@ -349,7 +280,7 @@ const Blog = () => {
         {
           bg: "#FFF",
           postsImg: blogPost,
-          postsDate: "Admission and Scholarship/ October 8, 2022.",
+          postsDate: "Hospitality Articles/ October 8, 2022.",
           postHeading:
             "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
           postsText:
@@ -358,7 +289,76 @@ const Blog = () => {
         {
           bg: "#EBEDEF",
           postsImg: blogPost2,
-          postsDate: "Admission and Scholarship/ October 22, 2022.",
+          postsDate: "Hospitality Articles/ October 22, 2022.",
+          postHeading:
+            "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
+          postsText:
+            "Hello, may we meet you?My name is Victoria JosephWhat inspired you to study at Wavecrest College?I have always wanted to own my restaurant so looking for a school that can...",
+        },
+      ],
+    },
+
+    {
+      category: "Other Articles",
+      topPosts: [
+        {
+          postsImg: blogPost,
+          postHeading:
+            "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+          postDate: "Other Articles / October 8, 2022.",
+        },
+        {
+          postsImg: blogPost2,
+          postHeading:
+            "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+          postDate: "Other Articles / October 8, 2022.",
+        },
+        {
+          postsImg: blogPost2,
+          postHeading:
+            "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+          postDate: "Other Articles / October 8, 2022.",
+        },
+        {
+          postsImg: blogPost,
+          postHeading:
+            "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+          postDate: "Other Articles / October 8, 2022.",
+        },
+      ],
+
+      posts: [
+        {
+          bg: "#FFF",
+          postsImg: blogPost,
+          postsDate: "Other Articles / October 8, 2022.",
+          postHeading:
+            "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+          postsText:
+            "Featuring in the Guinness World Records is obviously not a yearly event. This is why Wavecrest College was excited to be a part of an amazing project partnering with the...",
+        },
+        {
+          bg: "#EBEDEF",
+          postsImg: blogPost2,
+          postsDate: "Other Articles / October 22, 2022.",
+          postHeading:
+            "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
+          postsText:
+            "Hello, may we meet you?My name is Victoria JosephWhat inspired you to study at Wavecrest College?I have always wanted to own my restaurant so looking for a school that can...",
+        },
+        {
+          bg: "#FFF",
+          postsImg: blogPost,
+          postsDate: "Other Articles / October 8, 2022.",
+          postHeading:
+            "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+          postsText:
+            "Featuring in the Guinness World Records is obviously not a yearly event. This is why Wavecrest College was excited to be a part of an amazing project partnering with the...",
+        },
+        {
+          bg: "#EBEDEF",
+          postsImg: blogPost2,
+          postsDate: "Other Articles / October 22, 2022.",
           postHeading:
             "“I Want to Own My Restaurant That is Why I Came to Wavecrest College for Training” -Victoria Joseph",
           postsText:

@@ -364,7 +364,7 @@ const Footer = () => {
           fontSize="22px"
           lineHeight="29px"
         >
-          Suscribe to our Newsletter
+          Subscribe to our Newsletter
         </Heading>
 
         <Text
@@ -374,8 +374,8 @@ const Footer = () => {
           fontWeight="400"
           fontSize="18px"
         >
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos tenetur
-          voluptate, similique earum obcaecati placeat.
+          Keep up-to-date and informed about relevant Hospitality news and our
+          College events by filling your details below
         </Text>
 
         <form ref={form} onSubmit={sendEmail}>

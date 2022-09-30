@@ -9,6 +9,8 @@ import {
   Button,
   Grid,
   useToast,
+  UnorderedList,
+  ListItem,
 } from "@chakra-ui/react";
 
 import React, { Fragment, useRef, useState } from "react";
@@ -101,6 +103,35 @@ const Internship = () => {
         navigate("/academics/nysc", { replace: true });
       },
     },
+  ];
+
+  const internshipCompanies = [
+    "Marriot Group",
+    "Hilton Group",
+    "Eden Heights Apartments",
+    "Kennan Lodge",
+    "Legend Hotels Lagos Airport",
+    "Radisson Blu Hotel",
+    "The Wheatbaker Lagos",
+    "Lagos Business School",
+    "Southern Sun Ikoyi",
+    "Eko Hotel and Suites",
+    "Sugar Creations",
+    "Ibis Hotel",
+    "Four Points by Sheraton",
+    "Ikoyi Club 1938",
+    "China - Wok Restaurant & Grill",
+    "In4u cakes",
+    "Sun Heaven Hotels and Resort",
+    "Lagos Continental Hotel",
+    "Amber Residence",
+    "Araba’s Homemade",
+    "Cakes ‘n’ Candy",
+    "Elion House Hotel",
+    "Fahrenheit Loft Hotel",
+    "Lounge 38",
+    "Pan African Catering - Servair",
+    "Simply Sweet Confectionery",
   ];
 
   const sendEmail = async (e) => {
@@ -223,6 +254,11 @@ const Internship = () => {
             College in the areas of Front Office, Food &#38; Beverage
             Production, Food &#38; Beverage Service, Housekeeping and any other
             relevant department.
+            <UnorderedList>
+              {internshipCompanies.map((internshipCompany, index) => {
+                return <ListItem key={index}> {internshipCompany} </ListItem>;
+              })}
+            </UnorderedList>
           </Text>
         </Box>
 

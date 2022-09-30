@@ -8,23 +8,25 @@ import {
   Grid,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import aboutus from "assets/Images/aboutus.png";
-import waveimg from "assets/Images/waveimg.png";
+import hostel1 from "assets/Images/hostel1.jpg";
+import hostel2 from "assets/Images/hostel2.jpg";
+import hostel3 from "assets/Images/hostel3.jpg";
+import hostel4 from "assets/Images/hostel4.jpg";
 import { NavLink, useNavigate } from "react-router-dom";
 
 const ApplyOnline = () => {
   const images = [
     {
-      hotelPic: aboutus,
+      hotelPic: hostel1,
     },
     {
-      hotelPic: aboutus,
+      hotelPic: hostel2,
     },
     {
-      hotelPic: aboutus,
+      hotelPic: hostel3,
     },
     {
-      hotelPic: aboutus,
+      hotelPic: hostel4,
     },
   ];
   const navigate = useNavigate();
@@ -69,7 +71,7 @@ const ApplyOnline = () => {
           "2xl": "none",
         }}
       >
-        <Image src={waveimg} h="100%" w="100%" objectFit="cover" />
+        <Image src={hostel1} h="100%" w="100%" objectFit="cover" />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -99,6 +101,14 @@ const ApplyOnline = () => {
           xl: "50px 91px",
           "2xl": "100px 91px",
         }}
+        w={{
+          sm: "100%",
+          md: "100%",
+          lg: "100%",
+          xl: "1280px",
+          "2xl": "1280px",
+        }}
+        mx="auto"
       >
         <Flex
           alignItems="center"
@@ -122,10 +132,10 @@ const ApplyOnline = () => {
               alignItems="center"
             >
               <Image
-                src={aboutus}
+                src={hostel3}
                 w="323px"
                 h="323px"
-                objectFit="cover"
+                objectFit="contain"
                 borderRadius="5px"
                 mt="30px"
                 mr="30px"
@@ -204,12 +214,9 @@ const ApplyOnline = () => {
                   my="24px"
                   color="#021D37"
                 >
-                  Wavecrest offers accomodation to its students. We have a two
-                  well furnished hostels. Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Reiciendis possimus quasi
-                  distinctio! Eaque reprehenderit quo, ut perferendis, maxime
-                  dolor culpa recusandae autem saepe laborum possimus fugiat
-                  quisquam ipsum incidunt quae.
+                  Wavecrest offers accommodation to her students both on campus
+                  and off campus. The hostel services are outsourced but
+                  regulated by the College
                 </Text>
 
                 <Button
@@ -236,7 +243,7 @@ const ApplyOnline = () => {
               </Box>
 
               <Image
-                src={aboutus}
+                src={hostel3}
                 w="323px"
                 h="323px"
                 objectFit="cover"

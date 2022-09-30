@@ -182,58 +182,6 @@ const BlogPost = () => {
               objectFit="cover"
               my="10px"
             />
-
-            <Text
-              fontFamily="Manrope"
-              fontSize="18px"
-              fontWeight="400"
-              lineHeight="25px"
-              color="#021D37"
-              mb="27px"
-            >
-              Featuring in the Guinness World Records is obviously not a yearly
-              event. This is why Wavecrest College was excited to be a part of
-              an amazing project partnering with the Featuring in the Guinness
-              World Records is obviously not a yearly event. This is why
-              Wavecrest College was excited to be a part of an amazing project
-              partnering with the...Featuring in the Guinness World Records is
-              obviously not a yearly event. This is why Wavecrest College was
-              excited to be a part of an amazing project partnering with
-              the...Featuring in the Guinness World Records is obviously not a
-              yearly event. This is why Wavecrest College was excited to be a
-              part of an amazing project partnering with the...Featuring in the
-              Guinness World Records is obviously not a yearly event. This is
-              why Wavecrest College was excited to be a part of an amazing
-              project partnering with the...Featuring in the Guinness World
-              Records is obviously not a yearly event. This is why Wavecrest
-              College was excited to be a part of an amazing project partnering
-              with the...Featuring in the Guinness World Records is obviously
-              not a yearly event. This is why Wavecrest College was excited to
-              be a part of an amazing project partnering with the...Featuring in
-              the Guinness World Records is obviously not a yearly event. This
-              is why Wavecrest College was excited to be a part of an amazing
-              project partnering with the...Featuring in the Guinness World
-              Records is obviously not a yearly event. This is why Wavecrest
-              College was excited to be a part of an amazing project partnering
-              with the...Featuring in the Guinness World Records is obviously
-              not a yearly event. This is why Wavecrest College was excited to
-              be a part of an amazing project partnering with the...
-            </Text>
-
-            {/* <Flex>
-              <Link
-                bg="#021D37"
-                p="15px"
-                borderRadius="3px"
-                color="#FFF"
-                mr="20px"
-              >
-                <FaChevronLeft size="20px" />
-              </Link>
-              <Link bg="#021D37" p="15px" borderRadius="3px" color="#FFF">
-                <FaChevronRight size="20px" />
-              </Link>
-            </Flex> */}
           </Box>
         </Box>
 
