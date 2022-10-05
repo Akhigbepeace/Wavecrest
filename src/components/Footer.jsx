@@ -116,8 +116,8 @@ const Footer = () => {
   ];
 
   const initialValues = {
-    name: "",
-    email: "",
+    user_name: "",
+    user_email: "",
   };
 
   const [inputField, setInputField] = useState(initialValues);
@@ -158,7 +158,7 @@ const Footer = () => {
     },
     {
       fieldType: "email",
-      name: "user_email",
+      email: "user_email",
       placeHolder: "Email",
     },
   ];
@@ -380,22 +380,45 @@ const Footer = () => {
 
         <form ref={form} onSubmit={sendEmail}>
           <Stack>
-            {subscribeForm.map((form, index) => {
+            {subscribeForm.map((field, index) => {
               return (
+                // <Input
+                //   required
+                //   key={index}
+                //   type={form.type}
+                //   name={form.name}
+                //   placeholder={form.placeHolder}
+                //   bg="#fff"
+                //   h="51px"
+                //   mt="15px"
+                //   p="15px 20px"
+                //   value={inputField[form.name]}
+                //   borderRadius="3px"
+                //   onChange={inputValues}
+                //   border="none"
+                // _placeholder={{
+                //   color: "#021D37",
+                //   fontFamily: "Manrope",
+                //   fontSize: "16px",
+                //   fontWeight: "400",
+                // }}
+
+                // />
+
                 <Input
-                  required
+                  isRequired
                   key={index}
-                  type={form.type}
-                  name={form.name}
-                  placeholder={form.placeHolder}
+                  type={field.fieldType}
+                  variant={field.variant}
+                  placeholder={field.placeHolder}
+                  name={field.name}
+                  value={inputField[field.name]}
+                  border="none"
+                  mt="10px"
+                  p="15px 20px"
                   bg="#fff"
                   h="51px"
-                  mt="15px"
-                  p="15px 20px"
-                  value={inputField[form.name]}
-                  borderRadius="3px"
                   onChange={inputValues}
-                  border="none"
                   _placeholder={{
                     color: "#021D37",
                     fontFamily: "Manrope",

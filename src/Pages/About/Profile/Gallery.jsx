@@ -28,7 +28,7 @@ export default function Carousel() {
     arrows: false,
     fade: false,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     speed: 8000,
     autoplaySpeed: 0,
     slidesToShow: slideNo,

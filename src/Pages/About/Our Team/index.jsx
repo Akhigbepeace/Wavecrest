@@ -21,7 +21,7 @@ const OurTeam = () => {
     },
     {
       id: "staff",
-      linkTitle: "Academic Staff",
+      linkTitle: "Staff",
       content: <Staff />,
     },
   ];
