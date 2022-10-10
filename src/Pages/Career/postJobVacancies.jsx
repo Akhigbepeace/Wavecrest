@@ -79,8 +79,7 @@ const PostJobVacancies = () => {
       setInputField(initialValues);
       toast({
         title: "SUCCESSFUL !",
-        description:
-          "Your request has been submitted",
+        description: "Your request has been submitted",
         status: "success",
         duration: 5000,
         isClosable: true,
@@ -364,16 +363,6 @@ const PostJobVacancies = () => {
           "2xl": "none",
         }}
       >
-        <Heading
-          fontFamily="Playfair Display"
-          fontWeight="700"
-          fontSize="32px"
-          color="#021D37"
-          textAlign="center"
-          mb="22px"
-        >
-          Navigate To:
-        </Heading>
         <Flex justifyContent="space-evenly">
           <Button
             fontFamily="Manrope"

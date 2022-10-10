@@ -116,36 +116,12 @@ const Contact = () => {
   ];
 
   const [inputField, setInputField] = useState(initialValues);
-  const [formErrors, setformErrors] = useState({});
 
   const inputValues = (e) => {
     setInputField({
       ...inputField,
       [e.target.name]: e.target.value,
     });
-  };
-
-  const validate = (values) => {
-    const errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-
-    if (!values.user_name) {
-      errors.user_name = "This field is required";
-    }
-    if (!values.user_email) {
-      errors.user_email = "This field is required";
-    }
-    if (!values.user_number) {
-      errors.user_number = "This field is required";
-    }
-    if (!values.user_subject) {
-      errors.user_subject = "This field is required";
-    }
-    if (!values.user_message) {
-      errors.user_message = "This field is required";
-    }
-
-    return errors;
   };
 
   const sendEmail = async (e) => {

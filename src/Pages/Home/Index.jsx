@@ -1,6 +1,8 @@
+import { Box } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import Navbar from "../../components/Navbar";
 import Showcase from "./Showcase";
+import Statistics from "components/Statistics";
 import DiscoverHospitality from "./DiscoverHospitality";
 import Blog from "./Blog";
 import StudyProgrammes from "./StudyProgram/StudyProgrammes";
@@ -13,7 +15,10 @@ const Home = () => {
   return (
     <Fragment>
       <Navbar />
-      <Showcase />
+      <Box>
+        <Showcase />
+        <Statistics />
+      </Box>
       <DiscoverHospitality />
       <Blog />
       <StudyProgrammes />

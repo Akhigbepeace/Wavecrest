@@ -2,7 +2,7 @@ import { Box, Text, Heading, Button, Image, Flex } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import OurStory from "./OurStory";
 import JsFileDownloader from "js-file-downloader";
-import about from "assets/Images/About.png";
+import about from "assets/Images/aboutDesktopBanner.jpg";
 import Gallery from "Pages/About/Profile/Gallery";
 import OurPhilosophy from "./OurPhilosophy";
 import OurClout from "./OurClout";
@@ -177,16 +177,6 @@ const Profile = () => {
           "2xl": "none",
         }}
       >
-        <Heading
-          fontFamily="Playfair Display"
-          fontWeight="700"
-          fontSize="32px"
-          color="#021D37"
-          textAlign="center"
-          mb="22px"
-        >
-          Navigate To:
-        </Heading>
         <Flex justifyContent="space-evenly">
           <Button
             fontFamily="Manrope"

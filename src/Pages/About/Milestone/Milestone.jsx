@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Box, Flex, Heading, Text, Image, Button } from "@chakra-ui/react";
-import about from "assets/Images/About.png";
+import about from "assets/Images/milestone.jpg";
 import Seventies from "./Responsive Milestone/Seventies";
 import Eighties from "./Responsive Milestone/Eighties";
 import Nineties from "./Responsive Milestone/Nineties";
@@ -17,7 +17,7 @@ const milestones = [
   {
     year: "1978",
     achievement:
-      "Wavecrest Training Center formally began in its location at 75 Adisa Bashua Street in Surulere, as a center for professional training of young women interested in developing their skills in a career in the filed of catering. ",
+      "Wavecrest Training Centre formally began in its location at 75 Adisa Bashua Street in Surulere, as a centre for professional training of young women interested in developing their skills in a career in the field of Catering. By 1980, for the first time students were presented for the City & Guilds London Examinations in Basic Cookery and Home Craft.",
   },
 
   {
@@ -35,17 +35,22 @@ const milestones = [
   {
     year: "1991",
     achievement:
-      "The West Africa Examination Council (WAEC) accredited Wavecrest as an instruction and examination center for WAEC 894 Technical Examination in Hotel & Catering. In 1995, The National Business and Technical Examination Board (NABTED), which has taken over the WAEC Examinations, accorded the Center with the same recognition as an instruction and examination center for the National Technical Certificate (NTC) Examination",
+      " The West African Examination Council (WAEC) accredited Wavecrest as an instruction and examination centre for WAEC 894 Technical Examination in Hotel & Catering. In 1995 The National Business and Technical Examination Board (NABTEB), which has taken over the WAEC examinations, accorded the Centre with the same recognition as an instruction and examination centre for the National Technical Certificate (NTC) Examination.",
   },
   {
     year: "1998",
     achievement:
-      "In an attempt to upgrade the career of Hospitality Management, seeking to make a stronger contribution to raising the standards of the Hospitality sector in Nigeria, it was decided to apply for recognition to the Ntional Board for the Technical Education (NBTE) as a Monotechnic offering courses that would lead to the National Diploma (ND). By 1999, the Federal Ministry granted approval to establish the Wavecrest College of Catering and Hospitality Management able to run ND programmes",
+      "In an attempt to upgrade the career of Hospitality Management, seeking to make a stronger contribution to raising the standards of the Hospitality sector in Nigeria, it was decided to apply for recognition to the National Board for Technical Education (NBTE) as a Monotechnic offering courses that would lead to the National Diploma (ND). ",
+  },
+  {
+    year: "1999",
+    achievement:
+      "The Federal Ministry granted the approval to establish the Wavecrest College of Catering and Hospitality Management able to run ND programmes.",
   },
   {
     year: "2002",
     achievement:
-      "NBTE granted the approval of commence the National Diploma in Hotel and Catering Management Programme",
+      "NBTE granted the approval to commence the National Diploma in Hotel and Catering Management Programme.",
   },
   {
     year: "2005",
@@ -54,7 +59,7 @@ const milestones = [
   {
     year: "2006",
     achievement:
-      "NBTE granted the approval to commence the Higher National Diploma (HND) Programme in Hotel and Catering Management ",
+      "NBTE granted the approval to commence the Higher National Diploma (HND) Programme in Hotel and Catering Management",
   },
   {
     year: "2010",
@@ -64,42 +69,42 @@ const milestones = [
   {
     year: "2011",
     achievement:
-      "Received the 2011 Platinum award for the best hospitality educational Institute in West Africa Tourism and Hospitality Awards (WATHA)",
+      "Received the 2011 Platinum award for the best hospitality educational institute in West Africa Tourism and Hospitality Awards (WATHA)",
   },
   {
     year: "2012",
     achievement:
-      "Received the 2012 Platinum award for the best hospitality educational Institute in West Africa Tourism and Hospitality Awards (WATHA)",
+      "Platinum Winner of the West African Tourism and Hospitality Award (WATHA) for the best Hospitality Educational Institute in West Africa.",
   },
   {
     year: "2014",
     achievement: [
       "Wavecrest became the Approved International Center for the Institute of Hospitality (IHG), UK Management Qualifications",
-      "Wavecrest  came 2nd in the Accor students take off Finals in Paris, a global student's competition.",
-      "Official signing of the Memorandum of Agreement with Intercontinental Hotel Group, Wavecrest becomes an official IHG Academy Partner",
+      "Wavecrest came 2nd in the Accor students take off Finals in Paris, a global student’s competition.",
+      "Official signing of the Memorandum of Agreement with Intercontinental Hotel Group. Wavecrest becomes an official IHG Academy Partner",
     ],
   },
   {
     year: "2015",
     achievement:
-      "Appointed training provider for the National Vocation Qualificatio (NVQ) recently approved by the Federal Government",
+      "Appointed training provider for the National Vocational Qualification (NVQ) recently approved by the Federal Government",
   },
   {
     year: "2016",
     achievement:
-      "Eight students were awarded a Swiss Government scholarship to study in the Swiss Hotel School - Boma International Hospitality College in Nairobi, Kenya ",
+      "Eight students awarded a Swiss Government scholarship to study in the Swiss Hotel School – Boma International Hospitality College in Nairobi Kenya",
   },
   {
     year: "2017",
     achievement:
-      "Signed MOU for collaboration with UNDP and Lagos State Employment Trust (LSETF) through the Lagos State Employability Support Project to teain 1,500 youth in Hospitality skills",
+      "Signed MOU for collaboration with UNDP and Lagos State Employment Trust Fund (LSETF) through the Lagos State Employability Support Project to train 1,500 youth in Hospitality Skills.",
   },
   {
     year: "2018",
     achievement: [
-      "The Pyne Awards for Best Institution for the Development of Women in Nigeria",
+      "The Pyne Awards for Best Institution for the Development of Women in Nigeria.",
 
-      "The Africa Travels Times Magazine Awards for Best Hospitality College for Women (West Africa)",
+      "The African Travel Times Magazine Award for Best Hospitality College for Women (West Africa).",
     ],
   },
 ];
