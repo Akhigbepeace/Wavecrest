@@ -11,7 +11,7 @@ const OurPhilosophy = () => {
     },
     {
       heading: "Vision",
-      text: "To ensure In-depth Hospitality and Life Skills Training that guarantees the Girl Child 3Es (Education, Employment and Economic independence) by providing both technical competence and ethical integrity for the students.",
+      text: "To provide both technical competence and ethical integrity in order to ensure in-depth Hospitality and Life Skills Training that guarantees the Girl Child 3Es - Education, Employment and Economic independence",
     },
     {
       heading: "Core Values",
@@ -19,8 +19,8 @@ const OurPhilosophy = () => {
         "S - Spirit of Service",
         "P - Personal Responsibility",
         "I - Integrity",
-        "R - Respect",
-        "I - Industrious",
+        "R - Respect for Others",
+        "I - Industriousness",
         "T - Teamwork",
       ],
     },

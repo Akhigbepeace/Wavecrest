@@ -4,6 +4,9 @@ import studyProgrammes1 from "assets/Images/studyprogrammes1.png";
 import studyProgrammes2 from "assets/Images/studyprogrammes2.png";
 import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
 import studyProgrammes4 from "assets/Images/studyprogrammes4.png";
+import training1 from "assets/Images/trainingImg1.jpg";
+import training2 from "assets/Images/trainingImage2.jpg";
+import training3 from "assets/Images/trainingImage3.jpg";
 import Courses from "./Courses";
 import ShortCourses from "./ShortCourses";
 import { useNavigate } from "react-router-dom";
@@ -21,28 +24,28 @@ const StudyProgrammes = () => {
             navigate("/HNDProgramme", { replace: true });
           },
           current: false,
-          captionHeading: "ACQUIRE AN HND IN HOSPITALITY MANAGEMENT",
+          captionHeading:
+            " A Programme for ND Hospitality Graduates in preparation for NYSC",
           captionTime: "2 Years | Full Time",
-          captionButton: "Apply Now",
+          captionButton: "APPLY NOW",
         },
       ],
     },
 
     {
-      linkContent: "ND IN HOTEL AND CATERING MANAGEMENT",
-
+      linkContent: "ND IN HOSPITALITY MANAGEMENT",
       values: [
         {
-          imageSrc: studyProgrammes2,
+          imageSrc: studyProgrammes3,
           redirect: (e) => {
             e.preventDefault();
 
             navigate("/NDProgramme", { replace: true });
           },
           current: false,
-          captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
+          captionHeading: "A programme for Hospitality Career aspirants",
           captionTime: "2 Years | Full Time",
-          captionButton: "Apply Now",
+          captionButton: "APPLY NOW",
         },
       ],
     },
@@ -51,23 +54,48 @@ const StudyProgrammes = () => {
       linkContent: "CERTIFICATE COURSE IN HOSPITALITY OPERATIONS",
       values: [
         {
-          imageSrc: studyProgrammes3,
+          imageSrc: studyProgrammes2,
           redirect: (e) => {
             e.preventDefault();
 
             navigate("/CertificateCourses", { replace: true });
           },
           current: true,
-          captionHeading: "SPEND A GAP YEAR IN HOSPITALITY TRAINING",
+          captionHeading:
+            " An accelerated certificate programme for young school leavers ",
           captionTime: "1 Year | Full Time",
-          captionButton: "Apply Now",
+          captionButton: "APPLY NOW",
         },
       ],
     },
 
     {
-      linkContent: "TRAINING",
+      linkContent: "TRAININGS",
       values: [
+        {
+          imageSrc: training1,
+          current: false,
+          redirect: (e) => {
+            e.preventDefault();
+
+            navigate("/academics/training", { replace: true });
+          },
+          captionHeading: "CONFEDERATION OF TOURISM AND HOSPITALITY",
+          captionTime: "Duration: Flexible",
+          captionButton: "APPLY NOW",
+        },
+        {
+          imageSrc: training2,
+          current: false,
+          redirect: (e) => {
+            e.preventDefault();
+
+            navigate("/academics/training", { replace: true });
+          },
+          captionHeading: "HOSPITALITY TRAINING PROGRAMMES",
+          captionTime: "Flexible",
+          captionButton: "APPLY NOW",
+        },
         {
           imageSrc: studyProgrammes4,
           current: false,
@@ -76,45 +104,21 @@ const StudyProgrammes = () => {
 
             navigate("/academics/training", { replace: true });
           },
-          captionHeading: "CONFEDERATION OF TOURISM AND HOSPITALITY",
-          captionTime: "2 Years | Part Time",
-          captionButton: "Apply Now",
-        },
-        {
-          imageSrc: studyProgrammes1,
-          current: false,
-          redirect: (e) => {
-            e.preventDefault();
-
-            navigate("/academics/training", { replace: true });
-          },
-          captionHeading: "HOSPITALITY TRAINING PROGRAMMES",
-          captionTime: "2 Years | Part Time",
-          captionButton: "Apply Now",
-        },
-        {
-          imageSrc: studyProgrammes2,
-          current: false,
-          redirect: (e) => {
-            e.preventDefault();
-
-            navigate("/academics/training", { replace: true });
-          },
           captionHeading: "CULINARY COURSES",
-          captionTime: "2 Years | Part Time",
-          captionButton: "Apply Now",
+          captionTime: "5 weeks - 3 Months",
+          captionButton: "APPLY NOW",
         },
         {
-          imageSrc: studyProgrammes1,
+          imageSrc: training3,
           current: false,
           redirect: (e) => {
             e.preventDefault();
 
             navigate("/academics/training", { replace: true });
           },
-          captionHeading: "NATIONAL SKILL ACQUISITION",
-          captionTime: "2 Years | Part Time",
-          captionButton: "Apply Now",
+          captionHeading: "PROFESSISONAL CERTIFICATE IN HOSPITALITY",
+          captionTime: "10 weeks",
+          captionButton: "APPLY NOW",
         },
       ],
     },
@@ -174,7 +178,7 @@ const StudyProgrammes = () => {
 
       <Flex
         h="91px"
-        w="1247px"
+        w="1200px"
         m="0 auto"
         display={{
           sm: "none",
@@ -188,7 +192,7 @@ const StudyProgrammes = () => {
           const isCurrent = currentprogram.linkContent === programm.linkContent;
 
           return (
-            <Box
+            <Flex
               cursor="pointer"
               fontWeight="600"
               p="10px"
@@ -199,6 +203,8 @@ const StudyProgrammes = () => {
               fontFamily="Manrope"
               fontSize="20px"
               textAlign="center"
+              alignItems="center"
+              justifyContent="center"
               textDecoration="none"
               bg={isCurrent ? "#021d37" : "#fff"}
               color={isCurrent ? "#EBEDEF" : "#021d37"}
@@ -210,7 +216,7 @@ const StudyProgrammes = () => {
               }}
             >
               {programm.linkContent}
-            </Box>
+            </Flex>
           );
         })}
       </Flex>
@@ -226,12 +232,13 @@ const StudyProgrammes = () => {
         }}
       >
         {currentprogram.values.map((value, index) => (
-          <Box key={index} w="1247px" h="400px" mb="70px" m="0 auto">
+          <Box key={index} w="1200px" h="400px" mb="70px" m="0 auto">
             <Image
               src={value.imageSrc}
+              objectFit="cover"
               alt="coffee"
               h="394px"
-              w="1247px"
+              w="1200px"
               m="0 auto"
               position="absolute"
             />
@@ -240,16 +247,18 @@ const StudyProgrammes = () => {
               bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(1, 15, 29, 0.52) 46.35%, rgba(2, 29, 55, 0.87) 100%)"
               textAlign="center"
               position="relative"
-              bottom="-175px"
+              bottom="-127px"
               pt="40px"
               pb="20px"
             >
               <Heading
                 color="#fff"
                 fontWeight="700"
+                h="96px"
                 fontSize="40px"
                 fontFamily="Playfair Display"
                 cursor="pointer"
+                textTransform="uppercase"
                 onClick={value.redirect}
               >
                 {value.captionHeading}

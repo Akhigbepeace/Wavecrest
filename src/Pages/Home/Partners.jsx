@@ -9,17 +9,12 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import Slider from "react-slick";
-import Nestle from "assets/Images/Nestle.png";
-import Pau from "assets/Images/pau.png";
-import bihc from "assets/Images/bihc.png";
-import raddison from "assets/Images/raddison.png";
-import maggi from "assets/Images/Maggi.png";
 import womenBoard from "assets/Images/women's board.jpg";
-import sheraton from "assets/Images/sheraton.png";
-import intercontinental from "assets/Images/intercontinental.png";
-import crowneplaza from "assets/Images/crowneplaza.png";
-import starwood from "assets/Images/starwood.png";
-import bomahotel from "assets/Images/bomahotel.png";
+import elisLogo from "assets/Images/elisLogo.png";
+import lexonCapital from "assets/Images/lexonCapital.png";
+import IshkTolaram from "assets/Images/IshkTolaram.png";
+import venFoundation from "assets/Images/venFoundation.jpeg";
+import nestleProfessionals from "assets/Images/nestleProfessionals.png";
 
 const settings = {
   dots: false,
@@ -40,45 +35,12 @@ export default function Carousel() {
   const side = useBreakpointValue({ base: "30%", md: "10px" });
 
   const cards = [
-    {
-      logo: Nestle,
-      width: "80px",
-      height: "80px",
-    },
-    {
-      logo: Pau,
-    },
-    {
-      logo: bihc,
-      width: "80px",
-      height: "80px",
-    },
-    {
-      logo: raddison,
-    },
-    {
-      logo: maggi,
-      width: "80px",
-      height: "80px",
-    },
-    {
-      logo: womenBoard,
-    },
-    {
-      logo: sheraton,
-    },
-    {
-      logo: intercontinental,
-    },
-    {
-      logo: crowneplaza,
-    },
-    {
-      logo: starwood,
-    },
-    {
-      logo: bomahotel,
-    },
+    IshkTolaram,
+    elisLogo,
+    lexonCapital,
+    womenBoard,
+    venFoundation,
+    nestleProfessionals,
   ];
 
   return (
@@ -176,9 +138,9 @@ export default function Carousel() {
           {cards.map((image, index) => (
             <Image
               key={index}
-              src={image.logo}
+              src={image}
               alt="companyLogo"
-              h="75px"
+              h="100px"
               mb="50px"
               objectFit="contain"
             />
@@ -195,9 +157,9 @@ export default function Carousel() {
           "2xl": "none",
         }}
         gridTemplateColumns={{
-          sm: "auto auto auto",
-          md: "auto auto auto",
-          lg: "1fr 1fr 1fr",
+          sm: "auto auto",
+          md: "auto auto",
+          lg: "1fr 1fr",
         }}
         px={{
           sm: "20px",
@@ -216,11 +178,9 @@ export default function Carousel() {
         {cards.map((image, index) => (
           <Image
             key={index}
-            src={image.logo}
+            src={image}
             alt="companyLogo"
             alignItems="center"
-            w={image.width}
-            h={image.height}
             objectFit="contain"
             mb={{
               sm: "40px",
@@ -230,6 +190,7 @@ export default function Carousel() {
               "2xl": "50px",
             }}
             mx="auto"
+            px="30px"
           />
         ))}
       </Grid>

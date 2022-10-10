@@ -4,9 +4,11 @@ import { Box, useBreakpointValue, Image } from "@chakra-ui/react";
 import Slider from "react-slick";
 import aboutGallery1 from "assets/Images/aboutgallery1.png";
 import aboutGallery2 from "assets/Images/aboutgallery2.png";
-import aboutGallery3 from "assets/Images/aboutgallery3.png";
 import aboutGallery4 from "assets/Images/aboutgallery4.png";
 import aboutGallery5 from "assets/Images/aboutgallery5.png";
+import gallery1 from "assets/Images/galleryPic 1.jpg";
+import gallery2 from "assets/Images/galleryPic 2.jpg";
+import gallery3 from "assets/Images/galleryPic3.jpg";
 
 export default function Carousel() {
   const [slider, setSlider] = React.useState();
@@ -26,7 +28,7 @@ export default function Carousel() {
     arrows: false,
     fade: false,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     speed: 8000,
     autoplaySpeed: 0,
     slidesToShow: slideNo,
@@ -37,13 +39,11 @@ export default function Carousel() {
   const cards = [
     aboutGallery1,
     aboutGallery2,
-    aboutGallery3,
     aboutGallery4,
     aboutGallery5,
-    aboutGallery4,
-    aboutGallery3,
-    aboutGallery2,
-    aboutGallery1,
+    gallery1,
+    gallery2,
+    gallery3,
   ];
 
   return (
@@ -66,12 +66,24 @@ export default function Carousel() {
 
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((image, index) => (
-          <Box key={index}>
+          <Box
+            key={index}
+            w="272px"
+            h={{
+              sm: "150px",
+              md: "211px",
+              lg: "211px",
+              xl: "272px",
+              "2xl": "272px",
+            }}
+          >
             <Image
               src={image}
+              w="100%"
+              h="100%"
               pr="10px"
               alt="companyLogo"
-              objectFit="contain"
+              objectFit="cover"
             />
           </Box>
         ))}

@@ -78,14 +78,17 @@ const ApplyOnline = () => {
     {
       course: "HND in Hospitality Management",
       price: " The fee for this course is: #500,000",
+      paymentLink: "https://paystack.com/pay/wchform2",
     },
     {
       course: "ND in Hospitality Management",
       price: " The fee for this course is: #300,000",
+      paymentLink: "https://paystack.com/pay/wchform1",
     },
     {
       course: "Certificate in Hospitality Operations",
       price: " The fee for this course is: #300,000",
+      paymentLink: "https://paystack.com/pay/wchform1",
     },
     {
       course: "Confederation of Tourism and Hospitality",
@@ -226,6 +229,7 @@ const ApplyOnline = () => {
           {forms.map((form, index) => {
             return (
               <Input
+                required
                 key={index}
                 type={form.fieldType}
                 placeholder={form.placeHolder}
@@ -255,7 +259,6 @@ const ApplyOnline = () => {
           })}
 
           <Select
-            placeholder=""
             w={{
               sm: "100%",
               md: "400px",
@@ -334,7 +337,7 @@ const ApplyOnline = () => {
           </Flex>
 
           <Link
-            href="https://paystack.com/pay/wchform1"
+            href={showCoursePrice.paymentLink}
             target="_blank"
             _hover={{
               textDecor: "none",
