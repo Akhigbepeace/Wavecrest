@@ -18,7 +18,10 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import waveimg from "assets/Images/waveimg.png";
+import studyProgrammes1 from "assets/Images/HNDReq.jpg";
+import studyProgrammes2 from "assets/Images/CertReq.jpg";
+import studyProgrammes3 from "assets/Images/NdReq.jpg";
+import admission from "assets/Images/Admission.png";
 import fileDownload from "assets/Images/paperDownload.png";
 import { useNavigate } from "react-router-dom";
 
@@ -28,11 +31,9 @@ const AdmissionRequirements = () => {
       linkTo: "https://paystack.com/pay/wchform2",
       background: "#FFF",
       course: "Higher National Diploma (HND) in Hospitality Management",
-      coursePic: waveimg,
+      coursePic: studyProgrammes1,
       courseRequirements: [
-        "SSCE/NECO/GCE/WASC",
-        "4 Credits Level Passes in not more than 2 sitings",
-        "Wavecrest College Entrance Exam",
+        "National Diploma in Hospitality Management with at least a CREDIT",
         "Minimum of One Year Industrial Training",
       ],
     },
@@ -40,9 +41,9 @@ const AdmissionRequirements = () => {
       linkTo: "https://paystack.com/pay/wchform1",
       background: "#EBEDEF",
       course: "National Diploma (ND) in Hospitality Management",
-      coursePic: waveimg,
+      coursePic: studyProgrammes3,
       courseRequirements: [
-        "4 Credits Level Passes in SSCE/NECO/GCE/WASC",
+        "5 Credits Level Passes in SSCE/NECO/GCE/WASC in not more than 2 sittings",
         "UTME",
       ],
       viewUpdate: "Click to view updated Subject combinations",
@@ -52,54 +53,52 @@ const AdmissionRequirements = () => {
 
       background: "#FFF",
       course: "Certificate in Hospitality Operations",
-      coursePic: waveimg,
+      coursePic: studyProgrammes2,
       courseRequirements: [
         "SSCE/NECO/GCE/WASC",
         "4 Credits Level Passes in not more than 2 sitings",
-        "Wavecrest College Entrance Exam",
+        "Wavecrest College Screening",
       ],
     },
   ];
 
   const subjects = [
-    "Physics",
-    "Chemistry",
-    "Mathematics/Statistics",
-    "Geography",
-    "Food and Nutrition",
-    "Technical Drawing",
-    "English Language/Literature in English",
-    "Home Management/Catering Craft",
+    "Biology or Agric Science or Health Science",
+    "Others - Any of the following",
+    "English Language, Food and Nutrition, Civic Education, Economics or Commerce, Marketing, Physics, Mathematics or Statistics, Chemistry, Home Management or Catering Craft.",
+    "Subject Combination for JAMB (UTME): ",
+    "English Language (COMPULSORY and other three subjects of choice (WITH EXCEPTION OF RELIGIOUS STUDIES)",
+    "",
   ];
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-const navigate = useNavigate();
-const navigateTo = [
-  {
-    name: "TUITION AND SCHOLARSHIP",
-    redirect: () => {
-      navigate("/admission/tuitionAndScholarship", { replace: true });
+  const navigate = useNavigate();
+  const navigateTo = [
+    {
+      name: "TUITION AND SCHOLARSHIP",
+      redirect: () => {
+        navigate("/admission/tuitionAndScholarship", { replace: true });
+      },
     },
-  },
-  {
-    name: "APPLY ONLINE",
-    redirect: () => {
-      navigate("/admission/applyOnline", { replace: true });
+    {
+      name: "APPLY ONLINE",
+      redirect: () => {
+        navigate("/admission/applyOnline", { replace: true });
+      },
     },
-  },
-  {
-    name: "HOSTEL",
-    redirect: () => {
-      navigate("/admission/hostel", { replace: true });
+    {
+      name: "HOSTEL",
+      redirect: () => {
+        navigate("/admission/hostel", { replace: true });
+      },
     },
-  },
-  {
-    name: "FAQs",
-    redirect: () => {
-      navigate("/admission/faqs", { replace: true });
+    {
+      name: "FAQs",
+      redirect: () => {
+        navigate("/admission/faqs", { replace: true });
+      },
     },
-  },
-];
+  ];
   return (
     <Fragment>
       <Box
@@ -115,7 +114,7 @@ const navigateTo = [
           "2xl": "none",
         }}
       >
-        <Image src={waveimg} h="100%" w="100%" objectFit="cover" />
+        <Image src={admission} h="100%" w="100%" objectFit="cover" />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -222,7 +221,7 @@ const navigateTo = [
                 }}
               >
                 <Image
-                  src={waveimg}
+                  src={requirement.coursePic}
                   w="580px"
                   h="323px"
                   borderRadius="3px"
@@ -282,8 +281,24 @@ const navigateTo = [
                           }}
                           color="#021D37"
                         >
-                          Five (5) credit passes in SSCE/NECO/GCE
+                          Five (5) credit passes in SSCE/NECO/GCE/WASSCE in not
+                          more than 2 sittings
                         </Heading>
+                        <Text
+                          fontFamily="Manrope"
+                          fontWeight="700"
+                          fontSize={{
+                            md: "24px",
+                            lg: "24px",
+                            xl: "24px",
+                            "2xl": "24px",
+                          }}
+                          color="#021D37"
+                          my="20px"
+                          lineHeight="20px"
+                        >
+                          Compulsory subjects for SSCE/NECO/GCE/WASSCE
+                        </Text>
                         <UnorderedList>
                           <Text
                             fontFamily="Manrope"

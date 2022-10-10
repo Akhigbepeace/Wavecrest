@@ -41,7 +41,7 @@ const PostJobVacancies = () => {
       fieldType: "name",
       name: "user_name",
       label: "Full Name",
-      placeHolder: "FullName",
+      placeHolder: "Full Name",
       variant: "filled",
     },
     {
@@ -178,7 +178,7 @@ const PostJobVacancies = () => {
               fontSize="32px"
               color="#021D37"
             >
-              Post Job Vacancy
+              Post Job Vacancies
             </Heading>
           </Box>
 
@@ -196,10 +196,8 @@ const PostJobVacancies = () => {
             color="#021D37"
             my="24px"
           >
-            Wavecrest offers accomodation to its students. We have a two well
-            furnished hostels orem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua.
+            Looking to fill Hospitality Vacancies in your organization? Please
+            fill details below
           </Text>
         </Box>
 

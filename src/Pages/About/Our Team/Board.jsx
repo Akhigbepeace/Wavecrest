@@ -4,7 +4,7 @@ import provost from "assets/Images/provost.png";
 import deputyProvost from "assets/Images/deputyprovost.png";
 import bursar from "assets/Images/bursar.png";
 import registrar from "assets/Images/registrar.png";
-import ResponsiveBoard from "Pages/About/Our Team/Media Query/Responsive Board";
+import imageAvatar from "assets/Images/image-avatar.png";
 
 const Board = () => {
   const boards = [
@@ -102,15 +102,15 @@ const Board = () => {
       >
         {boards.map((board, index) => {
           return (
-            <Box key={index} w="250px" h="250px" mb="-62px">
-              <Image src={board.image} objectFit="contain" borderRadius="5px" />
+            <Box key={index} w="250px" h="250px">
+              <Image src={imageAvatar} objectFit="contain" borderRadius="5px" />
 
               <Flex
                 alignItems="center"
                 bg="rgba(255, 255, 255, 67%)"
                 p="10px 25px"
                 position="relative"
-                top="-62px"
+                top="-68px"
                 borderRadius="0px 0px 5px 5px"
               >
                 <Box

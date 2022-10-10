@@ -17,88 +17,125 @@ import {
 import waveimg from "assets/Images/waveimg.png";
 import { useNavigate } from "react-router-dom";
 
-const Tuitions = [
-  {
-    courseTitle: "Higher National Diploma (HND) in Hospitality Management",
-    item: "ITEM",
-    year1: "YEAR 1",
-    tuitionFee: "TUITION FEE",
-    tuitionFeePrice1: "#359,000",
-    examinationFee: "EXAMINATION FEE",
-    examinationFeePrice1: "#40,000",
-    workshopFee: "PRACTICAL WORKSHOP FEE",
-    workshopFeePrice1: "#10,000",
-    devFee: "DEVELOPMENT FEE",
-    devFeePrice1: "#40,000",
-    practicalFee: "PRACTICAL FEE",
-    practicalFeePrice1: "#10,000",
-    studentID: "STUDENT'S ID CARD",
-    studentIDPrice1: "#2,000",
-    hmoScheme: "HMO SCHEME",
-    hmoSchemePrice1: "#2,000",
-    fees: "TOTAL FEES",
-    feesPrice1: "#464,000",
-    discount: "AMOUNT SUBSIDIZED BY COLLEGE",
-    discountPrice1: "#275,000",
-    totalFees: "TOTAL FEES TO BE PAID",
-    totalFeesPrice1: "#189,000",
-  },
-
-  {
-    courseTitle: "National Diploma (ND) in Hospitality Management",
-    bg: "#EBEDEF",
-    item: "ITEM",
-    year1: "YEAR 1",
-    tuitionFee: "TUITION FEE",
-    tuitionFeePrice1: "#359,000",
-    examinationFee: "EXAMINATION FEE",
-    examinationFeePrice1: "#40,000",
-    workshopFee: "PRACTICAL WORKSHOP FEE",
-    workshopFeePrice1: "#15,000",
-    devFee: "DEVELOPMENT FEE",
-    devFeePrice1: "#40,000",
-    practicalFee: "INDUSTRIAL TRAINING FEE",
-    practicalFeePrice1: "--",
-    studentID: "STUDENT'S ID CARD",
-    studentIDPrice1: "#1,000",
-    hmoScheme: "HMO SCHEME",
-    hmoSchemePrice1: "#3,000",
-    fees: "TOTAL FEES",
-    feesPrice1: "#458,000",
-    discount: "AMOUNT SUBSIDIZED BY COLLEGE",
-    discountPrice1: "#266,000",
-    totalFees: "TOTAL FEES TO BE PAID",
-    totalFeesPrice1: "#192,000",
-  },
-
-  {
-    courseTitle: "Certificate in Hospitality Operations",
-    item: "ITEM",
-    year1: "YEAR 1",
-    tuitionFee: "TUITION FEE",
-    tuitionFeePrice1: "#359,000",
-    examinationFee: "EXAMINATION FEE",
-    examinationFeePrice1: "#20,000",
-    workshopFee: "PRACTICAL WORKSHOP FEE",
-    workshopFeePrice1: "#15,000",
-    devFee: "DEVELOPMENT FEE",
-    devFeePrice1: "#20,000",
-    practicalFee: "INDUSTRIAL TRAINING FEE",
-    practicalFeePrice1: "#8,000",
-    studentID: "STUDENT'S ID CARD",
-    studentIDPrice1: "#1,000",
-    hmoScheme: "HMO SCHEME",
-    hmoSchemePrice1: "#3,000",
-    fees: "TOTAL FEES",
-    feesPrice1: "#426,000",
-    discount: "AMOUNT SUBSIDIZED BY COLLEGE",
-    discountPrice1: "#278,000",
-    totalFees: "TOTAL FEES TO BE PAID",
-    totalFeesPrice1: "#148,000",
-  },
-];
-
 const RespTuition = () => {
+  const Tuitions = [
+    {
+      courseTitle: "Higher National Diploma (HND) in Hospitality Management",
+      item: "ITEM",
+      year1: "YEAR 1",
+      year2: "YEAR 2",
+      tuitionFee: "TUITION FEE",
+      tuitionFeePrice1: "#369,000",
+      tuitionFeePrice2: "#405,000",
+      acceptanceFee: "ACCEPTANCE FEE",
+      acceptanceFeePrice1: "#5,000",
+      acceptanceFeePrice2: "--",
+      examinationFee: "ADMIN FEE",
+      examinationFeePrice1: "#42,000",
+      examinationFeePrice2: "#40,000",
+      workshopFee: "PRACTICAL UNIFORMS",
+      workshopFeePrice1: "#35,000",
+      workshopFeePrice2: "--",
+      devFee: "DEVELOPMENT FEE",
+      devFeePrice1: "#40,000",
+      devFeePrice2: "#40,000",
+      practicalFee: "MANUALS/WORKBOOKS",
+      practicalFeePrice1: "#7,500",
+      practicalFeePrice2: "#10,000",
+      studentID: "MEDICALS",
+      studentIDPrice1: "#15,000",
+      studentIDPrice2: "--",
+      studentPracticals: "STUDENT PRACTICALS*",
+      studentPracticalsPrice1: "#60,000",
+      studentPracticalsPrice2: "#60,000",
+      hmoScheme: "HMO SCHEME",
+      hmoSchemePrice1: "#9,000",
+      hmoSchemePrice2: "#9,000",
+      fees: "FEES TO BE PAID",
+      feesPrice1: "#94,000",
+      feesPrice2: "#110,000",
+      discount: "AMOUNT SUBSIDIZED BY COLLEGE",
+      discountPrice1: "#275,000",
+      discountPrice2: "#295,000",
+      totalFees: "TOTAL FEES TO BE PAID",
+      totalFeesPrice1: "#307,500",
+      totalFeesPrice2: "#269,000",
+    },
+
+    {
+      courseTitle: "National Diploma (ND) in Hospitality Management",
+      item: "ITEM",
+      year1: "YEAR 1",
+      year2: "YEAR 2",
+      tuitionFee: "TUITION FEE",
+      tuitionFeePrice1: "#377,000",
+      tuitionFeePrice2: "#374,000",
+      acceptanceFee: "ACCEPTANCE FEE",
+      acceptanceFeePrice1: "#5,000",
+      acceptanceFeePrice2: "--",
+      examinationFee: "ADMIN FEE",
+      examinationFeePrice1: "#41,000",
+      examinationFeePrice2: "#40,000",
+      workshopFee: "PRACTICAL UNIFORMS",
+      workshopFeePrice1: "#35,000",
+      workshopFeePrice2: "--",
+      devFee: "DEVELOPMENT FEE",
+      devFeePrice1: "#40,000",
+      devFeePrice2: "#40,000",
+      practicalFee: "MANUALS/WORKBOOKS",
+      practicalFeePrice1: "#12,500",
+      practicalFeePrice2: "#15,000",
+      studentID: "MEDICALS",
+      studentIDPrice1: "#28,500",
+      studentIDPrice2: "--",
+      studentPracticals: "STUDENT PRACTICALS*",
+      studentPracticalsPrice1: "#60,000",
+      studentPracticalsPrice2: "#60,000",
+      hmoScheme: "HMO SCHEME",
+      hmoSchemePrice1: "#9,000",
+      hmoSchemePrice2: "#9,000",
+      fees: "FEES TO BE PAID",
+      feesPrice1: "#91,000",
+      feesPrice2: "#99,000",
+      discount: "AMOUNT SUBSIDIZED BY COLLEGE",
+      discountPrice1: "#286,000",
+      discountPrice2: "#275,000",
+      totalFees: "TOTAL FEES TO BE PAID",
+      totalFeesPrice1: "#322,000",
+      totalFeesPrice2: "#263,000",
+    },
+
+    {
+      courseTitle: "Certificate in Hospitality Operations",
+      item: "ITEM",
+      year1: "YEAR 1",
+      tuitionFee: "TUITION FEE",
+      tuitionFeePrice1: "#376,000",
+      discount: "AMOUNT SUBSIDIZED BY COLLEGE",
+      discountPrice1: "#278,000",
+      fees: "FEES TO BE PAID",
+      feesPrice1: "#98,000",
+      acceptanceFee: "ACCEPTANCE FEE",
+      acceptanceFeePrice1: "#5,000",
+      examinationFee: "ADMIN FEE",
+      examinationFeePrice1: "#29,000",
+      workshopFee: "PRACTICAL UNIFORMS",
+      workshopFeePrice1: "#35,000",
+      devFee: "DEVELOPMENT FEE",
+      devFeePrice1: "#20,000",
+      practicalFee: "MANUALS/WORKBOOKS",
+      practicalFeePrice1: "#10,000",
+      studentID: "MEDICALS",
+      studentIDPrice1: "#28,500",
+      studentPracticals: "STUDENT PRACTICALS*",
+      studentPracticalsPrice1: "#70,000",
+      hmoScheme: "HMO SCHEME",
+      hmoSchemePrice1: "#9,000",
+
+      totalFees: "TOTAL FEES TO BE PAID",
+      totalFeesPrice1: "#304,000",
+    },
+  ];
   const navigate = useNavigate();
   const navigateTo = [
     {
@@ -327,41 +364,8 @@ const RespTuition = () => {
           }}
         >
           <Box>
+             
             <Box>
-              <Box w="88px" h="3px" bg="#021D37" mb="5px"></Box>
-
-              <Heading
-                fontFamily="Playfair Display"
-                fontWeight="700"
-                fontSize="24px"
-                mb="7px"
-              >
-                Other Requirements may Include:
-              </Heading>
-            </Box>
-
-            <Text fontFamily="Manrope" fontWeight="400" fontSize="18px">
-              Medical Examination: ₦25,000 <br /> Practical Workshop Uniforms:
-              ₦35,000 <br />
-              Manuals: ₦15,000 <br /> Acceptance fee: N5,000 <br /> Students are
-              expected to pay for their breakages
-            </Text>
-          </Box>
-
-          <Text fontFamily="Manrope" fontWeight="400" fontSize="18px" mt="40px">
-            <b>NOTE:</b> Wavecrest College of Hospitality is a project of
-            Women’s Board, Educational Cooperation Society a non-governmental
-            not-for-profit organization. In consideration of the college’s
-            mission to reach out to and give education opportunity to the
-            financially challenged, it has therefore subsidized its fees.
-            <br />
-            <br />
-            However, those who can pay the full fees are encouraged to do so in
-            order to assist in training more students.
-          </Text>
-
-          <Box>
-            <Box mt="80px">
               <Box w="88px" h="3px" bg="#021D37"></Box>
               <Heading
                 fontFamily="Playfair Display"

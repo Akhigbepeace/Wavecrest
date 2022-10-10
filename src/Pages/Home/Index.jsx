@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import React, { Fragment } from "react";
+import PopupModal from "components/PopupModal";
 import Navbar from "../../components/Navbar";
 import Showcase from "./Showcase";
 import Statistics from "components/Statistics";
@@ -14,6 +15,7 @@ import FooterCopywright from "../../components/FooterCopywright";
 const Home = () => {
   return (
     <Fragment>
+      <PopupModal />
       <Navbar />
       <Box>
         <Showcase />

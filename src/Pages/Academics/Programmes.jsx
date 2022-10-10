@@ -12,7 +12,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import studyProgrammes1 from "assets/Images/studyprogrammes1.png";
 import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
-import studyProgrammes4 from "assets/Images/studyprogrammes4.png";
+import studyProgrammes2 from "assets/Images/studyprogrammes2.png";
 import fileDownload from "assets/Images/fileDownload.png";
 
 const Programmes = () => {
@@ -42,7 +42,7 @@ const Programmes = () => {
       linkContent: "SHORT COURSES",
       programmeDurationTime: "FULLTIME",
       programmeDurationYear: "2YEARS",
-      imageSrc: studyProgrammes4,
+      imageSrc: studyProgrammes3,
       current: false,
       captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
       captionTime: "2 Years | Part Time",
@@ -61,7 +61,7 @@ const Programmes = () => {
       linkContent: "CERTIFICATE COURSE IN HOSPITALITY OPERATIONS",
       programmeDurationTime: "FULLTIME",
       programmeDurationYear: "2YEARS",
-      imageSrc: studyProgrammes3,
+      imageSrc: studyProgrammes2,
       current: true,
       captionHeading: "SPEND A GAP YEAR IN HOSPITALITY TRAINING",
       captionTime: "1 Year | Full Time",

@@ -1,4 +1,4 @@
-import React, { Fragment, forwardRef } from "react";
+import React, { Fragment } from "react";
 import { FaFileDownload } from "react-icons/fa";
 import JsFileDownloader from "js-file-downloader";
 import cth from "assets/Images/cth.png";
@@ -25,7 +25,7 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
-const Training = forwardRef((props, ref) => {
+const Training = () => {
   const trainings = [
     {
       background: "#EBEDEF",
@@ -42,15 +42,15 @@ const Training = forwardRef((props, ref) => {
     },
     {
       background: "#FFF",
-      trainingsTitle: "Hospitality Training Programs",
+      trainingsTitle: "Professional Certificate in Hospitality",
       trainingsImage: training1,
       trainingDurationTime: "FULLTIME",
       trainingDurationYear: "2YEARS",
       trainingsText:
-        "Hospitality Training Programmes (HTP) is the training and consulting division geared towards industry managers, supervisors and operatives. This was formed to provide specialist human resource training, knowledge and advice to assist industry partners. The training is geared towards members of staff involved with providing service. In the training emphasis is placed on details that matter, customer care and improving standards to exceed expectations.",
+        "PCH:  The Professional Certificate in Hospitality (PCH) is a 10 week programme designed for operators in the hospitality industry and related-sectors who seek to expand their existing knowledge and skill-base, acquire new skills, and enhance their understanding of key hospitality operations in Food and Beverage, Housekeeping and Facility Management and Front Office and A-C below and other general areas. Participants have the opportunity to apply practical learning to their operations and receive constructive feedback during the period of learning. A 2-month industry internship to acquire valuable hands-on experience is available for suitably qualified candidates. One can choose to do a single module.",
       downloadBrochure: "Download HTP Brochure",
       button: "REGISTER",
-      fileUrl: "/documents/Ojumo House.pdf",
+      fileUrl: "/documents/Wavecrest HTP 2021 Brochure.pdf",
     },
     {
       background: "#EBEDEF",
@@ -66,12 +66,12 @@ const Training = forwardRef((props, ref) => {
     },
     {
       background: "#FFF",
-      trainingsTitle: "National Skill Acquisition",
+      trainingsTitle: "National Skill Qualification",
       trainingsImage: training3,
       trainingDurationTime: "FULLTIME",
       trainingDurationYear: "2YEARS",
       trainingsText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "Nigerian Skills Qualification Framework (NSQF) formerly National Vocational Qualification Framework (NVQF) is a system for the development, classification and recognition of skills, knowledge and competencies acquired by individuals, irrespective of where and how the training or skill was acquired. The system gives a clear statement of what the learner must know or be able to do whether the learning took place in a classroom, on-the-job, or less formally. The framework indicates the comparability of different qualifications and how one can progress from one level to another. The framework is the structure within which the National Skills Qualifications (NSQs) operate.",
       downloadBrochure: "Download NSQ Brochure",
       button: "REGISTER",
       fileUrl: "/documents/Ojumo House.pdf",
@@ -143,7 +143,7 @@ const Training = forwardRef((props, ref) => {
         </Box>
       </Box>
 
-      <Flex flexDirection="column" mb="70px" ref={ref}>
+      <Flex flexDirection="column" mb="70px">
         {trainings.map((training, index) => {
           return (
             <Box
@@ -482,6 +482,6 @@ const Training = forwardRef((props, ref) => {
       </Box>
     </Fragment>
   );
-});
+};
 
 export default Training;

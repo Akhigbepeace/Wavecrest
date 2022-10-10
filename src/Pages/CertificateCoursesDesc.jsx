@@ -13,10 +13,10 @@ import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
 import ReactPlayer from "react-player";
 import JsFileDownloader from "js-file-downloader";
-import about from "assets/Images/About.png";
+import about from "assets/Images/studyprogrammes2.png";
 import waveVid from "assets/Images/wavevid.mp4";
-import aboutgallery2 from "assets/Images/aboutgallery2.png";
-import aboutgallery4 from "assets/Images/aboutgallery4.png";
+import aboutgallery2 from "assets/Images/studyprogrammes1.png";
+import aboutgallery4 from "assets/Images/studyprogrammes3.png";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
 
@@ -148,7 +148,7 @@ const CertificateCoursesDesc = () => {
                 "2xl": "43px",
               }}
             >
-              Certificate Course <br /> In Hospitality Operationssss
+              Certificate Course <br /> In Hospitality Operations
             </Heading>
 
             <Text
@@ -159,21 +159,7 @@ const CertificateCoursesDesc = () => {
               color="#021D37"
               mt="30px"
             >
-              Wavecrest College of Hospitality is a private Monotechnic located
-              in Lagos, Nigeria. The Institution has been involved with the
-              development of Hospitality Education since 1974. It is a project
-              of Women’s Board – Education Co-operation Society, a Nigerian,
-              Not-for profit organization for the development of the Girl Child.
-              <br></br>
-              <br></br>
-              The focus of the College is targeted towards capable young women
-              interested in making a career in the Hospitality Industry. The
-              students pay a subsidized tuition fee which covers only about 25%
-              of the operation costs of the College. <br></br> <br></br>For more
-              than 40 years, over 2,500 graduates have successfully benefitted
-              from the all-round education received from the College. Our
-              graduates are guaranteed quality Education, Employment and
-              Economic Independence.
+              A one-year acceleretated certificate programme for young school leavers designed to develop knowledge and skills in food and beverage, housekeeping and reception operations. 
             </Text>
           </Box>
 

@@ -48,7 +48,7 @@ const Footer = () => {
 
     {
       icon: whatsapp,
-      to: "https://api.whatsapp.com/send/?phone=09096856606 &text&app_absent=0",
+      to: "https://wa.me/+2349096856606",
       target: "_blank",
       rel: "noreferrer",
     },
@@ -116,8 +116,8 @@ const Footer = () => {
   ];
 
   const initialValues = {
-    name: "",
-    email: "",
+    user_name: "",
+    user_email: "",
   };
 
   const [inputField, setInputField] = useState(initialValues);
@@ -136,18 +136,22 @@ const Footer = () => {
 
     const res = await emailjs.sendForm(
       "service_djq4ick",
-      "template_igsv77r",
+      "template_krcopwh",
       form.current,
       "JPAG_ZJVlAcuO_5D-"
     );
+
     setInputField(initialValues);
-    toast({
-      title: "SUCCESSFUL !",
-      description: "Your request has been submitted",
-      status: "success",
-      duration: 5000,
-      isClosable: true,
-    });
+
+    if (res.status === 200 && res.text === "OK") {
+      toast({
+        title: "SUCCESSFUL !",
+        description: "Your request has been submitted",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+    }
   };
 
   const subscribeForm = [
@@ -213,8 +217,7 @@ const Footer = () => {
             "2xl": "right",
           }}
         >
-          75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos State,
-          Nigeria.
+          75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos, Nigeria.
         </Text>
 
         <Box
@@ -364,7 +367,7 @@ const Footer = () => {
           fontSize="22px"
           lineHeight="29px"
         >
-          Suscribe to our Newsletter
+          Subscribe to our Newsletter
         </Heading>
 
         <Text
@@ -374,28 +377,28 @@ const Footer = () => {
           fontWeight="400"
           fontSize="18px"
         >
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos tenetur
-          voluptate, similique earum obcaecati placeat.
+          Keep up-to-date and informed about relevant Hospitality news and our
+          College events by filling your details below
         </Text>
 
         <form ref={form} onSubmit={sendEmail}>
           <Stack>
-            {subscribeForm.map((form, index) => {
+            {subscribeForm.map((field, index) => {
               return (
                 <Input
-                  required
+                  isRequired
                   key={index}
-                  type={form.type}
-                  name={form.name}
-                  placeholder={form.placeHolder}
+                  type={field.fieldType}
+                  variant={field.variant}
+                  placeholder={field.placeHolder}
+                  name={field.name}
+                  value={inputField[field.name]}
+                  border="none"
+                  mt="10px"
+                  p="15px 20px"
                   bg="#fff"
                   h="51px"
-                  mt="15px"
-                  p="15px 20px"
-                  value={inputField[form.name]}
-                  borderRadius="3px"
                   onChange={inputValues}
-                  border="none"
                   _placeholder={{
                     color: "#021D37",
                     fontFamily: "Manrope",

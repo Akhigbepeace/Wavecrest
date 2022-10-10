@@ -77,34 +77,30 @@ const ApplyOnline = () => {
     },
     {
       course: "HND in Hospitality Management",
-      price: " The fee for this course is: #500,000",
+      price: " The fee for this course is: #576,500",
       paymentLink: "https://paystack.com/pay/wchform2",
     },
     {
       course: "ND in Hospitality Management",
-      price: " The fee for this course is: #300,000",
+      price: " The fee for this course is: #585,000",
       paymentLink: "https://paystack.com/pay/wchform1",
     },
     {
       course: "Certificate in Hospitality Operations",
-      price: " The fee for this course is: #300,000",
+      price: " The fee for this course is: #304,000",
       paymentLink: "https://paystack.com/pay/wchform1",
     },
     {
       course: "Confederation of Tourism and Hospitality",
-      price: " The fee for this course is: #200,000",
     },
     {
       course: "Hospitality Training Programs",
-      price: " The fee for this course is: #250,000",
     },
     {
       course: "Culinary Courses",
-      price: " The fee for this course is: #150,000",
     },
     {
       course: "National Skill Acquisition",
-      price: " The fee for this course is: #200,000",
     },
   ];
 

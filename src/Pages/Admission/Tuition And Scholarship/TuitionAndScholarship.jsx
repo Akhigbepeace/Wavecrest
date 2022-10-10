@@ -32,35 +32,41 @@ const TuitionAndScholarship = () => {
       year1: "YEAR 1",
       year2: "YEAR 2",
       tuitionFee: "TUITION FEE",
-      tuitionFeePrice1: "#359,000",
-      tuitionFeePrice2: "--",
-      examinationFee: "EXAMINATION FEE",
-      examinationFeePrice1: "#40,000",
-      examinationFeePrice2: "--",
-      workshopFee: "PRACTICAL WORKSHOP FEE",
-      workshopFeePrice1: "#10,000",
+      tuitionFeePrice1: "#369,000",
+      tuitionFeePrice2: "#405,000",
+      acceptanceFee: "ACCEPTANCE FEE",
+      acceptanceFeePrice1: "#5,000",
+      acceptanceFeePrice2: "--",
+      examinationFee: "ADMIN FEE",
+      examinationFeePrice1: "#42,000",
+      examinationFeePrice2: "#40,000",
+      workshopFee: "PRACTICAL UNIFORMS",
+      workshopFeePrice1: "#35,000",
       workshopFeePrice2: "--",
       devFee: "DEVELOPMENT FEE",
       devFeePrice1: "#40,000",
-      devFeePrice2: "--",
-      practicalFee: "PRACTICAL FEE",
-      practicalFeePrice1: "#10,000",
-      practicalFeePrice2: "--",
-      studentID: "STUDENT'S ID CARD",
-      studentIDPrice1: "#2,000",
+      devFeePrice2: "#40,000",
+      practicalFee: "MANUALS/WORKBOOKS",
+      practicalFeePrice1: "#7,500",
+      practicalFeePrice2: "#10,000",
+      studentID: "MEDICALS",
+      studentIDPrice1: "#15,000",
       studentIDPrice2: "--",
+      studentPracticals: "STUDENT PRACTICALS*",
+      studentPracticalsPrice1: "#60,000",
+      studentPracticalsPrice2: "#60,000",
       hmoScheme: "HMO SCHEME",
-      hmoSchemePrice1: "#2,000",
-      hmoSchemePrice2: "--",
-      fees: "TOTAL FEES",
-      feesPrice1: "#464,000",
-      feesPrice2: "--",
+      hmoSchemePrice1: "#9,000",
+      hmoSchemePrice2: "#9,000",
+      fees: "FEES TO BE PAID",
+      feesPrice1: "#94,000",
+      feesPrice2: "#110,000",
       discount: "AMOUNT SUBSIDIZED BY COLLEGE",
       discountPrice1: "#275,000",
-      discountPrice2: "--",
+      discountPrice2: "#295,000",
       totalFees: "TOTAL FEES TO BE PAID",
-      totalFeesPrice1: "#189,000",
-      totalFeesPrice2: "#193,000",
+      totalFeesPrice1: "#307,500",
+      totalFeesPrice2: "#269,000",
     },
 
     {
@@ -69,41 +75,41 @@ const TuitionAndScholarship = () => {
       year1: "YEAR 1",
       year2: "YEAR 2",
       tuitionFee: "TUITION FEE",
-      tuitionFeePrice1: "#359,000",
-      tuitionFeePrice2: "--",
-
-      examinationFee: "EXAMINATION FEE",
-      examinationFeePrice1: "#40,000",
-      examinationFeePrice2: "--",
-      workshopFee: "PRACTICAL WORKSHOP FEE",
-      workshopFeePrice1: "#15,000",
+      tuitionFeePrice1: "#377,000",
+      tuitionFeePrice2: "#374,000",
+      acceptanceFee: "ACCEPTANCE FEE",
+      acceptanceFeePrice1: "#5,000",
+      acceptanceFeePrice2: "--",
+      examinationFee: "ADMIN FEE",
+      examinationFeePrice1: "#41,000",
+      examinationFeePrice2: "#40,000",
+      workshopFee: "PRACTICAL UNIFORMS",
+      workshopFeePrice1: "#35,000",
       workshopFeePrice2: "--",
       devFee: "DEVELOPMENT FEE",
       devFeePrice1: "#40,000",
-      devFeePrice2: "--",
-      practicalFee: "INDUSTRIAL TRAINING FEE",
-      practicalFeePrice1: "--",
-      practicalFeePrice2: "--",
-
-      studentID: "STUDENT'S ID CARD",
-      studentIDPrice1: "#1,000",
+      devFeePrice2: "#40,000",
+      practicalFee: "MANUALS/WORKBOOKS",
+      practicalFeePrice1: "#12,500",
+      practicalFeePrice2: "#15,000",
+      studentID: "MEDICALS",
+      studentIDPrice1: "#28,500",
       studentIDPrice2: "--",
-
+      studentPracticals: "STUDENT PRACTICALS*",
+      studentPracticalsPrice1: "#60,000",
+      studentPracticalsPrice2: "#60,000",
       hmoScheme: "HMO SCHEME",
-      hmoSchemePrice1: "#3,000",
-      hmoSchemePrice2: "--",
-
-      fees: "TOTAL FEES",
-      feesPrice1: "#458,000",
-      feesPrice2: "--",
-
+      hmoSchemePrice1: "#9,000",
+      hmoSchemePrice2: "#9,000",
+      fees: "FEES TO BE PAID",
+      feesPrice1: "#91,000",
+      feesPrice2: "#99,000",
       discount: "AMOUNT SUBSIDIZED BY COLLEGE",
-      discountPrice1: "#266,000",
-      discountPrice2: "--",
-
+      discountPrice1: "#286,000",
+      discountPrice2: "#275,000",
       totalFees: "TOTAL FEES TO BE PAID",
-      totalFeesPrice1: "#192,000",
-      totalFeesPrice2: "#182,000",
+      totalFeesPrice1: "#322,000",
+      totalFeesPrice2: "#263,000",
     },
 
     {
@@ -111,25 +117,30 @@ const TuitionAndScholarship = () => {
       item: "ITEM",
       year1: "YEAR 1",
       tuitionFee: "TUITION FEE",
-      tuitionFeePrice1: "#359,000",
-      examinationFee: "EXAMINATION FEE",
-      examinationFeePrice1: "#20,000",
-      workshopFee: "PRACTICAL WORKSHOP FEE",
-      workshopFeePrice1: "#15,000",
-      devFee: "DEVELOPMENT FEE",
-      devFeePrice1: "#20,000",
-      practicalFee: "INDUSTRIAL TRAINING FEE",
-      practicalFeePrice1: "#8,000",
-      studentID: "STUDENT'S ID CARD",
-      studentIDPrice1: "#1,000",
-      hmoScheme: "HMO SCHEME",
-      hmoSchemePrice1: "#3,000",
-      fees: "TOTAL FEES",
-      feesPrice1: "#426,000",
+      tuitionFeePrice1: "#376,000",
       discount: "AMOUNT SUBSIDIZED BY COLLEGE",
       discountPrice1: "#278,000",
+      fees: "FEES TO BE PAID",
+      feesPrice1: "#98,000",
+      acceptanceFee: "ACCEPTANCE FEE",
+      acceptanceFeePrice1: "#5,000",
+      examinationFee: "ADMIN FEE",
+      examinationFeePrice1: "#29,000",
+      workshopFee: "PRACTICAL UNIFORMS",
+      workshopFeePrice1: "#35,000",
+      devFee: "DEVELOPMENT FEE",
+      devFeePrice1: "#20,000",
+      practicalFee: "MANUALS/WORKBOOKS",
+      practicalFeePrice1: "#10,000",
+      studentID: "MEDICALS",
+      studentIDPrice1: "#28,500",
+      studentPracticals: "STUDENT PRACTICALS*",
+      studentPracticalsPrice1: "#70,000",
+      hmoScheme: "HMO SCHEME",
+      hmoSchemePrice1: "#9,000",
+
       totalFees: "TOTAL FEES TO BE PAID",
-      totalFeesPrice1: "#148,000",
+      totalFeesPrice1: "#304,000",
     },
   ];
   const navigate = useNavigate();
@@ -262,6 +273,54 @@ const TuitionAndScholarship = () => {
 
                             <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
                               <Td borderRight="2px solid #FFF">
+                                {fee.discount}
+                              </Td>
+                              <Td
+                                textAlign="right"
+                                borderRight="2px solid #FFF"
+                              >
+                                {fee.discountPrice1}
+                              </Td>
+                              {fee.discountPrice2 && (
+                                <Td textAlign="right">{fee.discountPrice2}</Td>
+                              )}
+                            </Tr>
+
+                            <Tr bg="#021D37" color="#FFF">
+                              <Td borderRight="2px solid #FFF">{fee.fees}</Td>
+                              <Td
+                                textAlign="right"
+                                borderRight="2px solid #FFF"
+                              >
+                                {fee.feesPrice1}
+                              </Td>
+                              {fee.feesPrice2 && (
+                                <Td textAlign="right">{fee.feesPrice2}</Td>
+                              )}
+                            </Tr>
+
+                            <Tr
+                              bg="rgba(235, 237, 239, 0.38);"
+                              borderBottom="2px solid #FFF"
+                            >
+                              <Td borderRight="2px solid #FFF">
+                                {fee.acceptanceFee}
+                              </Td>
+                              <Td
+                                textAlign="right"
+                                borderRight="2px solid #FFF"
+                              >
+                                {fee.acceptanceFeePrice1}
+                              </Td>
+                              {fee.acceptanceFeePrice2 && (
+                                <Td textAlign="right">
+                                  {fee.workshopFeePrice2}
+                                </Td>
+                              )}
+                            </Tr>
+
+                            <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
+                              <Td borderRight="2px solid #FFF">
                                 {fee.examinationFee}
                               </Td>
                               <Td
@@ -363,35 +422,20 @@ const TuitionAndScholarship = () => {
                                 <Td textAlign="right">{fee.hmoSchemePrice2}</Td>
                               )}
                             </Tr>
-
-                            <Tr bg="#021D37" color="#FFF">
-                              <Td borderRight="2px solid #FFF">{fee.fees}</Td>
-                              <Td
-                                textAlign="right"
-                                borderRight="2px solid #FFF"
-                              >
-                                {fee.feesPrice1}
-                              </Td>
-                              {fee.feesPrice2 && (
-                                <Td textAlign="right">{fee.feesPrice2}</Td>
-                              )}
-                            </Tr>
-
-                            <Tr
-                              bg="rgba(235, 237, 239, 0.38);"
-                              borderBottom="2px solid #FFF"
-                            >
+                            <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
                               <Td borderRight="2px solid #FFF">
-                                {fee.discount}
+                                {fee.studentPracticals}
                               </Td>
                               <Td
                                 textAlign="right"
                                 borderRight="2px solid #FFF"
                               >
-                                {fee.discountPrice1}
+                                {fee.studentPracticalsPrice1}
                               </Td>
-                              {fee.discountPrice2 && (
-                                <Td textAlign="right">{fee.discountPrice2}</Td>
+                              {fee.studentPracticalsPrice2 && (
+                                <Td textAlign="right">
+                                  {fee.studentPracticalsPrice2}
+                                </Td>
                               )}
                             </Tr>
 
@@ -414,29 +458,6 @@ const TuitionAndScholarship = () => {
                       </TableContainer>
 
                       <Box p="70px 91px">
-                        <Box>
-                          <Heading
-                            fontFamily="Playfair Display"
-                            fontWeight="700"
-                            fontSize="32px"
-                            mb="7px"
-                          >
-                            Other Requirements may Include:
-                          </Heading>
-                          <Text
-                            fontFamily="Manrope"
-                            fontWeight="400"
-                            fontSize="24px"
-                            lineHeight="33px"
-                          >
-                            Medical Examination: ₦25,000 <br /> Practical
-                            Workshop Uniforms: ₦35,000 <br />
-                            Manuals: ₦15,000 <br /> Acceptance fee: N5,000{" "}
-                            <br /> Students are expected to pay for their
-                            breakages
-                          </Text>
-                        </Box>
-
                         <Text
                           fontFamily="Manrope"
                           fontWeight="400"
@@ -478,7 +499,7 @@ const TuitionAndScholarship = () => {
                             All payments must be made into the bank account of
                             the College during registration.
                             <br /> Pay to: <b>“Wavecrest College” </b>
-                            <br /> Bank Name: <b>Access Bank</b>
+                            <br /> Bank Name: <b>Diamond Bank</b>
                             <br /> Account no.<b> 001-054-6867</b>
                           </Text>
 
@@ -636,8 +657,8 @@ const TuitionAndScholarship = () => {
                       lineHeight="43px"
                       mb="20px"
                     >
-                      You can Support the Scholarship Scheme by reaching out to
-                      us:
+                      You can Support the Scholarship Scheme by following the
+                      link below:
                     </Heading>
                     <Link
                       href="/support"

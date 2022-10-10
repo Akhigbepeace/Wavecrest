@@ -14,6 +14,7 @@ import Slider from "react-slick";
 import styled from "@emotion/styled";
 import CTHFlier from "assets/Images/tch flier.png";
 import PCHFlier from "assets/Images/P.C.H. flier.png";
+import CulinaryFlier from "assets/Images/Culinary flyer.png";
 const settings = {
   dots: true,
   arrows: false,
@@ -34,7 +35,7 @@ export default function CaptionCarousel() {
 
   const cards = [
     {
-      flier: "",
+      flier: CulinaryFlier,
       title: "Culinary Courses",
       text: "A professional programme providing the skill sets for culinary knowledge.",
       date: "31st Oct - 30th Nov",

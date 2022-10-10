@@ -13,12 +13,12 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import React, { Fragment, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "components/Navbar";
 import emailjs from "emailjs-com";
-import contactpic from "assets/Images/contact.png";
+import contactpic from "assets/Images/aboutDesktopBanner.jpg";
 import aboutgallery1 from "assets/Images/aboutgallery1.png";
 import aboutgallery2 from "assets/Images/aboutgallery2.png";
-import aboutgallery3 from "assets/Images/aboutgallery3.png";
 import aboutgallery4 from "assets/Images/aboutgallery4.png";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
@@ -62,33 +62,33 @@ const Contact = () => {
   const enquires = [
     {
       name: "Admission:",
-      phoneNumber: "Phone: +234 909 685 6606",
-      email: "Email: info@wavecrest.edu.ng",
+      phoneNumber: "+234 909 685 6606",
+      email: " wavecrestadmissions@gmail.com",
     },
     {
       name: "Training:",
-      phoneNumber: "Phone: +234 909 685 6606",
-      email: "Email: info@wavecrest.edu.ng",
+      phoneNumber: "+234 909 685 6606",
+      email: "info@wavecrest.edu.ng",
     },
     {
       name: "General:",
-      phoneNumber: "Phone: +234 909 685 6606",
-      email: "Email: info@wavecrest.edu.ng",
+      phoneNumber: ["+234 909 685 6606", "+234 808 396 4840"],
+      email: "info@wavecrest.edu.ng",
     },
     {
       name: "Partnership:",
-      phoneNumber: "Phone: +234 909 685 6606",
-      email: "Email: info@wavecrest.edu.ng",
+      phoneNumber: "+234 802 819 1726",
+      email: "info@wavecrest.edu.ng",
     },
     {
       name: "Front Desk:",
-      phoneNumber: "Phone: +234 909 685 6606",
-      email: "Email: info@wavecrest.edu.ng",
+      phoneNumber: "+234 808 396 4840",
+      email: "info@wavecrest.edu.ng",
     },
     {
       name: "Job Placement:",
-      phoneNumber: "Phone: +234 909 685 6606",
-      email: "Email: info@wavecrest.edu.ng",
+      phoneNumber: "+234 818 309 0761",
+      email: "wavecrestjobplacement@gmail.com",
     },
   ];
 
@@ -104,7 +104,7 @@ const Contact = () => {
       linkTo: "/blog",
     },
     {
-      image: aboutgallery3,
+      image: contactpic,
       text: "About",
       linkTo: "/about/profile",
     },
@@ -134,13 +134,20 @@ const Contact = () => {
     );
 
     setInputField(initialValues);
-    toast({
-      title: "SUCCESSFUL !",
-      description: "Your request has been submitted",
-      status: "success",
-      duration: 5000,
-      isClosable: true,
-    });
+    if (res.status === 200 || res.text === "OK") {
+      toast({
+        title: "SUCCESSFUL !",
+        description: "Your request has been submitted",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+    }
+  };
+  const navigate = useNavigate();
+
+  const navigateTo = (quickLink) => {
+    navigate(quickLink.linkTo, { replace: true });
   };
 
   const form = useRef();
@@ -188,13 +195,12 @@ const Contact = () => {
             xl: "auto auto",
             "2xl": "auto auto",
           }}
-          px={{
-            sm: "0",
-            md: "0",
-            lg: "91px",
-            xl: "91px",
-            "2xl": "91px",
+          gridGap="10px"
+          w={{
+            xl: "1100px",
+            "2xl": "1100px",
           }}
+          mx="auto"
         >
           <Flex
             flexDirection="column"
@@ -400,8 +406,8 @@ const Contact = () => {
                 fontSize="16px"
                 fontWeight="400"
               >
-                75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos
-                State, Nigeria.
+                75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos,
+                Nigeria.
               </Text>
             </Box>
 
@@ -416,8 +422,13 @@ const Contact = () => {
               mt="30px"
             >
               {enquires.map((enquiry, index) => {
+                const multiplePhoneNum = Array.isArray(enquiry.phoneNumber)
+                  ? enquiry.phoneNumber.map((number, index) => {
+                      return <Text key={index}>{number}</Text>;
+                    })
+                  : enquiry.phoneNumber;
                 return (
-                  <Flex key={index} flexDirection="column" mb="30px">
+                  <Flex key={index} flexDirection="column" mb="30px" mr="30px">
                     <Heading
                       mb="6px"
                       fontFamily="Playfair Display, serif"
@@ -433,8 +444,15 @@ const Contact = () => {
                       fontSize="18px"
                       color="#021D37"
                     >
-                      <Text> {enquiry.phoneNumber}</Text>
-                      <Text> {enquiry.email}</Text>
+                      <Flex>
+                        <Text> Phone: &nbsp; </Text>
+                        <Text>{multiplePhoneNum}</Text>
+                      </Flex>
+
+                      <Flex>
+                        <Text>Email: &nbsp; </Text>
+                        <Text w="196px">{enquiry.email}</Text>
+                      </Flex>
                     </Box>
                   </Flex>
                 );
@@ -451,6 +469,11 @@ const Contact = () => {
             xl: "block",
             "2xl": "block",
           }}
+          w={{
+            xl: "1300px",
+            "2xl": "1300px",
+          }}
+          mx="auto"
           px={{
             sm: "100px",
             md: "100px",
@@ -474,13 +497,13 @@ const Contact = () => {
           <Flex justifyContent="space-between">
             {quickLinks.map((quickLink, index) => {
               return (
-                <Link
+                <Box
                   key={index}
-                  href={quickLink.linkTo}
                   w="294px"
                   h="241px"
                   ml="25px"
                   transition="all ease 0.8s"
+                  onClick={() => navigateTo(quickLink)}
                   _hover={{
                     transform: "scale(1.2)",
                   }}
@@ -512,7 +535,7 @@ const Contact = () => {
                       {quickLink.text}
                     </Text>
                   </Flex>
-                </Link>
+                </Box>
               );
             })}
           </Flex>

@@ -143,18 +143,8 @@ const Management = () => {
           <ResponsiveManagement />
           <ResponsiveStaff />
         </Box>
-        
+
         <Box mt="100px">
-          <Heading
-            fontFamily="Playfair Display"
-            fontWeight="700"
-            fontSize="32px"
-            color="#021D37"
-            textAlign="center"
-            mb="22px"
-          >
-            Navigate To:
-          </Heading>
           <Flex justifyContent="space-evenly">
             <Button
               fontFamily="Manrope"
