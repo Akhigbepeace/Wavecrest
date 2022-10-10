@@ -74,7 +74,7 @@ const BlogPost = () => {
 
       <Box h="441px" w="100%" position="relative">
         <Image
-          src={searchParams.get("image")}
+          src={searchParams.get("image1")}
           h="100%"
           w="100%"
           objectFit="cover"
@@ -172,37 +172,11 @@ const BlogPost = () => {
               lineHeight="25px"
               color="#021D37"
             >
-              Featuring in the Guinness World Records is obviously not a yearly
-              event. This is why Wavecrest College was excited to be a part of
-              an amazing project partnering with the Featuring in the Guinness
-              World Records is obviously not a yearly event. This is why
-              Wavecrest College was excited to be a part of an amazing project
-              partnering with the...Featuring in the Guinness World Records is
-              obviously not a yearly event. This is why Wavecrest College was
-              excited to be a part of an amazing project partnering with
-              the...Featuring in the Guinness World Records is obviously not a
-              yearly event. This is why Wavecrest College was excited to be a
-              part of an amazing project partnering with the...Featuring in the
-              Guinness World Records is obviously not a yearly event. This is
-              why Wavecrest College was excited to be a part of an amazing
-              project partnering with the...Featuring in the Guinness World
-              Records is obviously not a yearly event. This is why Wavecrest
-              College was excited to be a part of an amazing project partnering
-              with the...Featuring in the Guinness World Records is obviously
-              not a yearly event. This is why Wavecrest College was excited to
-              be a part of an amazing project partnering with the...Featuring in
-              the Guinness World Records is obviously not a yearly event. This
-              is why Wavecrest College was excited to be a part of an amazing
-              project partnering with the...Featuring in the Guinness World
-              Records is obviously not a yearly event. This is why Wavecrest
-              College was excited to be a part of an amazing project partnering
-              with the...Featuring in the Guinness World Records is obviously
-              not a yearly event. This is why Wavecrest College was excited to
-              be a part of an amazing project partnering with the...
+              {searchParams.get("texts")}
             </Text>
 
             <Image
-              src={searchParams.get("image")}
+              src={searchParams.get("image2")}
               w="100%"
               h="315px"
               objectFit="cover"
@@ -246,7 +220,7 @@ const BlogPost = () => {
               be a part of an amazing project partnering with the...
             </Text>
 
-            <Flex>
+            {/* <Flex>
               <Link
                 bg="#021D37"
                 p="15px"
@@ -259,7 +233,7 @@ const BlogPost = () => {
               <Link bg="#021D37" p="15px" borderRadius="3px" color="#FFF">
                 <FaChevronRight size="20px" />
               </Link>
-            </Flex>
+            </Flex> */}
           </Box>
         </Box>
 

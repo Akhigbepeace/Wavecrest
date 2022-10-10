@@ -19,7 +19,7 @@ const settings = {
   arrows: false,
   fade: false,
   infinite: true,
-  autoplay: true,
+  autoplay: false,
   speed: 2500,
   autoplaySpeed: 3000,
   slidesToShow: 1,
@@ -190,8 +190,8 @@ export default function CaptionCarousel() {
                     sm: "216px",
                     md: "216px",
                     lg: "216px",
-                    xl: "303px",
-                    "2xl": "303px",
+                    xl: "391px",
+                    "2xl": "391px",
                   }}
                   h={{
                     sm: "211px",
@@ -202,10 +202,10 @@ export default function CaptionCarousel() {
                   }}
                   mr={{
                     sm: "0",
-                    md: "100px",
-                    lg: "100px",
-                    xl: "122px",
-                    "2xl": "122px",
+                    md: "50px",
+                    lg: "50px",
+                    xl: "50px",
+                    "2xl": "50px",
                   }}
                 />
 
@@ -224,7 +224,6 @@ export default function CaptionCarousel() {
                       md: "-30px",
                       lg: "-30px",
                     }}
-                    // mb="10px"
                     fontSize={{
                       sm: "28px",
                       md: "28px",
@@ -232,7 +231,7 @@ export default function CaptionCarousel() {
                       xl: "40px",
                       "2xl": "40px",
                     }}
-                    lineHeight="60px"
+                    lineHeight="45px"
                     textAlign="center"
                   >
                     {card.title}
@@ -250,7 +249,7 @@ export default function CaptionCarousel() {
                     fontWeight="400"
                     lineHeight="22px"
                     textAlign="center"
-                    mt="22px"
+                    mt="40px"
                     w={{
                       sm: "291px",
                       md: "291px",

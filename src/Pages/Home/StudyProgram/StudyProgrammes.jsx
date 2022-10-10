@@ -4,6 +4,9 @@ import studyProgrammes1 from "assets/Images/studyprogrammes1.png";
 import studyProgrammes2 from "assets/Images/studyprogrammes2.png";
 import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
 import studyProgrammes4 from "assets/Images/studyprogrammes4.png";
+import training1 from "assets/Images/trainingImg1.jpg";
+import training2 from "assets/Images/trainingImage2.jpg";
+import training3 from "assets/Images/trainingImage3.jpg";
 import Courses from "./Courses";
 import ShortCourses from "./ShortCourses";
 import { useNavigate } from "react-router-dom";
@@ -70,7 +73,7 @@ const StudyProgrammes = () => {
       linkContent: "TRAININGS",
       values: [
         {
-          imageSrc: studyProgrammes2,
+          imageSrc: training1,
           current: false,
           redirect: (e) => {
             e.preventDefault();
@@ -82,7 +85,7 @@ const StudyProgrammes = () => {
           captionButton: "APPLY NOW",
         },
         {
-          imageSrc: studyProgrammes1,
+          imageSrc: training2,
           current: false,
           redirect: (e) => {
             e.preventDefault();
@@ -106,7 +109,7 @@ const StudyProgrammes = () => {
           captionButton: "APPLY NOW",
         },
         {
-          imageSrc: studyProgrammes1,
+          imageSrc: training3,
           current: false,
           redirect: (e) => {
             e.preventDefault();
@@ -189,7 +192,7 @@ const StudyProgrammes = () => {
           const isCurrent = currentprogram.linkContent === programm.linkContent;
 
           return (
-            <Box
+            <Flex
               cursor="pointer"
               fontWeight="600"
               p="10px"
@@ -200,6 +203,8 @@ const StudyProgrammes = () => {
               fontFamily="Manrope"
               fontSize="20px"
               textAlign="center"
+              alignItems="center"
+              justifyContent="center"
               textDecoration="none"
               bg={isCurrent ? "#021d37" : "#fff"}
               color={isCurrent ? "#EBEDEF" : "#021d37"}
@@ -211,7 +216,7 @@ const StudyProgrammes = () => {
               }}
             >
               {programm.linkContent}
-            </Box>
+            </Flex>
           );
         })}
       </Flex>
@@ -242,13 +247,14 @@ const StudyProgrammes = () => {
               bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(1, 15, 29, 0.52) 46.35%, rgba(2, 29, 55, 0.87) 100%)"
               textAlign="center"
               position="relative"
-              bottom="-175px"
+              bottom="-127px"
               pt="40px"
               pb="20px"
             >
               <Heading
                 color="#fff"
                 fontWeight="700"
+                h="96px"
                 fontSize="40px"
                 fontFamily="Playfair Display"
                 cursor="pointer"

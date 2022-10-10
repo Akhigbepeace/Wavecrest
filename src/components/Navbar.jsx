@@ -53,7 +53,7 @@ const Navbar = () => {
 
     {
       icon: Whatapps,
-      to: "https://api.whatsapp.com/send/?phone=09096856606 &text&app_absent=0",
+      to: "https://wa.me/+2349096856606",
       target: "_blank",
       rel: "noreferrer",
     },

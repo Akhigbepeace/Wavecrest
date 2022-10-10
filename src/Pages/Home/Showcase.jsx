@@ -17,7 +17,7 @@ import showcase4 from "assets/Images/Showcase4.png";
 import waveVid from "assets/Images/wavevid.mp4";
 import ShowcaseSlider from "components/ShowcaseSlider";
 
-const showcaseGallery = [showcase1, showcase2, showcase3, showcase4];
+const showcaseGallery = [showcase1, showcase2, showcase4, showcase3];
 
 const Showcase = () => {
   const navigate = useNavigate();
@@ -89,7 +89,7 @@ const Showcase = () => {
         <Grid templateColumns="1fr 1fr" gap="8px">
           {showcaseGallery.map((gallery, index) => {
             return (
-              <Box h="100%" key={index}>
+              <Box h="185px" key={index}>
                 <Image
                   src={gallery}
                   alt="Wavecrest Images"

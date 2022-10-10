@@ -25,16 +25,16 @@ const Statistics = () => {
     },
   ];
   return (
-    <Box mt="-50px">
+    <Box mt="-45px">
       <Grid
         gridTemplateColumns={{
-          sm: "1fr",
-          md: "1fr",
-          lg: "auto",
+          sm: "1fr 1fr",
+          md: "1fr 1fr",
+          lg: "1fr 1fr",
           xl: "repeat(4, auto)",
           "2xl": "repeat(4, 1fr)",
         }}
-        mt="30px"
+        mt="18px"
         color="#021D37"
       >
         {statistics.map((statistic, index) => {
@@ -43,7 +43,7 @@ const Statistics = () => {
               <Text fontFamily="Manrope" fontSize="20px" fontWeight="400">
                 {statistic.count}
               </Text>
-              <Heading fontFamily="Open sans" fontSize="25px">
+              <Heading fontFamily="Open sans" fontSize="20px">
                 {statistic.name}
               </Heading>
             </GridItem>

@@ -39,7 +39,6 @@ export default function Carousel() {
     elisLogo,
     lexonCapital,
     womenBoard,
-    IshkTolaram,
     venFoundation,
     nestleProfessionals,
   ];
@@ -141,7 +140,7 @@ export default function Carousel() {
               key={index}
               src={image}
               alt="companyLogo"
-              h="75px"
+              h="100px"
               mb="50px"
               objectFit="contain"
             />
@@ -158,9 +157,9 @@ export default function Carousel() {
           "2xl": "none",
         }}
         gridTemplateColumns={{
-          sm: "auto auto auto",
-          md: "auto auto auto",
-          lg: "1fr 1fr 1fr",
+          sm: "auto auto",
+          md: "auto auto",
+          lg: "1fr 1fr",
         }}
         px={{
           sm: "20px",
@@ -179,7 +178,7 @@ export default function Carousel() {
         {cards.map((image, index) => (
           <Image
             key={index}
-            src={image.logo}
+            src={image}
             alt="companyLogo"
             alignItems="center"
             objectFit="contain"
@@ -191,6 +190,7 @@ export default function Carousel() {
               "2xl": "50px",
             }}
             mx="auto"
+            px="30px"
           />
         ))}
       </Grid>

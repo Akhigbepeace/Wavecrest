@@ -1,7 +1,7 @@
 import { Flex, Link, Image, Box, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import about from "assets/Images/About.png";
+import about from "assets/Images/ourTeam.jpg";
 import { FaChevronRight } from "react-icons/fa";
 import Management from "./Management";
 import Board from "./Board";
@@ -21,7 +21,7 @@ const OurTeam = () => {
     },
     {
       id: "staff",
-      linkTitle: "Staff",
+      linkTitle: "Academic Staff",
       content: <Staff />,
     },
   ];
@@ -85,7 +85,7 @@ const OurTeam = () => {
         <Flex
           flexDirection="column"
           mt="50px"
-          pl="51px"
+          pl="30px"
           display={{
             sm: "none",
             md: "none",
