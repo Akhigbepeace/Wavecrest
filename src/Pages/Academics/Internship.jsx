@@ -254,6 +254,10 @@ const Internship = () => {
             College in the areas of Front Office, Food &#38; Beverage
             Production, Food &#38; Beverage Service, Housekeeping and any other
             relevant department.
+            <Text mt="20px" mb="10px">
+              Over the years, we have built our industry partnership with
+              renowned organizations like:
+            </Text>
             <UnorderedList>
               {internshipCompanies.map((internshipCompany, index) => {
                 return <ListItem key={index}> {internshipCompany} </ListItem>;

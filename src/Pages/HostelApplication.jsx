@@ -14,7 +14,7 @@ import React, { Fragment, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
 import emailjs from "emailjs-com";
-import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
+import hostel2 from "assets/Images/hostel2.jpg";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
@@ -118,7 +118,7 @@ const HostelApplication = () => {
     <Fragment>
       <Navbar />
       <Box h="441px" w="100%" gridGap="68px" position="relative">
-        <Image src={studyProgrammes3} h="100%" w="100%" objectFit="cover" />
+        <Image src={hostel2} h="100%" w="100%" objectFit="cover" />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -209,14 +209,9 @@ const HostelApplication = () => {
             color="#021D37"
             my="24px"
           >
-            Wavecrest offers accomodation to its students. We have a two well
-            furnished hostels orem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute pidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum. sunt in culpa qui officia deserunt mollit anim id est
-            laborum.
+            Wavecrest offers accommodation to her students both on campus and
+            off campus. The hostel services are outsourced but regulated by the
+            College
           </Text>
         </Box>
 

@@ -19,7 +19,6 @@ import emailjs from "emailjs-com";
 import contactpic from "assets/Images/aboutDesktopBanner.jpg";
 import aboutgallery1 from "assets/Images/aboutgallery1.png";
 import aboutgallery2 from "assets/Images/aboutgallery2.png";
-import aboutgallery3 from "assets/Images/aboutgallery3.png";
 import aboutgallery4 from "assets/Images/aboutgallery4.png";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
@@ -73,7 +72,7 @@ const Contact = () => {
     },
     {
       name: "General:",
-      phoneNumber: ["0909 685 6606", "0808 396 4840"],
+      phoneNumber: ["+234 909 685 6606", "+234 808 396 4840"],
       email: "info@wavecrest.edu.ng",
     },
     {
@@ -83,12 +82,12 @@ const Contact = () => {
     },
     {
       name: "Front Desk:",
-      phoneNumber: "+234 909 685 6606",
+      phoneNumber: "+234 808 396 4840",
       email: "info@wavecrest.edu.ng",
     },
     {
       name: "Job Placement:",
-      phoneNumber: "+234 909 685 6606",
+      phoneNumber: "+234 818 309 0761",
       email: "wavecrestjobplacement@gmail.com",
     },
   ];
@@ -135,25 +134,25 @@ const Contact = () => {
     );
 
     setInputField(initialValues);
-    toast({
-      title: "SUCCESSFUL !",
-      description: "Your request has been submitted",
-      status: "success",
-      duration: 5000,
-      isClosable: true,
-    });
+    if (res.status === 200 || res.text === "OK") {
+      toast({
+        title: "SUCCESSFUL !",
+        description: "Your request has been submitted",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+    }
   };
   const navigate = useNavigate();
+
+  const navigateTo = (quickLink) => {
+    navigate(quickLink.linkTo, { replace: true });
+  };
 
   const form = useRef();
 
   const toast = useToast();
-
-  const navigateTo = (e) => {
-    e.preventDefault();
-
-    navigate();
-  };
   return (
     <Box>
       <Navbar />
@@ -498,13 +497,13 @@ const Contact = () => {
           <Flex justifyContent="space-between">
             {quickLinks.map((quickLink, index) => {
               return (
-                <Link
+                <Box
                   key={index}
-                  href={quickLink.linkTo}
                   w="294px"
                   h="241px"
                   ml="25px"
                   transition="all ease 0.8s"
+                  onClick={() => navigateTo(quickLink)}
                   _hover={{
                     transform: "scale(1.2)",
                   }}
@@ -536,7 +535,7 @@ const Contact = () => {
                       {quickLink.text}
                     </Text>
                   </Flex>
-                </Link>
+                </Box>
               );
             })}
           </Flex>

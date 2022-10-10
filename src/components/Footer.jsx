@@ -48,7 +48,7 @@ const Footer = () => {
 
     {
       icon: whatsapp,
-      to: "https://api.whatsapp.com/send/?phone=09096856606 &text&app_absent=0",
+      to: "https://wa.me/+2349096856606",
       target: "_blank",
       rel: "noreferrer",
     },
@@ -136,18 +136,22 @@ const Footer = () => {
 
     const res = await emailjs.sendForm(
       "service_djq4ick",
-      "template_igsv77r",
+      "template_krcopwh",
       form.current,
       "JPAG_ZJVlAcuO_5D-"
     );
+
     setInputField(initialValues);
-    toast({
-      title: "SUCCESSFUL !",
-      description: "Your request has been submitted",
-      status: "success",
-      duration: 5000,
-      isClosable: true,
-    });
+
+    if (res.status === 200 && res.text === "OK") {
+      toast({
+        title: "SUCCESSFUL !",
+        description: "Your request has been submitted",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+    }
   };
 
   const subscribeForm = [
@@ -158,7 +162,7 @@ const Footer = () => {
     },
     {
       fieldType: "email",
-      email: "user_email",
+      name: "user_email",
       placeHolder: "Email",
     },
   ];
@@ -213,8 +217,7 @@ const Footer = () => {
             "2xl": "right",
           }}
         >
-          75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos State,
-          Nigeria.
+          75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos, Nigeria.
         </Text>
 
         <Box
@@ -382,29 +385,6 @@ const Footer = () => {
           <Stack>
             {subscribeForm.map((field, index) => {
               return (
-                // <Input
-                //   required
-                //   key={index}
-                //   type={form.type}
-                //   name={form.name}
-                //   placeholder={form.placeHolder}
-                //   bg="#fff"
-                //   h="51px"
-                //   mt="15px"
-                //   p="15px 20px"
-                //   value={inputField[form.name]}
-                //   borderRadius="3px"
-                //   onChange={inputValues}
-                //   border="none"
-                // _placeholder={{
-                //   color: "#021D37",
-                //   fontFamily: "Manrope",
-                //   fontSize: "16px",
-                //   fontWeight: "400",
-                // }}
-
-                // />
-
                 <Input
                   isRequired
                   key={index}

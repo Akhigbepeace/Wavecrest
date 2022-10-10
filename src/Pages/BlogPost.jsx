@@ -22,6 +22,8 @@ import uchyfide from "assets/Images/uchyfide.jpeg";
 import Udoka from "assets/Images/Udoka.jpeg";
 import NBTEdirector from "assets/Images/NBTEdirector.jpg";
 import nbte from "assets/Images/nbte.jpeg";
+import catfish from "assets/Images/catfish.png";
+import ekpangNkukwo from "assets/Images/Ekpang-Nkukwo.jpg";
 import cookFish from "assets/Images/cookFish.jpg";
 import hotel from "assets/Images/hotel.jpg";
 import decorating from "assets/Images/decorating.jpg";
@@ -134,6 +136,16 @@ const BlogPost = () => {
           postHeading: "The Different Ways To Cook Fish",
           postDate: "Recepies / November 12, 2021 ",
         },
+        {
+          postsImg: catfish,
+          postHeading: "CATFISH PEPPER SOUP",
+          postDate: "Recepies",
+        },
+        {
+          postsImg: ekpangNkukwo,
+          postHeading: "EKPANG NKUKWO",
+          postDate: "Recepies",
+        },
       ],
 
       posts: [
@@ -144,6 +156,22 @@ const BlogPost = () => {
           postHeading: "The Different Ways To Cook Fish",
           postsText:
             "Yes, you know that fish is one of the healthiest and common proteins in the world after eggs! It’s good for the heart because of the abundance of omega-3. It has other health benefits such as stroke reduction, contribution to brain health, and prevention of Alzheimer’s amongst others. What you may not know are the different ways to cook fish. smiles. Christmas is by the corner and you may want to take the time to enjoy yourself in different ways. Now, follow me as I show you 5 ways to cook fish. 1. Grilling Fish: When grilling fish, keep a close watch. Fish only takes a few minutes per side to cook. 2. Poaching Fish: poaching refers to the cooking of fish with liquid. It might be water, stock, milk, or wine. To poach, add enough water in a pot or pan to just barely cover the fish. 3. Steaming Fish: This refers to the use of a steamer basket to steam the fish. Here’s how to steam fish. Marinate the fish with spices, ginger, garlic, and chili peppers to make it tasty Pour about 2 cups of water into the pan or pot. Use a folding steamer basket with enough room for each piece of fish to lie flat. Place the steamer over the water, cover the pot, and leave the water to boil. Then check to see when it’s done. 4. Baking Fish: Baking fish allows you to get the satisfying crunch of fried fish without all the fat. 5. Deep Frying 6. Broiling Fish There are many ways that you can prepare fish, but some cooking methods can bring out the full flavor of fish. Want to learn more, register for our culinary program on wavecrest.edu.ng.",
+        },
+        {
+          bg: "#FFF",
+          postsImg: catfish,
+          postsDate: "Recepies",
+          postHeading: "CATFISH PEPPER SOUP",
+          postsText:
+            "INGREDIENTS: 1.2 kg fresh catfish, 110g onions, chopped (1 medium), 2 seasoning cubes, 1 tablespoons ground crayfish, 2 scotch bonnet, salt, 2 big ehuru, 3 small ground nutmeg, 1/2 teaspoon ground uziza, 2 sticks uda, Utazi leaves (bitters). METHOD Toast and grind ehuru, hit uda to just break it open. Wash catfish slices well with lime to get rid of the sliminess. Pour hot water over the fish slices and leave to stand for 1-2 minutes, drain and rinse in cold water.Place in a pot and add just enough water to cover the fish. Place over medium heat. Add onions, seasoning cube, crayfish, peppers and sprinkle some salt. Cover and bring to a boil, add ground ehuru, uziza and uda, gently shake and swirl your pot, cook for 5-8 minutes. Add about 5 leaves of shredded utazi and some water. Taste and correct seasoning. Cook for another 5-8 minutes until fish is well cooked. Take off the heat. Serve your Catfish pepper soup with boiled yam, plantain, rice, agidi (eko, corn paste pudding) etc. NOTE: You can use less scotch bonnet and add a little Cameroon pepper, it tastes really good. Instead of the different spices used here, you can simply use store-bought Pepper soup spice mix or any mixture of spices you like.",
+        },
+        {
+          bg: "#FFF",
+          postsImg: ekpangNkukwo,
+          postsDate: "Recepies",
+          postHeading: "EKPANG NKUKWO",
+          postsText:
+            "Ekpang Nkukwo is a traditionnal Nigetrian dish native to the Efiks and Ibibios. It is made of freshly grated cocoyam, then wrapped in leafy greens and slowly simmered with various types of fresh o smoked fish, meat, crayfish, red oul and sther spices depending on the cook's preference until cooked to perfection INGREDIENTS: 4 pounds cocoyam, 4-5 bunch leafy greens cocoyam leaves, collard greens, spinach, romaine lettuce, ½ pound boiled beef,1-2 cups dried fish, ½ cup ground crayfish, ½ medium onion chopped, 1½ -2 cups palm oil /red oil, Bouillon cubes to taste, 1 tablespoon ground onions (optional),1 teaspoon ground pepper, 1 scotch bonnet pepper or any hot pepper optional, Salt and pepper to taste. PROCEDURE Cut the beef into bite-size chunks. Season with salt, Maggi, and onions. Cook until tender.(make sure you have at least 2 to 3 cups of stock from the beef to use in cooking this dish).Peel Coco yam and cut into large chunks and wash immediately to prevent discoloration and leave them in cool water until ready to use.Pound the cocoyam in a mortal until there is a puree or use a grater to grate the cocoyam.  Lightly salt and set aside.Wash leaves and tear them into medium pieces, making sure there are no holes in the leaves.Pour about ½ cup of oil into a large pot. Set aside. Scoop a tablespoon or so of grated cocoyam mixture onto a leaf and wrap tightly (to form the shape of fingers) making sure the cocoyam is not sticking out.Arrange wrapped cocoyam fingers in the oil pot in a circle leaving a hole in the middle. Repeat until the cocoyam mixture has been completely used up.In a separate pot bring about 7 cups of water to a boil. Add chopped onions, crayfish, fish, meat, salt, pepper, bouillon cubes, palm oil, and onions to the pot.Let it simmer for about 10 minutes, there should be no stirring at this point until most of the ekpang firms up- add about 1/2 cup of beef stock to prevent any burns.Then after ekpang firms up add about all the beef stock if you have any with about 3 cups water or just use 4-6 cups of hot water or more to the pot and let it cook on medium heat for about an hour until fully cooked. You may add more water to prevent burns.Stirring should be kept at a minimum- to prevent the ekpang from becoming mushy. Adjust for ekpang consistency with water, salt and pepper.",
         },
       ],
     },
@@ -329,6 +357,13 @@ const BlogPost = () => {
       { replace: true }
     );
   };
+
+    const ShowPosts = (post) => {
+      navigate(
+        `/posts?image1=${post.postsImg}&date=${post.postsDate}&headline=${post.postHeading}&texts=${post.postsText}`,
+        { replace: true }
+      );
+    };
   return (
     <Fragment>
       <Navbar />

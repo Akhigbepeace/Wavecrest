@@ -43,7 +43,7 @@ const AdmissionRequirements = () => {
       course: "National Diploma (ND) in Hospitality Management",
       coursePic: studyProgrammes3,
       courseRequirements: [
-        "5 Credits Level Passes in SSCE/NECO/GCE/WASC",
+        "5 Credits Level Passes in SSCE/NECO/GCE/WASC in not more than 2 sittings",
         "UTME",
       ],
       viewUpdate: "Click to view updated Subject combinations",
@@ -63,14 +63,12 @@ const AdmissionRequirements = () => {
   ];
 
   const subjects = [
-    "Physics",
-    "Chemistry",
-    "Mathematics/Statistics",
-    "Geography",
-    "Food and Nutrition",
-    "Technical Drawing",
-    "English Language/Literature in English",
-    "Home Management/Catering Craft",
+    "Biology or Agric Science or Health Science",
+    "Others - Any of the following",
+    "English Language, Food and Nutrition, Civic Education, Economics or Commerce, Marketing, Physics, Mathematics or Statistics, Chemistry, Home Management or Catering Craft.",
+    "Subject Combination for JAMB (UTME): ",
+    "English Language (COMPULSORY and other three subjects of choice (WITH EXCEPTION OF RELIGIOUS STUDIES)",
+    "",
   ];
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -283,8 +281,24 @@ const AdmissionRequirements = () => {
                           }}
                           color="#021D37"
                         >
-                          Five (5) credit passes in SSCE/NECO/GCE
+                          Five (5) credit passes in SSCE/NECO/GCE/WASSCE in not
+                          more than 2 sittings
                         </Heading>
+                        <Text
+                          fontFamily="Manrope"
+                          fontWeight="700"
+                          fontSize={{
+                            md: "24px",
+                            lg: "24px",
+                            xl: "24px",
+                            "2xl": "24px",
+                          }}
+                          color="#021D37"
+                          my="20px"
+                          lineHeight="20px"
+                        >
+                          Compulsory subjects for SSCE/NECO/GCE/WASSCE
+                        </Text>
                         <UnorderedList>
                           <Text
                             fontFamily="Manrope"

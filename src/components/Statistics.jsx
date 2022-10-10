@@ -9,7 +9,7 @@ const Statistics = () => {
       bg: "#EBEDEF",
     },
     {
-      count: "500",
+      count: "50+",
       name: "Industry Partners",
       bg: "#DDD",
     },
@@ -19,7 +19,7 @@ const Statistics = () => {
       bg: "#EBEDEF",
     },
     {
-      count: "20%",
+      count: "40%",
       name: "Enterpreneurs",
       bg: "#DDD",
     },

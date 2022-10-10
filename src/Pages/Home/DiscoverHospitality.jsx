@@ -39,7 +39,7 @@ const DiscoverHospitality = () => {
           Education is a guarantee of employment in Nigeria.
         </Text>
         <Link
-          href="/admission/applyOnline"
+          href="/about/profile"
           background="#021d37"
           w="208px"
           p="10px 26px"
@@ -54,7 +54,7 @@ const DiscoverHospitality = () => {
             color: "white",
           }}
         >
-          APPLY NOW
+          READ MORE
         </Link>
       </Box>
 
