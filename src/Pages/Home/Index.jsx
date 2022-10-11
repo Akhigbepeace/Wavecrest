@@ -24,7 +24,6 @@ const Home = () => {
     };
     fectchHomeData();
   }, []);
-  console.log(homeData);
 
   return (
     <Fragment>

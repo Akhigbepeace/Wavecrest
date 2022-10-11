@@ -105,7 +105,7 @@ const ApplyOnline = () => {
     },
     {
       course: "National Skill Qualification",
-      // paymentLink: "https://forms.gle/VQtgEFMa9qhsojGn7",
+      paymentLink: "https://forms.gle/VQtgEFMa9qhsojGn7",
     },
   ];
 

@@ -357,12 +357,6 @@ const BlogPost = () => {
     );
   };
 
-    // const ShowPosts = (post) => {
-    //   navigate(
-    //     `/posts?image1=${post.postsImg}&date=${post.postsDate}&headline=${post.postHeading}&texts=${post.postsText}`,
-    //     { replace: true }
-    //   );
-    // };
   return (
     <Fragment>
       <Navbar />

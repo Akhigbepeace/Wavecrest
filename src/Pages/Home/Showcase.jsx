@@ -84,7 +84,6 @@ const Showcase = (props) => {
               }}
             >
               {caption}
-              {/* NIGERIA'S PREMIER HOSPITALITY MONOTECHNIC */}
             </Text>
           </Flex>
         </Box>

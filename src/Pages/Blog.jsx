@@ -830,11 +830,6 @@ const Blog = () => {
                     );
                   })}
                 </Grid>
-                {/* {blogs.map((post, index) => {
-                  return (
-                    
-                  );
-                })} */}
               </Box>
             </Box>
           </Flex>

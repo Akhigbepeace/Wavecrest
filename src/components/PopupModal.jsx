@@ -82,8 +82,6 @@ const PopupModal = () => {
   const toast = useToast();
   return (
     <>
-      {/* <Button onClick={onOpen}>Open Modal</Button> */}
-
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>

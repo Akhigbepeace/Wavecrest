@@ -1,5 +1,5 @@
 import { Box, Image, Link, Text, Flex } from "@chakra-ui/react";
-import React, { Fragment, useState, useEffect, useMemo } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "components/Navbar";
 import about from "assets/Images/aboutDesktopBanner.jpg";
@@ -32,7 +32,6 @@ const About = () => {
     },
   ];
 
-  //  useMemo(() => first, [second]);
   const [activeLink, setActiveLink] = useState(menuLinks[0]);
 
   useEffect(() => {
@@ -49,7 +48,7 @@ const About = () => {
 
   return (
     <Fragment>
-      {/* <Navbar /> */}
+      <Navbar />
 
       <Box>
         <Box
