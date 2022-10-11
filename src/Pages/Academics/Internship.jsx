@@ -17,6 +17,7 @@ import React, { Fragment, useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
 import { useNavigate } from "react-router-dom";
+import Navbar from "components/Navbar";
 
 const Internship = () => {
   const initialValues = {
@@ -146,17 +147,20 @@ const Internship = () => {
 
     setInputField(initialValues);
 
-    toast({
-      title: "SUCCESSFUL !",
-      description: "Your request has been submitted",
-      status: "success",
-      duration: 5000,
-      isClosable: true,
-    });
+    if (res.status === 200 || res.text === "OK") {
+      toast({
+        title: "SUCCESSFUL !",
+        description: "Your request has been submitted",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+    }
   };
   const toast = useToast();
   return (
     <Fragment>
+          <Navbar />
       <Box
         h="441px"
         w="100%"

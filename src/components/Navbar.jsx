@@ -27,6 +27,8 @@ import Search from "./Search";
 import Menu from "assets/Images/Menu.png";
 
 const Navbar = () => {
+
+  const naigate = useNavigate()
   const loc = useLocation();
   const socials = [
     {
@@ -668,7 +670,7 @@ const Navbar = () => {
         <Flex pb="29px">
           {sideLinks.map((sideLink, index) => {
             return (
-              <Link
+              <Box
                 key={index}
                 href={sideLink.href}
                 bg={sideLink.bg}
@@ -690,7 +692,7 @@ const Navbar = () => {
                 }}
               >
                 {sideLink.name}
-              </Link>
+              </Box>
             );
           })}
         </Flex>

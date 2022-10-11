@@ -17,6 +17,7 @@ import { FaChevronCircleUp } from "react-icons/fa";
 import React, { Fragment } from "react";
 import waveimg from "assets/Images/waveimg.png";
 import { useNavigate } from "react-router-dom";
+import Navbar from "components/Navbar";
 
 const FAQs = () => {
   const FAQs = [
@@ -158,6 +159,7 @@ const FAQs = () => {
   ];
   return (
     <Fragment>
+      <Navbar />
       <Box
         h="441px"
         w="100%"

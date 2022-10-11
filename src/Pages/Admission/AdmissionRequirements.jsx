@@ -24,6 +24,7 @@ import studyProgrammes3 from "assets/Images/NdReq.jpg";
 import admission from "assets/Images/Admission.png";
 import fileDownload from "assets/Images/paperDownload.png";
 import { useNavigate } from "react-router-dom";
+import Navbar from "components/Navbar";
 
 const AdmissionRequirements = () => {
   const requirements = [
@@ -101,6 +102,7 @@ const AdmissionRequirements = () => {
   ];
   return (
     <Fragment>
+      <Navbar />
       <Box
         h="441px"
         w="100%"
@@ -247,7 +249,7 @@ const AdmissionRequirements = () => {
 
                   <Modal isCentered isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
-                    <ModalContent bg="#DCE5E5" p="30px" maxW="none" w="900px">
+                    <ModalContent bg="#DCE5E5" p="30px" maxW="none">
                       <ModalHeader
                         fontFamily="Playfair Display"
                         fontWeight="700"

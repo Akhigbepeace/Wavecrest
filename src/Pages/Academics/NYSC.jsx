@@ -15,6 +15,7 @@ import React, { Fragment, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
+import Navbar from "components/Navbar";
 
 const NYSC = () => {
   const initialValues = {
@@ -115,19 +116,22 @@ const NYSC = () => {
     );
 
     setInputField(initialValues);
-    toast({
-      title: "SUCCESSFUL !",
-      description: "Your request has been submitted",
-      status: "success",
-      duration: 5000,
-      isClosable: true,
-    });
+    if (res.status === 200 || res.text === "OK") {
+      toast({
+        title: "SUCCESSFUL !",
+        description: "Your request has been submitted",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+    }
   };
 
   const toast = useToast();
 
   return (
     <Fragment>
+      <Navbar />
       <Box
         h="441px"
         w="100%"

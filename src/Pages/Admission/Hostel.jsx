@@ -13,6 +13,7 @@ import hostel2 from "assets/Images/hostel2.jpg";
 import hostel3 from "assets/Images/hostel3.jpg";
 import hostel4 from "assets/Images/hostel4.jpg";
 import { NavLink, useNavigate } from "react-router-dom";
+import Navbar from "components/Navbar";
 
 const ApplyOnline = () => {
   const images = [
@@ -58,6 +59,7 @@ const ApplyOnline = () => {
   ];
   return (
     <Fragment>
+      <Navbar />
       <Box
         h="441px"
         w="100%"
