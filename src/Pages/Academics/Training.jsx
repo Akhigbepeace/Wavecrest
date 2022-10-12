@@ -24,6 +24,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "components/Navbar";
 
 const Training = () => {
   const trainings = [
@@ -108,6 +109,7 @@ const Training = () => {
   ];
   return (
     <Fragment>
+      <Navbar />
       <Box
         h="441px"
         w="100%"

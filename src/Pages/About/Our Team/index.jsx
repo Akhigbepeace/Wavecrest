@@ -6,6 +6,7 @@ import { FaChevronRight } from "react-icons/fa";
 import Management from "./Management";
 import Board from "./Board";
 import Staff from "./Staff";
+import Navbar from "components/Navbar";
 
 const OurTeam = () => {
   const menuLinks = [
@@ -36,6 +37,18 @@ const OurTeam = () => {
 
   return (
     <Box>
+      <Navbar
+        display={{
+          sm: "flex",
+          md: "flex",
+          lg: "flex",
+          xl: "none",
+          "2xl": "none",
+        }}
+
+        bg="red"
+      />
+
       <Box
         h="441px"
         w="100%"

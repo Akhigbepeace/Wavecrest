@@ -14,11 +14,21 @@ import {
   useDisclosure,
   useToast,
 } from "@chakra-ui/react";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 
 const PopupModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      onOpen();
+    }, 7000);
+
+    return () => {
+      clearTimeout(timerId);
+    };
+  });
 
   const initialValues = {
     user_name: "",
@@ -46,13 +56,15 @@ const PopupModal = () => {
       "JPAG_ZJVlAcuO_5D-"
     );
     setInputField(initialValues);
-    toast({
-      title: "SUCCESSFUL !",
-      description: "Your request has been submitted",
-      status: "success",
-      duration: 5000,
-      isClosable: true,
-    });
+    if (res.status === 200 || res.text === "OK") {
+      toast({
+        title: "SUCCESSFUL !",
+        description: "Your request has been submitted",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+    }
   };
 
   const subscribeForm = [
@@ -70,8 +82,6 @@ const PopupModal = () => {
   const toast = useToast();
   return (
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
-
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>

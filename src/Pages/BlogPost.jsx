@@ -5,16 +5,14 @@ import {
   Heading,
   Image,
   Text,
-  Link,
   Input,
   InputGroup,
   InputRightElement,
 } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft } from "react-icons/fa";
 import Navbar from "components/Navbar";
-import blogPostImage from "assets/Images/blogpost.png";
 import blogPost from "assets/Images/blogpost.png";
 import blogPost2 from "assets/Images/aboutus.png";
 import suicideEvent from "assets/Images/suicide-event.jpeg";
@@ -338,6 +336,7 @@ const BlogPost = () => {
     categories.push(bl.category);
     categoryMap[bl.category] = bl;
   });
+
   const [currentBlog, setCurrentBlog] = useState(categoryMap[categories[0]]);
 
   const navigate = useNavigate();
@@ -353,23 +352,17 @@ const BlogPost = () => {
 
   const topPosts = (topPost) => {
     navigate(
-      `/posts?image=${topPost.postsImg}&date=${topPost.postDate}&headline=${topPost.postHeading}&texts=${topPost.postText}`,
+      `/posts?image1=${topPost.postsImg}&date=${topPost.postDate}&headline=${topPost.postHeading}&texts=${topPost.postText}`,
       { replace: true }
     );
   };
 
-    const ShowPosts = (post) => {
-      navigate(
-        `/posts?image1=${post.postsImg}&date=${post.postsDate}&headline=${post.postHeading}&texts=${post.postsText}`,
-        { replace: true }
-      );
-    };
   return (
     <Fragment>
       <Navbar />
 
       <Box h="441px" w="100%" position="relative">
-        <Image src={image1} h="100%" w="100%" objectFit="cover" />
+        <Image src={image1 || image2} h="100%" w="100%" objectFit="cover" />
 
         <Flex
           bg="rgba(0, 24, 71, 0.5)"

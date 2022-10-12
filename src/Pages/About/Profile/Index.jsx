@@ -7,6 +7,7 @@ import Gallery from "Pages/About/Profile/Gallery";
 import OurPhilosophy from "./OurPhilosophy";
 import OurClout from "./OurClout";
 import { useNavigate } from "react-router-dom";
+import Navbar from "components/Navbar";
 
 const Profile = () => {
   const fileUrl = "/documents/Ojumo House.pdf";
@@ -24,6 +25,7 @@ const Profile = () => {
 
   return (
     <Fragment>
+      <Navbar />
       <Box
         h="441px"
         w="100%"

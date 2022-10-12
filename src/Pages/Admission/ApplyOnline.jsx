@@ -16,6 +16,7 @@ import waveimg from "assets/Images/waveimg.png";
 import paypal from "assets/Images/paypal.png";
 import mastercard from "assets/Images/mastercard.png";
 import { useNavigate } from "react-router-dom";
+import Navbar from "components/Navbar";
 
 const ApplyOnline = () => {
   const initialValues = {
@@ -92,15 +93,19 @@ const ApplyOnline = () => {
     },
     {
       course: "Confederation of Tourism and Hospitality",
+      paymentLink: "https://tinyurl.com/CTH-Registration-Form1",
     },
     {
-      course: "Hospitality Training Programs",
+      course: "Professional Certificate in Hospitality",
+      paymentLink: "https://forms.gle/7vmuHrzHSxHmkh8s8",
     },
     {
       course: "Culinary Courses",
+      paymentLink: "https://forms.gle/VQtgEFMa9qhsojGn7",
     },
     {
-      course: "National Skill Acquisition",
+      course: "National Skill Qualification",
+      paymentLink: "https://forms.gle/VQtgEFMa9qhsojGn7",
     },
   ];
 
@@ -137,6 +142,7 @@ const ApplyOnline = () => {
 
   return (
     <Fragment>
+      <Navbar />
       <Box
         h="441px"
         w="100%"
@@ -225,7 +231,7 @@ const ApplyOnline = () => {
           {forms.map((form, index) => {
             return (
               <Input
-                required
+                isRequired
                 key={index}
                 type={form.fieldType}
                 placeholder={form.placeHolder}
@@ -255,6 +261,7 @@ const ApplyOnline = () => {
           })}
 
           <Select
+            isRequired
             w={{
               sm: "100%",
               md: "400px",

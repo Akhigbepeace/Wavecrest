@@ -14,6 +14,7 @@ import studyProgrammes1 from "assets/Images/studyprogrammes1.png";
 import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
 import studyProgrammes2 from "assets/Images/studyprogrammes2.png";
 import fileDownload from "assets/Images/fileDownload.png";
+import Navbar from "components/Navbar";
 
 const Programmes = () => {
   const programmes = [
@@ -105,6 +106,7 @@ const Programmes = () => {
 
   return (
     <Box>
+      <Navbar />
       <Box
         h="441px"
         w="100%"

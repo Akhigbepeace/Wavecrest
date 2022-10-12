@@ -19,7 +19,7 @@ import ShowcaseSlider from "components/ShowcaseSlider";
 
 const showcaseGallery = [showcase1, showcase2, showcase4, showcase3];
 
-const Showcase = () => {
+const Showcase = (props) => {
   const navigate = useNavigate();
 
   const Redirect = (e) => {
@@ -27,6 +27,8 @@ const Showcase = () => {
 
     navigate("/about/profile", { replace: true });
   };
+
+  const [caption] = props;
 
   return (
     <Fragment>
@@ -81,7 +83,7 @@ const Showcase = () => {
                 "2xl": "600px",
               }}
             >
-              NIGERIA'S PREMIER HOSPITALITY MONOTECHNIC
+              {caption}
             </Text>
           </Flex>
         </Box>

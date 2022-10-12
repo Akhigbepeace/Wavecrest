@@ -2,7 +2,7 @@ import { Box, Image, Link, Text, Flex } from "@chakra-ui/react";
 import React, { Fragment, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "components/Navbar";
-import about from "assets/Images/aboutDesktopBanner.jpg"
+import about from "assets/Images/aboutDesktopBanner.jpg";
 import Profile from "./Profile/Index";
 import Milestone from "./Milestone/Milestone";
 import OurTeam from "./Our Team";
@@ -31,6 +31,7 @@ const About = () => {
       content: <OurTeam />,
     },
   ];
+
   const [activeLink, setActiveLink] = useState(menuLinks[0]);
 
   useEffect(() => {

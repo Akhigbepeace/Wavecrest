@@ -1,7 +1,6 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import React, { Fragment, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Navbar from "components/Navbar";
 import admission from "assets/Images/Admission.png";
 import AdmissionRequirements from "Pages/Admission/AdmissionRequirements";
 import TuitionAndScholarship from "Pages/Admission/Tuition And Scholarship/TuitionAndScholarship";
@@ -64,7 +63,6 @@ const Admission = () => {
 
   return (
     <Fragment>
-      <Navbar />
 
       <Box
         h="441px"

@@ -53,13 +53,6 @@ const ShortCourses = ({ trainingRef }) => {
     },
   ];
   const navigate = useNavigate();
-
-  const onClick = (e) => {
-    e.preventDefault();
-
-    trainingRef.current.scrollIntoView({ behavior: "smooth" });
-  };
-
   const linkTo = (e) => {
     e.preventDefault();
 
