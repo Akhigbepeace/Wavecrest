@@ -24,7 +24,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "components/Navbar";
+import MobileSideBar from "components/MobileSideBar";
 
 const Training = () => {
   const trainings = [
@@ -109,7 +109,7 @@ const Training = () => {
   ];
   return (
     <Fragment>
-      <Navbar />
+      <MobileSideBar />
       <Box
         h="441px"
         w="100%"

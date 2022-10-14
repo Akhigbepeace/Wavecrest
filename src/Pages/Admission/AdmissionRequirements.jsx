@@ -24,7 +24,7 @@ import studyProgrammes3 from "assets/Images/NdReq.jpg";
 import admission from "assets/Images/Admission.png";
 import fileDownload from "assets/Images/paperDownload.png";
 import { useNavigate } from "react-router-dom";
-import Navbar from "components/Navbar";
+import MobileSideBar from "components/MobileSideBar";
 
 const AdmissionRequirements = () => {
   const requirements = [
@@ -102,7 +102,7 @@ const AdmissionRequirements = () => {
   ];
   return (
     <Fragment>
-      <Navbar />
+      <MobileSideBar />
       <Box
         h="441px"
         w="100%"

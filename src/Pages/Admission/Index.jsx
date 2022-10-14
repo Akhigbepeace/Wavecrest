@@ -10,6 +10,7 @@ import FAQs from "Pages/Admission/FAQs";
 import LinkTabs from "components/LinkTabs";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
+import Navbar from "components/Navbar";
 
 const Admission = () => {
   const { id } = useParams();
@@ -63,7 +64,7 @@ const Admission = () => {
 
   return (
     <Fragment>
-
+      <Navbar />
       <Box
         h="441px"
         w="100%"

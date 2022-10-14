@@ -16,7 +16,7 @@ import studyProgrammes2 from "assets/Images/studyprogrammes2.png";
 import studyProgrammes4 from "assets/Images/studyprogrammes4.png";
 import { useNavigate } from "react-router-dom";
 
-const ShortCourses = ({ trainingRef }) => {
+const ShortCourses = () => {
   const shortCourses = [
     {
       linkContent: "TRAINING",

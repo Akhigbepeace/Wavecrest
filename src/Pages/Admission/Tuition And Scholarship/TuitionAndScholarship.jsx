@@ -23,7 +23,7 @@ import { FaChevronCircleDown } from "react-icons/fa";
 import { FaChevronCircleUp } from "react-icons/fa";
 import RespTuition from "./RespTuition";
 import { useNavigate } from "react-router-dom";
-import Navbar from "components/Navbar";
+import MobileSideBar from "components/MobileSideBar";
 
 const TuitionAndScholarship = () => {
   const Tuition = [
@@ -151,7 +151,7 @@ const TuitionAndScholarship = () => {
 
   return (
     <Fragment>
-      <Navbar />
+      <MobileSideBar />
       <Box
         mt="78px"
         w="1300px"

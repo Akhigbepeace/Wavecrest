@@ -16,7 +16,7 @@ import waveimg from "assets/Images/waveimg.png";
 import paypal from "assets/Images/paypal.png";
 import mastercard from "assets/Images/mastercard.png";
 import { useNavigate } from "react-router-dom";
-import Navbar from "components/Navbar";
+import MobileSideBar from "components/MobileSideBar";
 
 const ApplyOnline = () => {
   const initialValues = {
@@ -142,7 +142,7 @@ const ApplyOnline = () => {
 
   return (
     <Fragment>
-      <Navbar />
+      <MobileSideBar />
       <Box
         h="441px"
         w="100%"

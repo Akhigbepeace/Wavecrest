@@ -17,7 +17,7 @@ import React, { Fragment, useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
 import { useNavigate } from "react-router-dom";
-import Navbar from "components/Navbar";
+import MobileSideBar from "components/MobileSideBar";
 
 const Internship = () => {
   const initialValues = {
@@ -160,7 +160,7 @@ const Internship = () => {
   const toast = useToast();
   return (
     <Fragment>
-          <Navbar />
+      <MobileSideBar />
       <Box
         h="441px"
         w="100%"

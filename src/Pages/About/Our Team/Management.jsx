@@ -1,9 +1,9 @@
 import { Box, Heading, Image, Flex, Text, Button } from "@chakra-ui/react";
 import React from "react";
 import provost from "assets/Images/provost.png";
-import deputyProvost from "assets/Images/deputyprovost.png";
+import deputyProvost from "assets/Images/ifeoma.jpg";
 import bursar from "assets/Images/bursar.png";
-import registrar from "assets/Images/registrar.png";
+import registrar from "assets/Images/veronica.png";
 import ResponsiveManagement from "Pages/About/Our Team/Media Query/Responsive Management";
 import ResponsiveBoard from "Pages/About/Our Team/Media Query/Responsive Board";
 import ResponsiveStaff from "Pages/About/Our Team/Media Query/Responsive Staff";
@@ -22,12 +22,12 @@ const Management = () => {
       post: "Deputy Provost",
     },
     {
-      image: bursar,
+      image: registrar,
       name: "Veronica Esode",
       post: "Registrar",
     },
     {
-      image: registrar,
+      image: bursar,
       name: "Edith Chukwu",
       post: "Bursar",
     },
@@ -93,7 +93,7 @@ const Management = () => {
                 bg="rgba(255, 255, 255, 67%)"
                 p="10px 25px"
                 position="relative"
-                top="-62px"
+                top="-67px"
                 borderRadius="0px 0px 5px 5px"
               >
                 <Box

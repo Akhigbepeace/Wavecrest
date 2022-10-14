@@ -28,8 +28,6 @@ const Showcase = (props) => {
     navigate("/about/profile", { replace: true });
   };
 
-  const [caption] = props;
-
   return (
     <Fragment>
       <Grid
@@ -83,7 +81,7 @@ const Showcase = (props) => {
                 "2xl": "600px",
               }}
             >
-              {caption}
+              {props.caption}
             </Text>
           </Flex>
         </Box>

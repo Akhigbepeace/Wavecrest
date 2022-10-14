@@ -7,7 +7,7 @@ import Nineties from "./Responsive Milestone/Nineties";
 import Twenties from "./Responsive Milestone/Twenties";
 import TwentyTens from "./Responsive Milestone/TwentyTens";
 import { useNavigate } from "react-router-dom";
-import Navbar from "components/Navbar";
+import MobileSideBar from "components/MobileSideBar";
 
 const milestones = [
   {
@@ -123,7 +123,7 @@ const Milestone = () => {
   };
   return (
     <Box>
-      <Navbar />
+      <MobileSideBar />
       <Box
         h="441px"
         w="100%"
