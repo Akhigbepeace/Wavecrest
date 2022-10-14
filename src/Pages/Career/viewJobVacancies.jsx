@@ -10,6 +10,7 @@ import {
 import React, { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import waveimg from "assets/Images/waveimg.png";
+import MobileSideBar from "components/MobileSideBar";
 
 const ViewJobVacancies = () => {
   const jobVacancies = [
@@ -65,6 +66,7 @@ const ViewJobVacancies = () => {
 
   return (
     <Fragment>
+      <MobileSideBar />
       <Box
         h="441px"
         w="100%"

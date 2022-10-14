@@ -14,6 +14,7 @@ import React, { Fragment, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 import waveimg from "assets/Images/waveimg.png";
+import MobileSideBar from "components/MobileSideBar";
 
 const PostJobVacancies = () => {
   const initialValues = {
@@ -106,6 +107,7 @@ const PostJobVacancies = () => {
   const toast = useToast();
   return (
     <Fragment>
+      <MobileSideBar />
       <Box
         h="441px"
         w="100%"

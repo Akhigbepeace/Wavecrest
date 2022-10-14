@@ -73,15 +73,15 @@ const ViewVacancies = () => {
 
     setInputField(initialValues);
 
-   if (res.status === 200 || res.text === "OK") {
-     toast({
-       title: "SUCCESSFUL !",
-       description: "Your request has been submitted",
-       status: "success",
-       duration: 5000,
-       isClosable: true,
-     });
-   }
+    if (res.status === 200 || res.text === "OK") {
+      toast({
+        title: "SUCCESSFUL !",
+        description: "Your request has been submitted",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+    }
   };
 
   const navigate = useNavigate();

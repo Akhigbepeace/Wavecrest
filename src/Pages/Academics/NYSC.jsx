@@ -15,7 +15,7 @@ import React, { Fragment, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
-import Navbar from "components/Navbar";
+import MobileSideBar from "components/MobileSideBar";
 
 const NYSC = () => {
   const initialValues = {
@@ -131,7 +131,7 @@ const NYSC = () => {
 
   return (
     <Fragment>
-      <Navbar />
+      <MobileSideBar />
       <Box
         h="441px"
         w="100%"

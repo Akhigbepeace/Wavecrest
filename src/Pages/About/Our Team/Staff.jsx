@@ -1,10 +1,11 @@
 import { Box, Grid, Heading, Image, Flex, Text } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import provost from "assets/Images/provost.png";
-import deputyProvost from "assets/Images/deputyprovost.png";
+import provost from "assets/Images/Nneka Chuwkuekezie.jpg";
+import deputyProvost from "assets/Images/felicitas.jpg";
 import imageAvatar from "assets/Images/image-avatar.png";
 import bursar from "assets/Images/bursar.png";
-import registrar from "assets/Images/registrar.png";
+import amarachukwu from "assets/Images/amarachukwu.png";
+import ebong from "assets/Images/1.png";
 
 const Staff = () => {
   const staffs = [
@@ -27,7 +28,7 @@ const Staff = () => {
           post: "Registrar",
         },
         {
-          image: registrar,
+          image: bursar,
           name: "Edith Chukwu",
           post: "Bursar",
         },
@@ -39,23 +40,33 @@ const Staff = () => {
       others: [
         {
           image: provost,
-          name: "Rosana Forsuelo",
-          post: "Provost",
+          name: "Nneka Chukwuekezie",
+          post: "Students Affairs/ Admission Officer",
         },
         {
           image: deputyProvost,
-          name: "Ifeoma Nwabachili",
-          post: "Deputy Provost",
+          name: "Felicitas Odome",
+          post: "Social media and digital marketing personnel",
         },
         {
           image: bursar,
-          name: "Veronica Esode",
-          post: "Registrar",
+          name: "Okorie Nnenna",
+          post: "Assistant Account Office",
         },
         {
-          image: registrar,
-          name: "Edith Chukwu",
-          post: "Bursar",
+          image: ebong,
+          name: "Precious Ebung",
+          post: "Front Desk Personnel",
+        },
+        {
+          image: bursar,
+          name: "Baptista Uwandu",
+          post: "Public Relations Officer",
+        },
+        {
+          image: amarachukwu,
+          name: "Amarachukwu  Kenneth",
+          post: "Administrative officer",
         },
       ],
     },
@@ -79,7 +90,7 @@ const Staff = () => {
           post: "Registrar",
         },
         {
-          image: registrar,
+          image: bursar,
           name: "Edith Chukwu",
           post: "Bursar",
         },
@@ -120,7 +131,7 @@ const Staff = () => {
                 </Heading>
 
                 <Grid
-                  gridTemplateColumns="1fr 1fr 1fr 1fr"
+                  gridTemplateColumns="1fr 1fr 1fr"
                   gridGap="8px"
                   mb="100px"
                   display={{
@@ -133,11 +144,13 @@ const Staff = () => {
                 >
                   {staff.others.map((staff, index) => {
                     return (
-                      <Box key={index} w="250px" h="250px">
+                      <Box key={index} w="330px">
                         <Image
-                          src={imageAvatar}
+                          src={staff.image}
+                          w="100%"
                           objectFit="contain"
                           borderRadius="5px"
+                          h="200px"
                         />
 
                         <Flex
