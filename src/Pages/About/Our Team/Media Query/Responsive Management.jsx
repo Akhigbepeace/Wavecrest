@@ -1,15 +1,9 @@
-import {
-  Box,
-  Heading,
-  Text,
-  Image,
-  Flex,
-} from "@chakra-ui/react";
+import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
 import React from "react";
 import provost from "assets/Images/provost.png";
-import deputyProvost from "assets/Images/deputyprovost.png";
+import deputyProvost from "assets/Images/ifeoma.jpg";
 import bursar from "assets/Images/bursar.png";
-import registrar from "assets/Images/registrar.png";
+import registrar from "assets/Images/veronica.png";
 
 export default function Carousel() {
   const managements = [
@@ -24,12 +18,12 @@ export default function Carousel() {
       post: "Deputy Provost",
     },
     {
-      image: bursar,
+      image: registrar,
       name: "Veronica Esode",
       post: "Registrar",
     },
     {
-      image: registrar,
+      image: bursar,
       name: "Edith Chukwu",
       post: "Bursar",
     },
@@ -54,12 +48,15 @@ export default function Carousel() {
       <Flex overflowY="scroll">
         {managements.map((management, index) => (
           <Box key={index}>
-            <Box w="250px" h="168px">
+            <Box w="300px">
               <Image
                 src={management.image}
                 pr="10px"
+                w="100%"
+                h="200px"
                 alt="companyLogo"
-                objectFit="contain"
+                objectFit="cover"
+                borderRadius="0px 0px 5px 5px"
               />
             </Box>
 
@@ -68,7 +65,7 @@ export default function Carousel() {
               bg="rgba(255, 255, 255, 67%)"
               p="10px 25px"
               position="relative"
-              top="-64px"
+              top="-74px"
               borderRadius="0px 0px 5px 5px"
               w="100%"
             >

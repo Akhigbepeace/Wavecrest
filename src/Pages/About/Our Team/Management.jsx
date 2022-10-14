@@ -81,11 +81,13 @@ const Management = () => {
       >
         {managements.map((management, index) => {
           return (
-            <Box key={index} w="250px" h="250px" mr="10px">
+            <Box key={index} w="250px" mr="10px">
               <Image
                 src={management.image}
-                objectFit="contain"
+                objectFit="cover"
+                w="100%"
                 borderRadius="5px"
+                h="250px"
               />
 
               <Flex
