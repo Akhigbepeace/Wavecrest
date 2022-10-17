@@ -198,7 +198,6 @@ export default function Carousel() {
                 fontSize="28px"
                 fontWeight="700"
                 color="#021D37"
-                // w="0"
                 w="200px"
                 mt="10px"
                 alignSelf="center"

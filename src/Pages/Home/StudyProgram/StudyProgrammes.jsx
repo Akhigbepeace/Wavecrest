@@ -93,7 +93,7 @@ const StudyProgrammes = () => {
             navigate("/academics/training", { replace: true });
           },
           captionHeading: "HOSPITALITY TRAINING PROGRAMMES",
-          captionTime: "Flexible",
+          captionTime: "Duration: Flexible",
           captionButton: "APPLY NOW",
         },
         {
@@ -105,7 +105,7 @@ const StudyProgrammes = () => {
             navigate("/academics/training", { replace: true });
           },
           captionHeading: "CULINARY COURSES",
-          captionTime: "5 weeks - 3 Months",
+          captionTime: "5 Weeks - 3 Months",
           captionButton: "APPLY NOW",
         },
         {

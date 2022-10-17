@@ -348,7 +348,9 @@ const Navbar = () => {
             return (
               <Box
                 key={index}
-                href={sideLink.href}
+                onClick={() => {
+                  navigate(sideLink.href, { replace: true });
+                }}
                 bg={sideLink.bg}
                 p="7px"
                 w="133px"
@@ -360,6 +362,7 @@ const Navbar = () => {
                 fontWeight="700"
                 fontSize="17px"
                 textAlign="center"
+                cursor="pointer"
                 _hover={{
                   textDecoration: "none",
                   bg: sideLink.hoverBg,
