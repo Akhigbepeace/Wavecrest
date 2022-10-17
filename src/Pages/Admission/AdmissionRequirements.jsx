@@ -64,9 +64,9 @@ const AdmissionRequirements = () => {
   ];
 
   const subjects = [
-    "Biology or Agric Science or Health Science",
+    "Biology or Agric Science or Health Science or Food and Nutrition or Catering Craft or Home Management",
     "Others - Any of the following",
-    "English Language, Food and Nutrition, Civic Education, Economics or Commerce, Marketing, Physics, Mathematics or Statistics, Chemistry, Home Management or Catering Craft.",
+    "English Language,  Civic Education, Economics or Commerce, Marketing, Physics, Mathematics or Statistics, Chemistry.",
     "Subject Combination for JAMB (UTME): ",
     "English Language (COMPULSORY and other three subjects of choice (WITH EXCEPTION OF RELIGIOUS STUDIES)",
     "",
@@ -249,7 +249,18 @@ const AdmissionRequirements = () => {
 
                   <Modal isCentered isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
-                    <ModalContent bg="#DCE5E5" p="30px" maxW="none">
+                    <ModalContent
+                      bg="#DCE5E5"
+                      p="30px"
+                      maxW="none"
+                      w={{
+                        sm: "300px",
+                        md: "600px",
+                        lg: "900px",
+                        xl: "1000px",
+                        "2xl": "1000px",
+                      }}
+                    >
                       <ModalHeader
                         fontFamily="Playfair Display"
                         fontWeight="700"

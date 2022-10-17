@@ -15,6 +15,8 @@ import Dorcas from "assets/Images/academicstaff/Dorcas.jpg";
 import Aduba from "assets/Images/academicstaff/Aduba.jpeg";
 import Sayo from "assets/Images/academicstaff/Sayo.jpg";
 import Lilian from "assets/Images/academicstaff/Lilian.jpg";
+import Goodness from "assets/Images/membersofstaff/Oparachukwu Goodness.jpg";
+import Pius from "assets/Images/membersofstaff/Nmereole Pius.jpg";
 import vivian from "assets/Images/academicstaff/vivian.jpg";
 import Odinaka from "assets/Images/academicstaff/Odinaka.jpg";
 import Arinze from "assets/Images/academicstaff/Arinze.jpg";
@@ -23,6 +25,7 @@ import Obasi from "assets/Images/academicstaff/Obasi.jpg";
 import cecilia from "assets/Images/academicstaff/cecilia.jpg";
 import Anna from "assets/Images/odc/Anna.jpg";
 import helen from "assets/Images/helen.jpg";
+import Asuquo from "assets/Images/Samuel Asuquo - chef.jpg";
 import Happiness from "assets/Images/odc/Ukwachi Happiness .jpg";
 import ebong from "assets/Images/1.png";
 
@@ -70,6 +73,11 @@ const Staff = () => {
           image: Obasi,
           name: "Obasi Chizurumoke",
           post: "Bursar",
+        },
+        {
+          image: Asuquo,
+          name: "Samuel Asuquo",
+          post: "Chef",
         },
         {
           image: Gloria,
@@ -131,6 +139,16 @@ const Staff = () => {
           image: Baptista,
           name: "Baptista Uwandu",
           post: "Public Relations Officer",
+        },
+        {
+          image: Goodness,
+          name: "Oparachukwu Goodness",
+          post: "Practical Assistant",
+        },
+        {
+          image: Pius,
+          name: "Nmereole Pius",
+          post: "Security Officer",
         },
         {
           image: amarachukwu,
