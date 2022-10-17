@@ -25,7 +25,6 @@ const BlogPost = () => {
   const { id } = useParams();
 
   const post = POST_MAP[id];
-  console.log("past map", POST_MAP);
   const image1 = post.postsImg;
   const image2 = post.coverImage || image1;
 
