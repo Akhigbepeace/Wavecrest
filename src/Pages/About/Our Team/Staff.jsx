@@ -2,9 +2,28 @@ import { Box, Grid, Heading, Image, Flex, Text } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import provost from "assets/Images/Nneka Chuwkuekezie.jpg";
 import deputyProvost from "assets/Images/felicitas.jpg";
-import imageAvatar from "assets/Images/image-avatar.png";
-import bursar from "assets/Images/bursar.png";
+import Baptista from "assets/Images/Baptista Uwandu.jpg";
+import bursar from "assets/Images/2.png";
 import amarachukwu from "assets/Images/amarachukwu.png";
+import theodora from "assets/Images/odc/theodora.jpg";
+import James from "assets/Images/odc/James.jpg";
+import Mkpegara from "assets/Images/odc/Mkpegara.jpg";
+import Gloria from "assets/Images/academicstaff/Inyangudo Gloria.jpg";
+import Juliet from "assets/Images/academicstaff/Juliet.jpeg";
+import Lizzy from "assets/Images/academicstaff/Lizzy.jpg";
+import Dorcas from "assets/Images/academicstaff/Dorcas.jpg";
+import Aduba from "assets/Images/academicstaff/Aduba.jpeg";
+import Sayo from "assets/Images/academicstaff/Sayo.jpg";
+import Lilian from "assets/Images/academicstaff/Lilian.jpg";
+import vivian from "assets/Images/academicstaff/vivian.jpg";
+import Odinaka from "assets/Images/academicstaff/Odinaka.jpg";
+import Arinze from "assets/Images/academicstaff/Arinze.jpg";
+import Helen from "assets/Images/academicstaff/Helen.jpg";
+import Obasi from "assets/Images/academicstaff/Obasi.jpg";
+import cecilia from "assets/Images/academicstaff/cecilia.jpg";
+import Anna from "assets/Images/odc/Anna.jpg";
+import helen from "assets/Images/helen.jpg";
+import Happiness from "assets/Images/odc/Ukwachi Happiness .jpg";
 import ebong from "assets/Images/1.png";
 
 const Staff = () => {
@@ -13,30 +32,80 @@ const Staff = () => {
       title: "Academic Staff",
       others: [
         {
-          image: provost,
-          name: "Rosana Forsuelo",
+          image: Juliet,
+          name: "Osuagwu Juliet",
           post: "Provost",
         },
         {
-          image: deputyProvost,
-          name: "Ifeoma Nwabachili",
+          image: helen,
+          name: "Eboagwu Helen",
           post: "Deputy Provost",
         },
         {
-          image: bursar,
-          name: "Veronica Esode",
+          image: Lizzy,
+          name: "Onaolapo Lizzy",
           post: "Registrar",
         },
         {
-          image: bursar,
-          name: "Edith Chukwu",
+          image: Aduba,
+          name: "Aduba Chinese",
           post: "Bursar",
+        },
+        {
+          image: Dorcas,
+          name: "Adeyemo Dorcas",
+          post: "Bursar",
+        },
+        {
+          image: Sayo,
+          name: "Ojo Sayo",
+          post: "Bursar",
+        },
+        {
+          image: Lilian,
+          name: "Andy-Nwankwo Lilian",
+          post: "Bursar",
+        },
+        {
+          image: Obasi,
+          name: "Obasi Chizurumoke",
+          post: "Bursar",
+        },
+        {
+          image: Gloria,
+          name: "Iyangudo Gloria",
+          post: "Bursar",
+        },
+        {
+          image: vivian,
+          name: "Isichei Vivian",
+          post: "Bursar",
+        },
+        {
+          image: Odinaka,
+          name: "Ekwugha Odinaka",
+          post: "Bursar",
+        },
+        {
+          image: Arinze,
+          name: "Uju Arinze",
+          post: "Bursar",
+        },
+        {
+          image: Helen,
+          name: "Eboigbe Helen",
+          post: "Bursar",
+        },
+        {
+          image: cecilia,
+          name: "Ezika Cecilia",
+          post: "Faculty Secretary",
         },
       ],
     },
 
     {
-      title: "Non-Teaching Staff",
+      title: "Non-Academic Staff",
       others: [
         {
           image: provost,
@@ -59,7 +128,7 @@ const Staff = () => {
           post: "Front Desk Personnel",
         },
         {
-          image: bursar,
+          image: Baptista,
           name: "Baptista Uwandu",
           post: "Public Relations Officer",
         },
@@ -75,23 +144,28 @@ const Staff = () => {
       title: "ODC",
       others: [
         {
-          image: provost,
-          name: "Rosana Forsuelo",
-          post: "Provost",
+          image: theodora,
+          name: "Ejiogu Theodora",
+          post: "Pastry Chef",
         },
         {
-          image: deputyProvost,
-          name: "Ifeoma Nwabachili",
-          post: "Deputy Provost",
+          image: James,
+          name: "Idiong James",
+          post: "Kitchen Assistant",
         },
         {
-          image: bursar,
-          name: "Veronica Esode",
+          image: Mkpegara,
+          name: "Agbo Mkpegara",
           post: "Registrar",
         },
         {
-          image: bursar,
-          name: "Edith Chukwu",
+          image: Anna,
+          name: "Owo Anna",
+          post: "Bursar",
+        },
+        {
+          image: Happiness,
+          name: "Ukwachi Happiness",
           post: "Bursar",
         },
       ],
@@ -144,11 +218,11 @@ const Staff = () => {
                 >
                   {staff.others.map((staff, index) => {
                     return (
-                      <Box key={index} w="330px">
+                      <Box key={index} w="350px">
                         <Image
                           src={staff.image}
                           w="100%"
-                          objectFit="contain"
+                          objectFit="cover"
                           borderRadius="5px"
                           h="200px"
                         />
@@ -158,7 +232,7 @@ const Staff = () => {
                           bg="rgba(255, 255, 255, 67%)"
                           p="10px 25px"
                           position="relative"
-                          top="-68px"
+                          top="-67px"
                           borderRadius="0px 0px 5px 5px"
                         >
                           <Box
