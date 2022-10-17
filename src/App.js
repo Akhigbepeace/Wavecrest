@@ -71,7 +71,7 @@ function App() {
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/support" element={<SupportUs />} />
             <Route exact path="/searhResults" element={<SearchResult />} />
-            <Route exact path="/posts" element={<BlogPost />} />
+            <Route exact path="/posts/:id" element={<BlogPost />} />
             <Route exact path="/viewVacancies" element={<ViewVacancies />} />
             <Route exact path="/downloads" element={<Downloads />} />
             <Route exact path="/HNDProgramme" element={<HNDProgrammeDesc />} />
