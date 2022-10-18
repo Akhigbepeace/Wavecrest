@@ -64,12 +64,9 @@ const AdmissionRequirements = () => {
   ];
 
   const subjects = [
-    "Biology or Agric Science or Health Science or Food and Nutrition or Catering Craft or Home Management",
+    "Biology or Agric Science or Health Science or Food and Nutrition or Catering Craft and Home Management",
     "Others - Any of the following",
     "English Language,  Civic Education, Economics or Commerce, Marketing, Physics, Mathematics or Statistics, Chemistry.",
-    "Subject Combination for JAMB (UTME): ",
-    "English Language (COMPULSORY and other three subjects of choice (WITH EXCEPTION OF RELIGIOUS STUDIES)",
-    "",
   ];
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -347,6 +344,41 @@ const AdmissionRequirements = () => {
                               </ListItem>
                             );
                           })}
+                        </UnorderedList>
+                        <Text
+                          fontFamily="Manrope"
+                          fontWeight="700"
+                          fontSize={{
+                            md: "24px",
+                            lg: "24px",
+                            xl: "24px",
+                            "2xl": "24px",
+                          }}
+                          color="#021D37"
+                          mt="20px"
+                          mb="5px"
+                          lineHeight="20px"
+                        >
+                          Subject Combination for JAMB (UTME):
+                        </Text>
+                        <UnorderedList>
+                          <ListItem
+                            key={index}
+                            listStyleType="none"
+                            fontFamily="Manrope"
+                            fontWeight="400"
+                            fontSize={{
+                              md: "24px",
+                              lg: "24px",
+                              xl: "24px",
+                              "2xl": "24px",
+                            }}
+                            color="#021D37"
+                          >
+                            English Language (COMPULSORY and other three
+                            subjects of choice (WITH EXCEPTION OF RELIGIOUS
+                            STUDIES)
+                          </ListItem>
                         </UnorderedList>
                       </ModalBody>
                     </ModalContent>

@@ -65,20 +65,16 @@ const HostelApplication = () => {
       price: "",
     },
     {
-      hostel: "Presidential Suite",
+      hostel: "2 Man Room",
       price: " The fee for this hostel is: #500,000",
     },
     {
-      hostel: "Royal Hostels",
+      hostel: "4 Man Room",
       price: " The fee for this hostel is: #400,000",
     },
     {
-      hostel: "Executive Hostels",
+      hostel: "6 Man Room",
       price: " The fee for this hostel is: #300,000",
-    },
-    {
-      hostel: "One-man Hostels",
-      price: " The fee for this hostel is: #200,000",
     },
   ];
 

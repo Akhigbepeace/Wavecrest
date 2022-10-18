@@ -22,13 +22,15 @@ const PopupModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
+    const hasViewedModal = JSON.parse(localStorage.hasViewedModal);
+    const hasSubscribed =
+      localStorage.hasSubscribed && JSON.parse(localStorage.hasSubscribed);
     const timerId = setTimeout(() => {
-      if (!localStorage.hasViewedModal && !localStorage.hasSubscribed) {
+      if (!hasViewedModal && !hasSubscribed) {
         onOpen();
       }
     }, 3000);
 
-    console.log("timeId", timerId);
     return () => {
       clearTimeout(timerId);
     };
@@ -68,7 +70,7 @@ const PopupModal = () => {
         duration: 5000,
         isClosable: true,
       });
-      localStorage.hasSubscribed = true;
+      localStorage.hasSubscribed = JSON.stringify(true);
       handleModalClose();
     }
   };

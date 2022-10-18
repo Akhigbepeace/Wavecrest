@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -50,9 +50,14 @@ function App() {
   };
 
   const theme = extendTheme({ colors, fonts, breakpoints });
-  if ( !localStorage.hasSubscribed) {
-    localStorage.hasViewedModal  = false
-  }
+  useEffect(() => {
+    if (!localStorage.hasSubscribed) {
+      localStorage.hasViewedModal = JSON.stringify(false);
+    }
+
+    return () => {};
+  }, []);
+
   return (
     <ChakraProvider theme={theme}>
       <PopupModal />
