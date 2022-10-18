@@ -287,10 +287,6 @@ const HostelApplication = () => {
             })}
           </Select>
 
-          <Text fontFamily="Manrope" fontSize="18px" fontWeight="400">
-            <b> {showCoursePrice.price} </b>
-          </Text>
-
           <Button
             type="submit"
             w="142px"
