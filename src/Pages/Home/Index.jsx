@@ -1,6 +1,5 @@
 import { Box } from "@chakra-ui/react";
 import React, { Fragment, useState, useEffect } from "react";
-import PopupModal from "components/PopupModal";
 import Navbar from "../../components/Navbar";
 import MobileSideBar from "components/MobileSideBar";
 import Showcase from "./Showcase";
@@ -28,7 +27,6 @@ const Home = () => {
 
   return (
     <Fragment>
-      <PopupModal />
       <Navbar />
       <MobileSideBar />
       <Box>

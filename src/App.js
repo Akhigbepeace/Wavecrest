@@ -6,6 +6,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import PopupModal from "components/PopupModal";
 import Home from "Pages/Home/Index";
 import About from "Pages/About/Index";
 import Admission from "Pages/Admission/Index";
@@ -49,9 +50,12 @@ function App() {
   };
 
   const theme = extendTheme({ colors, fonts, breakpoints });
-
+  if ( !localStorage.hasSubscribed) {
+    localStorage.hasViewedModal  = false
+  }
   return (
     <ChakraProvider theme={theme}>
+      <PopupModal />
       <Router>
         <Fragment>
           <Routes>

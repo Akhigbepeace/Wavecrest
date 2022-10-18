@@ -191,17 +191,17 @@ export default function CaptionCarousel() {
                     sm: "216px",
                     md: "216px",
                     lg: "216px",
-                    xl: "391px",
-                    "2xl": "391px",
+                    xl: "450px",
+                    "2xl": "450px",
                   }}
                   h={{
                     sm: "211px",
                     md: "211px",
                     lg: "211px",
-                    xl: "295px",
-                    "2xl": "295px",
+                    xl: "350px",
+                    "2xl": "350px",
                   }}
-                  mr={{
+                  mx={{
                     sm: "0",
                     md: "50px",
                     lg: "50px",
