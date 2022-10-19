@@ -297,26 +297,6 @@ const TuitionAndScholarship = () => {
                               )}
                             </Tr>
 
-                            {/* <Tr
-                              bg="rgba(235, 237, 239, 0.38);"
-                              borderBottom="2px solid #FFF"
-                            >
-                              <Td borderRight="2px solid #FFF">
-                                {fee.acceptanceFee}
-                              </Td>
-                              <Td
-                                textAlign="right"
-                                borderRight="2px solid #FFF"
-                              >
-                                {fee.acceptanceFeePrice1}
-                              </Td>
-                              {fee.acceptanceFeePrice2 && (
-                                <Td textAlign="right">
-                                  {fee.workshopFeePrice2}
-                                </Td>
-                              )}
-                            </Tr> */}
-
                             <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
                               <Td borderRight="2px solid #FFF">
                                 {fee.examinationFee}
