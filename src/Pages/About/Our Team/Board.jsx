@@ -1,62 +1,34 @@
 import { Box, Grid, Heading, Image, Flex, Text } from "@chakra-ui/react";
 import React from "react";
-import provost from "assets/Images/provost.png";
-import deputyProvost from "assets/Images/deputyprovost.png";
-import bursar from "assets/Images/bursar.png";
-import registrar from "assets/Images/registrar.png";
+import ward from "assets/Images/ward.JPG";
 import imageAvatar from "assets/Images/image-avatar.png";
 
 const Board = () => {
   const boards = [
     {
-      image: provost,
-      name: "Rosana Forsuelo",
-      post: "Provost",
+      image: imageAvatar,
+      name: "Edna Dafe",
+      post: "Women's Board",
     },
     {
-      image: deputyProvost,
-      name: "Ifeoma Nwabachili",
-      post: "Deputy Provost",
+      image: ward,
+      name: "Trevor Ward",
+      post: "W Hospitality Group",
     },
     {
-      image: bursar,
-      name: "Veronica Esode",
-      post: "Registrar",
+      image: imageAvatar,
+      name: "Moyo Ogunseinde",
+      post: "Uraga / Radisson Blu",
     },
     {
-      image: registrar,
-      name: "Edith Chukwu",
-      post: "Bursar",
+      image: imageAvatar,
+      name: "Peter Idoko",
+      post: "Legend Hotels / Hilton",
     },
     {
-      image: registrar,
-      name: "Edith Chukwu",
-      post: "Bursar",
-    },
-    {
-      image: registrar,
-      name: "Edith Chukwu",
-      post: "Bursar",
-    },
-    {
-      image: registrar,
-      name: "Edith Chukwu",
-      post: "Bursar",
-    },
-    {
-      image: registrar,
-      name: "Edith Chukwu",
-      post: "Bursar",
-    },
-    {
-      image: registrar,
-      name: "Edith Chukwu",
-      post: "Bursar",
-    },
-    {
-      image: registrar,
-      name: "Edith Chukwu",
-      post: "Bursar",
+      image: imageAvatar,
+      name: "Chris Adedipe",
+      post: "Independence Consultant",
     },
   ];
 
@@ -102,8 +74,13 @@ const Board = () => {
       >
         {boards.map((board, index) => {
           return (
-            <Box key={index} w="250px" h="250px">
-              <Image src={imageAvatar} objectFit="contain" borderRadius="5px" />
+            <Box key={index} w="250px">
+              <Image
+                src={board.image}
+                objectFit="cover"
+                h="250px"
+                borderRadius="5px"
+              />
 
               <Flex
                 alignItems="center"

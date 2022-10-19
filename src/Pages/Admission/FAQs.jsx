@@ -78,7 +78,7 @@ const FAQs = () => {
     {
       question: "How much is the Tuition?",
       answer:
-        "<ul><li>Gap-year Program: N277,500  </li> <li> National Diploma (YEAR. 1): N295,500  </li><li> National Diploma (YEAR. 2): N262,000  </li><li>   Higher National Diploma (YEAR. 1): N299,000</li><li>   Higher National Diploma (YEAR. 2): N262,000</li>  </ul><b>  * Wavecrest College. Access – Diamond Bank. Account no. 0010546867   </b> <br/> As a project of the Women’s Board, the Educational Cooperation Society is a non-governmental not-for-profit organization. In consideration of the college’s mission to reach out to and give education opportunities to the financially challenged, the above fee has been subsidized. However, those who can pay the total costs are encouraged to do so to assist in training more students. All payments must be made into the College's bank account during registration.",
+        "<ul><li>Gap-year Program: N277,500  </li> <li> National Diploma (YEAR. 1): N295,500  </li><li>   Higher National Diploma (YEAR. 1): N299,000</li></ul><b>  * Wavecrest College. Access – Diamond Bank. Account no. 0010546867   </b> <br/> As a project of the Women’s Board, the Educational Cooperation Society is a non-governmental not-for-profit organization. In consideration of the college’s mission to reach out to and give education opportunities to the financially challenged, the above fee has been subsidized. However, those who can pay the total costs are encouraged to do so to assist in training more students. All payments must be made into the College's bank account during registration.",
     },
     {
       question: "Are there accommodation available?",

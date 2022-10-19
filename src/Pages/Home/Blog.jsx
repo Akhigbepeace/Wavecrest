@@ -187,7 +187,7 @@ export default function CaptionCarousel() {
                 <Image
                   src={card.flier}
                   alt="founders day"
-                  w={{
+                  maxW={{
                     sm: "216px",
                     md: "216px",
                     lg: "216px",
