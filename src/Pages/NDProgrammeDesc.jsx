@@ -47,7 +47,7 @@ const NDProgrammeDesc = () => {
     navigate("/academics/programmes", { replace: true });
   };
 
-  const fileUrl = "/documents/Ojumo House.pdf";
+  const fileUrl = "/documents/NATIONAL DIPLOMA (ND) IN HOSP (2).pdf";
   return (
     <Fragment>
       <Navbar />

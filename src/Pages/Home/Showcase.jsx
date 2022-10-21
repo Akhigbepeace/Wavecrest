@@ -81,7 +81,7 @@ const Showcase = (props) => {
                 "2xl": "600px",
               }}
             >
-              Nigeria's Premier Hospitality Monotechnic
+              {props.caption}
             </Text>
           </Flex>
         </Box>
@@ -151,7 +151,7 @@ const Showcase = (props) => {
                 lg: "400px",
               }}
             >
-              Nigeria's Premiere Hospitality Monotechnic
+              {props.caption}
             </Heading>
 
             <Text fontSize="14px" fontWeight="400" lineHeight="19px" my="15px">

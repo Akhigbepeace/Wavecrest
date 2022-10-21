@@ -9,28 +9,28 @@ import FooterCopywright from "../components/FooterCopywright";
 const Downloads = () => {
   const donwloadables = [
     {
-      name: "cth brochure",
-      fileUrl: "/documents/Ojumo House.pdf",
+      name: "E-Profile",
+      fileUrl: "/documents/SCHOOL PROFILE.pdf",
     },
     {
-      name: "nsq brochure",
-      fileUrl: "/documents/Ojumo House.pdf",
+      name: "HND Programme brochure",
+      fileUrl: "/documents/HIGHER NATIONAL DIPLOMA (HND) IN HOSP (1).pdf",
     },
     {
-      name: "programme fliers",
-      fileUrl: "/documents/Ojumo House.pdf",
+      name: "ND Programme brochure",
+      fileUrl: "/documents/NATIONAL DIPLOMA (ND) IN HOSP (2).pdf",
     },
     {
-      name: "cth brochure",
-      fileUrl: "/documents/Ojumo House.pdf",
+      name: "Certificate Course brochure",
+      fileUrl: "/documents/CERTIFICATE IN HOSPITALITY OPERATIONS.pdf",
     },
     {
-      name: "nsq brochure",
-      fileUrl: "/documents/Ojumo House.pdf",
+      name: "CTH FLIER",
+      fileUrl: "/documents/tch flier.png",
     },
     {
-      name: "programme fliers",
-      fileUrl: "/documents/Ojumo House.pdf",
+      name: "Pch flier",
+      fileUrl: "/documents/P.C.H. flier.png",
     },
     {
       name: "cth brochure",
