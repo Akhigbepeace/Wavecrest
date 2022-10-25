@@ -37,42 +37,42 @@ const Staff = () => {
         {
           image: Juliet,
           name: "Osuagwu Juliet",
-          post: "Provost",
+          post: "Academic Staff",
         },
         {
           image: helen,
           name: "Eboagwu Helen",
-          post: "Deputy Provost",
+          post: "Academic Staff",
         },
         {
           image: Lizzy,
           name: "Onaolapo Lizzy",
-          post: "Registrar",
+          post: "Academic Staff",
         },
         {
           image: Aduba,
           name: "Aduba Chinese",
-          post: "Bursar",
+          post: "Academic Staff",
         },
         {
           image: Dorcas,
           name: "Adeyemo Dorcas",
-          post: "Bursar",
+          post: "Academic Staff",
         },
         {
           image: Sayo,
           name: "Ojo Sayo",
-          post: "Bursar",
+          post: "Academic Staff",
         },
         {
           image: Lilian,
           name: "Andy-Nwankwo Lilian",
-          post: "Bursar",
+          post: "Academic Staff",
         },
         {
           image: Obasi,
           name: "Obasi Chizurumoke",
-          post: "Bursar",
+          post: "Academic Staff",
         },
         {
           image: Asuquo,
@@ -82,27 +82,27 @@ const Staff = () => {
         {
           image: Gloria,
           name: "Iyangudo Gloria",
-          post: "Bursar",
+          post: "Academic Staff",
         },
         {
           image: vivian,
           name: "Isichei Vivian",
-          post: "Bursar",
+          post: "Academic Staff",
         },
         {
           image: Odinaka,
           name: "Ekwugha Odinaka",
-          post: "Bursar",
+          post: "Academic Staff",
         },
         {
           image: Arinze,
           name: "Uju Arinze",
-          post: "Bursar",
+          post: "Academic Staff",
         },
         {
           image: Helen,
           name: "Eboigbe Helen",
-          post: "Bursar",
+          post: "Academic Staff",
         },
         {
           image: cecilia,
@@ -240,7 +240,7 @@ const Staff = () => {
                         <Image
                           src={staff.image}
                           w="100%"
-                          objectFit="cover"
+                          objectFit="fill"
                           borderRadius="5px"
                           h="200px"
                         />

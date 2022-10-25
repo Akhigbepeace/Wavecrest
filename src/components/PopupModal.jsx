@@ -13,6 +13,7 @@ import {
   ModalCloseButton,
   useDisclosure,
   useToast,
+  Box,
 } from "@chakra-ui/react";
 import React, { useRef, useState, useEffect } from "react";
 import emailjs from "emailjs-com";
@@ -22,9 +23,12 @@ const PopupModal = () => {
 
   useEffect(() => {
     const timerId = setTimeout(() => {
-      onOpen();
-    }, 7000);
+      if (!localStorage.hasViewedModal && !localStorage.hasSubscribed) {
+        onOpen();
+      }
+    }, 3000);
 
+    console.log("timeId", timerId);
     return () => {
       clearTimeout(timerId);
     };
@@ -64,6 +68,8 @@ const PopupModal = () => {
         duration: 5000,
         isClosable: true,
       });
+      localStorage.setItem("hasSubscribed", true);
+      handleModalClose();
     }
   };
 
@@ -80,9 +86,15 @@ const PopupModal = () => {
     },
   ];
   const toast = useToast();
+
+  const handleModalClose = () => {
+    localStorage.setItem("hasViewedModal", true);
+    onClose();
+  };
+
   return (
-    <>
-      <Modal isOpen={isOpen} onClose={onClose}>
+    <Box display="none">
+      <Modal isOpen={isOpen} onClose={handleModalClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>
@@ -124,8 +136,8 @@ const PopupModal = () => {
                         value={inputField[field.name]}
                         border="none"
                         mt="10px"
-                        p="15px 20px"
-                        bg="#fff"
+                        p="20px"
+                        bg="#EBEDEF"
                         h="51px"
                         onChange={inputValues}
                         _placeholder={{
@@ -165,7 +177,7 @@ const PopupModal = () => {
           </ModalBody>
         </ModalContent>
       </Modal>
-    </>
+    </Box>
   );
 };
 

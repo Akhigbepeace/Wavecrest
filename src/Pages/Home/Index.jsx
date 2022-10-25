@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import React, { Fragment, useState, useEffect } from "react";
-import PopupModal from "components/PopupModal";
 import Navbar from "../../components/Navbar";
+import MobileSideBar from "components/MobileSideBar";
 import Showcase from "./Showcase";
 import Statistics from "components/Statistics";
 import DiscoverHospitality from "./DiscoverHospitality";
@@ -27,8 +27,8 @@ const Home = () => {
 
   return (
     <Fragment>
-      <PopupModal />
       <Navbar />
+      <MobileSideBar />
       <Box>
         <Showcase caption={homeData?.BANNER_VIDEO_CAPTION} />
         <Statistics />
