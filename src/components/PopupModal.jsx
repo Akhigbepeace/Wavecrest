@@ -22,9 +22,10 @@ const PopupModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
-    const hasViewedModal = JSON.parse(localStorage.hasViewedModal);
+    const hasViewedModal = JSON.parse(localStorage.getItem("hasViewedModal"));
     const hasSubscribed =
-      localStorage.hasSubscribed && JSON.parse(localStorage.hasSubscribed);
+      localStorage.getItem("hasSubscribed") &&
+      JSON.parse(localStorage.getItem("hasSubscribed"));
     const timerId = setTimeout(() => {
       if (!hasViewedModal && !hasSubscribed) {
         onOpen();
