@@ -50,14 +50,9 @@ function App() {
   };
 
   const theme = extendTheme({ colors, fonts, breakpoints });
-  useEffect(() => {
-    if (!localStorage.hasSubscribed) {
-      localStorage.hasViewedModal = JSON.stringify(false);
-    }
-
-    return () => {};
-  }, []);
-
+  if (!localStorage.hasSubscribed) {
+    localStorage.setItem("hasViewedModal", false);
+  }
   return (
     <ChakraProvider theme={theme}>
       <PopupModal />
