@@ -50,8 +50,8 @@ function App() {
   };
 
   const theme = extendTheme({ colors, fonts, breakpoints });
-  if ( !localStorage.hasSubscribed) {
-    localStorage.hasViewedModal  = false
+  if (!localStorage.hasSubscribed) {
+    localStorage.setItem("hasViewedModal", false);
   }
   return (
     <ChakraProvider theme={theme}>

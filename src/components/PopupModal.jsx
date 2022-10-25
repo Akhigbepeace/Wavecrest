@@ -68,7 +68,7 @@ const PopupModal = () => {
         duration: 5000,
         isClosable: true,
       });
-      localStorage.hasSubscribed = true;
+      localStorage.setItem("hasSubscribed", true);
       handleModalClose();
     }
   };
@@ -88,7 +88,7 @@ const PopupModal = () => {
   const toast = useToast();
 
   const handleModalClose = () => {
-    localStorage.hasViewedModal = true;
+    localStorage.setItem("hasViewedModal", true);
     onClose();
   };
 
