@@ -5,6 +5,7 @@ import deputyProvost from "assets/Images/felicitas.jpg";
 import Baptista from "assets/Images/Baptista Uwandu.jpg";
 import bursar from "assets/Images/2.png";
 import amarachukwu from "assets/Images/amarachukwu.png";
+import ngozi from "assets/Images/ngozi.jpg";
 import theodora from "assets/Images/odc/theodora.jpg";
 import James from "assets/Images/odc/James.jpg";
 import Mkpegara from "assets/Images/odc/Mkpegara.jpg";
@@ -154,6 +155,11 @@ const Staff = () => {
           image: amarachukwu,
           name: "Amarachukwu  Kenneth",
           post: "Administrative officer",
+        },
+        {
+          image: ngozi,
+          name: "Reuben Francisca Ngozi",
+          post: "Secretarial Assistant - Librarian",
         },
       ],
     },

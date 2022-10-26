@@ -326,10 +326,8 @@ const Blog = () => {
                           fontSize="18px"
                           lineHeight="25px"
                           noOfLines={5}
-                        >
-                          {post.postsText}
-                        </Text>
-
+                          dangerouslySetInnerHTML={{ __html:   post.postsText }}
+                        />
                         <Button
                           w="142px"
                           height="46.89px"
