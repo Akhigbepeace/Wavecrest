@@ -25,14 +25,11 @@ const RespTuition = () => {
       year1: "YEAR 1",
       year2: "YEAR 2",
       tuitionFee: "TUITION FEE",
-      tuitionFeePrice1: "#369,000",
-      tuitionFeePrice2: "#405,000",
-      acceptanceFee: "ACCEPTANCE FEE",
-      acceptanceFeePrice1: "#5,000",
-      acceptanceFeePrice2: "--",
+      tuitionFeePrice1: "#502,800",
+      tuitionFeePrice2: "#526,800",
       examinationFee: "ADMIN FEE",
-      examinationFeePrice1: "#42,000",
-      examinationFeePrice2: "#40,000",
+      examinationFeePrice1: "#2,000",
+      examinationFeePrice2: "--",
       workshopFee: "PRACTICAL UNIFORMS",
       workshopFeePrice1: "#35,000",
       workshopFeePrice2: "--",
@@ -41,25 +38,25 @@ const RespTuition = () => {
       devFeePrice2: "#40,000",
       practicalFee: "MANUALS/WORKBOOKS",
       practicalFeePrice1: "#7,500",
-      practicalFeePrice2: "#10,000",
+      practicalFeePrice2: "#7,500",
       studentID: "MEDICALS",
-      studentIDPrice1: "#15,000",
+      studentIDPrice1: "#19,000",
       studentIDPrice2: "--",
       studentPracticals: "STUDENT PRACTICALS*",
-      studentPracticalsPrice1: "#60,000",
-      studentPracticalsPrice2: "#60,000",
+      studentPracticalsPrice1: "#60,500",
+      studentPracticalsPrice2: "#60,500",
       hmoScheme: "HMO SCHEME",
-      hmoSchemePrice1: "#9,000",
-      hmoSchemePrice2: "#9,000",
+      hmoSchemePrice1: "#10,000",
+      hmoSchemePrice2: "#10,000",
       fees: "FEES TO BE PAID",
-      feesPrice1: "#94,000",
-      feesPrice2: "#110,000",
+      feesPrice1: "#144,000",
+      feesPrice2: "#144,000",
       discount: "AMOUNT SUBSIDIZED BY COLLEGE",
-      discountPrice1: "#275,000",
-      discountPrice2: "#295,000",
+      discountPrice1: "#358,800",
+      discountPrice2: "#382,800",
       totalFees: "TOTAL FEES TO BE PAID",
-      totalFeesPrice1: "#307,500",
-      totalFeesPrice2: "#269,000",
+      totalFeesPrice1: "#299,000",
+      totalFeesPrice2: "#262,000",
     },
 
     {
@@ -68,14 +65,14 @@ const RespTuition = () => {
       year1: "YEAR 1",
       year2: "YEAR 2",
       tuitionFee: "TUITION FEE",
-      tuitionFeePrice1: "#377,000",
-      tuitionFeePrice2: "#374,000",
+      tuitionFeePrice1: "#496,800",
+      tuitionFeePrice2: "#490,800",
       acceptanceFee: "ACCEPTANCE FEE",
       acceptanceFeePrice1: "#5,000",
       acceptanceFeePrice2: "--",
       examinationFee: "ADMIN FEE",
-      examinationFeePrice1: "#41,000",
-      examinationFeePrice2: "#40,000",
+      examinationFeePrice1: "#9,500",
+      examinationFeePrice2: "--",
       workshopFee: "PRACTICAL UNIFORMS",
       workshopFeePrice1: "#35,000",
       workshopFeePrice2: "--",
@@ -84,25 +81,25 @@ const RespTuition = () => {
       devFeePrice2: "#40,000",
       practicalFee: "MANUALS/WORKBOOKS",
       practicalFeePrice1: "#12,500",
-      practicalFeePrice2: "#15,000",
+      practicalFeePrice2: "#12,500",
       studentID: "MEDICALS",
       studentIDPrice1: "#28,500",
       studentIDPrice2: "--",
       studentPracticals: "STUDENT PRACTICALS*",
-      studentPracticalsPrice1: "#60,000",
-      studentPracticalsPrice2: "#60,000",
+      studentPracticalsPrice1: "#60,500",
+      studentPracticalsPrice2: "#60,500",
       hmoScheme: "HMO SCHEME",
-      hmoSchemePrice1: "#9,000",
-      hmoSchemePrice2: "#9,000",
+      hmoSchemePrice1: "#10,000",
+      hmoSchemePrice2: "#10,000",
       fees: "FEES TO BE PAID",
-      feesPrice1: "#91,000",
-      feesPrice2: "#99,000",
+      feesPrice1: "#128,000",
+      feesPrice2: "#139,000",
       discount: "AMOUNT SUBSIDIZED BY COLLEGE",
-      discountPrice1: "#286,000",
-      discountPrice2: "#275,000",
+      discountPrice1: "#368,800",
+      discountPrice2: "#351,800",
       totalFees: "TOTAL FEES TO BE PAID",
-      totalFeesPrice1: "#322,000",
-      totalFeesPrice2: "#263,000",
+      totalFeesPrice1: "#295,000",
+      totalFeesPrice2: "#262,000",
     },
 
     {
@@ -110,15 +107,15 @@ const RespTuition = () => {
       item: "ITEM",
       year1: "YEAR 1",
       tuitionFee: "TUITION FEE",
-      tuitionFeePrice1: "#376,000",
+      tuitionFeePrice1: "#472,800",
       discount: "AMOUNT SUBSIDIZED BY COLLEGE",
-      discountPrice1: "#278,000",
+      discountPrice1: "#356,800",
       fees: "FEES TO BE PAID",
-      feesPrice1: "#98,000",
+      feesPrice1: "#116,000",
       acceptanceFee: "ACCEPTANCE FEE",
       acceptanceFeePrice1: "#5,000",
       examinationFee: "ADMIN FEE",
-      examinationFeePrice1: "#29,000",
+      examinationFeePrice1: "#16,000",
       workshopFee: "PRACTICAL UNIFORMS",
       workshopFeePrice1: "#35,000",
       devFee: "DEVELOPMENT FEE",
@@ -128,12 +125,12 @@ const RespTuition = () => {
       studentID: "MEDICALS",
       studentIDPrice1: "#28,500",
       studentPracticals: "STUDENT PRACTICALS*",
-      studentPracticalsPrice1: "#70,000",
+      studentPracticalsPrice1: "#70,500",
       hmoScheme: "HMO SCHEME",
-      hmoSchemePrice1: "#9,000",
+      hmoSchemePrice1: "#10,000",
 
       totalFees: "TOTAL FEES TO BE PAID",
-      totalFeesPrice1: "#304,000",
+      totalFeesPrice1: "#277,500",
     },
   ];
   const navigate = useNavigate();
@@ -201,11 +198,11 @@ const RespTuition = () => {
       </Box>
 
       <Box>
-        {Tuitions.map((tuition, index) => {
+        {Tuitions.map((fee, index) => {
           return (
             <Box
               key={index}
-              bg={tuition.bg}
+              bg={fee.bg}
               p={{
                 sm: "50px 20px",
                 md: "50px",
@@ -220,25 +217,26 @@ const RespTuition = () => {
                   fontWeight="700"
                   mb="30px"
                 >
-                  {tuition.courseTitle}
+                  {fee.courseTitle}
                 </Heading>
               </Box>
 
-              <TableContainer mt="26px" mb="40px">
+              <TableContainer mt="26px" w="915px">
                 <Table>
-                  <Thead borderBottom="2px solid #FFF">
+                  <Thead borderBottom="2px solid #FFF" w="363px">
                     <Tr>
                       <Th
                         py="20px"
                         fontFamily="Manrope"
                         fontWeight="700"
                         fontSize="24px"
+                        color="#FFF"
+                        ml="12px"
                         textAlign="center"
                         borderRight="2px solid #FFF"
                         bg="#021D37"
-                        color="#FFF"
                       >
-                        {tuition.item}
+                        {fee.item}
                       </Th>
 
                       <Th
@@ -248,12 +246,25 @@ const RespTuition = () => {
                         fontSize="24px"
                         ml="12px"
                         borderRight="2px solid #FFF"
+                        color="#FFF"
                         textAlign="center"
                         bg="#021D37"
-                        color="#FFF"
                       >
-                        {tuition.year1}
+                        {fee.year1}
                       </Th>
+                      {fee.year2 && (
+                        <Th
+                          isNumeric
+                          py="20px"
+                          fontFamily="Manrope"
+                          fontWeight="700"
+                          fontSize="24px"
+                          color="#FFF"
+                          bg="#021D37"
+                        >
+                          {fee.year2}
+                        </Th>
+                      )}
                     </Tr>
                   </Thead>
 
@@ -262,91 +273,128 @@ const RespTuition = () => {
                       bg="rgba(235, 237, 239, 0.38);"
                       borderBottom="2px solid #FFF"
                     >
-                      <Td borderRight="2px solid #FFF">{tuition.tuitionFee}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.tuitionFeePrice1}
+                      <Td w="363px" borderRight="2px solid #FFF">
+                        {fee.tuitionFee}
                       </Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {fee.tuitionFeePrice1}
+                      </Td>
+                      {fee.tuitionFeePrice2 && (
+                        <Td textAlign="right" w="245px">
+                          {fee.tuitionFeePrice2}
+                        </Td>
+                      )}
                     </Tr>
 
                     <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
-                      <Td borderRight="2px solid #FFF">
-                        {tuition.examinationFee}
-                      </Td>
+                      <Td borderRight="2px solid #FFF">{fee.discount}</Td>
                       <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.examinationFeePrice1}
+                        {fee.discountPrice1}
                       </Td>
-                    </Tr>
-
-                    <Tr
-                      bg="rgba(235, 237, 239, 0.38);"
-                      borderBottom="2px solid #FFF"
-                    >
-                      <Td borderRight="2px solid #FFF">
-                        {tuition.workshopFee}
-                      </Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.workshopFeePrice1}
-                      </Td>
-                    </Tr>
-
-                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
-                      <Td borderRight="2px solid #FFF">{tuition.devFee}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.devFeePrice1}
-                      </Td>
-                    </Tr>
-
-                    <Tr
-                      bg="rgba(235, 237, 239, 0.38);"
-                      borderBottom="2px solid #FFF"
-                    >
-                      <Td borderRight="2px solid #FFF">
-                        {tuition.practicalFee}
-                      </Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.practicalFeePrice1}
-                      </Td>
-                    </Tr>
-
-                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
-                      <Td borderRight="2px solid #FFF">{tuition.studentID}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.studentIDPrice1}
-                      </Td>
-                    </Tr>
-
-                    <Tr
-                      bg="rgba(235, 237, 239, 0.38);"
-                      borderBottom="2px solid #FFF"
-                    >
-                      <Td borderRight="2px solid #FFF">{tuition.hmoScheme}</Td>
-                      <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.hmoSchemePrice1}
-                      </Td>
+                      {fee.discountPrice2 && (
+                        <Td textAlign="right">{fee.discountPrice2}</Td>
+                      )}
                     </Tr>
 
                     <Tr bg="#021D37" color="#FFF">
-                      <Td borderRight="2px solid #FFF">{tuition.fees}</Td>
+                      <Td borderRight="2px solid #FFF">{fee.fees}</Td>
                       <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.feesPrice1}
+                        {fee.feesPrice1}
                       </Td>
+                      {fee.feesPrice2 && (
+                        <Td textAlign="right">{fee.feesPrice2}</Td>
+                      )}
+                    </Tr>
+
+                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
+                      <Td borderRight="2px solid #FFF">{fee.examinationFee}</Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {fee.examinationFeePrice1}
+                      </Td>
+                      {fee.examinationFeePrice2 && (
+                        <Td textAlign="right">{fee.examinationFeePrice2}</Td>
+                      )}
                     </Tr>
 
                     <Tr
                       bg="rgba(235, 237, 239, 0.38);"
                       borderBottom="2px solid #FFF"
                     >
-                      <Td borderRight="2px solid #FFF">{tuition.discount}</Td>
+                      <Td borderRight="2px solid #FFF">{fee.workshopFee}</Td>
                       <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.discountPrice1}
+                        {fee.workshopFeePrice1}
                       </Td>
+                      {fee.workshopFeePrice2 && (
+                        <Td textAlign="right">{fee.workshopFeePrice2}</Td>
+                      )}
+                    </Tr>
+
+                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
+                      <Td borderRight="2px solid #FFF">{fee.devFee}</Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {fee.devFeePrice1}
+                      </Td>
+                      {fee.devFeePrice2 && (
+                        <Td textAlign="right">{fee.devFeePrice2}</Td>
+                      )}
+                    </Tr>
+
+                    <Tr
+                      bg="rgba(235, 237, 239, 0.38);"
+                      borderBottom="2px solid #FFF"
+                    >
+                      <Td borderRight="2px solid #FFF">{fee.practicalFee}</Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {fee.practicalFeePrice1}
+                      </Td>
+
+                      {fee.practicalFeePrice2 && (
+                        <Td textAlign="right">{fee.practicalFeePrice2}</Td>
+                      )}
+                    </Tr>
+
+                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
+                      <Td borderRight="2px solid #FFF">{fee.studentID}</Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {fee.studentIDPrice1}
+                      </Td>
+                      {fee.studentIDPrice2 && (
+                        <Td textAlign="right">{fee.studentIDPrice2}</Td>
+                      )}
+                    </Tr>
+
+                    <Tr
+                      bg="rgba(235, 237, 239, 0.38);"
+                      borderBottom="2px solid #FFF"
+                    >
+                      <Td borderRight="2px solid #FFF">{fee.hmoScheme}</Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {fee.hmoSchemePrice1}
+                      </Td>
+                      {fee.hmoSchemePrice2 && (
+                        <Td textAlign="right">{fee.hmoSchemePrice2}</Td>
+                      )}
+                    </Tr>
+                    <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
+                      <Td borderRight="2px solid #FFF">
+                        {fee.studentPracticals}
+                      </Td>
+                      <Td textAlign="right" borderRight="2px solid #FFF">
+                        {fee.studentPracticalsPrice1}
+                      </Td>
+                      {fee.studentPracticalsPrice2 && (
+                        <Td textAlign="right">{fee.studentPracticalsPrice2}</Td>
+                      )}
                     </Tr>
 
                     <Tr bg="#021D37" color="#FFF">
-                      <Td borderRight="2px solid #FFF">{tuition.totalFees}</Td>
+                      <Td borderRight="2px solid #FFF">{fee.totalFees}</Td>
                       <Td textAlign="right" borderRight="2px solid #FFF">
-                        {tuition.totalFeesPrice1}
+                        {fee.totalFeesPrice1}
                       </Td>
+                      {fee.totalFeesPrice2 && (
+                        <Td textAlign="right">{fee.totalFeesPrice2}</Td>
+                      )}
                     </Tr>
                   </Tbody>
                 </Table>
@@ -364,7 +412,6 @@ const RespTuition = () => {
           }}
         >
           <Box>
-             
             <Box>
               <Box w="88px" h="3px" bg="#021D37"></Box>
               <Heading
