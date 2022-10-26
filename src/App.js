@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -50,7 +50,7 @@ function App() {
   };
 
   const theme = extendTheme({ colors, fonts, breakpoints });
-  if (!localStorage.hasSubscribed) {
+  if (!localStorage.getItem("hasSubscribed")) {
     localStorage.setItem("hasViewedModal", false);
   }
   return (

@@ -34,12 +34,9 @@ const TuitionAndScholarship = () => {
       tuitionFee: "TUITION FEE",
       tuitionFeePrice1: "#502,800",
       tuitionFeePrice2: "#526,800",
-      acceptanceFee: "ACCEPTANCE FEE",
-      acceptanceFeePrice1: "#5,000",
-      acceptanceFeePrice2: "--",
       examinationFee: "ADMIN FEE",
       examinationFeePrice1: "#2,000",
-      examinationFeePrice2: "#40,000",
+      examinationFeePrice2: "--",
       workshopFee: "PRACTICAL UNIFORMS",
       workshopFeePrice1: "#35,000",
       workshopFeePrice2: "--",
@@ -82,7 +79,7 @@ const TuitionAndScholarship = () => {
       acceptanceFeePrice2: "--",
       examinationFee: "ADMIN FEE",
       examinationFeePrice1: "#9,500",
-      examinationFeePrice2: "#40,000",
+      examinationFeePrice2: "--",
       workshopFee: "PRACTICAL UNIFORMS",
       workshopFeePrice1: "#35,000",
       workshopFeePrice2: "--",
@@ -300,7 +297,7 @@ const TuitionAndScholarship = () => {
                               )}
                             </Tr>
 
-                            <Tr
+                            {/* <Tr
                               bg="rgba(235, 237, 239, 0.38);"
                               borderBottom="2px solid #FFF"
                             >
@@ -318,7 +315,7 @@ const TuitionAndScholarship = () => {
                                   {fee.workshopFeePrice2}
                                 </Td>
                               )}
-                            </Tr>
+                            </Tr> */}
 
                             <Tr bg="#EBEDEF" borderBottom="2px solid #FFF">
                               <Td borderRight="2px solid #FFF">

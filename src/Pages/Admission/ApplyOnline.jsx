@@ -304,10 +304,6 @@ const ApplyOnline = () => {
               );
             })}
           </Select>
-
-          <Text fontFamily="Manrope" fontSize="18px" fontWeight="400">
-            <b> {showCoursePrice.price} </b>
-          </Text>
         </Flex>
 
         <Box>
