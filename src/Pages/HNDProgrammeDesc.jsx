@@ -47,7 +47,7 @@ const HNDProgrammeDesc = () => {
     navigate("/academics/programmes", { replace: true });
   };
 
-  const fileUrl = "/documents/Ojumo House.pdf";
+  const fileUrl = "/documents/HIGHER NATIONAL DIPLOMA (HND) IN HOSP (1).pdf";
 
   return (
     <Fragment>

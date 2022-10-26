@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import MobileSideBar from "components/MobileSideBar";
 
 const Profile = () => {
-  const fileUrl = "/documents/Ojumo House.pdf";
+  const fileUrl = "/documents/SCHOOL PROFILE.pdf";
 
   const navigate = useNavigate();
 
@@ -26,7 +26,7 @@ const Profile = () => {
   return (
     <Fragment>
       <MobileSideBar />
-      
+
       <Box
         h="441px"
         w="100%"

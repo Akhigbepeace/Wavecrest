@@ -47,7 +47,7 @@ const CertificateCoursesDesc = () => {
     navigate("/academics/programmes", { replace: true });
   };
 
-  const fileUrl = "/documents/Ojumo House.pdf";
+  const fileUrl = "/documents/CERTIFICATE IN HOSPITALITY OPERATIONS.pdf";
 
   return (
     <Fragment>
@@ -159,7 +159,9 @@ const CertificateCoursesDesc = () => {
               color="#021D37"
               mt="30px"
             >
-              A one-year acceleretated certificate programme for young school leavers designed to develop knowledge and skills in food and beverage, housekeeping and reception operations. 
+              A one-year acceleretated certificate programme for young school
+              leavers designed to develop knowledge and skills in food and
+              beverage, housekeeping and reception operations.
             </Text>
           </Box>
 

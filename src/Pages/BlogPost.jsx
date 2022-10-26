@@ -131,9 +131,8 @@ const BlogPost = () => {
               fontWeight="400"
               lineHeight="25px"
               color="#021D37"
-            >
-              {post.postsText}
-            </Text>
+              dangerouslySetInnerHTML={{ __html: post.postsText }}
+            />
 
             <Image src={image1 || image2} my="10px" />
           </Box>

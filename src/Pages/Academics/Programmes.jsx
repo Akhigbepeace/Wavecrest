@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import JsFileDownloader from "js-file-downloader";
 import studyProgrammes1 from "assets/Images/studyprogrammes1.png";
 import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
 import studyProgrammes2 from "assets/Images/studyprogrammes2.png";
@@ -31,6 +32,7 @@ const Programmes = () => {
       captionButton: "Apply Now",
       responsiveDesc:
         "Featuring in the Guinness World Records is obviously not a yearly event. This is why Wavecrest College was excited to be a part of an amazing project partnering with the...",
+      fileUrl: "/documents/HIGHER NATIONAL DIPLOMA (HND) IN HOSP (1).pdf",
       navigateTo: function ShowProgramme(e) {
         e.preventDefault();
 
@@ -50,6 +52,7 @@ const Programmes = () => {
       captionButton: "Apply Now",
       responsiveDesc:
         "Featuring in the Guinness World Records is obviously not a yearly event. This is why Wavecrest College was excited to be a part of an amazing project partnering with the...",
+      fileUrl: "/documents/NATIONAL DIPLOMA (ND) IN HOSP (2).pdf",
       navigateTo: function ShowProgramme(e) {
         e.preventDefault();
 
@@ -69,6 +72,7 @@ const Programmes = () => {
       captionButton: "Apply Now",
       responsiveDesc:
         "Featuring in the Guinness World Records is obviously not a yearly event. This is why Wavecrest College was excited to be a part of an amazing project partnering with the...",
+      fileUrl: "/documents/CERTIFICATE IN HOSPITALITY OPERATIONS.pdf",
       navigateTo: function ShowProgramme(e) {
         e.preventDefault();
 
@@ -274,8 +278,7 @@ const Programmes = () => {
                     {programme.captionButton}
                   </Link>
 
-                  <Link
-                    display="flex"
+                  <Flex
                     textAlign="center"
                     alignItems="center"
                     justifyContent="center"
@@ -284,10 +287,14 @@ const Programmes = () => {
                     fontWeight="800"
                     color="#FFF"
                     my="20px"
+                    cursor="pointer"
+                    onClick={() =>
+                      new JsFileDownloader({ url: programme.fileUrl })
+                    }
                   >
                     <Image src={fileDownload} mr="13px" />
                     <Text>Download Programme Brochure</Text>
-                  </Link>
+                  </Flex>
                 </Box>
 
                 <Box
