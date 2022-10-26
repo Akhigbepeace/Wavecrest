@@ -19,8 +19,8 @@ import Goodness from "assets/Images/membersofstaff/Oparachukwu Goodness.jpg";
 import Pius from "assets/Images/membersofstaff/Nmereole Pius.jpg";
 import vivian from "assets/Images/academicstaff/vivian.jpg";
 import Odinaka from "assets/Images/academicstaff/Odinaka.jpg";
-import Arinze from "assets/Images/academicstaff/Arinze.jpg";
 import Helen from "assets/Images/academicstaff/Helen.jpg";
+import Ezika from "assets/Images/academicstaff/Ezika.jpg";
 import Obasi from "assets/Images/academicstaff/Obasi.jpg";
 import cecilia from "assets/Images/academicstaff/cecilia.jpg";
 import Anna from "assets/Images/odc/Anna.jpg";
@@ -37,42 +37,42 @@ const Staff = () => {
         {
           image: Juliet,
           name: "Osuagwu Juliet",
-          post: "Academic Staff",
+          post: "Lecturer",
         },
         {
           image: helen,
-          name: "Eboagwu Helen",
-          post: "Academic Staff",
+          name: "Eboigbe Helen",
+          post: "Ethics Lecturer",
         },
         {
           image: Lizzy,
-          name: "Onaolapo Lizzy",
-          post: "Academic Staff",
+          name: "Obasi Chizurumoke",
+          post: "Lecturer / Workshop Co-ordinator",
         },
         {
           image: Aduba,
-          name: "Aduba Chinese",
-          post: "Academic Staff",
+          name: "Eboagwu Helen",
+          post: "Facility Lecturer",
         },
         {
           image: Dorcas,
           name: "Adeyemo Dorcas",
-          post: "Academic Staff",
+          post: "SIWES Co-ordinator",
         },
         {
           image: Sayo,
-          name: "Ojo Sayo",
-          post: "Academic Staff",
+          name: "Andy-Nwankwo Lilian",
+          post: "Librarian",
         },
         {
           image: Lilian,
-          name: "Andy-Nwankwo Lilian",
-          post: "Academic Staff",
+          name: "Ojo Sayo",
+          post: "Account Lecturer / CTH Trainer",
         },
         {
           image: Obasi,
-          name: "Obasi Chizurumoke",
-          post: "Academic Staff",
+          name: "Aduba Chineze",
+          post: "French Lecturer",
         },
         {
           image: Asuquo,
@@ -82,32 +82,32 @@ const Staff = () => {
         {
           image: Gloria,
           name: "Iyangudo Gloria",
-          post: "Academic Staff",
+          post: "F&B Lecturer",
         },
         {
           image: vivian,
           name: "Isichei Vivian",
-          post: "Academic Staff",
+          post: "Lecturer and Academic Co-ordinator",
         },
         {
           image: Odinaka,
           name: "Ekwugha Odinaka",
-          post: "Academic Staff",
-        },
-        {
-          image: Arinze,
-          name: "Uju Arinze",
-          post: "Academic Staff",
+          post: "Hospitality Management Lecturer",
         },
         {
           image: Helen,
-          name: "Eboigbe Helen",
-          post: "Academic Staff",
+          name: "Uju Arinze",
+          post: "Research Lecturer",
+        },
+        {
+          image: Ezika,
+          name: "Ezika Cecilia",
+          post: "Faculty Secretary",
         },
         {
           image: cecilia,
-          name: "Ezika Cecilia",
-          post: "Faculty Secretary",
+          name: "Onaolapo Lizzy",
+          post: "Food Service and Production Lecturer",
         },
       ],
     },
@@ -123,12 +123,12 @@ const Staff = () => {
         {
           image: deputyProvost,
           name: "Felicitas Odome",
-          post: "Social media and digital marketing personnel",
+          post: "Social Media and Digital Marketing Personnel",
         },
         {
           image: bursar,
           name: "Okorie Nnenna",
-          post: "Assistant Account Office",
+          post: "Assistant Account Officer",
         },
         {
           image: ebong,
@@ -172,19 +172,19 @@ const Staff = () => {
           post: "Kitchen Assistant",
         },
         {
-          image: Mkpegara,
-          name: "Agbo Mkpegara",
-          post: "Registrar",
+          image: Anna,
+          name: "Agbor Mkpegara",
+          post: "Kitchen Assistant",
         },
         {
-          image: Anna,
+          image: Mkpegara,
           name: "Owo Anna",
-          post: "Bursar",
+          post: "Catering Craft",
         },
         {
           image: Happiness,
           name: "Ukwachi Happiness",
-          post: "Bursar",
+          post: "Store Supervisor",
         },
       ],
     },
@@ -236,18 +236,17 @@ const Staff = () => {
                 >
                   {staff.others.map((staff, index) => {
                     return (
-                      <Box key={index} w="350px">
+                      <Box key={index}>
                         <Image
                           src={staff.image}
-                          w="100%"
-                          objectFit="fill"
+                          w="330px"
+                          objectFit="cover"
                           borderRadius="5px"
-                          h="200px"
+                          h="400px"
                         />
-
                         <Flex
                           alignItems="center"
-                          bg="rgba(255, 255, 255, 67%)"
+                          bg="rgba(255, 255, 255, 77%)"
                           p="10px 25px"
                           position="relative"
                           top="-67px"

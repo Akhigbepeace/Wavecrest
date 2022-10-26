@@ -13,6 +13,7 @@ import Juliet from "assets/Images/academicstaff/Juliet.jpeg";
 import Lizzy from "assets/Images/academicstaff/Lizzy.jpg";
 import Dorcas from "assets/Images/academicstaff/Dorcas.jpg";
 import Aduba from "assets/Images/academicstaff/Aduba.jpeg";
+import Ezika from "assets/Images/academicstaff/Ezika.jpg";
 import Sayo from "assets/Images/academicstaff/Sayo.jpg";
 import Lilian from "assets/Images/academicstaff/Lilian.jpg";
 import vivian from "assets/Images/academicstaff/vivian.jpg";
@@ -20,7 +21,6 @@ import Odinaka from "assets/Images/academicstaff/Odinaka.jpg";
 import Asuquo from "assets/Images/Samuel Asuquo - chef.jpg";
 import Pius from "assets/Images/membersofstaff/Nmereole Pius.jpg";
 import Goodness from "assets/Images/membersofstaff/Oparachukwu Goodness.jpg";
-import Arinze from "assets/Images/academicstaff/Arinze.jpg";
 import Helen from "assets/Images/academicstaff/Helen.jpg";
 import Obasi from "assets/Images/academicstaff/Obasi.jpg";
 import cecilia from "assets/Images/academicstaff/cecilia.jpg";
@@ -30,49 +30,49 @@ import Happiness from "assets/Images/odc/Ukwachi Happiness .jpg";
 import ebong from "assets/Images/1.png";
 
 export default function Carousel() {
- const staffs = [
+  const staffs = [
     {
       title: "Academic Staff",
       others: [
         {
           image: Juliet,
           name: "Osuagwu Juliet",
-          post: "Academic Staff",
+          post: "Lecturer",
         },
         {
           image: helen,
-          name: "Eboagwu Helen",
-          post: "Academic Staff",
+          name: "Eboigbe Helen",
+          post: "Ethics Lecturer",
         },
         {
           image: Lizzy,
-          name: "Onaolapo Lizzy",
-          post: "Academic Staff",
+          name: "Obasi Chizurumoke",
+          post: "Lecturer / Workshop Co-ordinator",
         },
         {
           image: Aduba,
-          name: "Aduba Chinese",
-          post: "Academic Staff",
+          name: "Eboagwu Helen",
+          post: "Facility Lecturer",
         },
         {
           image: Dorcas,
           name: "Adeyemo Dorcas",
-          post: "Academic Staff",
+          post: "SIWES Co-ordinator",
         },
         {
           image: Sayo,
-          name: "Ojo Sayo",
-          post: "Academic Staff",
+          name: "Andy-Nwankwo Lilian",
+          post: "Librarian",
         },
         {
           image: Lilian,
-          name: "Andy-Nwankwo Lilian",
-          post: "Academic Staff",
+          name: "Ojo Sayo",
+          post: "Account Lecturer / CTH Trainer",
         },
         {
           image: Obasi,
-          name: "Obasi Chizurumoke",
-          post: "Academic Staff",
+          name: "Aduba Chineze",
+          post: "French Lecturer",
         },
         {
           image: Asuquo,
@@ -82,32 +82,32 @@ export default function Carousel() {
         {
           image: Gloria,
           name: "Iyangudo Gloria",
-          post: "Academic Staff",
+          post: "F&B Lecturer",
         },
         {
           image: vivian,
           name: "Isichei Vivian",
-          post: "Academic Staff",
+          post: "Lecturer and Academic Co-ordinator",
         },
         {
           image: Odinaka,
           name: "Ekwugha Odinaka",
-          post: "Academic Staff",
-        },
-        {
-          image: Arinze,
-          name: "Uju Arinze",
-          post: "Academic Staff",
+          post: "Hospitality Management Lecturer",
         },
         {
           image: Helen,
-          name: "Eboigbe Helen",
-          post: "Academic Staff",
+          name: "Uju Arinze",
+          post: "Research Lecturer",
+        },
+        {
+          image: Ezika,
+          name: "Ezika Cecilia",
+          post: "Faculty Secretary",
         },
         {
           image: cecilia,
-          name: "Ezika Cecilia",
-          post: "Faculty Secretary",
+          name: "Onaolapo Lizzy",
+          post: "Food Service and Production Lecturer",
         },
       ],
     },
@@ -123,12 +123,12 @@ export default function Carousel() {
         {
           image: deputyProvost,
           name: "Felicitas Odome",
-          post: "Social media and digital marketing personnel",
+          post: "Social Media and Digital Marketing Personnel",
         },
         {
           image: bursar,
           name: "Okorie Nnenna",
-          post: "Assistant Account Office",
+          post: "Assistant Account Officer",
         },
         {
           image: ebong,
@@ -172,24 +172,23 @@ export default function Carousel() {
           post: "Kitchen Assistant",
         },
         {
-          image: Mkpegara,
-          name: "Agbo Mkpegara",
-          post: "Registrar",
+          image: Anna,
+          name: "Agbor Mkpegara",
+          post: "Kitchen Assistant",
         },
         {
-          image: Anna,
+          image: Mkpegara,
           name: "Owo Anna",
-          post: "Bursar",
+          post: "Catering Craft",
         },
         {
           image: Happiness,
           name: "Ukwachi Happiness",
-          post: "Bursar",
+          post: "Store Supervisor",
         },
       ],
     },
   ];
-
 
   return (
     <Box position={"relative"} overflow={"hidden"}>

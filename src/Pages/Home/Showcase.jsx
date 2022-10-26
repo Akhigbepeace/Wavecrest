@@ -81,7 +81,7 @@ const Showcase = (props) => {
                 "2xl": "600px",
               }}
             >
-              Nigeria's Premiere Hospitality Monotechnic
+              Nigeria's Premier Hospitality Monotechnic
             </Text>
           </Flex>
         </Box>

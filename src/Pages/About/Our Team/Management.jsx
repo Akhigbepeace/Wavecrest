@@ -84,7 +84,6 @@ const Management = () => {
             <Box key={index} w="250px" mr="10px">
               <Image
                 src={management.image}
-                objectFit="cover"
                 w="100%"
                 borderRadius="5px"
                 h="250px"
