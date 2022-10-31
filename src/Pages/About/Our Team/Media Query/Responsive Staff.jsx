@@ -1,33 +1,9 @@
 import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
 import React from "react";
-import provost from "assets/Images/Nneka Chuwkuekezie.jpg";
 import deputyProvost from "assets/Images/felicitas.jpg";
-import Baptista from "assets/Images/Baptista Uwandu.jpg";
-import bursar from "assets/Images/2.png";
-import amarachukwu from "assets/Images/amarachukwu.png";
-import theodora from "assets/Images/odc/theodora.jpg";
-import James from "assets/Images/odc/James.jpg";
-import Mkpegara from "assets/Images/odc/Mkpegara.jpg";
-import Gloria from "assets/Images/academicstaff/Inyangudo Gloria.jpg";
-import Juliet from "assets/Images/academicstaff/Juliet.jpeg";
-import Lizzy from "assets/Images/academicstaff/Lizzy.jpg";
-import Dorcas from "assets/Images/academicstaff/Dorcas.jpg";
-import Aduba from "assets/Images/academicstaff/Aduba.jpeg";
-import Ezika from "assets/Images/academicstaff/Ezika.jpg";
 import Sayo from "assets/Images/academicstaff/Sayo.jpg";
 import Lilian from "assets/Images/academicstaff/Lilian.jpg";
-import vivian from "assets/Images/academicstaff/vivian.jpg";
 import Odinaka from "assets/Images/academicstaff/Odinaka.jpg";
-import Asuquo from "assets/Images/Samuel Asuquo - chef.jpg";
-import Pius from "assets/Images/membersofstaff/Nmereole Pius.jpg";
-import Goodness from "assets/Images/membersofstaff/Oparachukwu Goodness.jpg";
-import Helen from "assets/Images/academicstaff/Helen.jpg";
-import Obasi from "assets/Images/academicstaff/Obasi.jpg";
-import cecilia from "assets/Images/academicstaff/cecilia.jpg";
-import Anna from "assets/Images/odc/Anna.jpg";
-import helen from "assets/Images/helen.jpg";
-import Happiness from "assets/Images/odc/Ukwachi Happiness .jpg";
-import ebong from "assets/Images/1.png";
 
 export default function Carousel() {
   const staffs = [
@@ -145,7 +121,8 @@ export default function Carousel() {
           post: "Assistant Account Officer",
         },
         {
-          image: ebong,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1667239198/wavecrest/Presh_g11pjl.png",
           name: "Precious Ebung",
           post: "Front Desk Personnel",
         },
@@ -198,12 +175,14 @@ export default function Carousel() {
           post: "Kitchen Assistant",
         },
         {
-          image: Anna,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1667238853/wavecrest/Anna_bwwkrc.jpg",
           name: "Agbor Mkpegara",
           post: "Kitchen Assistant",
         },
         {
-          image: Mkpegara,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1667239067/wavecrest/Mkpegara_p6t8kk.jpg",
           name: "Owo Anna",
           post: "Catering Craft",
         },
