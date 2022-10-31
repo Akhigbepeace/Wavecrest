@@ -10,16 +10,23 @@ import {
 import React, { Fragment } from "react";
 import ReactPlayer from "react-player";
 import { useNavigate } from "react-router-dom";
-import showcase1 from "assets/Images/Showcase1.png";
-import showcase2 from "assets/Images/Showcase2.png";
-import showcase3 from "assets/Images/Showcase3.png";
-import showcase4 from "assets/Images/Showcase4.png";
-import waveVid from "assets/Images/wavevid.mp4";
+
 import ShowcaseSlider from "components/ShowcaseSlider";
 
-const showcaseGallery = [showcase1, showcase2, showcase4, showcase3];
-
 const Showcase = (props) => {
+  const showcase1 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667060013/Showcase1_box3y3.png";
+  const showcase2 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667060014/Showcase2_xlxynv.jpg";
+  const showcase3 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667060027/Showcase4_nsyiwy.jpg";
+  const showcase4 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667059988/Showcase3_dtczi4.png";
+
+  const waveVid =
+    "https://res.cloudinary.com/wavecrest1/video/upload/v1667061051/wavevid_bvf8bh.mp4";
+
+  const showcaseGallery = [showcase1, showcase2, showcase4, showcase3];
   const navigate = useNavigate();
 
   const Redirect = (e) => {
@@ -27,7 +34,6 @@ const Showcase = (props) => {
 
     navigate("/about/profile", { replace: true });
   };
-
   return (
     <Fragment>
       <Grid
@@ -154,7 +160,13 @@ const Showcase = (props) => {
               Nigeria's Premier Hospitality Monotechnic
             </Heading>
 
-            <Text fontSize="14px" fontWeight="400" lineHeight="19px" my="15px">
+            <Text
+              fontSize="14px"
+              fontFamily="Manrope"
+              fontWeight="400"
+              lineHeight="19px"
+              my="15px"
+            >
               In the last 40 years we have consistently trained individuals and
               produced graduates who are in very high demand in the Industry.
               100% of our graduates are decently employed within 3 months after

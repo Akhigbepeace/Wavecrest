@@ -78,17 +78,17 @@ const ApplyOnline = () => {
     },
     {
       course: "HND in Hospitality Management",
-      price: " The fee for this course is: #576,500",
+      price: "#2,500",
       paymentLink: "https://paystack.com/pay/wchform2",
     },
     {
       course: "ND in Hospitality Management",
-      price: " The fee for this course is: #585,000",
+      price: "#2,000",
       paymentLink: "https://paystack.com/pay/wchform1",
     },
     {
       course: "Certificate in Hospitality Operations",
-      price: " The fee for this course is: #304,000",
+      price: "#2,000",
       paymentLink: "https://paystack.com/pay/wchform1",
     },
     {
@@ -304,6 +304,10 @@ const ApplyOnline = () => {
               );
             })}
           </Select>
+
+          <Text>
+            The applicationn fee for this course is: {showCoursePrice.price}
+          </Text>
         </Flex>
 
         <Box>

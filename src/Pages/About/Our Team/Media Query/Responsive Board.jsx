@@ -11,7 +11,8 @@ export default function Carousel() {
       post: "Women's Board",
     },
     {
-      image: ward,
+      image:
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1666966088/attachments/8_ohblsr.png",
       name: "Trevor Ward",
       post: "W Hospitality Group",
     },
@@ -29,6 +30,18 @@ export default function Carousel() {
       image: imageAvatar,
       name: "Chris Adedipe",
       post: "Independence Consultant",
+    },
+    {
+      image:
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1666962788/boardmembers/17_tykwcm.png",
+      name: "Gloria Osezua",
+      post: "Executive Vice Chairman / Owel Farms",
+    },
+    {
+      image:
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1666962789/boardmembers/18_hvdbsl.png",
+      name: "Dolapo Afolami",
+      post: "Member",
     },
   ];
 
@@ -51,7 +64,7 @@ export default function Carousel() {
       <Flex overflowY="scroll">
         {boards.map((board, index) => (
           <Box key={index}>
-            <Box w="250px" h="168px">
+            <Box w="350px" h="300px">
               <Image
                 src={board.image}
                 pr="10px"

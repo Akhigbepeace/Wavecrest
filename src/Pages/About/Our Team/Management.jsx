@@ -1,9 +1,5 @@
 import { Box, Heading, Image, Flex, Text, Button } from "@chakra-ui/react";
 import React from "react";
-import provost from "assets/Images/provost.png";
-import deputyProvost from "assets/Images/ifeoma.jpg";
-import bursar from "assets/Images/edith.jpg";
-import registrar from "assets/Images/veronica.png";
 import ResponsiveManagement from "Pages/About/Our Team/Media Query/Responsive Management";
 import ResponsiveBoard from "Pages/About/Our Team/Media Query/Responsive Board";
 import ResponsiveStaff from "Pages/About/Our Team/Media Query/Responsive Staff";
@@ -12,22 +8,26 @@ import { useNavigate } from "react-router-dom";
 const Management = () => {
   const managements = [
     {
-      image: provost,
+      image:
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1666959809/wavecrest/5_h7d5ni.png",
       name: "Rosana Forsuelo",
       post: "Provost",
     },
     {
-      image: deputyProvost,
+      image:
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1666960352/wavecrest/3_lrndd5.png",
       name: "Ifeoma Nwabachili",
       post: "Deputy Provost",
     },
     {
-      image: registrar,
+      image:
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1666959810/wavecrest/6_ghuxqx.png",
       name: "Veronica Esode",
       post: "Registrar",
     },
     {
-      image: bursar,
+      image:
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1666959788/wavecrest/4_ksuq0v.png",
       name: "Edith Chukwu",
       post: "Bursar",
     },
@@ -82,12 +82,7 @@ const Management = () => {
         {managements.map((management, index) => {
           return (
             <Box key={index} w="250px" mr="10px">
-              <Image
-                src={management.image}
-                w="100%"
-                borderRadius="5px"
-                h="250px"
-              />
+              <Image src={management.image} w="100%" borderRadius="5px" />
 
               <Flex
                 alignItems="center"

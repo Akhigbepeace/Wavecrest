@@ -1,29 +1,29 @@
 import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
 import React from "react";
-import provost from "assets/Images/provost.png";
-import deputyProvost from "assets/Images/ifeoma.jpg";
-import bursar from "assets/Images/edith.jpg";
-import registrar from "assets/Images/veronica.png";
 
 export default function Carousel() {
   const managements = [
     {
-      image: provost,
+      image:
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1666959809/wavecrest/5_h7d5ni.png",
       name: "Rosana Forsuelo",
       post: "Provost",
     },
     {
-      image: deputyProvost,
+      image:
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1666960352/wavecrest/3_lrndd5.png",
       name: "Ifeoma Nwabachili",
       post: "Deputy Provost",
     },
     {
-      image: registrar,
+      image:
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1666959810/wavecrest/6_ghuxqx.png",
       name: "Veronica Esode",
       post: "Registrar",
     },
     {
-      image: bursar,
+      image:
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1666959788/wavecrest/4_ksuq0v.png",
       name: "Edith Chukwu",
       post: "Bursar",
     },

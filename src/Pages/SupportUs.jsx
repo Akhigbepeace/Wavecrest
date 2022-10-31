@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import Navbar from "components/Navbar";
+import MobileSideBar from "components/MobileSideBar";
 import admission from "assets/Images/Admission.png";
 import visa from "assets/Images/visa.png";
 import paypal from "assets/Images/paypal.png";
@@ -60,6 +61,7 @@ const SupportUs = () => {
   return (
     <Fragment>
       <Navbar />
+      <MobileSideBar />
 
       <Box h="441px" w="100%" gridGap="68px" position="relative">
         <Image src={admission} h="100%" w="100%" objectFit="cover" />

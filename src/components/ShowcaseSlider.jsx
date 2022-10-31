@@ -1,10 +1,6 @@
 import React from "react";
 import { Box, Image, Link, useBreakpointValue } from "@chakra-ui/react";
 import Slider from "react-slick";
-import showcase1 from "assets/Images/Showcase1.png";
-import showcase2 from "assets/Images/Showcase2.png";
-import showcase3 from "assets/Images/Showcase3.png";
-import showcase4 from "assets/Images/Showcase4.png";
 import styled from "@emotion/styled";
 
 const settings = {
@@ -24,6 +20,14 @@ export default function CaptionCarousel() {
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "10px" });
 
+  const showcase1 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667060013/Showcase1_box3y3.png";
+  const showcase2 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667060014/Showcase2_xlxynv.jpg";
+  const showcase3 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667060027/Showcase4_nsyiwy.jpg";
+  const showcase4 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667059988/Showcase3_dtczi4.png";
   const cards = [showcase1, showcase2, showcase3, showcase4];
 
   return (
@@ -58,7 +62,7 @@ export default function CaptionCarousel() {
                 alt="companyLogo"
                 h="280px"
                 objectFit="cover"
-                pr="5px"
+                px="1px"
               />
             ))}
           </Slider>
@@ -74,17 +78,13 @@ CaptionCarousel.Wrapper = styled.div`
     margin-top: -30px;
   }
 
-  .slick-slide div {
-    margin-right: 5px;
-  }
-
   .slick-dots li {
     margin: 0;
   }
 
   .slick-dots li button::before {
     position: absolute;
-    color: black;
+    color: white;
     font-size: 10px;
   }
 `;
