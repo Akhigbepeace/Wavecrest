@@ -16,7 +16,7 @@ export default function Carousel() {
       post: "W Hospitality Group",
     },
     {
-      image: imageAvatar,
+      image: "https://res.cloudinary.com/wavecrest1/image/upload/v1667238441/wavecrest/moyo_mcnxx6.jpg",
       name: "Moyo Ogunseinde",
       post: "Uraga / Radisson Blu",
     },

@@ -261,7 +261,6 @@ const ApplyOnline = () => {
           })}
 
           <Select
-            // placeholder="Programme"
             isRequired
             w={{
               sm: "100%",

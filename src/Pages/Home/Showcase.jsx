@@ -95,7 +95,7 @@ const Showcase = (props) => {
         <Grid templateColumns="1fr 1fr" gap="8px">
           {showcaseGallery.map((gallery, index) => {
             return (
-              <Box h="185px" key={index}>
+              <Box key={index}>
                 <Image
                   src={gallery}
                   alt="Wavecrest Images"
@@ -146,7 +146,6 @@ const Showcase = (props) => {
               fontSize={{
                 sm: "25px",
                 md: "30px",
-                lg: "40px",
               }}
               fontFamily="Playfair Display"
               fontWeight="700"
