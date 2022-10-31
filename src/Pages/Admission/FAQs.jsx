@@ -92,14 +92,14 @@ const FAQs = () => {
     {
       question: "Can I apply online?",
       answer:
-        "Yes. You can purchase the Application form online by request. Contact (09096856606) or Click here: <a href='https://bit.ly/3dnCLu5' style='color:blue' >https://bit.ly/3dnCLu5 </a> <br /> <br /> <ul><li> Application form for Gap-Year Program / National Diploma: N2,000</li><li> Application form for Higher National Diploma: N2,500</li></ul>",
+        "Yes. You can purchase the Application form online by request. Contact (09096856606) or Click here: <a href='https://wavecrest.edu.ng/admission/applyOnline' style='color:blue' >Apply Now </a> <br /> <br /> <ul><li> Application form for Gap-Year Program / National Diploma: N2,000</li><li> Application form for Higher National Diploma: N2,500</li></ul>",
     },
     {
       question: "Do the HND students go for NYSC?",
-      answer: "Yes, They do.",
+      answer: "Yes, they do.",
     },
     {
-      question: "Does the Gap year programme require JAMB?      ",
+      question: "Does the Gap year programme require JAMB?",
       answer:
         "No! The Gap Year does not require JAMB. <br /> <br />  *Entry requirement: <br />		a. Four (4) credit passes in SSCE/NECO/WAEC. <br />b. The Wavecrest Screening at the College",
     },
@@ -116,7 +116,8 @@ const FAQs = () => {
     {
       question:
         "Apart from the payment of school fees are there other payments that needs to be made?      ",
-      answer: "Yes. Click here for more information:	______",
+      answer:
+        "Yes.<a href='https://wavecrest.edu.ng/admission/tuitionAndScholarship' style='color:blue' >Click here for more information:	______</a> ",
     },
     {
       question: "Contact Number to reach for further enquires?      ",

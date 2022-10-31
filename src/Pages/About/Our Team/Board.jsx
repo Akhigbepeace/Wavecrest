@@ -1,6 +1,5 @@
 import { Box, Grid, Heading, Image, Flex, Text } from "@chakra-ui/react";
 import React from "react";
-import ward from "assets/Images/ward.JPG";
 import imageAvatar from "assets/Images/image-avatar.png";
 
 const Board = () => {
@@ -11,7 +10,8 @@ const Board = () => {
       post: "Women's Board",
     },
     {
-      image: ward,
+      image:
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1666966088/attachments/8_ohblsr.png",
       name: "Trevor Ward",
       post: "W Hospitality Group",
     },
@@ -29,6 +29,18 @@ const Board = () => {
       image: imageAvatar,
       name: "Chris Adedipe",
       post: "Independence Consultant",
+    },
+    {
+      image:
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1666962788/boardmembers/17_tykwcm.png",
+      name: "Gloria Osezua",
+      post: "Executive Vice Chairman / Owel Farms",
+    },
+    {
+      image:
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1666962789/boardmembers/18_hvdbsl.png",
+      name: "Dolapo Afolami",
+      post: "Member",
     },
   ];
 
@@ -77,8 +89,8 @@ const Board = () => {
             <Box key={index} w="250px">
               <Image
                 src={board.image}
+                w="100%"
                 objectFit="cover"
-                h="250px"
                 borderRadius="5px"
               />
 

@@ -35,27 +35,32 @@ export default function Carousel() {
       title: "Academic Staff",
       others: [
         {
-          image: Juliet,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1666966058/attachments/9_uwe295.png",
           name: "Osuagwu Juliet",
           post: "Lecturer",
         },
         {
-          image: helen,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1666965390/13_xofrgc.png",
           name: "Eboigbe Helen",
           post: "Ethics Lecturer",
         },
         {
-          image: Lizzy,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1666964844/10_igexil.png",
           name: "Obasi Chizurumoke",
           post: "Lecturer / Workshop Co-ordinator",
         },
         {
-          image: Aduba,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1666965393/14_ouznkb.png",
           name: "Eboagwu Helen",
           post: "Facility Lecturer",
         },
         {
-          image: Dorcas,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1666963176/16_cnayoq.png",
           name: "Adeyemo Dorcas",
           post: "SIWES Co-ordinator",
         },
@@ -70,22 +75,26 @@ export default function Carousel() {
           post: "Account Lecturer / CTH Trainer",
         },
         {
-          image: Obasi,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1667072703/wavecrest/6_20221029_111623_0005_tfiouq.png",
           name: "Aduba Chineze",
           post: "French Lecturer",
         },
         {
-          image: Asuquo,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1666964768/5_wxydyj.png",
           name: "Samuel Asuquo",
           post: "Chef",
         },
         {
-          image: Gloria,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1666966097/attachments/11_utsjiw.png",
           name: "Iyangudo Gloria",
           post: "F&B Lecturer",
         },
         {
-          image: vivian,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1667073201/wavecrest/9_20221029_111623_0008_qddzzq.png",
           name: "Isichei Vivian",
           post: "Lecturer and Academic Co-ordinator",
         },
@@ -95,17 +104,20 @@ export default function Carousel() {
           post: "Hospitality Management Lecturer",
         },
         {
-          image: Helen,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1667072975/wavecrest/1_20221029_111623_0000_uewmsx.png",
           name: "Uju Arinze",
           post: "Research Lecturer",
         },
         {
-          image: Ezika,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1666966109/attachments/12_atxzfk.png",
           name: "Ezika Cecilia",
           post: "Faculty Secretary",
         },
         {
-          image: cecilia,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1666963731/15_x1t7gg.png",
           name: "Onaolapo Lizzy",
           post: "Food Service and Production Lecturer",
         },
@@ -116,7 +128,8 @@ export default function Carousel() {
       title: "Non-Academic Staff",
       others: [
         {
-          image: provost,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1666962461/1_l0bxwm.png",
           name: "Nneka Chukwuekezie",
           post: "Students Affairs/ Admission Officer",
         },
@@ -126,7 +139,8 @@ export default function Carousel() {
           post: "Social Media and Digital Marketing Personnel",
         },
         {
-          image: bursar,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1666963971/4_zuzpbn.png",
           name: "Okorie Nnenna",
           post: "Assistant Account Officer",
         },
@@ -136,24 +150,34 @@ export default function Carousel() {
           post: "Front Desk Personnel",
         },
         {
-          image: Baptista,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1666962564/2_ewcijt.png",
           name: "Baptista Uwandu",
           post: "Public Relations Officer",
         },
         {
-          image: Goodness,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1667072776/wavecrest/8_20221029_111623_0007_vchvkn.png",
           name: "Oparachukwu Goodness",
           post: "Practical Assistant",
         },
         {
-          image: Pius,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1667073327/wavecrest/7_20221029_111623_0006_cghscl.png",
           name: "Nmereole Pius",
           post: "Security Officer",
         },
         {
-          image: amarachukwu,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1666963708/3_fadje0.png",
           name: "Amarachukwu  Kenneth",
           post: "Administrative officer",
+        },
+        {
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1666963740/6_on33p1.png",
+          name: "Reuben Francisca Ngozi",
+          post: "Secretarial Assistant - Librarian",
         },
       ],
     },
@@ -162,12 +186,14 @@ export default function Carousel() {
       title: "ODC",
       others: [
         {
-          image: theodora,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1667072788/wavecrest/10_20221029_111623_0009_bciolr.png",
           name: "Ejiogu Theodora",
           post: "Pastry Chef",
         },
         {
-          image: James,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1667072700/wavecrest/3_20221029_111623_0002_tm5wmk.png",
           name: "Idiong James",
           post: "Kitchen Assistant",
         },
@@ -182,7 +208,8 @@ export default function Carousel() {
           post: "Catering Craft",
         },
         {
-          image: Happiness,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1667072796/wavecrest/11_20221029_111623_0010_wot8vs.png",
           name: "Ukwachi Happiness",
           post: "Store Supervisor",
         },
@@ -227,14 +254,14 @@ export default function Carousel() {
               {staff.others.map((item, index) => {
                 return (
                   <Box key={index}>
-                    <Box w="400px">
+                    <Box w="350px">
                       <Image
                         src={item.image}
                         pl="10px"
                         w="100%"
                         alt="companyLogo"
                         objectFit="cover"
-                        h="200px"
+                        h="350px"
                       />
                     </Box>
 

@@ -20,7 +20,7 @@ const settings = {
   arrows: true,
   fade: false,
   infinite: true,
-  autoplay: true,
+  autoplay: false,
   speed: 3000,
   autoplaySpeed: 3000,
   slidesToShow: 1,
@@ -168,7 +168,7 @@ export default function CaptionCarousel() {
 
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {cards.map((card, index) => (
-            <Box key={index} position="relative" bg="#021D37">
+            <Box key={index} position="relative" bg="#021D37" h="700px">
               <Flex
                 flexDirection={{
                   sm: "column",
@@ -334,7 +334,7 @@ export default function CaptionCarousel() {
                     bg: "#EBEDEF",
                   }}
                 >
-                  {card.link}
+                  READ MORE
                 </Button>
               </Flex>
             </Box>

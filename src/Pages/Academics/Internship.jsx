@@ -262,12 +262,30 @@ const Internship = () => {
               Over the years, we have built our industry partnership with
               renowned organizations like:
             </Text>
-            <UnorderedList>
-              {internshipCompanies.map((internshipCompany, index) => {
-                return <ListItem key={index}> {internshipCompany} </ListItem>;
-              })}
-            </UnorderedList>
           </Text>
+
+          <UnorderedList>
+            <Grid
+              gridTemplateColumns="repeat(4, auto)"
+              gridGap="20px"
+              my="24px"
+            >
+              {internshipCompanies.map((internshipCompany, index) => {
+                return (
+                  <ListItem
+                    key={index}
+                    fontFamily="Manrope"
+                    fontWeight="400"
+                    fontSize="22px"
+                    // lineHeight="33px"
+                    color="#021D37"
+                  >
+                    {internshipCompany}
+                  </ListItem>
+                );
+              })}
+            </Grid>
+          </UnorderedList>
         </Box>
 
         <form ref={form} onSubmit={sendEmail}>

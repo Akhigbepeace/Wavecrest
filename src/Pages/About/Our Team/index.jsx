@@ -103,7 +103,7 @@ const OurTeam = () => {
               <Flex
                 alignItems="center"
                 borderBottom="1px solid rgba(2, 29, 55, 0.63)"
-                mr="60px"
+                mr="30px"
               >
                 <FaChevronRight
                   size="15px"

@@ -29,32 +29,16 @@ const Downloads = () => {
       fileUrl: "/documents/tch flier.png",
     },
     {
+      name: "culinary flier",
+      fileUrl: "/documents/Culinary flyer.png",
+    },
+    {
       name: "Pch flier",
       fileUrl: "/documents/P.C.H. flier.png",
     },
     {
-      name: "cth brochure",
-      fileUrl: "/documents/Ojumo House.pdf",
-    },
-    {
-      name: "nsq brochure",
-      fileUrl: "/documents/Ojumo House.pdf",
-    },
-    {
-      name: "programme fliers",
-      fileUrl: "/documents/Ojumo House.pdf",
-    },
-    {
-      name: "cth brochure",
-      fileUrl: "/documents/Ojumo House.pdf",
-    },
-    {
-      name: "nsq brochure",
-      fileUrl: "/documents/Ojumo House.pdf",
-    },
-    {
-      name: "programme fliers",
-      fileUrl: "/documents/Ojumo House.pdf",
+      name: "htp brochure",
+      fileUrl: "/documents/Wavecrest HTP 2021 Brochure.pdf",
     },
   ];
 
@@ -121,10 +105,8 @@ const Downloads = () => {
             mt="24px"
             mb="30px"
           >
-            Wavecrestsssss offers accomodation to its students. We have a two
-            well furnished hostels orem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
+            Do you wish to have our brochures and fliers ? Below are list of our
+            documents you can download.
           </Text>
         </Box>
 

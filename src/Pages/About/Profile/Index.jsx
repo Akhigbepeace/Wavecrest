@@ -1,4 +1,12 @@
-import { Box, Text, Heading, Button, Image, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Heading,
+  Button,
+  Image,
+  Flex,
+  Link,
+} from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import OurStory from "./OurStory";
 import JsFileDownloader from "js-file-downloader";
@@ -152,7 +160,9 @@ const Profile = () => {
           Want to get a copy of our e-profile
         </Heading>
 
-        <Button
+        <Link
+          href="/documents/SCHOOL PROFILE.pdf"
+          target="_blank"
           fontFamily="Manrope"
           fontWeight="700"
           fontSize="20px"
@@ -161,13 +171,12 @@ const Profile = () => {
           bg="#021D37"
           borderRadius="3px"
           color="#fff"
-          onClick={() => new JsFileDownloader({ url: fileUrl })}
           _hover={{
             bg: " #020E1B",
           }}
         >
           Download Here
-        </Button>
+        </Link>
       </Box>
 
       <Box

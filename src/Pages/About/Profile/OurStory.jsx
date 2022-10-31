@@ -1,9 +1,10 @@
 import { Flex, Box, Text, Heading } from "@chakra-ui/react";
 import React from "react";
 import ReactPlayer from "react-player";
-import waveVid from "assets/Images/wavevid.mp4";
 
 const OurStory = () => {
+  const waveVid =
+    "https://res.cloudinary.com/wavecrest1/video/upload/v1667061051/wavevid_bvf8bh.mp4";
   return (
     <Flex
       bg="#FFF"

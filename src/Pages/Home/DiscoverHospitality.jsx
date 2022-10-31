@@ -1,4 +1,4 @@
-import { Box, Grid, Link, Text, Image, Heading } from "@chakra-ui/react";
+import { Box, Grid, Link, Text, Image, Heading, Flex } from "@chakra-ui/react";
 import React from "react";
 import discoverpic1 from "assets/Images/discoverpic 1.png";
 import discoverpic2 from "assets/Images/discoverpic 2.png";
@@ -6,7 +6,7 @@ import training3 from "assets/Images/training3.png";
 
 const DiscoverHospitality = () => {
   return (
-    <Box
+    <Flex
       display={{
         sm: "none",
         md: "none",
@@ -15,13 +15,13 @@ const DiscoverHospitality = () => {
         "2xl": "flex",
       }}
       alignItems="center"
-      justifyContent="center"
+      justifyContent="space-between"
       h="421px"
       my="50px"
       px="91px"
     >
-      <Box mr="28px" w="500px">
-        <Heading fontSize="32px" fontWeight="700" fontFamily="Playfair Display">
+      <Box mr="20px">
+        <Heading fontSize="28px" fontWeight="700" fontFamily="Playfair Display">
           WAVECREST <br /> COLLEGE OF HOSPITALITY
         </Heading>
         <Text
@@ -105,7 +105,7 @@ const DiscoverHospitality = () => {
           />
         </Box>
       </Grid>
-    </Box>
+    </Flex>
   );
 };
 

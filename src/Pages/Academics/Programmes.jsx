@@ -278,23 +278,27 @@ const Programmes = () => {
                     {programme.captionButton}
                   </Link>
 
-                  <Flex
-                    textAlign="center"
-                    alignItems="center"
-                    justifyContent="center"
-                    fontFamily="Manrope"
-                    fontSize="24px"
-                    fontWeight="800"
-                    color="#FFF"
-                    my="20px"
-                    cursor="pointer"
-                    onClick={() =>
-                      new JsFileDownloader({ url: programme.fileUrl })
-                    }
+                  <Link
+                    href={programme.fileUrl}
+                    target="_blank"
+                    _hover={{
+                      textDecoration: "none",
+                    }}
                   >
-                    <Image src={fileDownload} mr="13px" />
-                    <Text>Download Programme Brochure</Text>
-                  </Flex>
+                    <Flex
+                      textAlign="center"
+                      alignItems="center"
+                      justifyContent="center"
+                      fontFamily="Manrope"
+                      fontSize="24px"
+                      fontWeight="800"
+                      color="#FFF"
+                      my="20px"
+                    >
+                      <Image src={fileDownload} mr="13px" />
+                      <Text>Download Programme Brochure</Text>
+                    </Flex>
+                  </Link>
                 </Box>
 
                 <Box
