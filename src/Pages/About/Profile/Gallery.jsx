@@ -2,12 +2,6 @@ import { Link } from "@chakra-ui/react";
 import React from "react";
 import { Box, useBreakpointValue, Image } from "@chakra-ui/react";
 import Slider from "react-slick";
-import aboutGallery1 from "assets/Images/aboutgallery1.png";
-import aboutGallery2 from "assets/Images/aboutgallery2.png";
-import aboutGallery4 from "assets/Images/aboutgallery4.png";
-import aboutGallery5 from "assets/Images/aboutgallery5.png";
-import gallery1 from "assets/Images/galleryPic 1.jpg";
-import gallery2 from "assets/Images/galleryPic 2.jpg";
 import gallery3 from "assets/Images/galleryPic3.jpg";
 
 export default function Carousel() {
@@ -37,12 +31,12 @@ export default function Carousel() {
   };
 
   const cards = [
-    aboutGallery1,
-    aboutGallery2,
-    aboutGallery4,
-    aboutGallery5,
-    gallery1,
-    gallery2,
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231285/aboutgallery1_yvd8m2.png",
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231286/aboutgallery2_vjwyrh.png",
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231291/aboutgallery4_adl08b.png",
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231286/aboutgallery5_bfkzxu.png",
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231343/galleryPic_1_qrkdiy.jpg",
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231308/galleryPic_2_twbbbw.jpg",
     gallery3,
   ];
 

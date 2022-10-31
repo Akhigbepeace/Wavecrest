@@ -8,28 +8,22 @@ import {
   Grid,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import hostel1 from "assets/Images/hostel1.jpg";
-import hostel2 from "assets/Images/hostel2.jpg";
-import hostel3 from "assets/Images/hostel3.jpg";
-import hostel4 from "assets/Images/hostel4.jpg";
 import { NavLink, useNavigate } from "react-router-dom";
 import MobileSideBar from "components/MobileSideBar";
+
 const ApplyOnline = () => {
-  const images = [
-    {
-      hotelPic: hostel1,
-    },
-    {
-      hotelPic: hostel2,
-    },
-    {
-      hotelPic: hostel3,
-    },
-    {
-      hotelPic: hostel4,
-    },
-  ];
+  const hostel1 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667228298/hostel1_ku7zu0.jpg";
+  const hostel2 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667228296/hostel2_obtkc0.jpg";
+  const hostel3 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667228297/hostel3_bh9uua.jpg";
+  const hostel4 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667228297/hostel4_imflsp.jpg";
+  const images = [hostel1, hostel2, hostel3, hostel4];
+
   const navigate = useNavigate();
+
   const navigateTo = [
     {
       name: "ADMISSION REQUIREMENTS",
@@ -277,7 +271,7 @@ const ApplyOnline = () => {
           {images.map((image) => {
             return (
               <Image
-                src={image.hotelPic}
+                src={image}
                 w={{
                   sm: "auto",
                   md: "1fr 1fr",
