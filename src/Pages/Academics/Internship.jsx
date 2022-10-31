@@ -277,7 +277,6 @@ const Internship = () => {
                     fontFamily="Manrope"
                     fontWeight="400"
                     fontSize="22px"
-                    // lineHeight="33px"
                     color="#021D37"
                   >
                     {internshipCompany}

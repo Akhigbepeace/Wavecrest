@@ -1,12 +1,9 @@
 import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
 import React from "react";
 import deputyProvost from "assets/Images/felicitas.jpg";
-import Mkpegara from "assets/Images/odc/Mkpegara.jpg";
 import Sayo from "assets/Images/academicstaff/Sayo.jpg";
 import Lilian from "assets/Images/academicstaff/Lilian.jpg";
 import Odinaka from "assets/Images/academicstaff/Odinaka.jpg";
-import Anna from "assets/Images/odc/Anna.jpg";
-import ebong from "assets/Images/Presh.png";
 
 export default function Carousel() {
   const staffs = [
@@ -124,7 +121,8 @@ export default function Carousel() {
           post: "Assistant Account Officer",
         },
         {
-          image: ebong,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1667239198/wavecrest/Presh_g11pjl.png",
           name: "Precious Ebung",
           post: "Front Desk Personnel",
         },
@@ -177,12 +175,14 @@ export default function Carousel() {
           post: "Kitchen Assistant",
         },
         {
-          image: Anna,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1667238853/wavecrest/Anna_bwwkrc.jpg",
           name: "Agbor Mkpegara",
           post: "Kitchen Assistant",
         },
         {
-          image: Mkpegara,
+          image:
+            "https://res.cloudinary.com/wavecrest1/image/upload/v1667239067/wavecrest/Mkpegara_p6t8kk.jpg",
           name: "Owo Anna",
           post: "Catering Craft",
         },
