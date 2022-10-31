@@ -1,17 +1,10 @@
 import { Box, Grid, Heading, Image, Flex, Text } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import deputyProvost from "assets/Images/felicitas.jpg";
-import theodora from "assets/Images/odc/theodora.jpg";
-import James from "assets/Images/odc/James.jpg";
 import Mkpegara from "assets/Images/odc/Mkpegara.jpg";
 import Sayo from "assets/Images/academicstaff/Sayo.jpg";
 import Lilian from "assets/Images/academicstaff/Lilian.jpg";
-import Goodness from "assets/Images/membersofstaff/Oparachukwu Goodness.jpg";
-import Pius from "assets/Images/membersofstaff/Nmereole Pius.jpg";
-import vivian from "assets/Images/academicstaff/vivian.jpg";
 import Odinaka from "assets/Images/academicstaff/Odinaka.jpg";
-import Helen from "assets/Images/academicstaff/Helen.jpg";
-import Obasi from "assets/Images/academicstaff/Obasi.jpg";
 import Anna from "assets/Images/odc/Anna.jpg";
 import ebong from "assets/Images/Presh.png";
 

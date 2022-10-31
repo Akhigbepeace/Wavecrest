@@ -14,7 +14,6 @@ import { FaChevronLeft } from "react-icons/fa";
 import Navbar from "components/Navbar";
 import ReactPlayer from "react-player";
 import about from "assets/Images/studyprogrammes1.png";
-import waveVid from "assets/Images/wavevid.mp4";
 import aboutgallery1 from "assets/Images/studyprogrammes2.png";
 import aboutgallery4 from "assets/Images/studyprogrammes3.png";
 import Footer from "components/Footer";
@@ -46,6 +45,8 @@ const HNDProgrammeDesc = () => {
     e.preventDefault();
     navigate("/academics/programmes", { replace: true });
   };
+  const waveVid =
+    "https://res.cloudinary.com/wavecrest1/video/upload/v1667061051/wavevid_bvf8bh.mp4";
 
   const fileUrl = "/documents/HIGHER NATIONAL DIPLOMA (HND) IN HOSP (1).pdf";
 
@@ -159,7 +160,8 @@ const HNDProgrammeDesc = () => {
               color="#021D37"
               mt="30px"
             >
-              A two-year programme for ND hospitality graduates in preparation for NYSC.
+              A two-year programme for ND hospitality graduates in preparation
+              for NYSC.
             </Text>
           </Box>
 

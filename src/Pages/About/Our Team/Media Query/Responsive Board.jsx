@@ -1,6 +1,5 @@
 import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
 import React from "react";
-import ward from "assets/Images/ward.JPG";
 import imageAvatar from "assets/Images/image-avatar.png";
 
 export default function Carousel() {

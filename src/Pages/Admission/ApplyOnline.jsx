@@ -78,17 +78,17 @@ const ApplyOnline = () => {
     },
     {
       course: "HND in Hospitality Management",
-      price: "#2,500",
+      price: "The applicationn fee for this course is: #2,500",
       paymentLink: "https://paystack.com/pay/wchform2",
     },
     {
       course: "ND in Hospitality Management",
-      price: "#2,000",
+      price: "The applicationn fee for this course is: #2,000",
       paymentLink: "https://paystack.com/pay/wchform1",
     },
     {
       course: "Certificate in Hospitality Operations",
-      price: "#2,000",
+      price: "The applicationn fee for this course is: #2,000",
       paymentLink: "https://paystack.com/pay/wchform1",
     },
     {
@@ -261,6 +261,7 @@ const ApplyOnline = () => {
           })}
 
           <Select
+            // placeholder="Programme"
             isRequired
             w={{
               sm: "100%",
@@ -305,9 +306,7 @@ const ApplyOnline = () => {
             })}
           </Select>
 
-          <Text>
-            The applicationn fee for this course is: {showCoursePrice.price}
-          </Text>
+          <Text>{showCoursePrice.price}</Text>
         </Flex>
 
         <Box>

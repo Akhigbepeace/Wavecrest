@@ -14,12 +14,14 @@ import React, { Fragment, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
 import emailjs from "emailjs-com";
-import hostel2 from "assets/Images/hostel2.jpg";
+
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
 
 const HostelApplication = () => {
+const hostel2 =  "https://res.cloudinary.com/wavecrest1/image/upload/v1667228296/hostel2_obtkc0.jpg";
+
   const initialValues = {
     user_name: "",
     user_email: "",

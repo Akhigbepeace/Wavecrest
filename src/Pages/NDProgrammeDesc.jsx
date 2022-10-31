@@ -14,7 +14,6 @@ import { FaChevronLeft } from "react-icons/fa";
 import ReactPlayer from "react-player";
 import JsFileDownloader from "js-file-downloader";
 import about from "assets/Images/studyprogrammes3.png";
-import waveVid from "assets/Images/wavevid.mp4";
 import aboutgallery3 from "assets/Images/studyprogrammes1.png";
 import aboutgallery4 from "assets/Images/studyprogrammes2.png";
 import Footer from "components/Footer";
@@ -46,6 +45,8 @@ const NDProgrammeDesc = () => {
     e.preventDefault();
     navigate("/academics/programmes", { replace: true });
   };
+  const waveVid =
+    "https://res.cloudinary.com/wavecrest1/video/upload/v1667061051/wavevid_bvf8bh.mp4";
 
   const fileUrl = "/documents/NATIONAL DIPLOMA (ND) IN HOSP (2).pdf";
   return (
