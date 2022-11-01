@@ -150,9 +150,6 @@ const TuitionAndScholarship = () => {
       <MobileSideBar />
       <Box
         mt="78px"
-        w="1300px"
-        mx="auto"
-        px="91px"
         display={{
           sm: "none",
           md: "none",
