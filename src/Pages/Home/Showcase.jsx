@@ -10,6 +10,7 @@ import {
 import React, { Fragment } from "react";
 import ReactPlayer from "react-player";
 import { useNavigate } from "react-router-dom";
+
 import ShowcaseSlider from "components/ShowcaseSlider";
 
 const Showcase = (props) => {
@@ -18,11 +19,14 @@ const Showcase = (props) => {
   const showcase2 =
     "https://res.cloudinary.com/wavecrest1/image/upload/v1667060014/Showcase2_xlxynv.jpg";
   const showcase3 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667059988/Showcase3_dtczi4.png";
-  const showcase4 =
     "https://res.cloudinary.com/wavecrest1/image/upload/v1667060027/Showcase4_nsyiwy.jpg";
+  const showcase4 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667059988/Showcase3_dtczi4.png";
+
   const waveVid =
     "https://res.cloudinary.com/wavecrest1/video/upload/v1667061051/wavevid_bvf8bh.mp4";
+
+  const showcaseGallery = [showcase1, showcase2, showcase4, showcase3];
   const navigate = useNavigate();
 
   const Redirect = (e) => {
@@ -30,8 +34,6 @@ const Showcase = (props) => {
 
     navigate("/about/profile", { replace: true });
   };
-
-  const showcaseGallery = [showcase1, showcase2, showcase4, showcase3];
   return (
     <Fragment>
       <Grid
@@ -42,19 +44,17 @@ const Showcase = (props) => {
           xl: "grid",
           "2xl": "grid",
         }}
-        gridTemplateColumns="1fr 1fr"
+        templateColumns="1fr 1fr"
         gap="8px"
-        // h="300px"
       >
-        <Box position="relative" zIndex="0">
+        <Box h="100%" position="relative" zIndex="0">
           <ReactPlayer
             url={waveVid}
             playing
             loop
             muted
-            // className="react-player"
             width="100%"
-            height="400px"
+            height="100%"
           />
           <Flex
             flexDirection="column"
@@ -68,7 +68,7 @@ const Showcase = (props) => {
             right="0"
             position="absolute"
             w="100%"
-            height="400px"
+            h="100%"
           >
             <Heading
               fontSize="60px"
@@ -92,7 +92,7 @@ const Showcase = (props) => {
           </Flex>
         </Box>
 
-        <Grid templateColumns="1fr 1fr" gap="8px" h="300px">
+        <Grid templateColumns="1fr 1fr" gap="8px">
           {showcaseGallery.map((gallery, index) => {
             return (
               <Box key={index}>
@@ -160,8 +160,8 @@ const Showcase = (props) => {
             </Heading>
 
             <Text
-              fontFamily="Manrope"
               fontSize="14px"
+              fontFamily="Manrope"
               fontWeight="400"
               lineHeight="19px"
               my="15px"
