@@ -262,7 +262,6 @@ const StudyProgrammes = () => {
               <Heading
                 color="#fff"
                 fontWeight="700"
-                // h="96px"
                 fontSize="40px"
                 w="900px"
                 mx="auto"
