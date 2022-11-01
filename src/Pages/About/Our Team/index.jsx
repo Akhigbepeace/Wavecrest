@@ -75,7 +75,7 @@ const OurTeam = () => {
       </Box>
 
       <Flex
-        m="0 auto"
+        mx="auto"
         mt="100px"
         display={{
           sm: "block",

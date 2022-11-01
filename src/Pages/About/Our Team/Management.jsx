@@ -81,7 +81,7 @@ const Management = () => {
       >
         {managements.map((management, index) => {
           return (
-            <Box key={index} w="250px" mr="10px">
+            <Box key={index} w={{ xl: "230px", "2xl": "250px" }} mr="10px">
               <Image src={management.image} w="100%" borderRadius="5px" />
 
               <Flex
@@ -89,7 +89,7 @@ const Management = () => {
                 bg="rgba(255, 255, 255, 67%)"
                 p="10px 25px"
                 position="relative"
-                top="-67px"
+                top={{ xl: "-60px", "2xl": "-60px" }}
                 borderRadius="0px 0px 5px 5px"
               >
                 <Box
@@ -104,7 +104,7 @@ const Management = () => {
                 <Box ml="10px">
                   <Heading
                     fontFamily="Playfair Display"
-                    fontSize="22px"
+                    fontSize={{ xl: "18x", "2xl": "22px" }}
                     fontWeight="700"
                     color="#021D37"
                   >

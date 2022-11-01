@@ -196,7 +196,7 @@ const Programmes = () => {
                     sm: "100%",
                     md: "100%",
                     lg: "100%",
-                    xl: "1147px",
+                    xl: "1000px",
                     "2xl": "1147px",
                   }}
                 >
@@ -212,7 +212,7 @@ const Programmes = () => {
                   sm: "100%",
                   md: "100%",
                   lg: "100%",
-                  xl: "1147px",
+                  xl: "1000px",
                   "2xl": "1147px",
                 }}
                 transition="all ease 0.7s"

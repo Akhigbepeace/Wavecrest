@@ -5,7 +5,7 @@ const Statistics = () => {
   const statistics = [
     {
       count: "2500+",
-      name: "Student Graduated",
+      name: "Students Graduated",
       bg: "#EBEDEF",
     },
     {

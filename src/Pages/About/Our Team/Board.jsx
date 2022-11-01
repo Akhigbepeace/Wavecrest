@@ -87,7 +87,7 @@ const Board = () => {
       >
         {boards.map((board, index) => {
           return (
-            <Box key={index} w="250px">
+            <Box key={index} w={{ xl: "230px", "2xl": "250px" }}>
               <Image
                 src={board.image}
                 w="100%"
@@ -116,7 +116,7 @@ const Board = () => {
                 <Box ml="10px">
                   <Heading
                     fontFamily="Playfair Display"
-                    fontSize="22px"
+                    fontSize={{ xl: "18px", "2xl": "22px" }}
                     fontWeight="700"
                     color="#021D37"
                   >
