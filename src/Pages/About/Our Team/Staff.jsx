@@ -242,7 +242,7 @@ const Staff = () => {
                 >
                   {staff.others.map((staff, index) => {
                     return (
-                      <Box key={index} w="350px">
+                      <Box key={index} w={{ xl: "310px", "2xl": "350px" }}>
                         <Image
                           src={staff.image}
                           w="100%"

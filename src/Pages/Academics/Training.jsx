@@ -152,10 +152,10 @@ const Training = () => {
               key={index}
               bg={training.background}
               p={{
-                sm: "75px 20px",
-                md: "20px 40px",
-                lg: "30px 91px",
-                xl: "20px 91px",
+                sm: "40px 20px",
+                md: "40px 40px",
+                lg: "40px 50px",
+                xl: "25px",
                 "2xl": "20px 91px",
               }}
             >

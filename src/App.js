@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,7 +11,6 @@ import Home from "Pages/Home/Index";
 import About from "Pages/About/Index";
 import Admission from "Pages/Admission/Index";
 import Academics from "Pages/Academics/Index";
-import Alumni from "Pages/Alumni";
 import Blog from "Pages/Blog";
 import Career from "Pages/Career";
 import Contact from "Pages/Contact";
@@ -70,7 +69,6 @@ function App() {
               element={<HostelApplication />}
             />
             <Route exact path="/blog" element={<Blog />} />
-            <Route exact path="/" element={<Alumni />} />
             <Route exact path="/career/:id" element={<Career />} />
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/support" element={<SupportUs />} />
