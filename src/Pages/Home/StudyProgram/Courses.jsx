@@ -1,11 +1,13 @@
 import { Box, Image, Text, Link, Heading } from "@chakra-ui/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import studyProgrammes1 from "assets/Images/studyprogrammes1.png";
-import studyProgrammes2 from "assets/Images/studyprogrammes2.png";
-import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
 
 const Courses = () => {
+  const studyProgrammes1 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289263/wavecrest/studyprogrammes1_gmzcqk.png";
+  const studyProgrammes2 = "https://res.cloudinary.com/wavecrest1/image/upload/v1667289262/wavecrest/studyprogrammes2_lyhuke.png";
+  const studyProgrammes3 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667287702/wavecrest/IMG_8753_copy_ucczmz.jpg";
   const objArr = [
     {
       linkContent: "HND IN HOSPITALITY MANAGEMENT",

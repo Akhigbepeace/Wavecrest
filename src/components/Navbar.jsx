@@ -135,7 +135,7 @@ const Navbar = () => {
     {
       name: "ALUMNI",
       NestedLinks: [],
-      to: "/alumni",
+      to: "/",
     },
 
     {

@@ -11,13 +11,16 @@ import {
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import JsFileDownloader from "js-file-downloader";
-import studyProgrammes1 from "assets/Images/studyprogrammes1.png";
-import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
-import studyProgrammes2 from "assets/Images/studyprogrammes2.png";
 import fileDownload from "assets/Images/fileDownload.png";
 import MobileSideBar from "components/MobileSideBar";
 
 const Programmes = () => {
+  const studyProgrammes1 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289263/wavecrest/studyprogrammes1_gmzcqk.png";
+  const studyProgrammes2 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289262/wavecrest/studyprogrammes2_lyhuke.png";
+  const studyProgrammes3 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667287702/wavecrest/IMG_8753_copy_ucczmz.jpg";
   const programmes = [
     {
       programmeTitle: "Higher National Diploma (HND) in Hospitality Management",

@@ -25,7 +25,7 @@ const Statistics = () => {
     },
   ];
   return (
-    <Box mt="-45px">
+    <Box>
       <Grid
         gridTemplateColumns={{
           sm: "1fr 1fr",
@@ -39,8 +39,8 @@ const Statistics = () => {
       >
         {statistics.map((statistic, index) => {
           return (
-            <GridItem key={index} textAlign="center" py="40px">
-              <Text fontFamily="Open sans" fontSize="20px" >
+            <GridItem key={index} textAlign="center">
+              <Text fontFamily="Open sans" fontSize="20px">
                 {statistic.count}
               </Text>
               <Heading fontFamily="Manrope" fontSize="20px" fontWeight="400">
