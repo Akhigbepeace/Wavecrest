@@ -159,73 +159,16 @@ const ViewJobVacancies = () => {
             "2xl": "30px",
           }}
         >
-          {jobVacancies.map((vacancy, index) => {
-            return (
-              <Box
-                key={index}
-                p="35px"
-                bg={{
-                  sm: vacancy.bg,
-                  md: vacancy.bg,
-                  lg: "#EBEDEF",
-                  xl: "#EBEDEF",
-                  "2xl": "#EBEDEF",
-                }}
-              >
-                <Heading
-                  fontFamily="Playfair Display"
-                  fontWeight="700"
-                  fontSize={{
-                    sm: "24px",
-                    md: "32px",
-                    lg: "32px",
-                    xl: "32px",
-                    "2xl": "32px",
-                  }}
-                  color="#021D37"
-                >
-                  {vacancy.company}
-                </Heading>
-                <Box my="20px">
-                  <Text fontWeight="400">Description: {vacancy.desc} </Text>
-                  <Text fontWeight="400">Deadline: {vacancy.deadLine} </Text>
-                </Box>
-
-                <Button
-                  w="142px"
-                  height="46.89px"
-                  bg={{
-                    sm: "transparent",
-                    md: "transparent",
-                    lg: "transparent",
-                    xl: "#021D37",
-                    "2xl": "#021D37",
-                  }}
-                  border="3px solid #021D37"
-                  color={{
-                    sm: "#021D37",
-                    md: "#021D37",
-                    lg: "#021D37",
-                    xl: "#FFF",
-                    "2xl": "#FFF",
-                  }}
-                  fontWeight="700"
-                  fontSize="18px"
-                  lineHeight="22px"
-                  textAlign="center"
-                  borderRadius="5px"
-                  mt="20px"
-                  onClick={() => ViewVacancies(vacancy)}
-                  _hover={{
-                    bg: "#020E1B",
-                    transition: "all ease 0.4s",
-                  }}
-                >
-                  VIEW
-                </Button>
-              </Box>
-            );
-          })}
+          <Heading
+            fontFamily="Manrope"
+            fontWeight="700"
+            fontStyle="italic"
+            fontSize="20px"
+            color="#021D37"
+            textAlign="center"
+          >
+            No Current Vacancies
+          </Heading>
         </Grid>
       </Box>
       <Box

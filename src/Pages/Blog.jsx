@@ -326,7 +326,7 @@ const Blog = () => {
                           fontSize="18px"
                           lineHeight="25px"
                           noOfLines={5}
-                          dangerouslySetInnerHTML={{ __html:   post.postsText }}
+                          dangerouslySetInnerHTML={{ __html: post.postsText }}
                         />
                         <Button
                           w="142px"
@@ -357,22 +357,6 @@ const Blog = () => {
                 </Grid>
               </Box>
             </Box>
-          </Flex>
-
-          <Flex mt="30px">
-            <Link
-              bg="#021D37"
-              p="15px"
-              borderRadius="3px"
-              color="#FFF"
-              mr="50px"
-            >
-              <FaChevronLeft size="35px" />
-            </Link>
-
-            <Link bg="#021D37" p="15px" borderRadius="3px" color="#FFF">
-              <FaChevronRight size="35px" />
-            </Link>
           </Flex>
         </Flex>
       </Box>

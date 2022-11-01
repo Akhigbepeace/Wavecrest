@@ -18,8 +18,8 @@ import emailjs from "emailjs-com";
 import MobileSideBar from "components/MobileSideBar";
 
 const NYSC = () => {
-const studyProgrammes3 =
-  "https://res.cloudinary.com/wavecrest1/image/upload/v1667287702/wavecrest/IMG_8753_copy_ucczmz.jpg";
+  const studyProgrammes3 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667287702/wavecrest/IMG_8753_copy_ucczmz.jpg";
   const initialValues = {
     user_name: "",
     user_email: "",
@@ -177,6 +177,7 @@ const studyProgrammes3 =
           xl: "91px",
           "2xl": "91px",
         }}
+        mt="50px"
       >
         <Box>
           <Box>

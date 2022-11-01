@@ -262,8 +262,10 @@ const StudyProgrammes = () => {
               <Heading
                 color="#fff"
                 fontWeight="700"
-                h="96px"
+                // h="96px"
                 fontSize="40px"
+                w="900px"
+                mx="auto"
                 fontFamily="Playfair Display"
                 cursor="pointer"
                 textTransform="uppercase"
@@ -276,7 +278,7 @@ const StudyProgrammes = () => {
                 fontSize="20px"
                 lineHeight="27px"
                 color="#EBEDEF"
-                mb="28px"
+                my="15px"
                 fontFamily="Manrope"
               >
                 {value.captionTime}

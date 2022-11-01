@@ -70,7 +70,7 @@ function App() {
               element={<HostelApplication />}
             />
             <Route exact path="/blog" element={<Blog />} />
-            <Route exact path="/alumni" element={<Alumni />} />
+            <Route exact path="/" element={<Alumni />} />
             <Route exact path="/career/:id" element={<Career />} />
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/support" element={<SupportUs />} />

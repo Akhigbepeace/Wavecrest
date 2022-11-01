@@ -10,7 +10,7 @@ import FooterCopywright from "components/FooterCopywright";
 
 const About = () => {
   const about =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289263/wavecrest/studyprogrammes1_gmzcqk.png";
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289604/wavecrest/aboutDesktopBanner_tsljsb.png";
   const { id } = useParams();
 
   const [currentId, setCurrentId] = useState(id);

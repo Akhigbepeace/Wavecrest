@@ -205,6 +205,7 @@ const Internship = () => {
           xl: "91px",
           "2xl": "91px",
         }}
+        mt="50px"
       >
         <Box>
           <Box>
