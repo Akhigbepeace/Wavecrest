@@ -1,17 +1,25 @@
 import { Box, Text, Image, Flex, Heading } from "@chakra-ui/react";
 import React, { useState } from "react";
-import studyProgrammes1 from "assets/Images/studyprogrammes1.png";
-import studyProgrammes2 from "assets/Images/studyprogrammes2.png";
-import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
-import studyProgrammes4 from "assets/Images/studyprogrammes4.png";
-import training1 from "assets/Images/trainingImg1.jpg";
-import training2 from "assets/Images/trainingImage2.jpg";
-import training3 from "assets/Images/trainingImage3.jpg";
+
 import Courses from "./Courses";
 import ShortCourses from "./ShortCourses";
 import { useNavigate } from "react-router-dom";
 
 const StudyProgrammes = () => {
+  const studyProgrammes1 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289263/wavecrest/studyprogrammes1_gmzcqk.png";
+  const studyProgrammes2 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289262/wavecrest/studyprogrammes2_lyhuke.png";
+  const studyProgrammes3 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667287702/wavecrest/IMG_8753_copy_ucczmz.jpg";
+  const studyProgrammes4 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667291369/wavecrest/training1_ohlbqh.png";
+  const training1 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667292428/wavecrest/trainingImg1_yf6bvk.png";
+  const training2 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667292424/wavecrest/trainingImage2_wzdraz.png";
+  const training3 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667292423/wavecrest/trainingImage3_nxaonh.png";
   const objArr = [
     {
       linkContent: "HND IN HOSPITALITY MANAGEMENT",
@@ -178,7 +186,7 @@ const StudyProgrammes = () => {
 
       <Flex
         h="91px"
-        w="1200px"
+        w="1100px"
         m="0 auto"
         display={{
           sm: "none",
@@ -232,13 +240,13 @@ const StudyProgrammes = () => {
         }}
       >
         {currentprogram.values.map((value, index) => (
-          <Box key={index} w="1200px" h="400px" mb="70px" m="0 auto">
+          <Box key={index} w="1100px" h="400px" mb="70px" m="0 auto">
             <Image
               src={value.imageSrc}
               objectFit="cover"
               alt="coffee"
               h="394px"
-              w="1200px"
+              w="1100px"
               m="0 auto"
               position="absolute"
             />

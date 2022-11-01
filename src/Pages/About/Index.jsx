@@ -2,7 +2,6 @@ import { Box, Image, Link, Text, Flex } from "@chakra-ui/react";
 import React, { Fragment, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "components/Navbar";
-import about from "assets/Images/aboutDesktopBanner.jpg";
 import Profile from "./Profile/Index";
 import Milestone from "./Milestone/Milestone";
 import OurTeam from "./Our Team";
@@ -10,6 +9,8 @@ import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
 
 const About = () => {
+  const about =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289263/wavecrest/studyprogrammes1_gmzcqk.png";
   const { id } = useParams();
 
   const [currentId, setCurrentId] = useState(id);

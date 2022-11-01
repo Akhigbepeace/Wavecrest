@@ -11,12 +11,15 @@ import {
 } from "@chakra-ui/react";
 import { FaChevronCircleDown } from "react-icons/fa";
 import { FaChevronCircleUp } from "react-icons/fa";
-import studyProgrammes1 from "assets/Images/studyprogrammes1.png";
-import studyProgrammes2 from "assets/Images/studyprogrammes2.png";
-import studyProgrammes4 from "assets/Images/studyprogrammes4.png";
 import { useNavigate } from "react-router-dom";
 
 const ShortCourses = () => {
+  const studyProgrammes1 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289263/wavecrest/studyprogrammes1_gmzcqk.png";
+  const studyProgrammes2 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289262/wavecrest/studyprogrammes2_lyhuke.png";
+  const studyProgrammes4 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667292423/wavecrest/trainingImage3_nxaonh.png";
   const shortCourses = [
     {
       linkContent: "TRAINING",
