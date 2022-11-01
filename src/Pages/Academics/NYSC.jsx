@@ -14,10 +14,12 @@ import {
 import React, { Fragment, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
-import studyProgrammes3 from "assets/Images/studyprogrammes3.png";
+
 import MobileSideBar from "components/MobileSideBar";
 
 const NYSC = () => {
+const studyProgrammes3 =
+  "https://res.cloudinary.com/wavecrest1/image/upload/v1667287702/wavecrest/IMG_8753_copy_ucczmz.jpg";
   const initialValues = {
     user_name: "",
     user_email: "",

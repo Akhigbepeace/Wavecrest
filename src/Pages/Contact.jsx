@@ -15,14 +15,18 @@ import React, { Fragment, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "components/Navbar";
 import emailjs from "emailjs-com";
-import contactpic from "assets/Images/aboutDesktopBanner.jpg";
-import aboutgallery1 from "assets/Images/aboutgallery1.png";
-import aboutgallery2 from "assets/Images/aboutgallery2.png";
-import aboutgallery4 from "assets/Images/aboutgallery4.png";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
 
 const Contact = () => {
+  const aboutgallery1 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231285/aboutgallery1_yvd8m2.png";
+  const aboutgallery2 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231286/aboutgallery2_vjwyrh.png";
+  const aboutgallery4 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231291/aboutgallery4_adl08b.png";
+  const contactpic =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289604/wavecrest/aboutDesktopBanner_tsljsb.png";
   const initialValues = {
     user_name: "",
     user_email: "",
@@ -503,6 +507,7 @@ const Contact = () => {
                   ml="25px"
                   transition="all ease 0.8s"
                   onClick={() => navigateTo(quickLink)}
+                  cursor="pointer"
                   _hover={{
                     transform: "scale(1.2)",
                   }}

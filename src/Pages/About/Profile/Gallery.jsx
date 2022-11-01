@@ -2,7 +2,6 @@ import { Link } from "@chakra-ui/react";
 import React from "react";
 import { Box, useBreakpointValue, Image } from "@chakra-ui/react";
 import Slider from "react-slick";
-import gallery3 from "assets/Images/galleryPic3.jpg";
 
 export default function Carousel() {
   const [slider, setSlider] = React.useState();
@@ -37,7 +36,7 @@ export default function Carousel() {
     "https://res.cloudinary.com/wavecrest1/image/upload/v1667231286/aboutgallery5_bfkzxu.png",
     "https://res.cloudinary.com/wavecrest1/image/upload/v1667231343/galleryPic_1_qrkdiy.jpg",
     "https://res.cloudinary.com/wavecrest1/image/upload/v1667231308/galleryPic_2_twbbbw.jpg",
-    gallery3,
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667290097/wavecrest/galleryPic3_t1krbe.png",
   ];
 
   return (

@@ -101,7 +101,7 @@ const Showcase = (props) => {
                   alt="Wavecrest Images"
                   objectFit="cover"
                   w="100%"
-                  h="100%"
+                  // h="100%"
                 />
               </Box>
             );

@@ -13,13 +13,16 @@ import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
 import Navbar from "components/Navbar";
 import ReactPlayer from "react-player";
-import about from "assets/Images/studyprogrammes1.png";
-import aboutgallery1 from "assets/Images/studyprogrammes2.png";
-import aboutgallery4 from "assets/Images/studyprogrammes3.png";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
 
 const HNDProgrammeDesc = () => {
+  const about =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289263/wavecrest/studyprogrammes1_gmzcqk.png";
+  const aboutgallery1 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289262/wavecrest/studyprogrammes2_lyhuke.png";
+  const aboutgallery4 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667287702/wavecrest/IMG_8753_copy_ucczmz.jpg";
   const quickLinks = [
     {
       image: aboutgallery4,
