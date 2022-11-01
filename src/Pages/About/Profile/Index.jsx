@@ -10,7 +10,6 @@ import {
 import React, { Fragment } from "react";
 import OurStory from "./OurStory";
 import JsFileDownloader from "js-file-downloader";
-import about from "assets/Images/aboutDesktopBanner.jpg";
 import Gallery from "Pages/About/Profile/Gallery";
 import OurPhilosophy from "./OurPhilosophy";
 import OurClout from "./OurClout";
@@ -18,6 +17,8 @@ import { useNavigate } from "react-router-dom";
 import MobileSideBar from "components/MobileSideBar";
 
 const Profile = () => {
+  const about =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289604/wavecrest/aboutDesktopBanner_tsljsb.png";
   const fileUrl = "/documents/SCHOOL PROFILE.pdf";
 
   const navigate = useNavigate();
