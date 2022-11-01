@@ -42,17 +42,19 @@ const Showcase = (props) => {
           xl: "grid",
           "2xl": "grid",
         }}
-        templateColumns="1fr 1fr"
+        gridTemplateColumns="1fr 1fr"
         gap="8px"
+        // h="300px"
       >
-        <Box h="100%" position="relative" zIndex="0">
+        <Box position="relative" zIndex="0">
           <ReactPlayer
             url={waveVid}
             playing
             loop
             muted
+            // className="react-player"
             width="100%"
-            height="100%"
+            height="400px"
           />
           <Flex
             flexDirection="column"
@@ -66,7 +68,7 @@ const Showcase = (props) => {
             right="0"
             position="absolute"
             w="100%"
-            h="100%"
+            height="400px"
           >
             <Heading
               fontSize="60px"
@@ -90,10 +92,10 @@ const Showcase = (props) => {
           </Flex>
         </Box>
 
-        <Grid templateColumns="1fr 1fr" gap="8px">
+        <Grid templateColumns="1fr 1fr" gap="8px" h="300px">
           {showcaseGallery.map((gallery, index) => {
             return (
-              <Box key={index} h="175px">
+              <Box key={index}>
                 <Image
                   src={gallery}
                   alt="Wavecrest Images"
@@ -144,7 +146,6 @@ const Showcase = (props) => {
               fontSize={{
                 sm: "25px",
                 md: "30px",
-                lg: "40px",
               }}
               fontFamily="Playfair Display"
               fontWeight="700"
@@ -155,10 +156,16 @@ const Showcase = (props) => {
                 lg: "400px",
               }}
             >
-              Nigeria's Premiere Hospitality Monotechnic
+              Nigeria's Premier Hospitality Monotechnic
             </Heading>
 
-            <Text fontSize="14px" fontWeight="400" lineHeight="19px" my="15px">
+            <Text
+              fontFamily="Manrope"
+              fontSize="14px"
+              fontWeight="400"
+              lineHeight="19px"
+              my="15px"
+            >
               In the last 40 years we have consistently trained individuals and
               produced graduates who are in very high demand in the Industry.
               100% of our graduates are decently employed within 3 months after
