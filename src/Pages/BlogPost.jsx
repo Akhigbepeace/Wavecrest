@@ -7,6 +7,7 @@ import { BLOGS, CATEGORIES, POST_MAP } from "data/blog";
 import Footer from "../components/Footer";
 import FooterCopywright from "../components/FooterCopywright";
 import BlogSideBar from "components/BlogSideBar";
+import MobileSideBar from "components/MobileSideBar";
 
 const BlogPost = () => {
   const blogs = BLOGS;
@@ -35,6 +36,7 @@ const BlogPost = () => {
   return (
     <Fragment>
       <Navbar />
+      <MobileSideBar />
 
       <Box h="441px" w="100%" position="relative">
         <Image src={image2} h="100%" w="100%" objectFit="cover" />
@@ -91,15 +93,19 @@ const BlogPost = () => {
         }}
       >
         <Box
-          w={{
-            sm: "90%",
-            md: "85%",
-            lg: "80%",
-            xl: "75%",
-            "2xl": "75%",
+          p={{
+            sm: "20px",
+            md: "30px",
+            lg: "40px",
           }}
           mx="auto"
-          mr="50px"
+          mr={{
+            sm: "0",
+            md: "0",
+            lg: "0",
+            xl: "50px",
+            "2xl": "50px",
+          }}
         >
           <Button
             fontFamily="Manrope"

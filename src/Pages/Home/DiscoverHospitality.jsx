@@ -18,7 +18,11 @@ const DiscoverHospitality = () => {
       justifyContent="space-between"
       h="421px"
       my="50px"
-      px="91px"
+      w={{
+        xl: "1274px",
+        "2xl": "1300px",
+      }}
+      mx="auto"
     >
       <Box mr="20px">
         <Heading fontSize="28px" fontWeight="700" fontFamily="Playfair Display">

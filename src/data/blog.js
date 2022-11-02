@@ -279,9 +279,11 @@ export const BLOGS = [
 const categories = [];
 let allPosts = [];
 const postMap = {};
+const categoryMap = {}
 
 BLOGS.forEach((blog) => {
   categories.push(blog.category);
+  categoryMap[blog.category] = blog
   allPosts = allPosts.concat(blog.posts);
 });
 
@@ -292,5 +294,5 @@ allPosts.forEach((post) => {
 });
 
 export const CATEGORIES = [...new Set(categories)];
-
+export const CATEGORY_MAP = categoryMap
 export const POST_MAP = postMap;

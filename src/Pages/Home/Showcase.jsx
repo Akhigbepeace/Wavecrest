@@ -24,7 +24,7 @@ const Showcase = (props) => {
     "https://res.cloudinary.com/wavecrest1/image/upload/v1667059988/Showcase3_dtczi4.png";
 
   const waveVid =
-    "https://res.cloudinary.com/wavecrest1/video/upload/v1667061051/wavevid_bvf8bh.mp4";
+    "https://res.cloudinary.com/wavecrest1/video/upload/v1667383507/wavevid-bvf8bh_Le77usXx_aqs5ez.mp4";
 
   const showcaseGallery = [showcase1, showcase2, showcase4, showcase3];
   const navigate = useNavigate();
@@ -95,7 +95,7 @@ const Showcase = (props) => {
         <Grid templateColumns="1fr 1fr" gap="8px">
           {showcaseGallery.map((gallery, index) => {
             return (
-              <Box key={index}>
+              <Box key={index} h="100%">
                 <Image
                   src={gallery}
                   alt="Wavecrest Images"

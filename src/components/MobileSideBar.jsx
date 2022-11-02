@@ -93,7 +93,7 @@ const MobileSideBar = () => {
     {
       name: "ALUMNI",
       NestedLinks: [],
-      to: "/alumni",
+      to: "#",
     },
 
     {
