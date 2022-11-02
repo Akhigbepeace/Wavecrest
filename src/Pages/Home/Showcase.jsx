@@ -10,7 +10,7 @@ import {
 import React, { Fragment } from "react";
 import ReactPlayer from "react-player";
 import { useNavigate } from "react-router-dom";
-
+import styled from "@emotion/styled";
 import ShowcaseSlider from "components/ShowcaseSlider";
 
 const Showcase = (props) => {
@@ -47,55 +47,63 @@ const Showcase = (props) => {
         templateColumns="1fr 1fr"
         gap="8px"
       >
-        <Box h="100%" position="relative" zIndex="0">
-          <ReactPlayer
-            url={waveVid}
-            playing
-            loop
-            muted
-            width="100%"
-            height="100%"
-          />
-          <Flex
-            flexDirection="column"
-            justifyContent="end"
-            textAlign="left"
-            bg="rgba(0,24,71, 0.6)"
-            color="white"
-            pb="25px"
-            pl="91px"
-            bottom="0"
-            right="0"
-            position="absolute"
+        <VideoHolder>
+          <Box
+            h="381px"
             w="100%"
-            h="100%"
+            position="relative"
+            zIndex="0"
+            className="react-holder"
           >
-            <Heading
-              fontSize="60px"
-              fontFamily="Visual Hollow Script"
-              fontWeight="400"
-            >
-              Study In
-            </Heading>
+            <ReactPlayer
+              url={waveVid}
+              playing
+              loop
+              muted
+              width="100%"
+              height="100%"
+            />
 
-            <Text
-              fontFamily="Playfair Display"
-              fontSize="35px"
-              fontWeight="700"
-              lineHeight="43px"
-              w={{
-                "2xl": "600px",
-              }}
+            <Flex
+              flexDirection="column"
+              justifyContent="end"
+              textAlign="left"
+              bg="rgba(0,24,71, 0.6)"
+              color="white"
+              pb="25px"
+              pl="91px"
+              bottom="0"
+              right="0"
+              position="absolute"
+              w="100%"
+              h="100%"
             >
-              Nigeria's Premier Hospitality Monotechnic
-            </Text>
-          </Flex>
-        </Box>
+              <Heading
+                fontSize="60px"
+                fontFamily="Visual Hollow Script"
+                fontWeight="400"
+              >
+                Study In
+              </Heading>
 
+              <Text
+                fontFamily="Playfair Display"
+                fontSize="35px"
+                fontWeight="700"
+                lineHeight="43px"
+                w={{
+                  "2xl": "600px",
+                }}
+              >
+                Nigeria's Premier Hospitality Monotechnic
+              </Text>
+            </Flex>
+          </Box>
+        </VideoHolder>
         <Grid templateColumns="1fr 1fr" gap="8px">
           {showcaseGallery.map((gallery, index) => {
             return (
-              <Box key={index} h="100%">
+              <Box key={index} h="187px">
                 <Image
                   src={gallery}
                   alt="Wavecrest Images"
@@ -210,5 +218,10 @@ const Showcase = (props) => {
     </Fragment>
   );
 };
+const VideoHolder = styled.div`
+  video {
+    object-fit: cover;
+  }
+`;
 
 export default Showcase;
