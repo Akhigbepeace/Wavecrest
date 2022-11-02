@@ -24,7 +24,7 @@ const Showcase = (props) => {
     "https://res.cloudinary.com/wavecrest1/image/upload/v1667059988/Showcase3_dtczi4.png";
 
   const waveVid =
-    "https://res.cloudinary.com/wavecrest1/video/upload/v1667383507/wavevid-bvf8bh_Le77usXx_aqs5ez.mp4";
+    "https://res.cloudinary.com/wavecrest1/video/upload/v1667388100/wavevid-bvf8bh_Le77usXx_aqs5ez_1_b3gfin.mp4";
 
   const showcaseGallery = [showcase1, showcase2, showcase4, showcase3];
   const navigate = useNavigate();
