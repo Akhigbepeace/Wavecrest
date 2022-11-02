@@ -184,7 +184,7 @@ export default function Carousel() {
           image:
             "https://res.cloudinary.com/wavecrest1/image/upload/v1667239067/wavecrest/Mkpegara_p6t8kk.jpg",
           name: "Owo Anna",
-          post: "Catering Craft",
+          post: "Catering Staff",
         },
         {
           image:

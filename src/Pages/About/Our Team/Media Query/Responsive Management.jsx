@@ -11,13 +11,13 @@ export default function Carousel() {
     },
     {
       image:
-      "https://res.cloudinary.com/wavecrest1/image/upload/v1666959810/wavecrest/6_ghuxqx.png",
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1667224686/wavecrest/3_lrndd5_cgtgx1.png",
       name: "Ifeoma Nwabachili",
       post: "Deputy Provost",
     },
     {
       image:
-      "https://res.cloudinary.com/wavecrest1/image/upload/v1666960352/wavecrest/3_lrndd5.png",
+        "https://res.cloudinary.com/wavecrest1/image/upload/v1666959810/wavecrest/6_ghuxqx.png",
       name: "Veronica Esode",
       post: "Registrar",
     },

@@ -19,7 +19,7 @@ const DiscoverHospitality = () => {
       h="421px"
       my="50px"
       w={{
-        xl: "1274px",
+        xl: "1100px",
         "2xl": "1300px",
       }}
       mx="auto"

@@ -212,7 +212,7 @@ const Navbar = () => {
         alignItems="center"
         bg="#FFF"
         justifyContent="space-between"
-        p="10px 91px"
+        p="29px 91px"
         display={{
           sm: "none",
           md: "none",
@@ -247,7 +247,7 @@ const Navbar = () => {
         px="91px"
         pt="34px"
         justifyContent="space-between"
-        h="60px"
+        h="91px"
         w="100%"
         bg="#021D37"
         alignItems="center"
