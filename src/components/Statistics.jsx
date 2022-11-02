@@ -5,7 +5,7 @@ const Statistics = () => {
   const statistics = [
     {
       count: "2500+",
-      name: "Students Graduated",
+      name: "Graduated",
       bg: "#EBEDEF",
     },
     {
@@ -39,7 +39,7 @@ const Statistics = () => {
       >
         {statistics.map((statistic, index) => {
           return (
-            <GridItem key={index} textAlign="center" py="40px">
+            <GridItem key={index} textAlign="center" pt="40px">
               <Text fontFamily="Open sans" fontSize="20px">
                 {statistic.count}
               </Text>
