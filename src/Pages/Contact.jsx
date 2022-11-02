@@ -17,6 +17,7 @@ import Navbar from "components/Navbar";
 import emailjs from "emailjs-com";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
+import MobileSideBar from "components/MobileSideBar";
 
 const Contact = () => {
   const aboutgallery1 =
@@ -159,6 +160,7 @@ const Contact = () => {
   return (
     <Box>
       <Navbar />
+      <MobileSideBar />
 
       <Box h="441px" position="relative">
         <Image src={contactpic} h="100%" w="100%" objectFit="cover" />

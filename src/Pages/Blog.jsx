@@ -24,16 +24,16 @@ import blogImg from "assets/Images/Blog.png";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
-import { BLOGS, CATEGORIES } from "data/blog";
+import { BLOGS, CATEGORIES, CATEGORY_MAP } from "data/blog";
 import BlogSideBar from "components/BlogSideBar";
+import MobileSideBar from "components/MobileSideBar";
 
 const Blog = () => {
   const blogs = BLOGS;
 
-  const categoryMap = {};
-
   const [currentBlog, setCurrentBlog] = useState(blogs[0]);
   const categories = CATEGORIES;
+  const categoryMap = CATEGORY_MAP;
 
   const navigate = useNavigate();
 
@@ -44,6 +44,7 @@ const Blog = () => {
   return (
     <Fragment>
       <Navbar />
+      <MobileSideBar />
 
       <Box mb="100px">
         <Box w="100%" position="relative">
@@ -184,7 +185,13 @@ const Blog = () => {
               </Box>
 
               <Box
-                ml="50px"
+                ml={{
+                  sm: "0",
+                  md: "0",
+                  lg: "0",
+                  xl: "50px",
+                  "2xl": "50px",
+                }}
                 w={{
                   xl: "830px",
                   "2xl": "1000px",
