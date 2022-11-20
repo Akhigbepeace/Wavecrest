@@ -12,7 +12,6 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
-import { NavLink } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Logo from "assets/Images/logo_wavecrest.svg";
 import Menu from "assets/Images/Menu.png";
@@ -165,7 +164,7 @@ const MobileSideBar = () => {
         "2xl": "none",
       }}
     >
-      <Link to="/" as={NavLink}>
+      <Link to="/">
         <Image
           w={{
             sm: "143px",
@@ -262,7 +261,6 @@ const MobileSideBar = () => {
                       {navLink.to ? (
                         <Link
                           key={index}
-                          as={NavLink}
                           to={navLink.to}
                           color="#FFF"
                           fontFamily="Open Sans"

@@ -7,50 +7,51 @@ import {
   useOutsideClick,
   useBoolean,
 } from "@chakra-ui/react";
-import React, { Fragment, useState } from "react";
+
+import NextLink from "next/link";
+
+// import Image from "next/image";
+import React, { useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import Logo from "assets/Images/logo_wavecrest.svg";
-import Linked from "assets/Images/linked.png";
-import Whatapps from "assets/Images/whatsapp.png";
-import Facebook from "assets/Images/facebook.svg";
-import Twitter from "assets/Images/Twitter.svg";
-import Instagram from "assets/Images/ig.svg";
 import Search from "./Search";
+import { useRouter } from "next/router";
+
+const Logo = "/assets/imgs/logo_wavecrest.svg";
+
 const Navbar = () => {
-  const loc = useLocation();
   const socials = [
     {
-      icon: Linked,
+      // icon: "/assets/imgs/logo_wavecrest.svg",
+      icon: "/assets/imgs/logo_wavecrest.svg",
       to: "https://www.linkedin.com/company/wavecrest-college-of-hospitality/",
-      as: { NavLink },
+      // as: { NavLink },
       target: "_blank",
       rel: "noreferrer",
     },
 
     {
-      icon: Facebook,
+      icon: "/assets/imgs/facebook.svg",
       to: "https://web.facebook.com/WavecrestCollegeLagos/",
       target: "_blank",
       rel: "noreferrer",
     },
 
     {
-      icon: Twitter,
+      icon: "/assets/imgs/Twitter.svg",
       to: "https://twitter.com/WaveColl",
       target: "_blank",
       rel: "noreferrer",
     },
 
     {
-      icon: Whatapps,
+      icon: "/assets/imgs/whatsapp.png",
       to: "https://wa.me/+2349096856606",
       target: "_blank",
       rel: "noreferrer",
     },
 
     {
-      icon: Instagram,
+      icon: "/assets/imgs/ig.svg",
       to: "http://instagram.com/wavecrestcollege",
       target: "_blank",
       rel: "noreferrer",
@@ -200,14 +201,14 @@ const Navbar = () => {
     handler: () => setShowNestedLinks.off(),
   });
 
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const redirect = (e) => {
-    navigate("/home", { replace: true });
+    router.replace("/home");
   };
 
   return (
-    <Fragment>
+    <>
       <Flex
         alignItems="center"
         bg="#FFF"
@@ -230,14 +231,17 @@ const Navbar = () => {
 
           {socials.map((social, index) => {
             return (
-              <Link
-                key={index}
-                href={social.to}
-                target={social.target}
-                rel={social.rel}
-              >
-                <Image src={social.icon} w="34px" h="34px" ml="15px" />
-              </Link>
+              <NextLink href={social.to} passHref legacyBehavior>
+                <Link key={index} target={social.target} rel={social.rel}>
+                  <Image
+                    src={social.icon}
+                    w="34px"
+                    h="34px"
+                    ml="15px"
+                    layout="fixed"
+                  />
+                </Link>
+              </NextLink>
             );
           })}
         </Stack>
@@ -275,30 +279,30 @@ const Navbar = () => {
                 borderBottom="6px solid transparent"
                 position="relative"
                 borderColor={
-                  loc.pathname.includes(navLink.to) ||
+                  router.pathname.includes(navLink.to) ||
                   (currentLink === index && showNestedLinks)
                     ? "#fff"
                     : "transparent"
                 }
               >
-                <Link
-                  onMouseEnter={() => {
-                    setCurrentLink(index);
-                    setShowNestedLinks.on();
-                  }}
-                  as={NavLink}
-                  to={navLink.to}
-                  color="#fff"
-                  fontSize="16px"
-                  textAlign="center"
-                  transition="all ease 0.5s"
-                  _hover={{
-                    color: "brown",
-                    textDecoration: "none",
-                  }}
-                >
-                  {navLink.name}
-                </Link>
+                <NextLink href={navLink.to} passHref legacyBehavior>
+                  <Link
+                    onMouseEnter={() => {
+                      setCurrentLink(index);
+                      setShowNestedLinks.on();
+                    }}
+                    color="#fff"
+                    fontSize="16px"
+                    textAlign="center"
+                    transition="all ease 0.5s"
+                    _hover={{
+                      color: "brown",
+                      textDecoration: "none",
+                    }}
+                  >
+                    {navLink.name}
+                  </Link>
+                </NextLink>
 
                 <Box
                   color="#fff"
@@ -314,27 +318,27 @@ const Navbar = () => {
                 >
                   {navLink.NestedLinks.map((nestedLink, index) => {
                     return (
-                      <Link
-                        to={nestedLink.to}
-                        as={NavLink}
-                        display="block"
-                        fontWeight="100"
-                        key={index}
-                        p="4px 20px"
-                        borderBottom={
-                          navLink.NestedLinks.length - 1 === index
-                            ? "none"
-                            : "1px solid white"
-                        }
-                        transition="all ease 0.5s"
-                        zIndex="2"
-                        _hover={{
-                          textDecoration: "none",
-                          color: "brown",
-                        }}
-                      >
-                        {nestedLink.name}
-                      </Link>
+                      <NextLink href={nestedLink.to} passHref>
+                        <Link
+                          display="block"
+                          fontWeight="100"
+                          key={index}
+                          p="4px 20px"
+                          borderBottom={
+                            navLink.NestedLinks.length - 1 === index
+                              ? "none"
+                              : "1px solid white"
+                          }
+                          transition="all ease 0.5s"
+                          zIndex="2"
+                          _hover={{
+                            textDecoration: "none",
+                            color: "brown",
+                          }}
+                        >
+                          {nestedLink.name}
+                        </Link>
+                      </NextLink>
                     );
                   })}
                 </Box>
@@ -349,7 +353,7 @@ const Navbar = () => {
               <Box
                 key={index}
                 onClick={() => {
-                  navigate(sideLink.href, { replace: true });
+                  router.replace(sideLink.href);
                 }}
                 bg={sideLink.bg}
                 p="7px"
@@ -376,7 +380,7 @@ const Navbar = () => {
           })}
         </Flex>
       </Box>
-    </Fragment>
+    </>
   );
 };
 
