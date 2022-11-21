@@ -20,6 +20,8 @@ import chinonyerem2 from "assets/Images/favour2.jpg";
 import peace1 from "assets/Images/peace1.jpg";
 import peace2 from "assets/Images/peace2.jpg";
 import thelma from "assets/Images/Thelma.jpeg";
+import graduationFlier from "assets/Images/grad 3.png";
+import graduationFair from "assets/Images/graduation fair.jpg";
 
 export const CARD_POST = [
   {
@@ -61,6 +63,26 @@ export const BLOGS = [
     category: "News & Events",
     posts: [
       {
+        bg: "#EBEDEF",
+        postId: "4c06a095-d93c-424d-8adc-9ad5aa250dcb",
+        isTopPost: true,
+        postsImg: graduationFair,
+        postsDate: "News and Events / 2nd December, 2022",
+        postHeading: "GRADUATE CAREER FAIR",
+        postsText:
+          "<b>GRADUATE CAREER FAIR :</b> Meet 200+ Wavecrest Graduates <br /><br /> Join other organisations like yours for our GRADUATE FAIR scheduled <b>Friday 2nd December 2022 -</b> the same day of the graduation. <br /><br />Book a stand for  N20,000 only- this will give you an umbrella tent/canopy, a table and 2 seats. You can display your banner and your marketing materials, and also discuss with Wavecrest graduates on the job opportunities with your organisation.<br /><br /> Please, let us know if you want to have a display or a representative that would meet Wavecrest graduates on or before <b>Wednesday 30th November, 2022</b> <br /><br /> All payments be made to: Wavecrest College Access Bank account: 0010546867 <br /><br/> <b>RSVP: </b><br/>Veronica Esode: 08067336348 ,<br/> Baptista Uwandu: 0909 685 6606",
+      },
+      {
+        bg: "#EBEDEF",
+        postId: "e90cf931-2c52-42cb-bb0d-2a30a2e960bd",
+        isTopPost: true,
+        postsImg: graduationFlier,
+        postsDate: "News and Events / 2nd December, 2022",
+        postHeading: "2022 GRADUATION CEREMONY INVITE",
+        postsText:
+          "<b>2022 GRADUATION CEREMONY INVITE </b> <br /> <br />The Provost of Wavecrest College of Hospitality cordially invites you to her 2022 Graduation ceremony for Higher National Diploma, National Diploma and Certificate students. <br /> <br /><br /><b>Date:</b>  Friday, 2nd December, 2022.<br /> <b>Venue: </b>Wavecrest College Sports Ground. <br /><b>Time:</b> 10.00 a.m. <br /><br /><br /><b>PS:</b>Thanksgiving Mass: 9.00 a.m. Graduation Procession 10.00 a.m. <br /> <br /> <a href='/documents/Graduating Students List. 2019.2022.xlsx - Sheet1.pdf' target='blank'>Click here to see the list of the graduating students</a> ",
+      },
+      {
         bg: "#FFF",
         postId: "0a228685-366d-4952-9583-3eb9c9a497ba",
         isTopPost: true,
@@ -94,7 +116,7 @@ export const BLOGS = [
       {
         bg: "#EBEDEF",
         postId: "8f18340b-d539-47e8-960d-14fefe23baaf",
-        isTopPost: true,
+        isTopPost: false,
         postsImg: blogPost,
         postsDate: "News and Events / October 8, 2021.",
         postHeading:
@@ -105,7 +127,7 @@ export const BLOGS = [
       {
         bg: "#FFF",
         postId: "77cf9564-479b-48ca-bab5-1003e114edc4",
-        isTopPost: true,
+        isTopPost: false,
         postsImg: nbte,
         postsDate: "News and Events / January 25, 2021.",
         postHeading: "NSQ PROGRAMMES AVAILABLE",
@@ -113,9 +135,9 @@ export const BLOGS = [
           "There are lots of different NSQs to choose from, which are regularly being reviewed and updated. They are available in five sectors i.e hospitality and tourism, power/energy/engineering, building construction, service and agro-processing as giving in the table below;<br/><br/> <b>The NSQ system – Who does/do what</b> <br /><br/><b> Sector skills councils:</b> identify, define and update employment-based standards of competence for agreed occupations. These people effectively represent the interests of the trade or industry concerned, to which the particular NSQ relates. Sector Bodies define what the job entails. For government led sector skills council, the composition should be 70 % industry/ employers and 30% trade unions, professional associations, academia etc.<br /><br /> <b>Awarding bodies:</b> design assessment and quality assurance systems, and gain sector bodies endorsement prior to submission to NBTE for accreditation of the qualification. Awarding bodies approve training and assessment centres to offer NSQs. implement and assure quality of the NSQs . Awarding Bodies are basically the top-level training certification organisations (the ones whose names and logos are on the certificates). They don’t deliver the training, they design the structures of the qualifications and accredit the certification, which the training organisations and Assessment Centres use and deliver.<br /><br /> Awarding Bodies engage with client organisations if they are large enough to have their own NSQ training and delivery departments. Awarding bodies engage with Sector Bodies and training organisations. Training organisations are effectively distributors of the Awarding Bodies’ qualifications systems.<br /><br /> They undertake external verification to ensure that candidates are being assessed fairly and consistently across all centres.<br /><br /><b> Regulatory Body: NBTE</b> accredits proposals for qualifications submitted by awarding bodies, and monitors Awarding bodies offering NSQs. NBTE effectively manages the whole system on behalf of the Government. <br /><br /> <b>Assessment centres:</b> assess NSQs according to Awarding body criteria.<br /><br /><b>Training providers: </b> deliver NSQ training in partnership with the industry, register candidates, assess and guide candidates towards achieving NSQs.",
       },
       {
-        bg: "#EBEDEF",
+        bg: "#FFF",
         postId: "458a00e3-1cd5-4148-bad2-ceee4d6d22e9",
-        isTopPost: true,
+        isTopPost: false,
         postsImg: JambReg,
         postsDate: "News and Events / May 14, 2021.",
         postHeading: "New Admission Requirement for National Diploma",
@@ -279,11 +301,11 @@ export const BLOGS = [
 const categories = [];
 let allPosts = [];
 const postMap = {};
-const categoryMap = {}
+const categoryMap = {};
 
 BLOGS.forEach((blog) => {
   categories.push(blog.category);
-  categoryMap[blog.category] = blog
+  categoryMap[blog.category] = blog;
   allPosts = allPosts.concat(blog.posts);
 });
 
@@ -294,5 +316,5 @@ allPosts.forEach((post) => {
 });
 
 export const CATEGORIES = [...new Set(categories)];
-export const CATEGORY_MAP = categoryMap
+export const CATEGORY_MAP = categoryMap;
 export const POST_MAP = postMap;

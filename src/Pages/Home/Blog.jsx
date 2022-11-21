@@ -15,6 +15,9 @@ import styled from "@emotion/styled";
 import CTHFlier from "assets/Images/tch flier.png";
 import PCHFlier from "assets/Images/P.C.H. flier.png";
 import CulinaryFlier from "assets/Images/Culinary flyer.png";
+import graduationFlier from "assets/Images/grad 3.png";
+import graduationFair from "assets/Images/graduation fair.jpg";
+
 const settings = {
   dots: true,
   arrows: false,
@@ -55,6 +58,22 @@ export default function CaptionCarousel() {
       text: "UK International Gold standard qualifications  for the Hospitality, Culinary & Tourism industries",
       linkTo: "https://tinyurl.com/CTH-Registration-Form1",
       link: "Apply Now",
+    },
+    {
+      flier: graduationFlier,
+      title: "2022 GRADUATION CEREMONY INVITE",
+      text: "The Provost of Wavecrest College of Hospitality cordially invites you to her 2022 Graduation ceremony for Higher National Diploma, National Diploma and Certificate students.",
+      date: "Friday, 2nd December, 2022",
+      linkTo: "/posts/e90cf931-2c52-42cb-bb0d-2a30a2e960bd",
+      link: "Read More",
+    },
+    {
+      flier: graduationFair,
+      title: "GRADUATE CAREER FAIR",
+      text: "Join other organisations like yours for our GRADUATE FAIR scheduled Friday 2nd December 2022 - the same day of the graduation.",
+      date: "Friday, 2nd December, 2022",
+      linkTo: "/posts/4c06a095-d93c-424d-8adc-9ad5aa250dcb",
+      link: "Read More",
     },
   ];
 
@@ -153,153 +172,161 @@ export default function CaptionCarousel() {
         </Box>
 
         <Slider {...settings} ref={(slider) => setSlider(slider)} pauseOnFocus>
-          {cards.map((card, index) => (
-            <Box
-              key={index}
-              bg="#DDD"
-              position="relative"
-              pt={{
-                sm: "40px",
-                md: "40px",
-                lg: "40px",
-              }}
-            >
-              <Flex
-                flexDirection={{
-                  sm: "column",
-                  md: "row",
-                  lg: "row",
-                  xl: "row",
-                  "2xl": "row",
-                }}
-                height="100%"
+          {cards.map((card, index) => {
+            const buttonStyle = {
+              background: "#021d37",
+              w: "168px",
+              p: "10px 26px",
+              color: "#fff",
+              fontSize: "20px",
+              textDecoration: "none",
+              textAlign: "center",
+              mt: "20px",
+              textTransform: "uppercase",
+              borderRadius: "3px",
+              fontFamily: "Manrope",
+              h: "52px",
+              display: "block",
+              _hover: {
+                textDecoration: "none",
+                color: "white",
+                bg: "#021d37",
+              },
+            };
+            return (
+              <Box
+                key={index}
+                bg="#DDD"
                 position="relative"
-                alignItems="center"
-                justifyContent="center"
-                w="80%"
-                m="0 auto"
-                pb={{
-                  sm: "90px",
-                  md: "90px",
-                  lg: "90px",
+                pt={{
+                  sm: "40px",
+                  md: "40px",
+                  lg: "40px",
                 }}
               >
-                <Image
-                  src={card.flier}
-                  alt="founders day"
-                  maxW={{
-                    sm: "216px",
-                    md: "216px",
-                    lg: "216px",
-                    xl: "450px",
-                    "2xl": "450px",
-                  }}
-                  h={{
-                    sm: "211px",
-                    md: "211px",
-                    lg: "211px",
-                    xl: "350px",
-                    "2xl": "350px",
-                  }}
-                  mx={{
-                    sm: "0",
-                    md: "50px",
-                    lg: "50px",
-                    xl: "50px",
-                    "2xl": "50px",
-                  }}
-                />
-
                 <Flex
-                  flexDirection="column"
+                  flexDirection={{
+                    sm: "column",
+                    md: "row",
+                    lg: "row",
+                    xl: "row",
+                    "2xl": "row",
+                  }}
+                  height="100%"
+                  position="relative"
                   alignItems="center"
-                  textAlign="center"
                   justifyContent="center"
+                  w="80%"
+                  m="0 auto"
+                  pb={{
+                    sm: "90px",
+                    md: "90px",
+                    lg: "90px",
+                  }}
                 >
-                  <Heading
-                    color="#021D37"
-                    fontFamily="Playfair Display"
-                    fontWeight="700"
-                    mb={{
-                      sm: "-30px",
-                      md: "-30px",
-                      lg: "-30px",
+                  <Image
+                    src={card.flier}
+                    alt="founders day"
+                    maxW={{
+                      sm: "216px",
+                      md: "216px",
+                      lg: "216px",
+                      xl: "450px",
+                      "2xl": "450px",
                     }}
-                    fontSize={{
-                      sm: "28px",
-                      md: "28px",
-                      lg: "28px",
-                      xl: "40px",
-                      "2xl": "40px",
+                    h={{
+                      sm: "211px",
+                      md: "211px",
+                      lg: "211px",
+                      xl: "350px",
+                      "2xl": "350px",
                     }}
-                    lineHeight="45px"
-                    textAlign="center"
-                  >
-                    {card.title}
-                  </Heading>
+                    mx={{
+                      sm: "0",
+                      md: "50px",
+                      lg: "50px",
+                      xl: "50px",
+                      "2xl": "50px",
+                    }}
+                  />
 
-                  <Text
-                    fontFamily="Manrope"
-                    fontSize={{
-                      sm: "14px",
-                      md: "14px",
-                      lg: "14px",
-                      xl: "16px",
-                      "2xl": "16px",
-                    }}
-                    fontWeight="400"
-                    lineHeight="22px"
+                  <Flex
+                    flexDirection="column"
+                    alignItems="center"
                     textAlign="center"
-                    mt="40px"
-                    w={{
-                      sm: "291px",
-                      md: "291px",
-                      lg: "291px",
-                      xl: "638px",
-                      "2xl": "638px",
-                    }}
+                    justifyContent="center"
                   >
-                    {card.text}
-                  </Text>
+                    <Heading
+                      color="#021D37"
+                      fontFamily="Playfair Display"
+                      fontWeight="700"
+                      mb={{
+                        sm: "-30px",
+                        md: "-30px",
+                        lg: "-30px",
+                      }}
+                      fontSize={{
+                        sm: "28px",
+                        md: "28px",
+                        lg: "28px",
+                        xl: "40px",
+                        "2xl": "40px",
+                      }}
+                      lineHeight="45px"
+                      textAlign="center"
+                    >
+                      {card.title}
+                    </Heading>
 
-                  <Text
-                    fontFamily="Playfair Display"
-                    fontWeight="400"
-                    fontSize="28px"
-                    lineHeight="37px"
-                    textAlign="center"
-                    mt="5px"
-                  >
-                    {card.date}
-                  </Text>
+                    <Text
+                      fontFamily="Manrope"
+                      fontSize={{
+                        sm: "14px",
+                        md: "14px",
+                        lg: "14px",
+                        xl: "16px",
+                        "2xl": "16px",
+                      }}
+                      fontWeight="400"
+                      lineHeight="22px"
+                      textAlign="center"
+                      mt="40px"
+                      w={{
+                        sm: "291px",
+                        md: "291px",
+                        lg: "291px",
+                        xl: "638px",
+                        "2xl": "638px",
+                      }}
+                    >
+                      {card.text}
+                    </Text>
 
-                  <Link
-                    href={card.linkTo}
-                    target="_blank"
-                    background="#021d37"
-                    w="168px"
-                    p="10px 26px"
-                    color="#fff"
-                    fontSize="20px"
-                    textDecoration="none"
-                    textAlign="center"
-                    mt="20px"
-                    textTransform="uppercase"
-                    borderRadius="3px"
-                    fontFamily="Manrope"
-                    h="52px"
-                    _hover={{
-                      textDecoration: "none",
-                      color: "white",
-                      bg: "#021d37",
-                    }}
-                  >
-                    {card.link}
-                  </Link>
+                    <Text
+                      fontFamily="Playfair Display"
+                      fontWeight="400"
+                      fontSize="28px"
+                      lineHeight="37px"
+                      textAlign="center"
+                      mt="5px"
+                    >
+                      {card.date}
+                    </Text>
+
+                    <Link
+                      href={card.linkTo}
+                      target={
+                        card.linkTo.includes("/posts/") ? "_self" : "_blank"
+                      }
+                      {...buttonStyle}
+                    >
+                      {card.link}
+                    </Link>
+                  </Flex>
                 </Flex>
-              </Flex>
-            </Box>
-          ))}
+              </Box>
+            );
+          })}
         </Slider>
       </Box>
     </CaptionCarousel.Wrapper>
