@@ -40,6 +40,15 @@ const Downloads = () => {
       name: "htp brochure",
       fileUrl: "/documents/Wavecrest HTP 2021 Brochure.pdf",
     },
+    {
+      name: "List of Awardees for 2022",
+      fileUrl: "/documents/List of Awards for 2022.xlsx - Sheet1.pdf",
+    },
+    {
+      name: "Graduating Students List",
+      fileUrl:
+        "/documents/Graduating Students List. 2019.2022.xlsx - Sheet1.pdf",
+    },
   ];
 
   return (
@@ -105,8 +114,8 @@ const Downloads = () => {
             mt="24px"
             mb="30px"
           >
-            Do you wish to have our brochures and fliers ? Below are list of our
-            documents you can download.
+            Do you wish to have our brochures, fliers, e.t.c? Below are a
+            list of our documents you can download.
           </Text>
         </Box>
 
