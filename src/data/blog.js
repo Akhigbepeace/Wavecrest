@@ -80,7 +80,7 @@ export const BLOGS = [
         postsDate: "News and Events / 2nd December, 2022",
         postHeading: "2022 GRADUATION CEREMONY INVITE",
         postsText:
-          "<b>2022 GRADUATION CEREMONY INVITE </b> <br /> <br />The Provost of Wavecrest College of Hospitality cordially invites you to her 2022 Graduation ceremony for Higher National Diploma, National Diploma and Certificate students. <br /> <br /><br /><b>Date:</b>  Friday, 2nd December, 2022.<br /> <b>Venue: </b>Wavecrest College Sports Ground. <br /><b>Time:</b> 10.00 a.m. <br /><br /><br /><b>PS:</b>Thanksgiving Mass: 9.00 a.m. Graduation Procession 10.00 a.m. <br /> <br /> <a href='/documents/Graduating Students List. 2019.2022.xlsx - Sheet1.pdf' target='blank'>Click here to see the list of the graduating students</a> ",
+          "<b>2022 GRADUATION CEREMONY INVITE </b> <br /> <br />The Provost of Wavecrest College of Hospitality cordially invites you to her 2022 Graduation ceremony for Higher National Diploma, National Diploma and Certificate students. <br /> <br /><br /><b>Date:</b>  Friday, 2nd December, 2022.<br /> <b>Venue: </b>Wavecrest College Sports Ground. <br /><b>Time:</b> 10.00 a.m. <br /><br /><br /><b>PS:</b>Thanksgiving Mass: 9.00 a.m. Graduation Procession 10.00 a.m. <br /> <br /> <a href='/documents/Graduating Students List. 2019.2022.xlsx - Sheet1.pdf' target='blank'>CLICK HERE TO SEE LIST OF GRADUATING STUDENTS</a> <br /> <br /> <a href='/documents/List of Awards for 2022.xlsx - Sheet1.pdf' target='blank'>CLICK HERE TO SEE LIST OF AWARDEES FOR 2022</a> <br /> <br /> ",
       },
       {
         bg: "#FFF",
