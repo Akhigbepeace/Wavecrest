@@ -204,7 +204,7 @@ const Navbar = () => {
   const router = useRouter();
 
   const redirect = (e) => {
-    router.replace("/home");
+    router.push("/home");
   };
 
   return (
@@ -353,7 +353,7 @@ const Navbar = () => {
               <Box
                 key={index}
                 onClick={() => {
-                  router.replace(sideLink.href);
+                  router.push(sideLink.href);
                 }}
                 bg={sideLink.bg}
                 p="7px"

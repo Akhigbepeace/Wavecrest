@@ -20,7 +20,7 @@ const Courses = () => {
           redirect: (e) => {
             e.preventDefault();
 
-            router.push("/HNDProgramme", { replace: true });
+            router.push("/HNDProgramme", );
           },
           captionTime: "2 Years | Full Time",
           captionButton: "Apply Now",
@@ -38,7 +38,7 @@ const Courses = () => {
           redirect: (e) => {
             e.preventDefault();
 
-            router.replace("/NDProgramme", { replace: true });
+            router.push("/NDProgramme", );
           },
           captionTime: "2 Years | Full Time",
           captionButton: "Apply Now",
@@ -56,7 +56,7 @@ const Courses = () => {
           redirect: (e) => {
             e.preventDefault();
 
-            router.replace("/CertificateCourses", { replace: true });
+            router.push("/CertificateCourses", );
           },
           captionTime: "1 Year | Full Time",
           captionButton: "Apply Now",

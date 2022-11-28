@@ -13,12 +13,13 @@ import {
 import React, { Fragment } from "react";
 import Navbar from "components/Navbar";
 import MobileSideBar from "components/MobileSideBar";
-import admission from "assets/Images/Admission.png";
-import visa from "assets/Images/visa.png";
-import paypal from "assets/Images/paypal.png";
-import mastercard from "assets/Images/mastercard.png";
 import Footer from "../components/Footer";
 import FooterCopywright from "../components/FooterCopywright";
+
+const admission = "/assets/imgs/Admission.png";
+const visa = "/assets/imgs/visa.png";
+const paypal = "/assets/imgs/paypal.png";
+const mastercard = "/assets/imgs/mastercard.png";
 
 const SupportUs = () => {
   const forms = [

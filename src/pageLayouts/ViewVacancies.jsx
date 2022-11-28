@@ -10,14 +10,13 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import React, { Fragment, useRef, useState } from "react";
-import { useSearchParams } from "react-router-dom";
 import emailjs from "emailjs-com";
-import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
 import Navbar from "components/Navbar";
-import about from "assets/Images/About.png";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
+import { useRouter } from "next/router";
+const about = "./assets/imgs/About.png";
 
 const ViewVacancies = () => {
   const initialValues = {
@@ -84,13 +83,13 @@ const ViewVacancies = () => {
     }
   };
 
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const BackToJobVancanies = (e) => {
     e.preventDefault();
-    navigate("/career/viewJobVacancies", { replace: true });
+    router("/career/viewJobVacancies", );
   };
-  const [searchParams] = useSearchParams();
+  const { companyName, desc, deadline } = router.query;
   const toast = useToast();
 
   return (
@@ -195,7 +194,7 @@ const ViewVacancies = () => {
                   "2xl": "center",
                 }}
               >
-                {searchParams.get("companyName")}
+                {companyName}
               </Text>
             </Flex>
 
@@ -226,7 +225,7 @@ const ViewVacancies = () => {
                   "2xl": "center",
                 }}
               >
-                {searchParams.get("desc")}
+                {desc}
               </Text>
             </Flex>
 
@@ -256,7 +255,7 @@ const ViewVacancies = () => {
                   "2xl": "center",
                 }}
               >
-                {searchParams.get("deadline")}
+                {deadline}
               </Text>
             </Flex>
           </Flex>

@@ -1,6 +1,5 @@
 import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
 import Navbar from "components/Navbar";
 import { BLOGS, CATEGORIES, POST_MAP } from "data/blog";
@@ -8,6 +7,7 @@ import Footer from "../components/Footer";
 import FooterCopywright from "../components/FooterCopywright";
 import BlogSideBar from "components/BlogSideBar";
 import MobileSideBar from "components/MobileSideBar";
+import Router, { useRouter } from "next/router";
 
 const BlogPost = () => {
   const blogs = BLOGS;
@@ -16,21 +16,22 @@ const BlogPost = () => {
 
   const [currentBlog, setCurrentBlog] = useState(blogs[0]);
 
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const BackToBlog = (e) => {
     e.preventDefault();
-    navigate("/blog", { replace: true });
+    Router.back();
   };
 
-  const { id } = useParams();
+  const { id } = router.query;
 
+  if (!id) return "Loading...";
   const post = POST_MAP[id];
   const image1 = post.postsImg;
   const image2 = post.coverImage || image1;
 
   const ShowPosts = (post) => {
-    navigate(`/posts/${post.postId}`, { replace: true });
+    router.push(`/posts/${post.postId}`);
   };
 
   return (

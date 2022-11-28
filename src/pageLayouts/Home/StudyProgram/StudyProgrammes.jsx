@@ -30,7 +30,7 @@ const StudyProgrammes = () => {
           redirect: (e) => {
             e.preventDefault();
 
-            router.push("/HNDProgramme", { replace: true });
+            router.push("/HNDProgramme");
           },
           current: false,
           captionHeading:
@@ -49,7 +49,7 @@ const StudyProgrammes = () => {
           redirect: (e) => {
             e.preventDefault();
 
-            router.push("/NDProgramme", { replace: true });
+            router.push("/NDProgramme");
           },
           current: false,
           captionHeading: "A programme for Hospitality Career aspirants",
@@ -67,7 +67,7 @@ const StudyProgrammes = () => {
           redirect: (e) => {
             e.preventDefault();
 
-            router.push("/CertificateCourses", { replace: true });
+            router.push("/CertificateCourses");
           },
           current: true,
           captionHeading:
@@ -87,7 +87,7 @@ const StudyProgrammes = () => {
           redirect: (e) => {
             e.preventDefault();
 
-            router.push("/academics/training", { replace: true });
+            router.push("/academics/training");
           },
           captionHeading: "CONFEDERATION OF TOURISM AND HOSPITALITY",
           captionTime: "Duration: Flexible",
@@ -99,7 +99,7 @@ const StudyProgrammes = () => {
           redirect: (e) => {
             e.preventDefault();
 
-            router.push("/academics/training", { replace: true });
+            router.push("/academics/training");
           },
           captionHeading: "HOSPITALITY TRAINING PROGRAMMES",
           captionTime: "Duration: Flexible",
@@ -111,7 +111,7 @@ const StudyProgrammes = () => {
           redirect: (e) => {
             e.preventDefault();
 
-            router.push("/academics/training", { replace: true });
+            router.push("/academics/training");
           },
           captionHeading: "CULINARY COURSES",
           captionTime: "5 Weeks - 3 Months",
@@ -123,7 +123,7 @@ const StudyProgrammes = () => {
           redirect: (e) => {
             e.preventDefault();
 
-            router.push("/academics/training", { replace: true });
+            router.push("/academics/training");
           },
           captionHeading: "PROFESSISONAL CERTIFICATE IN HOSPITALITY",
           captionTime: "10 weeks",
@@ -140,7 +140,7 @@ const StudyProgrammes = () => {
   const redirect = (e) => {
     e.preventDefault();
 
-    router.replace("/admission/applyOnline", { replace: true });
+    router.push("/admission/applyOnline");
   };
   return (
     <Box

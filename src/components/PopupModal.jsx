@@ -20,22 +20,28 @@ import emailjs from "emailjs-com";
 
 const PopupModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [timerId, setTimerId] = useState(-1);
 
   useEffect(() => {
-    const hasViewedModal = JSON.parse(localStorage.getItem("hasViewedModal"));
-    const hasSubscribed =
-      localStorage.getItem("hasSubscribed") &&
-      JSON.parse(localStorage.getItem("hasSubscribed"));
-    const timerId = setTimeout(() => {
-      if (!hasViewedModal && !hasSubscribed) {
-        onOpen();
-      }
-    }, 3000);
+    if (typeof window !== "undefined") {
+      const hasViewedModal = JSON.parse(localStorage.getItem("hasViewedModal"));
+      const hasSubscribed =
+        localStorage.getItem("hasSubscribed") &&
+        JSON.parse(localStorage.getItem("hasSubscribed"));
+      const timerId = +setTimeout(() => {
+        if (!hasViewedModal && !hasSubscribed) {
+          onOpen();
+        }
+      }, 3000);
+
+      setTimerId(timerId);
+    }
 
     return () => {
       clearTimeout(timerId);
     };
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [onOpen]);
 
   const initialValues = {
     user_name: "",

@@ -136,25 +136,25 @@ const FAQs = () => {
     {
       name: "ADMISSION REQUIREMENTS",
       redirect: () => {
-        router.push("/admission/admissionRequirements", { replace: true });
+        router.push("/admission/admissionRequirements", );
       },
     },
     {
       name: "TUITION AND SCHOLARSHIP",
       redirect: () => {
-        router.push("/admission/tuitionAndScholarship", { replace: true });
+        router.push("/admission/tuitionAndScholarship", );
       },
     },
     {
       name: "APPLY ONLINE",
       redirect: () => {
-        router.push("/admission/applyOnline", { replace: true });
+        router.push("/admission/applyOnline", );
       },
     },
     {
       name: "HOSTEL",
       redirect: () => {
-        router.push("/admission/hostel", { replace: true });
+        router.push("/admission/hostel", );
       },
     },
   ];

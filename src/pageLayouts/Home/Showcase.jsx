@@ -25,7 +25,7 @@ const Showcase = (props) => {
   const Redirect = (e) => {
     e.preventDefault();
 
-    router.replace("/about/profile");
+    router.push("/about/profile");
   };
   return (
     <Fragment>

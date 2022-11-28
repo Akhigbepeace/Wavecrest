@@ -1,27 +1,25 @@
-import blogPost from "assets/Images/blogpost.png";
-import blogPost2 from "assets/Images/aboutus.png";
-import suicideEvent from "assets/Images/suicide-event.jpeg";
-import uchyfide from "assets/Images/uchyfide.jpeg";
-import Udoka from "assets/Images/Udoka.jpeg";
-import NBTEdirector from "assets/Images/NBTEdirector.jpg";
-import nbte from "assets/Images/nbte.jpeg";
-import cookFish from "assets/Images/cookFish.jpg";
-import catfish from "assets/Images/catfish.png";
-import hotel from "assets/Images/hotel.jpg";
-import decorating from "assets/Images/decorating.jpg";
-import airport from "assets/Images/AIRPORT.jpg";
-import airTravels from "assets/Images/air-travels.jpg";
-import ekpangNkukwo from "assets/Images/Ekpang-Nkukwo.jpg";
-import studentLetter from "assets/Images/student-letter.png";
-import developingSkills from "assets/Images/developing-skills.jpg";
-import JambReg from "assets/Images/JAMBReg.jpg";
-import chinonyerem from "assets/Images/Chinonyerem-Favour.jpg";
-import chinonyerem2 from "assets/Images/favour2.jpg";
-import peace1 from "assets/Images/peace1.jpg";
-import peace2 from "assets/Images/peace2.jpg";
-import thelma from "assets/Images/Thelma.jpeg";
-import graduationFlier from "assets/Images/grad 3.png";
-import graduationFair from "assets/Images/graduation fair.jpg";
+const blogPost = "assets/imgs/blogpost.png";
+const blogPost2 = "assets/imgs/aboutus.png";
+const suicideEvent = "assets/imgs/suicide-event.jpeg";
+const uchyfide = "assets/imgs/uchyfide.jpeg";
+const Udoka = "assets/imgs/Udoka.jpeg";
+const NBTEdirector = "/assets/imgs/NBTEdirector.jpg";
+const nbte = "assets/imgs/nbte.jpeg";
+const cookFish = "assets/imgs/cookFish.jpg";
+const catfish = "assets/imgs/catfish.png";
+const hotel = "assets/imgs/hotel.jpg";
+const decorating = "assets/imgs/decorating.jpg";
+const airport = "assets/imgs/AIRPORT.jpg";
+const airTravels = "assets/imgs/air-travels.jpg";
+const ekpangNkukwo = "assets/imgs/Ekpang-Nkukwo.jpg";
+const studentLetter = "assets/imgs/student-letter.png";
+const developingSkills = "assets/imgs/developing-skills.jpg";
+const JambReg = "assets/imgs/JAMBReg.jpg";
+const peace1 = "assets/imgs/peace1.jpg";
+const peace2 = "assets/imgs/peace2.jpg";
+const thelma = "/assets/imgs/Thelma.jpeg";
+const graduationFlier = "/assets/imgs/grad 3.png";
+const graduationFair = "/assets/imgs/graduation fair.jpg";
 
 export const CARD_POST = [
   {
@@ -29,8 +27,8 @@ export const CARD_POST = [
     name: "Chinonyerem Favour",
     text: "Studying in Wavecrest has made my dreams broader; I haven't gotten the feel of any limitations ever.My colleagues and customers are always captivated by my performance and keep asking me about where I trained.",
     postHeading: "STAND YOUR GROUND  - THE EARLIER, THE BETTER",
-    postsImg: "/assets/Images/Chinonyerem-Favour.jpg",
-    coverImage: "/assets/Images/favour2.jpg",
+    postsImg: "/assets/imgs/Chinonyerem-Favour.jpg",
+    coverImage: "/assets/imgs/favour2.jpg",
     postsText:
       "My name is Chinonyerem Favour, am 20 years of age. At the time I finished secondary school I couldn't get into University because I wasn't old enough so I spent one year here and there doing nothing of great importance before I took my (JAMB) – This is a National exam everyone who intends to go the University takes in Nigeria and in my opinion is really not a true test of one’s knowledge as there are several hitches one may encounter in writing this exam especially when it became a computer based exam. I took my JAMB exam twice seeking to get into a desired University for a desired course but I wasn't fortunate enough because I did not make the cut-off mark for the course. This meant that I already ‘wasted’ two years trying to get into University.After the second trial, I decided to give my true passion a chance to come alive! The truth is I have always been a lover of the fields in Hospitality especially that of culinary arts and event planning. However, in the part of the world I live, hospitality is not given enough credit for several reasons. Parents prefer their children doing more ‘prestigious’ courses like Law, Engineering and Medicine. This is true especially for children who are brilliant and brainy and unfortunately even for those who are not – there is this ‘class’ thing in the minds of parents.For me, it was not easy at first to convince my parents and the teachers in my life to allow me pursue a career in Hospitality because I was considered a brilliant and brainy student in Secondary School. But I gave it a try and succeeded. When I finally started this journey, I realized how much time I had wasted before pursuing my true dreams.  3 years after Secondary School was when I managed to convince my parents amidst different bad reviews from people telling me I was going to waste my knowledge if I pursued Hospitality courses. This time I did not bother listening to them and I set out to find the best hospitality school so I would not give anyone any opportunity to mock me later if I did not get the best. I did a Google search for the best hospitality schools in the State where I lived and I wrote down the 10 best that I saw. I started going to each of them one by one to make enquiries in person and see what they had to offer. Wavecrest was the 4th and last school I visited.",
   },
@@ -255,7 +253,7 @@ export const BLOGS = [
         postsDate: "Hospitality Articles/ October 22, 2022.",
         postHeading: "Top 3 Creative Ideas for Decorating Your Dining Table",
         postsText:
-          "Having a small party at home is also an opportunity to display your entertainment skills. Since the meal is the main focus of the entire celebration, you should choose a table centerpiece that will really impress your guests but you don’t have to break the bank to get it done. Here are some creative ideas for a stylish centerpiece.<br /><br /><ol> <li>Candles: Place a large candle in a glass container surrounded by stones and shells.  Nothing makes a table look more elegant than soft, glowing candles.</li><img src='../assets/Images/blog-candle.jpeg' alt='candles' /> <br /><br /><li>Lemons, limes, and oranges add bright pops of color to a table without breaking the budget. Stack them in tall, narrow vases or fill round, wide bowls with them. </li><br /><br /><li>Wine Bottles: Take a few bottles from your previous party and remove the labels. Then fill them with thin branches of flowers and tie them with a rope or ribbons. These types of arrangements work really well at picnics and outdoor gatherings.</li></ol>",
+          "Having a small party at home is also an opportunity to display your entertainment skills. Since the meal is the main focus of the entire celebration, you should choose a table centerpiece that will really impress your guests but you don’t have to break the bank to get it done. Here are some creative ideas for a stylish centerpiece.<br /><br /><ol> <li>Candles: Place a large candle in a glass container surrounded by stones and shells.  Nothing makes a table look more elegant than soft, glowing candles.</li><img src='../assets/imgs/blog-candle.jpeg' alt='candles' /> <br /><br /><li>Lemons, limes, and oranges add bright pops of color to a table without breaking the budget. Stack them in tall, narrow vases or fill round, wide bowls with them. </li><br /><br /><li>Wine Bottles: Take a few bottles from your previous party and remove the labels. Then fill them with thin branches of flowers and tie them with a rope or ribbons. These types of arrangements work really well at picnics and outdoor gatherings.</li></ol>",
       },
     ],
   },

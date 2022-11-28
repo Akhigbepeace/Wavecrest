@@ -17,7 +17,6 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
 import BlogMenuItem from "components/BlogMenuImage";
-import blogImg from "assets/Images/Blog.png";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
@@ -25,6 +24,8 @@ import { BLOGS, CATEGORIES, CATEGORY_MAP } from "data/blog";
 import BlogSideBar from "components/BlogSideBar";
 import MobileSideBar from "components/MobileSideBar";
 import { useRouter } from "next/router";
+
+const blogImg = "assets/imgs/Blog.png";
 
 const Blog = () => {
   const blogs = BLOGS;

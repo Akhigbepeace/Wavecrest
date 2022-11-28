@@ -1,12 +1,13 @@
 import { Box, Image, Link, Text, Flex } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import Navbar from "components/Navbar";
-import about from "assets/Images/About.png";
 import PostJobVacancies from "./postJobVacancies";
 import ViewJobVacancies from "./viewJobVacancies";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
 import { useRouter } from "next/router";
+
+const about = "/assets/imgs/About.png";
 
 const Career = () => {
   const router = useRouter();
@@ -30,11 +31,15 @@ const Career = () => {
   const [activeLink, setActiveLink] = useState(menuLinks[0]);
 
   useEffect(() => {
-    const profile = menuLinks.find(
-      (menu) => menu.id.toLowerCase() === currentId.toLowerCase()
-    );
+    const initializePage = () => {
+      if (!currentId) return;
+      const profile = menuLinks.find(
+        (menu) => menu.id.toLowerCase() === currentId.toLowerCase()
+      );
 
-    setActiveLink(profile);
+      setActiveLink(profile);
+    };
+    initializePage();
   }, [currentId, menuLinks]);
 
   useEffect(() => {

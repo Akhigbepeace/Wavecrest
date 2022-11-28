@@ -87,25 +87,25 @@ const Training = () => {
   const redirect = (e) => {
     e.preventDefault();
 
-    router.push("/admission/applyOnline", { replace: true });
+    router.push("/admission/applyOnline", );
   };
   const navigateTo = [
     {
       name: "PROGRAMMES",
       redirect: () => {
-        router.push("/academics/programmes", { replace: true });
+        router.push("/academics/programmes", );
       },
     },
     {
       name: "INTERNSHIP",
       redirect: () => {
-        router.push("/academics/internship", { replace: true });
+        router.push("/academics/internship", );
       },
     },
     {
       name: "NYSC",
       redirect: () => {
-        router.push("/academics/nysc", { replace: true });
+        router.push("/academics/nysc", );
       },
     },
   ];

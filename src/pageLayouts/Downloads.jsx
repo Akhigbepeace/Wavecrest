@@ -1,10 +1,11 @@
 import { Box, Image, Heading, Text, Grid, Button } from "@chakra-ui/react";
 import Navbar from "components/Navbar";
 import React from "react";
-import contactpic from "assets/Images/contact.png";
 import JsFileDownloader from "js-file-downloader";
 import Footer from "../components/Footer";
 import FooterCopywright from "../components/FooterCopywright";
+
+const contactpic = "/assets/imgs/contact.png";
 
 const Downloads = () => {
   const donwloadables = [

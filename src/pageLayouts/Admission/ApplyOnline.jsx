@@ -114,25 +114,25 @@ const ApplyOnline = () => {
     {
       name: "ADMISSION REQUIREMENTS",
       redirect: () => {
-        router.push("/admission/admissionRequirements", { replace: true });
+        router.push("/admission/admissionRequirements", );
       },
     },
     {
       name: "TUITION AND SCHOLARSHIP",
       redirect: () => {
-        router.push("/admission/tuitionAndScholarship", { replace: true });
+        router.push("/admission/tuitionAndScholarship", );
       },
     },
     {
       name: "HOSTEL",
       redirect: () => {
-        router.push("/admission/hostel", { replace: true });
+        router.push("/admission/hostel", );
       },
     },
     {
       name: "FAQs",
       redirect: () => {
-        router.push("/admission/faqs", { replace: true });
+        router.push("/admission/faqs", );
       },
     },
   ];

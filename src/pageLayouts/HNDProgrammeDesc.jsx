@@ -29,7 +29,7 @@ const HNDProgrammeDesc = () => {
       text: "National Diploma (ND) in Hospitality Management",
       linkTo: (e) => {
         e.preventDefault();
-        router.push("/NDProgramme", { replace: true });
+        router.push("/NDProgramme");
       },
     },
     {
@@ -37,7 +37,7 @@ const HNDProgrammeDesc = () => {
       text: "Certificate Course In Hospitality Operations",
       linkTo: (e) => {
         e.preventDefault();
-        router.push("/CertificateCourses", { replace: true });
+        router.push("/CertificateCourses");
       },
     },
   ];
@@ -46,7 +46,7 @@ const HNDProgrammeDesc = () => {
 
   const BackToProgrammes = (e) => {
     e.preventDefault();
-    router.push("/academics/programmes", { replace: true });
+    router.push("/academics/programmes", );
   };
   const waveVid =
     "https://res.cloudinary.com/wavecrest1/video/upload/v1667061051/wavevid_bvf8bh.mp4";

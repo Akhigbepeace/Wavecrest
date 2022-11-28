@@ -8,9 +8,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import { useNavigate } from "react-router-dom";
 import waveimg from "assets/Images/waveimg.png";
 import MobileSideBar from "components/MobileSideBar";
+import { useRouter } from "next/router";
 
 const ViewJobVacancies = () => {
   const jobVacancies = [
@@ -52,16 +52,16 @@ const ViewJobVacancies = () => {
     },
   ];
 
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const ViewVacancies = (vacancy) => {
     const navigateTo = `/viewVacancies?companyName=${vacancy.company}&deadline=${vacancy.deadLine}&desc=${vacancy.desc}`;
 
-    navigate(navigateTo, { replace: true });
+    router.push(navigateTo, );
   };
   const postJobVacancy = (e) => {
     e.preventDefault();
-    navigate("/career/postJobVacancies", { replace: true });
+    router.push("/career/postJobVacancies");
   };
 
   return (

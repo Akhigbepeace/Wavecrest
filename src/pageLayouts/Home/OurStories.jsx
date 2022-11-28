@@ -1,10 +1,11 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import {
   Box,
   IconButton,
   useBreakpointValue,
   Flex,
+  Image,
   Heading,
   Text,
   Button,
@@ -38,7 +39,7 @@ export default function CaptionCarousel() {
   const router = useRouter();
 
   const showStory = (card) => {
-    router.push(`/posts/${card.postId}`, { replace: true });
+    router.push(`/posts/${card.postId}`, );
   };
 
   return (

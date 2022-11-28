@@ -23,11 +23,11 @@ const Profile = () => {
 
   const milestone = (e) => {
     e.preventDefault();
-    router.push("/about/milestone", { replace: true });
+    router.push("/about/milestone", );
   };
   const ourTeam = (e) => {
     e.preventDefault();
-    router.push("/about/ourTeam", { replace: true });
+    router.push("/about/ourTeam", );
   };
 
   return (

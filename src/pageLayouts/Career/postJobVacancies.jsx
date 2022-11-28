@@ -11,10 +11,10 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import React, { Fragment, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 import waveimg from "assets/Images/waveimg.png";
 import MobileSideBar from "components/MobileSideBar";
+import { useRouter } from "next/router";
 
 const PostJobVacancies = () => {
   const initialValues = {
@@ -97,11 +97,11 @@ const PostJobVacancies = () => {
       });
     }
   };
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const viewJobVacancy = (e) => {
     e.preventDefault();
-    navigate("/career/viewJobVacancies", { replace: true });
+    router.push("/career/viewJobVacancies");
   };
 
   const toast = useToast();

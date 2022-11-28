@@ -138,25 +138,25 @@ const RespTuition = () => {
     {
       name: "ADMISSION REQUIREMENTS",
       redirect: () => {
-        router.push("/admission/admissionRequirements", { replace: true });
+        router.push("/admission/admissionRequirements", );
       },
     },
     {
       name: "APPLY ONLINE",
       redirect: () => {
-        router.push("/admission/applyOnline", { replace: true });
+        router.push("/admission/applyOnline", );
       },
     },
     {
       name: "HOSTEL",
       redirect: () => {
-        router.push("/admission/hostel", { replace: true });
+        router.push("/admission/hostel", );
       },
     },
     {
       name: "FAQs",
       redirect: () => {
-        router.push("/admission/faqs", { replace: true });
+        router.push("/admission/faqs", );
       },
     },
   ];

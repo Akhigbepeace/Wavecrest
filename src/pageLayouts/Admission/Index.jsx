@@ -1,6 +1,5 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import React, { Fragment, useState, useEffect } from "react";
-import admission from "assets/Images/Admission.png";
 import AdmissionRequirements from "pageLayouts/Admission/AdmissionRequirements";
 import TuitionAndScholarship from "pageLayouts/Admission/Tuition And Scholarship/TuitionAndScholarship";
 import ApplyOnline from "pageLayouts/Admission/ApplyOnline";
@@ -10,7 +9,10 @@ import LinkTabs from "components/LinkTabs";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
 import Navbar from "components/Navbar";
+
 import { useRouter } from "next/router";
+
+const admission = "/assets/imgs/Admission.png";
 
 const menuLinks = [
   {
@@ -46,6 +48,7 @@ const Admission = () => {
 
   const [activeLink, setActiveLink] = useState(menuLinks[0]);
 
+  console.log("router.query==>", router.query);
   useEffect(() => {
     if (id) {
       const profile = menuLinks.find(
@@ -57,7 +60,7 @@ const Admission = () => {
   }, [id]);
 
   const handleLinkChange = (menuId) => {
-    router.replace(`/admission/${menuId}`);
+    router.push(`/admission/${menuId}`);
   };
 
   return (

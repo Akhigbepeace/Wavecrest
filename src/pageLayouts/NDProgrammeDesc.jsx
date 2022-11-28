@@ -9,13 +9,13 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import Navbar from "components/Navbar";
-import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
 import ReactPlayer from "react-player";
 import JsFileDownloader from "js-file-downloader";
 
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
+import { useRouter } from "next/router";
 
 const NDProgrammeDesc = () => {
   const about =
@@ -32,7 +32,7 @@ const NDProgrammeDesc = () => {
       text: "Higher National Diploma (HND) in Hospitality Management",
       linkTo: (e) => {
         e.preventDefault();
-        navigate("/HNDProgramme", { replace: true });
+        router.push("/HNDProgramme", );
       },
     },
     {
@@ -40,16 +40,16 @@ const NDProgrammeDesc = () => {
       text: "Certificate Course In Hospitality Operations",
       linkTo: (e) => {
         e.preventDefault();
-        navigate("/CertificateCourses", { replace: true });
+        router.push("/CertificateCourses");
       },
     },
   ];
 
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const BackToProgrammes = (e) => {
     e.preventDefault();
-    navigate("/academics/programmes", { replace: true });
+    router.push("/academics/programmes");
   };
   const waveVid =
     "https://res.cloudinary.com/wavecrest1/video/upload/v1667061051/wavevid_bvf8bh.mp4";

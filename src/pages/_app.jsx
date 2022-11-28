@@ -36,7 +36,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
       <PopupModal />
-      <Component {...pageProps} />/
+      <Component {...pageProps} />
     </ChakraProvider>
   );
 }

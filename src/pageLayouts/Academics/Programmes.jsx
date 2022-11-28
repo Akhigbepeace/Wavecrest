@@ -40,7 +40,7 @@ const Programmes = () => {
       navigateTo: function ShowProgramme(e) {
         e.preventDefault();
 
-        router.push("/HNDProgramme", { replace: true });
+        router.push("/HNDProgramme", );
       },
     },
     {
@@ -80,33 +80,33 @@ const Programmes = () => {
       navigateTo: function ShowProgramme(e) {
         e.preventDefault();
 
-        router.push("/CertificateCourses", { replace: true });
+        router.push("/CertificateCourses", );
       },
     },
   ];
 
   const ApplyNow = (e) => {
     e.preventDefault();
-    router.push("/admission/applyOnline", { replace: true });
+    router.push("/admission/applyOnline", );
   };
 
   const navigateTo = [
     {
       name: "TRAINING",
       redirect: () => {
-        router.push("/academics/training", { replace: true });
+        router.push("/academics/training", );
       },
     },
     {
       name: "INTERNSHIP",
       redirect: () => {
-        router.push("/academics/internship", { replace: true });
+        router.push("/academics/internship", );
       },
     },
     {
       name: "NYSC",
       redirect: () => {
-        router.push("/academics/nysc", { replace: true });
+        router.push("/academics/nysc", );
       },
     },
   ];

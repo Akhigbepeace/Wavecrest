@@ -19,8 +19,7 @@ const Search = () => {
   const ShowResult = (e) => {
     e.preventDefault();
 
-    // navigate(navigateTo, { replace: true });
-    router.replace(navigateTo);
+    router.push(navigateTo);
   };
 
   return (

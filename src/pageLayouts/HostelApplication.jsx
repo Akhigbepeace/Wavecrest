@@ -11,16 +11,17 @@ import {
 } from "@chakra-ui/react";
 
 import React, { Fragment, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
 import emailjs from "emailjs-com";
 
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
+import { useRouter } from "next/router";
 
 const HostelApplication = () => {
-const hostel2 =  "https://res.cloudinary.com/wavecrest1/image/upload/v1667228296/hostel2_obtkc0.jpg";
+  const hostel2 =
+    "https://res.cloudinary.com/wavecrest1/image/upload/v1667228296/hostel2_obtkc0.jpg";
 
   const initialValues = {
     user_name: "",
@@ -103,12 +104,12 @@ const hostel2 =  "https://res.cloudinary.com/wavecrest1/image/upload/v1667228296
     }
   };
 
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const BackToHostel = (e) => {
     e.preventDefault();
 
-    navigate("/admission/hostel", { replace: true });
+    router.push("/admission/hostel");
   };
 
   const [showCoursePrice, setShowCoursePrice] = useState({});

@@ -9,14 +9,15 @@ import {
   Link,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import { useSearchParams } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Navbar from "components/Navbar";
-import about from "assets/Images/About.png";
-import searchImg from "assets/Images/search.svg";
-import blogPost2 from "assets/Images/aboutus.png";
 import Footer from "../components/Footer";
 import FooterCopywright from "../components/FooterCopywright";
+import { useRouter } from "next/router";
+
+const about = "/assets/imgs/About.png";
+const searchImg = "/assets/imgs/search.svg";
+const blogPost2 = "/assets/imgs/aboutus.png";
 
 const SearchResult = () => {
   const results = [
@@ -57,8 +58,9 @@ const SearchResult = () => {
         "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
     },
   ];
+  const router = useRouter();
 
-  const [searchParams] = useSearchParams();
+  const searchTerm = router.query.searchTerm;
 
   return (
     <Box>
@@ -85,7 +87,7 @@ const SearchResult = () => {
               fontSize="30px"
               textAlign="left"
             >
-              {searchParams.get("searchTerm")}
+              {searchTerm}
             </Heading>
             <Text
               color="white"
