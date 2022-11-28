@@ -163,7 +163,13 @@ const Contact = () => {
       <MobileSideBar />
 
       <Box h="441px" position="relative">
-        <Image src={contactpic} h="100%" w="100%" objectFit="cover" />
+        <Image
+          alt="Contact"
+          src={contactpic}
+          h="100%"
+          w="100%"
+          objectFit="cover"
+        />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -248,15 +254,15 @@ const Contact = () => {
               lineHeight="25px"
               color="#021D37"
             >
-              Kindly leave us a message and we'll get back to you as soon as
-              possible
+              Kindly leave us a message and we&lsquo;ll get back to you as soon
+              as possible
             </Text>
 
             <form ref={form} onSubmit={sendEmail}>
               <Stack>
                 {contactFields.map((field, index) => {
                   return (
-                    <Fragment>
+                    <Fragment key={index}>
                       <Input
                         isRequired
                         key={index}

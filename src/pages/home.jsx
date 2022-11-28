@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Home from "../pageLayouts/Home";
+import Home from "pageLayouts/Home";
 
 const HomePage = () => {
   return (

@@ -85,11 +85,11 @@ const ViewVacancies = () => {
 
   const router = useRouter();
 
-  const BackToJobVancanies = (e) => {
+  const backToJobVancanies = (e) => {
     e.preventDefault();
-    router("/career/viewJobVacancies", );
+    router("/career/viewJobVacancies");
   };
-  const { companyName, desc, deadline } = router.query;
+  const { companyName = "", desc = "", deadline = "" } = router.query;
   const toast = useToast();
 
   return (
@@ -142,7 +142,7 @@ const ViewVacancies = () => {
               xl: "20px",
               "2xl": "20px",
             }}
-            onClick={(e) => BackToJobVancanies(e)}
+            onClick={(e) => backToJobVancanies(e)}
           >
             <FaChevronLeft size="20px" />
             Back To Job Vacancies
@@ -273,7 +273,7 @@ const ViewVacancies = () => {
           >
             {forms.map((form, index) => {
               return (
-                <Fragment>
+                <Fragment key={index}>
                   <FormLabel
                     fontFamily="Manrope"
                     color="#021D37"

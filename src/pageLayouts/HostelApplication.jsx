@@ -113,6 +113,7 @@ const HostelApplication = () => {
   };
 
   const [showCoursePrice, setShowCoursePrice] = useState({});
+  console.log(`Remove: ${showCoursePrice}`);
 
   const toast = useToast();
   return (

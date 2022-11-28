@@ -7,6 +7,14 @@ import {
   Text,
   Button,
 } from "@chakra-ui/react";
+
+import {
+  about,
+  aboutgallery2,
+  aboutgallery4,
+  waveVid,
+  fileUrl,
+} from "config/constants/copy/certificateCourses";
 import React, { Fragment } from "react";
 import Navbar from "components/Navbar";
 import { FaChevronLeft } from "react-icons/fa";
@@ -17,12 +25,6 @@ import FooterCopywright from "components/FooterCopywright";
 import { useRouter } from "next/router";
 
 const CertificateCoursesDesc = () => {
-  const aboutgallery2 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289263/wavecrest/studyprogrammes1_gmzcqk.png";
-  const about =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289262/wavecrest/studyprogrammes2_lyhuke.png";
-  const aboutgallery4 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667287702/wavecrest/IMG_8753_copy_ucczmz.jpg";
   const quickLinks = [
     {
       image: aboutgallery2,
@@ -44,15 +46,10 @@ const CertificateCoursesDesc = () => {
   ];
   const router = useRouter();
 
-  const BackToProgrammes = (e) => {
+  const backToProgrammes = (e) => {
     e.preventDefault();
     router.push("/academics/programmes");
   };
-
-  const waveVid =
-    "https://res.cloudinary.com/wavecrest1/video/upload/v1667061051/wavevid_bvf8bh.mp4";
-
-  const fileUrl = "/documents/CERTIFICATE IN HOSPITALITY OPERATIONS.pdf";
 
   return (
     <Fragment>
@@ -96,7 +93,7 @@ const CertificateCoursesDesc = () => {
         ml="20px"
         fontWeight="700"
         bg="#EEE"
-        onClick={(e) => BackToProgrammes(e)}
+        onClick={(e) => backToProgrammes(e)}
       >
         <FaChevronLeft size="20px" />
         Back To Programmes
@@ -278,9 +275,10 @@ const CertificateCoursesDesc = () => {
               "2xl": "flex",
             }}
           >
-            {quickLinks.map((quickLink) => {
+            {quickLinks.map((quickLink, index) => {
               return (
                 <Box
+                  key={index}
                   onClick={quickLink.linkTo}
                   w={{
                     sm: "100%",

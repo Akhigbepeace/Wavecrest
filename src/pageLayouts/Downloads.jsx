@@ -57,7 +57,13 @@ const Downloads = () => {
       <Navbar />
 
       <Box h="441px" w="100%" gridGap="68px" position="relative">
-        <Image src={contactpic} h="100%" w="100%" objectFit="cover" />
+        <Image
+          src={contactpic}
+          h="100%"
+          w="100%"
+          objectFit="cover"
+          alt="Contact"
+        />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -115,8 +121,8 @@ const Downloads = () => {
             mt="24px"
             mb="30px"
           >
-            Do you wish to have our brochures, fliers, e.t.c? Below are a
-            list of our documents you can download.
+            Do you wish to have our brochures, fliers, e.t.c? Below are a list
+            of our documents you can download.
           </Text>
         </Box>
 

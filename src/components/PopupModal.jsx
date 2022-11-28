@@ -23,19 +23,22 @@ const PopupModal = () => {
   const [timerId, setTimerId] = useState(-1);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const hasViewedModal = JSON.parse(localStorage.getItem("hasViewedModal"));
-      const hasSubscribed =
-        localStorage.getItem("hasSubscribed") &&
-        JSON.parse(localStorage.getItem("hasSubscribed"));
-      const timerId = +setTimeout(() => {
-        if (!hasViewedModal && !hasSubscribed) {
-          onOpen();
-        }
-      }, 3000);
+    const initialisedPage = () => {
+      if (typeof window !== "undefined") {
+        const hasViewedModal =
+          localStorage.getItem("hasViewedModal") === "true";
+        const hasSubscribed = localStorage.getItem("hasSubscribed") === "true";
+        const timerId = +setTimeout(() => {
+          if (!hasViewedModal && !hasSubscribed) {
+            onOpen();
+          }
+        }, 3000);
 
-      setTimerId(timerId);
-    }
+        setTimerId(timerId);
+      }
+    };
+
+    initialisedPage();
 
     return () => {
       clearTimeout(timerId);
@@ -77,7 +80,7 @@ const PopupModal = () => {
         duration: 5000,
         isClosable: true,
       });
-      localStorage.setItem("hasSubscribed", true);
+      localStorage.setItem("hasSubscribed", "true");
       handleModalClose();
     }
   };

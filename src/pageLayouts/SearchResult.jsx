@@ -19,48 +19,49 @@ const about = "/assets/imgs/About.png";
 const searchImg = "/assets/imgs/search.svg";
 const blogPost2 = "/assets/imgs/aboutus.png";
 
+const results = [
+  {
+    resultImg: blogPost2,
+    category: "News & Events / October 8, 2022.",
+    posts:
+      "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+  },
+  {
+    resultImg: blogPost2,
+    category: "Admissions / Tuition and Scholarship",
+    posts:
+      "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+  },
+  {
+    resultImg: blogPost2,
+    category: "News & Events / October 8, 2022.",
+    posts:
+      "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+  },
+  {
+    resultImg: blogPost2,
+    category: "Admissions / Tuition and Scholarship",
+    posts:
+      "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+  },
+  {
+    resultImg: blogPost2,
+    category: "News & Events / October 8, 2022.",
+    posts:
+      "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+  },
+  {
+    resultImg: blogPost2,
+    category: "Admissions / Tuition and Scholarship",
+    posts:
+      "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
+  },
+];
+
 const SearchResult = () => {
-  const results = [
-    {
-      resultImg: blogPost2,
-      category: "News & Events / October 8, 2022.",
-      posts:
-        "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-    },
-    {
-      resultImg: blogPost2,
-      category: "Admissions / Tuition and Scholarship",
-      posts:
-        "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-    },
-    {
-      resultImg: blogPost2,
-      category: "News & Events / October 8, 2022.",
-      posts:
-        "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-    },
-    {
-      resultImg: blogPost2,
-      category: "Admissions / Tuition and Scholarship",
-      posts:
-        "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-    },
-    {
-      resultImg: blogPost2,
-      category: "News & Events / October 8, 2022.",
-      posts:
-        "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-    },
-    {
-      resultImg: blogPost2,
-      category: "Admissions / Tuition and Scholarship",
-      posts:
-        "‘The icing on the cake’ …Wavecrest College of Hospitality Partners with Fly Africa Initiative to break Guinness World Record 2020",
-    },
-  ];
   const router = useRouter();
 
-  const searchTerm = router.query.searchTerm;
+  const searchTerm = router.query.searchTerm || "";
 
   return (
     <Box>

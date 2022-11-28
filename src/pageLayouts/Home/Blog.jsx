@@ -12,11 +12,6 @@ import React from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Slider from "react-slick";
 import styled from "@emotion/styled";
-import CTHFlier from "assets/Images/tch flier.png";
-import PCHFlier from "assets/Images/P.C.H. flier.png";
-import CulinaryFlier from "assets/Images/Culinary flyer.png";
-import graduationFlier from "assets/Images/grad 3.png";
-import graduationFair from "assets/Images/graduation fair.jpg";
 
 const settings = {
   dots: true,
@@ -30,6 +25,11 @@ const settings = {
   slidesToScroll: 1,
 };
 
+const CTHFlier = "/assets/imgs/tch flier.png";
+const PCHFlier = "/assets/imgs/P.C.H. flier.png";
+const CulinaryFlier = "/assets/imgs/Culinary flyer.png";
+const graduationFlier = "/assets/Images/grad 3.png";
+const graduationFair = "/assets/Images/graduation fair.jpg";
 export default function CaptionCarousel() {
   const [slider, setSlider] = React.useState(null);
 

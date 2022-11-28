@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import Head from "next/head";
 import dynamic from "next/dynamic";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "slick-carousel/slick/slick.css";
@@ -34,9 +34,21 @@ export default function MyApp({ Component, pageProps }) {
   const theme = extendTheme({ colors, fonts, breakpoints });
 
   return (
-    <ChakraProvider theme={theme}>
-      <PopupModal />
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
+      </Head>
+
+      <ChakraProvider theme={theme}>
+        <PopupModal />
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </>
   );
 }

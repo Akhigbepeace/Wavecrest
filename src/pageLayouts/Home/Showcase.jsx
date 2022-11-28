@@ -1,25 +1,30 @@
 import { Box, Grid, Flex, Text, Heading, Button } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import ReactPlayer from "react-player";
 import styled from "@emotion/styled";
 import ShowcaseSlider from "components/ShowcaseSlider";
 import { useRouter } from "next/router";
 import Image from "next/image";
-const Showcase = (props) => {
-  const showcase1 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667060013/Showcase1_box3y3.png";
-  const showcase2 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667060014/Showcase2_xlxynv.jpg";
-  const showcase3 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667060027/Showcase4_nsyiwy.jpg";
-  const showcase4 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667059988/Showcase3_dtczi4.png";
+import dynamic from "next/dynamic";
 
-  const waveVid =
-    "https://res.cloudinary.com/wavecrest1/video/upload/v1667388100/wavevid-bvf8bh_Le77usXx_aqs5ez_1_b3gfin.mp4";
+const ReactPlayer = dynamic(() => import("react-player"), {
+  ssr: false,
+});
 
-  const showcaseGallery = [showcase1, showcase2, showcase4, showcase3];
+const showcase1 =
+  "https://res.cloudinary.com/wavecrest1/image/upload/v1667060013/Showcase1_box3y3.png";
+const showcase2 =
+  "https://res.cloudinary.com/wavecrest1/image/upload/v1667060014/Showcase2_xlxynv.jpg";
+const showcase3 =
+  "https://res.cloudinary.com/wavecrest1/image/upload/v1667060027/Showcase4_nsyiwy.jpg";
+const showcase4 =
+  "https://res.cloudinary.com/wavecrest1/image/upload/v1667059988/Showcase3_dtczi4.png";
 
+const waveVid =
+  "https://res.cloudinary.com/wavecrest1/video/upload/v1667388100/wavevid-bvf8bh_Le77usXx_aqs5ez_1_b3gfin.mp4";
+
+const showcaseGallery = [showcase1, showcase2, showcase4, showcase3];
+
+const Showcase = () => {
   const router = useRouter();
 
   const Redirect = (e) => {
@@ -88,7 +93,7 @@ const Showcase = (props) => {
                   "2xl": "600px",
                 }}
               >
-                Nigeria's Premier Hospitality Monotechnic
+                Nigeria&lsquo;s Premier Hospitality Monotechnic
               </Text>
             </Flex>
           </Box>
@@ -132,7 +137,6 @@ const Showcase = (props) => {
             }}
           >
             <Box bg="#021D37" h="3px" w="88px" mt="20px"></Box>
-
             <Heading
               fontSize="60px"
               fontFamily="Visual Hollow Script"
@@ -142,7 +146,6 @@ const Showcase = (props) => {
             >
               Study In
             </Heading>
-
             <Heading
               fontSize={{
                 sm: "25px",
@@ -157,7 +160,7 @@ const Showcase = (props) => {
                 lg: "400px",
               }}
             >
-              Nigeria's Premier Hospitality Monotechnic
+              Nigeria&lsquo;s Premier Hospitality Monotechnic
             </Heading>
 
             <Text
@@ -205,6 +208,17 @@ const Showcase = (props) => {
             >
               Learn More
             </Button>
+
+            {/* 
+
+            
+
+           
+
+      
+
+
+            */}
           </Box>
         </Box>
       </Box>

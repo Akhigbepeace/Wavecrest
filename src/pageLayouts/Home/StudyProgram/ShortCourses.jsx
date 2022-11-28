@@ -59,12 +59,12 @@ const ShortCourses = () => {
   const linkTo = (e) => {
     e.preventDefault();
 
-    router.push("/academics/training", );
+    router.push("/academics/training");
   };
   const redirect = (e) => {
     e.preventDefault();
 
-    router.push("/admission/applyOnline", );
+    router.push("/admission/applyOnline");
   };
 
   return (

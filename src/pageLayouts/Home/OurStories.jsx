@@ -39,7 +39,7 @@ export default function CaptionCarousel() {
   const router = useRouter();
 
   const showStory = (card) => {
-    router.push(`/posts/${card.postId}`, );
+    router.push(`/posts/${card.postId}`);
   };
 
   return (

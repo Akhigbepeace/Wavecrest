@@ -13,8 +13,9 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import Logo from "assets/Images/logo_wavecrest.svg";
-import Menu from "assets/Images/Menu.png";
+
+const Logo = "/assets/imgs/logo_wavecrest.svg";
+const Menu = "/assets/imgs/Menu.png";
 
 const MobileSideBar = () => {
   const mobileNavLinks = [
@@ -257,7 +258,7 @@ const MobileSideBar = () => {
               <Flex flexDirection="column">
                 {activeModalMenu.map((navLink, index) => {
                   return (
-                    <Fragment>
+                    <Fragment key={index}>
                       {navLink.to ? (
                         <Link
                           key={index}

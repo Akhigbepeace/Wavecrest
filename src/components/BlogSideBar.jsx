@@ -10,7 +10,7 @@ import {
   InputGroup,
 } from "@chakra-ui/react";
 
-import searchImg from "assets/Images/search.svg";
+const searchImg = "/assets/imgs/search.svg";
 
 const BlogSideBar = ({
   currentBlog,
@@ -52,18 +52,16 @@ const BlogSideBar = ({
             fontWeight: "400",
           }}
         />
-        <InputRightElement
-          children={
-            <Image
-              src={searchImg}
-              w="20px"
-              h="20px"
-              mt="23px"
-              mr="24px"
-              alignItems="center"
-            />
-          }
-        />
+        <InputRightElement>
+          <Image
+            src={searchImg}
+            w="20px"
+            h="20px"
+            mt="23px"
+            mr="24px"
+            alignItems="center"
+          />
+        </InputRightElement>
       </InputGroup>
 
       <Box>

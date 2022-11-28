@@ -47,7 +47,13 @@ const Blog = () => {
 
       <Box mb="100px">
         <Box w="100%" position="relative">
-          <Image src={blogImg} h="441px" w="100%" objectFit="cover" />
+          <Image
+            src={blogImg}
+            h="441px"
+            w="100%"
+            objectFit="cover"
+            alt="Blog"
+          />
 
           <Box
             bg="rgba(0, 24, 71, 0.5)"

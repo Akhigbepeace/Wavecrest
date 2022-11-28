@@ -1,10 +1,8 @@
-import React from 'react'
+import React from "react";
 import NDProgrammeDesc from "pageLayouts/NDProgrammeDesc";
 
 const NDProgrammePage = () => {
-  return (
-    <NDProgrammeDesc />
-  )
-}
+  return <NDProgrammeDesc />;
+};
 
-export default NDProgrammePage
+export default NDProgrammePage;

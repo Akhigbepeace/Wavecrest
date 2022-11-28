@@ -21,51 +21,59 @@ const visa = "/assets/imgs/visa.png";
 const paypal = "/assets/imgs/paypal.png";
 const mastercard = "/assets/imgs/mastercard.png";
 
+const forms = [
+  {
+    fieldType: "name",
+    placeHolder: "FullName",
+    variant: "filled",
+  },
+  {
+    fieldType: "number",
+    placeHolder: "Phone Number",
+    variant: "filled",
+  },
+  {
+    fieldType: "email",
+    placeHolder: "Email",
+    variant: "filled",
+  },
+];
+
+const payNow = [
+  {
+    image: paypal,
+    width: "152px",
+    height: "38px",
+    alt: "Paypal",
+  },
+  {
+    image: mastercard,
+    alt: "Mastercard",
+    width: "92px",
+    height: "55px",
+  },
+  {
+    image: visa,
+    alt: "Visa",
+    width: "112px",
+    height: "35px",
+  },
+];
+
 const SupportUs = () => {
-  const forms = [
-    {
-      fieldType: "name",
-      placeHolder: "FullName",
-      variant: "filled",
-    },
-    {
-      fieldType: "number",
-      placeHolder: "Phone Number",
-      variant: "filled",
-    },
-    {
-      fieldType: "email",
-      placeHolder: "Email",
-      variant: "filled",
-    },
-  ];
-
-  const payNow = [
-    {
-      image: paypal,
-      width: "152px",
-      height: "38px",
-    },
-    {
-      image: mastercard,
-
-      width: "92px",
-      height: "55px",
-    },
-    {
-      image: visa,
-      width: "112px",
-      height: "35px",
-    },
-  ];
-
   return (
     <Fragment>
       <Navbar />
       <MobileSideBar />
 
       <Box h="441px" w="100%" gridGap="68px" position="relative">
-        <Image src={admission} h="100%" w="100%" objectFit="cover" />
+        <Image
+          src={admission}
+          h="100%"
+          w="100%"
+          objectFit="cover"
+          alt="Admission"
+        />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -187,6 +195,7 @@ const SupportUs = () => {
                   w={pay.width}
                   mr="10px"
                   h={pay.height}
+                  alt={pay.alt}
                 />
               );
             })}

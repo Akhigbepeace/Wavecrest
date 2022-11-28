@@ -46,7 +46,7 @@ const HNDProgrammeDesc = () => {
 
   const BackToProgrammes = (e) => {
     e.preventDefault();
-    router.push("/academics/programmes", );
+    router.push("/academics/programmes");
   };
   const waveVid =
     "https://res.cloudinary.com/wavecrest1/video/upload/v1667061051/wavevid_bvf8bh.mp4";
@@ -58,7 +58,7 @@ const HNDProgrammeDesc = () => {
       <Navbar />
 
       <Box h="441px" w="100%" gridGap="68px" position="relative">
-        <Image src={about} h="100%" w="100%" objectFit="cover" />
+        <Image alt="About" src={about} h="100%" w="100%" objectFit="cover" />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"

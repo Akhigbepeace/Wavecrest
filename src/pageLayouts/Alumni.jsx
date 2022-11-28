@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Alumni = () => {
-  return (
-    <div>Alumni Page</div>
-  )
-}
+  return <div>Alumni Page</div>;
+};
 
-export default Alumni
+export default Alumni;

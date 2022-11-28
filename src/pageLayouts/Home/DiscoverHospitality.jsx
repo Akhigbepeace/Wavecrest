@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { Box, Grid, Link, Text, Heading, Flex } from "@chakra-ui/react";
 import React from "react";
-import discoverpic1 from "assets/Images/discoverpic 1.png";
-import discoverpic2 from "assets/Images/discoverpic 2.png";
-import training3 from "assets/Images/training3.png";
+
+const discoverpic1 = "/assets/imgs/discoverpic 1.png";
+const discoverpic2 = "/assets/imgs/discoverpic 2.png";
+const training3 = "/assets/imgs/training3.png";
 
 const DiscoverHospitality = () => {
   return (
