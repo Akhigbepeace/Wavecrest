@@ -14,14 +14,14 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import React, { useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
 import emailjs from "emailjs-com";
-import logo from "assets/Images/WC-LOGO-july.png";
-import linked from "assets/Images/linked.png";
-import twitter from "assets/Images/Twitter.svg";
-import facebook from "assets/Images/facebook.svg";
-import whatsapp from "assets/Images/whatsapp.png";
-import Instagram from "assets/Images/ig.svg";
+
+const logo = "/assets/imgs/WC-LOGO-july.png";
+const linked = "/assets/imgs/linked.png";
+const twitter = "/assets/imgs/Twitter.svg";
+const facebook = "/assets/imgs/facebook.svg";
+const whatsapp = "/assets/imgs/whatsapp.png";
+const Instagram = "/assets/imgs/ig.svg";
 
 const Footer = () => {
   const socials = [
@@ -198,7 +198,7 @@ const Footer = () => {
           "2xl": "flex-end",
         }}
       >
-        <Link to="/" as={NavLink}>
+        <Link to="/">
           <Image src={logo} alt="logo" w="270px" height="54px" mb="15px" />
         </Link>
 
