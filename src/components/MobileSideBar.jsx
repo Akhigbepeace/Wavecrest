@@ -14,7 +14,7 @@ import {
 import React, { Fragment, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const Logo = "/assets/imgs/logo_wavecrest.svg";
+const Logo = "/assets/imgs/WC-LOGO-july.png";
 const Menu = "/assets/imgs/Menu.png";
 
 const MobileSideBar = () => {
@@ -270,6 +270,7 @@ const MobileSideBar = () => {
                           lineHeight="30px"
                           mt="10px"
                           transition="all ease 0.5s"
+                          cursor="pointer"
                           _hover={{
                             color: "brown",
                             textDecoration: "none",
@@ -293,6 +294,7 @@ const MobileSideBar = () => {
                             lineHeight="30px"
                             mt="10px"
                             transition="all ease 0.5s"
+                            cursor="pointer"
                             onClick={() => {
                               if (navLink.NestedLinks.length) {
                                 setActiveModalMenu(navLink.NestedLinks);

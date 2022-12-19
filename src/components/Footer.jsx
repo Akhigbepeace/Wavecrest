@@ -17,7 +17,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 
 const logo = "/assets/imgs/WC-LOGO-july.png";
-const linked = "/assets/imgs/linked.png";
+const linked = "/assets/imgs/linkedin.svg";
 const twitter = "/assets/imgs/Twitter.svg";
 const facebook = "/assets/imgs/facebook.svg";
 const whatsapp = "/assets/imgs/whatsapp.png";

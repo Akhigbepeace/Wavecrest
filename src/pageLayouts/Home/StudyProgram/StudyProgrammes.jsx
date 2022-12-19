@@ -9,8 +9,7 @@ import ShortCourses from "./ShortCourses";
 const StudyProgrammes = () => {
   const studyProgrammes1 =
     "https://res.cloudinary.com/wavecrest1/image/upload/v1667289263/wavecrest/studyprogrammes1_gmzcqk.png";
-  const studyProgrammes2 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289262/wavecrest/studyprogrammes2_lyhuke.png";
+  const studyProgrammes2 = "/assets/imgs/studyprogrammes 2.png";
   const studyProgrammes3 =
     "https://res.cloudinary.com/wavecrest1/image/upload/v1667287702/wavecrest/IMG_8753_copy_ucczmz.jpg";
   const studyProgrammes4 =

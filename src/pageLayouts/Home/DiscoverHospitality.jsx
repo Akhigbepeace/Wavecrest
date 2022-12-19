@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Box, Grid, Link, Text, Heading, Flex } from "@chakra-ui/react";
+import { Box, Grid, Link, Text, Image, Heading, Flex } from "@chakra-ui/react";
 import React from "react";
 
 const discoverpic1 = "/assets/imgs/discoverpic 1.png";

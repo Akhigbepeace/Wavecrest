@@ -3,8 +3,7 @@ import React from "react";
 import ReactPlayer from "react-player";
 
 const OurStory = () => {
-  const waveVid =
-    "https://res.cloudinary.com/wavecrest1/video/upload/v1667061051/wavevid_bvf8bh.mp4";
+  const waveVid = "/assets/imgs/wavevid.mp4";
   return (
     <Flex
       bg="#FFF"

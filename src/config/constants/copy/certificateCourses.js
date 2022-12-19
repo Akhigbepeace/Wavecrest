@@ -5,7 +5,6 @@ export const about =
 export const aboutgallery4 =
   "https://res.cloudinary.com/wavecrest1/image/upload/v1667287702/wavecrest/IMG_8753_copy_ucczmz.jpg";
 
-export const waveVid =
-  "https://res.cloudinary.com/wavecrest1/video/upload/v1667061051/wavevid_bvf8bh.mp4";
+export const waveVid = "/assets/imgs/wavevid.mp4";
 
 export const fileUrl = "/documents/CERTIFICATE IN HOSPITALITY OPERATIONS.pdf";
