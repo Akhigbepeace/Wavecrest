@@ -41,7 +41,7 @@ export default function CaptionCarousel() {
       flier: CulinaryFlier,
       title: "Culinary Courses",
       text: "A professional programme providing the skill sets for culinary knowledge.",
-      date: "31st Oct - 30th Nov",
+      date: "February 6 - March 8",
       linkTo: "https://forms.gle/VQtgEFMa9qhsojGn7",
       link: "Apply Now",
     },
