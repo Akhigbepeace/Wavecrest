@@ -18,8 +18,7 @@ import { useRouter } from "next/router";
 
 const HNDProgrammeDesc = () => {
   const about = "/assets/imgs/studyprogrammes 2.png";
-  const aboutgallery1 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289262/wavecrest/studyprogrammes2_lyhuke.png";
+  const aboutgallery1 = "/assets/imgs/study-programme3.jpg";
   const aboutgallery4 = "/assets/imgs/studyprogramme.jpg";
   const quickLinks = [
     {

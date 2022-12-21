@@ -20,8 +20,7 @@ import FooterCopywright from "components/FooterCopywright";
 import { useRouter } from "next/router";
 
 const HostelApplication = () => {
-  const hostel2 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667228296/hostel2_obtkc0.jpg";
+  const hostel2 = "/assets/imgs/hostel2.jpg";
 
   const initialValues = {
     user_name: "",

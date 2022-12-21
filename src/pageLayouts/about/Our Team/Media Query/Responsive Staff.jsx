@@ -4,6 +4,7 @@ const deputyProvost = "assets/imgs/felicitas.jpg";
 const Sayo = "assets/imgs/academicstaff/Sayo.jpg";
 const Lilian = "assets/imgs/academicstaff/Lilian.jpg";
 const Odinaka = "assets/imgs/academicstaff/Odinaka.jpg";
+const imageAvatar = "/assets/imgs/image-avatar.png";
 
 export default function Carousel() {
   const staffs = [
@@ -11,32 +12,27 @@ export default function Carousel() {
       title: "Academic Staff",
       others: [
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1666966058/attachments/9_uwe295.png",
+          image: imageAvatar,
           name: "Osuagwu Juliet",
           post: "Lecturer",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1666965390/13_xofrgc.png",
+          image: imageAvatar,
           name: "Eboigbe Helen",
           post: "Ethics Lecturer",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1666964844/10_igexil.png",
+          image: imageAvatar,
           name: "Obasi Chizurumoke",
           post: "Lecturer / Workshop Co-ordinator",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1666965393/14_ouznkb.png",
+          image: imageAvatar,
           name: "Eboagwu Helen",
           post: "Facility Lecturer",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1666963176/16_cnayoq.png",
+          image: imageAvatar,
           name: "Adeyemo Dorcas",
           post: "SIWES Co-ordinator",
         },
@@ -51,26 +47,22 @@ export default function Carousel() {
           post: "Account Lecturer / CTH Trainer",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1667072703/wavecrest/6_20221029_111623_0005_tfiouq.png",
+          image: imageAvatar,
           name: "Aduba Chineze",
           post: "French Lecturer",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1666964768/5_wxydyj.png",
+          image: imageAvatar,
           name: "Samuel Asuquo",
           post: "Chef",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1666966097/attachments/11_utsjiw.png",
+          image: imageAvatar,
           name: "Iyangudo Gloria",
           post: "F&B Lecturer",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1667073201/wavecrest/9_20221029_111623_0008_qddzzq.png",
+          image: imageAvatar,
           name: "Isichei Vivian",
           post: "Lecturer and Academic Co-ordinator",
         },
@@ -80,20 +72,17 @@ export default function Carousel() {
           post: "Hospitality Management Lecturer",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1667072975/wavecrest/1_20221029_111623_0000_uewmsx.png",
+          image: imageAvatar,
           name: "Uju Arinze",
           post: "Research Lecturer",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1666966109/attachments/12_atxzfk.png",
+          image: imageAvatar,
           name: "Ezika Cecilia",
           post: "Faculty Secretary",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1666963731/15_x1t7gg.png",
+          image: imageAvatar,
           name: "Onaolapo Lizzy",
           post: "Food Service and Production Lecturer",
         },
@@ -104,8 +93,7 @@ export default function Carousel() {
       title: "Non-Academic Staff",
       others: [
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1666962461/1_l0bxwm.png",
+          image: imageAvatar,
           name: "Nneka Chukwuekezie",
           post: "Students Affairs/ Admission Officer",
         },
@@ -115,44 +103,37 @@ export default function Carousel() {
           post: "Social Media and Digital Marketing Personnel",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1666963971/4_zuzpbn.png",
+          image: imageAvatar,
           name: "Okorie Nnenna",
           post: "Assistant Account Officer",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1667239198/wavecrest/Presh_g11pjl.png",
+          image: imageAvatar,
           name: "Precious Ebung",
           post: "Front Desk Personnel",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1666962564/2_ewcijt.png",
+          image: imageAvatar,
           name: "Baptista Uwandu",
           post: "Public Relations Officer",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1667072776/wavecrest/8_20221029_111623_0007_vchvkn.png",
+          image: imageAvatar,
           name: "Oparachukwu Goodness",
           post: "Practical Assistant",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1667073327/wavecrest/7_20221029_111623_0006_cghscl.png",
+          image: imageAvatar,
           name: "Nmereole Pius",
           post: "Security Officer",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1666963708/3_fadje0.png",
+          image: imageAvatar,
           name: "Amarachukwu  Kenneth",
           post: "Administrative officer",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1666963740/6_on33p1.png",
+          image: imageAvatar,
           name: "Reuben Francisca Ngozi",
           post: "Secretarial Assistant - Librarian",
         },
@@ -163,32 +144,27 @@ export default function Carousel() {
       title: "ODC",
       others: [
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1667072788/wavecrest/10_20221029_111623_0009_bciolr.png",
+          image: imageAvatar,
           name: "Ejiogu Theodora",
           post: "Pastry Chef",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1667072700/wavecrest/3_20221029_111623_0002_tm5wmk.png",
+          image: imageAvatar,
           name: "Idiong James",
           post: "Kitchen Assistant",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1667238853/wavecrest/Anna_bwwkrc.jpg",
+          image: imageAvatar,
           name: "Agbor Mkpegara",
           post: "Kitchen Assistant",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1667239067/wavecrest/Mkpegara_p6t8kk.jpg",
+          image: imageAvatar,
           name: "Owo Anna",
           post: "Catering Staff",
         },
         {
-          image:
-            "https://res.cloudinary.com/wavecrest1/image/upload/v1667072796/wavecrest/11_20221029_111623_0010_wot8vs.png",
+          image: imageAvatar,
           name: "Ukwachi Happiness",
           post: "Store Supervisor",
         },

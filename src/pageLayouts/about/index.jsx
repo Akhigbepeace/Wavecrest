@@ -5,10 +5,10 @@ import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
 import { useRouter } from "next/router";
 import { menuLinks } from "./constants";
+import LinkTabs from "components/LinkTabs";
 
 const About = () => {
-  const about =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289604/wavecrest/aboutDesktopBanner_tsljsb.png";
+  const about = "/assets/imgs/aboutDesktopBanner.jpg";
 
   const router = useRouter();
   const { id } = router.query;
@@ -34,7 +34,9 @@ const About = () => {
   useEffect(() => {
     setCurrentId(id);
   }, [id]);
-
+  const handleLinkChange = (menuId) => {
+    setCurrentId(menuId);
+  };
   return (
     <Fragment>
       <Navbar />
@@ -75,48 +77,13 @@ const About = () => {
           </Box>
         </Box>
 
-        <Box>
-          <Flex
-            alignItems="center"
-            justifyContent="center"
-            display={{
-              sm: "none",
-              md: "none",
-              lg: "none",
-              xl: "flex",
-              "2xl": "flex",
-            }}
-          >
-            {menuLinks.map((menuLink, index) => {
-              const isActive = activeLink.linkTitle === menuLink.linkTitle;
-
-              return (
-                <Button
-                  key={index}
-                  m="15px 0"
-                  fontFamily="Manrope"
-                  bg={isActive ? "#021d37" : "#fff"}
-                  color={isActive ? "#EBEDEF" : "#021d37"}
-                  fontWeight="700"
-                  fontSize="24px"
-                  textAlign="center"
-                  border="2px solid #021d37"
-                  lineHeight="40px"
-                  p="10px 50px"
-                  onClick={() => setCurrentId(menuLink.id)}
-                  _hover={{
-                    textDecoration: "none",
-                    bg: isActive ? "#021d37" : "#F5F5F5",
-                  }}
-                >
-                  {menuLink.linkTitle}
-                </Button>
-              );
-            })}
-          </Flex>
-
+        <LinkTabs
+          menuLinks={menuLinks}
+          activeItem={activeLink.linkTitle}
+          onLinkChange={handleLinkChange}
+        >
           {activeLink.content}
-        </Box>
+        </LinkTabs>
 
         <Footer />
         <FooterCopywright />

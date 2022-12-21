@@ -23,8 +23,7 @@ export default function CaptionCarousel() {
   const showcase1 = "/assets/imgs/Showcase1.png";
   const showcase2 = "/assets/imgs/Showcase2.png";
   const showcase3 = "/assets/imgs/Showcase4.png";
-  const showcase4 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667059988/Showcase3_dtczi4.png";
+  const showcase4 = "/assets/imgs/Showcase3.png";
   const cards = [showcase1, showcase2, showcase3, showcase4];
 
   return (

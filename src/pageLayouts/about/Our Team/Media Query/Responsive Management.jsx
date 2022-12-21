@@ -1,29 +1,26 @@
 import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
 import React from "react";
+const imageAvatar = "/assets/imgs/image-avatar.png";
 
 export default function Carousel() {
   const managements = [
     {
-      image:
-        "https://res.cloudinary.com/wavecrest1/image/upload/v1666959809/wavecrest/5_h7d5ni.png",
+      image: "/assets/imgs/membersofthemanagement/rosana.png",
       name: "Rosana Forsuelo",
       post: "Provost",
     },
     {
-      image:
-        "https://res.cloudinary.com/wavecrest1/image/upload/v1667224686/wavecrest/3_lrndd5_cgtgx1.png",
+      image: "/assets/imgs/membersofthemanagement/ifeoma.png",
       name: "Ifeoma Nwabachili",
       post: "Deputy Provost",
     },
     {
-      image:
-        "https://res.cloudinary.com/wavecrest1/image/upload/v1666959810/wavecrest/6_ghuxqx.png",
+      image: "/assets/imgs/membersofthemanagement/veronica.png",
       name: "Veronica Esode",
       post: "Registrar",
     },
     {
-      image:
-        "https://res.cloudinary.com/wavecrest1/image/upload/v1666959788/wavecrest/4_ksuq0v.png",
+      image: "/assets/imgs/membersofthemanagement/edith.png",
       name: "Edith Chukwu",
       post: "Bursar",
     },

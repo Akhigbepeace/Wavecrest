@@ -22,8 +22,7 @@ const NDProgrammeDesc = () => {
 
   const aboutgallery3 = "/assets/imgs/studyprogrammes 2.png";
 
-  const aboutgallery4 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289262/wavecrest/studyprogrammes2_lyhuke.png";
+  const aboutgallery4 = "/assets/imgs/study-programme3.jpg";
   const quickLinks = [
     {
       image: aboutgallery3,
