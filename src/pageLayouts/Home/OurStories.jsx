@@ -169,7 +169,12 @@ export default function CaptionCarousel() {
 
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {cards.map((card, index) => (
-            <Box key={index} position="relative" bg="#021D37">
+            <Box
+              key={index}
+              position="relative"
+              bg="#021D37"
+              h={{ sm: "700px", md: "500px", lg: "550px" }}
+            >
               <Flex
                 flexDirection={{
                   sm: "column",
@@ -271,7 +276,10 @@ export default function CaptionCarousel() {
                   </Button>
                 </Flex>
 
-                <Box
+                <Image
+                  src={card.postsImg}
+                  alt="ourstories"
+                  objectFit="cover"
                   display={{
                     sm: "block",
                     md: "block",
@@ -298,15 +306,7 @@ export default function CaptionCarousel() {
                     "2xl": "345px",
                   }}
                   mx="auto"
-                  position="relative"
-                >
-                  <Image
-                    src={card.postsImg}
-                    alt="ourstories"
-                    objectFit="cover"
-                    layout="fill"
-                  />
-                </Box>
+                />
 
                 <Button
                   onClick={(e) => showStory(e)}
@@ -357,11 +357,9 @@ CaptionCarousel.Wrapper = styled.div`
     padding-bottom: 40px;
     background: #021d37;
   }
-
   .slick-dots li {
     margin: 0px;
   }
-
   .slick-dots li button::before {
     position: absolute;
     color: white;

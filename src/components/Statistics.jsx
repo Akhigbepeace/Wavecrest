@@ -34,7 +34,7 @@ const Statistics = () => {
           xl: "repeat(4, auto)",
           "2xl": "repeat(4, 1fr)",
         }}
-        mt="18px"
+        my="18px"
         color="#021D37"
       >
         {statistics.map((statistic, index) => {
