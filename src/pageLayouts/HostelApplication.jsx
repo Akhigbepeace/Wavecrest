@@ -20,8 +20,7 @@ import FooterCopywright from "components/FooterCopywright";
 import { useRouter } from "next/router";
 
 const HostelApplication = () => {
-  const hostel2 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667228296/hostel2_obtkc0.jpg";
+  const hostel2 = "/assets/imgs/hostel2.jpg";
 
   const initialValues = {
     user_name: "",
@@ -120,7 +119,7 @@ const HostelApplication = () => {
     <Fragment>
       <Navbar />
       <Box h="441px" w="100%" gridGap="68px" position="relative">
-        <Image src={hostel2} h="100%" w="100%" objectFit="cover" />
+        <Image src={hostel2} alt="banner" h="100%" w="100%" objectFit="cover" />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"

@@ -114,7 +114,13 @@ const AdmissionRequirements = () => {
           "2xl": "none",
         }}
       >
-        <Image src={admission} h="100%" w="100%" objectFit="cover" />
+        <Image
+          src={admission}
+          alt="banner"
+          h="100%"
+          w="100%"
+          objectFit="cover"
+        />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -222,6 +228,7 @@ const AdmissionRequirements = () => {
               >
                 <Image
                   src={requirement.coursePic}
+                  alt="course-img"
                   w="580px"
                   h="323px"
                   borderRadius="3px"
@@ -425,7 +432,12 @@ const AdmissionRequirements = () => {
                     color="#021D37"
                     my="14px"
                   >
-                    <Image src={fileDownload} w="20px" mr="13px" />
+                    <Image
+                      src={fileDownload}
+                      alt="download"
+                      w="20px"
+                      mr="13px"
+                    />
                     <Text
                       fontFamily="Manrope"
                       fontWeight="700"

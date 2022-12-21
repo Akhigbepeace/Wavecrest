@@ -149,6 +149,7 @@ const OurClout = () => {
                 >
                   <Image
                     src={award.awardImg}
+                    alt="award-img"
                     objectFit="cover"
                     w={{
                       sm: "60px",
@@ -252,6 +253,7 @@ const OurClout = () => {
                 >
                   <Image
                     src={recognition.recogImg}
+                    alt="recognition-img"
                     objectFit="cover"
                     w={{
                       sm: "85px",

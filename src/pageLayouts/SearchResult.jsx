@@ -68,7 +68,13 @@ const SearchResult = () => {
       <Navbar />
 
       <Box h="200px" w="100%" gridGap="68px" position="relative">
-        <Image src={about} h="100%" w="100%" objectFit="cover" />
+        <Image
+          src={about}
+          alt="banner-image"
+          h="100%"
+          w="100%"
+          objectFit="cover"
+        />
 
         <Flex
           flexDirection="column"
@@ -120,7 +126,13 @@ const SearchResult = () => {
             />
 
             <Box ml="-40px" zIndex="2">
-              <Image src={searchImg} w="20px" h="20px" alignItems="center" />
+              <Image
+                src={searchImg}
+                alt="search"
+                w="20px"
+                h="20px"
+                alignItems="center"
+              />
             </Box>
           </Flex>
         </Box>
@@ -135,7 +147,12 @@ const SearchResult = () => {
                     textDecoration: "none",
                   }}
                 >
-                  <Image src={result.resultImg} w="611px" objectFit="contain" />
+                  <Image
+                    src={result.resultImg}
+                    alt="result-img"
+                    w="611px"
+                    objectFit="contain"
+                  />
                   <Box>
                     <Text
                       fontFamily="Manrope"

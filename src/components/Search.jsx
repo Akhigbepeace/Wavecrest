@@ -53,7 +53,7 @@ const Search = () => {
           cursor: "pointer",
         }}
       >
-        <Image src={searchIcon} />
+        <Image src={searchIcon} alt="search-icon" />
       </Box>
     </Flex>
   );

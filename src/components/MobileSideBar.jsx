@@ -167,6 +167,8 @@ const MobileSideBar = () => {
     >
       <Link to="/">
         <Image
+          src={Logo}
+          alt="logo"
           w={{
             sm: "143px",
             md: "143px",
@@ -181,13 +183,13 @@ const MobileSideBar = () => {
             xl: "52px",
             "2xl": "52px",
           }}
-          src={Logo}
         />
       </Link>
 
       <Box cursor="pointer">
         <Image
           src={Menu}
+          alt="menu"
           w="37px"
           h="37px"
           display={{

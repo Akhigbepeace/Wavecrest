@@ -8,26 +8,22 @@ import { useRouter } from "next/router";
 const Management = () => {
   const managements = [
     {
-      image:
-        "https://res.cloudinary.com/wavecrest1/image/upload/v1666959809/wavecrest/5_h7d5ni.png",
+      image: "/assets/imgs/membersofthemanagement/rosana.png",
       name: "Rosana Forsuelo",
       post: "Provost",
     },
     {
-      image:
-        "https://res.cloudinary.com/wavecrest1/image/upload/v1667224686/wavecrest/3_lrndd5_cgtgx1.png",
+      image: "/assets/imgs/membersofthemanagement/ifeoma.png",
       name: "Ifeoma Nwabachili",
       post: "Deputy Provost",
     },
     {
-      image:
-        "https://res.cloudinary.com/wavecrest1/image/upload/v1666959810/wavecrest/6_ghuxqx.png",
+      image: "/assets/imgs/membersofthemanagement/veronica.png",
       name: "Veronica Esode",
       post: "Registrar",
     },
     {
-      image:
-        "https://res.cloudinary.com/wavecrest1/image/upload/v1666959788/wavecrest/4_ksuq0v.png",
+      image: "/assets/imgs/membersofthemanagement/edith.png",
       name: "Edith Chukwu",
       post: "Bursar",
     },
@@ -82,7 +78,12 @@ const Management = () => {
         {managements.map((management, index) => {
           return (
             <Box key={index} w={{ xl: "230px", "2xl": "250px" }} mr="10px">
-              <Image src={management.image} w="100%" borderRadius="5px" />
+              <Image
+                src={management.image}
+                alt="management"
+                w="100%"
+                borderRadius="5px"
+              />
 
               <Flex
                 alignItems="center"

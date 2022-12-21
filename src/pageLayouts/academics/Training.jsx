@@ -125,7 +125,13 @@ const Training = () => {
           "2xl": "none",
         }}
       >
-        <Image src={training3} h="100%" w="100%" objectFit="cover" />
+        <Image
+          src={training3}
+          alt="banner"
+          h="100%"
+          w="100%"
+          objectFit="cover"
+        />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -232,6 +238,7 @@ const Training = () => {
                 >
                   <Image
                     src={training.trainingsImage}
+                    alt="trainingsImage"
                     maxWidth="none"
                     w={{
                       sm: "100%",
@@ -346,7 +353,7 @@ const Training = () => {
                       />
 
                       <ModalBody m="0 auto">
-                        <Image src={trainingCert} />
+                        <Image src={trainingCert} alt="training-cert" />
                       </ModalBody>
                     </ModalContent>
                   </Modal>
@@ -414,7 +421,12 @@ const Training = () => {
                       "2xl": "none",
                     }}
                   >
-                    <Image src={fileDownload} w="20px" mr="13px" />
+                    <Image
+                      src={fileDownload}
+                      alt="download"
+                      w="20px"
+                      mr="13px"
+                    />
 
                     <Link
                       lineHeight="33px"

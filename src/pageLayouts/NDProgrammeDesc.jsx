@@ -18,14 +18,11 @@ import FooterCopywright from "components/FooterCopywright";
 import { useRouter } from "next/router";
 
 const NDProgrammeDesc = () => {
-  const about =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667287702/wavecrest/IMG_8753_copy_ucczmz.jpg";
+  const about = "/assets/imgs/studyprogramme.jpg";
 
-  const aboutgallery3 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289263/wavecrest/studyprogrammes1_gmzcqk.png";
+  const aboutgallery3 = "/assets/imgs/studyprogrammes 2.png";
 
-  const aboutgallery4 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289262/wavecrest/studyprogrammes2_lyhuke.png";
+  const aboutgallery4 = "/assets/imgs/study-programme3.jpg";
   const quickLinks = [
     {
       image: aboutgallery3,
@@ -304,6 +301,7 @@ const NDProgrammeDesc = () => {
                 >
                   <Image
                     src={quickLink.image}
+                    alt="quicklink-image"
                     w="100%"
                     h="100%"
                     borderRadius="3px"

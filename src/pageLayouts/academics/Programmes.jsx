@@ -17,12 +17,9 @@ const fileDownload = "/assets/imgs/fileDownload.png";
 const Programmes = () => {
   const router = useRouter();
 
-  const studyProgrammes1 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289263/wavecrest/studyprogrammes1_gmzcqk.png";
-  const studyProgrammes2 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289262/wavecrest/studyprogrammes2_lyhuke.png";
-  const studyProgrammes3 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667287702/wavecrest/IMG_8753_copy_ucczmz.jpg";
+  const studyProgrammes1 = "/assets/imgs/studyprogrammes 2.png";
+  const studyProgrammes2 = "/assets/imgs/study-programme3.jpg";
+  const studyProgrammes3 = "/assets/imgs/studyprogramme.jpg";
   const programmes = [
     {
       programmeTitle: "Higher National Diploma (HND) in Hospitality Management",
@@ -128,7 +125,13 @@ const Programmes = () => {
           "2xl": "none",
         }}
       >
-        <Image src={studyProgrammes3} h="100%" w="100%" objectFit="cover" />
+        <Image
+          src={studyProgrammes3}
+          alt="banner"
+          h="100%"
+          w="100%"
+          objectFit="cover"
+        />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -299,7 +302,7 @@ const Programmes = () => {
                       color="#FFF"
                       my="20px"
                     >
-                      <Image src={fileDownload} mr="13px" />
+                      <Image src={fileDownload} alt="download-icon" mr="13px" />
                       <Text>Download Programme Brochure</Text>
                     </Flex>
                   </Link>

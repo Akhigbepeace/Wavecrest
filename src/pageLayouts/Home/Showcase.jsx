@@ -13,8 +13,7 @@ const ReactPlayer = dynamic(() => import("react-player"), {
 const showcase1 = "/assets/imgs/Showcase1.png";
 const showcase2 = "/assets/imgs/Showcase2.png";
 const showcase3 = "/assets/imgs/Showcase4.png";
-const showcase4 =
-  "https://res.cloudinary.com/wavecrest1/image/upload/v1667059988/Showcase3_dtczi4.png";
+const showcase4 = "/assets/imgs/Showcase3.jpg";
 
 const waveVid = "/assets/imgs/wavevid.mp4";
 
@@ -197,24 +196,9 @@ const Showcase = () => {
               mt="14px"
               mb="55px"
               onClick={(e) => Redirect(e)}
-              _hover={{
-                bg: "#020E1B",
-                transition: "all ease 0.4s",
-              }}
             >
               Learn More
             </Button>
-
-            {/* 
-
-            
-
-           
-
-      
-
-
-            */}
           </Box>
         </Box>
       </Box>

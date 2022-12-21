@@ -56,7 +56,13 @@ const CertificateCoursesDesc = () => {
       <Navbar />
 
       <Box h="441px" w="100%" gridGap="68px" position="relative">
-        <Image src={about} h="100%" w="100%" objectFit="cover" />
+        <Image
+          src={about}
+          alt="bannerImage"
+          h="100%"
+          w="100%"
+          objectFit="cover"
+        />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"

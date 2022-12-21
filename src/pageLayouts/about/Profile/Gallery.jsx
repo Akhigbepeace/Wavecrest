@@ -32,9 +32,9 @@ export default function Carousel() {
   };
 
   const cards = [
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231285/aboutgallery1_yvd8m2.png",
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231286/aboutgallery2_vjwyrh.png",
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231291/aboutgallery4_adl08b.png",
+    "/assets/imgs/aboutGallery1.jpg",
+    "/assets/imgs/aboutGallery2.jpg",
+    "/assets/imgs/aboutGallery3.jpg",
     "https://res.cloudinary.com/wavecrest1/image/upload/v1667231286/aboutgallery5_bfkzxu.png",
     "https://res.cloudinary.com/wavecrest1/image/upload/v1667231343/galleryPic_1_qrkdiy.jpg",
     "https://res.cloudinary.com/wavecrest1/image/upload/v1667231308/galleryPic_2_twbbbw.jpg",

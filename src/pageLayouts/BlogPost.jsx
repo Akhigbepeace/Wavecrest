@@ -40,7 +40,13 @@ const BlogPost = () => {
       <MobileSideBar />
 
       <Box h="441px" w="100%" position="relative">
-        <Image src={image2} h="100%" w="100%" objectFit="cover" />
+        <Image
+          alt="blogImage"
+          src={image2}
+          h="100%"
+          w="100%"
+          objectFit="cover"
+        />
 
         <Flex
           bg="rgba(0, 24, 71, 0.5)"
@@ -141,7 +147,7 @@ const BlogPost = () => {
               dangerouslySetInnerHTML={{ __html: post.postsText }}
             />
 
-            <Image src={image1 || image2} my="10px" />
+            <Image src={image1 || image2} my="10px" alt="postImage" />
           </Box>
         </Box>
 

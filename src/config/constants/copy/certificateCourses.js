@@ -1,9 +1,6 @@
-export const aboutgallery2 =
-  "https://res.cloudinary.com/wavecrest1/image/upload/v1667289263/wavecrest/studyprogrammes1_gmzcqk.png";
-export const about =
-  "https://res.cloudinary.com/wavecrest1/image/upload/v1667289262/wavecrest/studyprogrammes2_lyhuke.png";
-export const aboutgallery4 =
-  "https://res.cloudinary.com/wavecrest1/image/upload/v1667287702/wavecrest/IMG_8753_copy_ucczmz.jpg";
+export const aboutgallery2 = "/assets/imgs/studyprogrammes 2.png";
+export const about = "/assets/imgs/study-programme3.jpg";
+export const aboutgallery4 = "/assets/imgs/studyprogramme.jpg";
 
 export const waveVid = "/assets/imgs/wavevid.mp4";
 

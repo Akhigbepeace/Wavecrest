@@ -10,14 +10,12 @@ const Board = () => {
       post: "Women's Board",
     },
     {
-      image:
-        "https://res.cloudinary.com/wavecrest1/image/upload/v1666966088/attachments/8_ohblsr.png",
+      image: "/assets/imgs/ward.jpg",
       name: "Trevor Ward",
       post: "W Hospitality Group",
     },
     {
-      image:
-        "https://res.cloudinary.com/wavecrest1/image/upload/v1667238441/wavecrest/moyo_mcnxx6.jpg",
+      image: imageAvatar,
       name: "Moyo Ogunseinde",
       post: "Uraga / Radisson Blu",
     },
@@ -32,14 +30,12 @@ const Board = () => {
       post: "Independence Consultant",
     },
     {
-      image:
-        "https://res.cloudinary.com/wavecrest1/image/upload/v1666962788/boardmembers/17_tykwcm.png",
+      image: imageAvatar,
       name: "Gloria Osezua",
       post: "Executive Vice Chairman / Owel Farms",
     },
     {
-      image:
-        "https://res.cloudinary.com/wavecrest1/image/upload/v1666962789/boardmembers/18_hvdbsl.png",
+      image: imageAvatar,
       name: "Dolapo Afolami",
       post: "Member",
     },
@@ -90,6 +86,7 @@ const Board = () => {
             <Box key={index} w={{ xl: "230px", "2xl": "250px" }}>
               <Image
                 src={board.image}
+                alt="board"
                 w="100%"
                 h="250px"
                 objectFit="cover"

@@ -19,8 +19,7 @@ import MobileSideBar from "components/MobileSideBar";
 import { useRouter } from "next/router";
 
 const Internship = () => {
-  const studyProgrammes3 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667287702/wavecrest/IMG_8753_copy_ucczmz.jpg";
+  const studyProgrammes3 = "/assets/imgs/studyprogramme.jpg";
   const initialValues = {
     user_name: "",
     user_email: "",
@@ -175,7 +174,13 @@ const Internship = () => {
           "2xl": "none",
         }}
       >
-        <Image src={studyProgrammes3} h="100%" w="100%" objectFit="cover" />
+        <Image
+          src={studyProgrammes3}
+          alt="banner"
+          h="100%"
+          w="100%"
+          objectFit="cover"
+        />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"

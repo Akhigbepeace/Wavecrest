@@ -3,12 +3,9 @@ import { useRouter } from "next/router";
 import React from "react";
 
 const Courses = () => {
-  const studyProgrammes1 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289263/wavecrest/studyprogrammes1_gmzcqk.png";
-  const studyProgrammes2 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289262/wavecrest/studyprogrammes2_lyhuke.png";
-  const studyProgrammes3 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667287702/wavecrest/IMG_8753_copy_ucczmz.jpg";
+  const studyProgrammes1 = "/assets/imgs/studyprogrammes 2.png";
+  const studyProgrammes2 = "/assets/imgs/study-programme3.jpg";
+  const studyProgrammes3 = "/assets/imgs/studyprogramme.jpg";
   const objArr = [
     {
       linkContent: "HND IN HOSPITALITY MANAGEMENT",
@@ -32,7 +29,7 @@ const Courses = () => {
       linkContent: "ND IN HOTEL AND CATERING MANAGEMENT",
       values: [
         {
-          imageSrc: studyProgrammes2,
+          imageSrc: studyProgrammes3,
           current: false,
           captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
           redirect: (e) => {
@@ -50,7 +47,7 @@ const Courses = () => {
       linkContent: "CERTIFICATE COURSE IN HOSPITALITY OPERATIONS",
       values: [
         {
-          imageSrc: studyProgrammes3,
+          imageSrc: studyProgrammes2,
           current: true,
           captionHeading: "SPEND A GAP YEAR IN HOSPITALITY TRAINING",
           redirect: (e) => {
