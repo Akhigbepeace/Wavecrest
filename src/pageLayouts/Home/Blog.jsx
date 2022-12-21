@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   Box,
   IconButton,
@@ -6,6 +5,7 @@ import {
   Heading,
   Text,
   Link,
+  Image,
   Flex,
 } from "@chakra-ui/react";
 import React from "react";
@@ -28,8 +28,8 @@ const settings = {
 const CTHFlier = "/assets/imgs/tch flier.png";
 const PCHFlier = "/assets/imgs/P.C.H. flier.png";
 const CulinaryFlier = "/assets/imgs/Culinary flyer.png";
-const graduationFlier = "/assets/Images/grad 3.png";
-const graduationFair = "/assets/Images/graduation fair.jpg";
+const graduationFlier = "/assets/imgs/graduation.png";
+const graduationFair = "/assets/imgs/graduation-fair.jpg";
 export default function CaptionCarousel() {
   const [slider, setSlider] = React.useState(null);
 

@@ -9,20 +9,16 @@ import {
 } from "@chakra-ui/react";
 
 import NextLink from "next/link";
-
-// import Image from "next/image";
 import React, { useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import Search from "./Search";
 import { useRouter } from "next/router";
 
-const Logo = "/assets/imgs/logo_wavecrest.svg";
+const Logo = "/assets/imgs/WC-LOGO-july.png";
 const socials = [
   {
-    // icon: "/assets/imgs/logo_wavecrest.svg",
-    icon: "/assets/imgs/logo_wavecrest.svg",
+    icon: "/assets/imgs/linkedin.svg",
     to: "https://www.linkedin.com/company/wavecrest-college-of-hospitality/",
-    // as: { NavLink },
     target: "_blank",
     rel: "noreferrer",
   },

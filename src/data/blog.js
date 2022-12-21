@@ -18,8 +18,8 @@ const JambReg = "assets/imgs/JAMBReg.jpg";
 const peace1 = "assets/imgs/peace1.jpg";
 const peace2 = "assets/imgs/peace2.jpg";
 const thelma = "/assets/imgs/Thelma.jpeg";
-const graduationFlier = "/assets/imgs/grad 3.png";
-const graduationFair = "/assets/imgs/graduation fair.jpg";
+const graduationFlier = "/assets/imgs/graduation.png";
+const graduationFair = "/assets/imgs/graduation-fair.jpg";
 
 export const CARD_POST = [
   {

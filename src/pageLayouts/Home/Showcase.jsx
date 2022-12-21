@@ -10,17 +10,13 @@ const ReactPlayer = dynamic(() => import("react-player"), {
   ssr: false,
 });
 
-const showcase1 =
-  "https://res.cloudinary.com/wavecrest1/image/upload/v1667060013/Showcase1_box3y3.png";
-const showcase2 =
-  "https://res.cloudinary.com/wavecrest1/image/upload/v1667060014/Showcase2_xlxynv.jpg";
-const showcase3 =
-  "https://res.cloudinary.com/wavecrest1/image/upload/v1667060027/Showcase4_nsyiwy.jpg";
+const showcase1 = "/assets/imgs/Showcase1.png";
+const showcase2 = "/assets/imgs/Showcase2.png";
+const showcase3 = "/assets/imgs/Showcase4.png";
 const showcase4 =
   "https://res.cloudinary.com/wavecrest1/image/upload/v1667059988/Showcase3_dtczi4.png";
 
-const waveVid =
-  "https://res.cloudinary.com/wavecrest1/video/upload/v1667388100/wavevid-bvf8bh_Le77usXx_aqs5ez_1_b3gfin.mp4";
+const waveVid = "/assets/imgs/wavevid.mp4";
 
 const showcaseGallery = [showcase1, showcase2, showcase4, showcase3];
 

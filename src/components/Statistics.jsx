@@ -40,10 +40,10 @@ const Statistics = () => {
         {statistics.map((statistic, index) => {
           return (
             <GridItem key={index} textAlign="center" pt="40px">
-              <Text fontFamily="Open sans" fontSize="20px">
+              <Text fontFamily="Open sans" fontSize="20px" fontWeight="400">
                 {statistic.count}
               </Text>
-              <Heading fontFamily="Manrope" fontSize="20px" fontWeight="400">
+              <Heading fontFamily="Manrope" fontSize="20px">
                 {statistic.name}
               </Heading>
             </GridItem>
