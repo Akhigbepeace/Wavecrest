@@ -12,14 +12,10 @@ import MobileSideBar from "components/MobileSideBar";
 import { useRouter } from "next/router";
 
 const ApplyOnline = () => {
-  const hostel1 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667228298/hostel1_ku7zu0.jpg";
-  const hostel2 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667228296/hostel2_obtkc0.jpg";
-  const hostel3 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667228297/hostel3_bh9uua.jpg";
-  const hostel4 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667228297/hostel4_imflsp.jpg";
+  const hostel1 = "/assets/imgs/hostel1.jpg";
+  const hostel2 = "/assets/imgs/hostel2.jpg";
+  const hostel3 = "/assets/imgs/hostel3.jpg";
+  const hostel4 = "/assets/imgs/hostel4.jpg";
   const images = [hostel1, hostel2, hostel3, hostel4];
 
   const router = useRouter();

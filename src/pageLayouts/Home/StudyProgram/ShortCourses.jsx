@@ -14,8 +14,7 @@ import { FaChevronCircleUp } from "react-icons/fa";
 import { useRouter } from "next/router";
 
 const ShortCourses = () => {
-  const studyProgrammes1 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289263/wavecrest/studyprogrammes1_gmzcqk.png";
+  const studyProgrammes1 = "/assets/imgs/studyprogrammes 2.png";
   const studyProgrammes2 =
     "https://res.cloudinary.com/wavecrest1/image/upload/v1667289262/wavecrest/studyprogrammes2_lyhuke.png";
   const studyProgrammes4 =

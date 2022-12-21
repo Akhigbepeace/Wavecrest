@@ -16,8 +16,7 @@ import MobileSideBar from "components/MobileSideBar";
 import { useRouter } from "next/router";
 
 const Profile = () => {
-  const about =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289604/wavecrest/aboutDesktopBanner_tsljsb.png";
+  const about = "/assets/imgs/aboutDesktopBanner.jpg";
 
   const router = useRouter();
 

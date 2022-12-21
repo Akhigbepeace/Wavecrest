@@ -26,8 +26,7 @@ const Contact = () => {
     "https://res.cloudinary.com/wavecrest1/image/upload/v1667231286/aboutgallery2_vjwyrh.png";
   const aboutgallery4 =
     "https://res.cloudinary.com/wavecrest1/image/upload/v1667231291/aboutgallery4_adl08b.png";
-  const contactpic =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667289604/wavecrest/aboutDesktopBanner_tsljsb.png";
+  const contactpic = "/assets/imgs/aboutDesktopBanner.jpg";
   const initialValues = {
     user_name: "",
     user_email: "",
