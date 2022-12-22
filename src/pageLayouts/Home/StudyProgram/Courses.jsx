@@ -29,7 +29,7 @@ const Courses = () => {
       linkContent: "ND IN HOTEL AND CATERING MANAGEMENT",
       values: [
         {
-          imageSrc: studyProgrammes2,
+          imageSrc: studyProgrammes3,
           current: false,
           captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
           redirect: (e) => {
@@ -47,7 +47,7 @@ const Courses = () => {
       linkContent: "CERTIFICATE COURSE IN HOSPITALITY OPERATIONS",
       values: [
         {
-          imageSrc: studyProgrammes3,
+          imageSrc: studyProgrammes2,
           current: true,
           captionHeading: "SPEND A GAP YEAR IN HOSPITALITY TRAINING",
           redirect: (e) => {
