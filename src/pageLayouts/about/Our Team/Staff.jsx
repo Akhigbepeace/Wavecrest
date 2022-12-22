@@ -1,12 +1,6 @@
 import { Box, Grid, Heading, Image, Flex, Text } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 
-const deputyProvost = "/assets/imgs/felicitas.jpg";
-const Sayo = "/assets/imgs/academicstaff/Sayo.jpg";
-const Lilian = "/assets/imgs/academicstaff/Lilian.jpg";
-const Odinaka = "/assets/imgs/academicstaff/Odinaka.jpg";
-const imageAvatar = "/assets/imgs/image-avatar.png";
-
 const Staff = () => {
   const staffs = [
     {
@@ -94,27 +88,22 @@ const Staff = () => {
       title: "Non-Academic Staff",
       others: [
         {
-          image: imageAvatar,
-          name: "Nneka Chukwuekezie",
-          post: "Students Affairs/ Admission Officer",
-        },
-        {
-          image: deputyProvost,
+          image: "/assets/imgs/nonAcademicStaff/felicitas.png",
           name: "Felicitas Odome",
           post: "Social Media and Digital Marketing Personnel",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/nonAcademicStaff/Nnena.png",
           name: "Okorie Nnenna",
           post: "Assistant Account Officer",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/nonAcademicStaff/precious.png",
           name: "Precious Ebung",
           post: "Front Desk Personnel",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/nonAcademicStaff/Baptista.jpg",
           name: "Baptista Uwandu",
           post: "Public Relations Officer",
         },
@@ -128,13 +117,9 @@ const Staff = () => {
           name: "Nmereole Pius",
           post: "Security Officer",
         },
+
         {
-          image: imageAvatar,
-          name: "Amarachukwu  Kenneth",
-          post: "Administrative officer",
-        },
-        {
-          image: imageAvatar,
+          image: "/assets/imgs/nonAcademicStaff/reuben.jpg",
           name: "Reuben Francisca Ngozi",
           post: "Secretarial Assistant - Librarian",
         },
@@ -155,12 +140,12 @@ const Staff = () => {
           post: "Kitchen Assistant",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/nonAcademicStaff/agbo.jpg",
           name: "Agbor Mkpegara",
           post: "Kitchen Assistant",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/nonAcademicStaff/anna.jpg",
           name: "Owo Anna",
           post: "Catering Staff",
         },
@@ -222,6 +207,7 @@ const Staff = () => {
                       <Box key={index} w={{ xl: "310px", "2xl": "350px" }}>
                         <Image
                           src={staff.image}
+                          objectFit="cover"
                           w="100%"
                           h="350px"
                           borderRadius="5px"

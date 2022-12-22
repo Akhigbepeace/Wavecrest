@@ -196,24 +196,9 @@ const Showcase = () => {
               mt="14px"
               mb="55px"
               onClick={(e) => Redirect(e)}
-              _hover={{
-                bg: "#020E1B",
-                transition: "all ease 0.4s",
-              }}
             >
               Learn More
             </Button>
-
-            {/* 
-
-            
-
-           
-
-      
-
-
-            */}
           </Box>
         </Box>
       </Box>
