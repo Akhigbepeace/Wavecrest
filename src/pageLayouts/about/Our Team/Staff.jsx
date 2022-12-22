@@ -13,77 +13,77 @@ const Staff = () => {
       title: "Academic Staff",
       others: [
         {
-          image: imageAvatar,
+          image: "/assets/imgs/academicstaff/Juliet.jpeg",
           name: "Osuagwu Juliet",
           post: "Lecturer",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/academicstaff/eboigbe.jpg",
           name: "Eboigbe Helen",
           post: "Ethics Lecturer",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/academicstaff/chizurumoke.jpg",
           name: "Obasi Chizurumoke",
           post: "Lecturer / Workshop Co-ordinator",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/academicstaff/eboagwu.jpeg",
           name: "Eboagwu Helen",
           post: "Facility Lecturer",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/academicstaff/dorcas.jpg",
           name: "Adeyemo Dorcas",
           post: "SIWES Co-ordinator",
         },
         {
-          image: Sayo,
+          image: "/assets/imgs/academicstaff/lilian.jpg",
           name: "Andy-Nwankwo Lilian",
           post: "Librarian",
         },
         {
-          image: Lilian,
+          image: "/assets/imgs/academicstaff/Ojo.jpg",
           name: "Ojo Sayo",
           post: "Account Lecturer / CTH Trainer",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/staffs/aduba.png",
           name: "Aduba Chineze",
           post: "French Lecturer",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/academicstaff/samuel.jpg",
           name: "Samuel Asuquo",
           post: "Chef",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/academicstaff/Inyangudo Gloria.jpg",
           name: "Iyangudo Gloria",
           post: "F&B Lecturer",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/staffs/vivian.png",
           name: "Isichei Vivian",
           post: "Lecturer and Academic Co-ordinator",
         },
         {
-          image: Odinaka,
+          image: "/assets/imgs/academicstaff/Odinaka.jpg",
           name: "Ekwugha Odinaka",
           post: "Hospitality Management Lecturer",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/staffs/arinze.png",
           name: "Uju Arinze",
           post: "Research Lecturer",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/academicstaff/ezika.jpg",
           name: "Ezika Cecilia",
           post: "Faculty Secretary",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/academicstaff/onaolapo.jpg",
           name: "Onaolapo Lizzy",
           post: "Food Service and Production Lecturer",
         },
@@ -119,12 +119,12 @@ const Staff = () => {
           post: "Public Relations Officer",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/staffs/goodness.png",
           name: "Oparachukwu Goodness",
           post: "Practical Assistant",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/staffs/pius.png",
           name: "Nmereole Pius",
           post: "Security Officer",
         },
@@ -145,12 +145,12 @@ const Staff = () => {
       title: "ODC",
       others: [
         {
-          image: imageAvatar,
+          image: "/assets/imgs/staffs/thodora.png",
           name: "Ejiogu Theodora",
           post: "Pastry Chef",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/staffs/james.png",
           name: "Idiong James",
           post: "Kitchen Assistant",
         },
@@ -165,7 +165,7 @@ const Staff = () => {
           post: "Catering Staff",
         },
         {
-          image: imageAvatar,
+          image: "/assets/imgs/staffs/happiness.png",
           name: "Ukwachi Happiness",
           post: "Store Supervisor",
         },

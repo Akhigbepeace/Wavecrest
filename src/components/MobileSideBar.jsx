@@ -279,7 +279,7 @@ const MobileSideBar = () => {
                           <Text>{navLink.name}</Text>
 
                           <Box color="white" mt="7px" ml="10px">
-                            {navLink.icon}
+                            {navLink.icon} 
                           </Box>
                         </Link>
                       ) : (
