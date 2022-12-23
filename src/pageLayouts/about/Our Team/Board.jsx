@@ -10,12 +10,12 @@ const Board = () => {
       post: "Women's Board",
     },
     {
-      image: "/assets/imgs/ward.jpg",
+      image: "/assets/imgs/boardmembers/ward.jpg",
       name: "Trevor Ward",
       post: "W Hospitality Group",
     },
     {
-      image: imageAvatar,
+      image: "/assets/imgs/boardmembers/moyo.jpg",
       name: "Moyo Ogunseinde",
       post: "Uraga / Radisson Blu",
     },
@@ -30,12 +30,12 @@ const Board = () => {
       post: "Independence Consultant",
     },
     {
-      image: imageAvatar,
+      image: "/assets/imgs/boardmembers/gloria.png",
       name: "Gloria Osezua",
       post: "Executive Vice Chairman / Owel Farms",
     },
     {
-      image: imageAvatar,
+      image: "/assets/imgs/boardmembers/dolapo.png",
       name: "Dolapo Afolami",
       post: "Member",
     },
@@ -83,7 +83,7 @@ const Board = () => {
       >
         {boards.map((board, index) => {
           return (
-            <Box key={index} w={{ xl: "230px", "2xl": "250px" }}>
+            <Box key={index} w={{ xl: "260px", "2xl": "260px" }}>
               <Image
                 src={board.image}
                 alt="board"
@@ -98,7 +98,8 @@ const Board = () => {
                 bg="rgba(255, 255, 255, 67%)"
                 p="10px 25px"
                 position="relative"
-                top="-68px"
+                h="70px"
+                top="-70px"
                 borderRadius="0px 0px 5px 5px"
               >
                 <Box

@@ -234,75 +234,76 @@ const StudyProgrammes = () => {
         }}
       >
         {currentprogram.values.map((value, index) => (
-          <Box
-            key={index}
-            w="1100px"
-            h="400px"
-            mb="70px"
-            m="0 auto"
-            position="relative"
-          >
-            <Box m="0 auto" w="1100px" h="394px">
-              <Image
-                src={value.imageSrc}
-                objectFit="cover"
-                alt="coffee"
-                layout="fill"
-              />
-            </Box>
-
+          <Box mb="10px">
             <Box
-              bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(1, 15, 29, 0.52) 46.35%, rgba(2, 29, 55, 0.87) 100%)"
-              textAlign="center"
-              position="absolute"
-              bottom="0"
-              h="280px"
+              key={index}
               w="1100px"
-              pt="40px"
-              pb="20px"
+              h="400px"
+              m="0 auto"
+              position="relative"
             >
-              <Heading
-                color="#fff"
-                fontWeight="700"
-                fontSize="40px"
-                w="900px"
-                mx="auto"
-                fontFamily="Playfair Display"
-                cursor="pointer"
-                textTransform="uppercase"
-                onClick={value.redirect}
-              >
-                {value.captionHeading}
-              </Heading>
+              <Box m="0 auto" w="1100px" h="394px">
+                <Image
+                  src={value.imageSrc}
+                  objectFit="cover"
+                  alt="coffee"
+                  layout="fill"
+                />
+              </Box>
 
-              <Text
-                fontSize="20px"
-                lineHeight="27px"
-                color="#EBEDEF"
-                my="15px"
-                fontFamily="Manrope"
-              >
-                {value.captionTime}
-              </Text>
-
-              <Text
-                bg="#fff"
-                color="#021d37"
-                w="208px"
-                mx="auto"
-                p="10px 25px"
-                border="none"
-                borderRadius="3px"
-                fontFamily="Manrope"
-                fontSize="24px"
-                fontWeight="700"
+              <Box
+                bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(1, 15, 29, 0.52) 46.35%, rgba(2, 29, 55, 0.87) 100%)"
                 textAlign="center"
-                cursor="pointer"
-                _hover={{ textDecoration: "none", bg: "#EBEDEF" }}
-                onClick={(e) => redirect(e)}
+                position="absolute"
+                bottom="0"
+                h="280px"
+                w="1100px"
+                pt="40px"
+                pb="20px"
               >
-                {value.captionButton}
-              </Text>
+                <Heading
+                  color="#fff"
+                  fontWeight="700"
+                  fontSize="40px"
+                  w="900px"
+                  mx="auto"
+                  fontFamily="Playfair Display"
+                  cursor="pointer"
+                  textTransform="uppercase"
+                  onClick={value.redirect}
+                >
+                  {value.captionHeading}
+                </Heading>
+
+                <Text
+                  fontSize="20px"
+                  lineHeight="27px"
+                  color="#EBEDEF"
+                  my="15px"
+                  fontFamily="Manrope"
+                >
+                  {value.captionTime}
+                </Text>
+
+                <Text
+                  bg="#fff"
+                  color="#021d37"
+                  w="208px"
+                  mx="auto"
+                  p="10px 25px"
+                  border="none"
+                  borderRadius="3px"
+                  fontFamily="Manrope"
+                  fontSize="24px"
+                  fontWeight="700"
+                  textAlign="center"
+                  cursor="pointer"
+                  _hover={{ textDecoration: "none", bg: "#EBEDEF" }}
+                  onClick={(e) => redirect(e)}
+                >
+                  {value.captionButton}
+                </Text>
+              </Box>
             </Box>
           </Box>
         ))}

@@ -35,10 +35,10 @@ export default function Carousel() {
     "/assets/imgs/aboutGallery1.jpg",
     "/assets/imgs/aboutGallery2.jpg",
     "/assets/imgs/aboutGallery3.jpg",
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231286/aboutgallery5_bfkzxu.png",
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231343/galleryPic_1_qrkdiy.jpg",
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231308/galleryPic_2_twbbbw.jpg",
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667290097/wavecrest/galleryPic3_t1krbe.png",
+    "/assets/imgs/news.png",
+    "/assets/imgs/testimonial.png",
+    "/assets/imgs/programmes.png",
+    "/assets/imgs/aboutDesktopBanner.jpg",
   ];
 
   return (
@@ -61,25 +61,26 @@ export default function Carousel() {
 
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((image, index) => (
-          <Box
-            key={index}
-            w="272px"
-            h={{
-              sm: "150px",
-              md: "211px",
-              lg: "211px",
-              xl: "272px",
-              "2xl": "272px",
-            }}
-            mr="10px"
-            position="relative"
-          >
-            <NextImage
-              src={image}
-              layout="fill"
-              alt="gallery"
-              objectFit="cover"
-            />
+          <Box mr="10px">
+            <Box
+              key={index}
+              w="272px"
+              h={{
+                sm: "150px",
+                md: "211px",
+                lg: "211px",
+                xl: "272px",
+                "2xl": "272px",
+              }}
+              position="relative"
+            >
+              <NextImage
+                src={image}
+                layout="fill"
+                alt="gallery"
+                objectFit="cover"
+              />
+            </Box>
           </Box>
         ))}
       </Slider>
