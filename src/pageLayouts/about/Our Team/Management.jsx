@@ -6,7 +6,6 @@ import ResponsiveStaff from "pageLayouts/about/Our Team/Media Query/Responsive S
 import { useRouter } from "next/router";
 
 const Management = () => {
-  const imageAvatar = "/assets/imgs/membersofthemanagement.png";
   const managements = [
     {
       image: "/assets/imgs/membersofthemanagement/rosana.png",
@@ -79,7 +78,12 @@ const Management = () => {
         {managements.map((management, index) => {
           return (
             <Box key={index} w={{ xl: "230px", "2xl": "250px" }} mr="10px">
-              <Image src={management.image} alt="management" w="100%" borderRadius="5px" />
+              <Image
+                src={management.image}
+                alt="management"
+                w="100%"
+                borderRadius="5px"
+              />
 
               <Flex
                 alignItems="center"

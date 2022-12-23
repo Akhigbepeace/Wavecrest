@@ -121,7 +121,13 @@ const PostJobVacancies = () => {
           "2xl": "none",
         }}
       >
-        <Image src={waveimg} h="100%" w="100%" objectFit="cover" />
+        <Image
+          src={waveimg}
+          alt="bannerImage"
+          h="100%"
+          w="100%"
+          objectFit="cover"
+        />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"

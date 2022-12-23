@@ -119,7 +119,7 @@ const HostelApplication = () => {
     <Fragment>
       <Navbar />
       <Box h="441px" w="100%" gridGap="68px" position="relative">
-        <Image src={hostel2} h="100%" w="100%" objectFit="cover" />
+        <Image src={hostel2} alt="banner" h="100%" w="100%" objectFit="cover" />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"

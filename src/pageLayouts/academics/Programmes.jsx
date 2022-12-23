@@ -125,7 +125,13 @@ const Programmes = () => {
           "2xl": "none",
         }}
       >
-        <Image src={studyProgrammes3} h="100%" w="100%" objectFit="cover" />
+        <Image
+          src={studyProgrammes3}
+          alt="banner"
+          h="100%"
+          w="100%"
+          objectFit="cover"
+        />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -296,7 +302,7 @@ const Programmes = () => {
                       color="#FFF"
                       my="20px"
                     >
-                      <Image src={fileDownload} mr="13px" />
+                      <Image src={fileDownload} alt="download-icon" mr="13px" />
                       <Text>Download Programme Brochure</Text>
                     </Flex>
                   </Link>

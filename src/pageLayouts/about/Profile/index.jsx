@@ -46,7 +46,7 @@ const Profile = () => {
           "2xl": "none",
         }}
       >
-        <Image src={about} h="100%" w="100%" objectFit="cover" />
+        <Image src={about} alt="banner" h="100%" w="100%" objectFit="cover" />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"

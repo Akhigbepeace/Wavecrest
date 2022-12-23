@@ -301,6 +301,7 @@ const NDProgrammeDesc = () => {
                 >
                   <Image
                     src={quickLink.image}
+                    alt="quicklink-image"
                     w="100%"
                     h="100%"
                     borderRadius="3px"

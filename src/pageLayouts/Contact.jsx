@@ -521,6 +521,7 @@ const Contact = () => {
                 >
                   <Image
                     src={quickLink.image}
+                    alt="quicklinks-images"
                     w="100%"
                     h="100%"
                     borderRadius="3px"

@@ -46,7 +46,13 @@ const Admission = () => {
           "2xl": "block",
         }}
       >
-        <Image src={admission} h="100%" w="100%" objectFit="cover" />
+        <Image
+          src={admission}
+          alt="banner"
+          h="100%"
+          w="100%"
+          objectFit="cover"
+        />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"

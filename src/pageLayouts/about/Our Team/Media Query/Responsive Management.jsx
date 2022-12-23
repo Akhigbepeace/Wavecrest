@@ -1,6 +1,5 @@
 import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
 import React from "react";
-const imageAvatar = "/assets/imgs/image-avatar.png";
 
 export default function Carousel() {
   const managements = [
