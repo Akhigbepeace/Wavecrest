@@ -20,12 +20,9 @@ import MobileSideBar from "components/MobileSideBar";
 import { useRouter } from "next/router";
 
 const Contact = () => {
-  const aboutgallery1 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231285/aboutgallery1_yvd8m2.png";
-  const aboutgallery2 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231286/aboutgallery2_vjwyrh.png";
-  const aboutgallery4 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667231291/aboutgallery4_adl08b.png";
+  const aboutgallery1 = "/assets/imgs/news.png";
+  const aboutgallery2 = "/assets/imgs/testimonial.png";
+  const aboutgallery4 = "/assets/imgs/programmes.png";
   const contactpic = "/assets/imgs/aboutDesktopBanner.jpg";
   const initialValues = {
     user_name: "",
@@ -99,7 +96,7 @@ const Contact = () => {
     {
       image: aboutgallery1,
       text: "News and Events",
-      linkTo: "/",
+      linkTo: "/home",
     },
     {
       image: aboutgallery2,

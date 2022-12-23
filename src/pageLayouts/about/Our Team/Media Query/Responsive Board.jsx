@@ -15,7 +15,7 @@ export default function Carousel() {
       post: "W Hospitality Group",
     },
     {
-      image: imageAvatar,
+      image: "/assets/imgs/boardmembers/moyo.jpg",
       name: "Moyo Ogunseinde",
       post: "Uraga / Radisson Blu",
     },
@@ -30,12 +30,12 @@ export default function Carousel() {
       post: "Independence Consultant",
     },
     {
-      image: imageAvatar,
+      image: "/assets/imgs/boardmembers/gloria.png",
       name: "Gloria Osezua",
       post: "Executive Vice Chairman / Owel Farms",
     },
     {
-      image: imageAvatar,
+      image: "/assets/imgs/boardmembers/dolapo.png",
       name: "Dolapo Afolami",
       post: "Member",
     },
