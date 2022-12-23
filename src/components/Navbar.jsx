@@ -216,7 +216,7 @@ const Navbar = () => {
         }}
       >
         <Box onClick={() => redirect()} cursor="pointer">
-          <Image w="238px" h="52px" src={Logo} />
+          <Image alt="logo" w="238px" h="52px" src={Logo} />
         </Box>
 
         <Stack direction="row" alignItems="center">
@@ -227,6 +227,7 @@ const Navbar = () => {
               <NextLink key={index} href={social.to} passHref legacyBehavior>
                 <Link key={index} target={social.target} rel={social.rel}>
                   <Image
+                    alt="icon"
                     src={social.icon}
                     w="34px"
                     h="34px"

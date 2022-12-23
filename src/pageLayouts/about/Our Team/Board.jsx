@@ -86,6 +86,7 @@ const Board = () => {
             <Box key={index} w={{ xl: "230px", "2xl": "250px" }}>
               <Image
                 src={board.image}
+                alt="board"
                 w="100%"
                 h="250px"
                 objectFit="cover"

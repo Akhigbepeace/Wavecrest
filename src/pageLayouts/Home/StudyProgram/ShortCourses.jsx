@@ -14,37 +14,39 @@ import { FaChevronCircleUp } from "react-icons/fa";
 import { useRouter } from "next/router";
 
 const ShortCourses = () => {
-  const studyProgrammes1 = "/assets/imgs/studyprogrammes 2.png";
-  const studyProgrammes2 = "/assets/imgs/study-programme3.jpg";
-  const studyProgrammes4 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667292423/wavecrest/trainingImage3_nxaonh.png";
+  const studyProgrammes4 = "/assets/imgs/training1.png";
+  const training1 = "/assets/imgs/trainingImages/training1.jpg";
+  const training2 = "/assets/imgs/trainingImages/training2.jpg";
+  const training3 = "/assets/imgs/trainingImages/training3.jpg";
   const shortCourses = [
     {
       linkContent: "TRAINING",
       values: [
         {
-          imageSrc: studyProgrammes4,
+          imageSrc: training1,
           current: false,
           captionHeading: "Confederation of Tourism and Hospitality",
           captionTime: "1 Year | Part Time",
           captionButton: "Apply Now",
         },
         {
-          imageSrc: studyProgrammes1,
+          imageSrc: training2,
+
           current: false,
           captionHeading: "Hospitality Training Programs",
           captionTime: "1 Year | Part Time",
           captionButton: "Apply Now",
         },
         {
-          imageSrc: studyProgrammes2,
+          imageSrc: studyProgrammes4,
+
           current: false,
           captionHeading: "Culinary Courses",
           captionTime: "1 Year | Part Time",
           captionButton: "Apply Now",
         },
         {
-          imageSrc: studyProgrammes2,
+          imageSrc: training3,
           current: false,
           captionHeading: "National Skill Acquisition",
           captionTime: "1 Year | Part Time",

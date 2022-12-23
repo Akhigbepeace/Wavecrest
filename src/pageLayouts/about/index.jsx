@@ -1,4 +1,4 @@
-import { Box, Image, Text, Flex, Button } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 import React, { Fragment, useState, useEffect } from "react";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";

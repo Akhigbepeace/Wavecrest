@@ -79,7 +79,7 @@ const Management = () => {
         {managements.map((management, index) => {
           return (
             <Box key={index} w={{ xl: "230px", "2xl": "250px" }} mr="10px">
-              <Image src={management.image} w="100%" borderRadius="5px" />
+              <Image src={management.image} alt="management" w="100%" borderRadius="5px" />
 
               <Flex
                 alignItems="center"

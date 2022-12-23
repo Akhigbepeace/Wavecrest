@@ -10,13 +10,10 @@ const StudyProgrammes = () => {
   const studyProgrammes1 = "/assets/imgs/studyprogrammes 2.png";
   const studyProgrammes2 = "/assets/imgs/study-programme3.jpg";
   const studyProgrammes3 = "/assets/imgs/studyprogramme.jpg";
-  const studyProgrammes4 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667291369/wavecrest/training1_ohlbqh.png";
-  const training1 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667292428/wavecrest/trainingImg1_yf6bvk.png";
-  const training2 =
-    "https://res.cloudinary.com/wavecrest1/image/upload/v1667292424/wavecrest/trainingImage2_wzdraz.png";
-  const training3 = "/assets/imgs/studyprogrammes 4.png";
+  const studyProgrammes4 = "/assets/imgs/training1.png";
+  const training1 = "/assets/imgs/trainingImages/training1.jpg";
+  const training2 = "/assets/imgs/trainingImages/training2.jpg";
+  const training3 = "/assets/imgs/trainingImages/training3.jpg";
   const objArr = [
     {
       linkContent: "HND IN HOSPITALITY MANAGEMENT",
@@ -237,8 +234,15 @@ const StudyProgrammes = () => {
         }}
       >
         {currentprogram.values.map((value, index) => (
-          <Box key={index} w="1100px" h="400px" mb="70px" m="0 auto">
-            <Box position="absolute" m="0 auto" w="1100px" h="394px">
+          <Box
+            key={index}
+            w="1100px"
+            h="400px"
+            mb="70px"
+            m="0 auto"
+            position="relative"
+          >
+            <Box m="0 auto" w="1100px" h="394px">
               <Image
                 src={value.imageSrc}
                 objectFit="cover"
@@ -250,8 +254,10 @@ const StudyProgrammes = () => {
             <Box
               bg="linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(1, 15, 29, 0.52) 46.35%, rgba(2, 29, 55, 0.87) 100%)"
               textAlign="center"
-              position="relative"
-              bottom="-127px"
+              position="absolute"
+              bottom="0"
+              h="280px"
+              w="1100px"
               pt="40px"
               pb="20px"
             >

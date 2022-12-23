@@ -207,6 +207,7 @@ const Staff = () => {
                       <Box key={index} w={{ xl: "310px", "2xl": "350px" }}>
                         <Image
                           src={staff.image}
+                          alt="staffs"
                           objectFit="cover"
                           w="100%"
                           h="350px"

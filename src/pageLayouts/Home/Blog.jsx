@@ -18,7 +18,7 @@ const settings = {
   arrows: false,
   fade: false,
   infinite: true,
-  autoplay: true,
+  autoplay: false,
   speed: 2500,
   autoplaySpeed: 3000,
   slidesToShow: 1,
@@ -212,7 +212,7 @@ export default function CaptionCarousel() {
                     xl: "row",
                     "2xl": "row",
                   }}
-                  height="100%"
+                  height="454px"
                   position="relative"
                   alignItems="center"
                   justifyContent="center"
