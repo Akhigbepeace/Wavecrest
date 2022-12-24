@@ -50,6 +50,9 @@ const Programmes = () => {
       imageSrc: studyProgrammes3,
       current: false,
       captionHeading: "BAG AN ND IN HOSPITALITY MANAGEMENT",
+      height: "450px",
+      objectPosition: "center 25%",
+
       captionTime: "2 Years | Part Time",
       captionButton: "Apply Now",
       responsiveDesc:
@@ -70,6 +73,8 @@ const Programmes = () => {
       imageSrc: studyProgrammes2,
       current: true,
       captionHeading: "SPEND A GAP YEAR IN HOSPITALITY TRAINING",
+      height: "500px",
+      objectPosition: "center 2%",
       captionTime: "1 Year | Full Time",
       captionButton: "Apply Now",
       responsiveDesc:
@@ -224,10 +229,11 @@ const Programmes = () => {
                 <Image
                   src={programme.imageSrc}
                   alt="coffee"
-                  h="394px"
+                  h={programme.height || "394px"}
                   w="100%"
                   m="0 auto"
                   mt="25px"
+                  objectPosition={programme.objectPosition}
                   objectFit="cover"
                 />
 

@@ -43,8 +43,7 @@ const PopupModal = () => {
     return () => {
       clearTimeout(timerId);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [onOpen]);
+  }, [onOpen, setTimerId]);
 
   const initialValues = {
     user_name: "",

@@ -12,13 +12,13 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
 import { useRouter } from "next/router";
+import MobileSideBar from "components/MobileSideBar";
 
 const visa = "/assets/imgs/visa.png";
 const waveimg = "/assets/imgs/waveimg.png";
 const paypal = "/assets/imgs/paypal.png";
 const mastercard = "/assets/imgs/mastercard.png";
 
-import MobileSideBar from "components/MobileSideBar";
 
 const ApplyOnline = () => {
   const initialValues = {
