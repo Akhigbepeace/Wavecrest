@@ -61,7 +61,7 @@ export default function Carousel() {
 
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((image, index) => (
-          <Box mr="10px">
+          <Box key={index} mr="10px">
             <Box
               key={index}
               w="272px"

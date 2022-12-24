@@ -1,6 +1,8 @@
 **/node_modules/*
 **/out/*
-**/.next/*
+.next/*
 **/dist/*
 **/storybook-static/*
 jest.setup.js
+next-env.d.ts
+next.config.js

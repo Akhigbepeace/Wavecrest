@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import React, { Fragment, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import MobileSideBar from "components/MobileSideBar";
 import Showcase from "./Showcase";

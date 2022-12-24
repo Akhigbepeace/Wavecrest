@@ -234,7 +234,7 @@ const StudyProgrammes = () => {
         }}
       >
         {currentprogram.values.map((value, index) => (
-          <Box mb="10px">
+          <Box key={index} mb="10px">
             <Box
               key={index}
               w="1100px"
