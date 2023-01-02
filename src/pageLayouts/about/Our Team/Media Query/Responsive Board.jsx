@@ -1,6 +1,6 @@
 import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
 import React from "react";
-const imageAvatar = "/assets/igms/image-avatar.png";
+const imageAvatar = "/assets/imgs/image-avatar.png";
 
 export default function Carousel() {
   const boards = [
@@ -10,7 +10,7 @@ export default function Carousel() {
       post: "Women's Board",
     },
     {
-      image: "/assets/imgs/ward.jpg",
+      image: "/assets/imgs/boardmembers/ward.jpg",
       name: "Trevor Ward",
       post: "W Hospitality Group",
     },
