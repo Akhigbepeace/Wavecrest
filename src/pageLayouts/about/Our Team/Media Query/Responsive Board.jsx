@@ -1,6 +1,6 @@
 import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
 import React from "react";
-const imageAvatar = "/assets/igms/image-avatar.png";
+const imageAvatar = "/assets/imgs/image-avatar.png";
 
 export default function Carousel() {
   const boards = [
@@ -10,7 +10,7 @@ export default function Carousel() {
       post: "Women's Board",
     },
     {
-      image: "/assets/imgs/ward.jpg",
+      image: "/assets/imgs/boardmembers/ward.jpg",
       name: "Trevor Ward",
       post: "W Hospitality Group",
     },
@@ -60,12 +60,14 @@ export default function Carousel() {
       <Flex overflowY="scroll">
         {boards.map((board, index) => (
           <Box key={index}>
-            <Box w="350px" h="300px">
+            <Box w="400px" h="300px" borderRadius="0px 0px 5px 5px">
               <Image
                 src={board.image}
                 pr="10px"
+                h="100%"
+                w="100%"
                 alt="companyLogo"
-                objectFit="contain"
+                objectFit="cover"
               />
             </Box>
 
@@ -74,7 +76,7 @@ export default function Carousel() {
               bg="rgba(255, 255, 255, 67%)"
               p="10px 25px"
               position="relative"
-              top="-64px"
+              top="-74px"
               borderRadius="0px 0px 5px 5px"
               w="100%"
             >
