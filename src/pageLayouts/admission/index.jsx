@@ -48,7 +48,7 @@ const Admission = () => {
       >
         <Image
           src={admission}
-          alt="banner"
+          alt="admission-image"
           h="100%"
           w="100%"
           objectFit="cover"
