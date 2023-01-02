@@ -34,16 +34,16 @@ const Statistics = () => {
           xl: "repeat(4, auto)",
           "2xl": "repeat(4, 1fr)",
         }}
-        mt="18px"
+        my="18px"
         color="#021D37"
       >
         {statistics.map((statistic, index) => {
           return (
             <GridItem key={index} textAlign="center" pt="40px">
-              <Text fontFamily="Open sans" fontSize="20px">
+              <Text fontFamily="Open sans" fontSize="20px" fontWeight="400">
                 {statistic.count}
               </Text>
-              <Heading fontFamily="Manrope" fontSize="20px" fontWeight="400">
+              <Heading fontFamily="Manrope" fontSize="20px">
                 {statistic.name}
               </Heading>
             </GridItem>

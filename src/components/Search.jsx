@@ -1,7 +1,8 @@
 import { Box, Flex, Image, Input, useBoolean } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import searchIcon from "assets/Images/search.svg";
+import { useRouter } from "next/router";
+
+const searchIcon = "/assets/imgs/search.svg";
 
 const Search = () => {
   const [showSearchBar, setShowSearchBar] = useBoolean();
@@ -12,12 +13,13 @@ const Search = () => {
   };
 
   const navigateTo = `/searhResults?searchTerm=${inputField}`;
-  const navigate = useNavigate();
+
+  const router = useRouter();
 
   const ShowResult = (e) => {
     e.preventDefault();
 
-    navigate(navigateTo, { replace: true });
+    router.push(navigateTo);
   };
 
   return (
@@ -51,7 +53,7 @@ const Search = () => {
           cursor: "pointer",
         }}
       >
-        <Image src={searchIcon} />
+        <Image src={searchIcon} alt="search-icon" />
       </Box>
     </Flex>
   );

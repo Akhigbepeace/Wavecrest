@@ -12,10 +12,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
-import { NavLink } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import Logo from "assets/Images/logo_wavecrest.svg";
-import Menu from "assets/Images/Menu.png";
+
+const Logo = "/assets/imgs/WC-LOGO-july.png";
+const Menu = "/assets/imgs/Menu.png";
 
 const MobileSideBar = () => {
   const mobileNavLinks = [
@@ -165,8 +165,10 @@ const MobileSideBar = () => {
         "2xl": "none",
       }}
     >
-      <Link to="/" as={NavLink}>
+      <Link to="/">
         <Image
+          src={Logo}
+          alt="logo"
           w={{
             sm: "143px",
             md: "143px",
@@ -181,13 +183,13 @@ const MobileSideBar = () => {
             xl: "52px",
             "2xl": "52px",
           }}
-          src={Logo}
         />
       </Link>
 
       <Box cursor="pointer">
         <Image
           src={Menu}
+          alt="menu"
           w="37px"
           h="37px"
           display={{
@@ -258,11 +260,10 @@ const MobileSideBar = () => {
               <Flex flexDirection="column">
                 {activeModalMenu.map((navLink, index) => {
                   return (
-                    <Fragment>
+                    <Fragment key={index}>
                       {navLink.to ? (
                         <Link
                           key={index}
-                          as={NavLink}
                           to={navLink.to}
                           color="#FFF"
                           fontFamily="Open Sans"
@@ -271,6 +272,7 @@ const MobileSideBar = () => {
                           lineHeight="30px"
                           mt="10px"
                           transition="all ease 0.5s"
+                          cursor="pointer"
                           _hover={{
                             color: "brown",
                             textDecoration: "none",
@@ -294,6 +296,7 @@ const MobileSideBar = () => {
                             lineHeight="30px"
                             mt="10px"
                             transition="all ease 0.5s"
+                            cursor="pointer"
                             onClick={() => {
                               if (navLink.NestedLinks.length) {
                                 setActiveModalMenu(navLink.NestedLinks);
