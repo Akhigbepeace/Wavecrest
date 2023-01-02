@@ -77,6 +77,7 @@ const OurTeam = () => {
       </Box>
 
       <Flex
+        justifyContent="center"
         mx="auto"
         mt="100px"
         display={{
