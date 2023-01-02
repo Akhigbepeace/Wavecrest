@@ -15,7 +15,7 @@ import {
   Grid,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-const waveimg = "assets/imgs/waveimg.png";
+const waveimg = "/assets/imgs/waveimg.png";
 
 const RespTuition = () => {
   const Tuitions = [
@@ -175,7 +175,7 @@ const RespTuition = () => {
           "2xl": "none",
         }}
       >
-        <Image src={waveimg} alt="banner" h="100%" w="100%" objectFit="cover" />
+        <Image src={waveimg} alt="halleluya" h="100%" w="100%" objectFit="cover" />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"

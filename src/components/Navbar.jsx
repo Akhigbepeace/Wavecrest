@@ -126,11 +126,7 @@ const navLinks = [
       },
     ],
   },
-  {
-    name: "ALUMNI",
-    NestedLinks: [],
-    to: "#",
-  },
+  // TODO: Add alumni link
 
   {
     name: "BLOG",

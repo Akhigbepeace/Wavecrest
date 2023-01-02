@@ -10,7 +10,10 @@ import {
   ModalContent,
   ModalBody,
   Text,
+  Button,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
+import { useRouter } from "next/router";
 import React, { Fragment, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
@@ -18,6 +21,7 @@ const Logo = "/assets/imgs/WC-LOGO-july.png";
 const Menu = "/assets/imgs/Menu.png";
 
 const MobileSideBar = () => {
+  const router = useRouter();
   const mobileNavLinks = [
     {
       name: "ABOUT",
@@ -90,11 +94,7 @@ const MobileSideBar = () => {
       ],
     },
 
-    {
-      name: "ALUMNI",
-      NestedLinks: [],
-      to: "#",
-    },
+    // TODO: Add alumni page link
 
     {
       name: "BLOG",
@@ -165,7 +165,7 @@ const MobileSideBar = () => {
         "2xl": "none",
       }}
     >
-      <Link to="/">
+      <NextLink href="/">
         <Image
           src={Logo}
           alt="logo"
@@ -184,7 +184,7 @@ const MobileSideBar = () => {
             "2xl": "52px",
           }}
         />
-      </Link>
+      </NextLink>
 
       <Box cursor="pointer">
         <Image
@@ -261,10 +261,12 @@ const MobileSideBar = () => {
                 {activeModalMenu.map((navLink, index) => {
                   return (
                     <Fragment key={index}>
-                      {navLink.to ? (
-                        <Link
+                      <Box>
+                        <Button
                           key={index}
-                          to={navLink.to}
+                          display="flex"
+                          background="none"
+                          padding="0"
                           color="#FFF"
                           fontFamily="Open Sans"
                           fontWeight="700"
@@ -273,51 +275,28 @@ const MobileSideBar = () => {
                           mt="10px"
                           transition="all ease 0.5s"
                           cursor="pointer"
+                          onClick={() => {
+                            if (navLink.NestedLinks.length) {
+                              setActiveModalMenu(navLink.NestedLinks);
+                              setShowBackButton(true);
+                            } else {
+                              router.push(navLink.to);
+                            }
+                          }}
                           _hover={{
                             color: "brown",
                             textDecoration: "none",
                           }}
                         >
-                          <Text>{navLink.name}</Text>
+                          <Flex>
+                            <Text>{navLink.name}</Text>
 
-                          <Box color="white" mt="7px" ml="10px">
-                            {navLink.icon}
-                          </Box>
-                        </Link>
-                      ) : (
-                        <Box>
-                          <Box
-                            key={index}
-                            display="flex"
-                            color="#FFF"
-                            fontFamily="Open Sans"
-                            fontWeight="700"
-                            fontSize="16px"
-                            lineHeight="30px"
-                            mt="10px"
-                            transition="all ease 0.5s"
-                            cursor="pointer"
-                            onClick={() => {
-                              if (navLink.NestedLinks.length) {
-                                setActiveModalMenu(navLink.NestedLinks);
-                                setShowBackButton(true);
-                              }
-                            }}
-                            _hover={{
-                              color: "brown",
-                              textDecoration: "none",
-                            }}
-                          >
-                            <Flex>
-                              <Text>{navLink.name}</Text>
-
-                              <Box color="white" mt="7px" ml="10px">
-                                {navLink.icon}
-                              </Box>
-                            </Flex>
-                          </Box>
-                        </Box>
-                      )}
+                            <Box color="white" mt="7px" ml="10px">
+                              {navLink.icon}
+                            </Box>
+                          </Flex>
+                        </Button>
+                      </Box>
                     </Fragment>
                   );
                 })}
