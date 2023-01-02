@@ -276,7 +276,10 @@ const MobileSideBar = () => {
                           transition="all ease 0.5s"
                           cursor="pointer"
                           onClick={() => {
-                            if (navLink.NestedLinks.length) {
+                            if (
+                              navLink.NestedLinks &&
+                              navLink.NestedLinks.length
+                            ) {
                               setActiveModalMenu(navLink.NestedLinks);
                               setShowBackButton(true);
                             } else {

@@ -13,27 +13,26 @@ const About = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const [currentId, setCurrentId] = useState("profile");
+  const [currentId, setCurrentId] = useState(id || "profile");
 
   const [activeLink, setActiveLink] = useState(menuLinks[0]);
 
   useEffect(() => {
     function selectInitialOption() {
+      if (!id && !router.isReady) return;
       const profile = menuLinks.find(
         (menu) => menu.id.toLowerCase() === currentId.toLowerCase()
       );
-
       setActiveLink(profile);
     }
 
-    if (router.isReady) {
-      selectInitialOption();
-    }
-  }, [currentId, router]);
+    selectInitialOption();
+  }, [currentId, id, router]);
 
   useEffect(() => {
-    setCurrentId(id);
+    if (id) setCurrentId(id);
   }, [id]);
+
   const handleLinkChange = (menuId) => {
     setCurrentId(menuId);
   };
@@ -55,7 +54,7 @@ const About = () => {
             "2xl": "block",
           }}
         >
-          <Image src={about} h="100%" w="100%" objectFit="cover" />
+          <Image src={about} h="100%" w="100%" objectFit="cover" alt="About" />
 
           <Box
             bg="rgba(0, 24, 71, 0.5)"
@@ -77,13 +76,15 @@ const About = () => {
           </Box>
         </Box>
 
-        <LinkTabs
-          menuLinks={menuLinks}
-          activeItem={activeLink.linkTitle}
-          onLinkChange={handleLinkChange}
-        >
-          {activeLink.content}
-        </LinkTabs>
+        {router.isReady && (
+          <LinkTabs
+            menuLinks={menuLinks}
+            activeItem={activeLink.linkTitle}
+            onLinkChange={handleLinkChange}
+          >
+            {activeLink.content}
+          </LinkTabs>
+        )}
 
         <Footer />
         <FooterCopywright />

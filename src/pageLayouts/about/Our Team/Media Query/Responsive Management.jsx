@@ -52,6 +52,7 @@ export default function Carousel() {
                 h="200px"
                 alt="companyLogo"
                 objectFit="cover"
+                objectPosition="center 30%"
                 borderRadius="0px 0px 5px 5px"
               />
             </Box>

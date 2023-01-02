@@ -102,6 +102,8 @@ const Showcase = () => {
                   alt="Wavecrest Images"
                   layout="fill"
                   w="100%"
+                  objectFit="cover"
+                  objectPosition="center 20%"
                   h="100%"
                 />
               </Box>
