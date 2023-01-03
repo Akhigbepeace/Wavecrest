@@ -129,7 +129,7 @@ const Contact = () => {
     const res = await emailjs.sendForm(
       "service_djq4ick",
       "template_i27quow",
-      form.current,
+      "form#contact-form",
       "JPAG_ZJVlAcuO_5D-"
     );
 
@@ -254,7 +254,7 @@ const Contact = () => {
               as possible
             </Text>
 
-            <form ref={form} onSubmit={sendEmail}>
+            <form id="contact-form" ref={form} onSubmit={sendEmail}>
               <Stack>
                 {contactFields.map((field, index) => {
                   return (
