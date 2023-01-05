@@ -1,5 +1,5 @@
+import HomepageLayout from "components/layouts/HomepageLayout";
 import Head from "next/head";
-import Home from "pageLayouts/Home";
 
 const HomePage = () => {
   return (
@@ -8,7 +8,7 @@ const HomePage = () => {
         <title>WAVECREST COLLEGE OF HOSPITALITY</title>
       </Head>
 
-      <Home />
+      <HomepageLayout />
     </>
   );
 };
