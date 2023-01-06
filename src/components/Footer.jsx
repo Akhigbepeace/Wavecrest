@@ -198,7 +198,7 @@ const Footer = () => {
           "2xl": "flex-end",
         }}
       >
-        <Link to="/">
+        <Link to="/home">
           <Image src={logo} alt="logo" w="270px" height="54px" mb="15px" />
         </Link>
 

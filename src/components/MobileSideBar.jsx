@@ -165,7 +165,7 @@ const MobileSideBar = () => {
         "2xl": "none",
       }}
     >
-      <NextLink href="/">
+      <NextLink href="/home">
         <Image
           src={Logo}
           alt="logo"
