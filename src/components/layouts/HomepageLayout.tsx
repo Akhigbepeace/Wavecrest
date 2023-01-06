@@ -6,20 +6,31 @@ import Showcase from "components/organisms/Showcase/Showcase";
 import Statistics from "components/molecules/Statistics";
 import Blog from "components/organisms/Blog";
 import DiscoverHospitality from "components/organisms/DiscoverHospitality";
+import EditItem from "components/organisms/Edit/EditItem";
+
+const editables = {
+  header: [{ name: "logo", label: "Logo", placeholder: "Enter logo URL" }],
+  showCase: [{ name: "video", label: "Video", placeholder: "Enter video URL" }],
+};
 
 const HomepageLayout = () => {
   return (
-    <div>
-      <Header />
-      <Navbar />
-      <MobileSideBar />
+    <>
+      <EditItem fields={editables.header}>
+        <Header />
+        <Navbar />
 
-      <Showcase />
+        <MobileSideBar />
+      </EditItem>
+
+      <EditItem fields={editables.showCase}>
+        <Showcase />
+      </EditItem>
       <Statistics />
 
       <DiscoverHospitality />
       <Blog />
-    </div>
+    </>
   );
 };
 
