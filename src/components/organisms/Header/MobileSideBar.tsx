@@ -15,8 +15,8 @@ import Logo from "components/atoms/Logo";
 import { useRouter } from "next/router";
 import React, { Fragment, useState } from "react";
 import { FaChevronLeft } from "react-icons/fa";
-import { navLinks, sideLinks } from "./Navbar/constants";
-import SideLink from "./Navbar/SideLink";
+import { navLinks, sideLinks } from "../Navbar/constants";
+import SideLink from "../Navbar/SideLink";
 
 const Menu = "/assets/imgs/Menu.png";
 
