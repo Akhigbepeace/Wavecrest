@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+const logo = "/assets/imgs/WC-LOGO-july.png";
+>>>>>>> 3eaeff4 (Completed home page)
 const linked = "/assets/imgs/linkedin.svg";
 const twitter = "/assets/imgs/Twitter.svg";
 const facebook = "/assets/imgs/facebook.svg";
