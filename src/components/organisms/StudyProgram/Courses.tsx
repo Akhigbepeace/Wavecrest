@@ -105,8 +105,6 @@ const Courses = () => {
                         sm: "212px",
                         md: "182px",
                         lg: "184px",
-                        xl: "-175px",
-                        "2xl": "-175px",
                       }}
                     >
                       <NextLink href={value.href} legacyBehavior passHref>

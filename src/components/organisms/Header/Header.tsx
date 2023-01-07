@@ -1,10 +1,8 @@
-import { Flex, Image, Link, Stack } from "@chakra-ui/react";
-
-import NextLink from "next/link";
+import { Flex, Stack } from "@chakra-ui/react";
 import React from "react";
 import Search from "./Search";
-import { socials } from "../Navbar/constants";
 import Logo from "components/atoms/Logo";
+import SocialMediaLinks from "components/molecules/SocialMediaLinks";
 
 const Header = () => {
   return (
@@ -26,21 +24,7 @@ const Header = () => {
       <Stack direction="row" alignItems="center">
         <Search />
 
-        {socials.map((social, index) => {
-          return (
-            <NextLink key={index} href={social.to} passHref legacyBehavior>
-              <Link key={index} target={social.target} rel={social.rel}>
-                <Image
-                  alt="icon"
-                  src={social.icon}
-                  w="34px"
-                  h="34px"
-                  ml="15px"
-                />
-              </Link>
-            </NextLink>
-          );
-        })}
+        <SocialMediaLinks />
       </Stack>
     </Flex>
   );

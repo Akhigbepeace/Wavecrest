@@ -11,62 +11,10 @@ import {
 } from "@chakra-ui/react";
 import { FaChevronCircleDown } from "react-icons/fa";
 import { FaChevronCircleUp } from "react-icons/fa";
-import { useRouter } from "next/router";
+import NextLink from "next/link";
+import { shortCourses } from "./constant";
 
 const ShortCourses = () => {
-  const studyProgrammes4 = "/assets/imgs/training1.png";
-  const training1 = "/assets/imgs/trainingImages/training1.jpg";
-  const training2 = "/assets/imgs/trainingImages/training2.jpg";
-  const training3 = "/assets/imgs/trainingImages/training3.jpg";
-  const shortCourses = [
-    {
-      linkContent: "TRAINING",
-      values: [
-        {
-          imageSrc: training1,
-          current: false,
-          captionHeading: "Confederation of Tourism and Hospitality",
-          captionTime: "1 Year | Part Time",
-          captionButton: "Apply Now",
-        },
-        {
-          imageSrc: training2,
-
-          current: false,
-          captionHeading: "Hospitality Training Programs",
-          captionTime: "1 Year | Part Time",
-          captionButton: "Apply Now",
-        },
-        {
-          imageSrc: studyProgrammes4,
-
-          current: false,
-          captionHeading: "Culinary Courses",
-          captionTime: "1 Year | Part Time",
-          captionButton: "Apply Now",
-        },
-        {
-          imageSrc: training3,
-          current: false,
-          captionHeading: "National Skill Acquisition",
-          captionTime: "1 Year | Part Time",
-          captionButton: "Apply Now",
-        },
-      ],
-    },
-  ];
-  const router = useRouter();
-  const linkTo = (e) => {
-    e.preventDefault();
-
-    router.push("/academics/training");
-  };
-  const redirect = (e) => {
-    e.preventDefault();
-
-    router.push("/admission/applyOnline");
-  };
-
   return (
     <Box>
       {shortCourses.map((shortCourse, index) => {
@@ -145,16 +93,21 @@ const ShortCourses = () => {
                               "2xl": "-175px",
                             }}
                           >
-                            <Heading
-                              color="#fff"
-                              fontWeight="700"
-                              fontSize="20px"
-                              fontFamily="Manrope"
-                              textTransform="uppercase"
-                              onClick={(e) => linkTo(e)}
+                            <NextLink
+                              href="/academics/training"
+                              passHref
+                              legacyBehavior
                             >
-                              {value.captionHeading}
-                            </Heading>
+                              <Heading
+                                color="#fff"
+                                fontWeight="700"
+                                fontSize="20px"
+                                fontFamily="Manrope"
+                                textTransform="uppercase"
+                              >
+                                {value.captionHeading}
+                              </Heading>
+                            </NextLink>
 
                             <Text
                               lineHeight="27px"
@@ -170,46 +123,51 @@ const ShortCourses = () => {
                               {value.captionTime}
                             </Text>
 
-                            <Text
-                              mx="auto"
-                              borderRadius="5px"
-                              fontFamily="Manrope"
-                              fontWeight="700"
-                              fontSize="16px"
-                              lineHeight="22px"
-                              textTransform="uppercase"
-                              bg={{
-                                sm: "none",
-                                md: "none",
-                                lg: "none",
-                                xl: "#FFF",
-                                "2xl": "#FFF",
-                              }}
-                              color={{
-                                sm: "#FFF",
-                                md: "#FFF",
-                                lg: "#FFF",
-                                xl: "#021d37",
-                                "2xl": "#021d37",
-                              }}
-                              w="142px"
-                              height="46.89px"
-                              p="10px 25px"
-                              border={{
-                                sm: "2px solid #FFF",
-                                md: "2px solid #FFF",
-                                lg: "2px solid #FFF",
-                                xl: "none",
-                                "2xl": "none",
-                              }}
-                              _hover={{
-                                textDecoration: "none",
-                                cursor: "pointer",
-                              }}
-                              onClick={(e) => redirect(e)}
+                            <NextLink
+                              href="/admission/applyOnline"
+                              legacyBehavior
+                              passHref
                             >
-                              {value.captionButton}
-                            </Text>
+                              <Text
+                                mx="auto"
+                                borderRadius="5px"
+                                fontFamily="Manrope"
+                                fontWeight="700"
+                                fontSize="16px"
+                                lineHeight="22px"
+                                textTransform="uppercase"
+                                bg={{
+                                  sm: "none",
+                                  md: "none",
+                                  lg: "none",
+                                  xl: "#FFF",
+                                  "2xl": "#FFF",
+                                }}
+                                color={{
+                                  sm: "#FFF",
+                                  md: "#FFF",
+                                  lg: "#FFF",
+                                  xl: "#021d37",
+                                  "2xl": "#021d37",
+                                }}
+                                w="142px"
+                                height="46.89px"
+                                p="10px 25px"
+                                border={{
+                                  sm: "2px solid #FFF",
+                                  md: "2px solid #FFF",
+                                  lg: "2px solid #FFF",
+                                  xl: "none",
+                                  "2xl": "none",
+                                }}
+                                _hover={{
+                                  textDecoration: "none",
+                                  cursor: "pointer",
+                                }}
+                              >
+                                {value.captionButton}
+                              </Text>
+                            </NextLink>
                           </Box>
                         </Box>
                       );
