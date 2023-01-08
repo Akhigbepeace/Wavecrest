@@ -36,7 +36,6 @@ export default function OurStories() {
 
   const cards = CARD_POST;
 
-  const router = useRouter();
 
   return (
     <OurStories.Wrapper>
@@ -314,7 +313,6 @@ export default function OurStories() {
                   passHref
                 >
                   <Link
-                    onClick={(e) => showStory(e)}
                     background="#FFF"
                     w="168px"
                     p="10px 26px"
