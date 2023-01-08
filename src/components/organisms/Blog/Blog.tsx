@@ -28,8 +28,8 @@ const settings = {
 };
 
 export default function Blog() {
-  const [slider, setSlider] = React.useState(null);
-
+  const [slider, setSlider] = React.useState<Slider>()
+  
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "40px" });
 

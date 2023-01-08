@@ -1,8 +1,16 @@
 import { Grid, Image } from "@chakra-ui/react";
-import { cards } from "components/organisms/Blog/constant";
 import React from "react";
 
 const MobilePartner = () => {
+  const cards = [
+    "/assets/imgs/IshkTolaram.png",
+    "/assets/imgs/elisLogo.png",
+    "/assets/imgs/lexonCapital.png",
+    "/assets/imgs/women's board.jpg",
+    "/assets/imgs/venFoundation.jpeg",
+    "/assets/imgs/nestleProfessionals.png",
+  ];
+
   return (
     <Grid
       display={{

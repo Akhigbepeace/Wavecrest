@@ -23,8 +23,8 @@ const settings = {
   cssEase: "linear",
 };
 export default function Partners() {
-  const [slider, setSlider] = React.useState();
-
+  const [slider, setSlider] = React.useState<Slider>()
+  
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "10px" });
 

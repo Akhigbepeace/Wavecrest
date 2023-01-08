@@ -36,7 +36,9 @@ const Footer = () => {
           "2xl": "flex-end",
         }}
       >
-        <Logo />
+        <Box mb="10px">
+          <Logo />
+        </Box>
 
         <Text
           w="274px"

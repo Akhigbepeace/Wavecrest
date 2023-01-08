@@ -20,9 +20,10 @@ const Newsletter = () => {
   const [inputField, setInputField] = useState(initialValues);
 
   const inputValues = (e: SyntheticEvent) => {
+    console.log(e.currentTarget);
     setInputField({
       ...inputField,
-      [e.target.name]: e.target.value,
+      [e.currentTarget.name]: e.currentTarget.value,
     });
   };
 
@@ -34,7 +35,7 @@ const Newsletter = () => {
     const res = await emailjs.sendForm(
       "service_djq4ick",
       "template_krcopwh",
-      form.current,
+      "form#contact-form",
       "JPAG_ZJVlAcuO_5D-"
     );
 
@@ -84,7 +85,6 @@ const Newsletter = () => {
                 isRequired
                 key={index}
                 type={field.fieldType}
-                variant={field.variant}
                 placeholder={field.placeHolder}
                 name={field.name}
                 value={inputField[field.name]}

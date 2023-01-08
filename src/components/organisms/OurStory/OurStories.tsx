@@ -28,13 +28,12 @@ const settings = {
 };
 
 export default function OurStories() {
-  const [slider, setSlider] = React.useState(null);
+  const [slider, setSlider] = React.useState<Slider>();
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "40px" });
 
   const cards = CARD_POST;
-
 
   return (
     <OurStories.Wrapper>
