@@ -13,7 +13,6 @@ import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Slider from "react-slick";
 import styled from "@emotion/styled";
 import { CARD_POST } from "data/blog";
-import { useRouter } from "next/router";
 import NextLink from "next/link";
 
 const settings = {
