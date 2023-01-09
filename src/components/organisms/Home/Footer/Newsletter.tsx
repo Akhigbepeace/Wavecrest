@@ -20,6 +20,13 @@ const Newsletter = () => {
   const [inputField, setInputField] = useState(initialValues as any);
 
   const inputValues = (e: any) => {
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/components/organisms/Footer/Newsletter.tsx
+========
+    console.log(e.currentTarget);
+>>>>>>>> 61df93b (Formated files):src/components/organisms/Home/Footer/Newsletter.tsx
+>>>>>>> 61df93b (Formated files)
     setInputField({
       ...inputField,
       [e.currentTarget.name]: e.currentTarget.value,

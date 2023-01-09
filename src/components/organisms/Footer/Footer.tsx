@@ -1,7 +1,7 @@
 import { Grid, Text, Flex, Box } from "@chakra-ui/react";
 import React from "react";
 import Logo from "components/atoms/Logo";
-import Pages from "./Pages";
+import Pages from "../Home/Footer/Pages";
 import Newsletter from "./Newsletter";
 import SocialMediaLinks from "components/molecules/SocialMediaLinks";
 

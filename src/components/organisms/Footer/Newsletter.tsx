@@ -9,7 +9,8 @@ import {
 } from "@chakra-ui/react";
 import React, { SyntheticEvent, useRef, useState } from "react";
 import emailjs from "emailjs-com";
-import { subscribeForm } from "./constant";
+// import { subscribeForm } from "./constant";
+import { subscribeForm } from "../Home/Footer/constant";
 
 const Newsletter = () => {
   const initialValues = {
