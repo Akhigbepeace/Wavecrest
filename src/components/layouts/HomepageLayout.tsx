@@ -4,9 +4,13 @@ import Navbar from "components/organisms/Navbar/Navbar";
 import React from "react";
 import Showcase from "components/organisms/Showcase/Showcase";
 import Statistics from "components/molecules/Statistics";
-import Blog from "components/organisms/Blog";
+import Blog from "components/organisms/Blog/Blog";
 import DiscoverHospitality from "components/organisms/DiscoverHospitality";
 import EditItem from "components/organisms/Edit/EditItem";
+import StudyProgrammes from "components/organisms/StudyProgram/StudyProgrammes";
+import OurStories from "components/organisms/OurStory/OurStories";
+import Partners from "components/organisms/Partners";
+import Footer from "components/organisms/Footer/Footer";
 
 const editables = {
   header: [{ name: "logo", label: "Logo", placeholder: "Enter logo URL" }],
@@ -30,6 +34,10 @@ const HomepageLayout = () => {
 
       <DiscoverHospitality />
       <Blog />
+      <StudyProgrammes />
+      <OurStories />
+      <Partners />
+      <Footer />
     </>
   );
 };

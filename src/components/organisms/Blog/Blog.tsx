@@ -12,6 +12,8 @@ import React from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Slider from "react-slick";
 import styled from "@emotion/styled";
+import { cards } from "./constant";
+import NextLink from "next/link";
 
 const settings = {
   dots: true,
@@ -25,74 +27,15 @@ const settings = {
   slidesToScroll: 1,
 };
 
-const CTHFlier = "/assets/imgs/tch flier.png";
-const PCHFlier = "/assets/imgs/P.C.H. flier.png";
-const CulinaryFlier = "/assets/imgs/Culinary flyer.png";
-const graduationFlier = "/assets/imgs/graduation.png";
-const graduationFair = "/assets/imgs/graduation-fair.jpg";
-export default function CaptionCarousel() {
-  const [slider, setSlider] = React.useState(null);
-
+export default function Blog() {
+  const [slider, setSlider] = React.useState<Slider>()
+  
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "40px" });
 
-  const cards = [
-    {
-      flier: CulinaryFlier,
-      title: "Culinary Courses",
-      text: "A professional programme providing the skill sets for culinary knowledge.",
-      date: "February 6 - March 8",
-      linkTo: "https://forms.gle/VQtgEFMa9qhsojGn7",
-      link: "Apply Now",
-    },
-    {
-      flier: PCHFlier,
-      title: "Professional Certificate in Hospitality",
-      text: "Training program geared towards industry managers, supervisors, and operatives.  ",
-      linkTo: "https://forms.gle/7vmuHrzHSxHmkh8s8",
-      link: "Apply Now",
-    },
-    {
-      flier: CTHFlier,
-      title: "Confederation of Tourism and Hospitality",
-      text: "UK International Gold standard qualifications  for the Hospitality, Culinary & Tourism industries",
-      linkTo: "https://tinyurl.com/CTH-Registration-Form1",
-      link: "Apply Now",
-    },
-    {
-      flier: graduationFlier,
-      title: "2022 GRADUATION CEREMONY INVITE",
-      text: "The Provost of Wavecrest College of Hospitality cordially invites you to her 2022 Graduation ceremony for Higher National Diploma, National Diploma and Certificate students.",
-      date: "Friday, 2nd December, 2022",
-      linkTo: "/posts/e90cf931-2c52-42cb-bb0d-2a30a2e960bd",
-      link: "Read More",
-    },
-    {
-      flier: graduationFair,
-      title: "GRADUATE CAREER FAIR",
-      text: "Join other organisations like yours for our GRADUATE FAIR scheduled Friday 2nd December 2022 - the same day of the graduation.",
-      date: "Friday, 2nd December, 2022",
-      linkTo: "/posts/4c06a095-d93c-424d-8adc-9ad5aa250dcb",
-      link: "Read More",
-    },
-  ];
-
   return (
-    <CaptionCarousel.Wrapper>
+    <Blog.Wrapper>
       <Box position={"relative"} width={"full"} overflow={"hidden"}>
-        <Link
-          rel="stylesheet"
-          type="text/css"
-          charSet="UTF-8"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-
-        <Link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
-
         <IconButton
           aria-label="left-arrow"
           variant="ghost"
@@ -159,7 +102,7 @@ export default function CaptionCarousel() {
           }}
           bg="#DDD"
         >
-          <Box bg="#021D37" h="3px" w="88px" mt="55px"></Box>
+          <Box bg="#021D37" h="3px" w="88px" mt="55px" />
 
           <Heading
             fontSize="30px"
@@ -171,7 +114,11 @@ export default function CaptionCarousel() {
           </Heading>
         </Box>
 
-        <Slider {...settings} ref={(slider) => setSlider(slider)} pauseOnFocus>
+        <Slider
+          {...settings}
+          ref={(slider) => setSlider(slider as Slider)}
+          pauseOnFocus
+        >
           {cards.map((card, index) => {
             const buttonStyle = {
               background: "#021d37",
@@ -180,9 +127,7 @@ export default function CaptionCarousel() {
               color: "#fff",
               fontSize: "20px",
               textDecoration: "none",
-              textAlign: "center",
               mt: "20px",
-              textTransform: "uppercase",
               borderRadius: "3px",
               fontFamily: "Manrope",
               h: "52px",
@@ -313,15 +258,18 @@ export default function CaptionCarousel() {
                       {card.date}
                     </Text>
 
-                    <Link
-                      href={card.linkTo}
-                      target={
-                        card.linkTo.includes("/posts/") ? "_self" : "_blank"
-                      }
-                      {...buttonStyle}
-                    >
-                      {card.link}
-                    </Link>
+                    <NextLink href={card.linkTo}>
+                      <Link
+                        target={
+                          card.linkTo.includes("/posts/") ? "_self" : "_blank"
+                        }
+                        textTransform="uppercase"
+                        textAlign="center"
+                        {...buttonStyle}
+                      >
+                        {card.link}
+                      </Link>
+                    </NextLink>
                   </Flex>
                 </Flex>
               </Box>
@@ -329,11 +277,11 @@ export default function CaptionCarousel() {
           })}
         </Slider>
       </Box>
-    </CaptionCarousel.Wrapper>
+    </Blog.Wrapper>
   );
 }
 
-CaptionCarousel.Wrapper = styled.div`
+Blog.Wrapper = styled.div`
   .slick-dots {
     position: static;
     margin-top: -45px;
