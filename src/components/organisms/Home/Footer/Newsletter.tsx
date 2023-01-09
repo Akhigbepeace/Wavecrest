@@ -17,9 +17,9 @@ const Newsletter = () => {
     user_email: "",
   };
 
-  const [inputField, setInputField] = useState(initialValues);
+  const [inputField, setInputField] = useState(initialValues as any);
 
-  const inputValues = (e: SyntheticEvent) => {
+  const inputValues = (e: any) => {
     console.log(e.currentTarget);
     setInputField({
       ...inputField,
@@ -77,7 +77,7 @@ const Newsletter = () => {
         College events by filling your details below
       </Text>
 
-      <form ref={form} onSubmit={sendEmail}>
+      <form ref={form as any} onSubmit={sendEmail}>
         <Stack>
           {subscribeForm.map((field, index) => {
             return (

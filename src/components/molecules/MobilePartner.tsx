@@ -40,7 +40,7 @@ const MobilePartner = () => {
       {cards.map((image, index) => (
         <Image
           key={index}
-          src={image.flier}
+          src={image}
           alt="companyLogo"
           alignItems="center"
           objectFit="contain"
