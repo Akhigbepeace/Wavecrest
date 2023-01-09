@@ -20,7 +20,6 @@ const Newsletter = () => {
   const [inputField, setInputField] = useState(initialValues as any);
 
   const inputValues = (e: any) => {
-    console.log(e.currentTarget);
     setInputField({
       ...inputField,
       [e.currentTarget.name]: e.currentTarget.value,
