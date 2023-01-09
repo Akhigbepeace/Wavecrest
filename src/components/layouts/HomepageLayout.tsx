@@ -9,7 +9,7 @@ import EditItem from "components/organisms/Home/Edit/EditItem";
 import StudyProgrammes from "components/organisms/Home/StudyProgram/StudyProgrammes";
 import OurStories from "components/organisms/Home/OurStory/OurStories";
 import Partners from "components/organisms/Home/Partners";
-import Footer from "components/organisms/Home/Footer/Footer";
+import Footer from "components/organisms/Footer/Footer";
 import MobileSideBar from "components/organisms/Home/Header/MobileSideBar";
 
 const editables = {
