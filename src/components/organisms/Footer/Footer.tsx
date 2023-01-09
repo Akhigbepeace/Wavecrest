@@ -2,7 +2,8 @@ import { Grid, Text, Flex, Box } from "@chakra-ui/react";
 import React from "react";
 import Logo from "components/atoms/Logo";
 import Pages from "../Home/Footer/Pages";
-import Newsletter from "./Newsletter";
+// import Newsletter from "./Newsletter";
+import Newsletter from "../Home/Footer/Newsletter";
 import SocialMediaLinks from "components/molecules/SocialMediaLinks";
 
 const Footer = () => {

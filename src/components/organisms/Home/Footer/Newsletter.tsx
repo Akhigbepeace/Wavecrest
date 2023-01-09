@@ -9,7 +9,12 @@ import {
 } from "@chakra-ui/react";
 import React, { SyntheticEvent, useRef, useState } from "react";
 import emailjs from "emailjs-com";
+<<<<<<< HEAD
 import { subscribeForm } from "./constant";
+=======
+// import { subscribeForm } from "./constant";
+import { subscribeForm } from "../Home/Footer/constant";
+>>>>>>> e1307bb (Formated files)
 
 const Newsletter = () => {
   const initialValues = {
@@ -21,12 +26,15 @@ const Newsletter = () => {
 
   const inputValues = (e: any) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:src/components/organisms/Footer/Newsletter.tsx
 ========
     console.log(e.currentTarget);
 >>>>>>>> 61df93b (Formated files):src/components/organisms/Home/Footer/Newsletter.tsx
 >>>>>>> 61df93b (Formated files)
+=======
+>>>>>>> e1307bb (Formated files)
     setInputField({
       ...inputField,
       [e.currentTarget.name]: e.currentTarget.value,
