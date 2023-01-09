@@ -1,3 +1,4 @@
+import ContactpageLayout from "components/layouts/ContactpageLayout";
 import HomepageLayout from "components/layouts/HomepageLayout";
 import Head from "next/head";
 
@@ -9,6 +10,7 @@ const AdminHomePage = () => {
       </Head>
 
       <HomepageLayout />
+      <ContactpageLayout />
     </>
   );
 };
