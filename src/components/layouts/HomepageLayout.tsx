@@ -1,16 +1,16 @@
-import MobileSideBar from "../organisms/Header/MobileSideBar";
-import Header from "components/organisms/Header/Header";
-import Navbar from "components/organisms/Navbar/Navbar";
+import Header from "components/organisms/Home/Header/Header";
+import Navbar from "components/organisms/Home/Navbar/Navbar";
 import React from "react";
-import Showcase from "components/organisms/Showcase/Showcase";
+import Showcase from "components/organisms/Home/Showcase/Showcase";
 import Statistics from "components/molecules/Statistics";
-import Blog from "components/organisms/Blog/Blog";
-import DiscoverHospitality from "components/organisms/DiscoverHospitality";
-import EditItem from "components/organisms/Edit/EditItem";
-import StudyProgrammes from "components/organisms/StudyProgram/StudyProgrammes";
-import OurStories from "components/organisms/OurStory/OurStories";
-import Partners from "components/organisms/Partners";
-import Footer from "components/organisms/Footer/Footer";
+import Blog from "components/organisms/Home/Blog/Blog";
+import DiscoverHospitality from "pageLayouts/Home/DiscoverHospitality";
+import EditItem from "components/organisms/Home/Edit/EditItem";
+import StudyProgrammes from "components/organisms/Home/StudyProgram/StudyProgrammes";
+import OurStories from "components/organisms/Home/OurStory/OurStories";
+import Partners from "components/organisms/Home/Partners";
+import Footer from "components/organisms/Home/Footer/Footer";
+import MobileSideBar from "components/organisms/Home/Header/MobileSideBar";
 
 const editables = {
   header: [{ name: "logo", label: "Logo", placeholder: "Enter logo URL" }],
