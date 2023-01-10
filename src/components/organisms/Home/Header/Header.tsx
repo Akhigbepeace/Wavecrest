@@ -1,6 +1,6 @@
 import { Flex, Stack } from "@chakra-ui/react";
 import React from "react";
-import Search from "../Home/Header/Search";
+import Search from "./Search";
 import Logo from "components/atoms/Logo";
 import SocialMediaLinks from "components/molecules/SocialMediaLinks";
 

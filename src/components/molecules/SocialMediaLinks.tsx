@@ -1,6 +1,6 @@
 import { Link, Image, Flex } from "@chakra-ui/react";
 import React from "react";
-import { socials } from "components/organisms/Footer/constant";
+import { socials } from "components/organisms/Home/Footer/constant";
 import NextLink from "next/link";
 
 const SocialMediaLinks = () => {
