@@ -76,7 +76,7 @@ const Newsletter = () => {
         College events by filling your details below
       </Text>
 
-      <form ref={form as any} onSubmit={sendEmail}>
+      <form id="contact-form" ref={form as any} onSubmit={sendEmail}>
         <Stack>
           {subscribeForm.map((field, index) => {
             return (
