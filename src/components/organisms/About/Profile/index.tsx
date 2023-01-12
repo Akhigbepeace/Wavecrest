@@ -5,48 +5,40 @@ import Gallery from "pageLayouts/about/Profile/Gallery";
 import OurPhilosophy from "./OurPhilosophy";
 import OurClout from "./OurClout";
 import MobileSideBar from "components/MobileSideBar";
-import NextLink from "next/link";
+import PagesBanner from "components/molecules/PagesBanner";
+import MobileRedirect from "components/molecules/MobileRedirect";
+import SectionTitle from "./SectionTitle";
 
 const Profile = () => {
-  const about = "/assets/imgs/aboutDesktopBanner.jpg";
-
+  const redirects = [
+    {
+      name: "MILESTONE",
+      url: "/about/milestone",
+    },
+    {
+      name: "OUR TEAM",
+      url: "/about/ourTeam",
+    },
+  ];
   return (
     <Fragment>
       <MobileSideBar />
-
       <Box
         h="441px"
         w="100%"
-        gridGap="68px"
         position="relative"
         display={{
           sm: "block",
           md: "block",
-          lg: "block",
+          lg: "none",
           xl: "none",
           "2xl": "none",
         }}
       >
-        <Image src={about} alt="banner" h="100%" w="100%" objectFit="cover" />
-
-        <Box
-          bg="rgba(0, 24, 71, 0.5)"
-          h="100%"
-          w="100%"
-          position="absolute"
-          bottom="0"
-        >
-          <Text
-            color="white"
-            fontFamily="Playfair Display"
-            fontWeight="700"
-            fontSize="40px"
-            textAlign="center"
-            mt="250px"
-          >
-            PROFILE
-          </Text>
-        </Box>
+        <PagesBanner
+          pageName="PROFILE"
+          imageURL="/assets/imgs/aboutDesktopBanner.jpg"
+        />
       </Box>
 
       <OurStory />
@@ -65,53 +57,9 @@ const Profile = () => {
           "2xl": "50px 90px",
         }}
       >
-        <Box>
-          <Text
-            fontFamily="Manrope"
-            fontWeight="400"
-            fontSize="24px"
-            color="rgba(2, 29, 55, 0.63)"
-            display={{
-              sm: "none",
-              md: "none",
-              lg: "none",
-              xl: "block",
-              "2xl": "block",
-            }}
-          >
-            Our Swags
-          </Text>
+        <SectionTitle heading="Our Swags" subHeading="Gallery" />
 
-          <Box>
-            <Box
-              w="88px"
-              h="3px"
-              bg="#021D37"
-              mb="5px"
-              display={{
-                sm: "block",
-                md: "block",
-                lg: "block",
-                xl: "none",
-                "2xl": "none",
-              }}
-            ></Box>
-
-            <Heading
-              fontFamily="Playfair Display"
-              fontWeight="700"
-              fontSize="32px"
-              color="#021D37"
-              mb="24px"
-            >
-              Gallery
-            </Heading>
-          </Box>
-        </Box>
-
-        <Box>
-          <Gallery />
-        </Box>
+        <Gallery />
       </Box>
 
       <Box
@@ -168,35 +116,15 @@ const Profile = () => {
           "2xl": "none",
         }}
       >
-        <Flex justifyContent="space-evenly">
-          <NextLink href="/about/milestone" legacyBehavior passHref>
-            <Link
-              fontFamily="Manrope"
-              fontSize="18px"
-              py="25px"
-              mb="52px"
-              textAlign="center"
-              fontWeight="700"
-              bg="#EEE"
-            >
-              MILESTONE
-            </Link>
-          </NextLink>
-
-          <NextLink href="/about/ourTeam" legacyBehavior passHref>
-            <Link
-              fontFamily="Manrope"
-              fontSize="18px"
-              py="25px"
-              mb="52px"
-              textAlign="center"
-              fontWeight="700"
-              bg="#EEE"
-            >
-              OUR TEAM
-            </Link>
-          </NextLink>
-        </Flex>
+        {redirects.map((redirect, index) => {
+          return (
+            <MobileRedirect
+              key={index}
+              pageName={redirect.name}
+              pageURL={redirect.url}
+            />
+          );
+        })}
       </Box>
     </Fragment>
   );

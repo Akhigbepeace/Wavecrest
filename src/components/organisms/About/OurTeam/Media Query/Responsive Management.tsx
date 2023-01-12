@@ -1,23 +1,12 @@
 import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
 import React from "react";
 import { managements } from "../../constants";
+import TeamSection from "./TeamSection";
 
 const ResponsiveManagement = () => {
   return (
     <Box position={"relative"} overflow={"hidden"}>
-      <Box>
-        <Box w="88px" h="3px" bg="#021D37" mb="5px"></Box>
-
-        <Heading
-          fontFamily="Playfair Display"
-          fontSize="32px"
-          fontWeight="700"
-          color="#021D37"
-          mb="30px"
-        >
-          Management
-        </Heading>
-      </Box>
+      <TeamSection teamSectionTitle="Managements" />
 
       <Flex overflowY="scroll">
         {managements.map((management, index) => (

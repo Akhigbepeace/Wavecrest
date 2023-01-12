@@ -1,6 +1,7 @@
 import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
 import React from "react";
 import { staffs } from "../../constants";
+import TeamSection from "./TeamSection";
 
 const ResponsiveStaff = () => {
   return (
@@ -14,10 +15,10 @@ const ResponsiveStaff = () => {
           fontWeight="700"
           color="#021D37"
           mb="30px"
-        >
-          Staff
-        </Heading>
+        ></Heading>
       </Box>
+
+      <TeamSection teamSectionTitle="Staff" />
 
       <Flex overflowY="scroll">
         {staffs.map((staff, index) => {
