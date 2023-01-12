@@ -33,8 +33,8 @@ const HomepageLayout = () => {
       <Statistics />
 
       <DiscoverHospitality />
-      <Blog />
-      <StudyProgrammes />
+      {/* <Blog /> */}
+      {/* <StudyProgrammes /> */}
       <OurStories />
       <Partners />
       <Footer />
