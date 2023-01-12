@@ -1,7 +1,8 @@
-import { Box, Text, Heading, useBreakpointValue, Grid } from "@chakra-ui/react";
+import { Box, Text, Heading, Grid } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import React from "react";
 import { ourStands } from "../constants";
+import SectionTitle from "./SectionTitle";
 
 const OurPhilosophy = () => {
   return (
@@ -29,9 +30,7 @@ const OurPhilosophy = () => {
           xl: "block",
           "2xl": "block",
         }}
-      >
-        Our Philosophy
-      </Text>
+      ></Text>
 
       <Box>
         <Box
@@ -54,10 +53,10 @@ const OurPhilosophy = () => {
           fontSize="32px"
           lineHeight="43px"
           color="#021D37"
-        >
-          What We Stand For
-        </Heading>
+        ></Heading>
       </Box>
+
+      <SectionTitle heading="Our Philosophy" subHeading="What We Stand For" />
 
       <Grid
         gridTemplateColumns="1fr 1fr 1fr"

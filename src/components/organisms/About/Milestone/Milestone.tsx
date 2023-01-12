@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Box, Flex, Heading, Text, Link } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Seventies from "./Responsive Milestone/Seventies";
 import Eighties from "./Responsive Milestone/Eighties";
 import Nineties from "./Responsive Milestone/Nineties";
@@ -7,11 +7,20 @@ import Twenties from "./Responsive Milestone/Twenties";
 import TwentyTens from "./Responsive Milestone/TwentyTens";
 import MobileSideBar from "components/MobileSideBar";
 import { milestones } from "../constants";
-import Banner from "./Banner";
-import NextLink from "next/link";
 import PagesBanner from "components/molecules/PagesBanner";
+import MobileRedirect from "components/molecules/MobileRedirect";
 
 const Milestone = () => {
+  const redirects = [
+    {
+      name: "PROFILE",
+      url: "/about/profile",
+    },
+    {
+      name: "OUR TEAM",
+      url: "/about/ourTeam",
+    },
+  ];
   return (
     <Box>
       <MobileSideBar />
@@ -24,7 +33,10 @@ const Milestone = () => {
           "2xl": "none",
         }}
       >
-        <PagesBanner imageURL="pageLayouts/about" pageName="MILESTONE" />
+        <PagesBanner
+          imageURL="/assets/imgs/milestone.jpg"
+          pageName="MILESTONE"
+        />
       </Box>
       <Flex
         p={{
@@ -126,35 +138,15 @@ const Milestone = () => {
               "2xl": "none",
             }}
           >
-            <Flex justifyContent="space-evenly">
-              <NextLink href="/about/profile" legacyBehavior passHref>
-                <Link
-                  fontFamily="Manrope"
-                  fontSize="18px"
-                  py="25px"
-                  mb="52px"
-                  textAlign="center"
-                  fontWeight="700"
-                  bg="#EEE"
-                >
-                  PROFILE
-                </Link>
-              </NextLink>
-
-              <NextLink href="/about/ourTeam" legacyBehavior passHref>
-                <Link
-                  fontFamily="Manrope"
-                  fontSize="18px"
-                  py="25px"
-                  mb="52px"
-                  textAlign="center"
-                  fontWeight="700"
-                  bg="#EEE"
-                >
-                  OUR TEAM
-                </Link>
-              </NextLink>
-            </Flex>
+            {redirects.map((redirect, index) => {
+              return (
+                <MobileRedirect
+                  key={index}
+                  pageName={redirect.name}
+                  pageURL={redirect.url}
+                />
+              );
+            })}
           </Box>
         </Box>
       </Flex>

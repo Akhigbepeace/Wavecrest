@@ -1,4 +1,4 @@
-import { Flex, Link, Image, Box, Text } from "@chakra-ui/react";
+import { Flex, Link, Box } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import Management from "./Management";
@@ -6,8 +6,7 @@ import Board from "./Board";
 import Staff from "./Staff";
 import MobileSideBar from "components/MobileSideBar";
 import { useRouter } from "next/router";
-
-const about = "/assets/imgs/ourTeam.jpg";
+import PagesBanner from "components/molecules/PagesBanner";
 
 const OurTeam = () => {
   const menuLinks = [
@@ -29,10 +28,10 @@ const OurTeam = () => {
   ];
 
   const router = useRouter();
-  const { id } = router.query;
+  const { id = "management" } = router.query;
 
   const profile = menuLinks.find(
-    (menu) => menu.id.toLowerCase() === id.toLowerCase()
+    (menu) => menu.id.toLowerCase() === (id as String).toLowerCase()
   );
 
   const [activeLink, setActiveLink] = useState(profile || menuLinks[1]);
@@ -54,26 +53,7 @@ const OurTeam = () => {
           "2xl": "none",
         }}
       >
-        <Image src={about} alt="banner" h="100%" w="100%" objectFit="cover" />
-
-        <Box
-          bg="rgba(0, 24, 71, 0.5)"
-          h="100%"
-          w="100%"
-          position="absolute"
-          bottom="0"
-        >
-          <Text
-            color="white"
-            fontFamily="Playfair Display"
-            fontWeight="700"
-            fontSize="40px"
-            textAlign="center"
-            mt="250px"
-          >
-            OUR TEAM
-          </Text>
-        </Box>
+        <PagesBanner imageURL="/assets/imgs/ourTeam.jpg" pageName="OUR TEAM" />
       </Box>
 
       <Flex
@@ -108,6 +88,10 @@ const OurTeam = () => {
                 alignItems="center"
                 borderBottom="1px solid rgba(2, 29, 55, 0.63)"
                 mr="30px"
+                onClick={() => setActiveLink(menuLink)}
+                _hover={{
+                  cursor: "pointer",
+                }}
               >
                 <FaChevronRight
                   size="15px"
@@ -124,7 +108,6 @@ const OurTeam = () => {
                   pl="10px"
                   py="15px"
                   mr="20px"
-                  onClick={() => setActiveLink(menuLink)}
                   _hover={{
                     textDecoration: "none",
                   }}

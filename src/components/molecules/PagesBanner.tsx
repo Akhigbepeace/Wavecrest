@@ -1,5 +1,4 @@
 import { Box, Image, Text } from "@chakra-ui/react";
-import about from "pageLayouts/about";
 import React from "react";
 
 type BannerTypeProps = {
@@ -10,18 +9,7 @@ type BannerTypeProps = {
 const PagesBanner = (props: BannerTypeProps) => {
   const { imageURL, pageName } = props;
   return (
-    <Box
-      h="441px"
-      w="100%"
-      position="relative"
-      display={{
-        sm: "none",
-        md: "none",
-        lg: "none",
-        xl: "block",
-        "2xl": "block",
-      }}
-    >
+    <>
       <Image src={imageURL} h="100%" w="100%" objectFit="cover" alt="About" />
 
       <Box
@@ -42,7 +30,7 @@ const PagesBanner = (props: BannerTypeProps) => {
           {pageName}
         </Text>
       </Box>
-    </Box>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import styled from "@emotion/styled";
-import { Box, Heading, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Heading, Link, Text, useBreakpointValue } from "@chakra-ui/react";
 import OurPhilosophy from "./OurPhilosophy";
 import { ourStands } from "../constants";
 
@@ -12,6 +12,8 @@ const ResponsivePhilosophy = () => {
     md: 2,
     lg: 3,
   });
+  const top = useBreakpointValue({ base: "90%", md: "50%" });
+  const side = useBreakpointValue({ base: "30%", md: "10px" });
 
   const settings = {
     dots: true,
@@ -39,6 +41,21 @@ const ResponsivePhilosophy = () => {
           "2xl": "none",
         }}
       >
+        <Link
+          position="absolute"
+          left={side}
+          top={top}
+          zIndex={2}
+          onClick={() => slider?.slickPrev()}
+        ></Link>
+        <Link
+          position="absolute"
+          right={side}
+          top={top}
+          zIndex={2}
+          onClick={() => slider?.slickNext()}
+        ></Link>
+        
         <Slider {...settings} ref={(slider) => setSlider(slider as Slider)}>
           {ourStands.map((card, index) => {
             const textToShow = Array.isArray(card.text)
