@@ -2,7 +2,7 @@ import Contact from "components/organisms/Contact/Contact";
 import React from "react";
 import Navbar from "components/Navbar";
 import MobileSideBar from "components/MobileSideBar";
-import Banner from "components/organisms/Contact/Banner";
+import PagesBanner from "components/molecules/PagesBanner";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
 
@@ -11,11 +11,11 @@ const ContactpageLayout = () => {
     <div>
       <Navbar />
       <MobileSideBar />
-
-      <Banner />
-
+      <PagesBanner
+        imageURL="/assets/imgs/aboutDesktopBanner.jpg"
+        pageName="CONTACT"
+      />
       <Contact />
-
       <Footer />
       <FooterCopywright />
     </div>

@@ -1,16 +1,16 @@
 import AboutpageLayout from "components/layouts/AboutpageLayout";
 import Head from "next/head";
+import React from "react";
 
-const AboutPage = () => {
+const About = () => {
   return (
     <>
       <Head>
-        <title>WAVECREST COLLEGE OF HOSPITALITY | About</title>
+        <title>WAVECREST COLLEGE OF HOSPITALITY</title>
       </Head>
-
       <AboutpageLayout />
     </>
   );
 };
 
-export default AboutPage;
+export default About;

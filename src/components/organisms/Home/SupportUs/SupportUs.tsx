@@ -12,10 +12,10 @@ import {
 import React, { Fragment } from "react";
 import Navbar from "components/Navbar";
 import MobileSideBar from "components/MobileSideBar";
-import Banner from "./Banner";
 import { forms, payNow } from "./constants";
 import Footer from "../../Footer/Footer";
 import FooterCopywright from "components/FooterCopywright";
+import PagesBanner from "components/molecules/PagesBanner";
 
 const SupportUs = () => {
   return (
@@ -23,7 +23,10 @@ const SupportUs = () => {
       <Navbar />
       <MobileSideBar />
 
-      <Banner />
+      <PagesBanner
+        imageURL="/assets/imgs/Admission.png"
+        pageName="SUPPORT US"
+      />
 
       <Box>
         <Heading

@@ -1,22 +1,33 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Profile from "./Profile";
 import Milestone from "./Milestone/Milestone";
 import OurTeam from "./OurTeam";
 const imageAvatar = "/assets/imgs/image-avatar.png";
 
-export const menuLinks = [
+
+export type MenuLink = {
+  id: string;
+  href: string;
+  linkTitle: string;
+  content: ReactNode;
+};
+
+export const menuLinks: MenuLink[] = [
   {
     id: "profile",
+    href: "/about/profile",
     linkTitle: "PROFILE",
     content: <Profile />,
   },
   {
     id: "milestone",
+    href: "/about/milestone",
     linkTitle: "MILESTONE",
     content: <Milestone />,
   },
   {
     id: "ourTeam",
+    href: "/about/ourTeam",
     linkTitle: "OUR TEAM",
     content: <OurTeam />,
   },

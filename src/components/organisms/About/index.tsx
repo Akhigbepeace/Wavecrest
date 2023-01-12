@@ -4,8 +4,9 @@ import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
 import { useRouter } from "next/router";
-import { menuLinks } from "./constants";
-import LinkTabs from "components/LinkTabs";
+import { MenuLink, menuLinks } from "./constants";
+import LinkTabs from "../LinkTabs";
+import PagesBanner from "components/molecules/PagesBanner";
 
 const About = () => {
   const about = "/assets/imgs/aboutDesktopBanner.jpg";
@@ -13,35 +14,17 @@ const About = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const [currentId, setCurrentId] = useState(id || "profile");
+  const currentId = id || "profile";
+  const activeLink = menuLinks.find(
+    (link) => link.id === currentId
+  ) as MenuLink;
 
-  const [activeLink, setActiveLink] = useState(menuLinks[0]);
-
-  useEffect(() => {
-    function selectInitialOption() {
-      if (!id && !router.isReady) return;
-      const profile = menuLinks.find(
-        (menu) => menu.id.toLowerCase() === currentId
-      );
-      setActiveLink(profile as any);
-    }
-
-    selectInitialOption();
-  }, [currentId, id, router]);
-
-  useEffect(() => {
-    if (id) setCurrentId(id);
-  }, [id]);
-
-  const handleLinkChange = (menuId: string) => {
-    setCurrentId(menuId);
-  };
   return (
     <Fragment>
       <Navbar />
 
       <Box>
-        <Box
+        {/* <Box
           h="441px"
           w="100%"
           gridGap="68px"
@@ -74,14 +57,15 @@ const About = () => {
               ABOUT
             </Text>
           </Box>
-        </Box>
+        </Box> */}
+
+        <PagesBanner
+          imageURL="/assets/imgs/aboutDesktopBanner.jpg"
+          pageName="ABOUT"
+        />
 
         {router.isReady && (
-          <LinkTabs
-            menuLinks={menuLinks}
-            activeItem={activeLink.linkTitle}
-            onLinkChange={handleLinkChange}
-          >
+          <LinkTabs menuLinks={menuLinks} activeItem={activeLink.linkTitle}>
             {activeLink.content}
           </LinkTabs>
         )}

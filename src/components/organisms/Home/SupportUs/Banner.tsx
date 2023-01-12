@@ -34,7 +34,7 @@ const Banner = () => {
           textAlign="center"
           mt="140px"
         >
-          SUPPORT US
+         
         </Text>
       </Box>
     </Box>

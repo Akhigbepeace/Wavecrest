@@ -9,14 +9,23 @@ import MobileSideBar from "components/MobileSideBar";
 import { milestones } from "../constants";
 import Banner from "./Banner";
 import NextLink from "next/link";
+import PagesBanner from "components/molecules/PagesBanner";
 
 const Milestone = () => {
   return (
     <Box>
       <MobileSideBar />
-
-      <Banner />
-
+      <Box
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <PagesBanner imageURL="pageLayouts/about" pageName="MILESTONE" />
+      </Box>
       <Flex
         p={{
           sm: "50px 20px",

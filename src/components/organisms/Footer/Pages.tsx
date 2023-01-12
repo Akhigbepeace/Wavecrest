@@ -25,7 +25,7 @@ const Pages = () => {
       {pages.map((page, index) => {
         return (
           <ListItem key={index}>
-            <NextLink href={page.to}>
+            <NextLink href={page.to} legacyBehavior passHref>
               <Link
                 fontFamily="Manrope"
                 fontWeight="700"
