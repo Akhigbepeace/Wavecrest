@@ -2,7 +2,11 @@ import { Box, Text, Heading, Grid } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import React from "react";
 import { ourStands } from "../constants";
+<<<<<<< HEAD
 import ResponsivePhilosophy from "./ResponsivePhilosophy";
+=======
+import SectionTitle from "./SectionTitle";
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
 
 const OurPhilosophy = () => {
   return (
@@ -30,9 +34,13 @@ const OurPhilosophy = () => {
           xl: "block",
           "2xl": "block",
         }}
+<<<<<<< HEAD
       >
         Our Philosophy
       </Text>
+=======
+      ></Text>
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
 
       <Box>
         <Box
@@ -55,11 +63,19 @@ const OurPhilosophy = () => {
           fontSize="32px"
           lineHeight="43px"
           color="#021D37"
+<<<<<<< HEAD
         >
           What We Stand For
         </Heading>
       </Box>
 
+=======
+        ></Heading>
+      </Box>
+
+      <SectionTitle heading="Our Philosophy" subHeading="What We Stand For" />
+
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
       <Grid
         gridTemplateColumns="1fr 1fr 1fr"
         mt="30px"
@@ -101,7 +117,10 @@ const OurPhilosophy = () => {
           );
         })}
       </Grid>
+<<<<<<< HEAD
       <ResponsivePhilosophy />
+=======
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
     </Box>
   );
 };

@@ -9,6 +9,7 @@ type BannerTypeProps = {
 const PagesBanner = (props: BannerTypeProps) => {
   const { imageURL, pageName } = props;
   return (
+<<<<<<< HEAD
     <Box
       h="441px"
       w="100%"
@@ -21,6 +22,9 @@ const PagesBanner = (props: BannerTypeProps) => {
         "2xl": "block",
       }}
     >
+=======
+    <>
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
       <Image src={imageURL} h="100%" w="100%" objectFit="cover" alt="About" />
 
       <Box
@@ -41,7 +45,11 @@ const PagesBanner = (props: BannerTypeProps) => {
           {pageName}
         </Text>
       </Box>
+<<<<<<< HEAD
     </Box>
+=======
+    </>
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
   );
 };
 

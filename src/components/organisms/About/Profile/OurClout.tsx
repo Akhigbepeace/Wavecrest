@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import { Box, Flex, Image, Text, Heading } from "@chakra-ui/react";
 import React from "react";
 import { awards, recognitions } from "../constants";
+=======
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import React from "react";
+import { awards, recognitions } from "../constants";
+import SectionTitle from "./SectionTitle";
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
 
 const OurClout = () => {
   return (
@@ -14,6 +21,7 @@ const OurClout = () => {
       }}
     >
       <Box>
+<<<<<<< HEAD
         <Text
           fontFamily="Manrope"
           fontWeight="400"
@@ -60,6 +68,9 @@ const OurClout = () => {
             Awards and Recognition
           </Heading>
         </Box>
+=======
+        <SectionTitle heading="Our Clout" subHeading="Awards and Recognition" />
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
       </Box>
 
       <Box>

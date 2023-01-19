@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 import { Box, Text, Heading, Flex, Link } from "@chakra-ui/react";
+=======
+import { Box, Heading, Link } from "@chakra-ui/react";
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
 import React, { Fragment } from "react";
 import OurStory from "./OurStory";
 import Gallery from "pageLayouts/about/Profile/Gallery";
 import OurPhilosophy from "./OurPhilosophy";
 import OurClout from "./OurClout";
 import MobileSideBar from "components/MobileSideBar";
+<<<<<<< HEAD
 import NextLink from "next/link";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
 
@@ -18,6 +23,43 @@ const Profile = () => {
         imageURL="/assets/imgs/aboutDesktopBanner.jpg"
         title="PROFILE"
       />
+=======
+import PagesBanner from "components/molecules/PagesBanner";
+import MobileRedirect from "components/molecules/MobileRedirect";
+import SectionTitle from "./SectionTitle";
+
+const Profile = () => {
+  const redirects = [
+    {
+      name: "MILESTONE",
+      url: "/about/milestone",
+    },
+    {
+      name: "OUR TEAM",
+      url: "/about/ourTeam",
+    },
+  ];
+  return (
+    <Fragment>
+      <MobileSideBar />
+      <Box
+        h="441px"
+        w="100%"
+        position="relative"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "none",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <PagesBanner
+          pageName="PROFILE"
+          imageURL="/assets/imgs/aboutDesktopBanner.jpg"
+        />
+      </Box>
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
 
       <OurStory />
 
@@ -35,6 +77,7 @@ const Profile = () => {
           "2xl": "50px 90px",
         }}
       >
+<<<<<<< HEAD
         <Box>
           <Text
             fontFamily="Manrope"
@@ -82,6 +125,11 @@ const Profile = () => {
         <Box>
           <Gallery />
         </Box>
+=======
+        <SectionTitle heading="Our Swags" subHeading="Gallery" />
+
+        <Gallery />
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
       </Box>
 
       <Box
@@ -138,6 +186,7 @@ const Profile = () => {
           "2xl": "none",
         }}
       >
+<<<<<<< HEAD
         <Flex justifyContent="space-evenly">
           <NextLink href="/about/milestone" legacyBehavior passHref>
             <Link
@@ -167,6 +216,17 @@ const Profile = () => {
             </Link>
           </NextLink>
         </Flex>
+=======
+        {redirects.map((redirect, index) => {
+          return (
+            <MobileRedirect
+              key={index}
+              pageName={redirect.name}
+              pageURL={redirect.url}
+            />
+          );
+        })}
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
       </Box>
     </Fragment>
   );

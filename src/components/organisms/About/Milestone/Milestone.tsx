@@ -1,5 +1,9 @@
 import React, { Fragment } from "react";
+<<<<<<< HEAD
 import { Box, Flex, Heading, Text, Link } from "@chakra-ui/react";
+=======
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
 import Seventies from "./Responsive Milestone/Seventies";
 import Eighties from "./Responsive Milestone/Eighties";
 import Nineties from "./Responsive Milestone/Nineties";
@@ -7,6 +11,7 @@ import Twenties from "./Responsive Milestone/Twenties";
 import TwentyTens from "./Responsive Milestone/TwentyTens";
 import MobileSideBar from "components/MobileSideBar";
 import { milestones } from "../constants";
+<<<<<<< HEAD
 import NextLink from "next/link";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
 
@@ -19,6 +24,39 @@ const Milestone = () => {
         imageURL="/assets/imgs/aboutGallery3.jpg"
         title="MILESTONE"
       />
+=======
+import PagesBanner from "components/molecules/PagesBanner";
+import MobileRedirect from "components/molecules/MobileRedirect";
+
+const Milestone = () => {
+  const redirects = [
+    {
+      name: "PROFILE",
+      url: "/about/profile",
+    },
+    {
+      name: "OUR TEAM",
+      url: "/about/ourTeam",
+    },
+  ];
+  return (
+    <Box>
+      <MobileSideBar />
+      <Box
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      >
+        <PagesBanner
+          imageURL="/assets/imgs/milestone.jpg"
+          pageName="MILESTONE"
+        />
+      </Box>
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
       <Flex
         p={{
           sm: "50px 20px",
@@ -119,6 +157,7 @@ const Milestone = () => {
               "2xl": "none",
             }}
           >
+<<<<<<< HEAD
             <Flex justifyContent="space-evenly">
               <NextLink href="/about/profile" legacyBehavior passHref>
                 <Link
@@ -148,6 +187,17 @@ const Milestone = () => {
                 </Link>
               </NextLink>
             </Flex>
+=======
+            {redirects.map((redirect, index) => {
+              return (
+                <MobileRedirect
+                  key={index}
+                  pageName={redirect.name}
+                  pageURL={redirect.url}
+                />
+              );
+            })}
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
           </Box>
         </Box>
       </Flex>

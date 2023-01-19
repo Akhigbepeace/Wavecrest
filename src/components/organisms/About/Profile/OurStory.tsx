@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import { Flex, Box, Text, Heading } from "@chakra-ui/react";
 import React from "react";
 import ReactPlayer from "react-player";
+=======
+import { Flex, Box, Text } from "@chakra-ui/react";
+import React from "react";
+import ReactPlayer from "react-player";
+import SectionTitle from "./SectionTitle";
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
 
 const OurStory = () => {
   const waveVid = "/assets/imgs/wavevid.mp4";
@@ -41,6 +48,7 @@ const OurStory = () => {
           "2xl": "60px",
         }}
       >
+<<<<<<< HEAD
         <Text
           fontFamily="Manrope"
           fontSize="24px"
@@ -83,6 +91,9 @@ const OurStory = () => {
             Who We Are
           </Heading>
         </Box>
+=======
+        <SectionTitle heading="Our Story" subHeading="Who We Are" />
+>>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
 
         <Text
           fontFamily="Manrope"
