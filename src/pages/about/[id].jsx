@@ -1,8 +1,17 @@
 import React from "react";
-import About from "pageLayouts/about";
+import About from "components/organisms/About";
+import Head from "next/head";
 
 const AboutPage = () => {
-  return <About />;
+  return (
+    <>
+      <Head>
+        <title>WAVECREST COLLEGE OF HOSPITALITY | About</title>
+      </Head>
+
+      <About />
+    </>
+  );
 };
 
 export default AboutPage;
