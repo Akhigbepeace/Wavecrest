@@ -1,7 +1,8 @@
-import { Box, Text, Heading, useBreakpointValue, Grid } from "@chakra-ui/react";
+import { Box, Text, Heading, Grid } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import React from "react";
 import { ourStands } from "../constants";
+import ResponsivePhilosophy from "./ResponsivePhilosophy";
 
 const OurPhilosophy = () => {
   return (
@@ -100,6 +101,7 @@ const OurPhilosophy = () => {
           );
         })}
       </Grid>
+      <ResponsivePhilosophy />
     </Box>
   );
 };

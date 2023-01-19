@@ -2,7 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 import styled from "@emotion/styled";
 import { Box, Heading, Text, useBreakpointValue } from "@chakra-ui/react";
-import OurPhilosophy from "./OurPhilosophy";
 import { ourStands } from "../constants";
 
 const ResponsivePhilosophy = () => {
@@ -19,14 +18,14 @@ const ResponsivePhilosophy = () => {
     fade: false,
     infinite: true,
     autoplay: true,
-    speed: 1500,
-    autoplaySpeed: 2000,
+    speed: 4500,
+    autoplaySpeed: 3000,
     slidesToShow: slideNo,
     slidesToScroll: 1,
   };
 
   return (
-    <OurPhilosophy.Wrapper>
+    <ResponsivePhilosophy.Wrapper>
       <Box
         position={"relative"}
         width={"full"}
@@ -77,11 +76,11 @@ const ResponsivePhilosophy = () => {
           })}
         </Slider>
       </Box>
-    </OurPhilosophy.Wrapper>
+    </ResponsivePhilosophy.Wrapper>
   );
 };
 
-OurPhilosophy.Wrapper = styled.div`
+ResponsivePhilosophy.Wrapper = styled.div`
   .slick-slide div {
     margin-right: 5px;
   }

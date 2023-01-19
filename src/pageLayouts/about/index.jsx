@@ -1,4 +1,4 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import React, { Fragment, useState, useEffect } from "react";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
@@ -7,10 +7,9 @@ import { useRouter } from "next/router";
 import { menuLinks } from "./constants";
 import LinkTabs from "components/LinkTabs";
 import PagesBanner from "components/molecules/PagesBanner";
+import Head from "next/head";
 
 const About = () => {
-  const about = "/assets/imgs/aboutDesktopBanner.jpg";
-
   const router = useRouter();
   const { id } = router.query;
 

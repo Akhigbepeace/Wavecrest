@@ -1,9 +1,13 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import React from "react";
 
-const Banner = () => {
-  const about = "pageLayouts/about";
+type MobilePageBannerProps = {
+  imageURL: string;
+  title: string;
+};
 
+const MobilePageBanner = (props: MobilePageBannerProps) => {
+  const { imageURL, title } = props;
   return (
     <Box
       h="441px"
@@ -18,7 +22,7 @@ const Banner = () => {
         "2xl": "none",
       }}
     >
-      <Image src={about} alt="banner" h="100%" w="100%" objectFit="cover" />
+      <Image src={imageURL} alt="banner" h="100%" w="100%" objectFit="cover" />
 
       <Box
         bg="rgba(0, 24, 71, 0.5)"
@@ -35,11 +39,11 @@ const Banner = () => {
           textAlign="center"
           mt="250px"
         >
-
+          {title}
         </Text>
       </Box>
     </Box>
   );
 };
 
-export default Banner;
+export default MobilePageBanner;

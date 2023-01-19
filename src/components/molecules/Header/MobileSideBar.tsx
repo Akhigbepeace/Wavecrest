@@ -156,7 +156,7 @@ const MobileSideBar = () => {
                 })}
               </Flex>
 
-              <Flex flexDirection="column" mt="80px" >
+              <Flex flexDirection="column" mt="80px">
                 {sideLinks.map((sideLink, index) => (
                   <Box display="inline-block" key={index} mb="30px">
                     <SideLink variant={sideLink.variant} href={sideLink.href}>

@@ -1,4 +1,4 @@
-import { Flex, Link, Image, Box, Text } from "@chakra-ui/react";
+import { Flex, Link, Box } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import Management from "./Management";
@@ -6,8 +6,8 @@ import Board from "./Board";
 import Staff from "./Staff";
 import MobileSideBar from "components/MobileSideBar";
 import { useRouter } from "next/router";
+import MobilePageBanner from "components/molecules/MobilePageBanner";
 
-const about = "/assets/imgs/ourTeam.jpg";
 
 const OurTeam = () => {
   const menuLinks = [
@@ -41,40 +41,7 @@ const OurTeam = () => {
     <Box>
       <MobileSideBar />
 
-      <Box
-        h="441px"
-        w="100%"
-        gridGap="68px"
-        position="relative"
-        display={{
-          sm: "block",
-          md: "block",
-          lg: "block",
-          xl: "none",
-          "2xl": "none",
-        }}
-      >
-        <Image src={about} alt="banner" h="100%" w="100%" objectFit="cover" />
-
-        <Box
-          bg="rgba(0, 24, 71, 0.5)"
-          h="100%"
-          w="100%"
-          position="absolute"
-          bottom="0"
-        >
-          <Text
-            color="white"
-            fontFamily="Playfair Display"
-            fontWeight="700"
-            fontSize="40px"
-            textAlign="center"
-            mt="250px"
-          >
-            OUR TEAM
-          </Text>
-        </Box>
-      </Box>
+      <MobilePageBanner imageURL="/assets/imgs/ourTeam.jpg" title="OUR TEAM" />
 
       <Flex
         justifyContent="center"

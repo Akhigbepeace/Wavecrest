@@ -34,7 +34,7 @@ const LinkTabs = (props: LinkTabsProps) => {
           const isActive = menuLink.linkTitle === activeItem;
 
           return (
-            <NextLink href={menuLink.href} passHref legacyBehavior>
+            <NextLink key={index} href={menuLink.href} passHref legacyBehavior>
               <Link
                 fontFamily="Manrope"
                 color={isActive ? "#EBEDEF" : "#021d37"}
@@ -45,7 +45,6 @@ const LinkTabs = (props: LinkTabsProps) => {
                 }}
               >
                 <Flex
-                  key={index}
                   bg={isActive ? "#021d37" : "#fff"}
                   border="3px solid #021d37"
                   w="242px"
