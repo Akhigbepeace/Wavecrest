@@ -1,5 +1,5 @@
 import React from "react";
-import About from "pageLayouts/about";
+import About from "components/organisms/About";
 
 const AboutPage = () => {
   return <About />;
