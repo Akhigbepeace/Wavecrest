@@ -20,16 +20,16 @@ const settings = {
   arrows: false,
   fade: false,
   infinite: true,
-  autoplay: false,
-  speed: 2500,
+  autoplay: true,
+  speed: 4500,
   autoplaySpeed: 3000,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
 
 export default function Blog() {
-  const [slider, setSlider] = React.useState<Slider>()
-  
+  const [slider, setSlider] = React.useState<Slider>();
+
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "40px" });
 
@@ -131,7 +131,6 @@ export default function Blog() {
               borderRadius: "3px",
               fontFamily: "Manrope",
               h: "52px",
-              display: "block",
               _hover: {
                 textDecoration: "none",
                 color: "white",
@@ -258,10 +257,15 @@ export default function Blog() {
                       {card.date}
                     </Text>
 
-                    <NextLink href={card.linkTo}>
+                    <NextLink href={card.linkTo} legacyBehavior passHref>
                       <Link
                         target={
                           card.linkTo.includes("/posts/") ? "_self" : "_blank"
+                        }
+                        display={
+                          card.linkTo.includes("https://" || "/posts/")
+                            ? "block"
+                            : "none"
                         }
                         textTransform="uppercase"
                         textAlign="center"
