@@ -1,29 +1,10 @@
-<<<<<<< HEAD
-import { Box, Text, Heading, Flex, Link } from "@chakra-ui/react";
-=======
 import { Box, Heading, Link } from "@chakra-ui/react";
->>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
 import React, { Fragment } from "react";
 import OurStory from "./OurStory";
 import Gallery from "pageLayouts/about/Profile/Gallery";
 import OurPhilosophy from "./OurPhilosophy";
 import OurClout from "./OurClout";
 import MobileSideBar from "components/MobileSideBar";
-<<<<<<< HEAD
-import NextLink from "next/link";
-import MobilePageBanner from "components/molecules/MobilePageBanner";
-
-const Profile = () => {
-
-  return (
-    <Fragment>
-      <MobileSideBar />
-
-      <MobilePageBanner
-        imageURL="/assets/imgs/aboutDesktopBanner.jpg"
-        title="PROFILE"
-      />
-=======
 import PagesBanner from "components/molecules/PagesBanner";
 import MobileRedirect from "components/molecules/MobileRedirect";
 import SectionTitle from "./SectionTitle";
@@ -59,7 +40,6 @@ const Profile = () => {
           imageURL="/assets/imgs/aboutDesktopBanner.jpg"
         />
       </Box>
->>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
 
       <OurStory />
 
@@ -77,59 +57,9 @@ const Profile = () => {
           "2xl": "50px 90px",
         }}
       >
-<<<<<<< HEAD
-        <Box>
-          <Text
-            fontFamily="Manrope"
-            fontWeight="400"
-            fontSize="24px"
-            color="rgba(2, 29, 55, 0.63)"
-            display={{
-              sm: "none",
-              md: "none",
-              lg: "none",
-              xl: "block",
-              "2xl": "block",
-            }}
-          >
-            Our Swags
-          </Text>
-
-          <Box>
-            <Box
-              w="88px"
-              h="3px"
-              bg="#021D37"
-              mb="5px"
-              display={{
-                sm: "block",
-                md: "block",
-                lg: "block",
-                xl: "none",
-                "2xl": "none",
-              }}
-            ></Box>
-
-            <Heading
-              fontFamily="Playfair Display"
-              fontWeight="700"
-              fontSize="32px"
-              color="#021D37"
-              mb="24px"
-            >
-              Gallery
-            </Heading>
-          </Box>
-        </Box>
-
-        <Box>
-          <Gallery />
-        </Box>
-=======
         <SectionTitle heading="Our Swags" subHeading="Gallery" />
 
         <Gallery />
->>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
       </Box>
 
       <Box
@@ -186,37 +116,6 @@ const Profile = () => {
           "2xl": "none",
         }}
       >
-<<<<<<< HEAD
-        <Flex justifyContent="space-evenly">
-          <NextLink href="/about/milestone" legacyBehavior passHref>
-            <Link
-              fontFamily="Manrope"
-              fontSize="18px"
-              py="25px"
-              mb="52px"
-              textAlign="center"
-              fontWeight="700"
-              bg="#EEE"
-            >
-              MILESTONE
-            </Link>
-          </NextLink>
-
-          <NextLink href="/about/ourTeam" legacyBehavior passHref>
-            <Link
-              fontFamily="Manrope"
-              fontSize="18px"
-              py="25px"
-              mb="52px"
-              textAlign="center"
-              fontWeight="700"
-              bg="#EEE"
-            >
-              OUR TEAM
-            </Link>
-          </NextLink>
-        </Flex>
-=======
         {redirects.map((redirect, index) => {
           return (
             <MobileRedirect
@@ -226,7 +125,6 @@ const Profile = () => {
             />
           );
         })}
->>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
       </Box>
     </Fragment>
   );

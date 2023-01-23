@@ -1,31 +1,12 @@
 import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
 import React from "react";
 import { boards } from "../../constants";
-<<<<<<< HEAD
-=======
 import TeamSection from "./TeamSection";
->>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
 
 const ResponsiveBoard = () => {
   return (
     <Box position={"relative"} overflow={"hidden"}>
-<<<<<<< HEAD
-      <Box>
-        <Box w="88px" h="3px" bg="#021D37" mb="5px"></Box>
-
-        <Heading
-          fontFamily="Playfair Display"
-          fontSize="32px"
-          fontWeight="700"
-          color="#021D37"
-          mb="30px"
-        >
-          Board
-        </Heading>
-      </Box>
-=======
       <TeamSection teamSectionTitle="Board" />
->>>>>>> d9421196557f605d1b64e0a75a30455c7ce83a8e
 
       <Flex overflowY="scroll">
         {boards.map((board, index) => (

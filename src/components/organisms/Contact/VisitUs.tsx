@@ -69,7 +69,7 @@ const VisitUs = () => {
 
         <script
           type="text/javascript"
-          src="https://embedmaps.com/google-maps-authorization/script.js?id=1e38e70d8c3f5fe4769bac191f721c59a7bdb19c"
+          src="https://embedmaps.com/google-maps-authorization/script.js?id=1e38e70d8c3f5fe4769bac191f721c59a7bdb19c" defer
         ></script>
 
         <Text mt="10px" fontFamily="Manrope" fontSize="16px" fontWeight="400">
