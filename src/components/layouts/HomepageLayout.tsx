@@ -9,6 +9,8 @@ import OurStories from "components/organisms/Home/OurStory/OurStories";
 import Partners from "components/organisms/Home/Partners";
 import Footer from "components/organisms/Footer/Footer";
 import MobileSideBar from "components/molecules/Header/MobileSideBar";
+import Blog from "components/organisms/Home/Blog/Blog";
+import StudyProgrammes from "components/organisms/Home/StudyProgram/StudyProgrammes";
 
 const editables = {
   header: [{ name: "logo", label: "Logo", placeholder: "Enter logo URL" }],
@@ -31,8 +33,8 @@ const HomepageLayout = () => {
       <Statistics />
 
       <DiscoverHospitality />
-      {/* <Blog /> */}
-      {/* <StudyProgrammes /> */}
+      <Blog />
+      <StudyProgrammes />
       <OurStories />
       <Partners />
       <Footer />

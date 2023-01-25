@@ -17,6 +17,19 @@ const StudyProgrammes = () => {
         lg: "20px",
       }}
     >
+      <Box
+        bg="#021D37"
+        h="3px"
+        w="88px"
+        mt="20px"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      ></Box>
       <Text
         color="#021D37"
         m="50px 0"
@@ -36,22 +49,8 @@ const StudyProgrammes = () => {
           "2xl": "center",
         }}
       >
-        <Box
-          bg="#021D37"
-          h="3px"
-          w="88px"
-          mt="20px"
-          display={{
-            sm: "block",
-            md: "block",
-            lg: "block",
-            xl: "none",
-            "2xl": "none",
-          }}
-        ></Box>
         Study Programmes
       </Text>
-
       <Flex
         h="91px"
         w="1100px"
@@ -96,7 +95,6 @@ const StudyProgrammes = () => {
           );
         })}
       </Flex>
-
       <Box
         mb="50px"
         display={{
@@ -184,7 +182,6 @@ const StudyProgrammes = () => {
           </Box>
         ))}
       </Box>
-
       <Box
         display={{
           sm: "block",

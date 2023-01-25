@@ -8,7 +8,6 @@ import MobileSideBar from "components/MobileSideBar";
 import { useRouter } from "next/router";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
 
-
 const OurTeam = () => {
   const menuLinks = [
     {
