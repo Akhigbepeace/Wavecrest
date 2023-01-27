@@ -1,4 +1,4 @@
-export const videoURL = "/assets/imgs/wavevid.mp4";
+export const video = "/assets/imgs/wavevid.mp4";
 export const showcaseGallery = [
   "/assets/imgs/Showcase1.png",
   "/assets/imgs/Showcase2.png",

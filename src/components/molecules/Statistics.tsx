@@ -1,25 +1,33 @@
 import { Box, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 
-const Statistics = () => {
+export type StatisticsProps = {
+  graduates: string;
+  industryPartners: string;
+  employmentRate: string;
+  entrepreneurs: string;
+};
+
+const Statistics = (props: StatisticsProps) => {
+  const { graduates, industryPartners, employmentRate, entrepreneurs } = props;
   const statistics = [
     {
-      count: "2500+",
+      count: graduates,
       name: "Graduates",
       bg: "#EBEDEF",
     },
     {
-      count: "50+",
+      count: industryPartners,
       name: "Industry Partners",
       bg: "#DDD",
     },
     {
-      count: "100%",
+      count: employmentRate,
       name: "Employment Rate",
       bg: "#EBEDEF",
     },
     {
-      count: "40%",
+      count: entrepreneurs,
       name: "Enterpreneurs",
       bg: "#DDD",
     },

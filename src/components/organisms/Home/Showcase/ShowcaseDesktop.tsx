@@ -11,7 +11,7 @@ const ReactPlayer = dynamic(() => import("react-player"), {
 });
 
 const ShowcaseDesktop = (props: ShowcaseProps) => {
-  const { gallery, videoURL } = props;
+  const { gallery, videoURL, topText, bottomText } = props;
   return (
     <Grid
       display={{
@@ -60,7 +60,7 @@ const ShowcaseDesktop = (props: ShowcaseProps) => {
               fontFamily="Visual Hollow Script"
               fontWeight="400"
             >
-              Study In
+              {topText}
             </Heading>
 
             <Text
@@ -72,7 +72,7 @@ const ShowcaseDesktop = (props: ShowcaseProps) => {
                 "2xl": "600px",
               }}
             >
-              Nigeria&lsquo;s Premier Hospitality Monotechnic
+              {bottomText}
             </Text>
           </Flex>
         </Box>

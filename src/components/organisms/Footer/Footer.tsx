@@ -6,7 +6,15 @@ import Newsletter from "./Newsletter";
 import SocialMediaLinks from "components/molecules/SocialMediaLinks";
 import FooterCopywright from "./FooterCopywright";
 
-const Footer = () => {
+export type FooterProps = {
+  address: string;
+  phone1: string;
+  phone2: string;
+  email: string;
+  copyright: string;
+};
+const Footer = (props: FooterProps) => {
+  const { address, phone1, phone2, email, copyright } = props;
   return (
     <>
       <Grid
@@ -57,8 +65,7 @@ const Footer = () => {
               "2xl": "right",
             }}
           >
-            75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos,
-            Nigeria.
+            {address}
           </Text>
 
           <Box
@@ -91,7 +98,7 @@ const Footer = () => {
                 "2xl": "none",
               }}
             >
-              +234 909 685 6606 &nbsp; | &nbsp; +234 808 396 4840
+              {phone1} &nbsp; | &nbsp; {phone2}
             </Text>
 
             <Box
@@ -103,10 +110,10 @@ const Footer = () => {
                 "2xl": "block",
               }}
             >
-              <Text>+234 909 685 6606</Text>
-              <Text>+234 808 396 4840</Text>
+              <Text>{phone1}</Text>
+              <Text>{phone2}</Text>
             </Box>
-            <Text fontFamily="Manrope"> info@wavecrest.edu.ng</Text>
+            <Text fontFamily="Manrope"> {email}</Text>
           </Box>
 
           <Flex
@@ -140,7 +147,7 @@ const Footer = () => {
         </Flex>
       </Grid>
 
-      <FooterCopywright />
+      <FooterCopywright text={copyright} />
     </>
   );
 };

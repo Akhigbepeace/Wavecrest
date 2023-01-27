@@ -20,21 +20,19 @@ import emailjs from "emailjs-com";
 
 const PopupModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [timerId, setTimerId] = useState(-1);
 
   useEffect(() => {
+    let timerId = -1;
     const initialisedPage = () => {
       if (typeof window !== "undefined") {
         const hasViewedModal =
           localStorage.getItem("hasViewedModal") === "true";
         const hasSubscribed = localStorage.getItem("hasSubscribed") === "true";
-        const timerId = +setTimeout(() => {
+        timerId = +setTimeout(() => {
           if (!hasViewedModal && !hasSubscribed) {
             onOpen();
           }
         }, 3000);
-
-        setTimerId(timerId);
       }
     };
 
@@ -43,7 +41,7 @@ const PopupModal = () => {
     return () => {
       clearTimeout(timerId);
     };
-  }, [onOpen, setTimerId]);
+  }, [onOpen]);
 
   const initialValues = {
     user_name: "",

@@ -11,33 +11,46 @@ import Footer from "components/organisms/Footer/Footer";
 import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import Blog from "components/organisms/Home/Blog/Blog";
 import StudyProgrammes from "components/organisms/Home/StudyProgram/StudyProgrammes";
+import { editables } from "config/constants/editables/shared";
 
-const editables = {
-  header: [{ name: "logo", label: "Logo", placeholder: "Enter logo URL" }],
-  showCase: [{ name: "video", label: "Video", placeholder: "Enter video URL" }],
-};
-
+const { showCase, statistics, footer } = editables;
 const HomepageLayout = () => {
   return (
     <>
-      <EditItem fields={editables.header}>
-        <Header />
-        <Navbar />
+      <Header />
+      <Navbar />
 
-        <MobileSideBar />
+      <MobileSideBar />
+
+      <EditItem
+        formTitle={showCase.title}
+        fields={showCase.fields}
+        defaultValues={showCase.defaults}
+      >
+        <Showcase {...showCase.defaults} />
       </EditItem>
 
-      <EditItem fields={editables.showCase}>
-        <Showcase />
+      <EditItem
+        formTitle={statistics.title}
+        fields={statistics.fields}
+        defaultValues={statistics.defaults}
+      >
+        <Statistics {...statistics.defaults} />
       </EditItem>
-      <Statistics />
 
       <DiscoverHospitality />
       <Blog />
       <StudyProgrammes />
       <OurStories />
       <Partners />
-      <Footer />
+
+      <EditItem
+        formTitle={footer.title}
+        fields={footer.fields}
+        defaultValues={footer.defaults}
+      >
+        <Footer {...footer.defaults} />
+      </EditItem>
     </>
   );
 };

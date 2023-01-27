@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Grid, Link, Text, Image, Heading, Flex } from "@chakra-ui/react";
 import { paths } from "config/constants/pages";
-import landingPage from "config/constants/copy/landingPage";
+import landingPage from "config/copy/landingPage";
 
 const discoverpic1 = "/assets/imgs/discoverpic 1.png";
 const discoverpic2 = "/assets/imgs/discoverpic 2.png";

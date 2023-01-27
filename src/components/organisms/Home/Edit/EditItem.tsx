@@ -6,12 +6,15 @@ import EditForm, { EditFormField } from "./EditForm";
 type EditItemProps = {
   children: ReactNode;
   fields: EditFormField[];
+  defaultValues: Record<string, string | string[]>;
+  formTitle: string;
 };
 const EditItem = (props: EditItemProps) => {
+  const { children, fields, defaultValues, formTitle } = props;
+
   const router = useRouter();
 
   const [editable, setEditable] = useState(false);
-  // alert(router.pathname);
 
   useEffect(() => {
     if (router.pathname) {
@@ -19,17 +22,15 @@ const EditItem = (props: EditItemProps) => {
     }
   }, [router.pathname]);
 
-  const { children, fields } = props;
-
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   if (!editable) return <>{children}</>;
   return (
     <Box
       position="relative"
-      border=" 6px gray solid"
-      my="2px"
-      _hover={{ border: "6px white solid" }}
+      border=" 3px gray solid"
+      my="1px"
+      _hover={{ border: "3px white solid" }}
     >
       <Box>{children}</Box>
       <Grid
@@ -40,12 +41,18 @@ const EditItem = (props: EditItemProps) => {
         w="100%"
         h="100%"
         bg="blackAlpha.400"
-        zIndex={10}
+        zIndex={2}
       >
         <Button onClick={onOpen}>Edit</Button>
       </Grid>
 
-      <EditForm fields={fields} isOpen={isOpen} onClose={onClose} />
+      <EditForm
+        fields={fields}
+        isOpen={isOpen}
+        onClose={onClose}
+        defaultValues={defaultValues}
+        formTitle={formTitle}
+      />
     </Box>
   );
 };
