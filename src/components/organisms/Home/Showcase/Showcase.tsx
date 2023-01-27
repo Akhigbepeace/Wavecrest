@@ -1,16 +1,16 @@
 import React from "react";
 import ShowcaseMobile from "./ShowcaseMobile";
 import ShowcaseDesktop from "./ShowcaseDesktop";
-import { video, showcaseGallery } from "./constants";
+import { video } from "./constants";
 
 import { ShowcaseProps } from "./types";
 
 const Showcase = (props: ShowcaseProps) => {
-  const { videoURL = video, gallery = showcaseGallery, ...others } = props;
+  const { videoURL = video, ...others } = props;
   return (
     <>
-      <ShowcaseDesktop {...others} videoURL={videoURL} gallery={gallery} />
-      <ShowcaseMobile {...others} videoURL={videoURL} gallery={gallery} />
+      <ShowcaseDesktop {...others} videoURL={videoURL} />
+      <ShowcaseMobile {...others} videoURL={videoURL} />
     </>
   );
 };
