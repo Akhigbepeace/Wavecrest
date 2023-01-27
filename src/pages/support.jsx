@@ -1,4 +1,4 @@
-import SupportUs from "pageLayouts/SupportUs";
+import SupportUs from "components/organisms/Home/SupportUs/SupportUs";
 
 const Suppoer = () => {
   return <SupportUs />;

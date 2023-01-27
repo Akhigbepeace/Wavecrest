@@ -14,7 +14,7 @@ import {
   aboutgallery4,
   waveVid,
   fileUrl,
-} from "config/constants/copy/certificateCourses";
+} from "config/copy/certificateCourses";
 import React, { Fragment } from "react";
 import Navbar from "components/Navbar";
 import { FaChevronLeft } from "react-icons/fa";
@@ -309,6 +309,7 @@ const CertificateCoursesDesc = () => {
                 >
                   <Image
                     src={quickLink.image}
+                    alt="image"
                     w="100%"
                     h="100%"
                     borderRadius="3px"

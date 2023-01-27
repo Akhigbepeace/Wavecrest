@@ -247,6 +247,7 @@ const Blog = () => {
                       >
                         <Image
                           key={index}
+                          alt="image"
                           src={post.postsImg}
                           borderRadius="3px"
                           objectFit="cover"
