@@ -14,7 +14,7 @@ import {
   aboutgallery4,
   waveVid,
   fileUrl,
-} from "config/constants/copy/certificateCourses";
+} from "config/copy/certificateCourses";
 import React, { Fragment } from "react";
 import Navbar from "components/Navbar";
 import { FaChevronLeft } from "react-icons/fa";

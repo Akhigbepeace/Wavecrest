@@ -23,10 +23,12 @@ type EditFormProps = {
   isOpen: boolean;
   onClose: () => void;
   fields: EditFormField[];
+  defaultValues: Record<string, string | string[]>;
+  formTitle: string;
 };
 
 export default function EditForm(props: EditFormProps) {
-  const { isOpen, onClose, fields } = props;
+  const { formTitle, isOpen, onClose, fields, defaultValues } = props;
 
   const initialRef = React.useRef(null);
 
@@ -35,13 +37,17 @@ export default function EditForm(props: EditFormProps) {
       <Modal initialFocusRef={initialRef} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Create your account</ModalHeader>
+          <ModalHeader>{formTitle}</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6}>
             {fields.map((field, index) => (
               <FormControl key={field.name} mt={index > 0 ? 4 : 0}>
                 <FormLabel>{field.label}</FormLabel>
-                <Input ref={initialRef} placeholder={field.placeholder} />
+                <Input
+                  ref={initialRef}
+                  placeholder={field.placeholder}
+                  defaultValue={defaultValues[field.name]}
+                />
               </FormControl>
             ))}
           </ModalBody>

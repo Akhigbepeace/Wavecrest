@@ -17,6 +17,11 @@ import Footer from "../../Footer/Footer";
 import FooterCopywright from "components/FooterCopywright";
 import PagesBanner from "components/molecules/PagesBanner";
 
+import { editables } from "config/constants/editables/shared";
+import EditItem from "../Edit/EditItem";
+
+const { footer } = editables;
+
 const SupportUs = () => {
   return (
     <Fragment>
@@ -160,7 +165,13 @@ const SupportUs = () => {
         </Box>
       </Box>
 
-      <Footer />
+      <EditItem
+        formTitle={footer.title}
+        fields={footer.fields}
+        defaultValues={footer.defaults}
+      >
+        <Footer {...footer.defaults} />
+      </EditItem>
       <FooterCopywright />
     </Fragment>
   );
