@@ -11,7 +11,18 @@ const ReactPlayer = dynamic(() => import("react-player"), {
 });
 
 const ShowcaseDesktop = (props: ShowcaseProps) => {
-  const { gallery, videoURL, topText, bottomText } = props;
+  const {
+    topText,
+    bottomText,
+    videoURL,
+    gallery0,
+    gallery1,
+    gallery2,
+    gallery3,
+  } = props;
+
+  const gallery = [gallery0, gallery1, gallery2, gallery3];
+
   return (
     <Grid
       display={{

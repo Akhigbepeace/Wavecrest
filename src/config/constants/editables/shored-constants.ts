@@ -1,10 +1,9 @@
 export const showCaseConstant = {
-  gallery: [
-    "/assets/imgs/Showcase1.png",
-    "/assets/imgs/Showcase2.png",
-    "/assets/imgs/Showcase3.jpg",
-    "/assets/imgs/Showcase4.png",
-  ],
+  gallery0: "/assets/imgs/Showcase1.png",
+  gallery1: "/assets/imgs/Showcase2.png",
+  gallery2: "/assets/imgs/Showcase3.jpg",
+  gallery3: "/assets/imgs/Showcase4.png",
+
   videoURL: "/assets/imgs/wavevid.mp4",
   topText: "Study In",
   bottomText: "Nigeria's Premier Hospitality Monotechnic",

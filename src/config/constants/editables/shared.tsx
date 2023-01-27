@@ -14,7 +14,7 @@ const header = {
 };
 
 const showCase: EditableType<ShowcaseProps> = {
-  title: "Edit Marketing Text",
+  title: "Edit Marketing",
   defaults: showCaseConstant,
   fields: [
     {
@@ -26,6 +26,26 @@ const showCase: EditableType<ShowcaseProps> = {
       name: "bottomText",
       label: "Main Text",
       placeholder: "Enter the text at the bottom",
+    },
+    {
+      name: "gallery0",
+      label: "Top left Image",
+      type: "image",
+    },
+    {
+      name: "gallery1",
+      label: "Top Right Image",
+      type: "image",
+    },
+    {
+      name: "gallery2",
+      label: "Bottom Left Image",
+      type: "image",
+    },
+    {
+      name: "gallery3",
+      label: "Bottom Right Image",
+      type: "image",
     },
   ],
 };

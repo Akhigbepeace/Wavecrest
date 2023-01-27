@@ -2,7 +2,6 @@ import {
   ModalOverlay,
   ModalContent,
   ModalCloseButton,
-  Input,
   Button,
   Modal,
   ModalHeader,
@@ -12,12 +11,13 @@ import {
   ModalFooter,
 } from "@chakra-ui/react";
 import React from "react";
-import {} from "react-bootstrap";
+import Editable from "./Editable";
 
 export type EditFormField = {
   label: string;
   name: string;
   placeholder?: string;
+  type?: "image" | "text";
 };
 type EditFormProps = {
   isOpen: boolean;
@@ -41,12 +41,13 @@ export default function EditForm(props: EditFormProps) {
           <ModalCloseButton />
           <ModalBody pb={6}>
             {fields.map((field, index) => (
-              <FormControl key={field.name} mt={index > 0 ? 4 : 0}>
+              <FormControl key={field.name} mt={index > 0 ? 8 : 0}>
                 <FormLabel>{field.label}</FormLabel>
-                <Input
+                <Editable
                   ref={initialRef}
                   placeholder={field.placeholder}
-                  defaultValue={defaultValues[field.name]}
+                  defaultValue={defaultValues[field.name] as string}
+                  type={field.type}
                 />
               </FormControl>
             ))}

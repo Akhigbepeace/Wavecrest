@@ -10,7 +10,9 @@ const ReactPlayer = dynamic(() => import("react-player"), {
 });
 
 const ShowcaseMobile = (props: ShowcaseProps) => {
-  const { videoURL, gallery } = props;
+  const { videoURL, gallery0, gallery1, gallery2, gallery3 } = props;
+
+  const gallery = [gallery0, gallery1, gallery2, gallery3];
   return (
     <Box
       display={{

@@ -1,8 +1,9 @@
 type EditableField<T> = {
   name: T;
   label: string;
-  placeholder: string;
+  placeholder?: string;
   defaultValue?: string;
+  type?: "image" | "text";
 };
 
 export type EditableType<P = unknown> = {
