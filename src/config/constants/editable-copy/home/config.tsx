@@ -1,21 +1,10 @@
 import { StatisticsProps } from "components/molecules/Statistics";
-import { FooterProps } from "components/organisms/Footer/Footer";
 import { ShowcaseProps } from "components/organisms/Home/Showcase/types";
-import {
-  footerConstants,
-  showCaseConstant,
-  statisticsConstant,
-} from "./shored-constants";
-import { EditableType } from "./types";
+import { EditableUIConfig } from "../types";
 
-const header = {
-  title: "Edit Header Links",
-  fields: [{ name: "logo", label: "Logo", placeholder: "Enter logo URL" }],
-};
-
-const showCase: EditableType<ShowcaseProps> = {
+const showCase: EditableUIConfig<ShowcaseProps> = {
+  name: "showCase",
   title: "Edit Marketing",
-  defaults: showCaseConstant,
   fields: [
     {
       name: "topText",
@@ -50,9 +39,9 @@ const showCase: EditableType<ShowcaseProps> = {
   ],
 };
 
-const statistics: EditableType<StatisticsProps> = {
+const statistics: EditableUIConfig<StatisticsProps> = {
+  name: "statistics",
   title: "Edit School Statistics",
-  defaults: statisticsConstant,
   fields: [
     {
       name: "graduates",
@@ -77,41 +66,7 @@ const statistics: EditableType<StatisticsProps> = {
   ],
 };
 
-const footer: EditableType<FooterProps> = {
-  title: "Edit Footer",
-  defaults: footerConstants,
-  fields: [
-    {
-      name: "phone1",
-      label: "Phone 1",
-      placeholder: "Update contact phone 1",
-    },
-    {
-      name: "phone2",
-      label: "Phone 2",
-      placeholder: "Update contact phone 2",
-    },
-    {
-      name: "email",
-      label: "Contact Email",
-      placeholder: "Update email",
-    },
-    {
-      name: "address",
-      label: "Address",
-      placeholder: "Current School Address",
-    },
-    {
-      name: "copyright",
-      label: "Copy Right",
-      placeholder: "Copy rights",
-    },
-  ],
-};
-
-export const editables = {
-  header,
+export const homeConfig = {
   showCase,
   statistics,
-  footer,
 };

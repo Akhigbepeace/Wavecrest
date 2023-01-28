@@ -4,17 +4,27 @@ import React from "react";
 import Showcase from "components/organisms/Home/Showcase/Showcase";
 import Statistics from "components/molecules/Statistics";
 import DiscoverHospitality from "pageLayouts/Home/DiscoverHospitality";
-import EditItem from "components/organisms/Home/Edit/EditItem";
+import Editable from "components/organisms/Home/Edit/Editable";
 import OurStories from "components/organisms/Home/OurStory/OurStories";
 import Partners from "components/organisms/Home/Partners";
 import Footer from "components/organisms/Footer/Footer";
 import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import Blog from "components/organisms/Home/Blog/Blog";
 import StudyProgrammes from "components/organisms/Home/StudyProgram/StudyProgrammes";
-import { editables } from "config/constants/editables/shared";
+import { useCopyData } from "contexts/EditableCopyContext";
+import { combinedConfig } from "config/constants/editable-copy/combined";
 
-const { showCase, statistics, footer } = editables;
+const { homeConfig, sharedConfig } = combinedConfig;
 const HomepageLayout = () => {
+  const { data } = useCopyData();
+
+  const { showCase: showCaseData, statistics: statsData } = data.home;
+  const { footer: footerData } = data.shared;
+
+  const footerConfig = sharedConfig.footer;
+
+  const { showCase: showCaseConfig, statistics: statsConfig } = homeConfig;
+
   return (
     <>
       <Header />
@@ -22,21 +32,17 @@ const HomepageLayout = () => {
 
       <MobileSideBar />
 
-      <EditItem
-        formTitle={showCase.title}
-        fields={showCase.fields}
-        defaultValues={showCase.defaults}
+      <Editable
+        page="home"
+        config={showCaseConfig}
+        defaultValues={showCaseData}
       >
-        <Showcase {...showCase.defaults} />
-      </EditItem>
+        <Showcase {...showCaseData} />
+      </Editable>
 
-      <EditItem
-        formTitle={statistics.title}
-        fields={statistics.fields}
-        defaultValues={statistics.defaults}
-      >
-        <Statistics {...statistics.defaults} />
-      </EditItem>
+      <Editable page="home" config={statsConfig} defaultValues={statsData}>
+        <Statistics {...statsData} />
+      </Editable>
 
       <DiscoverHospitality />
       <Blog />
@@ -44,13 +50,9 @@ const HomepageLayout = () => {
       <OurStories />
       <Partners />
 
-      <EditItem
-        formTitle={footer.title}
-        fields={footer.fields}
-        defaultValues={footer.defaults}
-      >
-        <Footer {...footer.defaults} />
-      </EditItem>
+      <Editable page="shared" config={footerConfig} defaultValues={footerData}>
+        <Footer {...footerData} />
+      </Editable>
     </>
   );
 };
