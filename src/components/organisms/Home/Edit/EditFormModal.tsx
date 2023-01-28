@@ -9,58 +9,61 @@ import {
   FormControl,
   FormLabel,
   ModalFooter,
+  Box,
 } from "@chakra-ui/react";
-import React from "react";
-import Editable from "./Editable";
+import React, { FormEvent } from "react";
+import EditUIFormItem from "./EditUIFormItem";
 
-export type EditFormField = {
+export type EditUIFormField = {
   label: string;
   name: string;
   placeholder?: string;
   type?: "image" | "text";
 };
-type EditFormProps = {
+type EditFormModalProps = {
   isOpen: boolean;
   onClose: () => void;
-  fields: EditFormField[];
+  onSubmit: (e: FormEvent<HTMLFormElement>) => void;
+  fields: EditUIFormField[];
   defaultValues: Record<string, string | string[]>;
   formTitle: string;
 };
 
-export default function EditForm(props: EditFormProps) {
-  const { formTitle, isOpen, onClose, fields, defaultValues } = props;
+export default function EditFormModal(props: EditFormModalProps) {
+  const { formTitle, isOpen, onClose, fields, defaultValues, onSubmit } = props;
 
   const initialRef = React.useRef(null);
 
   return (
-    <>
-      <Modal initialFocusRef={initialRef} isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>{formTitle}</ModalHeader>
-          <ModalCloseButton />
+    <Modal initialFocusRef={initialRef} isOpen={isOpen} onClose={onClose}>
+      <ModalOverlay />
+      <ModalContent>
+        <ModalHeader>{formTitle}</ModalHeader>
+        <ModalCloseButton />
+        <FormControl as="form" onSubmit={onSubmit as any}>
           <ModalBody pb={6}>
             {fields.map((field, index) => (
-              <FormControl key={field.name} mt={index > 0 ? 8 : 0}>
+              <Box key={field.name} mt={index > 0 ? 8 : 0}>
                 <FormLabel>{field.label}</FormLabel>
-                <Editable
+                <EditUIFormItem
                   ref={initialRef}
                   placeholder={field.placeholder}
                   defaultValue={defaultValues[field.name] as string}
                   type={field.type}
+                  name={field.name}
                 />
-              </FormControl>
+              </Box>
             ))}
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3}>
+            <Button type="submit" colorScheme="blue" mr={3}>
               Save
             </Button>
             <Button onClick={onClose}>Cancel</Button>
           </ModalFooter>
-        </ModalContent>
-      </Modal>
-    </>
+        </FormControl>
+      </ModalContent>
+    </Modal>
   );
 }

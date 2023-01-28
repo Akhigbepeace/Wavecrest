@@ -1,11 +1,11 @@
 import React, { ChangeEvent, MutableRefObject, useRef, useState } from "react";
 import { Image, Box, Button } from "@chakra-ui/react";
-import { EditableInputProps } from "./EditableInputProps";
+import { EditableInputProps } from "./types";
 
-const EditableImage = (props: EditableInputProps) => {
-  const { defaultValue } = props;
+const EditImageFormItem = (props: EditableInputProps) => {
+  const { defaultValue, name } = props;
   const fileRef = useRef<HTMLInputElement>();
-  const [src, setSrc] = useState(defaultValue || "/assets/imgs/Showcase1.png");
+  const [src, setSrc] = useState(defaultValue);
   const chooseFile = () => {
     fileRef.current?.click();
   };
@@ -49,7 +49,7 @@ const EditableImage = (props: EditableInputProps) => {
         ref={fileRef as MutableRefObject<HTMLInputElement>}
         style={{ display: "none" }}
         type="file"
-        name="image"
+        name={name}
         accept="image/*"
         onChange={handleChange}
       />
@@ -57,4 +57,4 @@ const EditableImage = (props: EditableInputProps) => {
   );
 };
 
-export default EditableImage;
+export default EditImageFormItem;

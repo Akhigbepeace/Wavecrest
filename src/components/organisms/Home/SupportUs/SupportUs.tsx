@@ -17,12 +17,16 @@ import Footer from "../../Footer/Footer";
 import FooterCopywright from "components/FooterCopywright";
 import PagesBanner from "components/molecules/PagesBanner";
 
-import { editables } from "config/constants/editables/shared";
-import EditItem from "../Edit/EditItem";
+import { combinedConfig } from "config/constants/editable-copy/combined";
+import Editable from "../Edit/Editable";
+import { useCopyData } from "contexts/EditableCopyContext";
 
-const { footer } = editables;
-
+const footerConfig = combinedConfig.sharedConfig.footer;
 const SupportUs = () => {
+  const { data } = useCopyData();
+
+  const { footer: footerData } = data.shared;
+
   return (
     <Fragment>
       <Navbar />
@@ -165,13 +169,9 @@ const SupportUs = () => {
         </Box>
       </Box>
 
-      <EditItem
-        formTitle={footer.title}
-        fields={footer.fields}
-        defaultValues={footer.defaults}
-      >
-        <Footer {...footer.defaults} />
-      </EditItem>
+      <Editable page="shared" config={footerConfig} defaultValues={footerData}>
+        <Footer {...footerData} />
+      </Editable>
       <FooterCopywright />
     </Fragment>
   );

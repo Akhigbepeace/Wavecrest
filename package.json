@@ -13,6 +13,7 @@
     "emailjs-com": "^3.2.0",
     "framer-motion": "^6.3.11",
     "js-file-downloader": "^1.1.24",
+    "mongoose": "^6.9.0",
     "next": "^13.0.3",
     "node-sass": "^7.0.1",
     "react": "^18.1.0",
