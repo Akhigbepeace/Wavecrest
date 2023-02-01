@@ -4,6 +4,7 @@ import {
   ReactNode,
   useCallback,
   useContext,
+  useEffect,
   useState,
 } from "react";
 
@@ -34,8 +35,27 @@ type AppDataProviderProps = {
 export const EditableCopyProvider = (props: AppDataProviderProps) => {
   const [uiData, setUIData] = useState(combinedConstant);
 
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    async function retrieveUICopy() {
+      try {
+        setLoading(true);
+        const response = await fetch("/api/ui-copy");
+        const data = await response.json();
+        setUIData(data);
+      } catch (error) {
+        setError(true);
+      } finally {
+        setLoading(false);
+      }
+    }
+    retrieveUICopy();
+  }, []);
+
   const mutate = useCallback(
-    (
+    async (
       parentKey: keyof ConstantType,
       newData: ConstantType[keyof ConstantType]
     ) => {
@@ -46,8 +66,15 @@ export const EditableCopyProvider = (props: AppDataProviderProps) => {
           ...newData,
         },
       };
-
       setUIData(newUIData);
+
+      await fetch("/api/ui-copy", {
+        method: "POST",
+        body: JSON.stringify({
+          parentKey,
+          newData,
+        }),
+      });
     },
     [uiData]
   );
@@ -55,9 +82,9 @@ export const EditableCopyProvider = (props: AppDataProviderProps) => {
   return (
     <EditableCopyContext.Provider
       value={{
-        loading: true,
+        loading,
         data: uiData,
-        error: false,
+        error,
         mutate,
       }}
     >

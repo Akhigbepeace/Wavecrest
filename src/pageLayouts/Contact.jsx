@@ -402,10 +402,10 @@ const Contact = () => {
                 src="https://maps.google.com/maps?width=665&amp;height=364&amp;hl=en&amp;q=75%20Adisa%20Bashua%20Street,%20Off%20Adelabu%20Street,%20Surulere,%20Lagos%20State,%20Nigeria.%20%20+(Wavecrest)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               ></iframe>
 
-              <script
+              {/* <script
                 type="text/javascript"
                 src="https://embedmaps.com/google-maps-authorization/script.js?id=1e38e70d8c3f5fe4769bac191f721c59a7bdb19c"
-              ></script>
+              ></script> */}
 
               <Text
                 mt="10px"

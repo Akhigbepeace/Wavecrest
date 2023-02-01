@@ -3,7 +3,6 @@ import Navbar from "components/molecules/Navbar/Navbar";
 import React from "react";
 import Showcase from "components/organisms/Home/Showcase/Showcase";
 import Statistics from "components/molecules/Statistics";
-import DiscoverHospitality from "pageLayouts/Home/DiscoverHospitality";
 import Editable from "components/organisms/Home/Edit/Editable";
 import OurStories from "components/organisms/Home/OurStory/OurStories";
 import Partners from "components/organisms/Home/Partners";
@@ -13,17 +12,26 @@ import Blog from "components/organisms/Home/Blog/Blog";
 import StudyProgrammes from "components/organisms/Home/StudyProgram/StudyProgrammes";
 import { useCopyData } from "contexts/EditableCopyContext";
 import { combinedConfig } from "config/constants/editable-copy/combined";
+import DiscoverHospitality from "components/organisms/Home/DiscoverHospitality";
 
 const { homeConfig, sharedConfig } = combinedConfig;
 const HomepageLayout = () => {
   const { data } = useCopyData();
 
-  const { showCase: showCaseData, statistics: statsData } = data.home;
+  const {
+    showCase: showCaseData,
+    statistics: statsData,
+    discoverHospitality,
+  } = data.home;
   const { footer: footerData } = data.shared;
 
   const footerConfig = sharedConfig.footer;
 
-  const { showCase: showCaseConfig, statistics: statsConfig } = homeConfig;
+  const {
+    showCase: showCaseConfig,
+    statistics: statsConfig,
+    discoverHospitality: discoverConfig,
+  } = homeConfig;
 
   return (
     <>
@@ -44,7 +52,17 @@ const HomepageLayout = () => {
         <Statistics {...statsData} />
       </Editable>
 
-      <DiscoverHospitality />
+      <Editable
+        page="home"
+        config={discoverConfig}
+        defaultValues={discoverHospitality}
+      >
+        <DiscoverHospitality
+          subText={discoverHospitality.subText}
+          bannerTitle={discoverHospitality.bannerTitle}
+          btnLabel={discoverHospitality.btnLabel}
+        />
+      </Editable>
       <Blog />
       <StudyProgrammes />
       <OurStories />
