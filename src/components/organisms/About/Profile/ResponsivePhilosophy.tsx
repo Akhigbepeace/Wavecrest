@@ -66,7 +66,7 @@ const ResponsivePhilosophy = () => {
                 key={index}
                 bg="#021D37"
                 p="35px 30px"
-                h="400px"
+                h="500px"
                 mt="20px"
                 borderRadius="5px"
               >

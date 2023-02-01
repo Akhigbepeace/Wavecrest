@@ -1,13 +1,13 @@
-import { Box, Heading, Link } from "@chakra-ui/react";
+import { Box, Flex, Heading, Link } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import OurStory from "./OurStory";
 import Gallery from "pageLayouts/about/Profile/Gallery";
 import OurPhilosophy from "./OurPhilosophy";
 import OurClout from "./OurClout";
 import MobileSideBar from "components/MobileSideBar";
-import PagesBanner from "components/molecules/PagesBanner";
 import MobileRedirect from "components/molecules/MobileRedirect";
 import SectionTitle from "./SectionTitle";
+import MobilePageBanner from "components/molecules/MobilePageBanner";
 
 const Profile = () => {
   const redirects = [
@@ -23,23 +23,11 @@ const Profile = () => {
   return (
     <Fragment>
       <MobileSideBar />
-      <Box
-        h="441px"
-        w="100%"
-        position="relative"
-        display={{
-          sm: "block",
-          md: "block",
-          lg: "none",
-          xl: "none",
-          "2xl": "none",
-        }}
-      >
-        <PagesBanner
-          pageName="PROFILE"
-          imageURL="/assets/imgs/aboutDesktopBanner.jpg"
-        />
-      </Box>
+
+      <MobilePageBanner
+        imageURL="/assets/imgs/aboutDesktopBanner.jpg"
+        title="PROFILE"
+      />
 
       <OurStory />
 
@@ -63,13 +51,7 @@ const Profile = () => {
       </Box>
 
       <Box
-        textAlign={{
-          sm: "left",
-          md: "left",
-          lg: "left",
-          xl: "center",
-          "2xl": "center",
-        }}
+        textAlign="center"
         my="55px"
         px={{
           sm: "20px",
@@ -106,14 +88,12 @@ const Profile = () => {
         </Link>
       </Box>
 
-      <Box
-        mt="100px"
-        display={{
-          sm: "block",
-          md: "block",
-          lg: "block",
-          xl: "none",
-          "2xl": "none",
+      <Flex
+        justifyContent="center"
+        px={{
+          sm: "20px",
+          md: "20px",
+          lg: "91px",
         }}
       >
         {redirects.map((redirect, index) => {
@@ -125,7 +105,7 @@ const Profile = () => {
             />
           );
         })}
-      </Box>
+      </Flex>
     </Fragment>
   );
 };

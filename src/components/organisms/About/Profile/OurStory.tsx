@@ -50,6 +50,7 @@ const OurStory = () => {
           lineHeight="25px"
           color="#021D37"
           mt="15px"
+          textAlign="justify"
           fontSize={{
             sm: "16px",
             md: "16px",

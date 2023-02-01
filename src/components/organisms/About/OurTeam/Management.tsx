@@ -1,12 +1,22 @@
-import { Box, Heading, Image, Flex, Text, Link } from "@chakra-ui/react";
+import { Box, Heading, Image, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import ResponsiveManagement from "pageLayouts/about/Our Team/Media Query/Responsive Management";
 import ResponsiveBoard from "pageLayouts/about/Our Team/Media Query/Responsive Board";
 import ResponsiveStaff from "pageLayouts/about/Our Team/Media Query/Responsive Staff";
 import { managements } from "../constants";
-import NextLink from "next/link";
+import MobileRedirect from "components/molecules/MobileRedirect";
 
 const Management = () => {
+  const redirects = [
+    {
+      name: "PROFILE",
+      url: "/about/profile",
+    },
+    {
+      name: "MILESTONE",
+      url: "/about/milestone",
+    },
+  ];
   return (
     <Box
       px={{
@@ -109,37 +119,25 @@ const Management = () => {
           <ResponsiveStaff />
         </Box>
 
-        <Box mt="100px">
-          <Flex justifyContent="space-evenly">
-            <NextLink href="/about/profile">
-              <Link
-                fontFamily="Manrope"
-                fontSize="18px"
-                py="25px"
-                mb="52px"
-                textAlign="center"
-                fontWeight="700"
-                bg="#EEE"
-              >
-                PROFILE
-              </Link>
-            </NextLink>
-
-            <NextLink href="/about/milestone">
-              <Link
-                fontFamily="Manrope"
-                fontSize="18px"
-                py="25px"
-                mb="52px"
-                textAlign="center"
-                fontWeight="700"
-                bg="#EEE"
-              >
-                MILESTONE
-              </Link>
-            </NextLink>
-          </Flex>
-        </Box>
+        <Flex
+          justifyContent="center"
+          mt="100px"
+          px={{
+            sm: "20px",
+            md: "20px",
+            lg: "91px",
+          }}
+        >
+          {redirects.map((redirect, index) => {
+            return (
+              <MobileRedirect
+                key={index}
+                pageName={redirect.name}
+                pageURL={redirect.url}
+              />
+            );
+          })}
+        </Flex>
       </Box>
     </Box>
   );
