@@ -1,13 +1,18 @@
 import React from "react";
 import { Box, Grid, Link, Text, Image, Heading, Flex } from "@chakra-ui/react";
 import { paths } from "config/constants/pages";
-import landingPage from "config/copy/landingPage";
 
 const discoverpic1 = "/assets/imgs/discoverpic 1.png";
 const discoverpic2 = "/assets/imgs/discoverpic 2.png";
 const training3 = "/assets/imgs/training3.png";
 
-const DiscoverHospitality = () => {
+export type DiscoverHospitalityProps = {
+  subText: string;
+  btnLabel: string;
+  bannerTitle: string;
+};
+const DiscoverHospitality = (props: DiscoverHospitalityProps) => {
+  const { subText, btnLabel, bannerTitle } = props;
   return (
     <Flex
       display={{
@@ -38,7 +43,7 @@ const DiscoverHospitality = () => {
           fontFamily="Manrope"
           textAlign="justify"
         >
-          {landingPage.discover}
+          {subText}
         </Text>
         <Link
           href={paths.profile}
@@ -56,7 +61,7 @@ const DiscoverHospitality = () => {
             color: "white",
           }}
         >
-          READ MORE
+          {btnLabel}
         </Link>
       </Box>
 
@@ -82,7 +87,7 @@ const DiscoverHospitality = () => {
             fontFamily="Playfair Display"
             p="40px"
           >
-            Discover Hospitality
+            {bannerTitle}
           </Text>
         </Box>
 

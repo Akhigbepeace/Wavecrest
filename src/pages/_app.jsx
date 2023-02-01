@@ -34,6 +34,7 @@ export default function MyApp({ Component, pageProps }) {
 
   const theme = extendTheme({ colors, fonts, breakpoints });
 
+
   return (
     <>
       <Head>

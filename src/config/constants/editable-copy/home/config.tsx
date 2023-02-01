@@ -1,4 +1,5 @@
 import { StatisticsProps } from "components/molecules/Statistics";
+import { DiscoverHospitalityProps } from "components/organisms/Home/DiscoverHospitality";
 import { ShowcaseProps } from "components/organisms/Home/Showcase/types";
 import { EditableUIConfig } from "../types";
 
@@ -66,7 +67,31 @@ const statistics: EditableUIConfig<StatisticsProps> = {
   ],
 };
 
+const discoverHospitality: EditableUIConfig<DiscoverHospitalityProps> = {
+  name: "discoverHospitality",
+  title: "Edit Discover Hospitality Section",
+  fields: [
+    {
+      name: "btnLabel",
+      label: "Button Label",
+      placeholder: "Update the button label",
+    },
+    {
+      name: "bannerTitle",
+      label: "Banner title",
+      placeholder: "Update banner title",
+    },
+    {
+      name: "subText",
+      label: "Sub Text",
+      placeholder: "Enter graduate count for marketing",
+      type: "textarea",
+    },
+  ],
+};
+
 export const homeConfig = {
   showCase,
   statistics,
+  discoverHospitality,
 };
