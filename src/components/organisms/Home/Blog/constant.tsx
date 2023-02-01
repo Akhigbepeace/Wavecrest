@@ -1,6 +1,7 @@
 const PCHFlier = "/assets/imgs/P.C.H. flier.png";
 const CulinaryFlier = "/assets/imgs/Culinary flyer.png";
 const matricFlier = "/assets/imgs/matricFlier.jpg";
+const CTHFlier = "/assets/imgs/cth.png";
 
 export const cards = [
   {
@@ -19,6 +20,13 @@ export const cards = [
     link: "Apply Now",
   },
 
+  {
+    flier: CTHFlier,
+    title: "Confederation of Tourism and Hospitality",
+    text: "UK International Gold standard qualifications  for the Hospitality, Culinary & Tourism industries",
+    linkTo: "https://tinyurl.com/CTH-Registration-Form1",
+    link: "Apply Now",
+  },
   {
     flier: matricFlier,
     title: "2023 Matriculation Ceremony",

@@ -1,4 +1,4 @@
-import { Flex, Link } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import React from "react";
 import NextLink from "next/link";
 
@@ -8,21 +8,32 @@ type MobileRedirectProps = {
 };
 
 const MobileRedirect = ({ pageURL, pageName }: MobileRedirectProps) => (
-  <Flex justifyContent="space-evenly">
-    <NextLink href={pageURL} legacyBehavior passHref>
-      <Link
+  <Box
+    flexDirection="column"
+    display={{
+      sm: "inline-flex",
+      md: "inline-flex",
+      lg: "inline-flex",
+      xl: "none",
+      "2xl": "none",
+    }}
+  >
+    <NextLink href={pageURL} passHref legacyBehavior>
+      <Button
         fontFamily="Manrope"
         fontSize="18px"
         py="25px"
-        mb="52px"
+        mb="15px"
+        mr="15px"
+        w="160px"
         textAlign="center"
         fontWeight="700"
         bg="#EEE"
       >
         {pageName}
-      </Link>
+      </Button>
     </NextLink>
-  </Flex>
+  </Box>
 );
 
 export default MobileRedirect;

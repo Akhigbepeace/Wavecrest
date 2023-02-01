@@ -39,6 +39,7 @@ const OurClout = () => {
 
           <Flex
             flexDirection="column"
+            alignItems="flex-start"
             borderBottom={{
               sm: "none",
               md: "none",
@@ -154,7 +155,7 @@ const OurClout = () => {
 
           <Flex
             flexDirection="column"
-            alignItems="center"
+            alignItems="flex-start"
             ml={{
               sm: "0",
               md: "0",

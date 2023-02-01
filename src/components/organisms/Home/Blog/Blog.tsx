@@ -256,7 +256,6 @@ export default function Blog() {
                     >
                       {card.date}
                     </Text>
-
                     <NextLink href={card.linkTo} legacyBehavior passHref>
                       <Link
                         target={

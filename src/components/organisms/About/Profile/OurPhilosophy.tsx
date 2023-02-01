@@ -2,6 +2,7 @@ import { Box, Text, Heading, Grid } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import React from "react";
 import { ourStands } from "../constants";
+import ResponsivePhilosophy from "./ResponsivePhilosophy";
 import SectionTitle from "./SectionTitle";
 
 const OurPhilosophy = () => {
@@ -61,6 +62,8 @@ const OurPhilosophy = () => {
           );
         })}
       </Grid>
+
+      <ResponsivePhilosophy />
     </Box>
   );
 };

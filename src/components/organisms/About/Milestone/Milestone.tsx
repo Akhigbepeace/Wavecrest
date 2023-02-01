@@ -7,8 +7,8 @@ import Twenties from "./Responsive Milestone/Twenties";
 import TwentyTens from "./Responsive Milestone/TwentyTens";
 import MobileSideBar from "components/MobileSideBar";
 import { milestones } from "../constants";
-import PagesBanner from "components/molecules/PagesBanner";
 import MobileRedirect from "components/molecules/MobileRedirect";
+import MobilePageBanner from "components/molecules/MobilePageBanner";
 
 const Milestone = () => {
   const redirects = [
@@ -24,20 +24,12 @@ const Milestone = () => {
   return (
     <Box>
       <MobileSideBar />
-      <Box
-        display={{
-          sm: "block",
-          md: "block",
-          lg: "block",
-          xl: "none",
-          "2xl": "none",
-        }}
-      >
-        <PagesBanner
-          imageURL="/assets/imgs/milestone.jpg"
-          pageName="MILESTONE"
-        />
-      </Box>
+
+      <MobilePageBanner
+        imageURL="/assets/imgs/milestone.jpg"
+        title="MILESTONE"
+      />
+
       <Flex
         p={{
           sm: "50px 20px",
@@ -128,12 +120,13 @@ const Milestone = () => {
             <TwentyTens />
           </Box>
 
-          <Box
+          <Flex
             mt="100px"
+            justifyContent="center"
             display={{
-              sm: "block",
-              md: "block",
-              lg: "block",
+              sm: "flex",
+              md: "flex",
+              lg: "flex",
               xl: "none",
               "2xl": "none",
             }}
@@ -147,7 +140,7 @@ const Milestone = () => {
                 />
               );
             })}
-          </Box>
+          </Flex>
         </Box>
       </Flex>
     </Box>
