@@ -1,7 +1,7 @@
 const PCHFlier = "/assets/imgs/P.C.H. flier.png";
 const CulinaryFlier = "/assets/imgs/Culinary flyer.png";
 const matricFlier = "/assets/imgs/matricFlier.jpg";
-const CTHFlier = "/assets/imgs/cth.png";
+const CTHFlier = "/assets/imgs/cth-flier.png";
 
 export const cards = [
   {
