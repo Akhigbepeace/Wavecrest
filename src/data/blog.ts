@@ -19,6 +19,16 @@ const peace1 = "assets/imgs/peace1.jpg";
 const peace2 = "assets/imgs/peace2.jpg";
 const thelma = "/assets/imgs/Thelma.jpeg";
 
+type Post = {
+  bg: string;
+  postId: string;
+  isTopPost: boolean;
+  postsImg: string;
+  postsDate: string;
+  postHeading: string;
+  postsText: string;
+};
+
 export const CARD_POST = [
   {
     postId: "61911947-aec1-4326-93b2-38cc1303da42",
@@ -274,10 +284,10 @@ export const BLOGS = [
     ],
   },
 ];
-const categories = [];
-let allPosts = [];
-const postMap = {};
-const categoryMap = {};
+const categories: string[] = [];
+let allPosts: any[] = [];
+const postMap: Record<string, Post> = {};
+const categoryMap: Record<string, any> = {};
 
 BLOGS.forEach((blog) => {
   categories.push(blog.category);

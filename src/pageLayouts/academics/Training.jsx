@@ -18,7 +18,7 @@ import {
   ModalBody,
   useDisclosure,
 } from "@chakra-ui/react";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import { useRouter } from "next/router";
 
 const cth = "/assets/imgs/cth.png";

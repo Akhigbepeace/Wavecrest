@@ -6,7 +6,7 @@ const src = "/assets/imgs/WC-LOGO-july.png";
 
 const Logo = () => {
   return (
-    <NextLink href="/">
+    <NextLink href="/home">
       <Image
         src={src}
         alt="logo"

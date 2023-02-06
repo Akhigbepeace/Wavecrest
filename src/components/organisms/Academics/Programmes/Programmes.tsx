@@ -1,6 +1,6 @@
 import { Box, Grid } from "@chakra-ui/react";
 import React from "react";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import { programmes } from "../constants";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
 import MobileRedirect from "components/molecules/MobileRedirect";

@@ -4,7 +4,7 @@ import { FaChevronRight } from "react-icons/fa";
 import Management from "./Management";
 import Board from "./Board";
 import Staff from "./Staff";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import { useRouter } from "next/router";
 
 const about = "/assets/imgs/ourTeam.jpg";

@@ -6,7 +6,7 @@ import { BLOGS, CATEGORIES, POST_MAP } from "data/blog";
 import Footer from "../components/Footer";
 import FooterCopywright from "../components/FooterCopywright";
 import BlogSideBar from "components/BlogSideBar";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import Router, { useRouter } from "next/router";
 
 const BlogPost = () => {

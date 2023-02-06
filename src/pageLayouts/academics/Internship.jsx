@@ -15,7 +15,7 @@ import {
 
 import React, { Fragment, useRef, useState } from "react";
 import emailjs from "emailjs-com";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import { useRouter } from "next/router";
 
 const Internship = () => {

@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import Showcase from "./Showcase";
 import Statistics from "components/Statistics";
 import DiscoverHospitality from "./DiscoverHospitality";

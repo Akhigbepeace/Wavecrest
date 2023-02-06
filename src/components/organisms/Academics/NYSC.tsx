@@ -1,6 +1,6 @@
 import { Heading, Box, Text, Grid } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import Form from "./form";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
 import MobileRedirect from "components/molecules/MobileRedirect";
@@ -11,10 +11,7 @@ const NYSC = () => {
     <Fragment>
       <MobileSideBar />
 
-      <MobilePageBanner
-        imageURL="/assets/imgs/studyprogramme.jpg"
-        title="NYSC"
-      />
+      <MobilePageBanner imageURL="/assets/imgs/nyscBg.jpg" title="NYSC" />
 
       <Box
         px={{

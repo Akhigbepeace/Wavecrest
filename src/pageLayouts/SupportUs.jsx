@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import Navbar from "components/Navbar";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import Footer from "../components/Footer";
 import FooterCopywright from "../components/FooterCopywright";
 

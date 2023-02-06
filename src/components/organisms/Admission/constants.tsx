@@ -1,8 +1,4 @@
 import React, { ReactNode } from "react";
-// import AdmissionRequirements from "pageLayouts/admission/AdmissionRequirements";
-// import TuitionAndScholarship from "pageLayouts/admission/Tuition And Scholarship/TuitionAndScholarship";
-// import Hostel from "pageLayouts/admission/Hostel";
-// import FAQs from "pageLayouts/admission/FAQs";
 import ApplyOnline from "./applyOnline/ApplyOnline";
 import AdmissionRequirements from "./admissionRequirements/AdmissionRequirements";
 import TuitionAndScholarship from "./tuitionAndScholarship/TuitionAndScholarship";

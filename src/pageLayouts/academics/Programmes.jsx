@@ -9,7 +9,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import React from "react";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import { useRouter } from "next/router";
 
 const fileDownload = "/assets/imgs/fileDownload.png";

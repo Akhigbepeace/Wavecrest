@@ -10,7 +10,7 @@ import {
 import { FaChevronCircleDown } from "react-icons/fa";
 import { FaChevronCircleUp } from "react-icons/fa";
 import React, { Fragment } from "react";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import { questions } from "./constants";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
 import MobileRedirect from "components/molecules/MobileRedirect";
