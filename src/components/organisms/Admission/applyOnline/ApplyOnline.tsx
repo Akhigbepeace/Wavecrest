@@ -8,7 +8,7 @@ import {
   Grid,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
 import ApplyOnlineForm from "./Form";
 import NextLink from "next/link";

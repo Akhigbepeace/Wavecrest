@@ -1,7 +1,7 @@
 import { Flex, Grid } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import { trainings } from "../constants";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import MobileRedirect from "components/molecules/MobileRedirect";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
 import Courses from "./Courses";

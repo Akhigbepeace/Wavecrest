@@ -148,11 +148,9 @@ const Program = (programme: ProgrammesProps) => {
             </Link>
           </NextLink>
 
-          <NextLink href="#!" passHref legacyBehavior>
-            {/* <NextLink href={programme.fileUrl} passHref legacyBehavior> */}
+            <NextLink href={programme.fileUrl} passHref legacyBehavior>
             <Link
-              href="#!"
-              // href={programme.fileUrl}
+              href={programme.fileUrl}
               target="_blank"
               _hover={{
                 textDecoration: "none",

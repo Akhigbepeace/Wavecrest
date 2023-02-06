@@ -1,11 +1,12 @@
-import { Heading, Box, Text, Flex, Button, Grid } from "@chakra-ui/react";
+import { Heading, Box, Flex, Button, Grid } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
 import NextLink from "next/link";
 import PrimaryImage from "./PrimaryImage";
 import MobileRedirect from "components/molecules/MobileRedirect";
 import DisplayHostelImages from "./DisplayHostelImages";
+import HostelDesc from "../../../../pages/admission/hostelApplication/HostelDesc";
 
 const Hostel = () => {
   const redirects = [
@@ -142,27 +143,10 @@ const Hostel = () => {
                   </Box>
                 </Box>
 
-                <Text
-                  fontFamily="Manrope"
-                  fontSize={{
-                    sm: "18px",
-                    md: "22px",
-                    lg: "24px",
-                    xl: "24px",
-                    "2xl": "24px",
-                  }}
-                  fontWeight="400"
-                  lineHeight="33px"
-                  my="24px"
-                  color="#021D37"
-                >
-                  Wavecrest offers accommodation to her students both on campus
-                  and off campus. The hostel services are outsourced but
-                  regulated by the College
-                </Text>
+                <HostelDesc />
 
                 <NextLink
-                  href="/admission/hostelApplication"
+                  href="./hostelApplication/HostelApplication"
                   passHref
                   legacyBehavior
                 >

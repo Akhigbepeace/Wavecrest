@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Box } from "@chakra-ui/react";
 import RespTuition from "./RespTuition";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import ScholarshipAccordion from "./ScholarshipAccordion";
 import CourseTuitions from "./CourseTuitions";
 

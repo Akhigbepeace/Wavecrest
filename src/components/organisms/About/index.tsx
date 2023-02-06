@@ -1,8 +1,8 @@
 import { Box } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import Navbar from "components/Navbar";
-import Footer from "components/Footer";
-import FooterCopywright from "components/FooterCopywright";
+import Header from "components/molecules/Header/Header";
+import Navbar from "components/molecules/Navbar/Navbar";
+import Footer from "components/organisms/Footer/Footer";
 import { useRouter } from "next/router";
 import { MenuLink, menuLinks } from "./constants";
 import LinkTabs from "../LinkTabs";
@@ -19,6 +19,7 @@ const About = () => {
 
   return (
     <Fragment>
+      <Header />
       <Navbar />
 
       <Box>
@@ -33,8 +34,15 @@ const About = () => {
           </LinkTabs>
         )}
 
-        <Footer />
-        <FooterCopywright />
+        <Footer
+          address={
+            "75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos, Nigeria."
+          }
+          phone1={"+234 909 685 6606"}
+          phone2={"+234 808 396 4840"}
+          email={"info@wavecrest.edu.ng"}
+          copyright={"Wavecrest College 2022. All Rights Reserved"}
+        />
       </Box>
     </Fragment>
   );

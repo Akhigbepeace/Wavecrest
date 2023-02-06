@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import LinkTabs from "../LinkTabs";
-import Footer from "components/Footer";
-import FooterCopywright from "components/FooterCopywright";
-import Navbar from "components/Navbar";
+import Footer from "components/organisms/Footer/Footer";
+import Header from "components/molecules/Header/Header";
+import Navbar from "components/molecules/Navbar/Navbar";
 import { useRouter } from "next/router";
 import { MenuLink, menuLinks } from "./constants";
 import PagesBanner from "components/molecules/PagesBanner";
@@ -19,18 +19,26 @@ const Admission = () => {
 
   return (
     <Fragment>
+      <Header />
       <Navbar />
 
       <PagesBanner imageURL="/assets/imgs/Admission.png" pageName="ADMISSION" />
 
       {router.isReady && (
-        <LinkTabs menuLinks={menuLinks} activeItem={activeLink.linkTitle}>
-          {activeLink.content}
+        <LinkTabs menuLinks={menuLinks} activeItem={activeLink?.linkTitle}>
+          {activeLink?.content}
         </LinkTabs>
       )}
 
-      <Footer />
-      <FooterCopywright />
+      <Footer
+        address={
+          "75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos, Nigeria."
+        }
+        phone1={"+234 909 685 6606"}
+        phone2={"+234 808 396 4840"}
+        email={"info@wavecrest.edu.ng"}
+        copyright={"Wavecrest College 2022. All Rights Reserved"}
+      />
     </Fragment>
   );
 };

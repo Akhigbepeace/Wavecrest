@@ -18,7 +18,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import { useRouter } from "next/router";
 
 const studyProgrammes1 = "/assets/imgs/HNDReq.jpg";

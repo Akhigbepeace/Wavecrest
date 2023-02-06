@@ -1,10 +1,10 @@
 import { Box, Flex, Heading, Link } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import OurStory from "./OurStory";
-import Gallery from "pageLayouts/about/Profile/Gallery";
+import Gallery from "./Gallery";
 import OurPhilosophy from "./OurPhilosophy";
 import OurClout from "./OurClout";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import MobileRedirect from "components/molecules/MobileRedirect";
 import SectionTitle from "./SectionTitle";
 import MobilePageBanner from "components/molecules/MobilePageBanner";

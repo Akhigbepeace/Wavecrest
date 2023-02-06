@@ -9,7 +9,6 @@ const PrimaryImage = () => {
       src={hostel3}
       alt="hostel-primary-image"
       w="100%"
-      // w="323px"
       h="323px"
       objectFit="contain"
       borderRadius="5px"

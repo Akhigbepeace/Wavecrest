@@ -5,7 +5,7 @@ import Eighties from "./Responsive Milestone/Eighties";
 import Nineties from "./Responsive Milestone/Nineties";
 import Twenties from "./Responsive Milestone/Twenties";
 import TwentyTens from "./Responsive Milestone/TwentyTens";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import { useRouter } from "next/router";
 
 const about = "/assets/imgs/milestone.jpg";
