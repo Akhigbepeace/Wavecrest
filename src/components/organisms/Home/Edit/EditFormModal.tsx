@@ -11,7 +11,7 @@ import {
   ModalFooter,
   Box,
 } from "@chakra-ui/react";
-import React, { FormEvent } from "react";
+import React, { ChangeEvent, FormEvent } from "react";
 import EditUIFormItem from "./EditUIFormItem";
 
 export type EditUIFormField = {
@@ -27,10 +27,23 @@ type EditFormModalProps = {
   fields: EditUIFormField[];
   defaultValues: Record<string, string | string[]>;
   formTitle: string;
+  uploadingImages: Set<string>;
+  uploadedImages: Record<string, string>;
+  onImageChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
 export default function EditFormModal(props: EditFormModalProps) {
-  const { formTitle, isOpen, onClose, fields, defaultValues, onSubmit } = props;
+  const {
+    formTitle,
+    isOpen,
+    onClose,
+    fields,
+    uploadingImages,
+    defaultValues,
+    onSubmit,
+    uploadedImages,
+    onImageChange,
+  } = props;
 
   const initialRef = React.useRef(null);
 
@@ -48,9 +61,14 @@ export default function EditFormModal(props: EditFormModalProps) {
                 <EditUIFormItem
                   ref={initialRef}
                   placeholder={field.placeholder}
-                  defaultValue={defaultValues[field.name] as string}
+                  defaultValue={
+                    (uploadedImages[field.name] ||
+                      defaultValues[field.name]) as string
+                  }
                   type={field.type}
                   name={field.name}
+                  loading={uploadingImages.has(field.name)}
+                  onImageChange={onImageChange}
                 />
               </Box>
             ))}

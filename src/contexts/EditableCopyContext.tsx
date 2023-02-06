@@ -1,4 +1,5 @@
 import { combinedConstant } from "config/constants/editable-copy/combined";
+import { USE_ONLINE_CONFIG } from "config/settings";
 import {
   createContext,
   ReactNode,
@@ -42,9 +43,12 @@ export const EditableCopyProvider = (props: AppDataProviderProps) => {
     async function retrieveUICopy() {
       try {
         setLoading(true);
-        const response = await fetch("/api/ui-copy");
-        const data = await response.json();
-        setUIData(data);
+
+        if (USE_ONLINE_CONFIG) {
+          const response = await fetch("/api/ui-copy");
+          const data = await response.json();
+          setUIData(data);
+        }
       } catch (error) {
         setError(true);
       } finally {
