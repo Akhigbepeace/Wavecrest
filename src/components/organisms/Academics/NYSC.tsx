@@ -11,7 +11,7 @@ const NYSC = () => {
     <Fragment>
       <MobileSideBar />
 
-      <MobilePageBanner imageURL="/assets/imgs/nyscBg.png" title="NYSC" />
+      <MobilePageBanner imageURL="/assets/imgs/nyscBg.jpg" title="NYSC" />
 
       <Box
         px={{
