@@ -1,4 +1,4 @@
-import ContactpageLayout from "components/layouts/ContactpageLayout";
+import ContactpageLayout from "components/layouts/Contact/ContactpageLayout";
 import Head from "next/head";
 
 const AdminContactPage = () => {

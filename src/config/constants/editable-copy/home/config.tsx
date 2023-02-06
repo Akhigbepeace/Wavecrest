@@ -1,6 +1,6 @@
 import { StatisticsProps } from "components/molecules/Statistics";
-import { DiscoverHospitalityProps } from "components/organisms/Home/DiscoverHospitality";
-import { ShowcaseProps } from "components/organisms/Home/Showcase/types";
+import { DiscoverHospitalityProps } from "components/layouts/Home/DiscoverHospitality";
+import { ShowcaseProps } from "components/layouts/Home/Showcase/types";
 import { EditableUIConfig } from "../types";
 
 const showCase: EditableUIConfig<ShowcaseProps> = {

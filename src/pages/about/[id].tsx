@@ -1,5 +1,5 @@
 import React from "react";
-import About from "components/organisms/About";
+import About from "components/layouts/About";
 import Head from "next/head";
 
 const AboutPage = () => {
