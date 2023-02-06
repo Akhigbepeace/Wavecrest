@@ -1,6 +1,7 @@
 import React from "react";
-import Admission from "components/organisms/Admission";
+
 import Head from "next/head";
+import Admission from "components/layouts/Admission";
 
 const AdmissionPage = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import Academics from "components/organisms/Academics/index";
+import Academics from "components/layouts/Academics/index";
 import Head from "next/head";
 
 const AcademicsPage = () => {

@@ -1,4 +1,4 @@
-import BlogpageLayout from "components/layouts/BlogpageLayout";
+import BlogpageLayout from "components/layouts/Blog/BlogpageLayout";
 import Head from "next/head";
 import React from "react";
 

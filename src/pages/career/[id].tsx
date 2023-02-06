@@ -1,4 +1,4 @@
-import Career from "components/organisms/Career";
+import Career from "components/layouts/Career";
 import Head from "next/head";
 import React from "react";
 

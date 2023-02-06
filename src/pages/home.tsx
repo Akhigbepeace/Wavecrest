@@ -1,4 +1,4 @@
-import HomepageLayout from "components/layouts/HomepageLayout";
+import HomepageLayout from "components/layouts/Home/HomepageLayout";
 import Head from "next/head";
 
 const HomePage = () => {
