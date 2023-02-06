@@ -7,7 +7,7 @@ import {
   ListItem,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import Form from "./form";
 import MobileRedirect from "components/molecules/MobileRedirect";
 import MobilePageBanner from "components/molecules/MobilePageBanner";

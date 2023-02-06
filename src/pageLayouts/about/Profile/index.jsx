@@ -12,7 +12,7 @@ import OurStory from "./OurStory";
 import Gallery from "pageLayouts/about/Profile/Gallery";
 import OurPhilosophy from "./OurPhilosophy";
 import OurClout from "./OurClout";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import { useRouter } from "next/router";
 
 const Profile = () => {

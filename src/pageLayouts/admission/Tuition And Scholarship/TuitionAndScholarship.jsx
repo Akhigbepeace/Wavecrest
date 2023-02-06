@@ -21,7 +21,7 @@ import {
 import { FaChevronCircleDown } from "react-icons/fa";
 import { FaChevronCircleUp } from "react-icons/fa";
 import RespTuition from "./RespTuition";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import { useRouter } from "next/router";
 
 const TuitionAndScholarship = () => {

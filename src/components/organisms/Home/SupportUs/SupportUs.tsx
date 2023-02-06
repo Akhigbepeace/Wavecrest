@@ -10,8 +10,9 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import Navbar from "components/Navbar";
-import MobileSideBar from "components/MobileSideBar";
+import Header from "components/molecules/Header/Header";
+import Navbar from "components/molecules/Navbar/Navbar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import { forms, payNow } from "./constants";
 import Footer from "../../Footer/Footer";
 import FooterCopywright from "components/FooterCopywright";
@@ -29,6 +30,7 @@ const SupportUs = () => {
 
   return (
     <Fragment>
+      <Header />
       <Navbar />
       <MobileSideBar />
 

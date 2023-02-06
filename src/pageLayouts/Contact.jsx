@@ -16,7 +16,7 @@ import Navbar from "components/Navbar";
 import emailjs from "emailjs-com";
 import Footer from "components/Footer";
 import FooterCopywright from "components/FooterCopywright";
-import MobileSideBar from "components/MobileSideBar";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import { useRouter } from "next/router";
 
 const Contact = () => {

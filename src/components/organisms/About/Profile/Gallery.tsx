@@ -5,7 +5,7 @@ import Slider from "react-slick";
 
 import NextImage from "next/legacy/image";
 
-export default function Carousel() {
+export default function Gallery() {
   const [slider, setSlider] = React.useState<Slider>();
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
@@ -39,6 +39,7 @@ export default function Carousel() {
     "/assets/imgs/testimonial.png",
     "/assets/imgs/programmes.png",
     "/assets/imgs/aboutDesktopBanner.jpg",
+    "/assets/imgs/galleryImg.jpg",
   ];
 
   return (
