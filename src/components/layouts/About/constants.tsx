@@ -4,7 +4,6 @@ import Milestone from "./Milestone/Milestone";
 import OurTeam from "./OurTeam";
 const imageAvatar = "/assets/imgs/image-avatar.png";
 
-
 export type MenuLink = {
   id: string;
   href: string;
@@ -44,14 +43,12 @@ export const ourStands = [
   },
   {
     heading: "Core Values",
-    text: [
-      "S - Spirit of Service",
-      "P - Personal Responsibility",
-      "I - Integrity",
-      "R - Respect for Others",
-      "I - Industriousness",
-      "T - Teamwork",
-    ],
+    text: `S - Spirit of Service
+      P - Personal Responsibility
+      I - Integrity
+      R - Respect for Others
+      I - Industriousness
+      T - Teamwork`,
   },
 ];
 

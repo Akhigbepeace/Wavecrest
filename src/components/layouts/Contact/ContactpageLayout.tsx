@@ -2,38 +2,40 @@ import React from "react";
 import Header from "components/molecules/Header/Header";
 import Navbar from "components/molecules/Navbar/Navbar";
 import MobileSideBar from "components/molecules/Header/MobileSideBar";
-import PagesBanner from "components/molecules/PagesBanner";
-import Footer from "components/organisms/Footer/Footer";
-import MobilePageBanner from "components/molecules/MobilePageBanner";
-import Contact from "./Contact";
 
-const ContactpageLayout = () => {
+import Footer from "components/organisms/Footer";
+
+import Contact from "./Contact";
+import { useCopyData } from "contexts/EditableCopyContext";
+import { combinedConfig } from "config/constants/editable-copy/combined";
+import Editable from "components/organisms/Editable/Editable";
+import Banner from "./Banner";
+
+type ContactpageLayoutProps = {
+  isAdmin?: boolean;
+};
+const ContactpageLayout = (props: ContactpageLayoutProps) => {
+  const { data } = useCopyData();
+
+  const { contactConfig } = combinedConfig;
+  const prefix = props.isAdmin ? "/admin" : "";
+
   return (
     <div>
       <Header />
-      <Navbar />
+      <Navbar hrefPrefix={prefix} />
       <MobileSideBar />
-
-      <PagesBanner
-        imageURL="/assets/imgs/aboutDesktopBanner.jpg"
-        pageName="CONTACT"
-      />
-      <MobilePageBanner
-        imageURL="/assets/imgs/aboutDesktopBanner.jpg"
-        title="CONTACT"
-      />
+      <Editable
+        page="contact"
+        config={contactConfig.banner}
+        defaultValues={data.contact.banner}
+      >
+        <Banner {...data.contact.banner} />
+      </Editable>
 
       <Contact />
 
-      <Footer
-        address={
-          "75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos, Nigeria."
-        }
-        phone1={"+234 909 685 6606"}
-        phone2={"+234 808 396 4840"}
-        email={"info@wavecrest.edu.ng"}
-        copyright={"Wavecrest College 2022. All Rights Reserved"}
-      />
+      <Footer />
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import { combinedConstant } from "config/constants/editable-copy/combined";
 import fs from "fs";
 import type { NextApiRequest, NextApiResponse } from "next";
 import {
@@ -9,6 +10,7 @@ import {
 
 const DEFAULT_UI_DATA_FILENAME = "default_ui_data.json";
 
+fs.writeFileSync(DEFAULT_UI_DATA_FILENAME, JSON.stringify(combinedConstant));
 const updateAppConfig = async (newConfig: object) => {
   console.log("Updating app copy...");
 

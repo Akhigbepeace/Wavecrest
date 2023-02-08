@@ -7,7 +7,14 @@ type EditableUIField<T> = {
 };
 
 export type EditableUIConfig<P = unknown> = {
-  name: "showCase" | "statistics" | "footer" | "discoverHospitality";
+  name:
+    | "showCase"
+    | "statistics"
+    | "footer"
+    | "discoverHospitality"
+    | "banner"
+    | "philosophy"
+    | "ourStory";
   defaults?: P;
   fields: EditableUIField<keyof P>[];
   title: string;

@@ -1,43 +1,20 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import MobilePageBanner from "components/molecules/MobilePageBanner";
+import PagesBanner from "components/molecules/PagesBanner";
+
 import React from "react";
 
-const Banner = () => {
-  const contactpic = "/assets/imgs/aboutDesktopBanner.jpg";
+export type BannerProps = {
+  imageURL: string;
+  pageName: string;
+};
+const Banner = (props: BannerProps) => {
+  const { imageURL, pageName } = props;
   return (
-    <Box h="441px" position="relative">
-      <Image
-        alt="Banner"
-        src={contactpic}
-        h="100%"
-        w="100%"
-        objectFit="cover"
-      />
+    <>
+      <PagesBanner imageURL={imageURL} pageName={pageName} />
 
-      <Box
-        bg="rgba(0, 24, 71, 0.5)"
-        h="100%"
-        w="100%"
-        position="absolute"
-        bottom="0"
-      >
-        <Text
-          color="white"
-          fontFamily="Playfair Display, serif"
-          fontWeight="700"
-          fontSize={{
-            sm: "34px",
-            md: "50px",
-            lg: "50px",
-            xl: "60px",
-            "2xl": "60px",
-          }}
-          textAlign="center"
-          mt="242px"
-        >
-          CONTACT
-        </Text>
-      </Box>
-    </Box>
+      <MobilePageBanner imageURL={imageURL} title={pageName} />
+    </>
   );
 };
 

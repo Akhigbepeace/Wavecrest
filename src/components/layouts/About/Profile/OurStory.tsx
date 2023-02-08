@@ -1,9 +1,16 @@
 import { Flex, Box, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { Fragment } from "react";
 import ReactPlayer from "react-player";
 import SectionTitle from "./SectionTitle";
 
-const OurStory = () => {
+export type OurStoryProps = {
+  heading: string;
+  subHeading: string;
+  body: string;
+};
+const OurStory = (props: OurStoryProps) => {
+  const { heading, subHeading, body } = props;
+  const brokenParagraphs = body.split("\n");
   const waveVid = "/assets/imgs/wavevid.mp4";
   return (
     <Flex
@@ -42,7 +49,7 @@ const OurStory = () => {
           "2xl": "60px",
         }}
       >
-        <SectionTitle heading="Our Story" subHeading="Who We Are" />
+        <SectionTitle heading={heading} subHeading={subHeading} />
 
         <Text
           fontFamily="Manrope"
@@ -59,23 +66,10 @@ const OurStory = () => {
             "2xl": "18px",
           }}
         >
-          Wavecrest College of Hospitality is a private Monotechnic located in
-          Lagos, Nigeria. The Institution has been involved with the development
-          of Hospitality Education since 1974. It is a project of Women’s Board
-          – Education Co-operation Society, a Nigerian, Not-for profit
-          organization for the development of the Girl Child.
-          <br />
-          <br />
-          The focus of the College is targeted towards capable young women
-          interested in making a career in the Hospitality Industry. The
-          students pay a subsidized tuition fee which covers only about 25% of
-          the operation costs of the College.
-          <br />
-          <br />
-          For more than 40 years, over 2,500 graduates have successfully
-          benefitted from the all-round education received from the College. Our
-          graduates are guaranteed quality Education, Employment and Economic
-          Independence.
+          {brokenParagraphs.map((para, index) => {
+            if (para.trim() === "") return <br key={index} />;
+            return <Fragment key={index}>{para}</Fragment>;
+          })}
         </Text>
       </Box>
 
@@ -96,14 +90,7 @@ const OurStory = () => {
           "2xl": "50%",
         }}
       >
-        <ReactPlayer
-          url={waveVid}
-          playing
-          controls
-          loop
-          width="100%"
-          height="100%"
-        />
+        <ReactPlayer url={waveVid} controls loop width="100%" height="100%" />
       </Box>
     </Flex>
   );

@@ -2,13 +2,16 @@ import { Box } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import Header from "components/molecules/Header/Header";
 import Navbar from "components/molecules/Navbar/Navbar";
-import Footer from "components/organisms/Footer/Footer";
+import Footer from "components/organisms/Footer";
 import { useRouter } from "next/router";
 import { MenuLink, menuLinks } from "./constants";
 import LinkTabs from "../../organisms/LinkTabs";
 import PagesBanner from "components/molecules/PagesBanner";
 
-const About = () => {
+type AboutProps = {
+  isAdmin?: boolean;
+};
+const About = (props: AboutProps) => {
   const router = useRouter();
   const { id } = router.query;
 
@@ -17,10 +20,12 @@ const About = () => {
     (link) => link.id === currentId
   ) as MenuLink;
 
+  const prefix = props.isAdmin ? "/admin" : "";
+
   return (
     <Fragment>
       <Header />
-      <Navbar />
+      <Navbar hrefPrefix={prefix} />
 
       <Box>
         <PagesBanner
@@ -29,20 +34,16 @@ const About = () => {
         />
 
         {router.isReady && (
-          <LinkTabs menuLinks={menuLinks} activeItem={activeLink.linkTitle}>
+          <LinkTabs
+            hrefPrefix={prefix}
+            menuLinks={menuLinks}
+            activeItem={activeLink.linkTitle}
+          >
             {activeLink.content}
           </LinkTabs>
         )}
 
-        <Footer
-          address={
-            "75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos, Nigeria."
-          }
-          phone1={"+234 909 685 6606"}
-          phone2={"+234 808 396 4840"}
-          email={"info@wavecrest.edu.ng"}
-          copyright={"Wavecrest College 2022. All Rights Reserved"}
-        />
+        <Footer />
       </Box>
     </Fragment>
   );

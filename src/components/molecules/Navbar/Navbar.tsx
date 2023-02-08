@@ -4,7 +4,11 @@ import { navLinks, sideLinks } from "./constants";
 import NextLink from "next/link";
 import SideLink from "./SideLink";
 
-const Navbar = () => {
+type NavbarProps = {
+  hrefPrefix?: string;
+};
+const Navbar = (props: NavbarProps) => {
+  const prefix = props.hrefPrefix || "";
   const ref = useRef<any>();
 
   useOutsideClick({
@@ -53,7 +57,7 @@ const Navbar = () => {
                   : "transparent"
               }
             >
-              <NextLink href={navLink.to} passHref legacyBehavior>
+              <NextLink href={prefix + navLink.to} passHref legacyBehavior>
                 <Link
                   onMouseEnter={() => {
                     setCurrentLink(index);
@@ -88,7 +92,7 @@ const Navbar = () => {
                   return (
                     <NextLink
                       key={index}
-                      href={nestedLink.to}
+                      href={prefix + nestedLink.to}
                       passHref
                       legacyBehavior
                     >
