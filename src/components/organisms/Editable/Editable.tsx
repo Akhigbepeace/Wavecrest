@@ -16,7 +16,7 @@ type EditableProps = {
   children: ReactNode;
   defaultValues: Record<string, string | string[]>;
   config: EditableUIConfig<any>;
-  page: "home" | "shared";
+  page: "home" | "shared" | "contact" | "aboutProfile";
 };
 const Editable = (props: EditableProps) => {
   const { page, children, defaultValues, config } = props;

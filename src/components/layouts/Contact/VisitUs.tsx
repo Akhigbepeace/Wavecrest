@@ -47,7 +47,6 @@ const VisitUs = () => {
           Visit Us
         </Heading>
       </Box>
-
       <Box
         w={{
           sm: "335",
@@ -69,7 +68,8 @@ const VisitUs = () => {
 
         <script
           type="text/javascript"
-          src="https://embedmaps.com/google-maps-authorization/script.js?id=1e38e70d8c3f5fe4769bac191f721c59a7bdb19c" defer
+          src="https://embedmaps.com/google-maps-authorization/script.js?id=1e38e70d8c3f5fe4769bac191f721c59a7bdb19c"
+          defer
         ></script>
 
         <Text mt="10px" fontFamily="Manrope" fontSize="16px" fontWeight="400">
@@ -88,11 +88,15 @@ const VisitUs = () => {
         mt="30px"
       >
         {enquires.map((enquiry, index) => {
-          const multiplePhoneNum = Array.isArray(enquiry.phoneNumber)
-            ? enquiry.phoneNumber.map((number, index) => {
-                return <Text key={index}>{number}</Text>;
-              })
-            : enquiry.phoneNumber;
+          let numbers: string[] | string = enquiry.phoneNumber;
+
+          if (typeof numbers === "string") {
+            numbers = [numbers];
+          }
+          const multiplePhoneNum = numbers.map((number, index) => (
+            <Text key={index}>{number}</Text>
+          ));
+
           return (
             <Flex key={index} flexDirection="column" mb="30px" mr="30px">
               <Heading
@@ -114,7 +118,6 @@ const VisitUs = () => {
                   <Text> Phone: &nbsp; </Text>
                   <Text>{multiplePhoneNum}</Text>
                 </Flex>
-
                 <Flex>
                   <Text>Email: &nbsp; </Text>
                   <Text w="196px">{enquiry.email}</Text>

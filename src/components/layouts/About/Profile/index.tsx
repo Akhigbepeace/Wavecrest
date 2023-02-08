@@ -8,6 +8,9 @@ import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import MobileRedirect from "components/molecules/MobileRedirect";
 import SectionTitle from "./SectionTitle";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
+import Editable from "components/organisms/Editable/Editable";
+import { combinedConfig } from "config/constants/editable-copy/combined";
+import { useCopyData } from "contexts/EditableCopyContext";
 
 const Profile = () => {
   const redirects = [
@@ -20,6 +23,12 @@ const Profile = () => {
       url: "/about/ourTeam",
     },
   ];
+
+  const { data } = useCopyData();
+
+  const { ourStory, philosophy } = data.aboutProfile;
+
+  const { aboutConfig } = combinedConfig;
   return (
     <Fragment>
       <MobileSideBar />
@@ -29,9 +38,21 @@ const Profile = () => {
         title="PROFILE"
       />
 
-      <OurStory />
+      <Editable
+        page="aboutProfile"
+        config={aboutConfig.profile.ourStory}
+        defaultValues={ourStory}
+      >
+        <OurStory {...ourStory} />
+      </Editable>
 
-      <OurPhilosophy />
+      <Editable
+        page="aboutProfile"
+        config={aboutConfig.profile.philosophy}
+        defaultValues={philosophy}
+      >
+        <OurPhilosophy {...philosophy} />
+      </Editable>
 
       <OurClout />
 

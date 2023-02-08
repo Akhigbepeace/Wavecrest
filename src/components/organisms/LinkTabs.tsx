@@ -13,10 +13,12 @@ type LinkTabsProps = {
   menuLinks: MenuLink[];
   activeItem: string;
   children: ReactNode;
+  hrefPrefix?: string;
 };
 
 const LinkTabs = (props: LinkTabsProps) => {
-  const { menuLinks, activeItem, children } = props;
+  const { menuLinks, activeItem, children, hrefPrefix = "" } = props;
+
   return (
     <Box>
       <Flex
@@ -34,7 +36,12 @@ const LinkTabs = (props: LinkTabsProps) => {
           const isActive = menuLink.linkTitle === activeItem;
 
           return (
-            <NextLink key={index} href={menuLink.href} passHref legacyBehavior>
+            <NextLink
+              key={index}
+              href={hrefPrefix + menuLink.href}
+              passHref
+              legacyBehavior
+            >
               <Link
                 fontFamily="Manrope"
                 color={isActive ? "#EBEDEF" : "#021d37"}

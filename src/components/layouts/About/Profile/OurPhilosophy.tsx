@@ -1,11 +1,35 @@
 import { Box, Text, Heading, Grid } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-import React from "react";
-import { ourStands } from "../constants";
+import React, { Fragment } from "react";
 import ResponsivePhilosophy from "./ResponsivePhilosophy";
 import SectionTitle from "./SectionTitle";
 
-const OurPhilosophy = () => {
+export type OurPhilosophyProps = {
+  heading1: string;
+  heading2: string;
+  heading3: string;
+  text1: string;
+  text2: string;
+  text3: string;
+  title: string;
+  subTitle: string;
+};
+const OurPhilosophy = (props: OurPhilosophyProps) => {
+  const ourStands = [
+    {
+      heading: props.heading1,
+      text: props.text1,
+    },
+    {
+      heading: props.heading2,
+      text: props.text2,
+    },
+    {
+      heading: props.heading3,
+      text: props.text3,
+    },
+  ];
+
   return (
     <Box
       bg="#EBEDEF"
@@ -19,7 +43,7 @@ const OurPhilosophy = () => {
       w="100%"
       mb="50px"
     >
-      <SectionTitle heading="Our Philosophy" subHeading="What We Stand For" />
+      <SectionTitle heading={props.title} subHeading={props.subTitle} />
 
       <Grid
         gridTemplateColumns="1fr 1fr 1fr"
@@ -34,9 +58,11 @@ const OurPhilosophy = () => {
         }}
       >
         {ourStands.map((ourStand, index) => {
-          const textToShow = Array.isArray(ourStand.text)
-            ? ourStand.text.map((values, i) => <Box key={i}>{values}</Box>)
-            : ourStand.text;
+          const textToShow = ourStand.text.split("\n").map((text, index) => (
+            <Fragment key={index}>
+              {text} <br />
+            </Fragment>
+          ));
 
           return (
             <Box key={index}>
