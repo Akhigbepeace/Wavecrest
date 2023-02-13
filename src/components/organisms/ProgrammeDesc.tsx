@@ -1,60 +1,58 @@
 import {
   Box,
-  Image,
+  Button,
   Flex,
   Heading,
+  Image,
   Link,
   Text,
-  Button,
 } from "@chakra-ui/react";
-import React, { Fragment } from "react";
-import JsFileDownloader from "js-file-downloader";
+import React from "react";
+import Header from "components/molecules/Header/Header";
+import Navbar from "components/molecules/Navbar/Navbar";
 import { FaChevronLeft } from "react-icons/fa";
-import Navbar from "components/Navbar";
 import ReactPlayer from "react-player";
-import Footer from "components/Footer";
-import FooterCopywright from "components/FooterCopywright";
-import { useRouter } from "next/router";
+import JsFileDownloader from "js-file-downloader";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
+import NextLink from "next/link";
+import Footer from "./Footer/Footer";
 
-const HNDProgrammeDesc = () => {
-  const about = "/assets/imgs/studyprogrammes 2.png";
-  const aboutgallery1 = "/assets/imgs/study-programme3.jpg";
-  const aboutgallery4 = "/assets/imgs/studyprogramme.jpg";
-  const quickLinks = [
-    {
-      image: aboutgallery4,
-      text: "National Diploma (ND) in Hospitality Management",
-      linkTo: (e) => {
-        e.preventDefault();
-        router.push("/NDProgramme");
-      },
-    },
-    {
-      image: aboutgallery1,
-      text: "Certificate Course In Hospitality Operations",
-      linkTo: (e) => {
-        e.preventDefault();
-        router.push("/CertificateCourses");
-      },
-    },
-  ];
+type ProgrammeDescProps = {
+  bannerImg: string;
+  programmeTitle: string;
+  programmeDesc: string;
+  brochureUrl: string;
+  // quickLinks: Array<{ linkTo: string; image: string; text: string }>;
+  quickLinks: {
+    href: string;
+    image: string;
+    text: string;
+  }[];
+};
 
-  const router = useRouter();
+const ProgrammeDesc = (props: ProgrammeDescProps) => {
+  const { bannerImg, programmeTitle, programmeDesc, brochureUrl, quickLinks } =
+    props;
 
-  const BackToProgrammes = (e) => {
-    e.preventDefault();
-    router.push("/academics/programmes");
-  };
   const waveVid = "/assets/imgs/wavevid.mp4";
 
-  const fileUrl = "/documents/HIGHER NATIONAL DIPLOMA (HND) IN HOSP (1).pdf";
+  const fileUrl = brochureUrl;
 
   return (
-    <Fragment>
+    <>
+      <Header />
       <Navbar />
 
+      <MobileSideBar />
+
       <Box h="441px" w="100%" gridGap="68px" position="relative">
-        <Image alt="About" src={about} h="100%" w="100%" objectFit="cover" />
+        <Image
+          alt="About"
+          src={bannerImg}
+          h="100%"
+          w="100%"
+          objectFit="cover"
+        />
 
         <Box
           bg="rgba(0, 24, 71, 0.5)"
@@ -74,28 +72,31 @@ const HNDProgrammeDesc = () => {
               xl: "40px",
               "2xl": "40px",
             }}
+            w="700px"
+            mx="auto"
+            mt="200px"
             textAlign="center"
-            mt="140px"
             textTransform="uppercase"
           >
-            Higher National Diploma (HND) <br /> in Hospitality Management
+            {programmeTitle}
           </Text>
         </Box>
       </Box>
 
-      <Button
-        fontFamily="Manrope"
-        fontSize="18px"
-        py="25px"
-        mt="20px"
-        ml="20px"
-        fontWeight="700"
-        bg="#EEE"
-        onClick={(e) => BackToProgrammes(e)}
-      >
-        <FaChevronLeft size="20px" />
-        Back To Programmes
-      </Button>
+      <NextLink href="/academics/programmes" legacyBehavior passHref>
+        <Button
+          fontFamily="Manrope"
+          fontSize="18px"
+          py="25px"
+          mt="20px"
+          ml="20px"
+          fontWeight="700"
+          bg="#EEE"
+        >
+          <FaChevronLeft size="20px" />
+          Back To Programmes
+        </Button>
+      </NextLink>
 
       <Box
         px={{
@@ -140,15 +141,8 @@ const HNDProgrammeDesc = () => {
               }}
               fontWeight="400"
               color="#021D37"
-              lineHeight={{
-                sm: "30px",
-                md: "30 px",
-                lg: "30px",
-                xl: "30px",
-                "2xl": "43px",
-              }}
             >
-              Higher National Diploma (HND) <br /> in Hospitality Management
+              {programmeTitle}
             </Heading>
 
             <Text
@@ -159,8 +153,7 @@ const HNDProgrammeDesc = () => {
               color="#021D37"
               mt="30px"
             >
-              A two-year programme for ND hospitality graduates in preparation
-              for NYSC.
+              {programmeDesc}
             </Text>
           </Box>
 
@@ -274,71 +267,77 @@ const HNDProgrammeDesc = () => {
           >
             {quickLinks.map((quickLink, index) => {
               return (
-                <Box
-                  key={index}
-                  href={quickLink.linkTo}
-                  w={{
-                    sm: "100%",
-                    md: "294px",
-                    lg: "294px",
-                    xl: "294px",
-                    "2xl": "294px",
-                  }}
-                  onClick={quickLink.linkTo}
-                  h="241px"
-                  mr="30px"
-                  mb={{
-                    sm: "20px",
-                    md: "20px",
-                    lg: "20px",
-                    xl: "0",
-                    "2xl": "0",
-                  }}
-                  transition="all ease 0.8s"
-                  _hover={{
-                    transform: "scale(1.2)",
-                  }}
-                >
-                  <Image
-                    src={quickLink.image}
-                    alt="quicklink-image"
-                    w="100%"
-                    h="100%"
-                    borderRadius="3px"
-                    objectFit="cover"
-                  />
-
-                  <Flex
-                    bg="linear-gradient(180deg, rgba(2, 29, 55, 0) 0%, rgba(2, 29, 55, 0.7) 100%);"
-                    position="relative"
-                    h="100%"
-                    top="-241px"
-                    borderRadius="3px"
+                <NextLink key={index} href={quickLink.href}>
+                  <Box
+                    w={{
+                      sm: "100%",
+                      md: "294px",
+                      lg: "294px",
+                      xl: "294px",
+                      "2xl": "294px",
+                    }}
+                    h="241px"
+                    mr="30px"
+                    mb={{
+                      sm: "20px",
+                      md: "20px",
+                      lg: "20px",
+                      xl: "0",
+                      "2xl": "0",
+                    }}
+                    transition="all ease 0.8s"
+                    _hover={{
+                      transform: "scale(1.2)",
+                    }}
                   >
-                    <Text
-                      color="#FFF"
-                      fontFamily="Playfair Display"
-                      fontSize="22px"
-                      lineHeight="27px"
-                      mt="auto"
-                      mx="auto"
-                      mb="20px"
-                      textAlign="center"
+                    <Image
+                      src={quickLink.image}
+                      alt="quicklink-image"
+                      w="100%"
+                      h="100%"
+                      borderRadius="3px"
+                      objectFit="cover"
+                    />
+
+                    <Flex
+                      bg="linear-gradient(180deg, rgba(2, 29, 55, 0) 0%, rgba(2, 29, 55, 0.7) 100%);"
+                      position="relative"
+                      h="100%"
+                      top="-241px"
+                      borderRadius="3px"
                     >
-                      {quickLink.text}
-                    </Text>
-                  </Flex>
-                </Box>
+                      <Text
+                        color="#FFF"
+                        fontFamily="Playfair Display"
+                        fontSize="22px"
+                        lineHeight="27px"
+                        mt="auto"
+                        mx="auto"
+                        mb="20px"
+                        textAlign="center"
+                      >
+                        {quickLink.text}
+                      </Text>
+                    </Flex>
+                  </Box>
+                </NextLink>
               );
             })}
           </Flex>
         </Box>
       </Box>
 
-      <Footer />
-      <FooterCopywright />
-    </Fragment>
+      <Footer
+        address={
+          "75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos, Nigeria."
+        }
+        phone1={"+234 909 685 6606"}
+        phone2={"+234 808 396 4840"}
+        email={"info@wavecrest.edu.ng"}
+        copyright={"Wavecrest College 2022. All Rights Reserved"}
+      />
+    </>
   );
 };
 
-export default HNDProgrammeDesc;
+export default ProgrammeDesc;

@@ -1,11 +1,13 @@
-import { Box, Image, Heading, Text, Grid, Button } from "@chakra-ui/react";
-import Navbar from "components/Navbar";
+import { Box, Heading, Text, Grid, Button } from "@chakra-ui/react";
 import React from "react";
 import JsFileDownloader from "js-file-downloader";
 import Footer from "../components/Footer";
 import FooterCopywright from "../components/FooterCopywright";
-
-const contactpic = "/assets/imgs/contact.png";
+import PagesBanner from "components/molecules/PagesBanner";
+import Navbar from "components/molecules/Navbar/Navbar";
+import Header from "components/molecules/Header/Header";
+import MobileSideBar from "components/molecules/Header/MobileSideBar";
+import MobilePageBanner from "components/molecules/MobilePageBanner";
 
 const Downloads = () => {
   const donwloadables = [
@@ -54,42 +56,13 @@ const Downloads = () => {
 
   return (
     <Box>
+      <Header />
       <Navbar />
 
-      <Box h="441px" w="100%" gridGap="68px" position="relative">
-        <Image
-          src={contactpic}
-          h="100%"
-          w="100%"
-          objectFit="cover"
-          alt="Contact"
-        />
+      <MobileSideBar />
 
-        <Box
-          bg="rgba(0, 24, 71, 0.5)"
-          h="100%"
-          w="100%"
-          position="absolute"
-          bottom="0"
-        >
-          <Text
-            color="white"
-            fontFamily="Playfair Display, serif"
-            fontWeight="700"
-            fontSize={{
-              sm: "34px",
-              md: "50px",
-              lg: "50px",
-              xl: "60px",
-              "2xl": "60px",
-            }}
-            textAlign="center"
-            mt="242px"
-          >
-            DOWNLOADS
-          </Text>
-        </Box>
-      </Box>
+      <MobilePageBanner imageURL="/assets/imgs/contact.png" title="DOWNLOADS" />
+      <PagesBanner imageURL="/assets/imgs/contact.png" pageName={"DOWNLOADS"} />
 
       <Box
         m="0 auto"

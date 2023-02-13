@@ -1,30 +1,31 @@
 import { Box, Flex, Image, Input, useBoolean } from "@chakra-ui/react";
-import React, { SyntheticEvent, useState } from "react";
-import { useRouter } from "next/router";
+import React from "react";
+// import React, { SyntheticEvent, useState } from "react";
+// import { useRouter } from "next/router";
 
 const searchIcon = "/assets/imgs/search.svg";
 
 const Search = () => {
   const [showSearchBar, setShowSearchBar] = useBoolean();
-  const [inputField, setInputField] = useState("");
+  // const [inputField, setInputField] = useState("");
 
-  const inputValues = (e: SyntheticEvent<HTMLInputElement>) => {
-    setInputField(e.currentTarget.value);
-  };
+  // const inputValues = (e: SyntheticEvent<HTMLInputElement>) => {
+  //   setInputField(e.currentTarget.value);
+  // };
 
-  const navigateTo = `/searhResults?searchTerm=${inputField}`;
+  // const navigateTo = `/searhResults?searchTerm=${inputField}`;
 
-  const router = useRouter();
+  // const router = useRouter();
 
-  const ShowResult = (e: SyntheticEvent) => {
-    e.preventDefault();
+  // const ShowResult = (e: SyntheticEvent) => {
+  //   e.preventDefault();
 
-    router.push(navigateTo);
-  };
+  //   router.push(navigateTo);
+  // };
 
   return (
     <Flex alignItems="center" w="278px" h="47px">
-      <form onSubmit={(e) => ShowResult(e)}>
+      <form>
         <Input
           h="47px"
           bg="#EBEDEF"
@@ -32,7 +33,7 @@ const Search = () => {
           borderRightRadius="0"
           visibility={showSearchBar ? "visible" : "hidden"}
           placeholder="Search"
-          onChange={inputValues}
+          // onChange={inputValues}
           _placeholder={{
             fontFamily: "Manrope",
             color: "#021D37",
