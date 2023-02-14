@@ -1,7 +1,8 @@
-import { Box, Image, Text, Link, Heading } from "@chakra-ui/react";
+import { Box, Text, Link, Heading } from "@chakra-ui/react";
 import React from "react";
 import NextLink from "next/link";
 import { paths } from "config/constants/pages";
+import PeaceImage from "components/atoms/PeaceImage";
 
 const studyProgrammes1 = "/assets/imgs/studyprogrammes 2.png";
 const studyProgrammes2 = "/assets/imgs/study-programme3.jpg";
@@ -74,11 +75,10 @@ const Courses = () => {
                       lg: "600px",
                     }}
                   >
-                    <Image
+                    <PeaceImage
                       src={value.imageSrc}
                       alt="coffee"
                       mx="auto"
-                      objectFit="cover"
                       h={{
                         sm: "274px",
                         md: "274px",

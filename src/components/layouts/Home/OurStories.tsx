@@ -4,7 +4,6 @@ import {
   IconButton,
   useBreakpointValue,
   Flex,
-  Image,
   Heading,
   Text,
   Link,
@@ -14,6 +13,7 @@ import Slider from "react-slick";
 import styled from "@emotion/styled";
 import { CARD_POST } from "data/blog";
 import NextLink from "next/link";
+import PeaceImage from "components/atoms/PeaceImage";
 
 const settings = {
   dots: true,
@@ -173,7 +173,7 @@ export default function OurStories() {
               <Flex
                 flexDirection={{
                   sm: "column",
-                  md: "row",
+                  md: "column",
                   lg: "row",
                   xl: "row",
                   "2xl": "row",
@@ -221,6 +221,7 @@ export default function OurStories() {
                     fontSize="18px"
                     fontWeight="400"
                     lineHeight="25px"
+                    textAlign="justify"
                     w={{
                       sm: "290px",
                       md: "310px",
@@ -273,17 +274,17 @@ export default function OurStories() {
                   </NextLink>
                 </Flex>
 
-                <Image
+                <PeaceImage
                   src={card.postsImg}
                   alt="ourstories"
                   objectFit="cover"
-                  display={{
-                    sm: "block",
-                    md: "block",
-                    lg: "block",
-                    xl: "none",
-                    "2xl": "none",
-                  }}
+                  // display={{
+                  //   sm: "block",
+                  //   md: "block",
+                  //   lg: "block",
+                  //   xl: "none",
+                  //   "2xl": "none",
+                  // }}
                   ml={{
                     xl: "-30px",
                     "2xl": "-30px",

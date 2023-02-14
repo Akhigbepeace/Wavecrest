@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Box, Image, Link, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Link, useBreakpointValue } from "@chakra-ui/react";
 import Slider from "react-slick";
 import styled from "@emotion/styled";
+import PeaceImage from "components/atoms/PeaceImage";
 
 const settings = {
   dots: true,
@@ -51,12 +52,11 @@ export default function ShowcaseSlider(props: ShowcaseSliderProps) {
             pauseOnHover
           >
             {cards.map((image, index) => (
-              <Image
+              <PeaceImage
                 key={index}
                 src={image}
-                alt="companyLogo"
+                alt="showcase-image"
                 h="280px"
-                objectFit="cover"
                 px="1px"
               />
             ))}
