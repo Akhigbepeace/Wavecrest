@@ -5,7 +5,6 @@ import {
   Heading,
   Text,
   Link,
-  Image,
   Flex,
 } from "@chakra-ui/react";
 import React from "react";
@@ -14,6 +13,7 @@ import Slider from "react-slick";
 import styled from "@emotion/styled";
 import { cards } from "./constant";
 import NextLink from "next/link";
+import PeaceImage from "components/atoms/PeaceImage";
 
 const settings = {
   dots: true,
@@ -168,9 +168,7 @@ export default function Blog() {
                     lg: "90px",
                   }}
                 >
-                  <Image
-                    src={card.flier}
-                    alt="founders-day"
+                  <Box
                     maxW={{
                       sm: "216px",
                       md: "216px",
@@ -178,6 +176,7 @@ export default function Blog() {
                       xl: "450px",
                       "2xl": "450px",
                     }}
+                    w="100%"
                     h={{
                       sm: "211px",
                       md: "211px",
@@ -192,7 +191,15 @@ export default function Blog() {
                       xl: "50px",
                       "2xl": "50px",
                     }}
-                  />
+                  >
+                    <PeaceImage
+                      w="100%"
+                      h="100%"
+                      objectFit="contain"
+                      src={card.flier}
+                      alt="founders-day"
+                    />
+                  </Box>
 
                   <Flex
                     flexDirection="column"

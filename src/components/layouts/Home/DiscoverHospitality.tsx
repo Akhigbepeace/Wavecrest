@@ -1,6 +1,7 @@
 import React from "react";
-import { Box, Grid, Link, Text, Image, Heading, Flex } from "@chakra-ui/react";
+import { Box, Grid, Link, Text, Heading, Flex } from "@chakra-ui/react";
 import { paths } from "config/constants/pages";
+import PeaceImage from "components/atoms/PeaceImage";
 
 const discoverpic1 = "/assets/imgs/discoverpic 1.png";
 const discoverpic2 = "/assets/imgs/discoverpic 2.png";
@@ -66,15 +67,8 @@ const DiscoverHospitality = (props: DiscoverHospitalityProps) => {
       </Box>
 
       <Grid gridTemplateColumns="1fr 1fr" m="50px 0">
-        <Box w="320px" height="214px">
-          <Image
-            src={discoverpic1}
-            w="100%"
-            h="100%"
-            p="33px"
-            alt="workbench"
-            objectFit="cover"
-          />
+        <Box w="320px" height="214px" p="33px">
+          <PeaceImage w="100%" h="100%" src={discoverpic1} alt="workbench" />
         </Box>
 
         <Box background="#021d37" w="320px" h="214px">
@@ -91,22 +85,13 @@ const DiscoverHospitality = (props: DiscoverHospitalityProps) => {
           </Text>
         </Box>
 
-        <Box w="320px" h="214px">
-          <Image
-            src={training3}
-            w="100%"
-            h="100%"
-            alt="img_ny"
-            objectFit="cover"
-          />
-        </Box>
+        <PeaceImage src={training3} w="320px" h="214px" alt="img_ny" />
 
-        <Box w="320px" h="214px">
-          <Image
+        <Box p="33px" w="320px" h="214px">
+          <PeaceImage
             src={discoverpic2}
             w="100%"
             h="100%"
-            p="33px"
             alt="coffee"
             objectFit="cover"
           />

@@ -1,10 +1,11 @@
 import React from "react";
 
 import { Box, Grid, Flex, Text, Heading } from "@chakra-ui/react";
-import Image from "next/legacy/image";
+
 import dynamic from "next/dynamic";
 import styled from "@emotion/styled";
 import { ShowcaseProps } from "./types";
+import PeaceImage from "components/atoms/PeaceImage";
 
 const ReactPlayer = dynamic(() => import("react-player"), {
   ssr: false,
@@ -91,15 +92,13 @@ const ShowcaseDesktop = (props: ShowcaseProps) => {
       <Grid templateColumns="1fr 1fr" gap="8px">
         {gallery.map((gallery, index) => {
           return (
-            <Box key={index} h="187px" position={"relative"}>
-              <Image
-                src={gallery}
-                alt="Wavecrest Images"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center 20%"
-              />
-            </Box>
+            <PeaceImage
+              key={index}
+              h="187px"
+              src={gallery}
+              alt="Wavecrest Images"
+              objectPosition="center 20%"
+            />
           );
         })}
       </Grid>
