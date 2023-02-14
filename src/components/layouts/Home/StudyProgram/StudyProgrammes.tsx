@@ -116,11 +116,7 @@ const StudyProgrammes = () => {
               position="relative"
             >
               <Box m="0 auto" w="1100px" h="394px">
-                <PeaceImage
-                  src={value.imageSrc}
-                  objectFit="cover"
-                  alt="coffee"
-                />
+                <PeaceImage src={value.imageSrc} alt="programmes" />
               </Box>
 
               <Box

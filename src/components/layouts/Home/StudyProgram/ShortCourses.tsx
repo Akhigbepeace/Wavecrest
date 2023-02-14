@@ -13,6 +13,7 @@ import { FaChevronCircleDown } from "react-icons/fa";
 import { FaChevronCircleUp } from "react-icons/fa";
 import NextLink from "next/link";
 import { shortCourses } from "./constant";
+import PeaceImage from "components/atoms/PeaceImage";
 
 const ShortCourses = () => {
   return (
@@ -66,11 +67,10 @@ const ShortCourses = () => {
                             lg: "600px",
                           }}
                         >
-                          <Image
+                          <PeaceImage
                             src={value.imageSrc}
-                            alt="coffee"
+                            alt="tranining"
                             mx="auto"
-                            objectFit="cover"
                             h="274px"
                             w={{
                               sm: "100%",
@@ -89,8 +89,6 @@ const ShortCourses = () => {
                               sm: "212px",
                               md: "206px",
                               lg: "206px",
-                              xl: "-175px",
-                              "2xl": "-175px",
                             }}
                           >
                             <NextLink
