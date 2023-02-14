@@ -5,6 +5,7 @@ import { Box, Text, Flex, Heading } from "@chakra-ui/react";
 import Courses from "./Courses";
 import ShortCourses from "./ShortCourses";
 import { objArr } from "./constant";
+import PeaceImage from "components/atoms/PeaceImage";
 
 const StudyProgrammes = () => {
   const [currentprogram, setCurrentProgram] = useState(objArr[2]);
@@ -115,11 +116,10 @@ const StudyProgrammes = () => {
               position="relative"
             >
               <Box m="0 auto" w="1100px" h="394px">
-                <Image
+                <PeaceImage
                   src={value.imageSrc}
                   objectFit="cover"
                   alt="coffee"
-                  layout="fill"
                 />
               </Box>
 
