@@ -25,6 +25,7 @@ const Logo = () => {
         }}
         src={src}
         alt="logo"
+        objectFit="contain"
       />
     </NextLink>
   );
