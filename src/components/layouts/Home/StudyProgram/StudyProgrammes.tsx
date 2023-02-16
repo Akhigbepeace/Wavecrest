@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Image from "next/legacy/image";
 import NextLink from "next/link";
 import { Box, Text, Flex, Heading } from "@chakra-ui/react";
 import Courses from "./Courses";
