@@ -1,4 +1,6 @@
+import fs from "fs";
 import S3 from "aws-sdk/clients/s3";
+import { combinedConstant } from "config/constants/editable-copy/combined";
 import crypto from "crypto";
 
 const bucketName = process.env.AWS_BUCKET_NAME || "";
@@ -60,3 +62,33 @@ export async function generateUploadURL(imagename: string) {
 
   return uploadURL;
 }
+
+const DEFAULT_UI_DATA_FILENAME = "default_ui_data.json";
+
+export const updateAppConfig = async (newConfig: object) => {
+  console.log("Updating app copy...");
+
+  if (environment === "development") {
+    fs.writeFileSync(DEFAULT_UI_DATA_FILENAME, JSON.stringify(newConfig));
+  } else {
+    await uploadToS3(newConfig);
+  }
+};
+
+export const retrieveAppConfig = async () => {
+  if (!FILE_COPY_NAME_ON_S3 || environment === "development") {
+    const currentUIData = JSON.parse(
+      fs.readFileSync(DEFAULT_UI_DATA_FILENAME, "utf-8")
+    );
+    return currentUIData;
+  }
+
+  return await getAppConfigFromS3();
+};
+
+export const updateS3Config = async () => {
+  const s3Data = await retrieveAppConfig();
+  const updatedData = { ...combinedConstant, ...s3Data };
+
+  updateAppConfig(updatedData);
+};
