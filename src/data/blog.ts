@@ -15,8 +15,8 @@ const ekpangNkukwo = "assets/imgs/Ekpang-Nkukwo.jpg";
 const studentLetter = "assets/imgs/student-letter.png";
 const developingSkills = "assets/imgs/developing-skills.jpg";
 const JambReg = "assets/imgs/JAMBReg.jpg";
-const peace1 = "assets/imgs/peace1.jpg";
-const peace2 = "assets/imgs/peace2.jpg";
+const peace1 = "/assets/imgs/peace1.jpg";
+const peace2 = "/assets/imgs/peace2.jpg";
 const thelma = "/assets/imgs/Thelma.jpeg";
 
 type Post = {

@@ -151,7 +151,7 @@ export default function Blog() {
                 <Flex
                   flexDirection={{
                     sm: "column",
-                    md: "row",
+                    md: "column",
                     lg: "row",
                     xl: "row",
                     "2xl": "row",
