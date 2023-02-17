@@ -1,4 +1,5 @@
-import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex } from "@chakra-ui/react";
+import PeaceImage from "components/atoms/PeaceImage";
 import React from "react";
 import { managements } from "../../constants";
 import TeamSection from "./TeamSection";
@@ -12,7 +13,7 @@ const ResponsiveManagement = () => {
         {managements.map((management, index) => (
           <Box key={index}>
             <Box w="300px">
-              <Image
+              <PeaceImage
                 src={management.image}
                 pr="10px"
                 w="100%"

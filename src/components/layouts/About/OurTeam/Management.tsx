@@ -1,10 +1,11 @@
-import { Box, Heading, Image, Flex, Text } from "@chakra-ui/react";
+import { Box, Heading, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import ResponsiveManagement from "./Media Query/Responsive Management";
 import ResponsiveBoard from "./Media Query/Responsive Board";
 import ResponsiveStaff from "./Media Query/Responsive Staff";
 import { managements } from "../constants";
 import MobileRedirect from "components/molecules/MobileRedirect";
+import PeaceImage from "components/atoms/PeaceImage";
 
 const Management = () => {
   const redirects = [
@@ -55,12 +56,17 @@ const Management = () => {
       >
         {managements.map((management, index) => {
           return (
-            <Box key={index} w={{ xl: "230px", "2xl": "250px" }} mr="10px">
-              <Image
+            <Box
+              key={index}
+              borderRadius="50px"
+              w={{ xl: "250px", "2xl": "250px" }}
+              mr="10px"
+            >
+              <PeaceImage
                 src={management.image}
                 alt="management"
+                h={250}
                 w="100%"
-                borderRadius="5px"
               />
 
               <Flex

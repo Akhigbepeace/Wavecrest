@@ -18,6 +18,7 @@ import { FaFileDownload } from "react-icons/fa";
 import JsFileDownloader from "js-file-downloader";
 import NextLink from "next/link";
 import { Trainings } from "../constants";
+import PeaceImage from "components/atoms/PeaceImage";
 
 const fileDownload = "/assets/imgs/paperDownload.png";
 const trainingCert = "/assets/imgs/trainingCert.png";
@@ -105,7 +106,7 @@ const Courses = (training: Trainings) => {
             "2xl": "50px",
           }}
         >
-          <Image
+          <PeaceImage
             src={training.trainingsImage}
             alt="trainingsImage"
             maxWidth="none"
@@ -113,9 +114,10 @@ const Courses = (training: Trainings) => {
               sm: "100%",
               md: "100%",
               lg: "100%",
-              xl: "auto",
-              "2xl": "auto",
+              xl: "477px",
+              "2xl": "477px",
             }}
+            h="410px"
           />
         </Box>
 
@@ -291,7 +293,13 @@ const Courses = (training: Trainings) => {
               "2xl": "none",
             }}
           >
-            <Image src={fileDownload} alt="download" w="20px" mr="13px" />
+            <PeaceImage
+              src={fileDownload}
+              alt="download"
+              w="20px"
+              h="25px"
+              mr="13px"
+            />
 
             <Link
               lineHeight="33px"

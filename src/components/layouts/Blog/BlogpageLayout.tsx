@@ -11,7 +11,6 @@ import MobilePageBanner from "components/molecules/MobilePageBanner";
 import Footer from "components/organisms/Footer/Footer";
 import Blog from "./Blog";
 
-
 const BlogpageLayout = () => {
   const blogs = BLOGS;
   const [currentBlog, setCurrentBlog] = useState(blogs[0]);
@@ -29,8 +28,8 @@ const BlogpageLayout = () => {
       <Navbar />
       <MobileSideBar />
 
-      <PagesBanner imageURL="assets/imgs/Blog.png" pageName={"BLOG"} />
-      <MobilePageBanner imageURL={"assets/imgs/Blog.png"} title={"BLOG"} />
+      <PagesBanner imageURL="/assets/imgs/Blog.png" pageName={"BLOG"} />
+      <MobilePageBanner imageURL={"/assets/imgs/Blog.png"} title={"BLOG"} />
 
       <Flex flexDirection="column" alignItems="center">
         <Flex
