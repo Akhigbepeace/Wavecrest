@@ -11,7 +11,6 @@ import React from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Slider from "react-slick";
 import styled from "@emotion/styled";
-import { cards } from "./constant";
 import NextLink from "next/link";
 import PeaceImage from "components/atoms/PeaceImage";
 
@@ -27,14 +26,27 @@ const settings = {
   slidesToScroll: 1,
 };
 
-export default function Blog() {
+export type AnnouncementItem = {
+  flier: string;
+  title: string;
+  text: string;
+  date?: string;
+  linkTo: string;
+  link: string;
+};
+
+export type AnnouncementsProps = {
+  announcements: AnnouncementItem[];
+};
+export default function Announcements(props: AnnouncementsProps) {
+  const { announcements } = props;
   const [slider, setSlider] = React.useState<Slider>();
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "40px" });
 
   return (
-    <Blog.Wrapper>
+    <Announcements.Wrapper>
       <Box position={"relative"} width={"full"} overflow={"hidden"}>
         <IconButton
           aria-label="left-arrow"
@@ -119,10 +131,9 @@ export default function Blog() {
           ref={(slider) => setSlider(slider as Slider)}
           pauseOnFocus
         >
-          {cards.map((card, index) => {
+          {announcements.map((card, index) => {
             const buttonStyle = {
               background: "#021d37",
-              w: "168px",
               p: "10px 26px",
               color: "#fff",
               fontSize: "20px",
@@ -287,11 +298,11 @@ export default function Blog() {
           })}
         </Slider>
       </Box>
-    </Blog.Wrapper>
+    </Announcements.Wrapper>
   );
 }
 
-Blog.Wrapper = styled.div`
+Announcements.Wrapper = styled.div`
   .slick-dots {
     position: static;
     margin-top: -45px;

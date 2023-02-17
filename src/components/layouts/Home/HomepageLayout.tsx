@@ -8,7 +8,7 @@ import OurStories from "./OurStories";
 import Partners from "./Partners";
 import Footer from "components/organisms/Footer";
 import MobileSideBar from "components/molecules/Header/MobileSideBar";
-import Blog from "./Blog/Blog";
+import Announcements from "./Announcements/Announcements";
 import StudyProgrammes from "./StudyProgram/StudyProgrammes";
 import { useCopyData } from "contexts/EditableCopyContext";
 import { combinedConfig } from "config/constants/editable-copy/combined";
@@ -26,12 +26,14 @@ const HomepageLayout = (props: HomepageLayoutProps) => {
     showCase: showCaseData,
     statistics: statsData,
     discoverHospitality,
+    announcements,
   } = data.home;
 
   const {
     showCase: showCaseConfig,
     statistics: statsConfig,
     discoverHospitality: discoverConfig,
+    announcements: announcementsConfig,
   } = homeConfig;
   const prefix = props.isAdmin ? "/admin" : "";
 
@@ -65,7 +67,14 @@ const HomepageLayout = (props: HomepageLayoutProps) => {
           btnLabel={discoverHospitality.btnLabel}
         />
       </Editable>
-      <Blog />
+
+      <Editable
+        page="home"
+        config={announcementsConfig}
+        defaultValues={announcements}
+      >
+        <Announcements announcements={announcements} />
+      </Editable>
       <StudyProgrammes />
       <OurStories />
       <Partners />

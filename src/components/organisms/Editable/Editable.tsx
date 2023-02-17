@@ -14,7 +14,9 @@ import EditFormModal from "./EditFormModal";
 
 type EditableProps = {
   children: ReactNode;
-  defaultValues: Record<string, string | string[]>;
+  defaultValues:
+    | Record<string, string | undefined | string[]>
+    | Record<string, string | undefined>[];
   config: EditableUIConfig<any>;
   page: "home" | "shared" | "contact" | "aboutProfile";
 };
@@ -40,21 +42,49 @@ const Editable = (props: EditableProps) => {
     e.preventDefault();
     const data: any = {};
     const formData = new FormData(e.currentTarget);
+    const arrayIndex = +(e.currentTarget.dataset.index || -1);
     formData.forEach((value, key) => {
       if (typeof value === "string") {
         data[key] = value;
       } else {
-        data[key] = images[key] || defaultValues[key];
+        if (Array.isArray(defaultValues)) {
+          data[key] = images[key] || defaultValues[arrayIndex]?.[key];
+        } else {
+          data[key] = images[key] || defaultValues[key];
+        }
       }
     });
 
+    let newDataValues = data as any;
+    if (Array.isArray(defaultValues)) {
+      newDataValues = [...defaultValues];
+
+      if (arrayIndex === -1) {
+        //add new was clicked
+        newDataValues.push(data);
+      } else {
+        newDataValues[arrayIndex] = data;
+      }
+    }
+
     const finalData = {
-      [config.name as any]: data as any,
+      [config.name as any]: newDataValues,
     } as any;
 
     mutate?.(page, finalData);
 
-    onClose();
+    setImages({});
+  };
+
+  const handleGroupItemDelete = (itemIndex: number) => {
+    if (!Array.isArray(defaultValues)) return;
+    const newValues = defaultValues.filter((val, index) => index !== itemIndex);
+
+    const finalData = {
+      [config.name as any]: newValues,
+    } as any;
+
+    mutate?.(page, finalData);
   };
 
   const handleImageChange = useCallback(
@@ -114,12 +144,12 @@ const Editable = (props: EditableProps) => {
       </Grid>
 
       <EditFormModal
-        fields={config.fields as any}
+        config={config}
         isOpen={isOpen}
         onClose={onClose}
         defaultValues={defaultValues}
-        formTitle={config.title}
         onSubmit={handleSubmit}
+        onGroupItemDelete={handleGroupItemDelete}
         uploadingImages={new Set(uploadingImages)}
         uploadedImages={images}
         onImageChange={handleImageChange}

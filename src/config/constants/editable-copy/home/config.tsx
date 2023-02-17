@@ -2,6 +2,10 @@ import { StatisticsProps } from "components/molecules/Statistics";
 import { DiscoverHospitalityProps } from "components/layouts/Home/DiscoverHospitality";
 import { ShowcaseProps } from "components/layouts/Home/Showcase/types";
 import { EditableUIConfig } from "../types";
+import {
+  AnnouncementItem,
+  AnnouncementsProps,
+} from "components/layouts/Home/Announcements/Announcements";
 
 const showCase: EditableUIConfig<ShowcaseProps> = {
   name: "showCase",
@@ -90,8 +94,53 @@ const discoverHospitality: EditableUIConfig<DiscoverHospitalityProps> = {
   ],
 };
 
+const announcements: EditableUIConfig<AnnouncementsProps, AnnouncementItem> = {
+  name: "announcements",
+  title: "Edit Announcements",
+  emptyFormInitial: {
+    flier: "/assets/imgs/empty-img.jpeg",
+    title: "",
+    date: "",
+    linkTo: "",
+    link: "",
+    text: "",
+  },
+  groupItems: [
+    {
+      name: "flier",
+      label: "Flier image",
+      type: "image",
+    },
+    {
+      name: "title",
+      label: "Announcement Title",
+      placeholder: "Enter title",
+    },
+    {
+      name: "date",
+      label: "Date",
+      placeholder: "Enter announcement data",
+      type: "text",
+    },
+    {
+      name: "linkTo",
+      label: "Button link(optional)",
+      placeholder: "Enter link action",
+      type: "text",
+    },
+    {
+      name: "link",
+      label: "Button text(optional)",
+      placeholder: "Enter link action",
+      type: "text",
+    },
+  ],
+  groupKey: "title",
+};
+
 export const homeConfig = {
   showCase,
   statistics,
   discoverHospitality,
+  announcements,
 };
