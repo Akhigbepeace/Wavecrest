@@ -10,6 +10,7 @@ import {
 import React, { useState } from "react";
 import { forms, Programme, programmes } from "./data";
 import NextLink from "next/link";
+import PeaceImage from "components/atoms/PeaceImage";
 
 type ApplyOnlineFormProp = {
   price: string;
@@ -145,7 +146,7 @@ const ApplyOnlineForm = (props: ApplyOnlineFormProp) => {
         >
           {payNow.map((pay, index) => {
             return (
-              <Image
+              <PeaceImage
                 key={index}
                 src={pay.image}
                 alt="payment-method"

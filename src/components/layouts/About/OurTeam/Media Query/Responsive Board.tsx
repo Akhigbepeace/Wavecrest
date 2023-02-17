@@ -1,4 +1,5 @@
-import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex } from "@chakra-ui/react";
+import PeaceImage from "components/atoms/PeaceImage";
 import React from "react";
 import { boards } from "../../constants";
 import TeamSection from "./TeamSection";
@@ -12,13 +13,12 @@ const ResponsiveBoard = () => {
         {boards.map((board, index) => (
           <Box key={index}>
             <Box w="400px" h="300px" borderRadius="0px 0px 5px 5px">
-              <Image
+              <PeaceImage
                 src={board.image}
                 pr="10px"
                 h="100%"
                 w="100%"
-                alt="companyLogo"
-                objectFit="cover"
+                alt="board"
               />
             </Box>
 

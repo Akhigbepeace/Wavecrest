@@ -1,4 +1,5 @@
 import { Box, Image, Text } from "@chakra-ui/react";
+import PeaceImage from "components/atoms/PeaceImage";
 import React from "react";
 
 type BannerTypeProps = {
@@ -21,7 +22,7 @@ const PagesBanner = (props: BannerTypeProps) => {
         "2xl": "block",
       }}
     >
-      <Image src={imageURL} h="100%" w="100%" objectFit="cover" alt="About" />
+      <PeaceImage src={imageURL} h="100%" w="100%" alt="banner" />
 
       <Box
         bg="rgba(0, 24, 71, 0.5)"
