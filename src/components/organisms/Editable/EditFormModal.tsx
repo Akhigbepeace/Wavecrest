@@ -2,17 +2,13 @@ import {
   ModalOverlay,
   ModalContent,
   ModalCloseButton,
-  Button,
   Modal,
   ModalHeader,
-  ModalBody,
-  FormControl,
-  FormLabel,
-  ModalFooter,
-  Box,
 } from "@chakra-ui/react";
+import { EditableUIConfig } from "config/constants/editable-copy/types";
 import React, { ChangeEvent, FormEvent } from "react";
-import EditUIFormItem from "./EditUIFormItem";
+import GroupFormControl from "./GroupFormControl";
+import SingleItemFormControl from "./SingleItemFormControl";
 
 export type EditUIFormField = {
   label: string;
@@ -24,24 +20,26 @@ type EditFormModalProps = {
   isOpen: boolean;
   onClose: () => void;
   onSubmit: (e: FormEvent<HTMLFormElement>) => void;
-  fields: EditUIFormField[];
-  defaultValues: Record<string, string | string[]>;
-  formTitle: string;
+  config: EditableUIConfig<any>;
+  defaultValues:
+    | Record<string, string | undefined | string[]>
+    | Record<string, string | undefined>[];
   uploadingImages: Set<string>;
   uploadedImages: Record<string, string>;
+  onGroupItemDelete: (index: number) => void;
   onImageChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
 export default function EditFormModal(props: EditFormModalProps) {
   const {
-    formTitle,
     isOpen,
     onClose,
-    fields,
     uploadingImages,
     defaultValues,
     onSubmit,
     uploadedImages,
+    config,
+    onGroupItemDelete,
     onImageChange,
   } = props;
 
@@ -51,36 +49,37 @@ export default function EditFormModal(props: EditFormModalProps) {
     <Modal initialFocusRef={initialRef} isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>{formTitle}</ModalHeader>
+        <ModalHeader>{config.title}</ModalHeader>
         <ModalCloseButton />
-        <FormControl as="form" onSubmit={onSubmit as any}>
-          <ModalBody pb={6}>
-            {fields.map((field, index) => (
-              <Box key={field.name} mt={index > 0 ? 8 : 0}>
-                <FormLabel>{field.label}</FormLabel>
-                <EditUIFormItem
-                  ref={initialRef}
-                  placeholder={field.placeholder}
-                  defaultValue={
-                    (uploadedImages[field.name] ||
-                      defaultValues[field.name]) as string
-                  }
-                  type={field.type}
-                  name={field.name}
-                  loading={uploadingImages.has(field.name)}
-                  onImageChange={onImageChange}
-                />
-              </Box>
-            ))}
-          </ModalBody>
 
-          <ModalFooter>
-            <Button type="submit" colorScheme="blue" mr={3}>
-              Save
-            </Button>
-            <Button onClick={onClose}>Cancel</Button>
-          </ModalFooter>
-        </FormControl>
+        {"fields" in config && (
+          <SingleItemFormControl
+            initialRef={initialRef}
+            defaultValues={defaultValues as Record<string, string | string[]>}
+            uploadingImages={uploadingImages}
+            uploadedImages={uploadedImages}
+            onImageChange={onImageChange}
+            fields={config.fields}
+            onSubmit={onSubmit as any}
+            onClose={onClose}
+          />
+        )}
+
+        {"groupItems" in config && (
+          <GroupFormControl
+            emptyFormInitial={config.emptyFormInitial}
+            items={config.groupItems}
+            groupKey={config.groupKey}
+            uploadingImages={uploadingImages}
+            uploadedImages={uploadedImages}
+            onImageChange={onImageChange}
+            onGroupItemDelete={onGroupItemDelete}
+            onSubmit={onSubmit}
+            defaultValues={
+              defaultValues as Record<string, string | undefined>[]
+            }
+          />
+        )}
       </ModalContent>
     </Modal>
   );

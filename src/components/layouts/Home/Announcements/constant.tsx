@@ -3,7 +3,15 @@ const CulinaryFlier = "/assets/imgs/Culinary flyer.png";
 const matricFlier = "/assets/imgs/matricFlier.jpg";
 const CTHFlier = "/assets/imgs/cth-flier.png";
 
-export const cards = [
+type AnnouncementItem = {
+  flier: string;
+  title: string;
+  text: string;
+  date?: string;
+  linkTo: string;
+  link: string;
+};
+export const announcements: AnnouncementItem[] = [
   {
     flier: CulinaryFlier,
     title: "Culinary Courses",

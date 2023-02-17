@@ -83,12 +83,19 @@ export const retrieveAppConfig = async () => {
     return currentUIData;
   }
 
-  return await getAppConfigFromS3();
+  return getAppConfigFromS3();
 };
 
 export const updateS3Config = async () => {
-  const s3Data = await retrieveAppConfig();
-  const updatedData = { ...combinedConstant, ...s3Data };
+  // const s3Data = await retrieveAppConfig();
+  // const updatedData = {
+  //   ...combinedConstant,
 
-  updateAppConfig(updatedData);
+  // home: {
+  //   ...s3Data.home,
+  //   announcements: [...combinedConstant.home.announcements],
+  // },
+  // };
+
+  await updateAppConfig(combinedConstant);
 };

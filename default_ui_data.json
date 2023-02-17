@@ -1,1 +1,88 @@
-{"home":{"showCase":{"gallery1":"/assets/imgs/Showcase2.png","gallery0":"/assets/imgs/Showcase1.png","gallery2":"/assets/imgs/Showcase3.jpg","gallery3":"/assets/imgs/Showcase4.png","videoURL":"/assets/imgs/wavevid.mp4","topText":"Study In","bottomText":"Nigeria's Premier Hospitality Monotechnic"},"statistics":{"graduates":"2500+","industryPartners":"50+","employmentRate":"100%","entrepreneurs":"40%"},"discoverHospitality":{"subText":"In the last 40 years we have consistently trained individuals and produced graduates who are in very high demand in the Industry. 100% of our graduates are decently employed within 3 months after graduation. About 40% become entrepreneurs while working and even employers of labour soon after graduation. Presently, Hospitality Education is a guarantee of employment in Nigeria.","title":"WAVECREST COLLEGE OF HOSPITALITY","btnLabel":"READ MORE","bannerTitle":"Discover Hospitality"}},"shared":{"footer":{"phone1":"+234 909 685 6606","phone2":"+234 808 396 4840","email":"info@wavecrest.edu.ng","address":"75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos, Nigeria.","copyright":"Wavecrest College 2022. All Rights Reserved"}},"contact":{"banner":{"imageURL":"/assets/imgs/aboutDesktopBanner.jpg","pageName":"CONTACT"}},"aboutProfile":{"ourStory":{"heading":"Our Story","subHeading":"Who We Are","body":"Wavecrest College of Hospitality is a private Monotechnic located in\n  Lagos, Nigeria. The Institution has been involved with the development\n  of Hospitality Education since 1974. It is a project of Women’s Board\n  – Education Co-operation Society, a Nigerian, Not-for profit\n  organization for the development of the Girl Child.\n  \n  \n  The focus of the College is targeted towards capable young women\n  interested in making a career in the Hospitality Industry. The\n  students pay a subsidized tuition fee which covers only about 25% of\n  the operation costs of the College.\n  \n  \n  For more than 40 years, over 2,500 graduates have successfully\n  benefitted from the all-round education received from the College. Our\n  graduates are guaranteed quality Education, Employment and Economic\n  Independence."},"philosophy":{"heading1":"Mission","text1":"To train women to be competent professionals able to meet the challenges of the fast developing world of Hospitality; and to create awareness of the impact of Hospitality service on the quality of life of the individual, the family and ultimately on the development of society.","heading2":"Vision","text2":"To provide both technical competence and ethical integrity in order to ensure in-depth Hospitality and Life Skills Training that guarantees the Girl Child 3Es - Education, Employment and Economic independence","heading3":"Core Values","text3":"S - Spirit of Service\n  P - Personal Responsibility\n  I - Integrity\n  R - Respect for Others\n  I - Industriousness\n  T - Teamwork","title":"Our Philosophy","subTitle":"What We Stand For"}}}
+{
+  "home": {
+    "showCase": {
+      "gallery1": "/assets/imgs/Showcase2.png",
+      "gallery0": "/assets/imgs/Showcase1.png",
+      "gallery2": "/assets/imgs/Showcase3.jpg",
+      "gallery3": "/assets/imgs/Showcase4.png",
+      "videoURL": "/assets/imgs/wavevid.mp4",
+      "topText": "Study In",
+      "bottomText": "Nigeria's Premier Hospitality Monotechnic"
+    },
+    "statistics": {
+      "graduates": "2500+",
+      "industryPartners": "50+",
+      "employmentRate": "100%",
+      "entrepreneurs": "40%"
+    },
+    "discoverHospitality": {
+      "subText": "In the last 40 years we have consistently trained individuals and produced graduates who are in very high demand in the Industry. 100% of our graduates are decently employed within 3 months after graduation. About 40% become entrepreneurs while working and even employers of labour soon after graduation. Presently, Hospitality Education is a guarantee of employment in Nigeria.",
+      "title": "WAVECREST COLLEGE OF HOSPITALITY",
+      "btnLabel": "READ MORE",
+      "bannerTitle": "Discover Hospitality"
+    },
+    "announcements": [
+      {
+        "flier": "/assets/imgs/Culinary flyer.png",
+        "title": "Culinary Courses",
+        "date": "February 6 - March 8",
+        "linkTo": "https://forms.gle/VQtgEFMa9qhsojGn7",
+        "link": "Register now"
+      },
+      {
+        "flier": "/assets/imgs/P.C.H. flier.png",
+        "title": "Professional Certificate in Hospitality",
+        "text": "Training program geared towards industry managers, supervisors, and operatives.  ",
+        "linkTo": "https://forms.gle/7vmuHrzHSxHmkh8s8",
+        "link": "Apply Now"
+      },
+      {
+        "flier": "/assets/imgs/cth-flier.png",
+        "title": "Confederation of Tourism and Hospitality",
+        "text": "UK International Gold standard qualifications  for the Hospitality, Culinary & Tourism industries",
+        "linkTo": "https://tinyurl.com/CTH-Registration-Form1",
+        "link": "Apply Now"
+      },
+      {
+        "flier": "/assets/imgs/matricFlier.jpg",
+        "title": "2023 Matriculation Ceremony",
+        "text": "The Provost of Wavecrest College of Hospitality cordially invites you to her 2023 Matriculation Ceremony",
+        "date": "Friday, 17th Febuary, 2023",
+        "linkTo": "#",
+        "link": "Read More"
+      }
+    ]
+  },
+  "shared": {
+    "footer": {
+      "phone1": "+234 909 685 6606",
+      "phone2": "+234 808 396 4840",
+      "email": "info@wavecrest.edu.ng",
+      "address": "75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos, Nigeria.",
+      "copyright": "Wavecrest College 2022. All Rights Reserved"
+    }
+  },
+  "contact": {
+    "banner": {
+      "imageURL": "/assets/imgs/aboutDesktopBanner.jpg",
+      "pageName": "CONTACT"
+    }
+  },
+  "aboutProfile": {
+    "ourStory": {
+      "heading": "Our Story",
+      "subHeading": "Who We Are",
+      "body": "Wavecrest College of Hospitality is a private Monotechnic located in\n  Lagos, Nigeria. The Institution has been involved with the development\n  of Hospitality Education since 1974. It is a project of Women’s Board\n  – Education Co-operation Society, a Nigerian, Not-for profit\n  organization for the development of the Girl Child.\n  \n  \n  The focus of the College is targeted towards capable young women\n  interested in making a career in the Hospitality Industry. The\n  students pay a subsidized tuition fee which covers only about 25% of\n  the operation costs of the College.\n  \n  \n  For more than 40 years, over 2,500 graduates have successfully\n  benefitted from the all-round education received from the College. Our\n  graduates are guaranteed quality Education, Employment and Economic\n  Independence."
+    },
+    "philosophy": {
+      "heading1": "Mission",
+      "text1": "To train women to be competent professionals able to meet the challenges of the fast developing world of Hospitality; and to create awareness of the impact of Hospitality service on the quality of life of the individual, the family and ultimately on the development of society.",
+      "heading2": "Vision",
+      "text2": "To provide both technical competence and ethical integrity in order to ensure in-depth Hospitality and Life Skills Training that guarantees the Girl Child 3Es - Education, Employment and Economic independence",
+      "heading3": "Core Values",
+      "text3": "S - Spirit of Service\n  P - Personal Responsibility\n  I - Integrity\n  R - Respect for Others\n  I - Industriousness\n  T - Teamwork",
+      "title": "Our Philosophy",
+      "subTitle": "What We Stand For"
+    }
+  }
+}
