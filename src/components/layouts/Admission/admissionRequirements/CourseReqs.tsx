@@ -9,6 +9,7 @@ import {
   UnorderedList,
   useDisclosure,
 } from "@chakra-ui/react";
+import PeaceImage from "components/atoms/PeaceImage";
 import React from "react";
 import { RequirementsProps } from "../constants";
 import ShowModal from "./ShowModal";
@@ -99,7 +100,7 @@ const CourseReqs = (props: RequirementsProps) => {
           "2xl": "flex",
         }}
       >
-        <Image
+        <PeaceImage
           src={props.coursePic}
           alt="course-img"
           w="580px"
@@ -107,7 +108,6 @@ const CourseReqs = (props: RequirementsProps) => {
           borderRadius="3px"
           mr="45px"
           mb="20px"
-          objectFit="cover"
         />
 
         <Box>
@@ -121,7 +121,7 @@ const CourseReqs = (props: RequirementsProps) => {
             mt="33px"
             lineHeight="33px"
             onClick={onOpen}
-            cursor= "pointer"
+            cursor="pointer"
           >
             {props.viewUpdate}
           </Text>

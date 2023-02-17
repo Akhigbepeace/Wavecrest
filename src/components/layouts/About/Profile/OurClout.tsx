@@ -1,4 +1,5 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import PeaceImage from "components/atoms/PeaceImage";
 import React from "react";
 import { awards, recognitions } from "../constants";
 import SectionTitle from "./SectionTitle";
@@ -69,10 +70,9 @@ const OurClout = () => {
                     lg: "25px",
                   }}
                 >
-                  <Image
+                  <PeaceImage
                     src={award.awardImg}
                     alt="award-img"
-                    objectFit="cover"
                     w={{
                       sm: "60px",
                       md: "70px",
@@ -176,12 +176,8 @@ const OurClout = () => {
                   <Image
                     src={recognition.recogImg}
                     alt="recognition-img"
-                    objectFit="cover"
-                    w={{
-                      sm: "85px",
-                      md: "100px",
-                      lg: "105px",
-                    }}
+                    w="105px"
+                    h="42px"
                   />
 
                   <Text

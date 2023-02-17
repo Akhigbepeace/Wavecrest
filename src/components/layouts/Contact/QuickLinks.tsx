@@ -1,4 +1,5 @@
-import { Flex, Image, Link, Text } from "@chakra-ui/react";
+import { Flex, Link, Text } from "@chakra-ui/react";
+import PeaceImage from "components/atoms/PeaceImage";
 import NextLink from "next/link";
 import React from "react";
 import { quickLinks } from "./constants";
@@ -19,7 +20,7 @@ const QuickLinks = () => {
                 transform: "scale(1.2)",
               }}
             >
-              <Image
+              <PeaceImage
                 src={quickLink.image}
                 alt="quicklinks-images"
                 w="100%"

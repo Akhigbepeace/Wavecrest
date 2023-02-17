@@ -58,47 +58,77 @@ const Hostel = () => {
           display={{
             sm: "block",
             md: "block",
-            lg: "block",
+            lg: "flex",
             xl: "flex",
             "2xl": "flex",
           }}
         >
-          <Box>
-            <Flex
+          <Flex
+            display={{
+              sm: "block",
+              md: "block",
+              lg: "block",
+              xl: "flex",
+              "2xl": "flex",
+            }}
+            alignItems="center"
+          >
+            <Box
               display={{
                 sm: "block",
                 md: "block",
                 lg: "block",
-                xl: "flex",
-                "2xl": "flex",
+                xl: "none",
+                "2xl": "none",
               }}
-              alignItems="center"
             >
-              <Box
-                display={{
-                  sm: "block",
-                  md: "block",
-                  lg: "block",
-                  xl: "none",
-                  "2xl": "none",
-                }}
-              >
-                <PrimaryImage />
-              </Box>
+              <PrimaryImage />
+            </Box>
 
-              <Box
-                w={{
-                  xl: "60%",
-                  "2xl": "60%",
-                }}
-              >
+            <Box
+              w={{
+                xl: "60%",
+                "2xl": "60%",
+              }}
+            >
+              <Box>
+                <Box
+                  w="88px"
+                  h="3px"
+                  bg="#021D37"
+                  mb="5px"
+                  mt="20px"
+                  display={{
+                    sm: "block",
+                    md: "block",
+                    lg: "block",
+                    xl: "none",
+                    "2xl": "none",
+                  }}
+                ></Box>
+
                 <Box>
-                  <Box
-                    w="88px"
-                    h="3px"
-                    bg="#021D37"
-                    mb="5px"
-                    mt="20px"
+                  <Heading
+                    fontFamily="Playfair Display"
+                    fontSize="32px"
+                    fontWeight="700"
+                    color="#021D37"
+                    display={{
+                      sm: "none",
+                      md: "none",
+                      lg: "none",
+                      xl: "block",
+                      "2xl": "block",
+                    }}
+                  >
+                    Hostel Application
+                  </Heading>
+
+                  <Heading
+                    fontFamily="Playfair Display"
+                    fontSize="24px"
+                    fontWeight="700"
+                    color="#021D37"
                     display={{
                       sm: "block",
                       md: "block",
@@ -106,85 +136,53 @@ const Hostel = () => {
                       xl: "none",
                       "2xl": "none",
                     }}
-                  ></Box>
-
-                  <Box>
-                    <Heading
-                      fontFamily="Playfair Display"
-                      fontSize="32px"
-                      fontWeight="700"
-                      color="#021D37"
-                      display={{
-                        sm: "none",
-                        md: "none",
-                        lg: "none",
-                        xl: "block",
-                        "2xl": "block",
-                      }}
-                    >
-                      Hostel Application
-                    </Heading>
-
-                    <Heading
-                      fontFamily="Playfair Display"
-                      fontSize="24px"
-                      fontWeight="700"
-                      color="#021D37"
-                      display={{
-                        sm: "block",
-                        md: "block",
-                        lg: "block",
-                        xl: "none",
-                        "2xl": "none",
-                      }}
-                    >
-                      Apply For A Hostel
-                    </Heading>
-                  </Box>
-                </Box>
-
-                <HostelDesc />
-
-                <NextLink
-                  href="./hostelApplication/HostelApplication"
-                  passHref
-                  legacyBehavior
-                >
-                  <Button
-                    w="142px"
-                    height="46.89px"
-                    bg="#021D37"
-                    border="none"
-                    color="#fff"
-                    fontWeight="700"
-                    fontSize="16px"
-                    lineHeight="22px"
-                    textAlign="center"
-                    borderRadius="3px"
-                    mt="8px"
-                    _hover={{
-                      bg: "#020E1B",
-                      transition: "all ease 0.4s",
-                    }}
                   >
-                    REGISTER
-                  </Button>
-                </NextLink>
+                    Apply For A Hostel
+                  </Heading>
+                </Box>
               </Box>
 
-              <Box
-                display={{
-                  sm: "none",
-                  md: "none",
-                  lg: "none",
-                  xl: "block",
-                  "2xl": "block",
-                }}
+              <HostelDesc />
+
+              <NextLink
+                href="./hostelApplication/HostelApplication"
+                passHref
+                legacyBehavior
               >
-                <PrimaryImage />
-              </Box>
-            </Flex>
-          </Box>
+                <Button
+                  w="142px"
+                  height="46.89px"
+                  bg="#021D37"
+                  border="none"
+                  color="#fff"
+                  fontWeight="700"
+                  fontSize="16px"
+                  lineHeight="22px"
+                  textAlign="center"
+                  borderRadius="3px"
+                  mt="8px"
+                  _hover={{
+                    bg: "#020E1B",
+                    transition: "all ease 0.4s",
+                  }}
+                >
+                  REGISTER
+                </Button>
+              </NextLink>
+            </Box>
+
+            <Box
+              display={{
+                sm: "none",
+                md: "none",
+                lg: "none",
+                xl: "block",
+                "2xl": "block",
+              }}
+            >
+              <PrimaryImage />
+            </Box>
+          </Flex>
         </Flex>
 
         <DisplayHostelImages />

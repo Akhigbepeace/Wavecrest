@@ -10,6 +10,7 @@ import {
 import React from "react";
 import NextLink from "next/link";
 import { ProgrammesProps } from "../constants";
+import PeaceImage from "components/atoms/PeaceImage";
 
 const Program = (programme: ProgrammesProps) => {
   const fileDownload = "/assets/imgs/fileDownload.png";
@@ -81,7 +82,7 @@ const Program = (programme: ProgrammesProps) => {
         }}
         transition="all ease 0.7s"
       >
-        <Image
+        <PeaceImage
           src={programme.imageSrc}
           alt="programme-image"
           h={programme.height || "394px"}
@@ -89,7 +90,6 @@ const Program = (programme: ProgrammesProps) => {
           m="0 auto"
           mt="25px"
           objectPosition={programme.objectPosition}
-          objectFit="cover"
         />
 
         <Box
@@ -148,7 +148,7 @@ const Program = (programme: ProgrammesProps) => {
             </Link>
           </NextLink>
 
-            <NextLink href={programme.fileUrl} passHref legacyBehavior>
+          <NextLink href={programme.fileUrl} passHref legacyBehavior>
             <Link
               href={programme.fileUrl}
               target="_blank"

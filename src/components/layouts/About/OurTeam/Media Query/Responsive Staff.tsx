@@ -1,4 +1,5 @@
-import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
+import { Box, Heading, Text,Flex } from "@chakra-ui/react";
+import PeaceImage from "components/atoms/PeaceImage";
 import React from "react";
 import { staffs } from "../../constants";
 import TeamSection from "./TeamSection";
@@ -30,7 +31,7 @@ const ResponsiveStaff = () => {
                 return (
                   <Box key={index}>
                     <Box w="350px">
-                      <Image
+                      <PeaceImage
                         src={item.image}
                         pl="10px"
                         w="100%"

@@ -121,7 +121,7 @@ export const programmes: ProgrammesProps[] = [
 export type Trainings = {
   background?: string;
   trainingsTitle?: string;
-  trainingsImage?: string;
+  trainingsImage: string;
   trainingDurationTime?: string;
   trainingDurationYear?: string;
   trainingsText?: string;

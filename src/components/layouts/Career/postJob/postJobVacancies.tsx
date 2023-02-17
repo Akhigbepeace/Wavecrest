@@ -11,7 +11,7 @@ const PostJobVacancies = () => {
       <MobileSideBar />
 
       <MobilePageBanner
-        imageURL="assets/imgs/waveimg.png"
+        imageURL="/assets/imgs/waveimg.png"
         title="POST JOB VACANCIES"
       />
 

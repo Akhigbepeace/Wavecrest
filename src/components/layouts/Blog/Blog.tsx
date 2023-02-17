@@ -3,7 +3,6 @@ import {
   Button,
   Flex,
   Grid,
-  Image,
   Input,
   Text,
   Heading,
@@ -12,6 +11,7 @@ import React, { useState } from "react";
 import { BLOGS, CATEGORIES } from "data/blog";
 import { useRouter } from "next/router";
 import MobileBlogMenu from "./MobileBlogMenu";
+import PeaceImage from "components/atoms/PeaceImage";
 
 const Blog = () => {
   const blogs = BLOGS;
@@ -133,12 +133,12 @@ const Blog = () => {
                   transform: "scale(1.03)",
                 }}
               >
-                <Image
+                <PeaceImage
                   key={index}
-                  alt="image"
+                  alt="blog-img"
                   src={post.postsImg}
                   borderRadius="3px"
-                  objectFit="cover"
+                  objectFit="contain"
                   mx="auto"
                   w="100%"
                   mb={{
@@ -227,7 +227,7 @@ const Blog = () => {
                   fontSize="18px"
                   lineHeight="25px"
                   noOfLines={5}
-                  dangerouslySetInnerHTML={{ __html: post.postsText }}
+                  // dangerouslySetInnerHTML={{ __html: post.postsText }}
                 />
                 <Button
                   w="142px"

@@ -1,4 +1,5 @@
-import { Box, Grid, Heading, Image, Flex, Text } from "@chakra-ui/react";
+import { Box, Grid, Heading, Flex, Text } from "@chakra-ui/react";
+import PeaceImage from "components/atoms/PeaceImage";
 import React from "react";
 import { boards } from "../constants";
 
@@ -46,12 +47,11 @@ const Board = () => {
         {boards.map((board, index) => {
           return (
             <Box key={index} w={{ xl: "260px", "2xl": "260px" }}>
-              <Image
+              <PeaceImage
                 src={board.image}
                 alt="board"
                 w="100%"
                 h="250px"
-                objectFit="cover"
                 borderRadius="5px"
               />
 

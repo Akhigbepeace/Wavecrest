@@ -1,4 +1,5 @@
-import { Grid, Image } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
+import PeaceImage from "components/atoms/PeaceImage";
 import React from "react";
 
 const DisplayHostelImages = () => {
@@ -13,35 +14,35 @@ const DisplayHostelImages = () => {
       gridTemplateColumns={{
         sm: "1fr 1fr",
         md: "1fr 1fr",
-        lg: "1fr 1fr 1fr",
+        lg: "1fr 1fr  ",
         xl: "repeat(4, 1fr)",
         "2xl": "repeat(4, 1fr)",
       }}
       gridGap="10px"
+      justifyContent="center"
       mt=" 60px"
     >
       {images.map((image, index) => {
         return (
-          <Image
+          <PeaceImage
             key={index}
             src={image}
             alt="hostel-images"
             w={{
-              sm: "auto",
-              md: "1fr 1fr",
-              lg: "1fr 1fr 1fr",
+              sm: "150px",
+              md: "309px",
+              lg: "309px",
               xl: "309px",
               "2xl": "309px",
             }}
             h={{
-              sm: "auto",
-              md: "1fr 1fr",
-              lg: "1fr 1fr 1fr",
+              sm: "150px",
+              md: "309px",
+              lg: "309px",
               xl: "309px",
               "2xl": "309px",
             }}
             borderRadius="5px"
-            objectFit="cover"
           />
         );
       })}
