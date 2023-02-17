@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../App.css";
 import { EditableCopyProvider } from "contexts/EditableCopyContext";
+import { AuthProvider } from "components/AuthProvider";
+import { AuthGuard } from "components/AuthGuard";
 
 const PopupModal = dynamic(() => import("../components/PopupModal"), {
   ssr: false,
@@ -39,10 +41,20 @@ export default function MyApp({ Component, pageProps }: any) {
       <Seo {...pageProps.seo} />
 
       <ChakraProvider theme={theme}>
-        <EditableCopyProvider>
-          <PopupModal />
-          <Component {...pageProps} />
-        </EditableCopyProvider>
+        <AuthProvider>
+          <EditableCopyProvider>
+            <PopupModal />
+            {/* if requireAuth property is present - protect the page */}
+            {Component.requireAuth ? (
+              <AuthGuard>
+                <Component {...pageProps} />
+              </AuthGuard>
+            ) : (
+              // public page
+              <Component {...pageProps} />
+            )}
+          </EditableCopyProvider>
+        </AuthProvider>
       </ChakraProvider>
     </>
   );
