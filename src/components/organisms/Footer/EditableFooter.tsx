@@ -1,3 +1,4 @@
+import { combinedConstant } from "config/constants/editable-copy/combined";
 import { sharedConfig } from "config/constants/editable-copy/shared/config";
 import { useCopyData } from "contexts/EditableCopyContext";
 import React from "react";
@@ -7,7 +8,7 @@ import Footer from "./Footer";
 const EditableFooter = () => {
   const { data } = useCopyData();
 
-  const { footer: footerData } = data.shared;
+  const { footer: footerData } = { ...combinedConstant.shared, ...data.shared };
 
   const footerConfig = sharedConfig.footer;
 

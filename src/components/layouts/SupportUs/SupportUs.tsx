@@ -17,7 +17,10 @@ import { forms, payNow } from "./constants";
 import Footer from "../../organisms/Footer/Footer";
 import PagesBanner from "components/molecules/PagesBanner";
 
-import { combinedConfig } from "config/constants/editable-copy/combined";
+import {
+  combinedConfig,
+  combinedConstant,
+} from "config/constants/editable-copy/combined";
 import Editable from "../../organisms/Editable/Editable";
 import { useCopyData } from "contexts/EditableCopyContext";
 
@@ -25,7 +28,7 @@ const footerConfig = combinedConfig.sharedConfig.footer;
 const SupportUs = () => {
   const { data } = useCopyData();
 
-  const { footer: footerData } = data.shared;
+  const { footer: footerData } = { ...combinedConstant.shared, ...data.shared };
 
   return (
     <Fragment>
