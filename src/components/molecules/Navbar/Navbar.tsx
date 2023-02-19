@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { Box, Flex, Link, useBoolean, useOutsideClick } from "@chakra-ui/react";
 import { navLinks, sideLinks } from "./constants";
 import NextLink from "next/link";
@@ -18,6 +18,18 @@ const Navbar = (props: NavbarProps) => {
 
   const [showNestedLinks, setShowNestedLinks] = useBoolean();
   const [currentLink, setCurrentLink] = useState(0);
+
+  const links = useMemo(() => {
+    if (prefix !== "/admin") return navLinks;
+    return [
+      {
+        name: "HOME",
+        to: "/home",
+        NestedLinks: [],
+      },
+      ...navLinks,
+    ];
+  }, [prefix]);
 
   return (
     <Box
@@ -40,7 +52,7 @@ const Navbar = (props: NavbarProps) => {
       }}
     >
       <Flex alignItems="center">
-        {navLinks.map((navLink, index) => {
+        {links.map((navLink, index) => {
           return (
             <Flex
               key={index}

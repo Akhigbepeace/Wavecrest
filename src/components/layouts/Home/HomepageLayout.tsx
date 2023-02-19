@@ -11,7 +11,10 @@ import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import Announcements from "./Announcements/Announcements";
 import StudyProgrammes from "./StudyProgram/StudyProgrammes";
 import { useCopyData } from "contexts/EditableCopyContext";
-import { combinedConfig } from "config/constants/editable-copy/combined";
+import {
+  combinedConfig,
+  combinedConstant,
+} from "config/constants/editable-copy/combined";
 import DiscoverHospitality from "./DiscoverHospitality";
 
 type HomepageLayoutProps = {
@@ -27,7 +30,11 @@ const HomepageLayout = (props: HomepageLayoutProps) => {
     statistics: statsData,
     discoverHospitality,
     announcements,
-  } = data.home;
+  } = { ...combinedConstant.home, ...data.home };
+
+  console.log("data.home--->", data.home);
+
+  console.log("showCase===>", showCaseData);
 
   const {
     showCase: showCaseConfig,

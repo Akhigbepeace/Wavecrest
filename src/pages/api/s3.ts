@@ -10,6 +10,7 @@ const secretAccessKey = process.env.AWS_SECRET_ID || "";
 export const FILE_COPY_NAME_ON_S3 = process.env.FILE_COPY_NAME_ON_S3;
 
 export const environment = process.env.ENV || "staging";
+console.log("environment==>", environment);
 
 const s3 = new S3({
   region,
@@ -38,16 +39,19 @@ export const uploadToS3 = async (currentUIData: object) => {
 export async function getAppConfigFromS3() {
   console.log("Retrieving website copy from S3...");
 
-  const response = await s3
-    .getObject({
-      Key: `${environment}/${FILE_COPY_NAME_ON_S3}`,
-      ResponseContentType: "application/json",
-      ResponseContentEncoding: "base64",
-      Bucket: bucketName,
-    })
-    .promise();
-
-  return JSON.parse(response.Body?.toString() || "{}");
+  try {
+    const response = await s3
+      .getObject({
+        Key: `${environment}/${FILE_COPY_NAME_ON_S3}`,
+        ResponseContentType: "application/json",
+        ResponseContentEncoding: "base64",
+        Bucket: bucketName,
+      })
+      .promise();
+    return JSON.parse(response.Body?.toString() || "{}");
+  } catch (error) {
+    return {};
+  }
 }
 
 export async function generateUploadURL(imagename: string) {

@@ -9,7 +9,10 @@ import MobileRedirect from "components/molecules/MobileRedirect";
 import SectionTitle from "./SectionTitle";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
 import Editable from "components/organisms/Editable/Editable";
-import { combinedConfig } from "config/constants/editable-copy/combined";
+import {
+  combinedConfig,
+  combinedConstant,
+} from "config/constants/editable-copy/combined";
 import { useCopyData } from "contexts/EditableCopyContext";
 
 const Profile = () => {
@@ -26,7 +29,10 @@ const Profile = () => {
 
   const { data } = useCopyData();
 
-  const { ourStory, philosophy } = data.aboutProfile;
+  const { ourStory, philosophy } = {
+    ...combinedConstant.aboutProfile,
+    ...data.aboutProfile,
+  };
 
   const { aboutConfig } = combinedConfig;
   return (
