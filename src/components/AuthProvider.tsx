@@ -74,6 +74,6 @@ export function AuthProvider({ children }: { children: any }) {
     getRedirect,
     clearRedirect,
   };
-
+  // @ts-ignore
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
