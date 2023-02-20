@@ -16,7 +16,8 @@ type ContextValues = {
   error: boolean;
   mutate?: (
     parentKey: keyof ConstantType,
-    newData: ConstantType[keyof ConstantType]
+    newData: ConstantType[keyof ConstantType],
+    imagesChanged?: string[]
   ) => void;
 };
 
@@ -61,7 +62,8 @@ export const EditableCopyProvider = (props: AppDataProviderProps) => {
   const mutate = useCallback(
     async (
       parentKey: keyof ConstantType,
-      newData: ConstantType[keyof ConstantType]
+      newData: ConstantType[keyof ConstantType],
+      imagesChanged: string[] = []
     ) => {
       const newUIData = {
         ...uiData,
@@ -77,6 +79,7 @@ export const EditableCopyProvider = (props: AppDataProviderProps) => {
         body: JSON.stringify({
           parentKey,
           newData,
+          imagesChanged,
         }),
       });
     },

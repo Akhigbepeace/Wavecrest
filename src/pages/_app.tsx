@@ -1,5 +1,5 @@
-import Head from "next/head";
 import dynamic from "next/dynamic";
+import Seo from "../components/atoms/Seo";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,7 +10,7 @@ const PopupModal = dynamic(() => import("../components/PopupModal"), {
   ssr: false,
 });
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: any) {
   const colors = {
     brand: {
       900: "#1a365d",
@@ -34,18 +34,9 @@ export default function MyApp({ Component, pageProps }) {
 
   const theme = extendTheme({ colors, fonts, breakpoints });
 
-
   return (
     <>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta
-          name="description"
-          content="Web site created using create-react-app"
-        />
-      </Head>
+      <Seo {...pageProps.seo} />
 
       <ChakraProvider theme={theme}>
         <EditableCopyProvider>

@@ -28,6 +28,7 @@ const Editable = (props: EditableProps) => {
   const [editable, setEditable] = useState(false);
 
   const [images, setImages] = useState<Record<string, string>>({});
+  const [iamgesChanged, setImagesChanged] = useState<string[]>([]);
   const [uploadingImages, setUploadingImages] = useState<string[]>([]);
   useEffect(() => {
     if (router.pathname) {
@@ -71,8 +72,9 @@ const Editable = (props: EditableProps) => {
       [config.name as any]: newDataValues,
     } as any;
 
-    mutate?.(page, finalData);
+    mutate?.(page, finalData, iamgesChanged);
 
+    setImagesChanged([]);
     setImages({});
   };
 
@@ -96,7 +98,13 @@ const Editable = (props: EditableProps) => {
         const newUploadingImages = [...uploadingImages, name];
         setUploadingImages(newUploadingImages);
 
-        const response = await fetch(`/api/upload-image-url?filename=${name}`);
+        const namesSplit = imgFile.name.split(".");
+        const extension = namesSplit[namesSplit.length - 1];
+        const filename = `${page}-${name}`;
+        const response = await fetch(
+          `/api/upload-image-url?filename=${filename}&extension=${extension}`
+        );
+
         const { url } = await response.json();
 
         await fetch(url, {
@@ -111,14 +119,15 @@ const Editable = (props: EditableProps) => {
         const uniqueImages = new Set(newUploadingImages);
         uniqueImages.delete(name);
         setUploadingImages(Array.from(uniqueImages));
-
-        setImages({
+        setImagesChanged((iamgesChanged) => [...iamgesChanged, filename]);
+        const targetName = e.target.name;
+        setImages((images) => ({
           ...images,
-          [e.target.name]: imageURL,
-        });
+          [targetName]: imageURL,
+        }));
       }
     },
-    [images, uploadingImages]
+    [page, uploadingImages]
   );
 
   if (!editable) return <>{children}</>;
