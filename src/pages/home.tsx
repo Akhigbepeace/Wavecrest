@@ -1,13 +1,19 @@
 import HomepageLayout from "components/layouts/Home/HomepageLayout";
-import Head from "next/head";
+
+export const getServerSideProps = () => {
+  return {
+    props: {
+      seo: {
+        page: "HOME",
+      
+      },
+    },
+  };
+};
 
 const HomePage = () => {
   return (
     <>
-      <Head>
-        <title>WAVECREST COLLEGE OF HOSPITALITY</title>
-      </Head>
-
       <HomepageLayout />
     </>
   );

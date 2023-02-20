@@ -19,6 +19,11 @@ module.exports = {
         destination: "/home",
         permanent: false,
       },
+      {
+        source: "/about",
+        destination: "/about/profile",
+        permanent: false,
+      },
     ];
 
     if (!SHOW_EDIT_PAGES) {

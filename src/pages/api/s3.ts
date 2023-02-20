@@ -1,7 +1,6 @@
 import fs from "fs";
 import S3 from "aws-sdk/clients/s3";
 import { combinedConstant } from "config/constants/editable-copy/combined";
-import crypto from "crypto";
 
 const bucketName = process.env.AWS_BUCKET_NAME || "";
 const region = process.env.AWS_REGION_NAME || "";
@@ -9,8 +8,7 @@ const accessKeyId = process.env.AWS_ACCESS_ID || "";
 const secretAccessKey = process.env.AWS_SECRET_ID || "";
 export const FILE_COPY_NAME_ON_S3 = process.env.FILE_COPY_NAME_ON_S3;
 
-export const environment = process.env.ENV || "staging";
-console.log("environment==>", environment);
+export const environment = process.env.NEXT_PUBLIC_ENVIRONMENT || "staging";
 
 const s3 = new S3({
   region,
@@ -54,8 +52,8 @@ export async function getAppConfigFromS3() {
   }
 }
 
-export async function generateUploadURL(imagename: string) {
-  const filename = imagename + crypto.randomBytes(16).toString("hex");
+export async function generateUploadURL(imagename: string, extension: string) {
+  const filename = imagename + "-" + Date.now() + extension;
   const params = {
     Bucket: bucketName,
     Key: `${environment}/images/${filename}`,
