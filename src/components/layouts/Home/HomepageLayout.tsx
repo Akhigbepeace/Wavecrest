@@ -32,10 +32,6 @@ const HomepageLayout = (props: HomepageLayoutProps) => {
     announcements,
   } = { ...combinedConstant.home, ...data.home };
 
-  console.log("data.home--->", data.home);
-
-  console.log("showCase===>", showCaseData);
-
   const {
     showCase: showCaseConfig,
     statistics: statsConfig,
