@@ -1,15 +1,14 @@
 import React from "react";
 import NextLink from "next/link";
-import { Image } from "@chakra-ui/react";
+
+import PeaceImage from "./PeaceImage";
 
 const src = "/assets/imgs/WC-LOGO-july.png";
 
 const Logo = () => {
   return (
-    <NextLink href="/">
-      <Image
-        src={src}
-        alt="logo"
+    <NextLink href="/home">
+      <PeaceImage
         w={{
           sm: "143px",
           md: "143px",
@@ -24,6 +23,9 @@ const Logo = () => {
           xl: "52px",
           "2xl": "52px",
         }}
+        src={src}
+        alt="logo"
+        objectFit="contain"
       />
     </NextLink>
   );

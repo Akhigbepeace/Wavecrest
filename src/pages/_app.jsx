@@ -4,6 +4,7 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../App.css";
+import { EditableCopyProvider } from "contexts/EditableCopyContext";
 
 const PopupModal = dynamic(() => import("../components/PopupModal"), {
   ssr: false,
@@ -33,6 +34,7 @@ export default function MyApp({ Component, pageProps }) {
 
   const theme = extendTheme({ colors, fonts, breakpoints });
 
+
   return (
     <>
       <Head>
@@ -46,8 +48,10 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
 
       <ChakraProvider theme={theme}>
-        <PopupModal />
-        <Component {...pageProps} />
+        <EditableCopyProvider>
+          <PopupModal />
+          <Component {...pageProps} />
+        </EditableCopyProvider>
       </ChakraProvider>
     </>
   );

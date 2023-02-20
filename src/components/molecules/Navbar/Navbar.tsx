@@ -1,10 +1,14 @@
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { Box, Flex, Link, useBoolean, useOutsideClick } from "@chakra-ui/react";
 import { navLinks, sideLinks } from "./constants";
 import NextLink from "next/link";
 import SideLink from "./SideLink";
 
-const Navbar = () => {
+type NavbarProps = {
+  hrefPrefix?: string;
+};
+const Navbar = (props: NavbarProps) => {
+  const prefix = props.hrefPrefix || "";
   const ref = useRef<any>();
 
   useOutsideClick({
@@ -14,6 +18,18 @@ const Navbar = () => {
 
   const [showNestedLinks, setShowNestedLinks] = useBoolean();
   const [currentLink, setCurrentLink] = useState(0);
+
+  const links = useMemo(() => {
+    if (prefix !== "/admin") return navLinks;
+    return [
+      {
+        name: "HOME",
+        to: "/home",
+        NestedLinks: [],
+      },
+      ...navLinks,
+    ];
+  }, [prefix]);
 
   return (
     <Box
@@ -36,7 +52,7 @@ const Navbar = () => {
       }}
     >
       <Flex alignItems="center">
-        {navLinks.map((navLink, index) => {
+        {links.map((navLink, index) => {
           return (
             <Flex
               key={index}
@@ -53,7 +69,7 @@ const Navbar = () => {
                   : "transparent"
               }
             >
-              <NextLink href={navLink.to} passHref legacyBehavior>
+              <NextLink href={prefix + navLink.to} passHref legacyBehavior>
                 <Link
                   onMouseEnter={() => {
                     setCurrentLink(index);
@@ -88,7 +104,7 @@ const Navbar = () => {
                   return (
                     <NextLink
                       key={index}
-                      href={nestedLink.to}
+                      href={prefix + nestedLink.to}
                       passHref
                       legacyBehavior
                     >

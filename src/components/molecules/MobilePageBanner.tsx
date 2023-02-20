@@ -1,4 +1,5 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
+import PeaceImage from "components/atoms/PeaceImage";
 import React from "react";
 
 type MobilePageBannerProps = {
@@ -22,7 +23,13 @@ const MobilePageBanner = (props: MobilePageBannerProps) => {
         "2xl": "none",
       }}
     >
-      <Image src={imageURL} alt="banner" h="100%" w="100%" objectFit="cover" />
+      <PeaceImage
+        src={imageURL}
+        alt="banner"
+        h="100%"
+        w="100%"
+        objectFit="cover"
+      />
 
       <Box
         bg="rgba(0, 24, 71, 0.5)"

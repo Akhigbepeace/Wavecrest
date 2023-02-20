@@ -1,4 +1,4 @@
-import HomepageLayout from "components/layouts/HomepageLayout";
+import HomepageLayout from "components/layouts/Home/HomepageLayout";
 import Head from "next/head";
 
 const AdminHomePage = () => {
@@ -8,7 +8,7 @@ const AdminHomePage = () => {
         <title>WAVECREST COLLEGE OF HOSPITALITY</title>
       </Head>
 
-      <HomepageLayout />
+      <HomepageLayout isAdmin />
     </>
   );
 };
