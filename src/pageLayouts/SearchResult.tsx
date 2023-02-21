@@ -10,9 +10,8 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import Navbar from "components/Navbar";
-import Footer from "../components/Footer";
-import FooterCopywright from "../components/FooterCopywright";
+import Navbar from "components/molecules/Navbar/Navbar";
+import Footer from "components/organisms/Footer/Footer";
 import { useRouter } from "next/router";
 
 const about = "/assets/imgs/About.png";
@@ -66,7 +65,6 @@ const SearchResult = () => {
   return (
     <Box>
       <Navbar />
-
       <Box h="200px" w="100%" gridGap="68px" position="relative">
         <Image
           src={about}
@@ -108,7 +106,6 @@ const SearchResult = () => {
           </Box>
         </Flex>
       </Box>
-
       <Box w="1200px" m="0 auto" px="91px">
         <Box>
           <Flex alignItems="center" w="49%" my="40px">
@@ -188,8 +185,14 @@ const SearchResult = () => {
         </Flex>
       </Box>
 
-      <Footer />
-      <FooterCopywright />
+      <Footer
+        address={
+          "75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos, Nigeria."
+        }
+        phone1={"+234 909 685 6606"}
+        phone2={"+234 808 396 4840"}
+        email={"info@wavecrest.edu.ng"}
+      />
     </Box>
   );
 };

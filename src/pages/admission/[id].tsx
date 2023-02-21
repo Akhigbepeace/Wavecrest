@@ -1,18 +1,18 @@
 import React from "react";
-
-import Head from "next/head";
 import Admission from "components/layouts/Admission";
 
-const AdmissionPage = () => {
-  return (
-    <>
-      <Head>
-        <title>WAVECREST COLLEGE OF HOSPITALITY | Admission</title>
-      </Head>
+export const getServerSideProps = () => {
+  return {
+    props: {
+      seo: {
+        page: "ADMISSION",
+      }
+    }
+  }
+}
 
-      <Admission />
-    </>
-  );
+const AdmissionPage = () => {
+  return <Admission />;
 };
 
 export default AdmissionPage;

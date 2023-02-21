@@ -1,13 +1,15 @@
 import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { FaChevronLeft } from "react-icons/fa";
-import Navbar from "components/Navbar";
+import Navbar from "components/molecules/Navbar/Navbar";
+import Header from "components/molecules/Header/Header";
 import { BLOGS, CATEGORIES, POST_MAP } from "data/blog";
-import Footer from "../components/Footer";
-import FooterCopywright from "../components/FooterCopywright";
+import Footer from "components/organisms/Footer/Footer";
 import MobileSideBar from "components/molecules/Header/MobileSideBar";
 import Router, { useRouter } from "next/router";
 import BlogSideBar from "components/molecules/BlogSideBar";
+import MobilePageBanner from "components/molecules/MobilePageBanner";
+import PagesBanner from "components/molecules/PagesBanner";
 
 const BlogPost = () => {
   const blogs = BLOGS;
@@ -35,57 +37,14 @@ const BlogPost = () => {
   };
 
   return (
-    <Fragment>
+    <>
+      <Header />
       <Navbar />
+
       <MobileSideBar />
 
-      <Box h="441px" w="100%" position="relative">
-        <Image
-          alt="blogImage"
-          src={image2}
-          h="100%"
-          w="100%"
-          objectFit="cover"
-        />
-
-        <Flex
-          bg="rgba(0, 24, 71, 0.5)"
-          w="100%"
-          h="100%"
-          position="absolute"
-          bottom="0"
-          p={{
-            sm: "20px",
-            md: "20px 40px",
-            lg: "30px 91px",
-            xl: "20px 91px",
-            "2xl": "20px 91px",
-          }}
-        >
-          <Text
-            color="white"
-            fontFamily="Playfair Display, serif"
-            fontWeight="700"
-            fontSize={{
-              sm: "25px",
-              md: "25px",
-              lg: "30px",
-              xl: "30px",
-              "2xl": "30px",
-            }}
-            lineHeight={{
-              sm: "35px",
-              md: "35px",
-              lg: "35px",
-              xl: "35px",
-              "2xl": "40px",
-            }}
-            alignSelf="flex-end"
-          >
-            {post.postHeading}
-          </Text>
-        </Flex>
-      </Box>
+      <MobilePageBanner imageURL={image2} title={post.postHeading} />
+      <PagesBanner imageURL={image2} pageName={post.postHeading} />
 
       <Flex
         w="100%"
@@ -160,9 +119,15 @@ const BlogPost = () => {
         />
       </Flex>
 
-      <Footer />
-      <FooterCopywright />
-    </Fragment>
+      <Footer
+        address={
+          "75 Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos, Nigeria."
+        }
+        phone1={"+234 909 685 6606"}
+        phone2={"+234 808 396 4840"}
+        email={"info@wavecrest.edu.ng"}
+      />
+    </>
   );
 };
 

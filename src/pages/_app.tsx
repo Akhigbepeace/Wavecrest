@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../App.css";
 import { EditableCopyProvider } from "contexts/EditableCopyContext";
 
-const PopupModal = dynamic(() => import("../components/PopupModal"), {
+const PopupModal = dynamic(() => import("components/PopupModal"), {
   ssr: false,
 });
 

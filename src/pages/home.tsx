@@ -5,18 +5,13 @@ export const getServerSideProps = () => {
     props: {
       seo: {
         page: "HOME",
-      
       },
     },
   };
 };
 
 const HomePage = () => {
-  return (
-    <>
-      <HomepageLayout />
-    </>
-  );
+  return <HomepageLayout />;
 };
 
 export default HomePage;
