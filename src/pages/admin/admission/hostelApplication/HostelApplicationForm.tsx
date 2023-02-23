@@ -1,6 +1,6 @@
 import { Button, Flex, Input, Select, useToast } from "@chakra-ui/react";
 import React, { SyntheticEvent, useRef, useState } from "react";
-import { formsField, hostelTypes } from "../../../data/data";
+import { formsField, hostelTypes } from "data/data";
 
 import emailjs from "emailjs-com";
 
