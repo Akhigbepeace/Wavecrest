@@ -9,9 +9,9 @@ import {
   Link,
   Text,
 } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
 import React, { Fragment } from "react";
 
+import NextLink from "next/link";
 const ForgotPasswordLayout = () => {
   const Logo = "assets/WC-LOGO-july.png";
   const loginForms = [
@@ -119,18 +119,19 @@ const ForgotPasswordLayout = () => {
           >
             Back To
           </Text>
-          <Link
-            as={NavLink}
-            to="/admin"
-            textDecoration="underline"
-            transition="all ease 0.8s"
-            _hover={{
-              color: "#020E1B",
-              textDecoration: "none",
-            }}
-          >
-            Login
-          </Link>
+
+          <NextLink href="/admin" passHref>
+            <Link
+              textDecoration="underline"
+              transition="all ease 0.8s"
+              _hover={{
+                color: "#020E1B",
+                textDecoration: "none",
+              }}
+            >
+              Login
+            </Link>
+          </NextLink>
         </Flex>
       </Box>
     </Box>

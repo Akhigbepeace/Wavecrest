@@ -1,39 +1,40 @@
-import { Box, Button, Flex, Image, Input, Link, Text } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
+import NextLink from "next/link";
+import { Box, Button, Flex, Input, Link, Text } from "@chakra-ui/react";
 import React, { Fragment } from "react";
+import Logo from "components/atoms/Logo";
 
+const loginForms = [
+  {
+    label: "Username",
+    for: "name",
+    variant: "filled",
+    placeholder: "Username",
+    type: "name",
+  },
+  {
+    label: "Email Address",
+    for: "email",
+    variant: "filled",
+    placeholder: "Email",
+    type: "email",
+  },
+  {
+    label: "Password",
+    for: "password",
+    variant: "filled",
+    placeholder: "Password",
+    type: "password",
+  },
+  {
+    label: "Confirm Password",
+    for: "password2",
+    variant: "filled",
+    placeholder: "Password",
+    type: "password",
+  },
+];
 const SignUpLayout = () => {
-  const Logo = "assets/WC-LOGO-july.png";
-  const loginForms = [
-    {
-      label: "Username",
-      for: "name",
-      variant: "filled",
-      placeholder: "Username",
-      type: "name",
-    },
-    {
-      label: "Email Address",
-      for: "email",
-      variant: "filled",
-      placeholder: "Email",
-      type: "email",
-    },
-    {
-      label: "Password",
-      for: "password",
-      variant: "filled",
-      placeholder: "Password",
-      type: "password",
-    },
-    {
-      label: "Confirm Password",
-      for: "password2",
-      variant: "filled",
-      placeholder: "Password",
-      type: "password",
-    },
-  ];
+  // const Logo = "/assets/imgs/WC-LOGO-july.png";
 
   return (
     <Box>
@@ -64,8 +65,8 @@ const SignUpLayout = () => {
         zIndex="3"
         boxShadow="1px 1px 10px 1px rgba(0,0,0,0.2)"
       >
-        <Box w="60px" mb="30px" mx="auto">
-          <Image src={Logo} alt="logo" />
+        <Box display="grid" placeItems="center" mb="30px">
+          <Logo />
         </Box>
 
         <form action="">
@@ -128,18 +129,19 @@ const SignUpLayout = () => {
           >
             Already have an account ?
           </Text>
-          <Link
-            as={NavLink}
-            to="/admin"
-            textDecoration="underline"
-            transition="all ease 0.8s"
-            _hover={{
-              color: "#020E1B",
-              textDecoration: "none",
-            }}
-          >
-            Login
-          </Link>
+
+          <NextLink href="/admin" passHref>
+            <Link
+              textDecoration="underline"
+              transition="all ease 0.8s"
+              _hover={{
+                color: "#020E1B",
+                textDecoration: "none",
+              }}
+            >
+              Login
+            </Link>
+          </NextLink>
         </Flex>
       </Box>
     </Box>

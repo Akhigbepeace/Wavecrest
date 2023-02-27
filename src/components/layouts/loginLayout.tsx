@@ -1,21 +1,15 @@
 import {
   Box,
   Button,
-  Checkbox,
-  Flex,
-  Image,
   Input,
-  Link,
-  Text,
   FormControl,
   FormErrorMessage,
   InputGroup,
   InputRightElement,
 } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
+import Logo from "components/atoms/Logo";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
 type InputValues = {
   email: string;
   password: string;
@@ -23,7 +17,6 @@ type InputValues = {
 };
 
 const LoginLayout = () => {
-  const Logo = "assets/WC-LOGO-july.png";
   const initialValues: InputValues = {
     name: "",
     email: "",
@@ -41,13 +34,12 @@ const LoginLayout = () => {
       [e.target.name]: e.target.value,
     });
 
+  const router = useRouter();
   const isError = input.password === "";
-
-  const navigate = useNavigate();
 
   const redirectToHome = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    navigate("/admin/dashboard", { replace: true });
+    router.push("/admin/dashboard");
   };
 
   return (
@@ -78,8 +70,8 @@ const LoginLayout = () => {
         zIndex="3"
         boxShadow="1px 1px 10px 1px rgba(0,0,0,0.2)"
       >
-        <Box w="60px" mb="30px" mx="auto">
-          <Image src={Logo} alt="logo" />
+        <Box display="grid" placeItems="center" mb="30px">
+          <Logo />
         </Box>
 
         <form>
@@ -134,31 +126,6 @@ const LoginLayout = () => {
           </FormControl>
         </form>
 
-        <Flex justifyContent="space-between" mt="10px">
-          <Checkbox
-            color="#021D37"
-            fontFamily="Manrope"
-            fontSize="16px"
-            fontWeight="500"
-          >
-            Remember Me
-          </Checkbox>
-
-          <Link
-            to="/forgotPassword"
-            as={NavLink}
-            color="#021D37"
-            fontFamily="Manrope"
-            fontSize="15px"
-            fontWeight="500"
-            _hover={{
-              textDecoration: "none",
-            }}
-          >
-            Forgot Password
-          </Link>
-        </Flex>
-
         <Button
           type="submit"
           w="100px"
@@ -177,21 +144,6 @@ const LoginLayout = () => {
         >
           LOGIN
         </Button>
-
-        <Flex mt="40px">
-          <Text
-            fontFamily="Manrope"
-            fontSize="16px"
-            fontWeight="400"
-            color="#021D37"
-            mr="10px"
-          >
-            Don&apos;t have an account ?
-          </Text>
-          <Link as={NavLink} to="/signup" textDecoration="underline">
-            Sign Up
-          </Link>
-        </Flex>
       </Box>
     </Box>
   );
