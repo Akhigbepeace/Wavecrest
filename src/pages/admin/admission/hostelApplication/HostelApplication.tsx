@@ -94,4 +94,6 @@ const HostelApplication = () => {
   );
 };
 
+HostelApplication.requireAuth = true;
+
 export default HostelApplication;

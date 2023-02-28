@@ -5,4 +5,6 @@ const BlogPostPage = () => {
   return <BlogPost />;
 };
 
+BlogPostPage.requireAuth = true;
+
 export default BlogPostPage;

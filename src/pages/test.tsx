@@ -6,5 +6,3 @@ export default function Protected() {
     </div>
   );
 }
-
-Protected.requireAuth = true;

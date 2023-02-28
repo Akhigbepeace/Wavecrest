@@ -1,34 +1,25 @@
 // AuthGuard.tsx
-import { useAuth } from "components/AuthProvider";
+import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 
 export function AuthGuard({ children }: { children: any }) {
-  const { user, initializing, setRedirect } = useAuth();
   const router = useRouter();
 
-  useEffect(() => {
-    if (!initializing) {
-      //auth is initialized and there is no user
-      if (!user) {
-        // remember the page that user tried to access
-        setRedirect(router.route);
-        // redirect
-        router.push("/signin");
-      }
-    }
-  }, [initializing, router, user, setRedirect]);
+  const { status } = useSession();
 
-  /* show loading indicator while the auth provider is still initializing */
-  if (initializing) {
+  if (status === "loading" || !router.isReady || !router.pathname)
     return <h1>Application Loading</h1>;
-  }
 
-  // if auth initialized with a valid user show protected page
-  if (!initializing && user) {
+  if (router.isReady && !router.pathname.startsWith("/admin"))
+    return <>{children}</>;
+
+  if (status === "authenticated") {
     return <>{children}</>;
   }
 
-  /* otherwise don't return anything, will do a redirect from useEffect */
-  return null;
+  if (status === "unauthenticated") {
+    router.push("/admin/login/");
+  }
+
+  return <div></div>;
 }

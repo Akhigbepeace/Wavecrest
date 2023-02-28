@@ -1,4 +1,6 @@
 import dynamic from "next/dynamic";
+import { SessionProvider } from "next-auth/react";
+
 import Seo from "../components/atoms/Seo";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "slick-carousel/slick/slick.css";
@@ -12,7 +14,7 @@ const PopupModal = dynamic(() => import("components/PopupModal"), {
   ssr: false,
 });
 
-export default function MyApp({ Component, pageProps }: any) {
+export default function MyApp({ session, Component, pageProps }: any) {
   const colors = {
     brand: {
       900: "#1a365d",
@@ -41,20 +43,22 @@ export default function MyApp({ Component, pageProps }: any) {
       <Seo {...pageProps.seo} />
 
       <ChakraProvider theme={theme}>
-        <AuthProvider>
-          <EditableCopyProvider>
-            <PopupModal />
-            {/* if requireAuth property is present - protect the page */}
-            {Component.requireAuth ? (
-              <AuthGuard>
+        <SessionProvider session={session}>
+          <AuthProvider>
+            <EditableCopyProvider>
+              <PopupModal />
+              {/* if requireAuth property is present - protect the page */}
+              {Component.requireAuth ? (
+                <AuthGuard>
+                  <Component {...pageProps} />
+                </AuthGuard>
+              ) : (
+                // public page
                 <Component {...pageProps} />
-              </AuthGuard>
-            ) : (
-              // public page
-              <Component {...pageProps} />
-            )}
-          </EditableCopyProvider>
-        </AuthProvider>
+              )}
+            </EditableCopyProvider>
+          </AuthProvider>
+        </SessionProvider>
       </ChakraProvider>
     </>
   );

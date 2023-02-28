@@ -3,44 +3,24 @@ import {
   Button,
   Input,
   FormControl,
-  FormErrorMessage,
   InputGroup,
   InputRightElement,
 } from "@chakra-ui/react";
 import Logo from "components/atoms/Logo";
-import { useRouter } from "next/router";
-import React, { useState } from "react";
-type InputValues = {
-  email: string;
-  password: string;
-  name: string;
+
+import React, { FormEvent, SyntheticEvent, useState } from "react";
+
+type LoginLayoutProps = {
+  onSubmit: (e: FormEvent<HTMLFormElement>) => void;
+  onChange: (e: SyntheticEvent<HTMLInputElement>) => void;
+  error: string;
 };
+const LoginLayout = (props: LoginLayoutProps) => {
+  const { onSubmit, onChange, error } = props;
 
-const LoginLayout = () => {
-  const initialValues: InputValues = {
-    name: "",
-    email: "",
-    password: "",
-  };
-
-  const [input, setInput] = useState(initialValues);
   const [show, setShow] = useState(false);
 
   const handleClick = () => setShow(!show);
-
-  const handleInputChange = (e: any) =>
-    setInput({
-      ...input,
-      [e.target.name]: e.target.value,
-    });
-
-  const router = useRouter();
-  const isError = input.password === "";
-
-  const redirectToHome = (e: React.FormEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    router.push("/admin/dashboard");
-  };
 
   return (
     <Box>
@@ -74,14 +54,16 @@ const LoginLayout = () => {
           <Logo />
         </Box>
 
-        <form>
+        <form onSubmit={onSubmit}>
           <FormControl>
             <Input
               type="email"
               name="email"
               variant="filled"
               placeholder="Email"
-              onChange={handleInputChange}
+              required
+              aria-required
+              onChange={onChange}
               mb="10px"
               py="25px"
               bg="#EBEDEF"
@@ -98,24 +80,24 @@ const LoginLayout = () => {
                 type={show ? "text" : "password"}
                 name="password"
                 variant="filled"
+                aria-required
                 placeholder="Password"
-                onChange={handleInputChange}
                 mb="10px"
                 py="25px"
+                onChange={onChange}
+                required
                 bg="#EBEDEF"
                 _placeholder={{
                   fontFamily: "Manrope",
                 }}
               />
-              {isError && (
-                <FormErrorMessage>Password is required.</FormErrorMessage>
-              )}
 
               <InputRightElement width="90px">
                 <Button
                   h="30px"
                   mt="13px"
                   size="sm"
+                  type="button"
                   bg="#DDD"
                   onClick={handleClick}
                 >
@@ -124,26 +106,27 @@ const LoginLayout = () => {
               </InputRightElement>
             </InputGroup>
           </FormControl>
-        </form>
 
-        <Button
-          type="submit"
-          w="100px"
-          mt="30px"
-          bg="#021D37"
-          color="white"
-          fontFamily="Manrope"
-          fontWeight="700"
-          fontSize="16px"
-          onClick={(e) => redirectToHome(e)}
-          textAlign="center"
-          borderRadius="5px"
-          _hover={{
-            bg: "#020E1B",
-          }}
-        >
-          LOGIN
-        </Button>
+          {error && <Box color="red">{error}</Box>}
+
+          <Button
+            type="submit"
+            w="100px"
+            mt="30px"
+            bg="#021D37"
+            color="white"
+            fontFamily="Manrope"
+            fontWeight="700"
+            fontSize="16px"
+            textAlign="center"
+            borderRadius="5px"
+            _hover={{
+              bg: "#020E1B",
+            }}
+          >
+            LOGIN
+          </Button>
+        </form>
       </Box>
     </Box>
   );

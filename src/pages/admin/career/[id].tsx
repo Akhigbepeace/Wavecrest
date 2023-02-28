@@ -15,4 +15,6 @@ const CareerPage = () => {
   return <Career />;
 };
 
+CareerPage.requireAuth = true;
+
 export default CareerPage;

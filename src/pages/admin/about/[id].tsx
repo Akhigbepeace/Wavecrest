@@ -9,9 +9,11 @@ const AboutPage = () => {
         <title>WAVECREST COLLEGE OF HOSPITALITY | About</title>
       </Head>
 
-      <About isAdmin />
+      <About />
     </>
   );
 };
+
+AboutPage.requireAuth = true;
 
 export default AboutPage;

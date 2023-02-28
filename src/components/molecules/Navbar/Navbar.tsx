@@ -3,12 +3,9 @@ import { Box, Flex, Link, useBoolean, useOutsideClick } from "@chakra-ui/react";
 import { navLinks, sideLinks } from "./constants";
 import NextLink from "next/link";
 import SideLink from "./SideLink";
+import { useRouter } from "next/router";
 
-type NavbarProps = {
-  hrefPrefix?: string;
-};
-const Navbar = (props: NavbarProps) => {
-  const prefix = props.hrefPrefix || "";
+const Navbar = () => {
   const ref = useRef<any>();
 
   useOutsideClick({
@@ -18,10 +15,12 @@ const Navbar = (props: NavbarProps) => {
 
   const [showNestedLinks, setShowNestedLinks] = useBoolean();
   const [currentLink, setCurrentLink] = useState(0);
+  const router = useRouter();
+  const prefix = router.pathname.startsWith("/admin") ? "/admin" : "";
 
-  const links = useMemo(() => {
-    if (prefix !== "/admin") return navLinks;
-    return [
+  const { links, btnLinks } = useMemo(() => {
+    if (prefix !== "/admin") return { links: navLinks, btnLinks: sideLinks };
+    const links = [
       {
         name: "HOME",
         to: "/home",
@@ -29,6 +28,16 @@ const Navbar = (props: NavbarProps) => {
       },
       ...navLinks,
     ];
+    const btnLinks = [
+      ...sideLinks,
+      {
+        name: "Log Out",
+        href: "/signout",
+        variant: "outlined" as const,
+      },
+    ];
+
+    return { links, btnLinks };
   }, [prefix]);
 
   return (
@@ -137,7 +146,7 @@ const Navbar = (props: NavbarProps) => {
       </Flex>
 
       <Flex pb="29px">
-        {sideLinks.map((sideLink, index) => (
+        {btnLinks.map((sideLink, index) => (
           <Box key={index} display="inline-block" w="133px" ml="27px">
             <SideLink variant={sideLink.variant} href={sideLink.href}>
               {sideLink.name}

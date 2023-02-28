@@ -8,7 +8,7 @@ const AdminHomePage = () => {
         <title>WAVECREST COLLEGE OF HOSPITALITY</title>
       </Head>
 
-      <HomepageLayout isAdmin />
+      <HomepageLayout />
     </>
   );
 };

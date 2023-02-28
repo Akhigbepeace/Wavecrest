@@ -4,4 +4,6 @@ const Support = () => {
   return <SupportUs />;
 };
 
+Support.requireAuth = true;
+
 export default Support;
