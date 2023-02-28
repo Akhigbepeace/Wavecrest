@@ -15,4 +15,6 @@ const BlogPage = () => {
   return <BlogpageLayout />;
 };
 
+BlogPage.requireAuth = true;
+
 export default BlogPage;

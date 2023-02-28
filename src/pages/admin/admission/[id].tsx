@@ -15,4 +15,7 @@ const AdmissionPage = () => {
   return <Admission />;
 };
 
+AdmissionPage.requireAuth = true;
+
+
 export default AdmissionPage;

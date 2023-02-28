@@ -146,4 +146,6 @@ const HostelApplicationForm = () => {
   );
 };
 
+HostelApplicationForm.requireAuth = true;
+
 export default HostelApplicationForm;

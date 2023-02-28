@@ -15,4 +15,6 @@ const AcademicsPage = () => {
   return <Academics />;
 };
 
+AcademicsPage.requireAuth = true;
+
 export default AcademicsPage;

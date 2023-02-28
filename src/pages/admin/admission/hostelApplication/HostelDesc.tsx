@@ -25,4 +25,6 @@ const HostelDesc = () => {
   );
 };
 
+HostelDesc.requireAuth = true;
+
 export default HostelDesc;

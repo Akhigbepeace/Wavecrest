@@ -5,4 +5,6 @@ const ViewVacanciesPage = () => {
   return <ViewVacancies />;
 };
 
+ViewVacanciesPage.requireAuth = true;
+
 export default ViewVacanciesPage;

@@ -14,20 +14,16 @@ import {
 import Editable from "components/organisms/Editable/Editable";
 import Banner from "./Banner";
 
-type ContactpageLayoutProps = {
-  isAdmin?: boolean;
-};
-const ContactpageLayout = (props: ContactpageLayoutProps) => {
+const ContactpageLayout = () => {
   const { data } = useCopyData();
   const contactData = { ...combinedConstant.contact, ...data.contact };
 
   const { contactConfig } = combinedConfig;
-  const prefix = props.isAdmin ? "/admin" : "";
 
   return (
     <div>
       <Header />
-      <Navbar hrefPrefix={prefix} />
+      <Navbar />
       <MobileSideBar />
       <Editable
         page="contact"

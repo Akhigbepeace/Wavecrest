@@ -16,6 +16,7 @@
     "js-file-downloader": "^1.1.24",
     "mongoose": "^6.9.0",
     "next": "^13.0.3",
+    "next-auth": "^4.19.2",
     "react": "^18.1.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.1.0",
