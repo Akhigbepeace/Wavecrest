@@ -8,10 +8,7 @@ import { MenuLink, menuLinks } from "./constants";
 import LinkTabs from "../../organisms/LinkTabs";
 import PagesBanner from "components/molecules/PagesBanner";
 
-type AboutProps = {
-  isAdmin?: boolean;
-};
-const About = (props: AboutProps) => {
+const About = () => {
   const router = useRouter();
   const { id } = router.query;
 
@@ -20,12 +17,12 @@ const About = (props: AboutProps) => {
     (link) => link.id === currentId
   ) as MenuLink;
 
-  const prefix = props.isAdmin ? "/admin" : "";
+  const prefix = router.pathname.startsWith("/admin") ? "/admin" : "";
 
   return (
     <Fragment>
       <Header />
-      <Navbar hrefPrefix={prefix} />
+      <Navbar />
 
       <Box>
         <PagesBanner

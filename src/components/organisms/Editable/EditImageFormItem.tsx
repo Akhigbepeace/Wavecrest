@@ -2,7 +2,7 @@ import React, { MutableRefObject, useRef } from "react";
 import { Image, Box, Button, Spinner } from "@chakra-ui/react";
 import { EditableInputProps } from "./types";
 
-const EditImageFormItem = (props: EditableInputProps) => {
+const  EditImageFormItem = (props: EditableInputProps) => {
   const { defaultValue: src, name, onImageChange, loading } = props;
   const fileRef = useRef<HTMLInputElement>();
   const chooseFile = () => {

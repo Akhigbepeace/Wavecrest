@@ -15,7 +15,7 @@ import {
   useToast,
   Box,
 } from "@chakra-ui/react";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, SyntheticEvent } from "react";
 import emailjs from "emailjs-com";
 
 const PopupModal = () => {
@@ -48,9 +48,9 @@ const PopupModal = () => {
     user_email: "",
   };
 
-  const [inputField, setInputField] = useState(initialValues);
+  const [inputField, setInputField] = useState(initialValues as any);
 
-  const inputValues = (e) => {
+  const inputValues = (e: any) => {
     setInputField({
       ...inputField,
       [e.target.name]: e.target.value,
@@ -59,13 +59,13 @@ const PopupModal = () => {
 
   const form = useRef();
 
-  const sendEmail = async (e) => {
+  const sendEmail = async (e: SyntheticEvent) => {
     e.preventDefault();
 
     const res = await emailjs.sendForm(
       "service_djq4ick",
       "template_krcopwh",
-      form.current,
+      "form#contact-form",
       "JPAG_ZJVlAcuO_5D-"
     );
     setInputField(initialValues);
@@ -97,7 +97,7 @@ const PopupModal = () => {
   const toast = useToast();
 
   const handleModalClose = () => {
-    localStorage.setItem("hasViewedModal", true);
+    localStorage.setItem("hasViewedModal", "true");
     onClose();
   };
 
@@ -131,7 +131,7 @@ const PopupModal = () => {
                 our College events by filling your details below
               </Text>
 
-              <form ref={form} onSubmit={sendEmail}>
+              <form id="contact-form" ref={form as any} onSubmit={sendEmail}>
                 <Stack>
                   {subscribeForm.map((field, index) => {
                     return (
@@ -139,7 +139,6 @@ const PopupModal = () => {
                         isRequired
                         key={index}
                         type={field.fieldType}
-                        variant={field.variant}
                         placeholder={field.placeHolder}
                         name={field.name}
                         value={inputField[field.name]}

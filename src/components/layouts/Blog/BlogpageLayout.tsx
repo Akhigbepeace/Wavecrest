@@ -57,7 +57,6 @@ const BlogpageLayout = () => {
         phone1={"+234 909 685 6606"}
         phone2={"+234 808 396 4840"}
         email={"info@wavecrest.edu.ng"}
-        copyright={"Wavecrest College 2022. All Rights Reserved"}
       />
     </>
   );

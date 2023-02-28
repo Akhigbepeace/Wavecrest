@@ -11,7 +11,7 @@ import {
 import React, { Fragment, useRef, SyntheticEvent, useState } from "react";
 import emailjs from "emailjs-com";
 import { FaChevronLeft } from "react-icons/fa";
-import Navbar from "components/Navbar";
+import Navbar from "components/molecules/Navbar/Navbar";
 import Footer from "components/organisms/Footer/Footer";
 import { useRouter } from "next/router";
 import MobilePageBanner from "components/molecules/MobilePageBanner";
@@ -417,7 +417,6 @@ const ViewVacancies = () => {
         phone1={"+234 909 685 6606"}
         phone2={"+234 808 396 4840"}
         email={"info@wavecrest.edu.ng"}
-        copyright={"Wavecrest College 2022. All Rights Reserved"}
       />
     </Box>
   );

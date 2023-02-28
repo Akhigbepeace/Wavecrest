@@ -1,10 +1,9 @@
 import { Box, Text } from "@chakra-ui/react";
 import React from "react";
 
-type Props = {
-  text: string;
-};
-const FooterCopywright = (props: Props) => {
+const FooterCopywright = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <Box>
       <Text
@@ -22,7 +21,7 @@ const FooterCopywright = (props: Props) => {
         textAlign="center"
         color="#FFFFFF"
       >
-        {props.text}
+        Wavecrest College {currentYear}. All Rights Reserved
       </Text>
     </Box>
   );

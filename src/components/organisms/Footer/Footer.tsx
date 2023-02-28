@@ -11,10 +11,9 @@ export type FooterProps = {
   phone1: string;
   phone2: string;
   email: string;
-  copyright: string;
 };
 const Footer = (props: FooterProps) => {
-  const { address, phone1, phone2, email, copyright } = props;
+  const { address, phone1, phone2, email } = props;
   return (
     <>
       <Grid
@@ -147,7 +146,7 @@ const Footer = (props: FooterProps) => {
         </Flex>
       </Grid>
 
-      <FooterCopywright text={copyright} />
+      <FooterCopywright />
     </>
   );
 };

@@ -1,17 +1,18 @@
 import Career from "components/layouts/Career";
-import Head from "next/head";
 import React from "react";
 
-const CareerPage = () => {
-  return (
-    <>
-      <Head>
-        <title>WAVECREST COLLEGE OF HOSPITALITY | Career</title>
-      </Head>
+export const getServerSideProps = () => {
+  return {
+    props: {
+      seo: {
+        page: "CAREER",
+      },
+    },
+  };
+};
 
-      <Career />
-    </>
-  );
+const CareerPage = () => {
+  return <Career />;
 };
 
 export default CareerPage;

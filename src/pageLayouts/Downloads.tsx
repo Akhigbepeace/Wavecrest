@@ -1,8 +1,7 @@
 import { Box, Heading, Text, Grid, Button } from "@chakra-ui/react";
 import React from "react";
 import JsFileDownloader from "js-file-downloader";
-import Footer from "../components/Footer";
-import FooterCopywright from "../components/FooterCopywright";
+import Footer from "components/organisms/Footer";
 import PagesBanner from "components/molecules/PagesBanner";
 import Navbar from "components/molecules/Navbar/Navbar";
 import Header from "components/molecules/Header/Header";
@@ -137,7 +136,6 @@ const Downloads = () => {
       </Box>
 
       <Footer />
-      <FooterCopywright />
     </Box>
   );
 };

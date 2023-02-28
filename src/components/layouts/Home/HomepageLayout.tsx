@@ -17,12 +17,8 @@ import {
 } from "config/constants/editable-copy/combined";
 import DiscoverHospitality from "./DiscoverHospitality";
 
-type HomepageLayoutProps = {
-  isAdmin?: boolean;
-};
-
 const { homeConfig } = combinedConfig;
-const HomepageLayout = (props: HomepageLayoutProps) => {
+const HomepageLayout = () => {
   const { data } = useCopyData();
 
   const {
@@ -32,22 +28,17 @@ const HomepageLayout = (props: HomepageLayoutProps) => {
     announcements,
   } = { ...combinedConstant.home, ...data.home };
 
-  console.log("data.home--->", data.home);
-
-  console.log("showCase===>", showCaseData);
-
   const {
     showCase: showCaseConfig,
     statistics: statsConfig,
     discoverHospitality: discoverConfig,
     announcements: announcementsConfig,
   } = homeConfig;
-  const prefix = props.isAdmin ? "/admin" : "";
 
   return (
     <>
       <Header />
-      <Navbar hrefPrefix={prefix} />
+      <Navbar />
 
       <MobileSideBar />
 

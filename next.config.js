@@ -19,6 +19,26 @@ module.exports = {
         destination: "/home",
         permanent: false,
       },
+      {
+        source: "/about",
+        destination: "/about/profile",
+        permanent: false,
+      },
+      {
+        source: "/academics",
+        destination: "/academics/programmes",
+        permanent: false,
+      },
+      {
+        source: "/admission",
+        destination: "/admission/admissionRequirements",
+        permanent: false,
+      },
+      {
+        source: "/career",
+        destination: "/career/postJobVacancies",
+        permanent: false,
+      },
     ];
 
     if (!SHOW_EDIT_PAGES) {

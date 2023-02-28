@@ -1,7 +1,7 @@
 import SupportUs from "components/layouts/SupportUs/SupportUs";
 
-const Suppoer = () => {
+const Support = () => {
   return <SupportUs />;
 };
 
-export default Suppoer;
+export default Support;

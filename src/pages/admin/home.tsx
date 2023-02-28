@@ -8,9 +8,9 @@ const AdminHomePage = () => {
         <title>WAVECREST COLLEGE OF HOSPITALITY</title>
       </Head>
 
-      <HomepageLayout isAdmin />
+      <HomepageLayout />
     </>
   );
 };
-
+AdminHomePage.requireAuth = true;
 export default AdminHomePage;

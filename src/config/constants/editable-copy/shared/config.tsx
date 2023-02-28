@@ -30,11 +30,6 @@ const footer: EditableUIConfig<FooterProps> = {
       label: "Address",
       placeholder: "Current School Address",
     },
-    {
-      name: "copyright",
-      label: "Copy Right",
-      placeholder: "Copy rights",
-    },
   ],
 };
 

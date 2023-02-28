@@ -6,7 +6,9 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === "GET") {
-    const url = await generateUploadURL("showcase");
+    const { filename, extension } = req.query;
+
+    const url = await generateUploadURL(filename as string, `.${extension}`);
     return res.status(200).json({ url });
   }
 }

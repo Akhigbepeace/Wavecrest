@@ -8,9 +8,11 @@ const AdminContactPage = () => {
         <title>WAVECREST COLLEGE OF HOSPITALITY</title>
       </Head>
 
-      <ContactpageLayout isAdmin />
+      <ContactpageLayout />
     </>
   );
 };
+
+AdminContactPage.requireAuth = true;
 
 export default AdminContactPage;
