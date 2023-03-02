@@ -20,6 +20,11 @@ module.exports = {
         permanent: false,
       },
       {
+        source: "/admin",
+        destination: "/admin/home",
+        permanent: false,
+      },
+      {
         source: "/about",
         destination: "/about/profile",
         permanent: false,
