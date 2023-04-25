@@ -19,11 +19,9 @@ const Form = () => {
   const toast = useToast();
 
   const [inputField, setInputField] = useState(initialValues as any);
-  const [recaptchaValue, setRecaptchaValue] = useState("");
   const recaptchaRef = useRef<ReactGoogleRecaptchaElement>();
 
-  const handleRecaptchaChange = (value: string) => {
-    setRecaptchaValue(value);
+  const handleRecaptchaChange = (value: string | null) => {
     console.log("reCAPTCHA value: ", value);
   };
 
@@ -41,7 +39,7 @@ const Form = () => {
       "service_djq4ick",
       "template_i27quow",
       "form#contact-form",
-      "JPAG_ZJVlAcuO_5D-"
+      JSON.stringify({ "g-recaptcha-response": recaptchaValue })
     );
 
     setInputField(initialValues);
