@@ -14,6 +14,7 @@ import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
 import ReactGoogleRecaptchaElement from "react-google-recaptcha";
 import { initialValues, contactFields } from "./constants";
+import { SERVICE_ID, SITE_KEY, TEMPLATE_ID } from "config/settings";
 
 const Form = () => {
   const toast = useToast();
@@ -21,8 +22,10 @@ const Form = () => {
   const [inputField, setInputField] = useState(initialValues as any);
   const recaptchaRef = useRef<ReactGoogleRecaptchaElement>();
 
+  const [recpatchaValue, setRecaptcha] = useState<string | null>(null);
+
   const handleRecaptchaChange = (value: string | null) => {
-    console.log("reCAPTCHA value: ", value);
+    setRecaptcha(value);
   };
 
   const inputValues = (e: any) => {
@@ -34,12 +37,17 @@ const Form = () => {
 
   const sendEmail = async (e: SyntheticEvent) => {
     e.preventDefault();
-    const recaptchaValue = recaptchaRef?.current?.getValue();
+
+    if (!recpatchaValue) {
+      alert("You have not solved the captcha...");
+      return;
+    }
+
+    console.log(recpatchaValue, "<----value");
     const res = await emailjs.sendForm(
-      "service_djq4ick",
-      "template_i27quow",
-      "form#contact-form",
-      JSON.stringify({ "g-recaptcha-response": recaptchaValue })
+      SERVICE_ID,
+      TEMPLATE_ID,
+      "form#contact-form"
     );
 
     setInputField(initialValues);
@@ -152,10 +160,7 @@ const Form = () => {
             }}
           />
         </Stack>
-        <ReCAPTCHA
-          sitekey="6LcL7LQlAAAAAKfPRP04qefWZlf2x7NmpamGhU85"
-          onChange={handleRecaptchaChange}
-        />
+        <ReCAPTCHA sitekey={SITE_KEY} onChange={handleRecaptchaChange} />
         <Button
           type="submit"
           w="142px"
