@@ -11,12 +11,19 @@ import {
 } from "@chakra-ui/react";
 import React, { Fragment, useRef, SyntheticEvent, useState } from "react";
 import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
+import ReactGoogleRecaptchaElement from "react-google-recaptcha";
 import { initialValues, contactFields } from "./constants";
 
 const Form = () => {
   const toast = useToast();
 
   const [inputField, setInputField] = useState(initialValues as any);
+  const recaptchaRef = useRef<ReactGoogleRecaptchaElement>();
+
+  const handleRecaptchaChange = (value: string | null) => {
+    console.log("reCAPTCHA value: ", value);
+  };
 
   const inputValues = (e: any) => {
     setInputField({
@@ -27,11 +34,12 @@ const Form = () => {
 
   const sendEmail = async (e: SyntheticEvent) => {
     e.preventDefault();
+    const recaptchaValue = recaptchaRef?.current?.getValue();
     const res = await emailjs.sendForm(
       "service_djq4ick",
       "template_i27quow",
       "form#contact-form",
-      "JPAG_ZJVlAcuO_5D-"
+      JSON.stringify({ "g-recaptcha-response": recaptchaValue })
     );
 
     setInputField(initialValues);
@@ -144,7 +152,10 @@ const Form = () => {
             }}
           />
         </Stack>
-
+        <ReCAPTCHA
+          sitekey="6LcL7LQlAAAAAKfPRP04qefWZlf2x7NmpamGhU85"
+          onChange={handleRecaptchaChange}
+        />
         <Button
           type="submit"
           w="142px"

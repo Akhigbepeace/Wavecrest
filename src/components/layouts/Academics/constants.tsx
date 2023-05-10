@@ -7,7 +7,7 @@ const studyProgrammes1 = "/assets/imgs/studyprogrammes 2.png";
 const studyProgrammes2 = "/assets/imgs/study-programme3.jpg";
 const studyProgrammes3 = "/assets/imgs/studyprogramme.jpg";
 const cth = "/assets/imgs/cth.png";
-const training1 = "/assets/imgs/training1.png";
+const training1 = "/assets/imgs/trainingImages/training3.jpg";
 const training2 = "/assets/imgs/training2.png";
 const training3 = "/assets/imgs/training3.png";
 
@@ -141,9 +141,9 @@ export const trainings: Trainings[] = [
     trainingsText:
       "Wavecrest College is an approved International Centre for the delivery and assessment of the Professional Management Qualifications of the Institute of Hospitality, UK. ",
     reapprovalCert: "See Wavecrest College Reapproval Certificate 2020",
-    downloadBrochure: "Download CTH Flier",
+    downloadBrochure: "Download CTH Brochure",
     button: "APPLY NOW",
-    fileUrl: "/documents/tch flier.png",
+    fileUrl: "/documents/cth_brochure.pdf",
   },
   {
     background: "#FFF",
@@ -153,9 +153,9 @@ export const trainings: Trainings[] = [
     trainingDurationYear: "2YEARS",
     trainingsText:
       "PCH:  The Professional Certificate in Hospitality (PCH) is a 10 week programme designed for operators in the hospitality industry and related-sectors who seek to expand their existing knowledge and skill-base, acquire new skills, and enhance their understanding of key hospitality operations in Food and Beverage, Housekeeping and Facility Management and Front Office and A-C below and other general areas. Participants have the opportunity to apply practical learning to their operations and receive constructive feedback during the period of learning. A 2-month industry internship to acquire valuable hands-on experience is available for suitably qualified candidates. One can choose to do a single module.",
-    downloadBrochure: "Download PCH Flier",
+    downloadBrochure: "Download PCH Brochure",
     button: "REGISTER",
-    fileUrl: "/documents/P.C.H. flier.png",
+    fileUrl: "/documents/PCH Brochure.pdf",
   },
   {
     background: "#EBEDEF",
@@ -165,9 +165,9 @@ export const trainings: Trainings[] = [
     trainingDurationYear: "2YEARS",
     trainingsText:
       "Are you new to the world of Professional cookery or are you on a quest to develop you existing skills? Our culinary programs are designed to provide a step by step introduction to the fundamentals of cookery in the following areas – National and International dishes, yeast products, cakes & icing, pastries, finger foods, mixed drinks and lots more. Through a combined delivery process of demonstrations and hands-on sessions, you will be exposed to a world of eclectic fusions designed to delight your family and friends. ",
-    downloadBrochure: "Download Culinary Course Flier",
+    downloadBrochure: "Download Culinary Course Brochure",
     button: "APPLY NOW",
-    fileUrl: "/documents/Culinary flyer.png",
+    fileUrl: "/documents/culinary_brochure.pdf",
   },
   {
     background: "#FFF",
