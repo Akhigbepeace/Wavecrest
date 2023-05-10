@@ -10,3 +10,7 @@ export const SITE_BASE_URL =
 export const ENVIRONMENT = (process.env.NEXT_PUBLIC_ENVIRONMENT || "staging")
   .trim()
   .toLowerCase();
+
+export const SITE_KEY = process.env.NEXT_PUBLIC_SITE_KEY as string;
+export const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID as string;
+export const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID as string;
