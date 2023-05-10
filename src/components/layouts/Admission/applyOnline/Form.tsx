@@ -51,7 +51,7 @@ const ApplyOnlineForm = (props: ApplyOnlineFormProp) => {
   const [inputField, setInputField] = useState(initialValues as any);
 
   return (
-    <form action={showCoursePrice.paymentLink}>
+    <form action={showCoursePrice.paymentLink} target="_blank">
       {forms.map((form, index) => {
         return (
           <Input

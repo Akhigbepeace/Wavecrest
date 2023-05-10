@@ -208,7 +208,7 @@ export default function Announcements(props: AnnouncementsProps) {
                       h="100%"
                       objectFit="contain"
                       src={card.flier}
-                      alt="founders-day"
+                      alt="announcement-image"
                     />
                   </Box>
 
