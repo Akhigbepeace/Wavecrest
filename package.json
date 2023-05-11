@@ -20,6 +20,7 @@
     "react": "^18.1.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.1.0",
+    "react-google-recaptcha": "^2.1.0",
     "react-icons": "^4.4.0",
     "react-player": "^2.10.1",
     "react-scripts": "5.0.1",
@@ -56,6 +57,7 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.1.1",
     "@types/node": "^18.11.9",
+    "@types/react-google-recaptcha": "^2.1.5",
     "@types/react-slick": "^0.23.10",
     "@typescript-eslint/eslint-plugin": "^5.47.0",
     "@typescript-eslint/parser": "^5.47.0",

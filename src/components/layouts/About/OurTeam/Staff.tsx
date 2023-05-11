@@ -53,7 +53,7 @@ const Staff = () => {
                       <Box key={index} w={{ xl: "350px", "2xl": "350px" }}>
                         <PeaceImage
                           src={staff.image}
-                          alt="staffs"
+                          alt="staff"
                           w="100%"
                           h="350px"
                           borderRadius="5px"
