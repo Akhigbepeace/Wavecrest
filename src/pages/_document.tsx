@@ -20,6 +20,8 @@ export default function Document() {
           href="https://fonts.cdnfonts.com/css/visual-hollow-script"
           rel="stylesheet"
         />
+
+        <script src="https://www.google.com/recaptcha/api.js" async defer />
       </Head>
       <body>
         <Main />
