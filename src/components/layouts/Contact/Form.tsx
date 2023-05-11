@@ -20,12 +20,11 @@ const Form = () => {
 
   const [inputField, setInputField] = useState(initialValues as any);
 
-  const [recpatchaValue, setRecaptcha] = useState<string | null>(null);
+  const [recpatchaValue, setRecpatchaValue] = useState<string | null>(null);
 
-  const [recpatchaValue, setRecaptcha] = useState<string | null>(null);
 
   const handleRecaptchaChange = (value: string | null) => {
-    setRecaptcha(value);
+    setRecpatchaValue(value);
   };
 
   const inputValues = (e: any) => {
