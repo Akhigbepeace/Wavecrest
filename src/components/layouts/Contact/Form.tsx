@@ -22,6 +22,8 @@ const Form = () => {
 
   const [recpatchaValue, setRecaptcha] = useState<string | null>(null);
 
+  const [recpatchaValue, setRecaptcha] = useState<string | null>(null);
+
   const handleRecaptchaChange = (value: string | null) => {
     setRecaptcha(value);
   };
