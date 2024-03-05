@@ -113,20 +113,7 @@ const CourseReqs = (props: RequirementsProps) => {
         <Box>
           <Box>{textToShow}</Box>
 
-          <Text
-            fontFamily="Manrope"
-            fontWeight="700"
-            fontSize="22px"
-            textDecoration="underline"
-            mt="33px"
-            lineHeight="33px"
-            onClick={onOpen}
-            cursor="pointer"
-          >
-            {props.viewUpdate}
-          </Text>
-
-          <ShowModal />
+          <ShowModal viewUpdate={props.viewUpdate} />
 
           <Link
             href={props.linkTo}
