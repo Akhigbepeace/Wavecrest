@@ -17,6 +17,8 @@ import ShowModal from "./ShowModal";
 const fileDownload = "/assets/imgs/paperDownload.png";
 
 const CourseReqs = (props: RequirementsProps) => {
+  const { onOpen } = useDisclosure();
+
   const textToShow = props.courseRequirements.map((values, i) => {
     return (
       <UnorderedList key={i}>
