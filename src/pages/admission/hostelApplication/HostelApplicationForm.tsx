@@ -7,8 +7,6 @@ import emailjs from "emailjs-com";
 const HostelApplicationForm = () => {
   const [showCoursePrice, setShowCoursePrice] = useState({});
 
-  console.log(showCoursePrice);
-
   const form = useRef();
   const toast = useToast();
 
