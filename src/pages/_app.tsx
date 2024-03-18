@@ -3,8 +3,6 @@ import { SessionProvider } from "next-auth/react";
 
 import Seo from "../components/atoms/Seo";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-// import ChakraProvider from "@chakra-ui/react";
-// import  from "@chakra-ui/react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../App.css";

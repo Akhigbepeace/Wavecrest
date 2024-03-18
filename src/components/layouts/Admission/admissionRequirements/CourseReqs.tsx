@@ -19,10 +19,6 @@ const fileDownload = "/assets/imgs/paperDownload.png";
 const CourseReqs = (props: RequirementsProps) => {
   const { onOpen } = useDisclosure();
 
-  const showSubjectCombinations = () => {
-    onOpen();
-  };
-
   const textToShow = props.courseRequirements.map((values, i) => {
     return (
       <UnorderedList key={i}>
@@ -124,7 +120,7 @@ const CourseReqs = (props: RequirementsProps) => {
             textDecoration="underline"
             mt="33px"
             lineHeight="33px"
-            onClick={showSubjectCombinations}
+            onClick={onOpen}
             cursor="pointer"
           >
             {props.viewUpdate}
