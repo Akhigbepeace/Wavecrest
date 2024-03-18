@@ -1,11 +1,14 @@
-import { Button, Flex, Input, Select, useToast } from "@chakra-ui/react";
+import { Button, Flex, Input, Select, Text, useToast } from "@chakra-ui/react";
 import React, { SyntheticEvent, useRef, useState } from "react";
 import { formsField, hostelTypes } from "../../../data/data";
 
 import emailjs from "emailjs-com";
 
 const HostelApplicationForm = () => {
-  const [showCoursePrice, setShowCoursePrice] = useState({});
+  const [showCoursePrice, setShowCoursePrice] = useState({
+    hostel: "",
+    price: "",
+  });
 
   const form = useRef();
   const toast = useToast();
@@ -117,6 +120,19 @@ const HostelApplicationForm = () => {
           );
         })}
       </Select>
+
+      <Text
+        textAlign="justify"
+        fontFamily="Manrope"
+        fontWeight="400"
+        fontSize="18px"
+        lineHeight="33px"
+        color="#021D37"
+        my="24px"
+        mr="50px"
+      >
+        {showCoursePrice.price}
+      </Text>
 
       <Button
         type="submit"

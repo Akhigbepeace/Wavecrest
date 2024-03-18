@@ -7,7 +7,6 @@ import {
   Link,
   Text,
   UnorderedList,
-  useDisclosure,
 } from "@chakra-ui/react";
 import PeaceImage from "components/atoms/PeaceImage";
 import React from "react";
