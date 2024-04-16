@@ -77,8 +77,8 @@ export const navLinks = [
         to: "/academics/internship",
       },
       {
-        name: "NYSC",
-        to: "/academics/nysc",
+        name: "ALUMNI",
+        to: "#",
       },
     ],
   },
