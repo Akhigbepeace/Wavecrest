@@ -13,13 +13,29 @@ import {
   Box,
 } from "@chakra-ui/react";
 import React from "react";
-import {  subjects } from "../constants";
+import { subjects } from "../constants";
 
-const ShowModal = () => {
-  const { isOpen, onClose } = useDisclosure();
+type ShowModalProps = {
+  viewUpdate?: string;
+};
+
+const ShowModal = (props: ShowModalProps) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Box>
+      <Text
+        fontFamily="Manrope"
+        fontWeight="700"
+        fontSize="22px"
+        textDecoration="underline"
+        mt="33px"
+        lineHeight="33px"
+        onClick={onOpen}
+        cursor="pointer"
+      >
+        {props.viewUpdate}
+      </Text>
 
       <Modal isCentered isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />

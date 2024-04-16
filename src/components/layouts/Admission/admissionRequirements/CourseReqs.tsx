@@ -7,18 +7,16 @@ import {
   Link,
   Text,
   UnorderedList,
-  useDisclosure,
 } from "@chakra-ui/react";
 import PeaceImage from "components/atoms/PeaceImage";
 import React from "react";
 import { RequirementsProps } from "../constants";
 import ShowModal from "./ShowModal";
 
+
 const fileDownload = "/assets/imgs/paperDownload.png";
 
 const CourseReqs = (props: RequirementsProps) => {
-  const { onOpen } = useDisclosure();
-
   const textToShow = props.courseRequirements.map((values, i) => {
     return (
       <UnorderedList key={i}>
@@ -113,20 +111,7 @@ const CourseReqs = (props: RequirementsProps) => {
         <Box>
           <Box>{textToShow}</Box>
 
-          <Text
-            fontFamily="Manrope"
-            fontWeight="700"
-            fontSize="22px"
-            textDecoration="underline"
-            mt="33px"
-            lineHeight="33px"
-            onClick={onOpen}
-            cursor="pointer"
-          >
-            {props.viewUpdate}
-          </Text>
-
-          <ShowModal />
+          <ShowModal viewUpdate={props.viewUpdate} />
 
           <Link
             href={props.linkTo}
