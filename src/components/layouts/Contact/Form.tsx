@@ -22,7 +22,6 @@ const Form = () => {
 
   const [recpatchaValue, setRecpatchaValue] = useState<string | null>(null);
 
-
   const handleRecaptchaChange = (value: string | null) => {
     setRecpatchaValue(value);
   };
@@ -42,7 +41,6 @@ const Form = () => {
       return;
     }
 
-    console.log(recpatchaValue, "<----value");
     const res = await emailjs.sendForm(
       SERVICE_ID,
       TEMPLATE_ID,
