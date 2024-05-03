@@ -25,10 +25,26 @@ const discoverHospitality = {
 
 const announcements = [
   {
-    flier: "/assets/imgs/Culinary flyer.png",
-    title: "Culinary Courses",
+    flier: "/assets/imgs/screening.jpg",
+    title: "Screening for 2024/2025 Academic Session",
+    text: "Discover necessary skillset for professionalism in the Hospitality Industry. Discover, Hospitality. ",
+    date: "Every Last Tuesday of the Month till October.Candidates outside Lagos would have an online screening and date would be communicated",
+    linkTo: "#",
+    link: "Read More",
+  },
+  {
+    flier: "/assets/imgs/weekday-culinary.jpg",
+    title: "Weekday Culinary Courses",
     text: "A professional programme providing the skill sets for culinary knowledge.",
-    date: "February 6 - March 8",
+    date: "July 15th - Aug 14th (Mon - Wed)",
+    linkTo: "https://forms.gle/VQtgEFMa9qhsojGn7",
+    link: "Apply Now",
+  },
+  {
+    flier: "/assets/imgs/weekend-culinary.jpg",
+    title: "Weekend Culinary Courses",
+    text: "A professional programme providing the skill sets for culinary knowledge.",
+    date: "September 7 - December 14 (Saturdays)",
     linkTo: "https://forms.gle/VQtgEFMa9qhsojGn7",
     link: "Apply Now",
   },
@@ -39,21 +55,12 @@ const announcements = [
     linkTo: "https://forms.gle/7vmuHrzHSxHmkh8s8",
     link: "Apply Now",
   },
-
   {
-    flier: "/assets/imgs/cth-flier.png",
-    title: "Confederation of Tourism and Hospitality",
-    text: "UK International Gold standard qualifications  for the Hospitality, Culinary & Tourism industries",
+    flier: "/assets/imgs/cth-flier.jpeg",
+    title: "Certificate in Hospitality Management",
+    text: "Designed to meet the professional development needs of supervisors and junior managers in the hospitality industry.",
     linkTo: "https://tinyurl.com/CTH-Registration-Form1",
     link: "Apply Now",
-  },
-  {
-    flier: "/assets/imgs/matricFlier.jpg",
-    title: "2023 Matriculation Ceremony",
-    text: "The Provost of Wavecrest College of Hospitality cordially invites you to her 2023 Matriculation Ceremony",
-    date: "Friday, 17th Febuary, 2023",
-    linkTo: "#",
-    link: "Read More",
   },
 ];
 
