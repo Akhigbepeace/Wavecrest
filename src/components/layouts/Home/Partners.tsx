@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  Heading,
-  Link,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Box, Heading, Link, Text, useBreakpointValue } from "@chakra-ui/react";
 import Slider from "react-slick";
 import MobilePartner from "components/molecules/MobilePartner";
 import PeaceImage from "components/atoms/PeaceImage";
