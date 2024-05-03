@@ -16,20 +16,50 @@ const settings = {
   slidesToScroll: 1,
   cssEase: "linear",
 };
+
+type PartnersImgCard = {
+  image: string;
+  fit: "cover" | "contain";
+};
+
 export default function Partners() {
   const [slider, setSlider] = React.useState<Slider>();
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "10px" });
 
-  const cards = [
-    "/assets/imgs/IshkTolaram.png",
-    "/assets/imgs/elisLogo.png",
-    "/assets/imgs/lexonCapital.png",
-    "/assets/imgs/women's board.jpg",
-    "/assets/imgs/venFoundation.jpeg",
-    "/assets/imgs/nestleProfessionals.png",
-    "/assets/imgs/woner_foundation.png",
+  const cards: PartnersImgCard[] = [
+    {
+      image: "/assets/imgs/IshkTolaram.png",
+      fit: "cover",
+    },
+    {
+      image: "/assets/imgs/elisLogo.png",
+      fit: "contain",
+    },
+    {
+      image: "/assets/imgs/lexonCapital.png",
+
+      fit: "contain",
+    },
+    {
+      image: "/assets/imgs/women's board.jpg",
+
+      fit: "contain",
+    },
+    {
+      image: "/assets/imgs/venFoundation.jpeg",
+
+      fit: "contain",
+    },
+    {
+      image: "/assets/imgs/nestleProfessionals.png",
+      fit: "contain",
+    },
+    {
+      image: "/assets/imgs/woner_foundation.png",
+      fit: "contain",
+    },
   ];
 
   return (
@@ -130,16 +160,17 @@ export default function Partners() {
           ref={(slider) => setSlider(slider as Slider)}
           pauseOnFocus
         >
-          {cards.map((image, index) => (
-            <PeaceImage
-              key={index}
-              src={image}
-              alt="companyLogo"
-              display="flex"
-              minH="0px"
-              h="120px"
-              objectFit="contain"
-            />
+          {cards.map((card, index) => (
+            <Box key={index} padding="30px">
+              <PeaceImage
+                src={card.image}
+                alt="companyLogo"
+                display="flex"
+                minH="0px"
+                h="150px"
+                objectFit={card.fit}
+              />
+            </Box>
           ))}
         </Slider>
       </Box>

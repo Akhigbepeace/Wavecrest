@@ -27,6 +27,7 @@ const settings = {
 };
 
 export type AnnouncementItem = {
+  notice: string;
   flier: string;
   title: string;
   text: string;
@@ -274,6 +275,18 @@ export default function Announcements(props: AnnouncementsProps) {
                     >
                       {card.date}
                     </Text>
+                    <Text
+                      fontFamily="Manrope"
+                      fontWeight="4 00"
+                      fontSize="2opx"
+                      fontStyle="italic"
+                      textAlign="center"
+                      mt="5px"
+                      display={card.notice === "" ? "none" : "block"}
+                    >
+                      {card.notice}
+                    </Text>
+
                     <NextLink href={card.linkTo} legacyBehavior passHref>
                       <Link
                         target={
