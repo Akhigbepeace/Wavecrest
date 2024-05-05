@@ -104,6 +104,7 @@ const announcements: EditableUIConfig<AnnouncementsProps, AnnouncementItem> = {
     linkTo: "",
     link: "",
     text: "",
+    notice: "",
   },
   groupItems: [
     {
