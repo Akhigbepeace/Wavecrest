@@ -1,6 +1,6 @@
 import { Flex, Stack } from "@chakra-ui/react";
 import React from "react";
-import Search from "../Search";
+// import Search from "../Search";
 import Logo from "components/atoms/Logo";
 import SocialMediaLinks from "components/molecules/SocialMediaLinks";
 
@@ -22,7 +22,7 @@ const Header = () => {
       <Logo />
 
       <Stack direction="row" alignItems="center">
-        <Search />
+        {/* <Search /> */}
 
         <SocialMediaLinks />
       </Stack>
