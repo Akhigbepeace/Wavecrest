@@ -1,19 +1,19 @@
 import { combinedConstant } from "config/constants/editable-copy/combined";
-import { USE_ONLINE_CONFIG } from "config/settings";
+// import { USE_ONLINE_CONFIG } from "config/settings";
 import {
   createContext,
   ReactNode,
   useCallback,
   useContext,
-  useEffect,
+  // useEffect,
   useState,
 } from "react";
 
 type ConstantType = typeof combinedConstant;
 type ContextValues = {
   data: ConstantType;
-  loading: boolean;
-  error: boolean;
+  loading?: boolean;
+  error?: boolean;
   mutate?: (
     parentKey: keyof ConstantType,
     newData: ConstantType[keyof ConstantType],
@@ -37,27 +37,27 @@ type AppDataProviderProps = {
 export const EditableCopyProvider = (props: AppDataProviderProps) => {
   const [uiData, setUIData] = useState(combinedConstant);
 
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState(false);
 
-  useEffect(() => {
-    async function retrieveUICopy() {
-      try {
-        setLoading(true);
+  // useEffect(() => {
+  //   async function retrieveUICopy() {
+  //     try {
+  //       setLoading(true);
 
-        if (USE_ONLINE_CONFIG) {
-          const response = await fetch("/api/ui-copy");
-          const data = await response.json();
-          setUIData(data);
-        }
-      } catch (error) {
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    }
-    retrieveUICopy();
-  }, []);
+  //       if (USE_ONLINE_CONFIG) {
+  //         const response = await fetch("/api/ui-copy");
+  //         const data = await response.json();
+  //         setUIData(data);
+  //       }
+  //     } catch (error) {
+  //       setError(true);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   }
+  //   retrieveUICopy();
+  // }, []);
 
   const mutate = useCallback(
     async (
@@ -89,9 +89,9 @@ export const EditableCopyProvider = (props: AppDataProviderProps) => {
   return (
     <EditableCopyContext.Provider
       value={{
-        loading,
+        // loading,
         data: uiData,
-        error,
+        // error,
         mutate,
       }}
     >
