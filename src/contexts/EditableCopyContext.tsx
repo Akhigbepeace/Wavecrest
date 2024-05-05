@@ -40,24 +40,24 @@ export const EditableCopyProvider = (props: AppDataProviderProps) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  useEffect(() => {
-    async function retrieveUICopy() {
-      try {
-        setLoading(true);
+  // useEffect(() => {
+  //   async function retrieveUICopy() {
+  //     try {
+  //       setLoading(true);
 
-        if (USE_ONLINE_CONFIG) {
-          const response = await fetch("/api/ui-copy");
-          const data = await response.json();
-          setUIData(data);
-        }
-      } catch (error) {
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    }
-    retrieveUICopy();
-  }, []);
+  //       if (USE_ONLINE_CONFIG) {
+  //         const response = await fetch("/api/ui-copy");
+  //         const data = await response.json();
+  //         setUIData(data);
+  //       }
+  //     } catch (error) {
+  //       setError(true);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   }
+  //   retrieveUICopy();
+  // }, []);
 
   const mutate = useCallback(
     async (

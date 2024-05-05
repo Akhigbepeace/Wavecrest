@@ -22,7 +22,7 @@ const Header = () => {
       <Logo />
 
       <Stack direction="row" alignItems="center">
-        <Search />
+        {/* <Search /> */}
 
         <SocialMediaLinks />
       </Stack>
