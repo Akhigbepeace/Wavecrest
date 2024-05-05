@@ -11,7 +11,6 @@ import {
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Slider from "react-slick";
 import styled from "@emotion/styled";
-import { CARD_POST } from "data/blog";
 import NextLink from "next/link";
 import PeaceImage from "components/atoms/PeaceImage";
 
@@ -27,13 +26,25 @@ const settings = {
   slidesToScroll: 1,
 };
 
-export default function OurStories() {
+export type StoryProps = {
+  postId: string;
+  name: string;
+  text: string;
+  postHeading: string;
+  postsImg: string;
+  coverImage: string;
+  postsText: string;
+};
+
+export type OurStoriesProps = {
+  stories: StoryProps[];
+};
+
+export default function OurStories({ stories }: OurStoriesProps) {
   const [slider, setSlider] = React.useState<Slider>();
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "40px" });
-
-  const cards = CARD_POST;
 
   return (
     <OurStories.Wrapper>
@@ -163,7 +174,7 @@ export default function OurStories() {
         </Box>
 
         <Slider {...settings} ref={(slider) => setSlider(slider as Slider)}>
-          {cards.map((card, index) => (
+          {stories.map((card, index) => (
             <Box
               key={index}
               position="relative"

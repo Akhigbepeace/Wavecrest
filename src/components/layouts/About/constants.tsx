@@ -151,6 +151,38 @@ export const milestones = [
       "The African Travel Times Magazine Award for Best Hospitality College for Women (West Africa).",
     ],
   },
+  {
+    year: "2019",
+    achievement: [
+      "Collaborated with the Federal Government as a training center for N-Power",
+    ],
+  },
+  {
+    year: "2021",
+    achievement: [
+      "Received Ishk Tolaram foundation grant to support the training of 60 girls to acquire Hospitality skills",
+      "Received Award of Excellence, Best N-Power training center for Hospitality trades (South-West Zone)",
+    ],
+  },
+  {
+    year: "2022",
+    achievement: [
+      "Collaborated with Nestle; sole sponsors of our 2022 Hospitality Week",
+    ],
+  },
+  {
+    year: "2023",
+    achievement: [
+      "Received the Skills Initiative for Africa(SIFA) Grant; an initiative of Africa Union Development Agency (AUDA NEPAD) supported by the German Government",
+      "Collaborated with ARISE FOUNDATION to train 75 women, irregular migrants and returnees",
+    ],
+  },
+  {
+    year: "2024",
+    achievement: [
+      "Collaborated with Ginonaija ; sole sponsor of our 2024 Hospitality Week",
+    ],
+  },
 ];
 
 export const managements = [
