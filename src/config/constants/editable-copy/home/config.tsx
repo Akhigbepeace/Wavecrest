@@ -98,6 +98,7 @@ const announcements: EditableUIConfig<AnnouncementsProps, AnnouncementItem> = {
   name: "announcements",
   title: "Edit Announcements",
   emptyFormInitial: {
+    notice: "",
     flier: "/assets/imgs/empty-img.jpeg",
     title: "",
     date: "",
