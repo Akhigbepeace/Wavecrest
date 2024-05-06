@@ -6,6 +6,10 @@ import {
   AnnouncementItem,
   AnnouncementsProps,
 } from "components/layouts/Home/Announcements/Announcements";
+import {
+  OurStoriesProps,
+  StoryProps,
+} from "components/layouts/Home/OurStories";
 
 const showCase: EditableUIConfig<ShowcaseProps> = {
   name: "showCase",
@@ -139,9 +143,49 @@ const announcements: EditableUIConfig<AnnouncementsProps, AnnouncementItem> = {
   groupKey: "title",
 };
 
+const ourStories: EditableUIConfig<OurStoriesProps, StoryProps> = {
+  name: "ourStory",
+  title: "Edit Our Stories",
+  groupKey: "name",
+  emptyFormInitial: {
+    coverImage: "/assets/imgs/empty-img.jpeg",
+    name: "",
+    postHeading: "",
+    postId: "",
+    postsImg: "",
+    postsText: "",
+    text: "",
+  },
+  groupItems: [
+    {
+      name: "coverImage",
+      label: "Image",
+      type: "image",
+    },
+    {
+      name: "name",
+      label: "Full Name",
+      placeholder: "Enter Full Name",
+    },
+    {
+      name: "text",
+      label: "Story",
+      type: "text",
+      placeholder: "Enter Story",
+    },
+    {
+      name: "postsText",
+      label: "Blog Post",
+      type: "textarea",
+      placeholder: "Enter blog posts",
+    },
+  ],
+};
+
 export const homeConfig = {
   showCase,
   statistics,
   discoverHospitality,
   announcements,
+  ourStories,
 };

@@ -26,6 +26,7 @@ const HomepageLayout = () => {
     statistics: statsData,
     discoverHospitality,
     announcements,
+    defaultStories,
   } = { ...combinedConstant.home, ...data.home };
 
   const {
@@ -33,6 +34,7 @@ const HomepageLayout = () => {
     statistics: statsConfig,
     discoverHospitality: discoverConfig,
     announcements: announcementsConfig,
+    ourStories: ourStoriesConfig,
   } = homeConfig;
 
   return (
@@ -73,8 +75,17 @@ const HomepageLayout = () => {
       >
         <Announcements announcements={announcements} />
       </Editable>
+
       <StudyProgrammes />
-      <OurStories />
+
+      <Editable
+        defaultValues={defaultStories}
+        config={ourStoriesConfig}
+        page={"home"}
+      >
+        <OurStories stories={defaultStories} />
+      </Editable>
+
       <Partners />
 
       <Footer />
