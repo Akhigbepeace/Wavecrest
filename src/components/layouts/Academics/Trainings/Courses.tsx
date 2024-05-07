@@ -96,7 +96,6 @@ const Courses = (training: Trainings) => {
         }}
       >
         <Box
-          bg="#FFF"
           borderRadius="3px"
           mr={{
             sm: "0",
@@ -109,6 +108,7 @@ const Courses = (training: Trainings) => {
           <PeaceImage
             src={training.trainingsImage}
             alt="trainingsImage"
+            objectFit="contain"
             maxWidth="none"
             w={{
               sm: "100%",
@@ -193,7 +193,7 @@ const Courses = (training: Trainings) => {
             {training.trainingsText}
           </Text>
 
-          <Link
+          {/* <Link
             onClick={onOpen}
             fontFamily="Manrope"
             fontWeight="700"
@@ -210,7 +210,7 @@ const Courses = (training: Trainings) => {
             }}
           >
             {training.reapprovalCert}
-          </Link>
+          </Link> */}
 
           <Modal isCentered isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
