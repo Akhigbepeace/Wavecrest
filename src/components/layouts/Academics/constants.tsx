@@ -6,7 +6,7 @@ import Programmes from "./Programmes/Programmes";
 const studyProgrammes1 = "/assets/imgs/studyprogrammes 2.png";
 const studyProgrammes2 = "/assets/imgs/study-programme3.jpg";
 const studyProgrammes3 = "/assets/imgs/studyprogramme.jpg";
-const cth = "/assets/imgs/cth.png";
+const cehm = "/assets/imgs/cehm_flyer.jpeg";
 const training1 = "/assets/imgs/trainingImages/training3.jpg";
 const training2 = "/assets/imgs/training2.png";
 const training3 = "/assets/imgs/training3.png";
@@ -134,16 +134,16 @@ export type Trainings = {
 export const trainings: Trainings[] = [
   {
     background: "#EBEDEF",
-    trainingsTitle: "Confederation of Tourism and Hospitality",
-    trainingsImage: cth,
+    trainingsTitle: "Certificate in Hospitality Management",
+    trainingsImage: cehm,
     trainingDurationTime: "FULLTIME",
     trainingDurationYear: "2YEARS",
     trainingsText:
-      "Wavecrest College is an approved International Centre for the delivery and assessment of the Professional Management Qualifications of the Institute of Hospitality, UK. ",
+      "Designed to meet the professional development needs of supervisors and junior managers in the hospitality industry.",
     reapprovalCert: "See Wavecrest College Reapproval Certificate 2020",
-    downloadBrochure: "Download CTH Brochure",
+    downloadBrochure: "Download CEHM Brochure",
     button: "APPLY NOW",
-    fileUrl: "/documents/cth_brochure.pdf",
+    fileUrl: "/documents/cehm.pdf",
   },
   {
     background: "#FFF",
