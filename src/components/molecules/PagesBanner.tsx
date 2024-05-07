@@ -5,7 +5,7 @@ import React from "react";
 type BannerTypeProps = {
   imageURL: string;
   pageName: string;
-  fontSize: string;
+  fontSize?: string;
 };
 
 const PagesBanner = (props: BannerTypeProps) => {
