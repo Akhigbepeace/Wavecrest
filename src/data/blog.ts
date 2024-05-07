@@ -16,7 +16,6 @@ const airTravels = "/assets/imgs/air-travels.jpg";
 const ekpangNkukwo = "/assets/imgs/Ekpang-Nkukwo.jpg";
 const studentLetter = "/assets/imgs/student-letter.png";
 const developingSkills = "/assets/imgs/developing-skills.jpg";
-const JambReg = "/assets/imgs/JAMBReg.jpg";
 
 type Post = {
   bg: string;
@@ -54,16 +53,6 @@ export const BLOGS = [
           "There is growing awareness of suicide as a major public health problem, even though there is a taboo in many societies against discussing openly. Worldwide Suicide rates have increased by 60% over the last 50 years, and the increase has been particularly marked in developing countries. Suicide occurs all over the world and can take place at almost any age. <br /><br />Globally, suicide rates are highest in people aged 60 years and over. In some countries, however, the highest rates are found among the young. Notably, suicide is now among the three leading global causes of death among young people aged 15-34 years, the majority of suicides are reported in adults and older adults (60 years and older). <br /><br />Pesticide poisoning, hanging and firearms are among the most common methods of suicide globally.<br /><br />In Nigeria, Suicide is becoming a looming Public health problem and should be taken seriously.We remember popular cases that were reported of a man, a medical doctor who drove down to the third mainland bridge, parked his car, jumped into the lagoon, and died in 2019.<br /><br />-A young man identified as Kelvin committed suicide at Modinatu Street in the Ogba area of Lagos.<br />-The lifeless body of Kevin who works with a new generation bank was found dangling from a ceiling fan, in his apartment by neighbors.<br />-Young Nigerian, creative designer and founder of Uhuru Designz, the United States of America-based clothing company, Izuchukwu Madubueze reportedly committed suicide Over Fake Rape Allegations that took place on Twitter in July 2020. He even announced his own death on twitter before his death.Sadly as we know these are not all the cases and some have not been covered by the media. <br /><br />Suicides are Preventable!<br /><br />“No matter where a country currently stands in suicide prevention”, said Dr Alexandra Fleischmann, Scientist in the Department of Mental Health and Substance Abuse at WHO, “effective measures can be taken, even just starting at local level and on a small-scale”<br /><br /><ol><li>Always Check up on friends and family.</li><li>Encouraging friends and families to always take mental health seriously and to see a counselor when it’s necessary.</li><li>Responsible reporting of suicide in the media, such as avoiding language that sensationalizes suicide and avoiding explicit description of methods used, and early identification and management of mental and substance use disorders in communities and by health workers in particular</li>.<li>Social media has come to stay and some people are living fake lives. Don’t compare your life with others because you don’t know what they are going through and you may just be better off than them.</li><li>Follow-up care by health workers through regular contact, including by phone or home visits, for people who have attempted suicide, together with provision of community support, are essential, because people who have already attempted suicide are at the greatest risk of trying again.</li><li>Regular exercise, improve healthy lifestyle.</li><li>Reducing access to means of suicide is one way to reduce deaths.</li></ol> <br /><br />Below is a few list of some Mental health Organizations we have:<br /><br /><ul><li>African Mental Health Awareness & Care Initiative, Maiduguri</li><li>Mental Health Foundation, Nigeria</li><li>Gede Foundation, Abuja </li><li>UNIC Ikoyi</ul> <br /> <br /> Source: WHO, Vanguard <br /><br />  Article written by Sheba Asuquo",
       },
       {
-        bg: "#FFF",
-        postId: "5b955783-c9e3-4366-934d-d2d60f0cd227",
-        isTopPost: true,
-        postsImg: JambReg,
-        postsDate: "News and Events / January 25, 2021.",
-        postHeading: "JAMB FORM IS NOW ON SALE!",
-        postsText:
-          "<b>JAMB form is now on sale!</b><br /> Candidates can now proceed to register for the 2021/2022 JAMB examinations. Forms can be purchased at approved bank or CBT centers around you. <a href='https://www.jamb.gov.ng/' target='_blank'>(Click here for Jamb Official Website) </a><br /><br /> Looking to study Hospitality Management in a reputable Institution? Look no further than at Wavecrest College of Hospitality where we pride ourselves in offering students a robust holistic learning/training in Education, Economic Independence and Employment.",
-      },
-      {
         bg: "#EBEDEF",
         postId: "8f18340b-d539-47e8-960d-14fefe23baaf",
         isTopPost: false,
@@ -84,22 +73,11 @@ export const BLOGS = [
         postsText:
           "There are lots of different NSQs to choose from, which are regularly being reviewed and updated. They are available in five sectors i.e hospitality and tourism, power/energy/engineering, building construction, service and agro-processing as giving in the table below;<br/><br/> <b>The NSQ system – Who does/do what</b> <br /><br/><b> Sector skills councils:</b> identify, define and update employment-based standards of competence for agreed occupations. These people effectively represent the interests of the trade or industry concerned, to which the particular NSQ relates. Sector Bodies define what the job entails. For government led sector skills council, the composition should be 70 % industry/ employers and 30% trade unions, professional associations, academia etc.<br /><br /> <b>Awarding bodies:</b> design assessment and quality assurance systems, and gain sector bodies endorsement prior to submission to NBTE for accreditation of the qualification. Awarding bodies approve training and assessment centres to offer NSQs. implement and assure quality of the NSQs . Awarding Bodies are basically the top-level training certification organisations (the ones whose names and logos are on the certificates). They don’t deliver the training, they design the structures of the qualifications and accredit the certification, which the training organisations and Assessment Centres use and deliver.<br /><br /> Awarding Bodies engage with client organisations if they are large enough to have their own NSQ training and delivery departments. Awarding bodies engage with Sector Bodies and training organisations. Training organisations are effectively distributors of the Awarding Bodies’ qualifications systems.<br /><br /> They undertake external verification to ensure that candidates are being assessed fairly and consistently across all centres.<br /><br /><b> Regulatory Body: NBTE</b> accredits proposals for qualifications submitted by awarding bodies, and monitors Awarding bodies offering NSQs. NBTE effectively manages the whole system on behalf of the Government. <br /><br /> <b>Assessment centres:</b> assess NSQs according to Awarding body criteria.<br /><br /><b>Training providers: </b> deliver NSQ training in partnership with the industry, register candidates, assess and guide candidates towards achieving NSQs.",
       },
-      {
-        bg: "#FFF",
-        postId: "458a00e3-1cd5-4148-bad2-ceee4d6d22e9",
-        isTopPost: false,
-        postsImg: JambReg,
-        postsDate: "News and Events / May 14, 2021.",
-        postHeading: "New Admission Requirement for National Diploma",
-        postsText:
-          "The Unified Tertiary and Matriculation Examination board has approved new admission requirement for Wavecrest College.<br /><br />This approve now allows the college to accept more subject combination from JAMB candidates.<br /><br />See the new subject combination accepted by Wavecrest College in JAMB for 2 years National Diploma below <br /><br /> <b>Entry Requirements</b><br /><br /> Five (5) credit passes in SSCE/NECO/GCE<br />Compulsory Subjects Include: <br />Biology/Agricultural Science/Health Science/ Food and Nutrition/Catering craft practice <br /><br />In addition, to four (4) of the following:<br /> Physics,<br />  Chemistry, <br />Mathematics/ Statistics,<br /> Geography, <br />Food and Nutrition,<br /> Economics/Commerce,<br /> Technical Drawing,<br /> English Language/Literature in English,<br /> Home Management/Catering Craft/Home Economics, <br />Computer studies/Information Technology, <br />Food & Nutrition, <br />Marketing/Business Management,<br /> Financial Accounting, <br />Government/History, <br />Civic Education,<br /><br /><b>UTME REQUIREMENTS</b>  <br /><b>COMPULSORY: ENGLISH LANGUAGE,</b> <br />Any three subjects from: Biology, Chemistry, Physics, Geography, Mathematics, Principles of, Accounts, Economics, Agricultural , Science, Commerce, Home Economics, French/Literature, Government/History.<br /><br /><b>How To Apply</b><ul><li>Fill the Wavecrest Application Form online</li><li>Return for the current UTME</li> <li> Log on to the UTME website</li><li> Click on Private Polytechnics/Monotechnics And select Wavecrest College of Hospitality</li></ul>  <br /><br /><b>Note that your 1st choice can be an ND Awarding Institution</b> <br /><br /><ul><li>Choose Wavecrest College as your <b>FIRST CHOICE</b> for <b>NATIONAL DIPLOMA</b> in <b>Hospitality Management</b></li><li> Complete the registration process</li></ul>",
-      },
     ],
   },
 
   {
     category: "Recipes",
-
     posts: [
       {
         bg: "#FFF",
