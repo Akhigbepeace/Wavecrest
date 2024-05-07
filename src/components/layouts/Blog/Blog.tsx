@@ -193,6 +193,7 @@ const Blog = () => {
                       xl: "22px",
                       "2xl": "22px",
                     }}
+                    textTransform="capitalize"
                     lineHeight="30px"
                   >
                     {post.postHeading}

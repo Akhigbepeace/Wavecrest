@@ -1,4 +1,5 @@
 import { CARD_POST } from "config/constants/editable-copy/home/values";
+import { uuid } from "uuidv4";
 
 const blogPost = "/assets/imgs/blogpost.png";
 const blogPost2 = "/assets/imgs/aboutus.png";
@@ -27,14 +28,380 @@ type Post = {
   postsText: string;
 };
 
+const formatDate = (dateObj: Date) => {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const day = dateObj.getDate();
+  const month = dateObj.getMonth();
+  const year = dateObj.getFullYear();
+
+  return `${months[month]} ${day}, ${year}`;
+};
+
 export const BLOGS = [
   {
     category: "News & Events",
     posts: [
       {
         bg: "#FFF",
-        postId: "0a228685-366d-4952-9583-3eb9c9a497ba",
+        postId: "59158268-3083-4c16-96fd-0bb870881c19",
         isTopPost: true,
+        postsImg: NBTEdirector,
+        postsDate: `News and Events / ${formatDate(
+          new Date(
+            "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
+          )
+        )}`,
+        postHeading: "Finishing Strong... Our 2023 Success Stories",
+        postsText: `Wavecrest College received the SKILLS INITIATIVE FOR AFRICA(SIFA) grant for the construction of the WAVECREST-HSEDCE. 
+        
+        Through this expansion, we will train 1,000 women annually and serve the growing demands of skilled labor in the Hospitality Industry`,
+      },
+      {
+        bg: "#FFF",
+        postId: "f0c88162-56d5-4015-b492-b81e6d59793f",
+        isTopPost: true,
+        postsImg: NBTEdirector,
+        postsDate: `News and Events / ${formatDate(
+          new Date(
+            "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
+          )
+        )}`,
+        postHeading: "fundraising food fair",
+        postsText: `The Food Fair was held on the 24th of June, 2023, at the Wavecrest College.
+          
+          THE OBJECTIVES
+
+          It was a fundraising and publicity event to raise funds for our counterpart contribution of the SIFA (Skills Initiative For Africa) Grant received for the construction of the Wavecrest Hospitality Skills and Enterprise Development Centre of Excellence  - HSEDCE.
+
+          ALL HANDS ON DECK
+          
+          All departments of the College participated actively in collaboration with the students. Admin Department was in charge of the general coordination, the ODC (Outdoor Catering) and Student Assistant gave their support and assisted with purchasing the items, foodstuff, and materials needed. The Accounts department was in charge of the collection of funds and the F & B Lecturers supervised and coordinated the students.          
+          We also had external support from Chef Cuddles (Yejide Uthman), Sugar Creations, and Mrs. Kelechi Nwankwo who served as volunteers.
+          
+          The turnout was good as over 120 students from different secondary schools were in attendance as well as friends, family members and food enthusiasts who came to support and create a vibrant atmosphere.
+          
+          The Food Fair was a great experience`,
+      },
+      {
+        bg: "#FFF",
+        postId: "22bd4ef5-20da-449c-8c9b-d9f0810b2dcd",
+        isTopPost: true,
+        postsImg: NBTEdirector,
+        postsDate: `News and Events / ${formatDate(
+          new Date(
+            "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
+          )
+        )}`,
+        postHeading: "ISHK TOLARAM GRANT",
+        postsText: `Bridging the Hospitality Skills Gap.
+        
+        The College received a grant from Ishk Tolaram Foundation to support Thirty (30) underserved women in the One Year Certificate In Hospitality Operations Programme.
+        
+        The program aims to bridge the community gaps of access to international standard vocational training that gives the students hands-on experience and real-time practice, and exposure to state-of-the-art equipment which they will necessarily find in the industry.
+        
+        The European Journal of Business and Management Research (EJBMR) - Vol. 7 No. 1 (2022) with the article titled Gap of Entrepreneurship training  shows the result of studies done to highlight the lack of skilled labour to fill the many job opportunities in this Hospitality Industry.
+        
+        Training the Next Generation of Hospitality Professionals
+        
+        Instilling our core values is high priority. Core values are an essential part of the curriculum- reflected in the acronym SPIRIT!  - Spirit of Service, Personal Responsibility, Integrity , Respect for others, Industriousness and Teamwork.`,
+      },
+      {
+        bg: "#FFF",
+        postId: "cc528aa8-5ac7-4056-a305-d5d8805bdaaf",
+        isTopPost: true,
+        postsImg: NBTEdirector,
+        postsDate: `News and Events / ${formatDate(
+          new Date(
+            "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
+          )
+        )}`,
+        postHeading: "Instructors Training Workshop ",
+        postsText: `Objective
+        
+        The Instructor Training Workshop and Refresher Course at Wavecrest College was organized as a continuous professional development for educators within all  Hospitality Colleges, Schools, and Centres owned by of Women’s Board - Educational Corporation Society and their counterparts  Nigerian Association for Women’s Advancement (NAWA) and Wetland.
+        
+        Institutions in Attendance
+        
+        There were participants from Lantana College of Hospitality, Enugu, Orisun School of Hospitality, Ibadan, Iroto School of Hotel and Catering, Ogun State, Lagoon Institute of Hospitality Studies, Lagos, and Wavecrest College of Hospitality.
+
+        Training Content
+        
+        The Two-Day training workshop covered a wide range of activities, including the demonstration of different beef dishes and presentations, introduction to new teaching methodologies and technologies, exposure to new and advanced equipment and the Demonstration of rational Ovens -   Rational combi steamer & Rational 1 combi Pro
+
+        Hands-on Learning
+        
+        The facilitator for the day was Chef Mayowa Olatunji who delivered excellently well.
+        
+        The training concluded with an Industrial visit to BCE Food Service Equipment, Matori, Nigeria, one of the leading companies in Africa for supply and delivery of all kinds of commercial catering equipment and products, kitchen utensils, industrial cookware & and appliances for industries in food service and hospitality.
+        `,
+      },
+      {
+        bg: "#FFF",
+        postId: "4eaf5c04-9f63-4290-88fb-72e739357e17",
+        isTopPost: false,
+        postsImg: NBTEdirector,
+        postsDate: `News and Events / ${formatDate(
+          new Date(
+            "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
+          )
+        )}`,
+        postHeading: "2023 INTERNSHIP IN TOUCH WITH THE INDUSTRY",
+        postsText: `CREATING A CULTURE OF EXCELLENCE
+
+        The Student Industrial Work Experience Scheme (SIWES) is an essential component of our academic program, providing students with practical exposure to the real world of work.
+
+        76 STUDENTS WERE PLACED ON INTERNSHIP IN THE FOLLOWING ORGANIZATIONS:
+
+         - 355 RESTAURANT Ikeja
+         - April Gossip Restaurant 
+         - Cake n candy Ikeja 
+         - Cakement Aguda
+         - Cakes by somcheZ
+         - Clares Cakes and Pastries 
+         - Delta kitchen 
+         - Doodle cake Festac 
+         - Eko Hotel and Suites
+         - Four Points by Sheraton
+         - Hotel Ibis Hotel Ikeja
+         - Hotel Ibis Royale
+         - Ikoyi Club 1938
+         - IN4U Cakes and Events
+         - IN4U CAKES SURULERE
+         - Lagos Business School
+         - Lagos Continental Hotel VI
+         - Legend Hotel Lagos Airport, Curio Collection by Hilton
+         - Lounge 38 
+         - LSG Sky Chefs Things Remembered
+         - Marriott International Ikeja
+         - Melbrooke Hotel  
+         - Millenium Apartment Studio Lekki
+         - Montana Residence GRA Ikeja
+         - Mövenpick Hotel Ikoyi
+         - Newrest Nigeria
+         - OASIS HOTEL AGABARA
+         - Parkinn by Radisson 
+         - Providence by Mantis Hotel Ikeja
+         - Raddisson Blu Hotel VI 
+         - Royal Residence
+         - SEATTLE RESIDENCE VI
+         - Sugar creation 
+         - SUN HEAVEN HOTEL VICTORIA ISLAND
+         - Suru Express Ikeja 
+         - Suru Express Ikorodu 
+         - The Art Hotel
+         - THE ART HOTEL VI
+         - The Cake House
+         - The George Hotel
+         - The Wheatbeaker 
+         - Villa Monument Hotel Victoria Island
+         - Wavecrest College Outdoor Catering unit
+        `,
+      },
+      {
+        bg: "#FFF",
+        postId: "818038d4-3277-490a-9c8c-365f1cda6142",
+        isTopPost: false,
+        postsImg: NBTEdirector,
+        postsDate: `News and Events / ${formatDate(
+          new Date(
+            "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
+          )
+        )}`,
+        postHeading: "STAFF WEEKEND WORKSHOP",
+        postsText: `
+        The 2023 staff weekend workshop proved to be a valuable and enriching experience for all participants. 
+
+        Focus areas
+
+         - Unity of Purpose and Team building.
+         - Learning to Value Others.
+         - Our Christian identity
+         - Professionalism at work
+         - Financial Growth
+
+        Staff Engagement
+
+        It was a much-needed opportunity to unwind and reward our staff for the hard work and effort put into running the College this year.
+
+        Facilitators
+
+        Prof. Franca Ovadje - Founder, Executive Director, Danne Institute for Research,  Rev. Fr. Bonniface Okafor a Priest of Opus Dei, Mrs. Adejoke Ohiakena, Deputy Head of School, Corona School Trust and Nkemdilim Mojume - Lead Delivery Consultant at Franklin Covey West Africa
+
+        Outcome
+
+        The working sessions birthed SMART ‘way forward’ working document that would be our reference point for the academic session.
+        `,
+      },
+      {
+        bg: "#FFF",
+        postId: "cc528aa8-5ac7-4056-a305-d5d8805bdaaf",
+        isTopPost: false,
+        postsImg: NBTEdirector,
+        postsDate: `News and Events / ${formatDate(
+          new Date(
+            "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
+          )
+        )}`,
+        postHeading: "ONE-DAY INTERACTIVE SESSION AT WHEATBAKER HOTELS",
+        postsText: `
+        INDUSTRY CONNECTION
+
+        Students and members of staff were at The Wheatbaker - one of Nigeria's Leading Boutique Hotels. The invitation was extended to us by the General Manager Mr. Paul Kavanagh. This was proudly organized by a graduate of Wavecrest College who was then the Personal Assistant to the GM of The Wheatbaker in the person of Ms. Mercy Nwosu.
+        
+        Hotel General Managers influencing  Hospitality Culture
+
+        The interactive session was with a panel of General Managers of leading hotels in Lagos - Four Points by Sheraton - Alex Richwell, Jara Beach Resort - Mr. Mark Slade, Ebonyi live, Radisson Blu - Mr. Ahmed Raza and George Residence Lagos - Morten Ebbesen to mention a few.
+
+        Learning Curves
+
+        The students were taught to have passion for the industry and not just to work for the money. Two of our students - Victory Ahamisi and Anthonia Orozele won a free spa session and a free lunch for two respectively for answering questions. 
+
+        It was a well-organized and wonderful experience for our students and staff.
+        `,
+      },
+      {
+        bg: "#FFF",
+        postId: "6a18f570-d0b4-455e-a9ff-a03a0417119e",
+        isTopPost: false,
+        postsImg: NBTEdirector,
+        postsDate: `News and Events / ${formatDate(
+          new Date(
+            "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
+          )
+        )}`,
+        postHeading: "THE SWISS GOVERNMENT SCHOLARSHIP",
+        postsText: `Swiss Scholarship
+
+        In total, Thirty-eight (38) Learners/ Students have benefited from the scholarship in the last 6 years and each one has a unique story of transformation and achievement.
+        This once in-a-lifetime experience has been enriching for all participants and a great opportunity for professional development, adventures, learning opportunities, networking, cultural diversity and more. 
+
+        Appreciation and Continuous Commitment 
+
+        A lot more has been achieved with the Swiss Scholarship where our students have the opportunity to enrich their hospitality training and gain global exposure that further enhances their prospects in the Hospitality Job Market. Without your support, none of these success stories would have been told.
+        Thank you BIHC! 
+        Thank you Rainbow Unlimited! 
+        Thank you Swiss Government!
+
+        Recreating Lifestyles
+
+        Since 2017, Students from Wavecrest College of Hospitality, Lagos, Nigeria have been privileged recipients of the Swiss all-expense paid scholarship to study at the BOMA INTERNATIONAL HOTEL COLLEGE (BIHC), Kenya. BIHC is an affiliate of the Kenyan Red Cross in partnership with Business and Hotel Management School Switzerland.
+
+
+        2023 Cohort
+
+        The last batch of trainers arrived and returned on the 16th of December, 2023 fully energized and equipped to take up new challenges.
+
+        ‘Reflecting on my immersive experience at Boma International Hospitality College, I wish to unfold a narrative of profound experiences, learning, and personal growth. From the lively streets of Nairobi to the dynamic classrooms of Boma, this adventure has been nothing short of transformative.’ - Olivia Ofuasia
+        `,
+      },
+      {
+        bg: "#FFF",
+        postId: "cc528aa8-5ac7-4056-a305-d5d8805bdaaf",
+        isTopPost: false,
+        postsImg: NBTEdirector,
+        postsDate: `News and Events / ${formatDate(
+          new Date(
+            "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
+          )
+        )}`,
+        postHeading: "ARISE FOUNDATION CULINARY TRAINING",
+        postsText: `
+        Training Content
+
+        The Culinary and Entrepreneurship Skill Acquisition Program sponsored by Arise Foundation, was held between July 2022 and November 2023.
+        
+        The program was aimed at providing culinary skills training to returned irregular migrants, women at risk of being trafficked due to economic conditions, and widows. 
+
+        The training covered theoretical and basic practical hands-on culinary skills, covering National and Continental dishes, Yeast products, Pastries, Finger foods, Cake making and Icing techniques, Plating, and Food and Beverage table setting components.
+
+        Seminars & Mentoring 
+
+        The orientation before the commencement of each Training Batch helped them gain an insight into what the training entailed.
+        The mentoring sessions and seminars provided a safe and supportive space for the participants. Hence they felt comfortable sharing their experiences without fear of judgment.  
+
+        Impact 
+
+        We completed five batches of culinary skills. Training a total of seventy-five (75) participants.
+        The final graduation ceremony took place on November 2023. In attendance were the Women’s Board and collaborators; Arise Representative, Franero Consultants/ Mdif-Migration and Development Impact Foundation.
+        `,
+      },
+      {
+        bg: "#FFF",
+        postId: "669ddb38-969d-416d-a0c9-662eb338a777",
+        isTopPost: true,
+        postsImg: NBTEdirector,
+        postsDate: `News and Events / ${formatDate(
+          new Date(
+            "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
+          )
+        )}`,
+        postHeading: "LSG SKY CHEF FIELD TRIP",
+        postsText: `About LSG Sky Chef
+        
+        LSG Skychefs is a leading global provider of culinary and hospitality solutions for the aviation industry.
+        
+        They are located in Lagos, Nigeria and the facility has around 40 employees and produces approximately 450 Thousand meals per year.
+        
+        Their services encompass a wide range of offerings, including menu design, food preparation, and logistics management to ensure that passengers enjoy a satisfying dining experience.
+        
+        The Exposure
+            
+        A total of 24 students and Lecturers were present at the field trip and they recounted how educational it was.
+
+        The Experience
+        
+        The objective of the trip was to gain more knowledge on airline catering in relation to tourism.
+        
+        Mr. Justin the Human Resource Manager gave a brief introduction about all that is done at LSG Skychefs.
+`,
+      },
+      {
+        bg: "#FFF",
+        postId: "a99c2d02-f317-487e-9f03-97cbb36f45fb",
+        isTopPost: false,
+        postsImg: NBTEdirector,
+        postsDate: `News and Events / ${formatDate(
+          new Date(
+            "Tue May 07 2024 12:42:16 GMT+0100 (West Africa Standard Time)"
+          )
+        )}`,
+        postHeading: "CAREER DRIVES",
+        postsText: `Career Drives are a yearly feature at Wavecrest College and serve as an opportunity to achieve our mission of creating awareness of the Hospitality Career. The Drives took place in several batches both within the College and in various schools in Lagos.
+
+        In 2023, we had the pleasure to host students of the following schools:
+
+         - Estate Senior Grammar School (22 Students) 
+         - Marywood Girls College (150 Students) 
+         - Alimosho Grammar School (100 Students)
+         - Wesley Girls College (15 Students Students) 
+         - New Estate Baptist School (60 Students)   
+         - Baptist Group of Schools (120 Students) 
+         - New Estate Baptist School (25 Students)
+         - Kays Schools (25 Students) 
+         - LIHS School Girls Club (15 Students) 
+        
+        The Hospitality Career talks highlight core areas of the Hospitality Industry as a dynamic and diverse sector, offering a wide range of career opportunities for individuals who are passionate about serving others.
+
+        Our social media handles are a major tool to reach out to many more people.`,
+      },
+      {
+        bg: "#FFF",
+        postId: "0a228685-366d-4952-9583-3eb9c9a497ba",
+        isTopPost: false,
         postsImg: NBTEdirector,
         postsDate: "News and Events / March 1, 2022.",
         postHeading:
@@ -45,7 +412,7 @@ export const BLOGS = [
       {
         bg: "#EBEDEF",
         postId: "3f6a337f-1f49-4c70-84e7-7b486fecefb8",
-        isTopPost: true,
+        isTopPost: false,
         postsImg: suicideEvent,
         postsDate: "News and Events / September 10, 2022",
         postHeading: "World Suicide Prevention Day",

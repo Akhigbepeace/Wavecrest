@@ -29,8 +29,8 @@ const BlogPost = () => {
 
   if (!id) return <div>Loading...</div>;
   const post = POST_MAP[id as string] as any;
-  const image1 = post.postsImg;
-  const image2 = post.coverImage || image1;
+  const image1 = post?.postsImg;
+  const image2 = post?.coverImage || image1;
 
   const ShowPosts = (post: any) => {
     router.push(`/posts/${post.postId}`);
@@ -43,8 +43,12 @@ const BlogPost = () => {
 
       <MobileSideBar />
 
-      <MobilePageBanner imageURL={image2} title={post.postHeading} />
-      <PagesBanner imageURL={image2} pageName={post.postHeading} />
+      <MobilePageBanner imageURL={image2} title={post?.postHeading} />
+      <PagesBanner
+        imageURL={image2}
+        pageName={post?.postHeading}
+        fontSize="40px"
+      />
 
       <Flex
         w="100%"
@@ -93,7 +97,7 @@ const BlogPost = () => {
             fontSize="18px"
             mb="20px"
           >
-            {post.postsDate}
+            {post?.postsDate}
           </Heading>
 
           <Box>
@@ -103,7 +107,8 @@ const BlogPost = () => {
               fontWeight="400"
               lineHeight="25px"
               color="#021D37"
-              dangerouslySetInnerHTML={{ __html: post.postsText }}
+              whiteSpace="pre-line"
+              dangerouslySetInnerHTML={{ __html: post?.postsText }}
             />
 
             <Image src={image1 || image2} my="10px" alt="postImage" />
