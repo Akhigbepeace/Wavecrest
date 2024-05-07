@@ -28,6 +28,7 @@ export type EditableUIConfig<P = unknown, LItem = any> = (
     | "banner"
     | "philosophy"
     | "announcements"
+    | "partners"
     | "ourStory";
   defaults?: P;
   title: string;

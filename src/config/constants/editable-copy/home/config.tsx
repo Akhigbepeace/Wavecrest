@@ -10,6 +10,10 @@ import {
   OurStoriesProps,
   StoryProps,
 } from "components/layouts/Home/OurStories";
+import {
+  PartnersImgCard,
+  PartnersProps,
+} from "components/layouts/Home/Partners";
 
 const showCase: EditableUIConfig<ShowcaseProps> = {
   name: "showCase",
@@ -182,10 +186,35 @@ const ourStories: EditableUIConfig<OurStoriesProps, StoryProps> = {
   ],
 };
 
+const partnersConfig: EditableUIConfig<PartnersProps, PartnersImgCard> = {
+  name: "partners",
+  title: "Edit Partners and Sponsors",
+  groupKey: "companyName",
+  emptyFormInitial: {
+    companyName: "",
+    image: "/assets/imgs/empty-img.jpeg",
+    fit: "cover",
+  },
+  groupItems: [
+    {
+      label: "Logo",
+      name: "image",
+      type: "image",
+    },
+    {
+      label: "Company Name",
+      name: "companyName",
+      type: "text",
+      placeholder: "Enter Company Name",
+    },
+  ],
+};
+
 export const homeConfig = {
   showCase,
   statistics,
   discoverHospitality,
   announcements,
   ourStories,
+  partnersConfig,
 };
