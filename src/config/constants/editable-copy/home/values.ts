@@ -1,3 +1,5 @@
+import { PartnersImgCard } from "components/layouts/Home/Partners";
+
 const peace1 = "/assets/imgs/peace1.jpg";
 const peace2 = "/assets/imgs/peace2.jpg";
 const thelma = "/assets/imgs/Thelma.jpeg";
@@ -111,10 +113,49 @@ export const CARD_POST = [
 
 export const defaultStories = CARD_POST;
 
+export const defaultPartnersLogos: PartnersImgCard[] = [
+  {
+    companyName: "IshkTolaram",
+    image: "/assets/imgs/IshkTolaram.png",
+    fit: "cover",
+  },
+  {
+    companyName: "Elis",
+    image: "/assets/imgs/elisLogo.png",
+    fit: "contain",
+  },
+  {
+    companyName: "Lexon Capital",
+    image: "/assets/imgs/lexonCapital.png",
+    fit: "contain",
+  },
+  {
+    companyName: "Women's Board",
+    image: "/assets/imgs/women's board.jpg",
+    fit: "contain",
+  },
+  {
+    companyName: "Ven Foundation",
+    image: "/assets/imgs/venFoundation.jpeg",
+    fit: "contain",
+  },
+  {
+    companyName: "Nestle Professionals",
+    image: "/assets/imgs/nestleProfessionals.png",
+    fit: "contain",
+  },
+  {
+    companyName: "Woner Foundation",
+    image: "/assets/imgs/woner_foundation.png",
+    fit: "contain",
+  },
+];
+
 export const homeConstants = {
   showCase: showCaseDefaults,
   statistics: statisticsDefaults,
   discoverHospitality,
   announcements,
   defaultStories,
+  defaultPartnersLogos,
 };

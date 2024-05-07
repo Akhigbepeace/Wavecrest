@@ -17,50 +17,21 @@ const settings = {
   cssEase: "linear",
 };
 
-type PartnersImgCard = {
+export type PartnersImgCard = {
   image: string;
+  companyName: string;
   fit: "cover" | "contain";
 };
 
-export default function Partners() {
+export type PartnersProps = {
+  defaultPartnersLogos: PartnersImgCard[];
+};
+
+export default function Partners({ defaultPartnersLogos }: PartnersProps) {
   const [slider, setSlider] = React.useState<Slider>();
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "10px" });
-
-  const cards: PartnersImgCard[] = [
-    {
-      image: "/assets/imgs/IshkTolaram.png",
-      fit: "cover",
-    },
-    {
-      image: "/assets/imgs/elisLogo.png",
-      fit: "contain",
-    },
-    {
-      image: "/assets/imgs/lexonCapital.png",
-
-      fit: "contain",
-    },
-    {
-      image: "/assets/imgs/women's board.jpg",
-
-      fit: "contain",
-    },
-    {
-      image: "/assets/imgs/venFoundation.jpeg",
-
-      fit: "contain",
-    },
-    {
-      image: "/assets/imgs/nestleProfessionals.png",
-      fit: "contain",
-    },
-    {
-      image: "/assets/imgs/woner_foundation.png",
-      fit: "contain",
-    },
-  ];
 
   return (
     <Box position={"relative"} overflow={"hidden"}>
@@ -160,7 +131,7 @@ export default function Partners() {
           ref={(slider) => setSlider(slider as Slider)}
           pauseOnFocus
         >
-          {cards.map((card, index) => (
+          {defaultPartnersLogos.map((card, index) => (
             <Box key={index} padding="30px">
               <PeaceImage
                 src={card.image}
