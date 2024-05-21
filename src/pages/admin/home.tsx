@@ -12,5 +12,5 @@ const AdminHomePage = () => {
     </>
   );
 };
-AdminHomePage.requireAuth = false;
+AdminHomePage.requireAuth = true;
 export default AdminHomePage;
