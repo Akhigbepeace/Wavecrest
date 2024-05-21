@@ -19,7 +19,7 @@ const BlogSideBar = ({
   blogs,
   ShowPosts,
 }: any) => {
-  const categoryMap: Record<string, any> =  {};
+  const categoryMap: Record<string, any> = {};
 
   blogs.forEach((bl: any) => {
     categoryMap[bl.category] = bl;
@@ -27,7 +27,7 @@ const BlogSideBar = ({
 
   return (
     <Box
-      w="300px"
+      minW="300px"
       display={{
         sm: "none",
         md: "none",

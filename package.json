@@ -27,6 +27,7 @@
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "talkjs": "^0.15.5",
+    "uuidv4": "^6.2.13",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -5,10 +5,11 @@ import React from "react";
 type BannerTypeProps = {
   imageURL: string;
   pageName: string;
+  fontSize?: string;
 };
 
 const PagesBanner = (props: BannerTypeProps) => {
-  const { imageURL, pageName } = props;
+  const { imageURL, pageName, fontSize = "60px" } = props;
   return (
     <Box
       h="441px"
@@ -35,9 +36,10 @@ const PagesBanner = (props: BannerTypeProps) => {
           color="white"
           fontFamily="Playfair Display"
           fontWeight="700"
-          fontSize="60px"
+          fontSize={fontSize}
           textAlign="center"
           mt="140px"
+          textTransform="capitalize"
         >
           {pageName}
         </Text>
